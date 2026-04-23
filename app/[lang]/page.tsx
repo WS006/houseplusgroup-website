@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
-async function getHomePage(lang: string) {
+async function getHomeContent(lang: string) {
   try {
     const { isEnabled } = draftMode();
     const sb = await storyblokApi();
@@ -28,39 +28,33 @@ async function getHomePage(lang: string) {
       per_page: 1,
     });
 
-    return res.data?.stories[0] || null;
+    return res.data?.stories[0]?.content || null;
   } catch (err) {
-    console.error('Storyblok API 拉取失败', err);
+    console.error('Storyblok 加载失败', err);
     return null;
   }
 }
 
 export default async function HomePage({ params }: Props) {
   const { lang } = params;
-  const page = await getHomePage(lang);
+  const content = await getHomeContent(lang);
+
+  if (!content) {
+    return (
+      <main className="min-h-screen flex items-center justify-center text-center p-10">
+        <div>
+          <h1 className="text-2xl font-bold mb-4">Welcome to HousePlus CH</h1>
+          <p className="text-gray-600">Content is being prepared...</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-10">
-        <h1 className="text-4xl font-bold mb-6">Welcome to HousePlus CH</h1>
-        <p className="text-lg mb-10">
-          Professional manufacturer of solar systems, home appliances, and 3C electronics.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 border rounded-lg">
-            <h2 className="text-xl font-bold mb-2">Solar Systems</h2>
-            <p>High-efficiency solar panels & portable power stations.</p>
-          </div>
-          <div className="p-6 border rounded-lg">
-            <h2 className="text-xl font-bold mb-2">Home Appliances</h2>
-            <p>Premium refrigerators, washing machines & kitchen appliances.</p>
-          </div>
-          <div className="p-6 border rounded-lg">
-            <h2 className="text-xl font-bold mb-2">3C Electronics</h2>
-            <p>Smart home, LED lighting & portable electronic devices.</p>
-          </div>
-        </div>
+        <h1 className="text-4xl font-bold mb-6">{content.title || 'Home'}</h1>
+        <div className="prose max-w-none">{content.description}</div>
       </div>
     </main>
   );
