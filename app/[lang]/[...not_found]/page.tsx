@@ -1,55 +1,58 @@
 import { notFound } from 'next/navigation';
-import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import { getStoryblokApi, StoryblokComponent } from '@storyblok/react';
+import Carousel from '@/components/Carousel';
+import IndustrySection from '@/components/IndustrySection';
+import ServiceWidget from '@/components/ServiceWidget';
 
 export const dynamic = 'force-dynamic';
 
-// 已知静态页面的 slug（直接对应 Storyblok 中的 story slug）
-const staticPages = ['about', 'contact', 'privacy', 'terms', 'support'];
-
-async function renderStory(slug: string, lang: string) {
+async function getStory(slug: string, lang: string) {
   const storyblokApi = getStoryblokApi();
-  let story = null;
   try {
-    const { data } = await storyblokApi.getStory(slug, { version: 'published', language: lang });
-    story = data.story;
+    const { data } = await storyblokApi.getStory(slug, { 
+      version: 'published', 
+      language: lang,
+      resolve_links: 'url'
+    });
+    return data.story;
   } catch (error) {
-    console.error(`Story not found: ${slug} in ${lang}`);
+    return null;
   }
-  if (!story) notFound();
-
-  const content = story.content;
-  const title = content.title || content.Text || 'HousePlus';
-  const bodyHtml = content.body || content.Body || '';
-  const renderedBody = bodyHtml ? renderRichText(bodyHtml) : '';
-
-  return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <h1 className="text-4xl font-bold mb-8">{title}</h1>
-      {renderedBody && <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderedBody }} />}
-    </main>
-  );
 }
 
 export default async function CatchAllPage({ params }: { params: Promise<{ lang: string; not_found: string[] }> }) {
   const { lang, not_found: slugArray } = await params;
   const fullSlug = slugArray?.join('/') || 'home';
 
-  // 首页处理
-  if (fullSlug === 'home' || slugArray?.length === 0) {
-    return renderStory('home', lang);
-  }
+  const story = await getStory(fullSlug, lang);
+  if (!story) notFound();
 
-  const firstSegment = slugArray?.[0];
-  // 静态页面
-  if (staticPages.includes(firstSegment)) {
-    return renderStory(firstSegment, lang);
-  }
-
-  // 产品详情页（以 products/ 开头）
-  if (fullSlug.startsWith('products/')) {
-    return renderStory(fullSlug, lang);
-  }
-
-  // 其余所有路径 → 404
-  notFound();
+  return (
+    <div className="relative">
+      {story.content.body?.map((blok: any) => {
+        if (blok.component === 'carousel') {
+          return <Carousel key={blok._uid} items={blok.items} />;
+        }
+        if (blok.component === 'industry_section') {
+          return <IndustrySection key={blok._uid} {...blok} />;
+        }
+        if (blok.component === 'service_widget') {
+          return <ServiceWidget key={blok._uid} {...blok} />;
+        }
+        // Fallback for other components if any
+        return <div key={blok._uid} className="py-10 text-center">Component: {blok.component}</div>;
+      })}
+      
+      {/* Always show ServiceWidget if not in body, or as a global fallback */}
+      <ServiceWidget />
+      
+      {/* Basic content rendering if body is empty but it's a page */}
+      {(!story.content.body || story.content.body.length === 0) && (
+        <main className="max-w-4xl mx-auto py-20 px-4">
+          <h1 className="text-4xl font-bold mb-8">{story.name}</h1>
+          <p className="text-gray-600">Content for this page is being prepared.</p>
+        </main>
+      )}
+    </div>
+  );
 }
