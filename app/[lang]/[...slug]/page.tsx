@@ -1,14 +1,7 @@
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
 
-export async function generateStaticParams() {
-  return [
-    { lang: 'en', slug: ['about'] },
-    { lang: 'es', slug: ['about'] },
-    { lang: 'de', slug: ['about'] },
-    { lang: 'fr', slug: ['about'] },
-    { lang: 'ar', slug: ['about'] },
-  ];
-}
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export default async function Page({ params }: { params: Promise<{ lang: string; slug: string[] }> }) {
   const { lang, slug } = await params;
