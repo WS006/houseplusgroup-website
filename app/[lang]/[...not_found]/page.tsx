@@ -13,7 +13,7 @@ async function renderStory(slug: string, lang: string) {
     const { data } = await storyblokApi.getStory(slug, { version: 'published', language: lang });
     story = data.story;
   } catch (error) {
-    console.error(\`Story not found: \${slug} in \${lang}\`);
+    console.error(`Story not found: ${slug} in ${lang}`);
   }
   if (!story) notFound();
 
