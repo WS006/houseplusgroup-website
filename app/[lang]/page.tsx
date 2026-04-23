@@ -1,4 +1,5 @@
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import { notFound } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,19 +9,20 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   let story = null;
 
   try {
-    const { data } = await storyblokApi.getStory('home', { version: 'published', language: lang });
+    const { data } = await storyblokApi.getStory('home', { 
+      version: 'published', 
+      language: lang 
+    });
     story = data.story;
-  } catch (error) {
+  } catch (error: any) {
     console.error(`Error fetching home for ${lang}:`, error);
+    if (error.status === 404) {
+      notFound();
+    }
   }
 
   if (!story) {
-    return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-24">
-        <h1 className="text-4xl font-bold">Loading...</h1>
-        <p className="mt-4">Content not found for {lang}. Please check Storyblok.</p>
-      </main>
-    );
+    notFound();
   }
 
   const content = story.content;
@@ -29,11 +31,16 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   const renderedBody = bodyHtml ? renderRichText(bodyHtml) : '';
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <h1 className="text-4xl font-bold mb-8">{title}</h1>
-      {renderedBody && (
-        <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderedBody }} />
-      )}
+    <main className="flex min-h-screen flex-col items-center p-8 md:p-24">
+      <div className="max-w-4xl w-full text-center">
+        <h1 className="text-5xl font-extrabold mb-8 text-gray-900">{title}</h1>
+        {renderedBody && (
+          <div 
+            className="prose prose-xl max-w-none text-gray-800 text-left" 
+            dangerouslySetInnerHTML={{ __html: renderedBody }} 
+          />
+        )}
+      </div>
     </main>
   );
 }
