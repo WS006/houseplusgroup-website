@@ -1,6 +1,6 @@
 import { draftMode } from 'next/headers';
 import { storyblokApi } from '@/lib/storyblok';
-import { generateMetadata } from '@/lib/seo-utils';
+import { generateMetadata as generateMeta } from '@/lib/seo-utils';
 
 type Props = {
   params: { lang: string };
@@ -8,7 +8,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const { lang } = params;
-  return generateMetadata({
+  return generateMeta({
     title: 'HousePlus CH | Professional Solar & Home Appliances Manufacturer',
     description: 'Professional manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.',
     url: `/${lang}`,
@@ -41,7 +41,6 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <main className="min-h-screen">
-      {/* 直接显示你在 Storyblok 做好的内容 */}
       <div className="max-w-7xl mx-auto px-4 py-10">
         <h1 className="text-4xl font-bold mb-6">Welcome to HousePlus CH</h1>
         <p className="text-lg mb-10">
