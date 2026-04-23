@@ -1,37 +1,25 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const locales = ['en', 'es', 'de', 'fr', 'ar'];
-const defaultLocale = 'en';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const firstSegment = pathname.split('/')[1];
 
-  // Check if the pathname is missing a locale
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  );
+  // 根路径直接放行（由 app/page.tsx 处理重定向）
+  if (pathname === '/') return NextResponse.next();
 
-  // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
-    // Skip public files and api routes
-    if (
-      pathname.startsWith('/api') ||
-      pathname.includes('.') ||
-      pathname.startsWith('/_next')
-    ) {
-      return;
-    }
-
-    return NextResponse.redirect(
-      new URL(`/${defaultLocale}${pathname}`, request.url)
-    );
+  // 如果第一段存在且不是有效语言代码，返回 404（rewrite 到 /en/404）
+  if (firstSegment && !validLangs.includes(firstSegment)) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/en/404'; // 会被 catch-all 路由捕获并显示英文 404
+    return NextResponse.rewrite(url, { status: 404 });
   }
+
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next|api|favicon.ico).*)',
-  ],
+  matcher: '/((?!api|_next/static|_next/image|favicon.ico).*)',
 };

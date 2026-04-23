@@ -30,7 +30,8 @@ export default async function Header({ lang }: { lang: string }) {
       language: lang,
       resolve_links: 'url'
     });
-    config = data.story.content;
+    const content = data.story.content;
+    config = content && 'header_menu' in content ? (content as Config) : null;
   } catch (error) {
     console.error(`Error fetching config for ${lang}:`, error);
   }
