@@ -1,5 +1,6 @@
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Header from '@/components/Header';
 import '../globals.css';
 
 storyblokInit({
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang} dir={isRTL ? 'rtl' : 'ltr'}>
       <body>
+        <Header lang={params.lang} />
         <LanguageSwitcher />
         {children}
       </body>
