@@ -1,9 +1,39 @@
-export default function LangHome({ params }: { params: { lang: string } }) {
+import { getStoryblokApi, renderRichText } from '@storyblok/react';
+
+export const dynamic = 'force-dynamic';
+
+export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const storyblokApi = getStoryblokApi();
+  let story = null;
+
+  try {
+    const { data } = await storyblokApi.getStory('home', { version: 'published', language: lang });
+    story = data.story;
+  } catch (error) {
+    console.error(`Error fetching home for ${lang}:`, error);
+  }
+
+  if (!story) {
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-center p-24">
+        <h1 className="text-4xl font-bold">Loading...</h1>
+        <p className="mt-4">Content not found for {lang}. Please check Storyblok.</p>
+      </main>
+    );
+  }
+
+  const content = story.content;
+  const title = content.title || content.Text || 'HousePlus';
+  const bodyHtml = content.body || content.Body || '';
+  const renderedBody = bodyHtml ? renderRichText(bodyHtml) : '';
+
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Language Page Test</h1>
-      <p>Current language: <strong>{params.lang}</strong></p>
-      <p>If you see this, dynamic routing for /[lang] is working.</p>
-    </div>
+    <main className="flex min-h-screen flex-col items-center p-24">
+      <h1 className="text-4xl font-bold mb-8">{title}</h1>
+      {renderedBody && (
+        <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: renderedBody }} />
+      )}
+    </main>
   );
 }
