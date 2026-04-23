@@ -53,7 +53,6 @@ export function generateMetadata(config: SEOConfig): Metadata {
       images: [config.image || siteConfig.defaultImage],
     },
     robots: 'index, follow',
-    canonical: canonicalUrl,
     alternates: {
       canonical: canonicalUrl,
       languages: {
