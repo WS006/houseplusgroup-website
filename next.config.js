@@ -6,10 +6,6 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
-  i18n: {
-    locales: ['en', 'es', 'de', 'fr', 'ar'],
-    defaultLocale: 'en',
-  },
 };
 
 module.exports = nextConfig;
