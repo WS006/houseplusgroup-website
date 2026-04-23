@@ -3,6 +3,8 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Header from '@/components/Header';
 import '../globals.css';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { isValidLocale } from '@/lib/i18n-config';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
@@ -10,9 +12,16 @@ storyblokInit({
   apiOptions: { region: 'eu' },
 });
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const { lang } = params;
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
   
+  // Validate language
+  if (!isValidLocale(lang)) {
+    return {
+      title: 'Not Found',
+    };
+  }
+
   const titles: Record<string, string> = {
     en: 'HousePlus - Home Appliances & Solar Systems Wholesale',
     es: 'HousePlus - Electrodomésticos y Sistemas Solares al por mayor',
@@ -45,18 +54,25 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
-  const isRTL = params.lang === 'ar';
+  const { lang } = await params;
+
+  // Validate language
+  if (!isValidLocale(lang)) {
+    notFound();
+  }
+
+  const isRTL = lang === 'ar';
   return (
-    <html lang={params.lang} dir={isRTL ? 'rtl' : 'ltr'}>
+    <html lang={lang} dir={isRTL ? 'rtl' : 'ltr'}>
       <body className="min-h-screen bg-white">
-        <Header lang={params.lang} />
+        <Header lang={lang} />
         <LanguageSwitcher />
         {children}
         <footer className="bg-gray-50 border-t py-8 mt-12">
