@@ -1,4 +1,4 @@
-import { getStoryblokApi, StoryblokStory } from '@storyblok/react';
+import { getStoryblokApi } from '@storyblok/react';
 
 export default async function Home() {
   const storyblokApi = getStoryblokApi();
