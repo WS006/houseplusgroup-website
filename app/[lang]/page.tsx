@@ -1,46 +1,62 @@
-import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import { getStoryblokApi } from '@storyblok/react';
 import { notFound } from 'next/navigation';
+import Carousel from '@/components/Carousel';
+import IndustrySection from '@/components/IndustrySection';
+import ServiceWidget from '@/components/ServiceWidget';
 
 export const dynamic = 'force-dynamic';
 
+async function getStory(slug: string, lang: string) {
+  const storyblokApi = getStoryblokApi();
+  try {
+    const { data } = await storyblokApi.getStory(slug, { 
+      version: 'published', 
+      language: lang,
+      resolve_links: 'url'
+    });
+    return data.story;
+  } catch (error) {
+    console.error(`Error fetching home for ${lang}:`, error);
+    return null;
+  }
+}
+
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const storyblokApi = getStoryblokApi();
-  let story = null;
-
-  try {
-    const { data } = await storyblokApi.getStory('home', { 
-      version: 'published', 
-      language: lang 
-    });
-    story = data.story;
-  } catch (error: any) {
-    console.error(`Error fetching home for ${lang}:`, error);
-    if (error.status === 404) {
-      notFound();
-    }
-  }
+  const story = await getStory('home', lang);
 
   if (!story) {
     notFound();
   }
 
   const content = story.content;
-  const title = content.title || content.Text || 'HousePlus';
-  const bodyHtml = content.body || content.Body || '';
-  const renderedBody = bodyHtml ? renderRichText(bodyHtml) : '';
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 md:p-24">
-      <div className="max-w-4xl w-full text-center">
-        <h1 className="text-5xl font-extrabold mb-8 text-gray-900">{title}</h1>
-        {renderedBody && (
-          <div 
-            className="prose prose-xl max-w-none text-gray-800 text-left" 
-            dangerouslySetInnerHTML={{ __html: renderedBody }} 
-          />
-        )}
-      </div>
-    </main>
+    <div className="relative">
+      {/* Render bloks-based content */}
+      {content.body && Array.isArray(content.body) && content.body.length > 0 ? (
+        content.body.map((blok: any) => {
+          if (blok.component === 'carousel') {
+            return <Carousel key={blok._uid} items={blok.items || []} />;
+          }
+          if (blok.component === 'industry_section') {
+            return <IndustrySection key={blok._uid} {...blok} />;
+          }
+          if (blok.component === 'service_widget') {
+            return <ServiceWidget key={blok._uid} {...blok} />;
+          }
+          return null;
+        })
+      ) : (
+        /* Fallback if body is empty */
+        <main className="max-w-4xl mx-auto py-20 px-4">
+          <h1 className="text-4xl font-bold mb-8">{content.title || 'Welcome to HousePlus'}</h1>
+          <p className="text-gray-600">Content is being prepared. Please check back soon.</p>
+        </main>
+      )}
+
+      {/* Always show ServiceWidget */}
+      <ServiceWidget />
+    </div>
   );
 }

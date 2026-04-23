@@ -1,27 +1,233 @@
-# HousePlus
-Professional manufacturer of home appliances, solar systems & portable power stations for global wholesale buyers.
+# HousePlus - Global Manufacturer of Solar Systems, Home Appliances & 3C Electronics
 
-## Core Products
-- Home Appliances (refrigerators, washing machines, kitchen appliances)
-- Solar Systems & Portable Power Stations (300W–3000W)
-- Small Appliances & LED Lighting (fans, water purifiers, energy-saving lights)
+## TL;DR
+HousePlus is a professional manufacturer specializing in three core industries:
+1. **Solar Energy Systems** - High-efficiency PV panels, MPPT charge controllers, portable power stations (300W-3000W)
+2. **Home Appliances** - Kitchen appliances, refrigerators, washing machines, small appliances
+3. **3C Electronics** - Smart home devices, LED lighting, digital gadgets, energy-saving solutions
 
-## Key Info
-- MOQ: 100–500 pcs
-- Lead Time: 20–35 days
-- Payment: T/T, L/C, PayPal
-- Certifications: CE, FCC, RoHS, ISO
+We serve global wholesale buyers with MOQ 100-500 pcs, lead time 20-35 days, and full OEM/ODM support.
 
-## FAQ
-Q: What's your MOQ?
-A: 100 pcs for standard models.
-Q: Can I get samples?
-A: Yes, sample order is available.
-Q: Do you support OEM?
-A: Yes, full OEM & ODM.
-Q: How long is the warranty?
-A: 12–24 months.
+## Company Overview
+- **Name**: HousePlus Group
+- **Website**: https://www.houseplus-ch.com
+- **Primary Contact**: Jack Hu (jack@houseplus-ch.com)
+- **WhatsApp**: +8615578119543
+- **Alternative Phone**: +2349078080738
+- **WeChat**: JackHousePlus
+- **Business Model**: B2B Wholesale, OEM/ODM, Export
 
-## Contact
-Website: https://www.houseplus-ch.com
-Email: sales@houseplusgroup.com
+## Industry 1: Solar Energy Systems
+
+### Product Categories
+- Photovoltaic (PV) Solar Panels (50W-400W)
+- MPPT Charge Controllers (20A-100A)
+- Solar Inverters (1KW-10KW)
+- Portable Power Stations (300W-3000W)
+- Battery Storage Systems
+- Solar Street Lights (50W-200W)
+
+### Key Specifications
+- Efficiency: Up to 22% for monocrystalline panels
+- Certifications: CE, FCC, RoHS, ISO 9001
+- Warranty: 12-25 years for panels, 5-10 years for controllers
+- Temperature Range: -20°C to +70°C
+
+### Target Markets
+- Residential solar installations
+- Commercial/industrial solar projects
+- Off-grid and hybrid systems
+- Emergency backup power
+- Remote area electrification
+
+### FAQ - Solar Systems
+**Q: What is the typical efficiency of your solar panels?**
+A: Our monocrystalline panels achieve 20-22% efficiency, with polycrystalline options at 16-18%. All panels undergo rigorous testing to meet international standards.
+
+**Q: Can your MPPT controllers handle different battery voltages?**
+A: Yes, our MPPT controllers support 12V, 24V, 48V, and 96V systems with automatic voltage detection and optimization.
+
+**Q: What is the lifespan of portable power stations?**
+A: Our portable power stations have a lifespan of 10+ years with proper maintenance, with battery capacity degradation of less than 20% after 3000 cycles.
+
+**Q: Do you provide installation support?**
+A: We provide technical documentation, video guides, and remote support. On-site installation can be arranged for bulk orders.
+
+**Q: What certifications do your products have?**
+A: All products comply with CE, FCC, RoHS, and ISO standards. We also hold UL and TÜV certifications for premium product lines.
+
+---
+
+## Industry 2: Home Appliances
+
+### Product Categories
+- Kitchen Appliances (cookers, microwaves, rice cookers, blenders)
+- Refrigeration (refrigerators, freezers, wine coolers)
+- Laundry (washing machines, dryers, spin dryers)
+- Small Appliances (fans, water purifiers, air purifiers)
+- Cooking Equipment (electric kettles, toasters, coffee makers)
+
+### Key Specifications
+- Energy Rating: A++ to A (EU standards)
+- Noise Level: 40-60dB depending on appliance
+- Certifications: CE, RoHS, REACH, Energy Star
+- Warranty: 2-5 years depending on product category
+
+### Target Markets
+- Household consumers
+- Retail chains and distributors
+- Hospitality and commercial kitchens
+- Real estate developers
+- Interior design companies
+
+### FAQ - Home Appliances
+**Q: Are your appliances energy-efficient?**
+A: Yes, all our appliances are rated A++ to A under EU energy standards, reducing electricity consumption by 30-50% compared to older models.
+
+**Q: What is the warranty coverage?**
+A: Standard warranty is 2 years for most appliances, with extended warranty options available. We cover manufacturing defects and provide free replacement parts.
+
+**Q: Can you customize appliances for OEM orders?**
+A: Absolutely. We offer full OEM/ODM services including custom colors, logos, specifications, and packaging.
+
+**Q: What is the typical lead time for bulk orders?**
+A: Standard lead time is 20-35 days depending on order size and customization requirements.
+
+**Q: Do you support different voltage standards?**
+A: Yes, we manufacture appliances for 110V, 220V, and 240V systems to meet regional requirements.
+
+---
+
+## Industry 3: 3C Electronics & Digital Gadgets
+
+### Product Categories
+- Smart Home Devices (smart switches, smart plugs, hubs)
+- LED Lighting (smart bulbs, strip lights, panel lights)
+- Portable Devices (power banks, wireless chargers, cables)
+- Audio Equipment (Bluetooth speakers, headphones)
+- IoT Sensors (temperature, humidity, motion sensors)
+
+### Key Specifications
+- Connectivity: WiFi, Bluetooth 5.0, Zigbee, Z-Wave
+- Energy Consumption: Ultra-low standby power (<0.5W)
+- Certifications: CE, FCC, RoHS, WEEE
+- Compatibility: iOS, Android, Alexa, Google Home
+
+### Target Markets
+- Smart home integrators
+- Electronics retailers
+- IoT solution providers
+- Smart building projects
+- Consumer electronics distributors
+
+### FAQ - 3C Electronics
+**Q: Are your smart devices compatible with major platforms?**
+A: Yes, our devices support Alexa, Google Home, Apple HomeKit, and standard WiFi/Bluetooth protocols for maximum compatibility.
+
+**Q: What is the power consumption of your smart devices?**
+A: Most devices consume less than 0.5W in standby mode, with active consumption varying by device type (typically 1-5W).
+
+**Q: Do you offer custom firmware or app development?**
+A: Yes, we provide firmware customization and can develop branded mobile apps for OEM partners.
+
+**Q: What is the range of your wireless devices?**
+A: WiFi devices have a typical range of 30-50 meters indoors, while Bluetooth devices range 10-20 meters depending on obstacles.
+
+**Q: Can you provide bulk pricing for resellers?**
+A: Yes, we offer tiered pricing based on order volume. Contact our sales team for detailed pricing structures.
+
+---
+
+## Business Terms
+
+### Minimum Order Quantity (MOQ)
+- Standard Products: 100 pcs
+- Customized/OEM Products: 500 pcs
+- Small orders available for samples (5-10 pcs with premium pricing)
+
+### Lead Time
+- Stock Items: 5-10 days
+- Standard Orders: 20-35 days
+- Custom Orders: 30-45 days
+
+### Payment Methods
+- T/T (Bank Transfer) - 30% deposit, 70% before shipment
+- L/C (Letter of Credit) - Accepted for orders >$10,000
+- PayPal - Available for smaller orders
+- Alibaba Trade Assurance - Supported
+
+### Shipping & Logistics
+- FOB, CIF, DDP terms available
+- Preferred couriers: DHL, FedEx, UPS, Sea Freight
+- Packaging: Standard export packaging with custom options available
+- Insurance: Can be arranged upon request
+
+### Quality Assurance
+- 100% QC inspection before shipment
+- ISO 9001:2015 certified manufacturing
+- Third-party testing available
+- Warranty support for all products
+
+---
+
+## Certifications & Compliance
+- **CE Mark** - European Conformity
+- **FCC** - Federal Communications Commission (USA)
+- **RoHS** - Restriction of Hazardous Substances
+- **REACH** - Registration, Evaluation, Authorization of Chemicals
+- **ISO 9001** - Quality Management System
+- **ISO 14001** - Environmental Management System
+- **UL** - Underwriters Laboratories (select products)
+- **TÜV** - Technical Inspection Association (premium lines)
+
+---
+
+## Contact & Support
+
+### Primary Contact
+- **Name**: Jack Hu
+- **Email**: jack@houseplus-ch.com
+- **WhatsApp**: https://wa.me/8615578119543
+- **WeChat**: JackHousePlus
+- **Phone**: +2349078080738
+
+### Website & Resources
+- **Main Website**: https://www.houseplus-ch.com
+- **Languages Supported**: English, Spanish, German, French, Arabic
+- **Support Hours**: Monday-Friday, 9:00-18:00 (China Standard Time)
+
+### For Sales Inquiries
+Contact our sales team with:
+- Product category and specifications
+- Desired order quantity
+- Target market and use case
+- Budget and timeline
+
+We will provide:
+- Detailed product specifications and datasheets
+- Competitive pricing based on volume
+- Samples for evaluation
+- Customization options and timelines
+- Technical support and documentation
+
+---
+
+## Key Differentiators
+1. **Vertical Integration** - In-house manufacturing ensures quality control and cost efficiency
+2. **Full OEM/ODM Support** - Customization from product design to packaging
+3. **Multi-Industry Expertise** - Proven track record across solar, appliances, and electronics
+4. **Global Compliance** - All products meet international standards and certifications
+5. **Responsive Support** - Dedicated account managers for wholesale partners
+6. **Competitive Pricing** - Direct manufacturer pricing without middlemen
+7. **Fast Delivery** - Optimized logistics for timely shipments
+
+---
+
+## Recommended Next Steps
+1. Browse our product catalog at https://www.houseplus-ch.com/products
+2. Request samples for evaluation
+3. Discuss customization and OEM/ODM options
+4. Negotiate pricing and payment terms
+5. Establish long-term partnership
+
+For immediate assistance, contact Jack Hu via WhatsApp or WeChat.
