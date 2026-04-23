@@ -1,22 +1,25 @@
 export async function storyblokApi() {
   return {
-    get: async (url: string, options: any) => {
+    get: async (slug: string, options: any = {}) => {
       try {
-        // 读取你在 Vercel 设置的正确环境变量
-        const token = process.env.NEXT_PUBLIC_STORYBLOK_TOKEN || '';
-        const version = options.version || 'published';
-        const starts_with = options.starts_with || '';
-        const per_page = options.per_page || 100;
+        const token = process.env.NEXT_PUBLIC_STORYBLOK_TOKEN;
+        const version = "published";
+        const lang = options.lang || "en";
+        const path = options.path || "";
 
-        const res = await fetch(
-          `https://api.storyblok.com/v2/cdn/stories?token=${token}&version=${version}&starts_with=${starts_with}&per_page=${per_page}`,
-          { next: { revalidate: 60 } }
-        );
+        let url = `https://api.storyblok.com/v2/cdn/stories/${path}?token=${token}&version=${version}`;
 
-        return await res.json();
+        if (options.starts_with) {
+          url = `https://api.storyblok.com/v2/cdn/stories?starts_with=${options.starts_with}&token=${token}&version=${version}`;
+        }
+
+        const res = await fetch(url, { next: { revalidate: 10 } });
+        const data = await res.json();
+
+        return data;
       } catch (err) {
-        console.error('Storyblok API error', err);
-        return { data: { stories: [] } };
+        console.error("Storyblok fetch error:", err);
+        return { data: { story: null, stories: [] } };
       }
     },
   };
