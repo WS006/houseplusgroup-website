@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     // Send email notification to admin
     const adminEmail = process.env.ADMIN_EMAIL || 'sales@houseplusgroup.com';
     await resend.emails.send({
-      from: 'HousePlus Inquiry <onboarding@resend.dev>', // Default Resend sender, can be customized later
+      from: 'HousePlus <jack@houseplus-ch.com>',
       to: [adminEmail],
       subject: `New Inquiry from ${name}`,
       html: `
@@ -35,9 +35,9 @@ export async function POST(request: Request) {
       `,
     });
 
-    // Optional: Send confirmation email to customer
+    // Send confirmation email to customer
     await resend.emails.send({
-      from: 'HousePlus <onboarding@resend.dev>',
+      from: 'HousePlus <jack@houseplus-ch.com>',
       to: [email],
       subject: 'We received your inquiry',
       html: `
