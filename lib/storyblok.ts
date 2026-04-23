@@ -4,22 +4,26 @@ export async function storyblokApi() {
       try {
         const token = process.env.NEXT_PUBLIC_STORYBLOK_TOKEN;
         const version = "published";
-        const lang = options.lang || "en";
-        const path = options.path || "";
 
-        let url = `https://api.storyblok.com/v2/cdn/stories/${path}?token=${token}&version=${version}`;
-
-        if (options.starts_with) {
-          url = `https://api.storyblok.com/v2/cdn/stories?starts_with=${options.starts_with}&token=${token}&version=${version}`;
+        // 单页面获取（about / contact / support 等）
+        if (slug && !slug.includes('stories?')) {
+          const fullSlug = slug.trim();
+          const res = await fetch(
+            `https://api.storyblok.com/v2/cdn/stories/${fullSlug}?token=${token}&version=${version}`,
+            { next: { revalidate: 5 } }
+          );
+          return await res.json();
         }
 
-        const res = await fetch(url, { next: { revalidate: 10 } });
-        const data = await res.json();
-
-        return data;
+        // 列表获取
+        const res = await fetch(
+          `https://api.storyblok.com/v2/cdn/${slug}&token=${token}&version=${version}`,
+          { next: { revalidate: 5 } }
+        );
+        return await res.json();
       } catch (err) {
-        console.error("Storyblok fetch error:", err);
-        return { data: { story: null, stories: [] } };
+        console.error("Storyblok API error:", err);
+        return { data: { story: null } };
       }
     },
   };
