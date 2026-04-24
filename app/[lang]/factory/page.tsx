@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
@@ -262,6 +263,39 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
           </div>
         </section>
 
+        {/* Factory Image Gallery */}
+        <section className="py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/factory/production-line.jpg"
+                  alt="HousePlus main production line - advanced manufacturing facility"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/factory/assembly-line.jpg"
+                  alt="HousePlus assembly line - precision manufacturing process"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop"
+                  alt="HousePlus quality control laboratory and testing equipment"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Facilities */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -332,8 +366,18 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-8 text-slate-900 text-center">{data.capacity}</h2>
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200">
-              <p className="text-lg text-slate-600 leading-relaxed">{data.capacityInfo}</p>
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/2 bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200">
+                <p className="text-lg text-slate-600 leading-relaxed">{data.capacityInfo}</p>
+              </div>
+              <div className="md:w-1/2 relative h-72 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
+                  alt="HousePlus factory capacity - large-scale manufacturing operations"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>

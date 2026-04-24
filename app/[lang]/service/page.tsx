@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
@@ -327,6 +328,32 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
           </div>
         </section>
 
+        {/* Service Banner Image */}
+        <section className="py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&h=500&fit=crop"
+                alt="HousePlus professional service team providing global wholesale support"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-blue-900/40 flex items-center justify-center">
+                <div className="text-center text-white px-4">
+                  <p className="text-2xl md:text-3xl font-bold">
+                    {lang === 'en' && 'Comprehensive Services for Global Wholesale Partners'}
+                    {lang === 'es' && 'Servicios Integrales para Socios Mayoristas Globales'}
+                    {lang === 'de' && 'Umfassende Dienstleistungen für globale Großhandelspartner'}
+                    {lang === 'fr' && 'Services complets pour les partenaires grossistes mondiaux'}
+                    {lang === 'ar' && 'خدمات شاملة لشركاء الجملة العالميين'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* OEM/ODM Services */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -383,7 +410,15 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-slate-900 text-center">{data.logistics}</h2>
-            <p className="text-lg text-slate-600 text-center mb-12 max-w-3xl mx-auto">{data.logisticsDesc}</p>
+            <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">{data.logisticsDesc}</p>
+            <div className="relative h-56 rounded-xl overflow-hidden shadow-lg mb-10">
+              <Image
+                src="/images/team/logistics-port.jpg"
+                alt="HousePlus global logistics and shipping - international port operations"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {data.logisticsServices.map((service: any, idx: number) => (
                 <div key={idx} className="bg-white p-6 rounded-xl border-2 border-orange-200 hover:shadow-lg transition-shadow">

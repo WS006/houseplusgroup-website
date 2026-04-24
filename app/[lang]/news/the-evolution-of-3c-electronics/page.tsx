@@ -49,9 +49,9 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
   const articleContent: Record<string, any> = {
     en: {
       title: 'The Evolution of 3C Electronics: Innovation and HousePlus Solutions',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-11-08',
+      dateModified: '2023-11-08',
       image: '/images/products/wireless-charger.jpg',
       imageAlt: 'Modern 3C electronics devices including wireless chargers and smart gadgets',
       sections: [
@@ -81,9 +81,9 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
     },
     es: {
       title: 'La Evolución de la Electrónica 3C: Innovación y Soluciones HousePlus',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-11-08',
+      dateModified: '2023-11-08',
       image: '/images/products/wireless-charger.jpg',
       imageAlt: 'Dispositivos electrónicos 3C modernos que incluyen cargadores inalámbricos y gadgets inteligentes',
       sections: [
@@ -113,9 +113,9 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
     },
     de: {
       title: 'Die Evolution der 3C-Elektronik: Innovation und HousePlus-Lösungen',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-11-08',
+      dateModified: '2023-11-08',
       image: '/images/products/wireless-charger.jpg',
       imageAlt: 'Moderne 3C-Elektronikgeräte, einschließlich kabelloser Ladegeräte und Smart Gadgets',
       sections: [
@@ -145,9 +145,9 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
     },
     fr: {
       title: 'L\'évolution de l\'électronique 3C : Innovation et solutions HousePlus',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-11-08',
+      dateModified: '2023-11-08',
       image: '/images/products/wireless-charger.jpg',
       imageAlt: 'Appareils électroniques 3C modernes, y compris les chargeurs sans fil et les gadgets intelligents',
       sections: [
@@ -177,9 +177,9 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
     },
     ar: {
       title: 'تطور الإلكترونيات 3C: الابتكار وحلول HousePlus',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-11-08',
+      dateModified: '2023-11-08',
       image: '/images/products/wireless-charger.jpg',
       imageAlt: 'أجهزة إلكترونيات 3C حديثة بما في ذلك الشواحن اللاسلكية والأدوات الذكية',
       sections: [

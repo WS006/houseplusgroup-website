@@ -49,9 +49,9 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
   const articleContent: Record<string, any> = {
     en: {
       title: 'The Future of Solar Energy: Innovations and HousePlus Solutions',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2023-03-15',
+      dateModified: '2023-03-15',
       image: '/images/products/solar-panel-3.jpg',
       imageAlt: 'Large-scale solar farm with HousePlus solar panels',
       sections: [
@@ -87,9 +87,9 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
     },
     es: {
       title: 'El Futuro de la Energía Solar: Innovaciones y Soluciones HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2023-03-15',
+      dateModified: '2023-03-15',
       image: '/images/products/solar-panel-3.jpg',
       imageAlt: 'Granja solar a gran escala con paneles solares HousePlus',
       sections: [
@@ -125,9 +125,9 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
     },
     de: {
       title: 'Die Zukunft der Solarenergie: Innovationen und HousePlus-Lösungen',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2023-03-15',
+      dateModified: '2023-03-15',
       image: '/images/products/solar-panel-3.jpg',
       imageAlt: 'Große Solaranlage mit HousePlus Solarmodulen',
       sections: [
@@ -163,9 +163,9 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
     },
     fr: {
       title: 'L\'avenir de l\'énergie solaire : Innovations et solutions HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2023-03-15',
+      dateModified: '2023-03-15',
       image: '/images/products/solar-panel-3.jpg',
       imageAlt: 'Grande ferme solaire avec panneaux solaires HousePlus',
       sections: [
@@ -201,9 +201,9 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
     },
     ar: {
       title: 'مستقبل الطاقة الشمسية: الابتكارات وحلول HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2023-03-15',
+      dateModified: '2023-03-15',
       image: '/images/products/solar-panel-3.jpg',
       imageAlt: 'مزرعة شمسية واسعة النطاق بألواح HousePlus الشمسية',
       sections: [

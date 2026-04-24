@@ -49,9 +49,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
   const articleContent: Record<string, any> = {
     en: {
       title: 'The Future of Smart Home Appliances: HousePlus Innovations',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-06-30',
+      dateModified: '2024-06-30',
       image: '/images/products/appliances-showcase.png',
       imageAlt: 'Modern smart home appliances from HousePlus',
       sections: [
@@ -85,9 +85,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     es: {
       title: 'El Futuro de los Electrodomésticos Inteligentes: Innovaciones HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-06-30',
+      dateModified: '2024-06-30',
       image: '/images/products/appliances-showcase.png',
       imageAlt: 'Electrodomésticos inteligentes modernos de HousePlus',
       sections: [
@@ -121,9 +121,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     de: {
       title: 'Die Zukunft smarter Haushaltsgeräte: HousePlus Innovationen',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-06-30',
+      dateModified: '2024-06-30',
       image: '/images/products/appliances-showcase.png',
       imageAlt: 'Moderne smarte Haushaltsgeräte von HousePlus',
       sections: [
@@ -157,9 +157,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     fr: {
       title: 'L\'avenir des appareils électroménagers intelligents : Innovations HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-06-30',
+      dateModified: '2024-06-30',
       image: '/images/products/appliances-showcase.png',
       imageAlt: 'Appareils électroménagers intelligents modernes de HousePlus',
       sections: [
@@ -193,9 +193,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     ar: {
       title: 'مستقبل الأجهزة المنزلية الذكية: ابتكارات HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-06-30',
+      dateModified: '2024-06-30',
       image: '/images/products/appliances-showcase.png',
       imageAlt: 'أجهزة منزلية ذكية حديثة من HousePlus',
       sections: [

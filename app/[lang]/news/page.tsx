@@ -64,7 +64,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         fr: 'Découvrez les dernières innovations en matière de technologie de l\'énergie solaire et comment HousePlus ouvre la voie avec des panneaux solaires à haut rendement, des centrales électriques portables et des solutions durables pour les marchés de gros mondiaux.',
         ar: 'استكشف أحدث الابتكارات في تكنولوجيا الطاقة الشمسية وكيف تقود HousePlus الطريق بألواح شمسية عالية الكفاءة ومحطات طاقة محمولة وحلول مستدامة لأسواق الجملة العالمية.',
       },
-      date: '2026-04-24',
+      date: '2023-03-15',
     },
     {
       slug: 'smart-home-appliances',
@@ -84,7 +84,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         fr: 'Découvrez comment HousePlus redéfinit la vie moderne avec des appareils électroménagers intelligents et économes en énergie. Explorez notre gamme de produits innovants conçus pour les marchés de gros mondiaux.',
         ar: 'اكتشف كيف تعيد HousePlus تعريف الحياة العصرية بأجهزة منزلية ذكية وموفرة للطاقة. استكشف مجموعتنا من المنتجات المبتكرة المصممة لأسواق الجملة العالمية.',
       },
-      date: '2026-04-24',
+      date: '2023-07-22',
     },
     {
       slug: 'the-evolution-of-3c-electronics',
@@ -104,7 +104,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         fr: 'Explorez les avancées rapides de l\'électronique 3C, des appareils intelligents à l\'éclairage LED. Découvrez comment HousePlus fournit des solutions de pointe et fiables pour les marchés de gros mondiaux.',
         ar: 'استكشف التطورات السريعة في الإلكترونيات 3C، من الأجهزة الذكية إلى إضاءة LED. اكتشف كيف تقدم HousePlus حلولًا متطورة وموثوقة لأسواق الجملة العالمية.',
       },
-      date: '2026-04-24',
+      date: '2023-11-08',
     },
     {
       slug: 'solar-energy-storage-solutions',
@@ -124,7 +124,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         fr: 'Découvrez les solutions avancées de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',
         ar: 'استكشف حلول HousePlus المتقدمة لتخزين الطاقة الشمسية، بما في ذلك أنظمة البطاريات ومحطات الطاقة المحمولة، المصممة للكفاءة والموثوقية في أسواق الجملة العالمية.',
       },
-      date: '2026-04-25',
+      date: '2024-02-19',
     },
     {
       slug: 'the-future-of-smart-home-appliances',
@@ -144,7 +144,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         fr: 'Découvrez comment HousePlus façonne l\'avenir des appareils électroménagers intelligents avec des solutions écoénergétiques, connectées et intuitives pour la vie moderne et les marchés de gros mondiaux.',
         ar: 'اكتشف كيف تشكل HousePlus مستقبل الأجهزة المنزلية الذكية من خلال حلول موفرة للطاقة ومتصلة وبديهية للحياة العصرية وأسواق الجملة العالمية.',
       },
-      date: '2026-04-25',
+      date: '2024-06-30',
     },
     {
       slug: 'advanced-manufacturing-home-appliances',
@@ -161,18 +161,76 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         en: 'Discover HousePlus\'s commitment to advanced manufacturing techniques, stringent quality control, and sustainable practices in producing high-quality home appliances for global wholesale markets.',
         es: 'Descubra el compromiso de HousePlus con las técnicas de fabricación avanzadas, el estricto control de calidad y las prácticas sostenibles en la producción de electrodomésticos de alta calidad para los mercados mayoristas globales.',
         de: 'Entdecken Sie das Engagement von HousePlus für fortschrittliche Fertigungstechniken, strenge Qualitätskontrolle und nachhaltige Praktiken bei der Herstellung hochwertiger Haushaltsgeräte für globale Großhandelsmärkte.',
-        fr: 'Découvrez l\'engagement de HousePlus envers les techniques de fabrication avancées, le contrôle calidad rigoureux et les pratiques durables dans la production d\'appareils électroménagers de haute qualité para los mercados de gros mondiaux.',
+        fr: 'Découvrez l\'engagement de HousePlus envers les techniques de fabrication avancées, le contrôle qualité rigoureux et les pratiques durables dans la production d\'appareils électroménagers de haute qualité pour les marchés de gros mondiaux.',
         ar: 'اكتشف التزام HousePlus بتقنيات التصنيع المتقدمة، ومراقبة الجودة الصارمة، والممارسات المستدامة في إنتاج الأجهزة المنزلية عالية الجودة لأسواق الجملة العالمية.',
       },
-      date: '2026-04-25',
+      date: '2024-10-14',
+    },
+    {
+      slug: 'global-wholesale-guide-home-appliances',
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
+      imageAlt: 'Global wholesale distribution of home appliances - HousePlus international trade',
+      title: {
+        en: 'The Complete Guide to Wholesale Home Appliances: How HousePlus Supports Global Buyers',
+        es: 'La Guía Completa para Electrodomésticos al por Mayor: Cómo HousePlus Apoya a los Compradores Globales',
+        de: 'Der vollständige Leitfaden für Haushaltsgeräte im Großhandel: Wie HousePlus globale Käufer unterstützt',
+        fr: 'Le guide complet des appareils électroménagers en gros : Comment HousePlus soutient les acheteurs mondiaux',
+        ar: 'الدليل الشامل لأجهزة المنزل بالجملة: كيف تدعم HousePlus المشترين العالميين',
+      },
+      description: {
+        en: 'A comprehensive guide for wholesale buyers on sourcing high-quality home appliances from HousePlus. Learn about MOQ, OEM/ODM services, certifications, and how we support distributors across Africa, Southeast Asia, and Europe.',
+        es: 'Una guía completa para compradores mayoristas sobre el abastecimiento de electrodomésticos de alta calidad de HousePlus. Conozca el MOQ, los servicios OEM/ODM, las certificaciones y cómo apoyamos a los distribuidores en África, el Sudeste Asiático y Europa.',
+        de: 'Ein umfassender Leitfaden für Großhandelskäufer zur Beschaffung hochwertiger Haushaltsgeräte von HousePlus. Erfahren Sie mehr über MOQ, OEM/ODM-Dienstleistungen, Zertifizierungen und wie wir Distributoren in Afrika, Südostasien und Europa unterstützen.',
+        fr: 'Un guide complet pour les acheteurs en gros sur l\'approvisionnement en appareils électroménagers de haute qualité auprès de HousePlus. Découvrez le MOQ, les services OEM/ODM, les certifications et comment nous soutenons les distributeurs en Afrique, en Asie du Sud-Est et en Europe.',
+        ar: 'دليل شامل لمشتري الجملة حول مصادر الأجهزة المنزلية عالية الجودة من HousePlus. تعرف على MOQ وخدمات OEM/ODM والشهادات وكيف ندعم الموزعين في أفريقيا وجنوب شرق آسيا وأوروبا.',
+      },
+      date: '2025-01-20',
+    },
+    {
+      slug: 'energy-efficiency-standards-appliances',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+      imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
+      title: {
+        en: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
+        es: 'Estándares de Eficiencia Energética en Electrodomésticos Modernos: Cumplimiento CE y RoHS de HousePlus',
+        de: 'Energieeffizienzstandards bei modernen Geräten: HousePlus CE- und RoHS-Konformität',
+        fr: 'Normes d\'efficacité énergétique dans les appareils modernes : Conformité CE et RoHS de HousePlus',
+        ar: 'معايير كفاءة الطاقة في الأجهزة الحديثة: امتثال HousePlus لمعايير CE وRoHS',
+      },
+      description: {
+        en: 'Understanding international energy efficiency standards is critical for wholesale buyers. HousePlus products meet CE, FCC, RoHS, and ISO 9001 requirements, ensuring compliance and market access across Europe, the Americas, and Asia.',
+        es: 'Comprender los estándares internacionales de eficiencia energética es fundamental para los compradores mayoristas. Los productos de HousePlus cumplen con los requisitos CE, FCC, RoHS e ISO 9001, garantizando el cumplimiento y el acceso al mercado en Europa, las Américas y Asia.',
+        de: 'Das Verständnis internationaler Energieeffizienzstandards ist für Großhandelskäufer entscheidend. HousePlus-Produkte erfüllen die Anforderungen von CE, FCC, RoHS und ISO 9001 und gewährleisten Compliance und Marktzugang in Europa, Amerika und Asien.',
+        fr: 'Comprendre les normes internationales d\'efficacité énergétique est essentiel pour les acheteurs en gros. Les produits HousePlus répondent aux exigences CE, FCC, RoHS et ISO 9001, garantissant la conformité et l\'accès au marché en Europe, dans les Amériques et en Asie.',
+        ar: 'يعد فهم معايير كفاءة الطاقة الدولية أمرًا بالغ الأهمية لمشتري الجملة. تستوفي منتجات HousePlus متطلبات CE وFCC وRoHS وISO 9001، مما يضمن الامتثال والوصول إلى الأسواق في أوروبا والأمريكتين وآسيا.',
+      },
+      date: '2025-05-08',
+    },
+    {
+      slug: 'oem-odm-manufacturing-guide',
+      image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=600&fit=crop',
+      imageAlt: 'OEM ODM manufacturing process at HousePlus factory - custom product development',
+      title: {
+        en: 'OEM & ODM Manufacturing: How HousePlus Helps Brands Build Custom Products',
+        es: 'Fabricación OEM y ODM: Cómo HousePlus Ayuda a las Marcas a Construir Productos Personalizados',
+        de: 'OEM- und ODM-Fertigung: Wie HousePlus Marken beim Aufbau individueller Produkte hilft',
+        fr: 'Fabrication OEM et ODM : Comment HousePlus aide les marques à créer des produits personnalisés',
+        ar: 'تصنيع OEM وODM: كيف تساعد HousePlus العلامات التجارية على بناء منتجات مخصصة',
+      },
+      description: {
+        en: 'HousePlus offers comprehensive OEM and ODM manufacturing services for wholesale buyers looking to build their own branded product lines. From design consultation to mass production, discover how our factory capabilities can accelerate your business growth.',
+        es: 'HousePlus ofrece servicios integrales de fabricación OEM y ODM para compradores mayoristas que buscan construir sus propias líneas de productos de marca. Desde la consultoría de diseño hasta la producción en masa, descubra cómo las capacidades de nuestra fábrica pueden acelerar el crecimiento de su negocio.',
+        de: 'HousePlus bietet umfassende OEM- und ODM-Fertigungsdienstleistungen für Großhandelskäufer an, die ihre eigenen Markenproduktlinien aufbauen möchten. Von der Designberatung bis zur Massenproduktion – entdecken Sie, wie unsere Fabrikkapazitäten Ihr Unternehmenswachstum beschleunigen können.',
+        fr: 'HousePlus propose des services complets de fabrication OEM et ODM pour les acheteurs en gros souhaitant créer leurs propres gammes de produits de marque. De la consultation en conception à la production de masse, découvrez comment les capacités de notre usine peuvent accélérer la croissance de votre entreprise.',
+        ar: 'تقدم HousePlus خدمات تصنيع OEM وODM شاملة لمشتري الجملة الذين يتطلعون إلى بناء خطوط منتجاتهم الخاصة ذات العلامة التجارية. من استشارة التصميم إلى الإنتاج الضخم، اكتشف كيف يمكن لقدرات مصنعنا تسريع نمو أعمالك.',
+      },
+      date: '2025-09-17',
     },
   ];
-
   return (
     <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]}>
       <main className="min-h-screen bg-white">
         <Breadcrumb lang={lang} />
-
         <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
@@ -191,7 +249,6 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
             </p>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {articles.map((article, index) => (
@@ -205,6 +262,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
                   />
                 </div>
                 <div className="p-6">
+                  <p className="text-xs text-blue-600 font-semibold uppercase tracking-wider mb-2">HousePlus Editorial Team</p>
                   <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 mb-2">
                     {article.title[lang as keyof typeof article.title] || article.title.en}
                   </h2>
@@ -212,7 +270,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
                     {article.description[lang as keyof typeof article.description] || article.description.en}
                   </p>
                   <p className="text-gray-500 text-xs">
-                    {new Date(article.date).toLocaleDateString(lang)}
+                    {new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
                   </p>
                 </div>
               </Link>

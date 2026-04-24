@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
@@ -332,6 +333,30 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
           </div>
         </section>
 
+        {/* Team Image Banner */}
+        <section className="py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/team/office-meeting.jpg"
+                  alt="HousePlus team collaboration and professional meeting"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+                  alt="HousePlus professional team working in modern office environment"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Departments */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -371,8 +396,20 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-8 text-slate-900 text-center">{data.culture}</h2>
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200">
-              <p className="text-lg text-slate-600 leading-relaxed">{data.cultureText}</p>
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/2">
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200">
+                  <p className="text-lg text-slate-600 leading-relaxed">{data.cultureText}</p>
+                </div>
+              </div>
+              <div className="md:w-1/2 relative h-72 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop"
+                  alt="HousePlus team culture - collaborative and innovative workplace"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>

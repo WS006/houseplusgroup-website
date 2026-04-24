@@ -253,6 +253,22 @@ export default async function CareersPage({ params }: { params: Promise<{ lang: 
           </div>
         </section>
 
+        {/* Careers Banner Image */}
+        <section className="py-8 px-4 md:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative h-72 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=500&fit=crop"
+                alt="HousePlus team members collaborating in a modern workplace"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-blue-900/30" />
+            </div>
+          </div>
+        </section>
+
         {/* Why Join HousePlus */}
         <section className="py-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">

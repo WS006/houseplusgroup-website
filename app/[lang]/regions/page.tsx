@@ -1,4 +1,5 @@
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
@@ -42,6 +43,22 @@ export default async function RegionsPage() {
             <p className="text-xl opacity-90">
               Specialized wholesale solutions for Africa, Southeast Asia, and Europe
             </p>
+          </div>
+        </section>
+
+        {/* Regions Banner Image */}
+        <section className="py-8 px-4 md:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&h=500&fit=crop"
+                alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-blue-900/30" />
+            </div>
           </div>
         </section>
 

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateFAQSchema } from '@/lib/schema-generator';
@@ -152,6 +153,21 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
               {lang === 'fr' && 'Trouvez des réponses aux questions courantes sur les produits et services de HousePlus.'}
               {lang === 'ar' && 'ابحث عن إجابات للأسئلة الشائعة حول منتجات وخدمات HousePlus.'}
             </p>
+          </div>
+        </section>
+
+        {/* FAQ Banner Image */}
+        <section className="py-8 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative h-56 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop"
+                alt="HousePlus customer support team answering wholesale buyer questions"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-blue-900/30" />
+            </div>
           </div>
         </section>
 

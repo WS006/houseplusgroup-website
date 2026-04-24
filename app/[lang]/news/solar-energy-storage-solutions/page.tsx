@@ -49,9 +49,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
   const articleContent: Record<string, any> = {
     en: {
       title: 'Solar Energy Storage Solutions: HousePlus Innovations',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-02-19',
+      dateModified: '2024-02-19',
       image: '/images/products/portable-power-station.jpg',
       imageAlt: 'HousePlus portable power station and battery storage system',
       sections: [
@@ -87,9 +87,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
     },
     es: {
       title: 'Soluciones de Almacenamiento de Energía Solar: Innovaciones HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-02-19',
+      dateModified: '2024-02-19',
       image: '/images/products/portable-power-station.jpg',
       imageAlt: 'Estación de energía portátil HousePlus y sistema de almacenamiento de baterías',
       sections: [
@@ -125,9 +125,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
     },
     de: {
       title: 'Solare Energiespeicherlösungen: HousePlus Innovationen',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-02-19',
+      dateModified: '2024-02-19',
       image: '/images/products/portable-power-station.jpg',
       imageAlt: 'HousePlus tragbares Kraftwerk und Batteriespeichersystem',
       sections: [
@@ -163,9 +163,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
     },
     fr: {
       title: 'Solutions de stockage d\'énergie solaire : Innovations HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-02-19',
+      dateModified: '2024-02-19',
       image: '/images/products/portable-power-station.jpg',
       imageAlt: 'Centrale électrique portable HousePlus et système de stockage de batterie',
       sections: [
@@ -201,9 +201,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
     },
     ar: {
       title: 'حلول تخزين الطاقة الشمسية: ابتكارات HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-02-19',
+      dateModified: '2024-02-19',
       image: '/images/products/portable-power-station.jpg',
       imageAlt: 'محطة طاقة محمولة HousePlus ونظام تخزين البطارية',
       sections: [

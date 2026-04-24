@@ -49,9 +49,9 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
   const articleContent: Record<string, any> = {
     en: {
       title: 'Advanced Manufacturing in Home Appliances: HousePlus Quality',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-10-14',
+      dateModified: '2024-10-14',
       image: '/images/factory/production-line.jpg',
       imageAlt: 'HousePlus advanced home appliance manufacturing facility',
       sections: [
@@ -87,9 +87,9 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
     },
     es: {
       title: 'Fabricación Avanzada en Electrodomésticos: Calidad HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-10-14',
+      dateModified: '2024-10-14',
       image: '/images/factory/production-line.jpg',
       imageAlt: 'Instalación de fabricación avanzada de electrodomésticos HousePlus',
       sections: [
@@ -125,9 +125,9 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
     },
     de: {
       title: 'Fortschrittliche Fertigung bei Haushaltsgeräten: HousePlus Qualität',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-10-14',
+      dateModified: '2024-10-14',
       image: '/images/factory/production-line.jpg',
       imageAlt: 'HousePlus fortschrittliche Fertigungsanlage für Haushaltsgeräte',
       sections: [
@@ -163,9 +163,9 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
     },
     fr: {
       title: 'Fabrication avancée d\'appareils électroménagers : Qualité HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-10-14',
+      dateModified: '2024-10-14',
       image: '/images/factory/production-line.jpg',
       imageAlt: 'Installation de fabrication avancée d\'appareils électroménagers HousePlus',
       sections: [
@@ -201,9 +201,9 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
     },
     ar: {
       title: 'التصنيع المتقدم في الأجهزة المنزلية: جودة HousePlus',
-      authorName: 'Manus AI',
-      datePublished: '2026-04-25',
-      dateModified: '2026-04-25',
+      authorName: 'HousePlus Editorial Team',
+      datePublished: '2024-10-14',
+      dateModified: '2024-10-14',
       image: '/images/factory/production-line.jpg',
       imageAlt: 'منشأة تصنيع الأجهزة المنزلية المتقدمة من HousePlus',
       sections: [

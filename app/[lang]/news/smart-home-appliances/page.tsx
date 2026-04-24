@@ -49,9 +49,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
   const articleContent: Record<string, any> = {
     en: {
       title: 'Smart Home Appliances: Efficiency, Innovation, and HousePlus Solutions',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-07-22',
+      dateModified: '2023-07-22',
       image: '/images/products/kitchen-appliances.jpg',
       imageAlt: 'Modern kitchen with HousePlus smart home appliances',
       sections: [
@@ -87,9 +87,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     es: {
       title: 'Electrodomésticos Inteligentes: Eficiencia, Innovación y Soluciones HousePlus',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-07-22',
+      dateModified: '2023-07-22',
       image: '/images/products/kitchen-appliances.jpg',
       imageAlt: 'Cocina moderna con electrodomésticos inteligentes HousePlus',
       sections: [
@@ -125,9 +125,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     de: {
       title: 'Smarte Haushaltsgeräte: Effizienz, Innovation und HousePlus-Lösungen',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-07-22',
+      dateModified: '2023-07-22',
       image: '/images/products/kitchen-appliances.jpg',
       imageAlt: 'Moderne Küche mit HousePlus Smart Home Geräten',
       sections: [
@@ -163,9 +163,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     fr: {
       title: 'Appareils électroménagers intelligents : Efficacité, innovation et solutions HousePlus',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-07-22',
+      dateModified: '2023-07-22',
       image: '/images/products/kitchen-appliances.jpg',
       imageAlt: 'Cuisine moderne avec appareils électroménagers intelligents HousePlus',
       sections: [
@@ -197,9 +197,9 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
     },
     ar: {
       title: 'الأجهزة المنزلية الذكية: الكفاءة والابتكار وحلول HousePlus',
-      author: 'Manus AI',
-      datePublished: '2026-04-24',
-      dateModified: '2026-04-24',
+      author: 'HousePlus Editorial Team',
+      datePublished: '2023-07-22',
+      dateModified: '2023-07-22',
       image: '/images/products/kitchen-appliances.jpg',
       imageAlt: 'مطبخ حديث بأجهزة منزلية ذكية من HousePlus',
       sections: [
