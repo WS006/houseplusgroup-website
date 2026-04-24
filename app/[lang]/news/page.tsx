@@ -82,7 +82,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         es: 'Comprender los estándares internacionales de eficiencia energética es fundamental para los compradores mayoristas. Los productos de HousePlus cumplen con los requisitos CE, FCC, RoHS e ISO 9001, garantizando el cumplimiento y el acceso al mercado en Europa, las Américas y Asia.',
         de: 'Das Verständnis internationaler Energieeffizienzstandards ist für Großhandelskäufer entscheidend. HousePlus-Produkte erfüllen die Anforderungen von CE, FCC, RoHS und ISO 9001 und gewährleisten Compliance und Marktzugang in Europa, Amerika und Asien.',
         fr: 'Comprendre les normes internationales d\'efficacité énergétique est essentiel pour les acheteurs en gros. Les produits HousePlus répondent aux exigences CE, FCC, RoHS et ISO 9001, garantissant la conformité et l\'accès au marché en Europe, dans les Amériques et en Asie.',
-        ar: 'يعد فهم معايير كفاءة الطاقة الدولية أمرًا بالغ الأهمية لمشتري الجملة. تستوفي منتجات HousePlus متطلبات CE وFCC وRoHS وISO 9001، مما يضمن الامتثال والوصول إلى الأسواق in أوروبا والأمريكتين وآسيا.',
+        ar: 'يعد فهم معايير كفاءة الطاقة الدولية أمرًا بالغ الأهمية لمشتري الجملة. تستوفي منتجات HousePlus متطلبات CE وFCC وRoHS وISO 9001، مما يضمن الامتثال والوصول إلى الأسواق في أوروبا والأمريكتين وآسيا.',
       },
       date: '2025-05-08',
     },
@@ -160,7 +160,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
       description: {
         en: 'Explore HousePlus\'s advanced solar energy storage solutions, including battery systems and portable power stations, designed for efficiency and reliability in global wholesale markets.',
         es: 'Explore las soluciones avanzadas de almacenamiento de energía solar de HousePlus, incluidos los sistemas de baterías y las estaciones de energía portátiles, diseñadas para la eficiencia y la fiabilidad en los mercados mayoristas globales.',
-        de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragbaren Kraftwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
+        de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
         fr: 'Découvrez les solutions avanzadas de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',
         ar: 'استكشف حلول HousePlus المتقدمة لتخزين الطاقة الشمسية، بما في ذلك أنظمة البطاريات ومحطات الطاقة المحمولة، المصممة للكفاءة والموثوقية في أسواق الجملة العالمية.',
       },
@@ -232,16 +232,16 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]}>
       <main className="min-h-screen bg-white">
         <Breadcrumb lang={lang} />
-        <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
+        <section className="py-24 px-4 bg-slate-50 border-b border-slate-100">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
+            <h1 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 tracking-tight">
               {lang === 'en' && 'HousePlus News & Insights'}
               {lang === 'es' && 'Noticias y Perspectivas de HousePlus'}
               {lang === 'de' && 'HousePlus Nachrichten & Einblicke'}
               {lang === 'fr' && 'Actualités et Perspectives HousePlus'}
               {lang === 'ar' && 'أخبار ورؤى HousePlus'}
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
               {lang === 'en' && 'Stay updated with the latest industry trends, innovations, and company news from HousePlus Group.'}
               {lang === 'es' && 'Manténgase actualizado con las últimas tendencias de la industria, innovaciones y noticias de la empresa de HousePlus Group.'}
               {lang === 'de' && 'Bleiben Sie auf dem Laufenden über die neuesten Branchentrends, Innovationen und Unternehmensnachrichten der HousePlus Group.'}
@@ -250,29 +250,38 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
             </p>
           </div>
         </section>
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <section className="py-24 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {articles.map((article, index) => (
-              <Link href={`/${lang}/news/${article.slug}`} key={index} className="block group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div className="relative w-full h-60">
+              <Link href={`/${lang}/news/${article.slug}`} key={index} className="block group bg-white rounded-[2rem] border border-slate-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                <div className="relative w-full h-72 overflow-hidden">
                   <Image
                     src={article.image}
                     alt={article.imageAlt}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <div className="p-6">
-                  <p className="text-xs text-blue-600 font-semibold uppercase tracking-wider mb-2">HousePlus Group Team</p>
-                  <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 mb-2">
+                <div className="p-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="px-4 py-1.5 bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] rounded-full">
+                      HousePlus Group Team
+                    </span>
+                    <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+                      {new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                  </div>
+                  <h2 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors duration-300 mb-4 leading-tight">
                     {article.title[lang as keyof typeof article.title] || article.title.en}
                   </h2>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-slate-500 text-base leading-relaxed mb-8 line-clamp-3">
                     {article.description[lang as keyof typeof article.description] || article.description.en}
                   </p>
-                  <p className="text-gray-500 text-xs">
-                    {new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
-                  </p>
+                  <div className="flex items-center text-blue-600 font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                    Read HousePlus Article
+                    <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </div>
                 </div>
               </Link>
             ))}
