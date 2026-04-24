@@ -58,23 +58,15 @@ export default function Counter({ end, label }: CounterProps) {
     return () => clearInterval(timer);
   }, [isVisible, isMounted, numericEnd]);
 
-  // Initial render on server and before mounting on client
-  if (!isMounted) {
-    return (
-      <div className="opacity-0">
-        <div className="text-3xl md:text-4xl font-black text-slate-900 mb-1 flex justify-center items-baseline">
-          <span>0</span>
-          <span className="text-blue-600 ml-0.5">{suffix}</span>
-        </div>
-        <div className="text-xs md:text-sm text-slate-500 uppercase tracking-widest font-bold">{label}</div>
-      </div>
-    );
-  }
-
+  // Before mounting on client (or SSR if it were used), show the end value but hidden or static
+  // Since we use dynamic(..., {ssr: false}), this component ONLY renders on client.
+  // We should show the end value immediately if not yet animated to avoid "0" flash if possible,
+  // but for counter effect, starting from 0 is desired.
+  
   return (
-    <div ref={ref} className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+    <div ref={ref} className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
       <div className="text-3xl md:text-4xl font-black text-slate-900 mb-1 flex justify-center items-baseline">
-        <span>{count}</span>
+        <span>{isVisible ? count : 0}</span>
         <span className="text-blue-600 ml-0.5">{suffix}</span>
       </div>
       <div className="text-xs md:text-sm text-slate-500 uppercase tracking-widest font-bold">{label}</div>
