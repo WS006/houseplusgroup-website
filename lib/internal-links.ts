@@ -343,15 +343,15 @@ export function getRelatedProducts(category: string): InternalLink[] {
   
   if (category === 'solar') {
     Object.values(internalLinkStructure.subcategories).forEach(sub => {
-      if (sub.category === 'solar') links.push(sub);
+      if (sub.category === 'solar') links.push(sub as InternalLink);
     });
   } else if (category === 'appliances') {
     Object.values(internalLinkStructure.subcategories).forEach(sub => {
-      if (sub.category === 'appliances') links.push(sub);
+      if (sub.category === 'appliances') links.push(sub as InternalLink);
     });
   } else if (category === 'electronics') {
     Object.values(internalLinkStructure.subcategories).forEach(sub => {
-      if (sub.category === 'electronics') links.push(sub);
+      if (sub.category === 'electronics') links.push(sub as InternalLink);
     });
   }
   
@@ -365,11 +365,11 @@ export function getBreadcrumbLinks(path: string): InternalLink[] {
   
   // Add category if applicable
   if (path.includes('solar')) {
-    breadcrumbs.push(internalLinkStructure.categories.solar);
+    breadcrumbs.push(internalLinkStructure.categories.solar as InternalLink);
   } else if (path.includes('appliances')) {
-    breadcrumbs.push(internalLinkStructure.categories.appliances);
+    breadcrumbs.push(internalLinkStructure.categories.appliances as InternalLink);
   } else if (path.includes('electronics')) {
-    breadcrumbs.push(internalLinkStructure.categories.electronics);
+    breadcrumbs.push(internalLinkStructure.categories.electronics as InternalLink);
   }
   
   return breadcrumbs;
@@ -377,13 +377,13 @@ export function getBreadcrumbLinks(path: string): InternalLink[] {
 
 export function getNavigationMenu(): InternalLink[] {
   return [
-    internalLinkStructure.homepage,
-    internalLinkStructure.support.about,
-    internalLinkStructure.categories.solar,
-    internalLinkStructure.categories.appliances,
-    internalLinkStructure.categories.electronics,
-    internalLinkStructure.support.service,
-    internalLinkStructure.support.faq,
-    internalLinkStructure.support.contact,
+    internalLinkStructure.homepage as InternalLink,
+    internalLinkStructure.support.about as InternalLink,
+    internalLinkStructure.categories.solar as InternalLink,
+    internalLinkStructure.categories.appliances as InternalLink,
+    internalLinkStructure.categories.electronics as InternalLink,
+    internalLinkStructure.support.service as InternalLink,
+    internalLinkStructure.support.faq as InternalLink,
+    internalLinkStructure.support.contact as InternalLink,
   ];
 }
