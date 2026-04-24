@@ -5,7 +5,7 @@ const baseUrl = 'https://www.houseplus-ch.com';
 
 const pages = [
   '',
-  'about',
+  'about-us',
   'products',
   'factory',
   'team',
@@ -16,7 +16,6 @@ const pages = [
   'contact',
   'support',
   'privacy',
-  'terms',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -29,8 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${baseUrl}${path}`,
         lastModified: new Date(),
-        changeFrequency: page === '' ? 'daily' : page === 'products' ? 'weekly' : 'monthly',
-        priority: page === '' ? 1.0 : page === 'products' ? 0.9 : 0.7,
+        changeFrequency: page === '' ? 'daily' : page === 'products' || page === 'news' ? 'weekly' : 'monthly',
+        priority: page === '' ? 1.0 : page === 'products' ? 0.9 : page === 'factory' || page === 'team' || page === 'service' ? 0.85 : 0.7,
         alternates: {
           languages: {
             en: `${baseUrl}/en${page ? `/${page}` : ''}`,

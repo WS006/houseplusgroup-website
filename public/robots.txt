@@ -1,4 +1,6 @@
-# HousePlus robots.txt
+# HousePlus robots.txt - Global Manufacturing Excellence
+# Solar Energy | Home Appliances | 3C Digital Electronics
+
 User-agent: *
 Allow: /
 Allow: /en/
@@ -6,9 +8,14 @@ Allow: /es/
 Allow: /de/
 Allow: /fr/
 Allow: /ar/
+Allow: /sitemap.xml
+Allow: /feed.xml
 Disallow: /api/
 Disallow: /*.json$
 Disallow: /admin/
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Crawl-delay: 1
 
 # Specific rules for search engines
 User-agent: Googlebot
@@ -32,6 +39,13 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-# Sitemap
+# Sitemaps for search engines
 Sitemap: https://www.houseplus-ch.com/sitemap.xml
-Sitemap: https://www.houseplus-ch.com/sitemap-products.xml
+Sitemap: https://www.houseplus-ch.com/feed.xml
+
+# Block known bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+Disallow: /
