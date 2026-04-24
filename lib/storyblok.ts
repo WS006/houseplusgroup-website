@@ -13,12 +13,12 @@ export async function storyblokApi() {
         
         let slug = path;
         if (options.starts_with) {
-          slug = \`stories?starts_with=\${options.starts_with}\`;
+          slug = `stories?starts_with=${options.starts_with}`;
         } else if (!path.startsWith('stories/')) {
-          slug = \`stories/\${path}\`;
+          slug = `stories/${path}`;
         }
 
-        const url = new URL(\`https://api.storyblok.com/v2/cdn/\${slug}\`);
+        const url = new URL(`https://api.storyblok.com/v2/cdn/${slug}`);
         url.searchParams.append('token', token);
         url.searchParams.append('version', version);
         
@@ -38,7 +38,7 @@ export async function storyblokApi() {
         });
         
         if (!res.ok) {
-          console.error(\`Storyblok API error: \${res.status} \${res.statusText}\`);
+          console.error(`Storyblok API error: ${res.status} ${res.statusText}`);
           return { data: { story: null, stories: [] } };
         }
         
