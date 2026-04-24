@@ -1,53 +1,44 @@
-export async function storyblokApi() {
-  return {
-    get: async (path: string, options: any = {}) => {
-      try {
-        const token = process.env.NEXT_PUBLIC_STORYBLOK_TOKEN;
-        if (!token) {
-          console.error("Storyblok Token is missing");
-          return { data: { story: null, stories: [] } };
-        }
+import { getStoryblokApi } from "@storyblok/react/rsc";
+
+export async function getStory(path: string, lang: string = 'en', options: any = {}) {
+    const storyblokApi = getStoryblokApi();
+    
+    try {
+        // Ensure the path doesn't start with /
+        let cleanPath = path.startsWith('/') ? path.substring(1) : path;
         
-        const version = options.version || "published";
-        const lang = options.language || options.lang || "";
-        
-        let slug = path;
-        if (options.starts_with) {
-          slug = `stories?starts_with=${options.starts_with}`;
-        } else if (!path.startsWith('stories/')) {
-          slug = `stories/${path}`;
+        // If it's the home page, use 'home'
+        if (cleanPath === '' || cleanPath === lang) {
+            cleanPath = 'home';
         }
 
-        const url = new URL(`https://api.storyblok.com/v2/cdn/${slug}`);
-        url.searchParams.append('token', token);
-        url.searchParams.append('version', version);
-        
-        if (lang && lang !== 'default' && lang !== 'en') {
-          url.searchParams.append('language', lang);
-        }
-        if (options.resolve_links) {
-          url.searchParams.append('resolve_links', options.resolve_links);
-        }
-        if (options.per_page) {
-          url.searchParams.append('per_page', options.per_page.toString());
-        }
+        console.log(`Fetching story: ${cleanPath} with lang: ${lang}`);
 
-        const res = await fetch(url.toString(), { 
-          next: { revalidate: 5 },
-          headers: { 'Content-Type': 'application/json' }
+        const { data } = await storyblokApi.getStory(cleanPath, {
+            version: "published",
+            language: lang,
+            ...options
         });
-        
-        if (!res.ok) {
-          console.error(`Storyblok API error: ${res.status} ${res.statusText}`);
-          return { data: { story: null, stories: [] } };
-        }
-        
-        const data = await res.json();
-        return { data };
-      } catch (err) {
-        console.error("Storyblok API Exception:", err);
-        return { data: { story: null, stories: [] } };
-      }
-    },
-  };
+
+        return data.story;
+    } catch (error) {
+        console.error(`Error fetching story ${path}:`, error);
+        return null;
+    }
+}
+
+export async function getStories(options: any = {}) {
+    const storyblokApi = getStoryblokApi();
+    
+    try {
+        const { data } = await storyblokApi.getStories({
+            version: "published",
+            ...options
+        });
+
+        return data.stories;
+    } catch (error) {
+        console.error("Error fetching stories:", error);
+        return [];
+    }
 }
