@@ -1,11 +1,9 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { getStoryblokApi } from '@storyblok/react';
-import { renderRichText } from '@storyblok/react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { getStory } from '@/lib/storyblok';
+
+export const dynamic = 'force-dynamic';
 
 // Product cover images mapped by slug — professional, product-specific photography
 const productCoverImages: Record<string, string> = {
@@ -98,7 +96,7 @@ function extractSections(bodyContent: any[]): { heading: string; text: string }[
       currentHeading = node.content?.[0]?.text || '';
     } else if (node.type === 'paragraph' && currentHeading) {
       const text = node.content?.map((c: any) => c.text || '').join('') || '';
-      if (text) {
+      if (text && !text.includes('Contact our sales team')) {
         sections.push({ heading: currentHeading, text });
         currentHeading = '';
       }
@@ -107,38 +105,29 @@ function extractSections(bodyContent: any[]): { heading: string; text: string }[
   return sections;
 }
 
-export default function ProductDetailPage() {
-  const params = useParams();
-  const lang = params.lang as string;
-  const slug = params.slug as string;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const story = await getStory(`products/${slug}`, lang);
+  const name = story?.content?.Text || story?.name || slug;
+  return {
+    title: `${name} | HousePlus Products`,
+    description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs.`,
+    alternates: { canonical: `/${lang}/products/${slug}` },
+  };
+}
 
-  const [story, setStory] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}) {
+  const { lang, slug } = await params;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const storyblokApi = getStoryblokApi();
-      try {
-        const { data } = await storyblokApi.getStory(`products/${slug}`, {
-          version: 'published',
-          language: lang,
-        });
-        setStory(data?.story);
-      } catch (e) {
-        console.error('Error fetching product:', e);
-      }
-      setLoading(false);
-    };
-    fetchData();
-  }, [slug, lang]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-600" />
-      </div>
-    );
-  }
+  const story = await getStory(`products/${slug}`, lang);
 
   const content = story?.content || {};
   const productName = content.Text || story?.name || slug;
@@ -173,7 +162,7 @@ export default function ProductDetailPage() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Product Image */}
-          <div className="sticky top-24">
+          <div className="lg:sticky lg:top-24">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50">
               <Image
                 src={coverImage}
@@ -210,7 +199,7 @@ export default function ProductDetailPage() {
             {/* Short Description */}
             {sections.length > 0 && (
               <p className="text-slate-600 leading-relaxed text-base">
-                {sections[0]?.text || ''}
+                {sections[0]?.text}
               </p>
             )}
 
@@ -261,7 +250,7 @@ export default function ProductDetailPage() {
               </div>
             )}
 
-            {/* Applications */}
+            {/* Additional Sections (Applications, etc.) */}
             {sections.slice(1).map((sec, i) => (
               <div key={i}>
                 <h2 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
