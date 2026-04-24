@@ -150,8 +150,8 @@ export default async function SupportPage({ params }: { params: Promise<{ lang: 
     },
   };
 
-  // Safe fallback to English for all languages to ensure no blank pages
-  const t = content.en;
+  // Use the appropriate language content, fallback to English if not available
+  const t = content[lang] || content.en;
 
   const schemas = [
     generateOrganizationSchema({
