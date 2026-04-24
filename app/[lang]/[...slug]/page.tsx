@@ -60,22 +60,26 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
   }
 
   // If it's a direct story (like /about or /products/item)
-  const content = story.content;
-  const title = content.title || content.Text || story.name || 'HousePlus';
-  const bodyHtml = content.body || content.Body || content.description || '';
-  const renderedBody = typeof bodyHtml === 'string' ? bodyHtml : renderRichText(bodyHtml);
+  if (story) {
+    const content = story.content;
+    const title = content.title || content.Text || story.name || 'HousePlus';
+    const bodyHtml = content.body || content.Body || content.description || '';
+    const renderedBody = typeof bodyHtml === 'string' ? bodyHtml : renderRichText(bodyHtml);
 
-  return (
-    <main className="min-h-screen py-12 px-4 bg-white">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center">{title}</h1>
-        {renderedBody && (
-          <div 
-            className="prose prose-lg max-w-none prose-img:rounded-xl prose-headings:text-gray-900" 
-            dangerouslySetInnerHTML={{ __html: renderedBody }} 
-          />
-        )}
-      </div>
-    </main>
-  );
+    return (
+      <main className="min-h-screen py-12 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center">{title}</h1>
+          {renderedBody && (
+            <div 
+              className="prose prose-lg max-w-none prose-img:rounded-xl prose-headings:text-gray-900" 
+              dangerouslySetInnerHTML={{ __html: renderedBody }} 
+            />
+          )}
+        </div>
+      </main>
+    );
+  }
+
+  return null;
 }
