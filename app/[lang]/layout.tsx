@@ -1,6 +1,7 @@
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import ServiceWidget from '@/components/ServiceWidget';
 import '../globals.css';
 import { Metadata } from 'next';
@@ -82,11 +83,7 @@ export default async function RootLayout({
           phone="+2349078080738"
         />
         {children}
-        <footer className="bg-gray-50 border-t py-8 mt-12">
-          <div className="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} HousePlus Group. All rights reserved.
-          </div>
-        </footer>
+        <Footer lang={lang} />
       </body>
     </html>
   );
