@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
-    keywords: ['about', 'company', 'manufacturer', 'solar', 'appliances', 'electronics'],
+    keywords: ['about', 'company', 'manufacturer', 'solar', 'appliances', 'electronics', 'HousePlus'],
     url: `/${lang}/about-us`,
     lang: lang as any,
     type: 'website',
@@ -195,6 +197,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     <>
       <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} />
+
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -203,30 +207,63 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           </div>
         </section>
 
-        {/* Mission & Vision */}
+        {/* Mission & Vision with Images */}
         <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="bg-blue-50 p-8 rounded-2xl">
               <h2 className="text-3xl font-bold mb-4 text-slate-900">{data.mission}</h2>
               <p className="text-slate-600 leading-relaxed">{data.missionText}</p>
             </div>
-            <div className="bg-green-50 p-8 rounded-2xl">
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/team/office-meeting.jpg"
+                alt="HousePlus team meeting and collaboration"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Vision with Image */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl md:order-2">
+              <Image
+                src="/images/factory/production-line.jpg"
+                alt="HousePlus manufacturing production line"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="bg-green-50 p-8 rounded-2xl md:order-1">
               <h2 className="text-3xl font-bold mb-4 text-slate-900">{data.vision}</h2>
               <p className="text-slate-600 leading-relaxed">{data.visionText}</p>
             </div>
           </div>
         </section>
 
-        {/* History */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-slate-900 text-center">{data.history}</h2>
-            <p className="text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto">{data.historyText}</p>
+        {/* History with Image */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/factory/assembly-line.jpg"
+                alt="HousePlus assembly line and manufacturing"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold mb-6 text-slate-900">{data.history}</h2>
+              <p className="text-lg text-slate-600 leading-relaxed">{data.historyText}</p>
+            </div>
           </div>
         </section>
 
         {/* Core Values */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-slate-900 text-center">{data.values}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -241,7 +278,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         </section>
 
         {/* Certifications */}
-        <section className="py-16 px-4 bg-gray-50">
+        <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-slate-900 text-center">{data.certifications}</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -255,48 +292,71 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         </section>
 
         {/* Manufacturing Capabilities */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-slate-900 text-center">{data.capabilities}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {data.capList.map((cap: string, idx: number) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-4">
+                {data.capList.map((cap: string, idx: number) => (
+                  <div key={idx} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                      ✓
+                    </div>
+                    <p className="text-slate-700 pt-1">{cap}</p>
                   </div>
-                  <p className="text-slate-600">{cap}</p>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/products/solar-panel-3.jpg"
+                  alt="HousePlus manufacturing capabilities and equipment"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-blue-600 text-white">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">
-              {lang === 'en' && 'Ready to Partner with HousePlus?'}
-              {lang === 'es' && '¿Listo para asociarse con HousePlus?'}
-              {lang === 'de' && 'Bereit, mit HousePlus zu partnern?'}
-              {lang === 'fr' && 'Prêt à s\'associer avec HousePlus?'}
-              {lang === 'ar' && 'هل أنت مستعد للشراكة مع HousePlus؟'}
+              {lang === 'en' && 'Partner with HousePlus Today'}
+              {lang === 'es' && 'Asociarse con HousePlus Hoy'}
+              {lang === 'de' && 'Partnern Sie heute mit HousePlus'}
+              {lang === 'fr' && 'Partenariat avec HousePlus Aujourd\'hui'}
+              {lang === 'ar' && 'الشراكة مع HousePlus اليوم'}
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              {lang === 'en' && 'Contact our sales team today to discuss your wholesale requirements and explore partnership opportunities.'}
-              {lang === 'es' && 'Póngase en contacto con nuestro equipo de ventas hoy para discutir sus requisitos mayoristas.'}
-              {lang === 'de' && 'Kontaktieren Sie unser Vertriebsteam noch heute, um Ihre Großhandelsanforderungen zu besprechen.'}
-              {lang === 'fr' && 'Contactez notre équipe commerciale dès aujourd\'hui pour discuter de vos besoins en gros.'}
-              {lang === 'ar' && 'اتصل بفريق المبيعات لدينا اليوم لمناقشة متطلبات الجملة الخاصة بك.'}
+            <p className="text-xl mb-8 opacity-90">
+              {lang === 'en' && 'Contact us to learn more about our products and services.'}
+              {lang === 'es' && 'Contáctenos para obtener más información sobre nuestros productos y servicios.'}
+              {lang === 'de' && 'Kontaktieren Sie uns, um mehr über unsere Produkte und Dienstleistungen zu erfahren.'}
+              {lang === 'fr' && 'Contactez-nous pour en savoir plus sur nos produits et services.'}
+              {lang === 'ar' && 'اتصل بنا لمعرفة المزيد عن منتجاتنا وخدماتنا.'}
             </p>
-            <a href={`/${lang}/contact`} className="inline-block px-10 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors">
-              {lang === 'en' && 'Get in Touch'}
-              {lang === 'es' && 'Ponte en Contacto'}
-              {lang === 'de' && 'Kontakt Aufnehmen'}
-              {lang === 'fr' && 'Nous Contacter'}
-              {lang === 'ar' && 'اتصل بنا'}
-            </a>
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <a
+                href={`/${lang}/contact`}
+                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
+              >
+                {lang === 'en' && 'Contact Us'}
+                {lang === 'es' && 'Contáctenos'}
+                {lang === 'de' && 'Kontaktieren Sie uns'}
+                {lang === 'fr' && 'Nous Contacter'}
+                {lang === 'ar' && 'اتصل بنا'}
+              </a>
+              <a
+                href={`/${lang}/products`}
+                className="px-8 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition inline-block"
+              >
+                {lang === 'en' && 'View Products'}
+                {lang === 'es' && 'Ver Productos'}
+                {lang === 'de' && 'Produkte Anzeigen'}
+                {lang === 'fr' && 'Voir les Produits'}
+                {lang === 'ar' && 'عرض المنتجات'}
+              </a>
+            </div>
           </div>
         </section>
       </main>

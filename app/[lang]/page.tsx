@@ -64,8 +64,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     {
       _uid: '1',
       image: {
-        filename: 'https://images.unsplash.com/photo-1497440871597-41fa534db117?w=1200&h=600&fit=crop',
-        alt: 'Solar Energy Solutions'
+        filename: '/images/products/solar-panel-1.jpg',
+        alt: 'Solar Energy Solutions - Professional solar panel installation'
       },
       title: 'Premium Solar Energy Solutions',
       subtitle: 'High-efficiency panels and portable power stations for global wholesale buyers',
@@ -75,8 +75,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     {
       _uid: '2',
       image: {
-        filename: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop',
-        alt: 'Home Appliances'
+        filename: '/images/products/appliances-package.jpg',
+        alt: 'Home Appliances - Modern kitchen and household appliances'
       },
       title: 'Modern Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with OEM/ODM support',
@@ -86,8 +86,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     {
       _uid: '3',
       image: {
-        filename: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=600&fit=crop',
-        alt: '3C Electronics'
+        filename: '/images/products/led-lighting.jpg',
+        alt: '3C Electronics - Smart LED lighting and electronic devices'
       },
       title: 'Latest 3C Electronics & Smart Devices',
       subtitle: 'Digital gadgets, LED lighting, and smart home solutions for the modern world',
@@ -217,8 +217,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             title="High-Efficiency Solar Systems & Portable Power Stations"
             description="We specialize in manufacturing professional-grade solar panels, MPPT charge controllers, and energy storage systems. Our solar solutions range from 300W to 3000W portable power stations, designed for sustainable energy solutions worldwide. With MOQ starting at 100 pieces and lead times of 20-35 days, we support both standard and customized OEM/ODM projects."
             image={{
-              filename: 'https://images.unsplash.com/photo-1497440871597-41fa534db117?w=800&h=600&fit=crop',
-              alt: 'Solar Energy Solutions'
+              filename: '/images/products/solar-power-station.jpg',
+              alt: 'Solar Energy Solutions - Professional solar power stations and panels'
             }}
             industry_type="solar"
             button_link={`/${lang}/products`}
@@ -228,8 +228,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             title="Premium Home Appliances with Energy Efficiency"
             description="From refrigerators to washing machines, our home appliances combine energy efficiency with cutting-edge technology. We manufacture a complete range of kitchen and household appliances that meet international standards (CE, FCC, RoHS). Our products are designed for modern living with 12-24 months warranty and comprehensive OEM/ODM support for global wholesale buyers."
             image={{
-              filename: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-              alt: 'Home Appliances'
+              filename: '/images/products/kitchen-appliances.jpg',
+              alt: 'Home Appliances - Modern kitchen appliances and household devices'
             }}
             industry_type="appliances"
             button_link={`/${lang}/products`}
@@ -239,8 +239,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             title="3C Electronics & Smart Home Solutions"
             description="Our 3C electronics portfolio includes digital gadgets, smart home devices, and energy-saving LED lighting solutions. We focus on innovation and sustainability, offering the latest consumer electronics designed for the digital age. With comprehensive certifications and quality assurance, our products are trusted by wholesale buyers across the globe."
             image={{
-              filename: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop',
-              alt: '3C Electronics'
+              filename: '/images/products/wireless-charger.jpg',
+              alt: '3C Electronics - Smart devices, wireless chargers, and LED lighting'
             }}
             industry_type="electronics"
             button_link={`/${lang}/products`}
