@@ -5,10 +5,10 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { Metadata } from 'next';
-import nextDynamic from 'next/dynamic';
+import dynamicImport from 'next/dynamic';
 
 // Dynamically import Counter with no SSR to prevent hydration issues
-const Counter = nextDynamic(() => import('@/components/Counter'), { ssr: false });
+const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false });
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
