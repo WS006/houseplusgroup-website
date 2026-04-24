@@ -12,7 +12,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
     const { data } = await storyblokApi.getStory(fullSlug, { version: 'published', language: lang });
     story = data.story;
   } catch (error) {
-    console.error(\`Error fetching story for \${fullSlug} in \${lang}:\`, error);
+    console.error(`Error fetching story for ${fullSlug} in ${lang}:`, error);
   }
 
   if (!story) {

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return generateMeta({
     title: 'HousePlus CH | Professional Solar & Home Appliances Manufacturer',
     description: 'Professional manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.',
-    url: \`/\${lang}\`,
+    url: `/${lang}`,
     lang: lang as any,
     type: 'website',
   });
