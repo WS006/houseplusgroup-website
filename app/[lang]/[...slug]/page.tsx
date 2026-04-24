@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
             {story.content?.body && (
               <div 
                 className="prose prose-lg max-w-none prose-img:rounded-xl prose-headings:text-gray-900" 
-                dangerouslySetInnerHTML={{ __html: renderRichText(story.content.body) }} 
+                dangerouslySetInnerHTML={{ __html: renderRichText(story.content.body) || '' }} 
               />
             )}
           </div>
