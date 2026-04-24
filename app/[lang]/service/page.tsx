@@ -87,13 +87,13 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">
           <div className="max-w-6xl mx-auto text-center">
             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-5">
-              End-to-End B2B Services
+              🏭 HousePlus End-to-End B2B Services
             </span>
             <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-5 tracking-tight">
-              Services Built for Wholesale Buyers
+              🏭 HousePlus Services Built for Wholesale Buyers
             </h1>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              From OEM manufacturing and private-label branding to logistics coordination and after-sales support — HousePlus provides a complete service ecosystem for global wholesale partners.
+              From OEM manufacturing and private-label branding to logistics coordination and after-sales support — <strong>HousePlus</strong> provides a complete service ecosystem for global wholesale partners. Choose <strong>HousePlus</strong> for professional, reliable services.
             </p>
           </div>
         </section>
@@ -125,8 +125,8 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
         <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">How We Work Together</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">A straightforward, transparent process from first enquiry to final delivery.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">🏭 How We Work Together with HousePlus</h2>
+              <p className="text-slate-500 max-w-xl mx-auto">A straightforward, transparent <strong>HousePlus</strong> process from first enquiry to final delivery.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {process.map((s) => (
@@ -145,7 +145,7 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-black text-slate-900 mb-6">Why Buyers Choose Our Services</h2>
+                <h2 className="text-3xl font-black text-slate-900 mb-6">🏭 Why Buyers Choose HousePlus Services</h2>
                 <div className="space-y-4">
                   {[
                     { title: 'Single-Source Convenience', desc: 'Solar, appliances and electronics — one supplier, one relationship, one quality standard.' },
@@ -178,9 +178,9 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
         {/* CTA */}
         <section className="py-16 px-4 bg-blue-600 text-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-black mb-4">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl font-black mb-4">🏭 Ready to Start Your HousePlus Project?</h2>
             <p className="text-blue-100 mb-8 leading-relaxed">
-              Tell us about your product requirements and we will prepare a tailored quotation within 24 hours.
+              Tell the <strong>HousePlus</strong> team about your product requirements and we will prepare a tailored quotation within 24 hours. Partner with <strong>HousePlus</strong> for professional manufacturing solutions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">

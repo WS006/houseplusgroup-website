@@ -74,17 +74,25 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-5">
-                  Established 2010 · Guangdong, China
-                </span>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full">
+                    🏭 HousePlus — Established 2010
+                  </span>
+                  <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-xs font-bold uppercase tracking-widest rounded-full">
+                    Guangdong, China
+                  </span>
+                  <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full">
+                    ISO 9001 Certified
+                  </span>
+                </div>
                 <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-                  Built on Manufacturing Excellence
+                  🏭 HousePlus: Built on Manufacturing Excellence
                 </h1>
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                  HousePlus Group is a vertically integrated manufacturer specialising in solar energy systems, home appliances and 3C electronics. Over 14 years, we have grown from a single production line into a multi-division enterprise trusted by wholesale buyers across six continents.
+                  <strong>HousePlus Group</strong> is a vertically integrated manufacturer specialising in solar energy systems, home appliances and 3C electronics. Over 14 years, <strong>HousePlus</strong> has grown from a single production line into a multi-division enterprise trusted by wholesale buyers across six continents. As a professional <strong>HousePlus</strong> manufacturer, we deliver OEM/ODM solutions with international certifications.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Our 20,000 m² factory in Guangdong houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving us complete control from raw material to finished product.
+                  The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 500+ wholesale clients worldwide.
                 </p>
               </div>
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
@@ -143,8 +151,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">What Drives Us</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">Four principles guide every decision we make — from product design to after-sales support.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">🏭 What Drives HousePlus</h2>
+              <p className="text-slate-500 max-w-xl mx-auto">Four principles guide every <strong>HousePlus</strong> decision — from product design to after-sales support. This is the <strong>HousePlus</strong> difference.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {values.map((v) => (
@@ -162,8 +170,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">Our Journey</h2>
-              <p className="text-slate-500">Key milestones in the HousePlus story.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">🏭 The HousePlus Journey</h2>
+              <p className="text-slate-500">Key milestones in the <strong>HousePlus</strong> manufacturing story since 2010.</p>
             </div>
             <div className="relative">
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-100" />
@@ -188,7 +196,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-black text-slate-900 mb-6">Manufacturing Capabilities</h2>
+                <h2 className="text-3xl font-black text-slate-900 mb-6">🏭 HousePlus Manufacturing Capabilities</h2>
                 <div className="space-y-4">
                   {[
                     'Dedicated assembly lines for solar, appliances and 3C electronics',
@@ -220,9 +228,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         {/* CTA */}
         <section className="py-16 px-4 bg-white border-t border-slate-100">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-black text-slate-900 mb-4">Ready to Partner with HousePlus?</h2>
+            <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 Ready to Partner with HousePlus?</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Whether you are sourcing for retail distribution, private-label branding or large-scale project supply, our team is ready to discuss your requirements.
+              Whether you are sourcing for retail distribution, private-label branding or large-scale project supply, the <strong>HousePlus</strong> team is ready to discuss your requirements. As a professional <strong>HousePlus</strong> manufacturer with 14+ years of experience, we deliver quality and reliability.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href={`/${lang}/contact`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">

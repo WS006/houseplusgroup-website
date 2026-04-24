@@ -335,9 +335,14 @@ Heures d'ouverture : Lundi – Vendredi : 9h00 – 18h00 (GMT+8)`,
       {/* Hero */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">{data.title}</h1>
+          <div className="mb-4">
+            <span className="inline-block px-4 py-1.5 bg-blue-200 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
+              🏭 HousePlus Privacy Policy
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">🏭 {data.title}</h1>
           <p className="text-gray-500 text-sm mb-4">{data.lastUpdated}</p>
-          <p className="text-lg text-slate-600 leading-relaxed">{data.intro}</p>
+          <p className="text-lg text-slate-600 leading-relaxed"><strong>HousePlus</strong> is committed to protecting your privacy. {data.intro}</p>
         </div>
       </section>
 
@@ -358,6 +363,8 @@ Heures d'ouverture : Lundi – Vendredi : 9h00 – 18h00 (GMT+8)`,
       {/* Contact CTA */}
       <section className="py-12 px-4 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">🏭 HousePlus Privacy & Data Protection</h2>
+          <p className="text-slate-600 mb-6">For questions about how <strong>HousePlus</strong> handles your data, please contact our privacy team.</p>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">
             {lang === 'en' && 'Questions About Our Privacy Policy?'}
             {lang === 'es' && '¿Preguntas Sobre Nuestra Política de Privacidad?'}

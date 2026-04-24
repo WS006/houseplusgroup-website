@@ -72,14 +72,22 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5">
-                  Guangdong, China · 20,000 m²
-                </span>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full">
+                    🏭 HousePlus Factory
+                  </span>
+                  <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full">
+                    Guangdong, China
+                  </span>
+                  <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full">
+                    20,000 m²
+                  </span>
+                </div>
                 <h1 className="text-4xl md:text-5xl font-black mb-5 leading-tight">
-                  Where HousePlus Products Are Made
+                  🏭 Where HousePlus Products Are Made
                 </h1>
                 <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  Our vertically integrated factory in Guangdong houses four dedicated production divisions, an in-house tooling workshop and a fully equipped quality laboratory — giving us complete control from raw material to finished product.
+                  The <strong>HousePlus</strong> vertically integrated factory in Guangdong houses four dedicated production divisions, an in-house tooling workshop and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is the <strong>HousePlus</strong> advantage.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
                   {[
@@ -128,8 +136,8 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">Production Facilities</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">Four specialised divisions, each optimised for its product category.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">🏭 HousePlus Production Facilities</h2>
+              <p className="text-slate-500 max-w-xl mx-auto">Four specialised <strong>HousePlus</strong> divisions, each optimised for its product category.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {facilities.map((f) => (
@@ -147,8 +155,8 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
         <section className="py-16 px-4 bg-blue-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">Our Manufacturing Process</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">From concept to delivery — a transparent, step-by-step workflow.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">🏭 HousePlus Manufacturing Process</h2>
+              <p className="text-slate-500 max-w-xl mx-auto">From concept to delivery — the transparent <strong>HousePlus</strong> workflow.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processSteps.map((s) => (
@@ -175,7 +183,7 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
                 />
               </div>
               <div>
-                <h2 className="text-3xl font-black text-slate-900 mb-6">Quality Assurance</h2>
+                <h2 className="text-3xl font-black text-slate-900 mb-6">🏭 HousePlus Quality Assurance</h2>
                 <div className="space-y-4">
                   {[
                     'ISO 9001:2015 certified quality management system',
@@ -199,9 +207,9 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
         {/* CTA */}
         <section className="py-16 px-4 bg-white border-t border-slate-100">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-black text-slate-900 mb-4">Interested in a Factory Audit?</h2>
+            <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 Interested in a HousePlus Factory Audit?</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              We welcome on-site visits and third-party factory audits. Contact us to arrange a tour or request our latest audit reports.
+              <strong>HousePlus</strong> welcomes on-site visits and third-party factory audits. Contact the <strong>HousePlus</strong> team to arrange a tour or request our latest audit reports.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href={`/${lang}/contact`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
