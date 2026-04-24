@@ -76,9 +76,17 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
 
   const displayCarouselItems = carouselItems.length > 0 ? carouselItems : defaultCarouselItems;
 
+  const organizationSchema = generateOrganizationSchema({
+    title: 'HousePlus',
+    description: 'Professional manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.',
+    url: `https://www.houseplus-ch.com/${lang}`,
+    lang,
+    type: 'Organization',
+  });
+
   return (
     <>
-      <SEOHead schemas={[generateOrganizationSchema({ title: 'HousePlus', lang })]} />
+      <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
         <section className="w-full">
           <Carousel items={displayCarouselItems} autoPlayInterval={5000} />
