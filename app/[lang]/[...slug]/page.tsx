@@ -7,7 +7,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
   const fullSlug = slug?.join('/') || '';
   const storyblokApi = getStoryblokApi();
   let story = null;
-  let stories = [];
+  let stories: any[] = [];
 
   try {
     // 1. Try to fetch as a direct story
