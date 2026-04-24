@@ -73,17 +73,36 @@ export default async function RootLayout({
   const isRTL = lang === 'ar';
   return (
     <html lang={lang} dir={isRTL ? 'rtl' : 'ltr'}>
-      <body className="min-h-screen bg-white">
-        <Header lang={lang} />
-        <LanguageSwitcher />
+      <head>
+        {/* Security & Performance Headers */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.storyblok.com https://www.google-analytics.com; frame-src 'self' https://www.google.com https://www.youtube.com" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className="min-h-screen bg-white flex flex-col">
+        {/* Semantic HTML5 Structure */}
+        <header role="banner" className="w-full sticky top-0 z-50">
+          <Header lang={lang} />
+          <LanguageSwitcher />
+        </header>
+        
+        <main role="main" className="flex-grow">
+          {children}
+        </main>
+        
         <ServiceWidget 
           whatsapp="+8615578119543"
           wechat="JackHousePlus"
           email="jack@houseplus-ch.com"
           phone="+2349078080738"
         />
-        {children}
-        <Footer lang={lang} />
+        
+        <footer role="contentinfo" className="w-full">
+          <Footer lang={lang} />
+        </footer>
       </body>
     </html>
   );
