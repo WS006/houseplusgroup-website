@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
+import Link from 'next/link';
 
 // Dynamically import Counter with no SSR to prevent hydration issues
 const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false });
@@ -46,8 +47,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   }
 
   const content = story?.content || {};
-  const title = content.title || 'HousePlus Group';
   
+  // Three professional carousel slides — business style with bright, clean imagery
   const defaultCarouselItems = [
     {
       _uid: '1',
@@ -55,25 +56,36 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1920&q=80',
         alt: 'HousePlus Solar Energy Solutions'
       },
-      title: 'Premium HousePlus Solar Solutions',
-      subtitle: 'High-efficiency HousePlus panels and power stations for global wholesale partners',
-      button_text: 'Explore HousePlus Solar',
+      title: 'High-Efficiency Solar Solutions',
+      subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
+      button_text: 'Explore Solar Products',
       button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
     },
     {
       _uid: '2',
       image: {
-        filename: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1920&q=80',
+        filename: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80',
         alt: 'HousePlus Home Appliances'
       },
-      title: 'Modern HousePlus Appliances',
-      subtitle: 'Energy-efficient HousePlus kitchen appliances with full OEM/ODM support',
-      button_text: 'View HousePlus Appliances',
+      title: 'Smart Home Appliances',
+      subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
+      button_text: 'View Appliances',
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+    },
+    {
+      _uid: '3',
+      image: {
+        filename: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=1920&q=80',
+        alt: 'HousePlus 3C Electronics'
+      },
+      title: '3C Electronics & Accessories',
+      subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
+      button_text: 'View Electronics',
       button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
     },
   ];
 
-  const displayCarouselItems = carouselItems.length > 0 ? carouselItems : defaultCarouselItems;
+  const displayCarouselItems = carouselItems.length >= 3 ? carouselItems : defaultCarouselItems;
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
@@ -87,54 +99,108 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     <>
       <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
+        {/* Hero Carousel — 3 slides, auto-play */}
         <section className="w-full">
           <Carousel items={displayCarouselItems} autoPlayInterval={5000} />
         </section>
 
-        <section className="py-24 px-4 text-center bg-gradient-to-b from-slate-50 to-white">
+        {/* Brand Introduction */}
+        <section className="py-20 px-4 text-center bg-gradient-to-b from-blue-50 to-white">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 tracking-tight">
-              {title}
+            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+              Global B2B Wholesale Manufacturer
+            </span>
+            <h1 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 tracking-tight">
+              HousePlus Group
             </h1>
-            <p className="text-xl md:text-2xl text-slate-500 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Professional HousePlus manufacturer of solar systems, home appliances, and 3C electronics. Delivering HousePlus quality and innovation to global markets since 2010.
+            <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Founded in 2010, HousePlus is a vertically-integrated manufacturer supplying solar energy systems, home appliances, and 3C electronics to wholesale buyers across 60+ countries. We offer OEM/ODM services, CE/FCC/RoHS certification, and flexible MOQ starting from 100 units.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <a href={`/${lang}/products`} className="px-10 py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 hover:-translate-y-1">View HousePlus Products</a>
-              <a href={`/${lang}/contact`} className="px-10 py-4 bg-white text-slate-900 border-2 border-slate-200 font-bold rounded-2xl hover:border-slate-900 transition-all hover:-translate-y-1">Contact HousePlus</a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
+                Browse All Products
+              </Link>
+              <Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">
+                Request a Quote
+              </Link>
             </div>
           </div>
         </section>
 
-        <section className="py-16 border-y border-slate-100 bg-slate-50/50">
+        {/* Key Stats */}
+        <section className="py-14 border-y border-slate-100 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <Counter end="10+" label="Years HousePlus Exp" />
-              <Counter end="500+" label="Global HousePlus Clients" />
-              <Counter end="24m" label="HousePlus Warranty" />
-              <Counter end="ISO" label="HousePlus Certified" />
+              <Counter end="14+" label="Years of Manufacturing" />
+              <Counter end="500+" label="Global Wholesale Clients" />
+              <Counter end="60+" label="Countries Served" />
+              <Counter end="24m" label="Product Warranty" />
             </div>
           </div>
         </section>
 
+        {/* Three Product Category Sections */}
         <div className="space-y-0">
           <IndustrySection
-            title="High-Efficiency HousePlus Solar Systems"
-            description="We specialize in manufacturing professional-grade HousePlus solar panels and energy storage systems. Our HousePlus solar solutions are designed for sustainable energy worldwide. With HousePlus MOQ starting at 100 pieces, we support customized OEM/ODM projects."
-            image={{ filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&q=80', alt: 'HousePlus Solar Solutions' }}
+            title="High-Efficiency Solar Energy Systems"
+            description="HousePlus manufactures a comprehensive range of solar products including monocrystalline panels (100W–500W), MPPT charge controllers, 3kW–10kW inverters, and portable power stations (300W–3000W). All products carry CE, RoHS and IEC certifications, making them ready for the European, Middle Eastern and African markets."
+            image={{ filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&q=80', alt: 'Solar Energy Systems' }}
             industry_type="solar"
             button_link={`/${lang}/products`}
-            button_text="Explore HousePlus Solar"
+            button_text="Explore Solar Products"
           />
           <IndustrySection
-            title="Premium HousePlus Home Appliances"
-            description="From refrigerators to washing machines, HousePlus home appliances combine energy efficiency with cutting-edge technology. We manufacture a complete range of HousePlus kitchen appliances that meet international standards (CE, FCC, RoHS)."
-            image={{ filename: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80', alt: 'HousePlus Home Appliances' }}
+            title="Energy-Efficient Home Appliances"
+            description="Our home appliance line covers air fryers, induction cooktops, electric kettles, toasters and more — all engineered for energy efficiency and durability. With in-house tooling and a dedicated R&D team, HousePlus delivers OEM/ODM solutions that meet CE, FCC and RoHS standards for global retail and wholesale channels."
+            image={{ filename: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', alt: 'Home Appliances' }}
             industry_type="appliances"
             button_link={`/${lang}/products`}
-            button_text="View HousePlus Appliances"
+            button_text="View Home Appliances"
+          />
+          <IndustrySection
+            title="3C Electronics & Accessories"
+            description="HousePlus supplies a curated portfolio of 3C electronics including TWS earphones, over-ear headphones, smart watches, portable SSDs, micro SD cards and fast-charging USB-C cables. Each product undergoes rigorous quality control and is available for private-label branding with custom packaging."
+            image={{ filename: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=800&q=80', alt: '3C Electronics' }}
+            industry_type="electronics"
+            button_link={`/${lang}/products`}
+            button_text="View 3C Electronics"
           />
         </div>
+
+        {/* Why Choose HousePlus */}
+        <section className="py-20 bg-blue-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">Why Global Buyers Choose HousePlus</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">We combine manufacturing expertise with responsive service to deliver reliable products on time, every time.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: '🏭',
+                  title: 'Vertically Integrated Factory',
+                  desc: 'Over 20,000 m² of production space with in-house tooling, assembly lines and quality labs — full control from raw material to finished product.'
+                },
+                {
+                  icon: '✅',
+                  title: 'International Certifications',
+                  desc: 'CE, FCC, RoHS, ISO 9001 and IEC certifications ensure our products meet the regulatory requirements of Europe, North America and beyond.'
+                },
+                {
+                  icon: '🤝',
+                  title: 'Flexible OEM/ODM Support',
+                  desc: 'Custom branding, private-label packaging and product modifications available from MOQ 100 pcs. Dedicated account managers for every client.'
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl p-8 shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );

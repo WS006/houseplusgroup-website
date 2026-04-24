@@ -34,26 +34,26 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
     {
       _uid: 'default-1',
       image: { filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1920&q=80', alt: 'HousePlus Solar Solutions' },
-      title: 'Premium HousePlus Solar Solutions',
-      subtitle: 'High-efficiency HousePlus panels and power stations for global wholesale partners',
-      button_text: 'Explore HousePlus Solar',
-      button_link: { url: '/en/products/solar-systems', cached_url: '/en/products/solar-systems' }
+      title: 'High-Efficiency Solar Solutions',
+      subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
+      button_text: 'Explore Solar Products',
+      button_link: { url: '/en/products', cached_url: '/en/products' }
     },
     {
       _uid: 'default-2',
-      image: { filename: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1920&q=80', alt: 'HousePlus Home Appliances' },
-      title: 'Advanced HousePlus Home Appliances',
-      subtitle: 'Energy-efficient refrigerators, washing machines and kitchen solutions',
-      button_text: 'View HousePlus Appliances',
-      button_link: { url: '/en/products/home-appliances', cached_url: '/en/products/home-appliances' }
+      image: { filename: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80', alt: 'HousePlus Home Appliances' },
+      title: 'Smart Home Appliances',
+      subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
+      button_text: 'View Appliances',
+      button_link: { url: '/en/products', cached_url: '/en/products' }
     },
     {
       _uid: 'default-3',
-      image: { filename: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80', alt: 'HousePlus Manufacturing' },
-      title: 'Professional HousePlus Manufacturing',
-      subtitle: 'Leading OEM/ODM partner for global brands since 2010',
-      button_text: 'Visit HousePlus Factory',
-      button_link: { url: '/en/factory', cached_url: '/en/factory' }
+      image: { filename: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=1920&q=80', alt: 'HousePlus 3C Electronics' },
+      title: '3C Electronics & Accessories',
+      subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
+      button_text: 'View Electronics',
+      button_link: { url: '/en/products', cached_url: '/en/products' }
     }
   ];
 
@@ -90,7 +90,7 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
 
   return (
     <div
-      className="relative w-full h-[600px] md:h-[800px] overflow-hidden group bg-slate-900"
+      className="relative w-full h-[520px] md:h-[680px] overflow-hidden group bg-slate-800"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -105,32 +105,36 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
             src={item.image.filename}
             alt={item.image.alt || item.title}
             fill
-            className="object-cover brightness-[0.6]"
+            className="object-cover brightness-[0.75]"
             priority={index === 0}
             sizes="100vw"
             quality={90}
           />
-          <div className="absolute inset-0 flex items-center justify-center text-center px-4">
-            <div className="max-w-4xl">
-              <h2 className={`text-4xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight transition-all duration-1000 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          {/* Left-aligned gradient overlay for business style */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/65 via-slate-800/40 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-start px-8 md:px-20">
+            <div className="max-w-2xl">
+              {/* Slide badge */}
+              <span className={`inline-block px-4 py-1.5 bg-blue-600 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5 transition-all duration-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`}>HousePlus — Global Wholesale Manufacturer</span>
+              <h2 className={`text-3xl md:text-5xl lg:text-6xl font-black text-white mb-5 tracking-tight leading-tight transition-all duration-1000 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 {item.title}
               </h2>
-              <p className={`text-xl md:text-2xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <p className={`text-base md:text-xl text-slate-200 mb-8 max-w-xl leading-relaxed transition-all duration-1000 delay-200 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 {item.subtitle}
               </p>
               {item.button_text && (
-                <div className={`flex flex-col md:flex-row gap-4 justify-center transition-all duration-1000 delay-400 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-400 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Link
                     href={item.button_link?.cached_url || item.button_link?.url || '#'}
-                    className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-full transition-all hover:scale-105 hover:shadow-2xl uppercase tracking-widest text-sm"
+                    className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
                     {item.button_text}
                   </Link>
                   <Link
                     href="/en/contact"
-                    className="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-black rounded-full transition-all hover:scale-105 uppercase tracking-widest text-sm"
+                    className="px-8 py-4 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white border border-white/40 font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
-                    Contact HousePlus
+                    Get a Quote
                   </Link>
                 </div>
               )}
@@ -141,27 +145,34 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
 
       <button
         onClick={() => handleManualAction(goToPrevious)}
-        className="absolute left-8 top-1/2 -translate-y-1/2 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full transition-all hidden md:flex z-20"
+        className="absolute left-6 top-1/2 -translate-y-1/2 p-3 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full transition-all hidden md:flex z-20 border border-white/30"
+        aria-label="Previous slide"
       >
-        <ChevronLeft size={32} strokeWidth={3} />
+        <ChevronLeft size={24} strokeWidth={2.5} />
       </button>
       <button
         onClick={() => handleManualAction(goToNext)}
-        className="absolute right-8 top-1/2 -translate-y-1/2 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full transition-all hidden md:flex z-20"
+        className="absolute right-6 top-1/2 -translate-y-1/2 p-3 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full transition-all hidden md:flex z-20 border border-white/30"
+        aria-label="Next slide"
       >
-        <ChevronRight size={32} strokeWidth={3} />
+        <ChevronRight size={24} strokeWidth={2.5} />
       </button>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2.5 z-20">
         {displayItems.map((_, index) => (
           <button
             key={index}
             onClick={() => handleManualAction(() => goToSlide(index))}
             className={`h-1.5 transition-all duration-500 rounded-full ${
-              index === currentIndex ? 'w-12 bg-blue-600' : 'w-3 bg-white/30 hover:bg-white/50'
+              index === currentIndex ? 'w-10 bg-blue-500' : 'w-3 bg-white/50 hover:bg-white/70'
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
+      </div>
+      {/* Slide counter */}
+      <div className="absolute bottom-8 right-8 text-white/60 text-sm font-medium z-20 hidden md:block">
+        {currentIndex + 1} / {displayItems.length}
       </div>
     </div>
   );
