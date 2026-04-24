@@ -1,6 +1,7 @@
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Header from '@/components/Header';
+import ServiceWidget from '@/components/ServiceWidget';
 import '../globals.css';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -74,6 +75,12 @@ export default async function RootLayout({
       <body className="min-h-screen bg-white">
         <Header lang={lang} />
         <LanguageSwitcher />
+        <ServiceWidget 
+          whatsapp="+8615578119543"
+          wechat="JackHousePlus"
+          email="jack@houseplus-ch.com"
+          phone="+2349078080738"
+        />
         {children}
         <footer className="bg-gray-50 border-t py-8 mt-12">
           <div className="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">

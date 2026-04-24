@@ -1,12 +1,32 @@
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import Carousel from '@/components/Carousel';
+import IndustrySection from '@/components/IndustrySection';
+import SEOHead from '@/components/SEOHead';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSEOMetadata({
+    title: 'HousePlus - Professional Manufacturer of Solar Systems, Home Appliances & 3C Electronics',
+    description: 'Global B2B wholesale supplier of solar panels, portable power stations, home appliances, and 3C electronics. OEM/ODM support, CE/FCC/RoHS certified. MOQ 100-500 pcs.',
+    keywords: ['solar panels', 'home appliances', 'portable power station', 'wholesale', 'OEM', 'ODM', '3C electronics'],
+    url: `/${lang}`,
+    lang: lang as any,
+    type: 'website',
+  });
+}
 
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const storyblokApi = getStoryblokApi();
   let story = null;
+  let carouselItems: any[] = [];
+  let industriesContent: any[] = [];
 
   try {
     const { data } = await storyblokApi.getStory('home', { 
@@ -15,6 +35,16 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
       cv: Date.now() // Force fresh content
     });
     story = data.story;
+    
+    // Extract carousel items if available
+    if (story?.content?.carousel && Array.isArray(story.content.carousel)) {
+      carouselItems = story.content.carousel;
+    }
+    
+    // Extract industry sections if available
+    if (story?.content?.industries && Array.isArray(story.content.industries)) {
+      industriesContent = story.content.industries;
+    }
   } catch (error) {
     console.error(`Error fetching home for ${lang}:`, error);
   }
@@ -29,8 +59,86 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     ? renderRichText(rawBody) 
     : (typeof rawBody === 'string' ? rawBody : '');
 
+  // Default carousel items if not provided from Storyblok
+  const defaultCarouselItems = [
+    {
+      _uid: '1',
+      image: {
+        filename: 'https://images.unsplash.com/photo-1497440871597-41fa534db117?w=1200&h=600&fit=crop',
+        alt: 'Solar Energy Solutions'
+      },
+      title: 'Premium Solar Energy Solutions',
+      subtitle: 'High-efficiency panels and portable power stations for global wholesale buyers',
+      button_text: 'Explore Solar Products',
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+    },
+    {
+      _uid: '2',
+      image: {
+        filename: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop',
+        alt: 'Home Appliances'
+      },
+      title: 'Modern Home Appliances',
+      subtitle: 'Energy-efficient kitchen and household appliances with OEM/ODM support',
+      button_text: 'View Appliances',
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+    },
+    {
+      _uid: '3',
+      image: {
+        filename: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=600&fit=crop',
+        alt: '3C Electronics'
+      },
+      title: 'Latest 3C Electronics & Smart Devices',
+      subtitle: 'Digital gadgets, LED lighting, and smart home solutions for the modern world',
+      button_text: 'Discover Electronics',
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+    }
+  ];
+
+  const displayCarouselItems = carouselItems.length > 0 ? carouselItems : defaultCarouselItems;
+
+  // Generate structured data schemas
+  const organizationSchema = generateOrganizationSchema({
+    title: 'HousePlus',
+    description: 'Professional manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.',
+    url: `https://www.houseplus-ch.com/${lang}`,
+    lang,
+    type: 'Organization',
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: 'What is the MOQ for HousePlus products?',
+      answer: 'Our minimum order quantity is 100-500 pieces depending on the product model. We support mixed container orders for flexibility.'
+    },
+    {
+      question: 'Do you offer OEM/ODM services?',
+      answer: 'Yes, we provide comprehensive OEM/ODM services with custom branding, packaging, and product specifications tailored to your requirements.'
+    },
+    {
+      question: 'What certifications do your products have?',
+      answer: 'Our products are certified with CE, FCC, RoHS, and ISO standards, ensuring compliance with international quality and safety requirements.'
+    },
+    {
+      question: 'What is the lead time for orders?',
+      answer: 'Standard lead time is 20-35 days from order confirmation, depending on product type and order quantity.'
+    },
+    {
+      question: 'What warranty do you provide?',
+      answer: 'We provide 12-24 months warranty depending on the product category, with comprehensive after-sales support.'
+    }
+  ]);
+
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <SEOHead schemas={[organizationSchema, faqSchema]} />
+      <main className="min-h-screen bg-white">
+      {/* Carousel Section */}
+      <section className="w-full">
+        <Carousel items={displayCarouselItems} autoPlayInterval={5000} />
+      </section>
+
       {/* Hero Section */}
       <section className="py-24 px-4 text-center bg-gradient-to-b from-blue-50/50 to-white">
         <div className="max-w-5xl mx-auto">
@@ -90,31 +198,57 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* Core Categories */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Core Business</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto">We provide end-to-end manufacturing solutions across three primary industries.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { title: 'Solar Energy', icon: '☀️', color: 'blue', desc: 'High-efficiency monocrystalline panels and advanced energy storage.' },
-            { title: 'Home Appliances', icon: '🏠', color: 'green', desc: 'Modern kitchen and household appliances with OEM/ODM support.' },
-            { title: '3C Electronics', icon: '💻', color: 'purple', desc: 'Latest consumer electronics, smart devices and digital accessories.' }
-          ].map((cat) => (
-            <div key={cat.title} className="group p-10 rounded-[2.5rem] bg-white border border-slate-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-500">
-              <div className={`w-20 h-20 bg-${cat.color}-50 text-${cat.color}-600 rounded-3xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition-transform`}>
-                {cat.icon}
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">{cat.title}</h3>
-              <p className="text-slate-600 leading-relaxed mb-8">{cat.desc}</p>
-              <a href={`/${lang}/products`} className="text-blue-600 font-bold flex items-center group-hover:gap-2 transition-all">
-                Learn More <span className="ml-2">→</span>
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Industry Sections */}
+      {industriesContent && industriesContent.length > 0 ? (
+        industriesContent.map((industry: any) => (
+          <IndustrySection
+            key={industry._uid}
+            title={industry.title}
+            description={industry.description}
+            image={industry.image}
+            industry_type={industry.industry_type}
+            button_link={industry.button_link?.cached_url || industry.button_link?.url}
+            button_text={industry.button_text}
+          />
+        ))
+      ) : (
+        <>
+          <IndustrySection
+            title="High-Efficiency Solar Systems & Portable Power Stations"
+            description="We specialize in manufacturing professional-grade solar panels, MPPT charge controllers, and energy storage systems. Our solar solutions range from 300W to 3000W portable power stations, designed for sustainable energy solutions worldwide. With MOQ starting at 100 pieces and lead times of 20-35 days, we support both standard and customized OEM/ODM projects."
+            image={{
+              filename: 'https://images.unsplash.com/photo-1497440871597-41fa534db117?w=800&h=600&fit=crop',
+              alt: 'Solar Energy Solutions'
+            }}
+            industry_type="solar"
+            button_link={`/${lang}/products`}
+            button_text="Explore Solar Solutions"
+          />
+          <IndustrySection
+            title="Premium Home Appliances with Energy Efficiency"
+            description="From refrigerators to washing machines, our home appliances combine energy efficiency with cutting-edge technology. We manufacture a complete range of kitchen and household appliances that meet international standards (CE, FCC, RoHS). Our products are designed for modern living with 12-24 months warranty and comprehensive OEM/ODM support for global wholesale buyers."
+            image={{
+              filename: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+              alt: 'Home Appliances'
+            }}
+            industry_type="appliances"
+            button_link={`/${lang}/products`}
+            button_text="View Appliances"
+          />
+          <IndustrySection
+            title="3C Electronics & Smart Home Solutions"
+            description="Our 3C electronics portfolio includes digital gadgets, smart home devices, and energy-saving LED lighting solutions. We focus on innovation and sustainability, offering the latest consumer electronics designed for the digital age. With comprehensive certifications and quality assurance, our products are trusted by wholesale buyers across the globe."
+            image={{
+              filename: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop',
+              alt: '3C Electronics'
+            }}
+            industry_type="electronics"
+            button_link={`/${lang}/products`}
+            button_text="Discover Electronics"
+          />
+        </>
+      )}
     </main>
+    </>
   );
 }

@@ -1,8 +1,47 @@
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+import SEOHead from '@/components/SEOHead';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const fullSlug = slug?.join('/') || '';
+  const storyblokApi = getStoryblokApi();
+  
+  try {
+    const { data } = await storyblokApi.getStory(fullSlug, { 
+      version: 'published', 
+      language: lang,
+      resolve_links: 'url',
+      cv: Date.now()
+    });
+    
+    const story = data.story;
+    const title = story?.content?.title || story?.content?.Text || story?.name || fullSlug;
+    const description = story?.content?.description || story?.content?.Text || `Discover ${title} at HousePlus`;
+    
+    return generateSEOMetadata({
+      title,
+      description,
+      url: `/${lang}/${fullSlug}`,
+      lang: lang as any,
+      type: 'article',
+    });
+  } catch (error) {
+    return generateSEOMetadata({
+      title: fullSlug.charAt(0).toUpperCase() + fullSlug.slice(1),
+      description: `Explore ${fullSlug} at HousePlus`,
+      url: `/${lang}/${fullSlug}`,
+      lang: lang as any,
+      type: 'website',
+    });
+  }
+}
 
 export default async function Page({ params }: { params: Promise<{ lang: string; slug: string[] }> }) {
   const { lang, slug } = await params;
@@ -42,8 +81,44 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
     notFound();
   }
 
+  // Generate structured data schemas
+  const schemas: any[] = [];
+  
+  if (story) {
+    const articleSchema = generateArticleSchema({
+      title: story.content?.title || story.name,
+      description: story.content?.description || '',
+      url: `https://www.houseplus-ch.com/${lang}/${fullSlug}`,
+      image: story.content?.image?.filename,
+      lang,
+      type: 'Article',
+      datePublished: story.created_at,
+      dateModified: story.updated_at,
+    });
+    schemas.push(articleSchema);
+    
+    // Add FAQ schema if content contains FAQ data
+    if (story.content?.faq && Array.isArray(story.content.faq)) {
+      const faqSchema = generateFAQSchema(story.content.faq);
+      schemas.push(faqSchema);
+    }
+  }
+  
+  // Add breadcrumb schema
+  const breadcrumbItems = [
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    ...slug.map((s, i) => ({
+      name: s.charAt(0).toUpperCase() + s.slice(1),
+      url: `https://www.houseplus-ch.com/${lang}/${slug.slice(0, i + 1).join('/')}`
+    }))
+  ];
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+  schemas.push(breadcrumbSchema);
+
   return (
-    <main className="min-h-screen py-16 px-4 bg-white">
+    <>
+      <SEOHead schemas={schemas} />
+      <main className="min-h-screen py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Story Content Rendering */}
         {story && (
@@ -143,5 +218,6 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
         )}
       </div>
     </main>
+    </>
   );
 }
