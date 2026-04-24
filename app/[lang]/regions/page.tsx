@@ -1,10 +1,7 @@
-import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
-import { geoRegions } from '@/lib/geo-keywords';
-import { translations } from '@/lib/translations';
 
 export default async function RegionsPage() {
   const breadcrumbs = [
@@ -37,19 +34,19 @@ export default async function RegionsPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-black mb-4">
               HousePlus Global Wholesale Markets
             </h1>
             <p className="text-xl opacity-90">
-              Specialized wholesale solutions for Africa, Southeast Asia, and Europe
+              Specialized HousePlus wholesale solutions for Africa, Southeast Asia, and Europe.
             </p>
           </div>
         </section>
 
-        {/* Regions Banner Image */}
+        {/* Regions Banner Image - Using reliable Unsplash link */}
         <section className="py-8 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&h=500&fit=crop"
                 alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
@@ -66,64 +63,61 @@ export default async function RegionsPage() {
         <section className="py-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
-              Select Your Region
+              Select Your HousePlus Region
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Africa */}
               <Link href="/en/regions/africa">
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg shadow hover:shadow-xl transition cursor-pointer h-full">
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-orange-200">
                   <h3 className="text-3xl font-bold mb-4 text-orange-600">🌍 Africa</h3>
                   <p className="text-gray-700 mb-6">
-                    Serving Nigeria, Kenya, South Africa, Egypt, Ghana, and more
+                    HousePlus serving Nigeria, Kenya, South Africa, Egypt, Ghana, and more.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
-                    <li>✓ 10+ countries covered</li>
-                    <li>✓ FOB/CIF payment terms</li>
-                    <li>✓ 20-35 days lead time</li>
-                    <li>✓ Port of Lagos, Durban</li>
+                    <li>✓ 10+ HousePlus countries covered</li>
+                    <li>✓ HousePlus FOB/CIF payment terms</li>
+                    <li>✓ 20-35 days HousePlus lead time</li>
                   </ul>
-                  <button className="text-orange-600 font-semibold hover:text-orange-700">
-                    Learn More →
-                  </button>
+                  <span className="text-orange-600 font-bold hover:text-orange-700">
+                    Explore Africa →
+                  </span>
                 </div>
               </Link>
 
               {/* Southeast Asia */}
               <Link href="/en/regions/southeast_asia">
-                <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg shadow hover:shadow-xl transition cursor-pointer h-full">
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-green-200">
                   <h3 className="text-3xl font-bold mb-4 text-green-600">🌏 Southeast Asia</h3>
                   <p className="text-gray-700 mb-6">
-                    Serving Vietnam, Thailand, Indonesia, Philippines, and more
+                    HousePlus serving Vietnam, Thailand, Indonesia, Philippines, and more.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
-                    <li>✓ 10+ countries covered</li>
-                    <li>✓ Flexible payment terms</li>
-                    <li>✓ 15-25 days lead time</li>
-                    <li>✓ Port of Ho Chi Minh, Bangkok</li>
+                    <li>✓ 10+ HousePlus countries covered</li>
+                    <li>✓ HousePlus flexible payment terms</li>
+                    <li>✓ 15-25 days HousePlus lead time</li>
                   </ul>
-                  <button className="text-green-600 font-semibold hover:text-green-700">
-                    Learn More →
-                  </button>
+                  <span className="text-green-600 font-bold hover:text-green-700">
+                    Explore Asia →
+                  </span>
                 </div>
               </Link>
 
               {/* Europe */}
               <Link href="/en/regions/europe">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg shadow hover:shadow-xl transition cursor-pointer h-full">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-blue-200">
                   <h3 className="text-3xl font-bold mb-4 text-blue-600">🌎 Europe</h3>
                   <p className="text-gray-700 mb-6">
-                    Serving Germany, France, UK, Spain, Netherlands, and more
+                    HousePlus serving Germany, France, UK, Spain, Netherlands, and more.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
-                    <li>✓ 12+ countries covered</li>
-                    <li>✓ CE certified products</li>
-                    <li>✓ 25-35 days lead time</li>
-                    <li>✓ Port of Hamburg, Rotterdam</li>
+                    <li>✓ 12+ HousePlus countries covered</li>
+                    <li>✓ HousePlus CE certified products</li>
+                    <li>✓ 25-35 days HousePlus lead time</li>
                   </ul>
-                  <button className="text-blue-600 font-semibold hover:text-blue-700">
-                    Learn More →
-                  </button>
+                  <span className="text-blue-600 font-bold hover:text-blue-700">
+                    Explore Europe →
+                  </span>
                 </div>
               </Link>
             </div>
@@ -138,31 +132,17 @@ export default async function RegionsPage() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow">
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">🎯 Market Expertise</h3>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <h3 className="text-2xl font-bold mb-4 text-blue-600">🎯 HousePlus Market Expertise</h3>
                 <p className="text-gray-700">
-                  Deep understanding of regional market needs, import regulations, and customer preferences across Africa, Southeast Asia, and Europe.
+                  Deep understanding of regional market needs and HousePlus product compliance across global markets.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow">
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">📦 Logistics Optimization</h3>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <h3 className="text-2xl font-bold mb-4 text-blue-600">📦 HousePlus Logistics</h3>
                 <p className="text-gray-700">
-                  Optimized shipping routes, established partnerships with major ports, and efficient customs clearance processes for each region.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow">
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">💰 Competitive Pricing</h3>
-                <p className="text-gray-700">
-                  Volume discounts, flexible payment terms (FOB, CIF, L/C), and customized pricing for regional wholesale buyers.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow">
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">🚀 Fast Delivery</h3>
-                <p className="text-gray-700">
-                  Expedited shipping options, real-time tracking, and reliable lead times tailored to each region's requirements.
+                  Optimized HousePlus shipping routes and efficient customs clearance processes for each region.
                 </p>
               </div>
             </div>
@@ -170,26 +150,26 @@ export default async function RegionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-blue-600 text-white py-16 px-4 md:px-8">
+        <section className="bg-slate-900 text-white py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Wholesale Partnership?
+              Ready to Start HousePlus Wholesale Partnership?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Contact our regional sales teams for customized quotes and support
+              Contact our regional HousePlus sales teams for customized quotes.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/en/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
+                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-900"
               >
-                Contact Sales
+                Contact HousePlus Sales
               </Link>
               <a
                 href="https://wa.me/8615578119543"
-                className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition inline-block"
+                className="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-900"
               >
-                WhatsApp: +86 155 7811 9543
+                WhatsApp HousePlus
               </a>
             </div>
           </div>

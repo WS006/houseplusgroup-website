@@ -18,16 +18,19 @@ const industryConfig = {
     color: 'from-yellow-400 to-orange-500',
     icon: '☀️',
     slug: 'solar-systems',
+    label: 'HousePlus Solar',
   },
   appliances: {
     color: 'from-blue-400 to-blue-600',
     icon: '⚙️',
     slug: 'home-appliances',
+    label: 'HousePlus Appliances',
   },
   electronics: {
     color: 'from-purple-400 to-pink-500',
     icon: '📱',
     slug: '3c-electronics',
+    label: 'HousePlus Electronics',
   },
 };
 
@@ -37,7 +40,7 @@ export default function IndustrySection({
   image,
   industry_type,
   button_link,
-  button_text = 'Explore Solutions',
+  button_text = 'Explore HousePlus Solutions',
 }: IndustrySectionProps) {
   const isEven = industry_type === 'appliances';
   const config = industryConfig[industry_type];
@@ -58,11 +61,11 @@ export default function IndustrySection({
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-50 rounded-full">
               <span className="text-2xl">{config.icon}</span>
               <span className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                {industry_type.replace('_', ' ')}
+                {config.label}
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
               {title}
             </h2>
 
@@ -72,28 +75,28 @@ export default function IndustrySection({
 
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="p-3 bg-gray-50 rounded-lg">
-                <p className="text-xs font-bold text-gray-500 uppercase">MOQ</p>
-                <p className="text-lg font-bold text-gray-900">100-500 pcs</p>
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus MOQ</p>
+                <p className="text-lg font-black text-slate-900">100-500 pcs</p>
               </div>
-              <div className="p-3 bg-gray-50 rounded-lg">
-                <p className="text-xs font-bold text-gray-500 uppercase">Lead Time</p>
-                <p className="text-lg font-bold text-gray-900">20-35 days</p>
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Lead Time</p>
+                <p className="text-lg font-black text-slate-900">20-35 days</p>
               </div>
-              <div className="p-3 bg-gray-50 rounded-lg">
-                <p className="text-xs font-bold text-gray-500 uppercase">Support</p>
-                <p className="text-lg font-bold text-gray-900">OEM/ODM</p>
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Support</p>
+                <p className="text-lg font-black text-slate-900">OEM/ODM</p>
               </div>
-              <div className="p-3 bg-gray-50 rounded-lg">
-                <p className="text-xs font-bold text-gray-500 uppercase">Warranty</p>
-                <p className="text-lg font-bold text-gray-900">12-24 months</p>
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Warranty</p>
+                <p className="text-lg font-black text-slate-900">24 Months</p>
               </div>
             </div>
 
             <div className="pt-4">
               <Link
                 href={button_link || `/products?category=${config.slug}`}
-                className="inline-block bg-gradient-to-r from-gray-900 to-gray-800 text-white px-8 py-3 rounded-lg font-bold hover:from-gray-800 hover:to-gray-700 transition-all shadow-lg hover:shadow-xl"
+                className="inline-block bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 hover:-translate-y-1"
               >
                 {button_text}
               </Link>
@@ -102,21 +105,25 @@ export default function IndustrySection({
 
           {/* Image */}
           <div className="flex-1 relative">
-            <div className="relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[350px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
               {image?.filename && (
                 <Image
                   src={image.filename}
                   alt={image.alt || title}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-700"
+                  className="object-cover hover:scale-105 transition-transform duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   quality={85}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80';
+                  }}
                 />
               )}
             </div>
             {/* Decorative gradient blob */}
             <div
-              className={`absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br ${config.color} rounded-full -z-10 blur-3xl opacity-20`}
+              className={`absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br ${config.color} rounded-full -z-10 blur-3xl opacity-20`}
             ></div>
           </div>
         </div>
