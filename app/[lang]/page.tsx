@@ -108,10 +108,10 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         <section className="py-20 px-4 text-center bg-gradient-to-b from-blue-50 to-white">
           <div className="max-w-5xl mx-auto">
             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
-              Global B2B Wholesale Manufacturer
+              🏭 HousePlus Global B2B Wholesale Manufacturer
             </span>
             <h1 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 tracking-tight">
-              HousePlus Group
+              🏭 HousePlus Group — Professional Wholesale Supplier
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
               Founded in 2010, HousePlus is a vertically-integrated manufacturer supplying solar energy systems, home appliances, and 3C electronics to wholesale buyers across 60+ countries. We offer OEM/ODM services, CE/FCC/RoHS certification, and flexible MOQ starting from 100 units.
@@ -171,8 +171,8 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         <section className="py-20 bg-blue-50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">Why Global Buyers Choose HousePlus</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">We combine manufacturing expertise with responsive service to deliver reliable products on time, every time.</p>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">🏭 Why Global Buyers Choose HousePlus</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto"><strong>HousePlus</strong> combines 14+ years of manufacturing expertise with responsive service to deliver reliable products on time, every time. Our HousePlus team is committed to your success.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[

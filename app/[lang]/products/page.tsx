@@ -227,10 +227,10 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
       <div className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5">
-            Full Product Catalogue
+            🏭 HousePlus Professional Wholesale
           </span>
           <h1 className="text-4xl md:text-6xl font-black text-white mb-5 tracking-tight">
-            HousePlus Products
+            HousePlus Complete Product Catalogue
           </h1>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
             Explore our comprehensive range of solar energy systems, home appliances and 3C electronics. All products are available for OEM/ODM with CE, FCC and RoHS certifications.
@@ -290,8 +290,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
 
                   {/* Product Info */}
                   <div className="p-5 flex flex-col flex-grow">
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">
-                      Model: {product.model}
+                    <p className="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1.5">
+                      🏭 HousePlus {product.model}
                     </p>
                     <h2 className="text-base font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
                       {product.name}
@@ -318,9 +318,9 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
       {/* CTA Section */}
       <section className="bg-blue-50 border-t border-blue-100 py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Need a Custom Solution?</h2>
+          <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 HousePlus Custom Solutions</h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            HousePlus offers full OEM/ODM services with custom branding, private-label packaging and product modifications. Minimum order from 100 units. Contact our team for a personalised quote.
+            <strong>HousePlus Professional OEM/ODM Services:</strong> Custom branding, private-label packaging and product modifications. Minimum order from 100 units. Our HousePlus team delivers tailored solutions for wholesale buyers worldwide. Contact us for a personalised quote.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
