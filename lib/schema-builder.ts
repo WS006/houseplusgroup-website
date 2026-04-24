@@ -254,7 +254,7 @@ export function buildArticleSchema(article: {
   image?: string;
   datePublished?: string;
   dateModified?: string;
-  author?: string;
+  authorName?: string;
   content?: string;
 }, options: SchemaOptions = {}) {
   return {
@@ -268,7 +268,7 @@ export function buildArticleSchema(article: {
     dateModified: article.dateModified || new Date().toISOString(),
     author: {
       '@type': 'Organization',
-      name: article.author || 'HousePlus',
+      name: article.authorName || 'HousePlus',
       url: 'https://www.houseplus-ch.com',
     },
     publisher: {

@@ -1,24 +1,36 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { buildBreadcrumbSchema } from '@/lib/schema-builder';
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  
+
   const titles: Record<string, string> = {
-    en: 'News & Blog - HousePlus',
-    es: 'Noticias y Blog - HousePlus',
-    de: 'Nachrichten und Blog - HousePlus',
-    fr: 'Actualités et Blog - HousePlus',
-    ar: 'الأخبار والمدونة - HousePlus',
+    en: 'HousePlus News & Insights - Stay Updated with Industry Trends',
+    es: 'Noticias y Perspectivas de HousePlus - Manténgase Actualizado con las Tendencias de la Industria',
+    de: 'HousePlus Nachrichten & Einblicke - Bleiben Sie auf dem Laufenden über Branchentrends',
+    fr: 'Actualités et Perspectives HousePlus - Restez informé des tendances de l\'industrie',
+    ar: 'أخبار ورؤى HousePlus - ابق على اطلاع دائم باتجاهات الصناعة',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'Read the latest news, articles, and insights from HousePlus Group. Explore trends in solar energy, home appliances, and 3C electronics. Your source for industry knowledge and company updates.',
+    es: 'Lea las últimas noticias, artículos y perspectivas de HousePlus Group. Explore las tendencias en energía solar, electrodomésticos y electrónica 3C. Su fuente de conocimiento de la industria y actualizaciones de la empresa.',
+    de: 'Lesen Sie die neuesten Nachrichten, Artikel und Einblicke der HousePlus Group. Entdecken Sie Trends in Solarenergie, Haushaltsgeräten und 3C-Elektronik. Ihre Quelle für Branchenwissen und Unternehmensaktualisierungen.',
+    fr: 'Lisez les dernières actualités, articles et analyses du groupe HousePlus. Explorez les tendances en matière d\'énergie solaire, d\'appareils électroménagers et d\'électronique 3C. Votre source de connaissances de l\'industrie et des mises à jour de l\'entreprise.',
+    ar: 'اقرأ آخر الأخبار والمقالات والرؤى من مجموعة HousePlus. استكشف الاتجاهات في الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. مصدرك للمعرفة الصناعية وتحديثات الشركة.',
   };
 
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
-    description: 'Stay updated with the latest news, industry insights, and company updates from HousePlus.',
-    keywords: ['news', 'blog', 'updates', 'industry', 'insights'],
+    description: descriptions[lang] || descriptions.en,
+    keywords: ["news", "blog", "articles", "solar", "appliances", "electronics", "HousePlus", "industry trends"],
     url: `/${lang}/news`,
     lang: lang as any,
     type: 'website',
@@ -28,135 +40,186 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function NewsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
 
-  const news: Record<string, any[]> = {
-    en: [
-      {
-        title: 'HousePlus Expands Solar Product Line',
-        date: '2024-04-15',
-        category: 'Product Launch',
-        excerpt: 'We are excited to announce the launch of our new high-efficiency solar panel series with 22% efficiency rating.',
-        image: 'https://images.unsplash.com/photo-1497440871597-41fa534db117?w=400&h=300&fit=crop',
-      },
-      {
-        title: 'Achieving ISO 14001 Environmental Certification',
-        date: '2024-03-20',
-        category: 'Certification',
-        excerpt: 'HousePlus has successfully obtained ISO 14001 certification, demonstrating our commitment to environmental management.',
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop',
-      },
-      {
-        title: 'Record Q1 Sales Growth',
-        date: '2024-02-28',
-        category: 'Company News',
-        excerpt: 'HousePlus reports 35% year-over-year growth in Q1 2024, driven by strong demand for solar and smart home products.',
-        image: 'https://images.unsplash.com/photo-1460925895917-aeb19be489c7?w=400&h=300&fit=crop',
-      },
-    ],
-    es: [
-      {
-        title: 'HousePlus Expande la Línea de Productos Solares',
-        date: '2024-04-15',
-        category: 'Lanzamiento de Producto',
-        excerpt: 'Nos complace anunciar el lanzamiento de nuestra nueva serie de paneles solares de alta eficiencia con calificación de eficiencia del 22%.',
-        image: 'https://images.unsplash.com/photo-1497440871597-41fa534db117?w=400&h=300&fit=crop',
-      },
-      {
-        title: 'Lograr la Certificación Ambiental ISO 14001',
-        date: '2024-03-20',
-        category: 'Certificación',
-        excerpt: 'HousePlus ha obtenido exitosamente la certificación ISO 14001, demostrando nuestro compromiso con la gestión ambiental.',
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop',
-      },
-      {
-        title: 'Crecimiento Récord de Ventas en Q1',
-        date: '2024-02-28',
-        category: 'Noticias de la Empresa',
-        excerpt: 'HousePlus reporta un crecimiento interanual del 35% en Q1 2024, impulsado por la fuerte demanda de productos solares y de hogar inteligente.',
-        image: 'https://images.unsplash.com/photo-1460925895917-aeb19be489c7?w=400&h=300&fit=crop',
-      },
-    ],
-  };
+  const breadcrumbs = [
+    { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },
+    { name: lang === 'en' ? 'News' : 'Noticias', url: `/${lang}/news` },
+  ];
 
-  const content = news[lang] || news.en;
+  const articles = [
+    {
+      slug: 'the-future-of-solar-energy',
+      image: '/images/products/solar-panel-3.jpg',
+      imageAlt: 'Large-scale solar farm with HousePlus solar panels',
+      title: {
+        en: 'The Future of Solar Energy: Innovations and HousePlus Solutions',
+        es: 'El Futuro de la Energía Solar: Innovaciones y Soluciones HousePlus',
+        de: 'Die Zukunft der Solarenergie: Innovationen und HousePlus-Lösungen',
+        fr: 'L\'avenir de l\'énergie solaire : Innovations et solutions HousePlus',
+        ar: 'مستقبل الطاقة الشمسية: الابتكارات وحلول HousePlus',
+      },
+      description: {
+        en: 'Explore the latest innovations in solar energy technology and how HousePlus is leading the way with high-efficiency solar panels, portable power stations, and sustainable solutions for global wholesale markets.',
+        es: 'Explore las últimas innovaciones en tecnología de energía solar y cómo HousePlus lidera el camino con paneles solares de alta eficiencia, estaciones de energía portátiles y soluciones sostenibles para mercados mayoristas globales.',
+        de: 'Entdecken Sie die neuesten Innovationen in der Solarenergietechnologie und wie HousePlus mit hocheffizienten Solarmodulen, tragbaren Kraftwerken und nachhaltigen Lösungen für globale Großhandelsmärkte führend ist.',
+        fr: 'Découvrez les dernières innovations en matière de technologie de l\'énergie solaire et comment HousePlus ouvre la voie avec des panneaux solaires à haut rendement, des centrales électriques portables et des solutions durables pour les marchés de gros mondiaux.',
+        ar: 'استكشف أحدث الابتكارات في تكنولوجيا الطاقة الشمسية وكيف تقود HousePlus الطريق بألواح شمسية عالية الكفاءة ومحطات طاقة محمولة وحلول مستدامة لأسواق الجملة العالمية.',
+      },
+      date: '2026-04-24',
+    },
+    {
+      slug: 'smart-home-appliances',
+      image: '/images/products/kitchen-appliances.jpg',
+      imageAlt: 'Modern kitchen with HousePlus smart home appliances',
+      title: {
+        en: 'Smart Home Appliances: Efficiency, Innovation, and HousePlus Solutions',
+        es: 'Electrodomésticos Inteligentes: Eficiencia, Innovación y Soluciones HousePlus',
+        de: 'Smarte Haushaltsgeräte: Effizienz, Innovation und HousePlus-Lösungen',
+        fr: 'Appareils électroménagers intelligents : Efficacité, innovation et solutions HousePlus',
+        ar: 'الأجهزة المنزلية الذكية: الكفاءة والابتكار وحلول HousePlus',
+      },
+      description: {
+        en: 'Discover how HousePlus is redefining modern living with smart, energy-efficient home appliances. Explore our range of innovative products designed for global wholesale markets.',
+        es: 'Descubra cómo HousePlus está redefiniendo la vida moderna con electrodomésticos inteligentes y energéticamente eficientes. Explore nuestra gama de productos innovadores diseñados para mercados mayoristas globales.',
+        de: 'Entdecken Sie, wie HousePlus das moderne Leben mit intelligenten, energieeffizienten Haushaltsgeräten neu definiert. Entdecken Sie unser Sortiment an innovativen Produkten, die für globale Großhandelsmärkte entwickelt wurden.',
+        fr: 'Découvrez comment HousePlus redéfinit la vie moderne avec des appareils électroménagers intelligents et économes en énergie. Explorez notre gamme de produits innovants conçus pour les marchés de gros mondiaux.',
+        ar: 'اكتشف كيف تعيد HousePlus تعريف الحياة العصرية بأجهزة منزلية ذكية وموفرة للطاقة. استكشف مجموعتنا من المنتجات المبتكرة المصممة لأسواق الجملة العالمية.',
+      },
+      date: '2026-04-24',
+    },
+    {
+      slug: 'the-evolution-of-3c-electronics',
+      image: '/images/products/wireless-charger.jpg',
+      imageAlt: 'Modern 3C electronics devices including wireless chargers and smart gadgets',
+      title: {
+        en: 'The Evolution of 3C Electronics: Innovation and HousePlus Solutions',
+        es: 'La Evolución de la Electrónica 3C: Innovación y Soluciones HousePlus',
+        de: 'Die Evolution der 3C-Elektronik: Innovation und HousePlus-Lösungen',
+        fr: 'L\'évolution de l\'électronique 3C : Innovation et solutions HousePlus',
+        ar: 'تطور الإلكترونيات 3C: الابتكار وحلول HousePlus',
+      },
+      description: {
+        en: 'Explore the rapid advancements in 3C electronics, from smart devices to LED lighting. Discover how HousePlus delivers cutting-edge, reliable solutions for global wholesale markets.',
+        es: 'Explore los rápidos avances en electrónica 3C, desde dispositivos inteligentes hasta iluminación LED. Descubra cómo HousePlus ofrece soluciones de vanguardia y confiables para los mercados mayoristas globales.',
+        de: 'Entdecken Sie die rasanten Fortschritte in der 3C-Elektronik, von Smart Devices bis zur LED-Beleuchtung. Erfahren Sie, wie HousePlus modernste, zuverlässige Lösungen für globale Großhandelsmärkte liefert.',
+        fr: 'Explorez les avancées rapides de l\'électronique 3C, des appareils intelligents à l\'éclairage LED. Découvrez comment HousePlus fournit des solutions de pointe et fiables pour les marchés de gros mondiaux.',
+        ar: 'استكشف التطورات السريعة في الإلكترونيات 3C، من الأجهزة الذكية إلى إضاءة LED. اكتشف كيف تقدم HousePlus حلولًا متطورة وموثوقة لأسواق الجملة العالمية.',
+      },
+      date: '2026-04-24',
+    },
+    {
+      slug: 'solar-energy-storage-solutions',
+      image: '/images/products/portable-power-station.jpg',
+      imageAlt: 'HousePlus portable power station and battery storage system',
+      title: {
+        en: 'Solar Energy Storage Solutions: HousePlus Innovations',
+        es: 'Soluciones de Almacenamiento de Energía Solar: Innovaciones HousePlus',
+        de: 'Solare Energiespeicherlösungen: HousePlus Innovationen',
+        fr: 'Solutions de stockage d\'énergie solaire : Innovations HousePlus',
+        ar: 'حلول تخزين الطاقة الشمسية: ابتكارات HousePlus',
+      },
+      description: {
+        en: 'Explore HousePlus\'s advanced solar energy storage solutions, including battery systems and portable power stations, designed for efficiency and reliability in global wholesale markets.',
+        es: 'Explore las soluciones avanzadas de almacenamiento de energía solar de HousePlus, incluidos los sistemas de baterías y las estaciones de energía portátiles, diseñadas para la eficiencia y la fiabilidad en los mercados mayoristas globales.',
+        de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragbaren Kraftwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
+        fr: 'Découvrez les solutions avancées de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',
+        ar: 'استكشف حلول HousePlus المتقدمة لتخزين الطاقة الشمسية، بما في ذلك أنظمة البطاريات ومحطات الطاقة المحمولة، المصممة للكفاءة والموثوقية في أسواق الجملة العالمية.',
+      },
+      date: '2026-04-25',
+    },
+    {
+      slug: 'the-future-of-smart-home-appliances',
+      image: '/images/products/appliances-showcase.png',
+      imageAlt: 'Modern smart home appliances from HousePlus',
+      title: {
+        en: 'The Future of Smart Home Appliances: HousePlus Innovations',
+        es: 'El Futuro de los Electrodomésticos Inteligentes: Innovaciones HousePlus',
+        de: 'Die Zukunft smarter Haushaltsgeräte: HousePlus Innovationen',
+        fr: 'L\'avenir des appareils électroménagers intelligents : Innovations HousePlus',
+        ar: 'مستقبل الأجهزة المنزلية الذكية: ابتكارات HousePlus',
+      },
+      description: {
+        en: 'Discover how HousePlus is shaping the future of smart home appliances with energy-efficient, connected, and intuitive solutions for modern living and global wholesale markets.',
+        es: 'Descubra cómo HousePlus está dando forma al futuro de los electrodomésticos inteligentes con soluciones energéticamente eficientes, conectadas e intuitivas para la vida moderna y los mercados mayoristas globales.',
+        de: 'Entdecken Sie, wie HousePlus die Zukunft smarter Haushaltsgeräte mit energieeffizienten, vernetzten und intuitiven Lösungen für modernes Wohnen und globale Großhandelsmärkte gestaltet.',
+        fr: 'Découvrez comment HousePlus façonne l\'avenir des appareils électroménagers intelligents avec des solutions écoénergétiques, connectées et intuitives pour la vie moderne et les marchés de gros mondiaux.',
+        ar: 'اكتشف كيف تشكل HousePlus مستقبل الأجهزة المنزلية الذكية من خلال حلول موفرة للطاقة ومتصلة وبديهية للحياة العصرية وأسواق الجملة العالمية.',
+      },
+      date: '2026-04-25',
+    },
+    {
+      slug: 'advanced-manufacturing-home-appliances',
+      image: '/images/factory/production-line.jpg',
+      imageAlt: 'HousePlus advanced home appliance manufacturing facility',
+      title: {
+        en: 'Advanced Manufacturing in Home Appliances: HousePlus Quality',
+        es: 'Fabricación Avanzada en Electrodomésticos: Calidad HousePlus',
+        de: 'Fortschrittliche Fertigung bei Haushaltsgeräten: HousePlus Qualität',
+        fr: 'Fabrication avancée d\'appareils électroménagers : Qualité HousePlus',
+        ar: 'التصنيع المتقدم في الأجهزة المنزلية: جودة HousePlus',
+      },
+      description: {
+        en: 'Discover HousePlus\'s commitment to advanced manufacturing techniques, stringent quality control, and sustainable practices in producing high-quality home appliances for global wholesale markets.',
+        es: 'Descubra el compromiso de HousePlus con las técnicas de fabricación avanzadas, el estricto control de calidad y las prácticas sostenibles en la producción de electrodomésticos de alta calidad para los mercados mayoristas globales.',
+        de: 'Entdecken Sie das Engagement von HousePlus für fortschrittliche Fertigungstechniken, strenge Qualitätskontrolle und nachhaltige Praktiken bei der Herstellung hochwertiger Haushaltsgeräte für globale Großhandelsmärkte.',
+        fr: 'Découvrez l\'engagement de HousePlus envers les techniques de fabrication avancées, le contrôle calidad rigoureux et les pratiques durables dans la production d\'appareils électroménagers de haute qualité para los mercados de gros mondiaux.',
+        ar: 'اكتشف التزام HousePlus بتقنيات التصنيع المتقدمة، ومراقبة الجودة الصارمة، والممارسات المستدامة في إنتاج الأجهزة المنزلية عالية الجودة لأسواق الجملة العالمية.',
+      },
+      date: '2026-04-25',
+    },
+  ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
-            {lang === 'en' && 'News & Blog'}
-            {lang === 'es' && 'Noticias y Blog'}
-            {lang === 'de' && 'Nachrichten und Blog'}
-            {lang === 'fr' && 'Actualités et Blog'}
-            {lang === 'ar' && 'الأخبار والمدونة'}
-          </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            {lang === 'en' && 'Stay updated with the latest news and insights from HousePlus.'}
-            {lang === 'es' && 'Manténgase actualizado con las últimas noticias e información de HousePlus.'}
-            {lang === 'de' && 'Bleiben Sie mit den neuesten Nachrichten und Erkenntnissen von HousePlus auf dem Laufenden.'}
-            {lang === 'fr' && 'Restez informé des dernières actualités et informations de HousePlus.'}
-            {lang === 'ar' && 'ابق على اطلاع بأحدث الأخبار والمعلومات من HousePlus.'}
-          </p>
-        </div>
-      </section>
+    <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]}>
+      <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} />
 
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.map((article, idx) => (
-              <article key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video overflow-hidden bg-gray-100">
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
+              {lang === 'en' && 'HousePlus News & Insights'}
+              {lang === 'es' && 'Noticias y Perspectivas de HousePlus'}
+              {lang === 'de' && 'HousePlus Nachrichten & Einblicke'}
+              {lang === 'fr' && 'Actualités et Perspectives HousePlus'}
+              {lang === 'ar' && 'أخبار ورؤى HousePlus'}
+            </h1>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              {lang === 'en' && 'Stay updated with the latest industry trends, innovations, and company news from HousePlus Group.'}
+              {lang === 'es' && 'Manténgase actualizado con las últimas tendencias de la industria, innovaciones y noticias de la empresa de HousePlus Group.'}
+              {lang === 'de' && 'Bleiben Sie auf dem Laufenden über die neuesten Branchentrends, Innovationen und Unternehmensnachrichten der HousePlus Group.'}
+              {lang === 'fr' && 'Restez informé des dernières tendances de l\'industrie, des innovations et des actualités de l\'entreprise du groupe HousePlus.'}
+              {lang === 'ar' && 'ابق على اطلاع دائم بأحدث اتجاهات الصناعة والابتكارات وأخبار الشركة من مجموعة HousePlus.'}
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {articles.map((article, index) => (
+              <Link href={`/${lang}/news/${article.slug}`} key={index} className="block group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div className="relative w-full h-60">
+                  <Image
+                    src={article.image}
+                    alt={article.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                      {article.category}
-                    </span>
-                    <span className="text-sm text-gray-500">{article.date}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-slate-900 hover:text-blue-600 transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-slate-600 mb-4 line-clamp-3">
-                    {article.excerpt}
+                  <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 mb-2">
+                    {article.title[lang as keyof typeof article.title] || article.title.en}
+                  </h2>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {article.description[lang as keyof typeof article.description] || article.description.en}
                   </p>
-                  <a href="#" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                    {lang === 'en' && 'Read More →'}
-                    {lang === 'es' && 'Leer Más →'}
-                    {lang === 'de' && 'Mehr Lesen →'}
-                    {lang === 'fr' && 'Lire la Suite →'}
-                    {lang === 'ar' && 'اقرأ أكثر →'}
-                  </a>
+                  <p className="text-gray-500 text-xs">
+                    {new Date(article.date).toLocaleDateString(lang)}
+                  </p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-lg text-slate-600 mb-8">
-            {lang === 'en' && 'More articles coming soon. Subscribe to our newsletter for updates.'}
-            {lang === 'es' && 'Más artículos próximamente. Suscríbase a nuestro boletín para actualizaciones.'}
-            {lang === 'de' && 'Weitere Artikel folgen in Kürze. Abonnieren Sie unseren Newsletter für Updates.'}
-            {lang === 'fr' && 'Plus d\'articles à venir bientôt. Abonnez-vous à notre newsletter pour les mises à jour.'}
-            {lang === 'ar' && 'المزيد من المقالات قريباً. اشترك في نشرتنا الإخبارية للحصول على التحديثات.'}
-          </p>
-          <Link href={`/${lang}/contact`} className="inline-block px-10 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
-            {lang === 'en' && 'Subscribe'}
-            {lang === 'es' && 'Suscribirse'}
-            {lang === 'de' && 'Abonnieren'}
-            {lang === 'fr' && 'S\'abonner'}
-            {lang === 'ar' && 'اشترك'}
-          </Link>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </SchemaRenderer>
   );
 }
