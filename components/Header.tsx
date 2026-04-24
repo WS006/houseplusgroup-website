@@ -13,10 +13,51 @@ const navigationItems: Record<string, NavItem[]> = {
     { label: 'Home', href: '/' },
     { label: 'About HousePlus', href: '/about-us' },
     { label: 'Products', href: '/products' },
+    { label: 'News', href: '/news' },
     { label: 'Factory', href: '/factory' },
     { label: 'Service', href: '/service' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
+  ],
+  es: [
+    { label: 'Inicio', href: '/' },
+    { label: 'Sobre HousePlus', href: '/about-us' },
+    { label: 'Productos', href: '/products' },
+    { label: 'Noticias', href: '/news' },
+    { label: 'Fábrica', href: '/factory' },
+    { label: 'Servicio', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contacto', href: '/contact' },
+  ],
+  de: [
+    { label: 'Startseite', href: '/' },
+    { label: 'Über HousePlus', href: '/about-us' },
+    { label: 'Produkte', href: '/products' },
+    { label: 'News', href: '/news' },
+    { label: 'Fabrik', href: '/factory' },
+    { label: 'Service', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Kontakt', href: '/contact' },
+  ],
+  fr: [
+    { label: 'Accueil', href: '/' },
+    { label: 'À propos de HousePlus', href: '/about-us' },
+    { label: 'Produits', href: '/products' },
+    { label: 'Actualités', href: '/news' },
+    { label: 'Usine', href: '/factory' },
+    { label: 'Service', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  ar: [
+    { label: 'الرئيسية', href: '/' },
+    { label: 'عن هاوس بلس', href: '/about-us' },
+    { label: 'المنتجات', href: '/products' },
+    { label: 'الأخبار', href: '/news' },
+    { label: 'المصنع', href: '/factory' },
+    { label: 'الخدمة', href: '/service' },
+    { label: 'الأسئلة الشائعة', href: '/faq' },
+    { label: 'اتصل بنا', href: '/contact' },
   ],
 };
 
@@ -38,12 +79,12 @@ export default function Header({ lang }: { lang: string }) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <div className={`flex gap-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <div className={`flex gap-6 xl:gap-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={`/${lang}${item.href}`}
-                  className="text-slate-600 hover:text-blue-600 font-bold transition-all duration-200 text-sm uppercase tracking-widest"
+                  className="text-slate-600 hover:text-blue-600 font-bold transition-all duration-200 text-[11px] xl:text-xs uppercase tracking-widest"
                 >
                   {item.label}
                 </Link>
@@ -64,7 +105,7 @@ export default function Header({ lang }: { lang: string }) {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-6 space-y-4 border-t border-slate-50">
+          <div className="lg:hidden py-6 space-y-4 border-t border-slate-50 animate-in slide-in-from-top duration-300">
             {navItems.map((item) => (
               <Link
                 key={item.href}
