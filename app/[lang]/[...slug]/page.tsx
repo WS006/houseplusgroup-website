@@ -66,7 +66,7 @@ export default function Page() {
         {/* Detail Content */}
         {story?.content?.body && (
           <div className="mb-24 prose prose-xl max-w-none prose-slate prose-headings:font-black prose-headings:text-slate-900 prose-p:text-slate-600 prose-img:rounded-[2rem] prose-img:shadow-2xl" 
-               dangerouslySetInnerHTML={{ __html: renderRichText(story.content.body) }} />
+               dangerouslySetInnerHTML={{ __html: renderRichText(story.content.body) || '' }} />
         )}
 
         {/* List Content */}
