@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
       });
       stories = listData.stories || [];
     } catch (innerError) {
-      console.error(\`Error fetching as list for \${fullSlug}:\`, innerError);
+      console.error(`Error fetching as list for ${fullSlug}:`, innerError);
     }
   }
 
@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
           <h1 className="text-4xl font-bold mb-12 text-gray-900 text-center capitalize">{fullSlug}</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {stories.map((s: any) => (
-              <a key={s.uuid} href={\`/\${lang}/\${s.full_slug}\`} className="group block p-6 border rounded-xl hover:shadow-lg transition-all">
+              <a key={s.uuid} href={`/${lang}/${s.full_slug}`} className="group block p-6 border rounded-xl hover:shadow-lg transition-all">
                 <h2 className="text-xl font-semibold mb-2 group-hover:text-blue-600">{s.name}</h2>
                 <p className="text-gray-500 line-clamp-2">{s.content?.description || 'View details'}</p>
               </a>
