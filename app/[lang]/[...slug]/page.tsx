@@ -130,7 +130,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
             </div>
           )}
 
-          {subStories.length > 0 && (
+          {subStories && subStories.length > 0 && (
             <div>
               {!story && (
                 <div className="text-center mb-20">
@@ -159,9 +159,9 @@ export default async function Page({ params }: { params: Promise<{ lang: string;
                   ];
                   
                   let productImg = images[idx % images.length];
-                  if (s.full_slug.includes('solar')) productImg = images[idx % 3];
-                  if (s.full_slug.includes('appliance')) productImg = images[3 + (idx % 3)];
-                  if (s.full_slug.includes('electronic')) productImg = images[6 + (idx % 3)];
+                  if (s.full_slug && s.full_slug.includes('solar')) productImg = images[idx % 3];
+                  if (s.full_slug && s.full_slug.includes('appliance')) productImg = images[3 + (idx % 3)];
+                  if (s.full_slug && s.full_slug.includes('electronic')) productImg = images[6 + (idx % 3)];
 
                   return (
                     <a 
