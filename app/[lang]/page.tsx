@@ -1,11 +1,14 @@
-import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import { getStoryblokApi } from '@storyblok/react';
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import SEOHead from '@/components/SEOHead';
-import Counter from '@/components/Counter';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { Metadata } from 'next';
+import nextDynamic from 'next/dynamic';
+
+// Dynamically import Counter with no SSR to prevent hydration issues
+const Counter = nextDynamic(() => import('@/components/Counter'), { ssr: false });
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
@@ -27,7 +30,6 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   const storyblokApi = getStoryblokApi();
   let story = null;
   let carouselItems: any[] = [];
-  let industriesContent: any[] = [];
 
   try {
     const { data } = await storyblokApi.getStory('home', { 
@@ -38,9 +40,6 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     story = data.story;
     if (story?.content?.carousel && Array.isArray(story.content.carousel)) {
       carouselItems = story.content.carousel;
-    }
-    if (story?.content?.industries && Array.isArray(story.content.industries)) {
-      industriesContent = story.content.industries;
     }
   } catch (error) {
     console.error(`Error fetching home for ${lang}:`, error);
