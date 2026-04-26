@@ -105,7 +105,7 @@ export default async function RootLayout({
       <body suppressHydrationWarning>
         <Header lang={lang} />
         <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Footer lang={lang} />
         <ServiceWidget />
       </body>
     </html>
