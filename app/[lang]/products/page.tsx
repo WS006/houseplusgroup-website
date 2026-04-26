@@ -338,6 +338,9 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
           </div>
         </div>
       </section>
-    </main>
+    `n<script type="application/ld+json">`n  {JSON.stringify({\n    ``@context`: `https://schema.org`,\n    ``@type`: `CollectionPage`,\n    name: `Products | HousePlus`,\n    description: `Browse HousePlus full product catalogue...`,\n    url: `https://www.houseplus-ch.com/${lang}/products`,\n  }, null, 2)`n</script>`n
+      </main>
   );
 }
+
+
