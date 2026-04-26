@@ -1,5 +1,4 @@
 import { getStoryblokApi } from '@storyblok/react';
-import Image from 'next/image';
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import SEOHead from '@/components/SEOHead';
@@ -9,34 +8,10 @@ import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
 import Link from 'next/link';
 
-// Dynamically import Counter with no SSR to prevent hydration issues
 const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false });
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
-
-// TypeScript interfaces for type safety
-interface CarouselImage {
-  filename: string;
-  alt: string;
-}
-
-interface CarouselItem {
-  _uid: string;
-  image: CarouselImage;
-  title: string;
-  subtitle: string;
-  button_text: string;
-  button_link: {
-    url: string;
-    cached_url: string;
-  };
-}
-
-interface IndustryImage {
-  filename: string;
-  alt: string;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -53,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const storyblokApi = getStoryblokApi();
-  let story = null;
-  let carouselItems: CarouselItem[] = [];
+  let story: any = null;
+  let carouselItems: any[] = [];
 
   try {
     const { data } = await storyblokApi.getStory('home', { 
@@ -70,10 +45,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     console.error(`Error fetching home for ${lang}:`, error);
   }
 
-  const content = story?.content || {};
-  
-  // Three carousel slides - clean business style
-  const defaultCarouselItems: CarouselItem[] = [
+  const defaultCarouselItems = [
     {
       _uid: '1',
       image: {
@@ -201,17 +173,17 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               [
                 {
-                  icon: '🏭',
+                  icon: 'Factory',
                   title: 'Our Own Factory',
                   desc: '20,000+ m² production space with in-house tooling, assembly lines and quality labs. We control the entire process from raw material to finished product.'
                 },
                 {
-                  icon: '✅',
+                  icon: 'Certified',
                   title: 'Certified Products',
                   desc: 'CE, FCC, RoHS, ISO 9001 and IEC certifications - our products meet regulatory requirements in Europe, North America and beyond.'
                 },
                 {
-                  icon: '🤝',
+                  icon: 'Support',
                   title: 'OEM/ODM Support',
                   desc: 'Custom branding, private-label packaging and product modifications from MOQ 100 pcs. Every client gets a dedicated account manager.'
                 },
