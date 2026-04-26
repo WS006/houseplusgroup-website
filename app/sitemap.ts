@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { i18n } from '../../i18n-config';
+import { i18n } from '@/lib/i18n-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.houseplus-ch.com';
@@ -31,3 +31,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pageUrls,
   ];
 }
+
