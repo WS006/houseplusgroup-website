@@ -1,40 +1,34 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { i18n, LanguageDetector } from '../i18n-config';
 
-const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const publicFile = /\.(.*)$/;
+const excludeFile = /(api|static|app|assets|favicon\.png|robots\.txt|sitemap\.xml|googleadservices|google-ads|googlesyndication)/;
 
 export function middleware(request: NextRequest) {
+  const res = NextResponse.next();
   const { pathname } = request.nextUrl;
-  const firstSegment = pathname.split('/')[1];
 
-  // 根路径直接放行（由 app/page.tsx 处理重定向）
-  if (pathname === '/') return NextResponse.next();
-
-  // 如果第一段存在且不是有效语言代码，返回 404（rewrite 到 /en/404）
-  if (firstSegment && !validLangs.includes(firstSegment)) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/en/404'; // 会被 catch-all 路由捕获并显示英文 404
-    return NextResponse.rewrite(url, { status: 404 });
+  // 静态文件不处理
+  if (publicFile.test(pathname) || excludeFile.test(pathname)) {
+    return res;
   }
 
-  // 添加安全响应头
-  const response = NextResponse.next();
+  // 检测语言
+  const detector = new LanguageDetector(request, i18n);
+  const lng = detector.detect();
 
-  // 防止被 iframe 嵌套（点击劫持防护）
-  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  // 如果路径不包含语言前缀，重定向到带语言前缀的路径
+  if (!pathname.match(/^\/[a-z]{2}(\/|$)/)) {
+    return NextResponse.redirect(new URL(`/${lng}${pathname}`, request.url));
+  }
 
-  // 阻止 MIME 类型嗅探
-  response.headers.set('X-Content-Type-Options', 'nosniff');
+  // 设置语言 cookie
+  res.cookies.set('i18next', lng);
 
-  // 控制 Referrer 信息泄露
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-
-  // 限制浏览器权限（相机、麦克风、地理位置等）
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-
-  return response;
+  return res;
 }
 
 export const config = {
-  matcher: '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*'],
 };
