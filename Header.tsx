@@ -1,1 +1,163 @@
-77u/J3VzZSBjbGllbnQnOwoKaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJzsKaW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7CmltcG9ydCB7IHVzZVBhdGhuYW1lIH0gZnJvbSAnbmV4dC9uYXZpZ2F0aW9uJzsKaW1wb3J0IExhbmd1YWdlU3dpdGNoZXIgZnJvbSAnLi9jb21wb25lbnRzL0xhbmd1YWdlU3dpdGNoZXInOwppbXBvcnQgeyBsb2NhbGVzLCBsb2NhbGVDb25maWdzIH0gZnJvbSAnLi9pMThuLWNvbmZpZyc7CgppbnRlcmZhY2UgTmF2SXRlbSB7CiAgbGFiZWw6IHN0cmluZzsKICBocmVmOiBzdHJpbmc7Cn0KCmNvbnN0IG5hdmlnYXRpb25JdGVtczogUmVjb3JkPHN0cmluZywgTmF2SXRlbVtdPiA9IHsKICBlbjogWwogICAgeyBsYWJlbDogJ0hvbWUnLCBocmVmOiAnLycgfSwKICAgIHsgbGFiZWw6ICdBYm91dCBIb3VzZVBsdXMnLCBocmVmOiAnL2Fib3V0LXVzJyB9LAogICAgeyBsYWJlbDogJ1Byb2R1Y3RzJywgaHJlZjogJy9wcm9kdWN0cycgfSwKICAgIHsgbGFiZWw6ICdOZXdzJywgaHJlZjogJy9uZXdzJyB9LAogICAgeyBsYWJlbDogJ0ZhY3RvcnknLCBocmVmOiAnL2ZhY3RvcnknIH0sCiAgICB7IGxhYmVsOiAnU2VydmljZScsIGhyZWY6ICcvc2VydmljZScgfSwKICAgIHsgbGFiZWw6ICdGQVEnLCBocmVmOiAnL2ZhcScgfSwKICAgIHsgbGFiZWw6ICdDb250YWN0JywgaHJlZjogJy9jb250YWN0JyB9LAogIF0sCiAgZXM6IFsKICAgIHsgbGFiZWw6ICdJbmljaW8nLCBocmVmOiAnLycgfSwKICAgIHsgbGFiZWw6ICdTb2JyZSBIb3VzZVBsdXMnLCBocmVmOiAnL2Fib3V0LXVzJyB9LAogICAgeyBsYWJlbDogJ1Byb2R1Y3RvcycsIGhyZWY6ICcvcHJvZHVjdHMnIH0sCiAgICB7IGxhYmVsOiAnTm90aWNpYXMnLCBocmVmOiAnL25ld3MnIH0sCiAgICB7IGxhYmVsOiAnRsOhYnJpY2EnLCBocmVmOiAnL2ZhY3RvcnknIH0sCiAgICB7IGxhYmVsOiAnU2VydmljaW8nLCBocmVmOiAnL3NlcnZpY2UnIH0sCiAgICB7IGxhYmVsOiAnRkFRJywgaHJlZjogJy9mYXEnIH0sCiAgICB7IGxhYmVsOiAnQ29udGFjdG8nLCBocmVmOiAnL2NvbnRhY3QnIH0sCiAgXSwKICBkZTogWwogICAgeyBsYWJlbDogJ1N0YXJ0c2VpdGUnLCBocmVmOiAnLycgfSwKICAgIHsgbGFiZWw6ICfDnGJlciBIb3VzZVBsdXMnLCBocmVmOiAnL2Fib3V0LXVzJyB9LAogICAgeyBsYWJlbDogJ1Byb2R1a3RlJywgaHJlZjogJy9wcm9kdWN0cycgfSwKICAgIHsgbGFiZWw6ICdOZXdzJywgaHJlZjogJy9uZXdzJyB9LAogICAgeyBsYWJlbDogJ0ZhYnJpaycsIGhyZWY6ICcvZmFjdG9yeScgfSwKICAgIHsgbGFiZWw6ICdTZXJ2aWNlJywgaHJlZjogJy9zZXJ2aWNlJyB9LAogICAgeyBsYWJlbDogJ0ZBUScsIGhyZWY6ICcvZmFxJyB9LAogICAgeyBsYWJlbDogJ0tvbnRha3QnLCBocmVmOiAnL2NvbnRhY3QnIH0sCiAgXSwKICBmcjogWwogICAgeyBsYWJlbDogJ0FjY3VlaWwnLCBocmVmOiAnLycgfSwKICAgIHsgbGFiZWw6ICfDgCBwcm9wb3MgZGUgSG91c2VQbHVzJywgaHJlZjogJy9hYm91dC11cycgfSwKICAgIHsgbGFiZWw6ICdQcm9kdWl0cycsIGhyZWY6ICcvcHJvZHVjdHMnIH0sCiAgICB7IGxhYmVsOiAnQWN0dWFsaXTDqXMnLCBocmVmOiAnL25ld3MnIH0sCiAgICB7IGxhYmVsOiAnVXNpbmUnLCBocmVmOiAnL2ZhY3RvcnknIH0sCiAgICB7IGxhYmVsOiAnU2VydmljZScsIGhyZWY6ICcvc2VydmljZScgfSwKICAgIHsgbGFiZWw6ICdGQVEnLCBocmVmOiAnL2ZhcScgfSwKICAgIHsgbGFiZWw6ICdDb250YWN0JywgaHJlZjogJy9jb250YWN0JyB9LAogIF0sCiAgYXI6IFsKICAgIHsgbGFiZWw6ICfYp9mE2LHYptmK2LPZitipJywgaHJlZjogJy8nIH0sCiAgICB7IGxhYmVsOiAn2LnZhiDZh9in2YjYsyDYqNmE2LMnLCBocmVmOiAnL2Fib3V0LXVzJyB9LAogICAgeyBsYWJlbDogJ9in2YTZhdmG2KrYrNin2KonLCBocmVmOiAnL3Byb2R1Y3RzJyB9LAogICAgeyBsYWJlbDogJ9in2YTYo9iu2KjYp9ixJywgaHJlZjogJy9uZXdzJyB9LAogICAgeyBsYWJlbDogJ9in2YTZhdi12YbYuScsIGhyZWY6ICcvZmFjdG9yeScgfSwKICAgIHsgbGFiZWw6ICfYp9mE2K7Yr9mF2KknLCBocmVmOiAnL3NlcnZpY2UnIH0sCiAgICB7IGxhYmVsOiAn2KfZhNij2LPYptmE2Kkg2KfZhNi02KfYpti52KknLCBocmVmOiAnL2ZhcScgfSwKICAgIHsgbGFiZWw6ICfYp9iq2LXZhCDYqNmG2KcnLCBocmVmOiAnL2NvbnRhY3QnIH0sCiAgXSwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhlYWRlcih7IGxhbmcgfTogeyBsYW5nOiBzdHJpbmcgfSkgewogIGNvbnN0IFttb2JpbGVNZW51T3Blbiwgc2V0TW9iaWxlTWVudU9wZW5dID0gdXNlU3RhdGUoZmFsc2UpOwogIGNvbnN0IHBhdGhuYW1lID0gdXNlUGF0aG5hbWUoKTsKICBjb25zdCBuYXZJdGVtcyA9IG5hdmlnYXRpb25JdGVtc1tsYW5nXSB8fCBuYXZpZ2F0aW9uSXRlbXMuZW47CiAgY29uc3QgaXNSVEwgPSBsYW5nID09PSAnYXInOwoKICAvLyDojrflj5blvZPliY3ot6/lvoTvvIjljrvmjonor63oqIDliY3nvIDvvIkKICBjb25zdCBwYXRoV2l0aG91dExhbmcgPSBwYXRobmFtZT8uc3BsaXQoJy8nKS5zbGljZSgyKS5qb2luKCcvJykgfHwgJyc7CgogIHJldHVybiAoCiAgICA8aGVhZGVyIGNsYXNzTmFtZT17YGJnLXdoaXRlIGJvcmRlci1iIGJvcmRlci1zbGF0ZS0xMDAgc3RpY2t5IHRvcC0wIHotNTAgJHtpc1JUTCA/ICdydGwnIDogJ2x0cid9YH0+CiAgICAgIDxuYXYgY2xhc3NOYW1lPSJtYXgtdy03eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXgganVzdGlmeS1iZXR3ZWVuIGl0ZW1zLWNlbnRlciBoLTIwIj4KICAgICAgICAgIHsvKiBMb2dvICovfQogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXgtc2hyaW5rLTAiPgogICAgICAgICAgICA8TGluayBocmVmPXtgLyR7bGFuZ31gfSBjbGFzc05hbWU9ImZvbnQtYmxhY2sgdGV4dC0zeGwgdGV4dC1zbGF0ZS05MDAgdHJhY2tpbmctdGlnaHRlciBob3Zlcjp0ZXh0LWJsdWUtNjAwIHRyYW5zaXRpb24tY29sb3JzIj4KICAgICAgICAgICAgICBIb3VzZVBsdXM8c3BhbiBjbGFzc05hbWU9InRleHQtYmx1ZS02MDAiPi48L3NwYW4+CiAgICAgICAgICAgIDwvTGluaz4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIHsvKiBEZXNrdG9wIE5hdmlnYXRpb24gKi99CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iaGlkZGVuIGxnOmJsb2NrIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2BmbGV4IGl0ZW1zLWNlbnRlciBnYXAtNiB4bDpnYXAtOCAke2lzUlRMID8gJ2ZsZXgtcm93LXJldmVyc2UnIDogJyd9YH0+CiAgICAgICAgICAgICAge25hdkl0ZW1zLm1hcCgoaXRlbSkgPT4gKAogICAgICAgICAgICAgICAgPExpbmsKICAgICAgICAgICAgICAgICAga2V5PXtpdGVtLmhyZWZ9CiAgICAgICAgICAgICAgICAgIGhyZWY9e2AvJHtsYW5nfSR7aXRlbS5ocmVmfWB9CiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idGV4dC1zbGF0ZS02MDAgaG92ZXI6dGV4dC1ibHVlLTYwMCBmb250LWJvbGQgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMjAwIHRleHQtWzExcHhdIHhsOnRleHQteHMgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVzdCIKICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAge2l0ZW0ubGFiZWx9CiAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgKSl9CgogICAgICAgICAgICAgIHsvKiBEZXNrdG9wIExhbmd1YWdlIFN3aXRjaGVyICovfQogICAgICAgICAgICAgIDxMYW5ndWFnZVN3aXRjaGVyIGN1cnJlbnRMYW5nPXtsYW5nfSAvPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIHsvKiBNb2JpbGUgTWVudSBCdXR0b24gKi99CiAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldE1vYmlsZU1lbnVPcGVuKCFtb2JpbGVNZW51T3Blbil9CiAgICAgICAgICAgIGNsYXNzTmFtZT0ibGc6aGlkZGVuIHAtMiByb3VuZGVkLXhsIHRleHQtc2xhdGUtOTAwIGhvdmVyOmJnLXNsYXRlLTUwIHRyYW5zaXRpb24tY29sb3JzIgogICAgICAgICAgPgogICAgICAgICAgICA8c3ZnIGNsYXNzTmFtZT0iaC02IHctNiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2U9ImN1cnJlbnRDb2xvciI+CiAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlTGluZWNhcD0icm91bmQiIHN0cm9rZUxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlV2lkdGg9ezJ9IGQ9Ik00IDZoMTZNNCAxMmgxNk00IDE4aDE2IiAvPgogICAgICAgICAgICA8L3N2Zz4KICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgIDwvZGl2PgoKICAgICAgICB7LyogTW9iaWxlIE5hdmlnYXRpb24gKi99CiAgICAgICAge21vYmlsZU1lbnVPcGVuICYmICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJsZzpoaWRkZW4gcHktNiBzcGFjZS15LTQgYm9yZGVyLXQgYm9yZGVyLXNsYXRlLTUwIGFuaW1hdGUtaW4gc2xpZGUtaW4tZnJvbS10b3AgZHVyYXRpb24tMzAwIj4KICAgICAgICAgICAge25hdkl0ZW1zLm1hcCgoaXRlbSkgPT4gKAogICAgICAgICAgICAgIDxMaW5rCiAgICAgICAgICAgICAgICBrZXk9e2l0ZW0uaHJlZn0KICAgICAgICAgICAgICAgIGhyZWY9e2AvJHtsYW5nfSR7aXRlbS5ocmVmfWB9CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9ImJsb2NrIHB4LTQgcHktMyByb3VuZGVkLTJ4bCB0ZXh0LWxnIGZvbnQtYm9sZCB0ZXh0LXNsYXRlLTkwMCBob3ZlcjpiZy1ibHVlLTUwIGhvdmVyOnRleHQtYmx1ZS02MDAgdHJhbnNpdGlvbi1hbGwiCiAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRNb2JpbGVNZW51T3BlbihmYWxzZSl9CiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAge2l0ZW0ubGFiZWx9CiAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICApKX0KCiAgICAgICAgICAgIHsvKiBNb2JpbGUgTGFuZ3VhZ2UgU3dpdGNoZXIgKi99CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwdC00IGJvcmRlci10IGJvcmRlci1zbGF0ZS0xMDAiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJweC00IHB5LTIgdGV4dC14cyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtNDAwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciI+CiAgICAgICAgICAgICAgICBMYW5ndWFnZSAvIExhbmd1ZSAvIFNwcmFjaGUgLyBJZGlvbWEgLyDYp9mE2YTYutipCiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAge2xvY2FsZXMubWFwKChsb2NhbGUpID0+IHsKICAgICAgICAgICAgICAgIGNvbnN0IGNvbmZpZyA9IGxvY2FsZUNvbmZpZ3NbbG9jYWxlXTsKICAgICAgICAgICAgICAgIGNvbnN0IGlzQWN0aXZlID0gbG9jYWxlID09PSBsYW5nOwogICAgICAgICAgICAgICAgY29uc3QgaHJlZiA9IGAvJHtsb2NhbGV9JHtwYXRoV2l0aG91dExhbmcgPyBgLyR7cGF0aFdpdGhvdXRMYW5nfWAgOiAnJ31gOwoKICAgICAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgICAgIDxMaW5rCiAgICAgICAgICAgICAgICAgICAga2V5PXtsb2NhbGV9CiAgICAgICAgICAgICAgICAgICAgaHJlZj17aHJlZn0KICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRNb2JpbGVNZW51T3BlbihmYWxzZSl9CiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgYmxvY2sgcHgtNCBweS0yLjUgcm91bmRlZC14bCB0ZXh0LXNtIHRyYW5zaXRpb24tYWxsICR7CiAgICAgICAgICAgICAgICAgICAgICBpc0FjdGl2ZQogICAgICAgICAgICAgICAgICAgICAgICA/ICdiZy1ibHVlLTUwIHRleHQtYmx1ZS02MDAgZm9udC1zZW1pYm9sZCcKICAgICAgICAgICAgICAgICAgICAgICAgOiAndGV4dC1zbGF0ZS02MDAgaG92ZXI6Ymctc2xhdGUtNTAnCiAgICAgICAgICAgICAgICAgICAgfWB9CiAgICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgICB7Y29uZmlnLm5hdGl2ZU5hbWV9CiAgICAgICAgICAgICAgICAgICAge2lzQWN0aXZlICYmIDxzcGFuIGNsYXNzTmFtZT0ibWwtMiB0ZXh0LWJsdWUtNjAwIj7inJM8L3NwYW4+fQogICAgICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgIH0pfQogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CiAgICAgIDwvbmF2PgogICAgPC9oZWFkZXI+CiAgKTsKfQoK
+﻿'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import { locales, localeConfigs } from './i18n-config';
+
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+const navigationItems: Record<string, NavItem[]> = {
+  en: [
+    { label: 'Home', href: '/' },
+    { label: 'About HousePlus', href: '/about-us' },
+    { label: 'Products', href: '/products' },
+    { label: 'News', href: '/news' },
+    { label: 'Factory', href: '/factory' },
+    { label: 'Service', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  es: [
+    { label: 'Inicio', href: '/' },
+    { label: 'Sobre HousePlus', href: '/about-us' },
+    { label: 'Productos', href: '/products' },
+    { label: 'Noticias', href: '/news' },
+    { label: 'Fábrica', href: '/factory' },
+    { label: 'Servicio', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contacto', href: '/contact' },
+  ],
+  de: [
+    { label: 'Startseite', href: '/' },
+    { label: 'Über HousePlus', href: '/about-us' },
+    { label: 'Produkte', href: '/products' },
+    { label: 'News', href: '/news' },
+    { label: 'Fabrik', href: '/factory' },
+    { label: 'Service', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Kontakt', href: '/contact' },
+  ],
+  fr: [
+    { label: 'Accueil', href: '/' },
+    { label: 'À propos de HousePlus', href: '/about-us' },
+    { label: 'Produits', href: '/products' },
+    { label: 'Actualités', href: '/news' },
+    { label: 'Usine', href: '/factory' },
+    { label: 'Service', href: '/service' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  ar: [
+    { label: 'الرئيسية', href: '/' },
+    { label: 'عن هاوس بلس', href: '/about-us' },
+    { label: 'المنتجات', href: '/products' },
+    { label: 'الأخبار', href: '/news' },
+    { label: 'المصنع', href: '/factory' },
+    { label: 'الخدمة', href: '/service' },
+    { label: 'الأسئلة الشائعة', href: '/faq' },
+    { label: 'اتصل بنا', href: '/contact' },
+  ],
+};
+
+export default function Header({ lang }: { lang: string }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const navItems = navigationItems[lang] || navigationItems.en;
+  const isRTL = lang === 'ar';
+
+  // 获取当前路径（去掉语言前缀）
+  const pathWithoutLang = pathname?.split('/').slice(2).join('/') || '';
+
+  return (
+    <header className={`bg-white border-b border-slate-100 sticky top-0 z-50 ${isRTL ? 'rtl' : 'ltr'}`}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href={`/${lang}`} className="font-black text-3xl text-slate-900 tracking-tighter hover:text-blue-600 transition-colors">
+              HousePlus<span className="text-blue-600">.</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <div className={`flex items-center gap-6 xl:gap-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={`/${lang}${item.href}`}
+                  className="text-slate-600 hover:text-blue-600 font-bold transition-all duration-200 text-[11px] xl:text-xs uppercase tracking-widest"
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              {/* Desktop Language Switcher */}
+              <LanguageSwitcher currentLang={lang} />
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-xl text-slate-900 hover:bg-slate-50 transition-colors"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden py-6 space-y-4 border-t border-slate-50 animate-in slide-in-from-top duration-300">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={`/${lang}${item.href}`}
+                className="block px-4 py-3 rounded-2xl text-lg font-bold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Mobile Language Switcher */}
+            <div className="pt-4 border-t border-slate-100">
+              <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                Language / Langue / Sprache / Idioma / اللغة
+              </div>
+              {locales.map((locale) => {
+                const config = localeConfigs[locale];
+                const isActive = locale === lang;
+                const href = `/${locale}${pathWithoutLang ? `/${pathWithoutLang}` : ''}`;
+
+                return (
+                  <Link
+                    key={locale}
+                    href={href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2.5 rounded-xl text-sm transition-all ${
+                      isActive
+                        ? 'bg-blue-50 text-blue-600 font-semibold'
+                        : 'text-slate-600 hover:bg-slate-50'
+                    }`}
+                  >
+                    {config.nativeName}
+                    {isActive && <span className="ml-2 text-blue-600">✓</span>}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}
+
