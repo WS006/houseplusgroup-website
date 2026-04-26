@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function LangHome({ params }: { params: Promise<{ lang: string> }>) {
+export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const storyblokApi = getStoryblokApi();
   let story = null;
