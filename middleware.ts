@@ -17,7 +17,22 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(url, { status: 404 });
   }
 
-  return NextResponse.next();
+  // 添加安全响应头
+  const response = NextResponse.next();
+
+  // 防止被 iframe 嵌套（点击劫持防护）
+  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
+
+  // 阻止 MIME 类型嗅探
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+
+  // 控制 Referrer 信息泄露
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  // 限制浏览器权限（相机、麦克风、地理位置等）
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+
+  return response;
 }
 
 export const config = {
