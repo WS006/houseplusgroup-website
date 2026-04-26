@@ -1,5 +1,4 @@
 import { getStoryblokApi } from '@storyblok/react';
-import Image from 'next/image';
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import SEOHead from '@/components/SEOHead';
@@ -9,34 +8,10 @@ import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
 import Link from 'next/link';
 
-// Dynamically import Counter with no SSR to prevent hydration issues
 const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false });
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
-
-// TypeScript interfaces for type safety
-interface CarouselImage {
-  filename: string;
-  alt: string;
-}
-
-interface CarouselItem {
-  _uid: string;
-  image: CarouselImage;
-  title: string;
-  subtitle: string;
-  button_text: string;
-  button_link: {
-    url: string;
-    cached_url: string;
-  };
-}
-
-interface IndustryImage {
-  filename: string;
-  alt: string;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -53,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const storyblokApi = getStoryblokApi();
-  let story = null;
-  let carouselItems: CarouselItem[] = [];
+  let story: any = null;
+  let carouselItems: any[] = [];
 
   try {
     const { data } = await storyblokApi.getStory('home', { 
@@ -70,10 +45,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     console.error(`Error fetching home for ${lang}:`, error);
   }
 
-  const content = story?.content || {};
-  
-  // Three professional carousel slides — business style with bright, clean imagery
-  const defaultCarouselItems: CarouselItem[] = [
+  const defaultCarouselItems = [
     {
       _uid: '1',
       image: {
@@ -123,19 +95,17 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     <>
       <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
-        {/* Hero Carousel — 3 slides, auto-play */}
         <section className="w-full">
           <Carousel items={displayCarouselItems} autoPlayInterval={5000} />
         </section>
 
-        {/* Brand Introduction */}
         <section className="py-20 px-4 text-center bg-gradient-to-b from-blue-50 to-white">
           <div className="max-w-5xl mx-auto">
             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
-              🏭 HousePlus Global B2B Wholesale Manufacturer
+              HousePlus Global B2B Wholesale Manufacturer
             </span>
             <h1 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 tracking-tight">
-              🏭 HousePlus Group — Professional Wholesale Supplier
+              HousePlus Group - Professional Wholesale Supplier
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
               Founded in 2010, HousePlus is a vertically-integrated manufacturer supplying solar energy systems, home appliances and 3C electronics to wholesale buyers across 60+ countries. We offer OEM/ODM services, CE/FCC/RoHS certification, and flexible MOQ starting from 100 units.
@@ -151,7 +121,6 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           </div>
         </section>
 
-        {/* Key Stats */}
         <section className="py-14 border-y border-slate-100 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -163,11 +132,10 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           </div>
         </section>
 
-        {/* Three Product Category Sections */}
         <div className="space-y-0">
           <IndustrySection
             title="High-Efficiency Solar Energy Systems"
-            description="HousePlus manufactures a comprehensive range of solar products including monocrystalline panels (100W–500W), MPPT charge controllers, 3kW–10kW inverters, and portable power stations (300W–3000W). All products carry CE, RoHS and IEC certifications, making them ready for the European, Middle Eastern and African markets."
+            description="HousePlus manufactures a comprehensive range of solar products including monocrystalline panels (100W-500W), MPPT charge controllers, 3kW-10kW inverters, and portable power stations (300W-3000W). All products carry CE, RoHS and IEC certifications, making them ready for the European, Middle Eastern and African markets."
             image={{ filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&q=80', alt: 'Solar Energy Systems' }}
             industry_type="solar"
             button_link={`/${lang}/products`}
@@ -175,7 +143,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           />
           <IndustrySection
             title="Energy-Efficient Home Appliances"
-            description="Our home appliance line covers air fryers, induction cooktops, electric kettles, toasters and more — all engineered for energy efficiency and durability. With in-house tooling and a dedicated R&D team, HousePlus delivers OEM/ODM solutions that meet CE, FCC and RoHS standards for global retail and wholesale channels."
+            description="Our home appliance line covers air fryers, induction cooktops, electric kettles, toasters and more - all engineered for energy efficiency and durability. With in-house tooling and a dedicated R&D team, HousePlus delivers OEM/ODM solutions that meet CE, FCC and RoHS standards for global retail and wholesale channels."
             image={{ filename: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', alt: 'Home Appliances' }}
             industry_type="appliances"
             button_link={`/${lang}/products`}
@@ -191,27 +159,26 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           />
         </div>
 
-        {/* Why Choose HousePlus */}
         <section className="py-20 bg-blue-50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">🏭 Why Global Buyers Choose HousePlus</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">Why Global Buyers Choose HousePlus</h2>
               <p className="text-slate-600 max-w-2xl mx-auto"><strong>HousePlus</strong> combines 14+ years of manufacturing expertise with responsive service to deliver reliable products on time, every time. Our HousePlus team is committed to your success.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              [
+              {[
                 {
-                  icon: '🏭',
+                  icon: 'Factory',
                   title: 'Vertically Integrated Factory',
-                  desc: 'Over 20,000 m² of production space with in-house tooling, assembly lines and quality labs — full control from raw material to finished product.'
+                  desc: 'Over 20,000 m2 of production space with in-house tooling, assembly lines and quality labs - full control from raw material to finished product.'
                 },
                 {
-                  icon: '✅',
+                  icon: 'Certified',
                   title: 'International Certifications',
                   desc: 'CE, FCC, RoHS, ISO 9001 and IEC certifications ensure our products meet the regulatory requirements of Europe, North America and beyond.'
                 },
                 {
-                  icon: '🤝',
+                  icon: 'Support',
                   title: 'Flexible OEM/ODM Support',
                   desc: 'Custom branding, private-label packaging and product modifications available from MOQ 100 pcs. Dedicated account managers for every client.'
                 },
@@ -221,7 +188,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
                 </div>
-              ))
+              ))}
             </div>
           </div>
         </section>
