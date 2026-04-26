@@ -1,59 +1,33 @@
 import { MetadataRoute } from 'next';
-import { locales, defaultLocale } from '@/lib/i18n-config';
-
-const baseUrl = 'https://www.houseplus-ch.com';
-
-const pages = [
-  '',
-  'about-us',
-  'products',
-  'factory',
-  'team',
-  'service',
-  'careers',
-  'faq',
-  'news',
-  'contact',
-  'support',
-  'privacy',
-];
+import { i18n } from '../../i18n-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const entries: MetadataRoute.Sitemap = [];
+  const baseUrl = 'https://www.houseplus-ch.com';
 
-  locales.forEach((lang) => {
-    pages.forEach((page) => {
-      const path = page ? `/${lang}/${page}` : `/${lang}`;
-      const priority = page === ''
-        ? 1.0
-        : page === 'products'
-          ? 0.9
-          : page === 'factory' || page === 'team' || page === 'service'
-            ? 0.85
-            : 0.7;
+  // 为每种语言生成 URL
+  const langUrls = i18n.locales.map((locale) => ({
+    url: `${baseUrl}/${locale}`,
+    lastModified: new Date(),
+    alternates: {
+      languages: {
+        en: `${baseUrl}/en`,
+        es: `${baseUrl}/es`,
+        de: `${baseUrl}/de`,
+        fr: `${baseUrl}/fr`,
+        ar: `${baseUrl}/ar`,
+        'x-default': `${baseUrl}/en`,
+      },
+    },
+  }));
 
-      entries.push({
-        url: `${baseUrl}${path}`,
-        lastModified: new Date(),
-        changeFrequency: page === ''
-          ? 'daily'
-          : page === 'products' || page === 'news'
-            ? 'weekly'
-            : 'monthly',
-        priority,
-        alternates: {
-          languages: {
-            'x-default': `${baseUrl}/${defaultLocale}${page ? `/${page}` : ''}`,
-            en: `${baseUrl}/en${page ? `/${page}` : ''}`,
-            es: `${baseUrl}/es${page ? `/${page}` : ''}`,
-            de: `${baseUrl}/de${page ? `/${page}` : ''}`,
-            fr: `${baseUrl}/fr${page ? `/${page}` : ''}`,
-            ar: `${baseUrl}/ar${page ? `/${page}` : ''}`,
-          },
-        },
-      });
-    });
-  });
+  // 为其他页面生成 URL（如果需要）
+  const pageUrls: MetadataRoute.Sitemap = [
+    // 可以添加其他页面的 URL，例如：
+    // { url: `${baseUrl}/en/about`, lastModified: new Date() },
+  ];
 
-  return entries;
+  return [
+    ...langUrls,
+    ...pageUrls,
+  ];
 }
