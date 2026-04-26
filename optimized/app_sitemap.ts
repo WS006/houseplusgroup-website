@@ -1,1 +1,30 @@
-77u/aW1wb3J0IHsgTWV0YWRhdGFSb3V0ZSB9IGZyb20gJ25leHQnOw0KaW1wb3J0IHsgbG9jYWxlcyB9IGZyb20gJy4uLy4uL2kxOG4tY29uZmlnJzsNCg0KZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gc2l0ZW1hcCgpOiBNZXRhZGF0YVJvdXRlLlNpdGVtYXAgew0KICBjb25zdCBiYXNlVXJsID0gJ2h0dHBzOi8vd3d3LmhvdXNlcGx1cy1jaC5jb20nOw0KDQogIC8vIOS4uuavj+enjeivreiogOeUn+aIkCBVUkwNCiAgY29uc3QgbGFuZ1VybHMgPSBsb2NhbGVzLm1hcCgobG9jYWxlKSA9PiAoew0KICAgIHVybDogYCR7YmFzZVVybH0vJHtsb2NhbGV9YCwNCiAgICBsYXN0TW9kaWZpZWQ6IG5ldyBEYXRlKCksDQogICAgYWx0ZXJuYXRlczogew0KICAgICAgbGFuZ3VhZ2VzOiBPYmplY3QuZnJvbUVudHJpZXMoDQogICAgICAgIGxvY2FsZXMubWFwKChsKSA9PiBbbCwgYCR7YmFzZVVybH0vJHtsfWBdKQ0KICAgICAgKSwNCiAgICAgICd4LWRlZmF1bHQnOiBgJHtiYXNlVXJsfS8ke2RlZmF1bHRMb2NhbGV9YCwNCiAgICB9LA0KICB9KSk7DQoNCiAgLy8g5Li65YW25LuW6aG16Z2i55Sf5oiQIFVSTO+8iOWmguaenOmcgOimge+8iQ0KICBjb25zdCBwYWdlVXJsczogTWV0YWRhdGFSb3V0ZS5TaXRlbWFwID0gWw0KICAgIC8vIOWPr+S7pea3u+WKoOWFtuS7lumhtemdoueahCBVUkzvvIzkvovlpoLvvJoNCiAgICAvLyB7IHVybDogYCR7YmFzZVVybH0vZW4vYWJvdXRgLCBsYXN0TW9kaWZpZWQ6IG5ldyBEYXRlKCkgfSwNCiAgXTsNCg0KICByZXR1cm4gWw0KICAgIC4uLmxhbmdVcmxzLA0KICAgIC4uLnBhZ2VVcmxzLA0KICBdOw0KfQ0KDQo=
+﻿import { MetadataRoute } from 'next';
+import { locales } from '../../i18n-config';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://www.houseplus-ch.com';
+
+  // 为每种语言生成 URL
+  const langUrls = locales.map((locale) => ({
+    url: `${baseUrl}/${locale}`,
+    lastModified: new Date(),
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${baseUrl}/${l}`])
+      ),
+      'x-default': `${baseUrl}/${defaultLocale}`,
+    },
+  }));
+
+  // 为其他页面生成 URL（如果需要）
+  const pageUrls: MetadataRoute.Sitemap = [
+    // 可以添加其他页面的 URL，例如：
+    // { url: `${baseUrl}/en/about`, lastModified: new Date() },
+  ];
+
+  return [
+    ...langUrls,
+    ...pageUrls,
+  ];
+}
+
