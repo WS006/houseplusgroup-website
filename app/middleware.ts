@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
   }
 
   // 如果第一段存在且不是有效语言代码，返回 404
-  if (firstSegment; !validLangs.includes(firstSegment)) {
+  if (firstSegment && !validLangs.includes(firstSegment)) {
     const url = request.nextUrl.clone();
     url.pathname = '/en/404';
     const response = NextResponse.rewrite(url, { status: 404 });
