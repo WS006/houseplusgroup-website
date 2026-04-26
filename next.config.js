@@ -129,15 +129,15 @@ const nextConfig = {
 
   // Rewrites for SEO-friendly URLs
   async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: '/sitemap.xml',
-          destination: '/api/sitemap',
-        },
-      ],
-    };
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+    ];
   },
 };
 
 module.exports = nextConfig;
+
+
