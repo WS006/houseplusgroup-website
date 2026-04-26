@@ -1,1 +1,60 @@
-ZXhwb3J0IGNvbnN0IGxvY2FsZXMgPSBbJ2VuJywgJ2VzJywgJ2RlJywgJ2ZyJywgJ2FyJ10gYXMgY29uc3Q7DQpleHBvcnQgdHlwZSBMb2NhbGUgPSAodHlwZW9mIGxvY2FsZXMpW251bWJlcl07DQoNCmV4cG9ydCBjb25zdCBkZWZhdWx0TG9jYWxlOiBMb2NhbGUgPSAnZW4nOw0KDQpleHBvcnQgaW50ZXJmYWNlIExvY2FsZUNvbmZpZyB7DQogIGNvZGU6IExvY2FsZTsNCiAgbmFtZTogc3RyaW5nOw0KICBuYXRpdmVOYW1lOiBzdHJpbmc7DQogIGRpcmVjdGlvbjogJ2x0cicgfCAncnRsJzsNCn0NCg0KZXhwb3J0IGNvbnN0IGxvY2FsZUNvbmZpZ3M6IFJlY29yZDxMb2NhbGUsIExvY2FsZUNvbmZpZz4gPSB7DQogIGVuOiB7DQogICAgY29kZTogJ2VuJywNCiAgICBuYW1lOiAnRW5nbGlzaCcsDQogICAgbmF0aXZlTmFtZTogJ0VuZ2xpc2gnLA0KICAgIGRpcmVjdGlvbjogJ2x0cicsDQogIH0sDQogIGVzOiB7DQogICAgY29kZTogJ2VzJywNCiAgICBuYW1lOiAnU3BhbmlzaCcsDQogICAgbmF0aXZlTmFtZTogJ0VzcGHDsW9sJywNCiAgICBkaXJlY3Rpb246ICdsdHInLA0KICB9LA0KICBkZTogew0KICAgIGNvZGU6ICdkZScsDQogICAgbmFtZTogJ0dlcm1hbicsDQogICAgbmF0aXZlTmFtZTogJ0RldXRzY2gnLA0KICAgIGRpcmVjdGlvbjogJ2x0cicsDQogIH0sDQogIGZyOiB7DQogICAgY29kZTogJ2ZyJywNCiAgICBuYW1lOiAnRnJlbmNoJywNCiAgICBuYXRpdmVOYW1lOiAnRnJhbsOnYWlzJywNCiAgICBkaXJlY3Rpb246ICdsdHInLA0KICB9LA0KICBhcjogew0KICAgIGNvZGU6ICdhcicsDQogICAgbmFtZTogJ0FyYWJpYycsDQogICAgbmF0aXZlTmFtZTogJ9in2YTYudix2KjZitipJywNCiAgICBkaXJlY3Rpb246ICdydGwnLA0KICB9LA0KfTsNCg0KZXhwb3J0IGZ1bmN0aW9uIGlzVmFsaWRMb2NhbGUobGFuZzogc3RyaW5nKTogbGFuZyBpcyBMb2NhbGUgew0KICByZXR1cm4gbG9jYWxlcy5pbmNsdWRlcyhsYW5nIGFzIGFueSk7DQp9DQoNCmV4cG9ydCBmdW5jdGlvbiBnZXRMb2NhbGVDb25maWcobGFuZzogTG9jYWxlKTogTG9jYWxlQ29uZmlnIHsNCiAgcmV0dXJuIGxvY2FsZUNvbmZpZ3NbbGFuZ107DQp9DQoNCmV4cG9ydCBmdW5jdGlvbiBnZXRMb2NhbGVEaXJlY3Rpb24obGFuZzogTG9jYWxlKTogJ2x0cicgfCAncnRsJyB7DQogIHJldHVybiBsb2NhbGVDb25maWdzW2xhbmddLmRpcmVjdGlvbjsNCn0NCg0KZXhwb3J0IGZ1bmN0aW9uIGdldEFsbExvY2FsZXMoKTogTG9jYWxlQ29uZmlnW10gew0KICByZXR1cm4gbG9jYWxlcy5tYXAoKGxhbmcpID0+IGxvY2FsZUNvbmZpZ3NbbGFuZ10pOw0KfQ0K
+export const locales = ['en', 'es', 'de', 'fr', 'ar'] as const;
+export type Locale = (typeof locales)[number];
+
+export const defaultLocale: Locale = 'en';
+
+export interface LocaleConfig {
+  code: Locale;
+  name: string;
+  nativeName: string;
+  direction: 'ltr' | 'rtl';
+}
+
+export const localeConfigs: Record<Locale, LocaleConfig> = {
+  en: {
+    code: 'en',
+    name: 'English',
+    nativeName: 'English',
+    direction: 'ltr',
+  },
+  es: {
+    code: 'es',
+    name: 'Spanish',
+    nativeName: 'Español',
+    direction: 'ltr',
+  },
+  de: {
+    code: 'de',
+    name: 'German',
+    nativeName: 'Deutsch',
+    direction: 'ltr',
+  },
+  fr: {
+    code: 'fr',
+    name: 'French',
+    nativeName: 'Français',
+    direction: 'ltr',
+  },
+  ar: {
+    code: 'ar',
+    name: 'Arabic',
+    nativeName: 'العربية',
+    direction: 'rtl',
+  },
+};
+
+export function isValidLocale(lang: string): lang is Locale {
+  return locales.includes(lang as any);
+}
+
+export function getLocaleConfig(lang: Locale): LocaleConfig {
+  return localeConfigs[lang];
+}
+
+export function getLocaleDirection(lang: Locale): 'ltr' | 'rtl' {
+  return localeConfigs[lang].direction;
+}
+
+export function getAllLocales(): LocaleConfig[] {
+  return locales.map((lang) => localeConfigs[lang]);
+}
