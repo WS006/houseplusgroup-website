@@ -50,6 +50,41 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
+/**
+ * GET 方法 - 健康检查 / 获取表单配置信息
+ */
+export async function GET(request: Request) {
+  try {
+    // 速率限制检查
+    const ip = request.headers.get('x-forwarded-for') || 'unknown';
+    if (!checkRateLimit(ip)) {
+      return NextResponse.json(
+        { error: 'Too many requests, please try again later.' },
+        { status: 429 }
+      );
+    }
+
+    // 返回表单相关配置信息
+    return NextResponse.json({
+      success: true,
+      data: {
+        endpoint: '/api/inquiry',
+        method: 'POST',
+        requiredFields: ['name', 'email', 'message'],
+        optionalFields: ['company', 'whatsapp', 'product', 'quantity'],
+        fieldLimits: {
+          name: 100,
+          email: 200,
+          message: 2000,
+        },
+      },
+    });
+  } catch (error) {
+    console.error('Inquiry GET API error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}
+
 export async function POST(request: Request) {
   try {
     // 速率限制检查
@@ -66,26 +101,17 @@ export async function POST(request: Request) {
 
     // Validate required fields
     if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'Name, email and message are required' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Name, email and message are required' }, { status: 400 });
     }
 
     // Validate email format
     if (!isValidEmail(email)) {
-      return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
     // Validate field lengths (prevent abuse)
     if (name.length > 100 || email.length > 200 || message.length > 2000) {
-      return NextResponse.json(
-        { error: 'Field length exceeds limit' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Field length exceeds limit' }, { status: 400 });
     }
 
     // Sanitize inputs (prevent XSS)
@@ -130,9 +156,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Inquiry API error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
