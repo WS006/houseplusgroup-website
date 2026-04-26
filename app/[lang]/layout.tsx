@@ -7,15 +7,12 @@ import '../globals.css';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n-config';
-import { Inter } from 'next/font/google';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   use: [apiPlugin],
   apiOptions: { region: 'eu' },
 });
-
-const inter = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -71,7 +68,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
