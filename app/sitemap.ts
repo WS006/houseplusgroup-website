@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { locales } from '@/lib/i18n-config';
+import { locales, defaultLocale } from '@/lib/i18n-config';
 
 const baseUrl = 'https://www.houseplus-ch.com';
 
@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: page === '' ? 1.0 : page === 'products' ? 0.9 : page === 'factory' || page === 'team' || page === 'service' ? 0.85 : 0.7,
         alternates: {
           languages: {
+            'x-default': `${baseUrl}/en${page ? `/${page}` : ''}`,
             en: `${baseUrl}/en${page ? `/${page}` : ''}`,
             es: `${baseUrl}/es${page ? `/${page}` : ''}`,
             de: `${baseUrl}/de${page ? `/${page}` : ''}`,
