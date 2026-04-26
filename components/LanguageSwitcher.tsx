@@ -1,1 +1,70 @@
-J3VzZSBjbGllbnQnOw0KDQppbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnOw0KaW1wb3J0IHsgdXNlUGF0aG5hbWUgfSBmcm9tICduZXh0L25hdmlnYXRpb24nOw0KaW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7DQppbXBvcnQgeyBsb2NhbGVzLCBsb2NhbGVDb25maWdzIH0gZnJvbSAnLi4vaTE4bi1jb25maWcnOw0KDQpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBMYW5ndWFnZVN3aXRjaGVyKHsgY3VycmVudExhbmcgfTogeyBjdXJyZW50TGFuZzogc3RyaW5nIH0pIHsNCiAgY29uc3QgW2lzT3Blbiwgc2V0SXNPcGVuXSA9IHVzZVN0YXRlKGZhbHNlKTsNCiAgY29uc3QgcGF0aG5hbWUgPSB1c2VQYXRobmFtZSgpOw0KDQogIC8vIOiOt+WPluW9k+WJjei3r+W+hO+8iOWOu+aOieivreiogOWJjee8gO+8iQ0KICBjb25zdCBwYXRoV2l0aG91dExhbmcgPSBwYXRobmFtZT8uc3BsaXQoJy8nKS5zbGljZSgyKS5qb2luKCcvJykgfHwgJyc7DQoNCiAgY29uc3QgY3VycmVudENvbmZpZyA9IGxvY2FsZUNvbmZpZ3NbY3VycmVudExhbmcgYXMga2V5b2YgdHlwZW9mIGxvY2FsZUNvbmZpZ3NdOw0KDQogIHJldHVybiAoDQogICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIj4NCiAgICAgIDxidXR0b24NCiAgICAgICAgb25DbGljaz17KCkgPT4gc2V0SXNPcGVuKCFpc09wZW4pfQ0KICAgICAgICBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0xIHB4LTMgcHktMiByb3VuZGVkLWxnIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1zbGF0ZS02MDAgaG92ZXI6dGV4dC1ibHVlLTYwMCBob3ZlcjpiZy1ibHVlLTUwIHRyYW5zaXRpb24tYWxsIg0KICAgICAgICBhcmlhLWxhYmVsPSJTd2l0Y2ggbGFuZ3VhZ2UiDQogICAgICA+DQogICAgICAgIDxzdmcgY2xhc3NOYW1lPSJ3LTQgaC00IiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0cm9rZT0iY3VycmVudENvbG9yIj4NCiAgICAgICAgICA8cGF0aCBzdHJva2VMaW5lY2FwPSJyb3VuZCIgc3Ryb2tlTGluZWpvaW49InJvdW5kIiBzdHJva2VXaWR0aD17Mn0gZD0iTTMgNWgxMk05IDN2Mm0xLjA0OCA2LjY0OGEuNzUuNzUgMCAxMS0xLjA5Ni0xLjAyN2wtMi4yMjQgMi4yMjRhLjc1Ljc1IDAgMDAwIDEuMDZsMi4yMjQgMi4yMjRhLjc1Ljc1IDAgMDAxLjA1OC0xLjA2TDkuNTMgMTEuOTdsMS40OTgtMS40OThhLjc1Ljc1IDAgMDExLjA1OCAweiIgLz4NCiAgICAgICAgPC9zdmc+DQogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaGlkZGVuIHNtOmlubGluZSI+e2N1cnJlbnRDb25maWc/Lm5hdGl2ZU5hbWUgfHwgJ0VuZ2xpc2gnfTwvc3Bhbj4NCiAgICAgICAgPHN2ZyBjbGFzc05hbWU9e2B3LTMgaC0zIHRyYW5zaXRpb24tdHJhbnNmb3JtICR7aXNPcGVuID8gJ3JvdGF0ZS0xODAnIDogJyd9YH0gZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2U9ImN1cnJlbnRDb2xvciI+DQogICAgICAgICAgPHBhdGggc3Ryb2tlTGluZWNhcD0icm91bmQiIHN0cm9rZUxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlV2lkdGg9ezJ9IGQ9Ik0xOSA5bC03IDctNy03IiAvPg0KICAgICAgICA8L3N2Zz4NCiAgICAgIDwvYnV0dG9uPg0KDQogICAgICB7aXNPcGVuICYmICgNCiAgICAgICAgPD4NCiAgICAgICAgICB7Lyog6IOM5pmv6YGu572pICovfQ0KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmaXhlZCBpbnNldC0wIHotMTAiIG9uQ2xpY2s9eygpID0+IHNldElzT3BlbihmYWxzZSl9IC8+DQoNCiAgICAgICAgICB7Lyog5LiL5ouJ6I+c5Y2VICovfQ0KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhYnNvbHV0ZSByaWdodC0wIG10LTIgdy00OCByb3VuZGVkLXhsIGJnLXdoaXRlIHNoYWRvdy1sZyByaW5nLTEgcmluZy1zbGF0ZS05MDAvNSB6LTIwIHB5LTEgYW5pbWF0ZS1pbiBmYWRlLWluIHNsaWRlLWluLWZyb20tdG9wLTIgZHVyYXRpb24tMjAwIj4NCiAgICAgICAgICAgIHtsb2NhbGVzLm1hcCgobG9jYWxlKSA9PiB7DQogICAgICAgICAgICAgIGNvbnN0IGNvbmZpZyA9IGxvY2FsZUNvbmZpZ3NbbG9jYWxlXTsNCiAgICAgICAgICAgICAgY29uc3QgaXNBY3RpdmUgPSBsb2NhbGUgPT09IGN1cnJlbnRMYW5nOw0KICAgICAgICAgICAgICBjb25zdCBocmVmID0gYC8ke2xvY2FsZX0ke3BhdGhXaXRob3V0TGFuZyA/IGAvJHtwYXRoV2l0aG91dExhbmd9YCA6ICcnfWA7DQoNCiAgICAgICAgICAgICAgcmV0dXJuICgNCiAgICAgICAgICAgICAgICA8TGluaw0KICAgICAgICAgICAgICAgICAga2V5PXtsb2NhbGV9DQogICAgICAgICAgICAgICAgICBocmVmPXtocmVmfQ0KICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0SXNPcGVuKGZhbHNlKX0NCiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17YGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweC00IHB5LTIuNSB0ZXh0LXNtIHRyYW5zaXRpb24tY29sb3JzICR7DQogICAgICAgICAgICAgICAgICAgIGlzQWN0aXZlDQogICAgICAgICAgICAgICAgICAgICAgPyAnYmctYmx1ZS01MCB0ZXh0LWJsdWUtNjAwIGZvbnQtc2VtaWJvbGQnDQogICAgICAgICAgICAgICAgICAgICAgOiAndGV4dC1zbGF0ZS03MDAgaG92ZXI6Ymctc2xhdGUtNTAnDQogICAgICAgICAgICAgICAgICB9YH0NCiAgICAgICAgICAgICAgICA+DQogICAgICAgICAgICAgICAgICA8c3Bhbj57Y29uZmlnLm5hdGl2ZU5hbWV9PC9zcGFuPg0KICAgICAgICAgICAgICAgICAge2lzQWN0aXZlICYmICgNCiAgICAgICAgICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9InctNCBoLTQiIGZpbGw9ImN1cnJlbnRDb2xvciIgdmlld0JveD0iMCAwIDIwIDIwIj4NCiAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBmaWxsUnVsZT0iZXZlbm9kZCIgZD0iTTE2LjcwNyA1LjI5M2ExIDEgMCAwMTAgMS40MTRsLTggOGExIDEgMCAwMS0xLjQxNCAwbC00LTRhMSAxIDAgMDExLjQxNC0xLjQxNEw4IDEyLjU4Nmw3LjI5My03LjI5M2ExIDEgMCAwMTEuNDE0IDB6IiBjbGlwUnVsZT0iZXZlbm9kZCIgLz4NCiAgICAgICAgICAgICAgICAgICAgPC9zdmc+DQogICAgICAgICAgICAgICAgICApfQ0KICAgICAgICAgICAgICAgIDwvTGluaz4NCiAgICAgICAgICAgICAgKTsNCiAgICAgICAgICAgIH0pfQ0KICAgICAgICAgIDwvZGl2Pg0KICAgICAgICA8Lz4NCiAgICAgICl9DQogICAgPC9kaXY+DQogICk7DQp9DQo=
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { locales, localeConfigs } from '../i18n-config';
+
+export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // 获取当前路径（去掉语言前缀）
+  const pathWithoutLang = pathname?.split('/').slice(2).join('/') || '';
+
+  const currentConfig = localeConfigs[currentLang as keyof typeof localeConfigs];
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
+        aria-label="Switch language"
+      >
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 6.648a.75.75 0 11-1.096-1.027l-2.224 2.224a.75.75 0 000 1.06l2.224 2.224a.75.75 0 001.058-1.06L9.53 11.97l1.498-1.498a.75.75 0 011.058 0z" />
+        </svg>
+        <span className="hidden sm:inline">{currentConfig?.nativeName || 'English'}</span>
+        <svg className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <>
+          {/* 背景遮罩 */}
+          <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />
+
+          {/* 下拉菜单 */}
+          <div className="absolute right-0 mt-2 w-48 rounded-xl bg-white shadow-lg ring-1 ring-slate-900/5 z-20 py-1 animate-in fade-in slide-in-from-top-2 duration-200">
+            {locales.map((locale) => {
+              const config = localeConfigs[locale];
+              const isActive = locale === currentLang;
+              const href = `/${locale}${pathWithoutLang ? `/${pathWithoutLang}` : ''}`;
+
+              return (
+                <Link
+                  key={locale}
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className={`flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
+                    isActive
+                      ? 'bg-blue-50 text-blue-600 font-semibold'
+                      : 'text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  <span>{config.nativeName}</span>
+                  {isActive && (
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
