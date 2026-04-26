@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     en: 'Professional manufacturer of home appliances, solar systems, and portable power stations for global wholesale buyers.',
     es: 'Fabricante profesional de electrodomésticos, sistemas solares y estaciones de energía portátiles para compradores mayoristas globales.',
     de: 'Professioneller Hersteller von Haushaltsgeräten, Solarsystemen und tragbaren Stromversorgungen für globales Großhandelskunden.',
-    fr: 'Fabricant professionnel d'électroménager, de systèmes solaires et de stations d'énergie portables pour les acheteurs en gros mondiaux.',
+    fr: 'Fabricant professionnel d\'électroménager, de systèmes solaires et de stations d\'énergie portables pour les acheteurs en gros mondiaux.',
     ar: 'مصنع متخصص في الأجهزة المنزلية وأنظمة الطاقة الشمسية ومحطات الطاقة المحمولة للمشترين بالجملة حول العالم.',
   };
 
@@ -60,15 +60,17 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
+
   return (
-    <html lang={(async () => (await params).lang)()} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <Header />
         <main className="min-h-screen">{children}</main>
