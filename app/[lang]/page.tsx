@@ -1,4 +1,5 @@
 import { getStoryblokApi } from '@storyblok/react';
+import Image from 'next/image';
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import SEOHead from '@/components/SEOHead';
@@ -13,6 +14,29 @@ const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+// TypeScript interfaces for type safety
+interface CarouselImage {
+  filename: string;
+  alt: string;
+}
+
+interface CarouselItem {
+  _uid: string;
+  image: CarouselImage;
+  title: string;
+  subtitle: string;
+  button_text: string;
+  button_link: {
+    url: string;
+    cached_url: string;
+  };
+}
+
+interface IndustryImage {
+  filename: string;
+  alt: string;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -30,13 +54,13 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   const storyblokApi = getStoryblokApi();
   let story = null;
-  let carouselItems: any[] = [];
+  let carouselItems: CarouselItem[] = [];
 
   try {
     const { data } = await storyblokApi.getStory('home', { 
       version: 'published', 
       language: lang,
-      cv: Date.now()
+      cv: Date.now() 
     });
     story = data.story;
     if (story?.content?.carousel && Array.isArray(story.content.carousel)) {
@@ -49,7 +73,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   const content = story?.content || {};
   
   // Three professional carousel slides — business style with bright, clean imagery
-  const defaultCarouselItems = [
+  const defaultCarouselItems: CarouselItem[] = [
     {
       _uid: '1',
       image: {
@@ -114,7 +138,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
               🏭 HousePlus Group — Professional Wholesale Supplier
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Founded in 2010, HousePlus is a vertically-integrated manufacturer supplying solar energy systems, home appliances, and 3C electronics to wholesale buyers across 60+ countries. We offer OEM/ODM services, CE/FCC/RoHS certification, and flexible MOQ starting from 100 units.
+              Founded in 2010, HousePlus is a vertically-integrated manufacturer supplying solar energy systems, home appliances and 3C electronics to wholesale buyers across 60+ countries. We offer OEM/ODM services, CE/FCC/RoHS certification, and flexible MOQ starting from 100 units.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
@@ -175,7 +199,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
               <p className="text-slate-600 max-w-2xl mx-auto"><strong>HousePlus</strong> combines 14+ years of manufacturing expertise with responsive service to deliver reliable products on time, every time. Our HousePlus team is committed to your success.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
+              [
                 {
                   icon: '🏭',
                   title: 'Vertically Integrated Factory',
@@ -197,7 +221,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
