@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n-config';
 
 storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
+  accessToken: process.env.NEXT_PUBLIC_STORYBLK_TOKEN,
   use: [apiPlugin],
   apiOptions: { region: 'eu' },
 });
@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
+    metadataBase: new URL('https://www.houseplus-ch.com'),
     alternates: {
       canonical: `https://www.houseplus-ch.com/${lang}`,
       languages: {
@@ -52,6 +53,39 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         fr: 'https://www.houseplus-ch.com/fr',
         ar: 'https://www.houseplus-ch.com/ar',
         'x-default': 'https://www.houseplus-ch.com/en',
+      },
+    },
+    openGraph: {
+      title: titles[lang] || titles.en,
+      description: descriptions[lang] || descriptions.en,
+      url: `https://www.houseplus-ch.com/${lang}`,
+      siteName: 'HousePlus',
+      locale: lang === 'ar' ? 'ar_AR' : `${lang}_${lang.toUpperCase()}`,
+      type: 'website',
+      images: [
+        {
+          url: 'https://www.houseplus-ch.com/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: titles[lang] || titles.en,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[lang] || titles.en,
+      description: descriptions[lang] || descriptions.en,
+      images: ['https://www.houseplus-ch.com/og-image.jpg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
   };
