@@ -72,7 +72,7 @@ const products = [
     name: '100Ah Deep Cycle Lead-Acid Battery',
     category: 'solar',
     model: 'HP-LA100',
-    coverImage: 'https://images.unsplash.com/photo-1619641151040-af3bf8325790?w=600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1619641151040-af3bf8365760?w=600&q=80',
     description: 'Maintenance-free VRLA deep-cycle battery. Suitable for solar storage, UPS and marine applications.',
     badge: '',
   },
@@ -184,7 +184,7 @@ const products = [
     name: '1TB USB-C Portable SSD',
     category: 'electronics',
     model: 'HP-SSD1T',
-    coverImage: 'https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1544652478-6653e09f7f1c?w=600&q=80',
     description: 'Read up to 1050 MB/s, write up to 1000 MB/s. Shock-resistant aluminium casing, USB 3.2 Gen 2 interface, pocket-sized.',
     badge: '',
   },
@@ -337,8 +337,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
             </Link>
           </div>
         </div>
-      </main>
+      </section>
+    </main>
   );
 }
-
-
