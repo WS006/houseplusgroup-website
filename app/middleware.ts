@@ -5,7 +5,16 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const firstSegment = pathname.split('/')[1];
+
+  // 排除 API 路由和静态文件
+  if (
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_next/static') ||
+    pathname.startsWith('/_next/image') ||
+    pathname === '/favicon.ico'
+  ) {
+    return NextResponse.next();
+  }
 
   // 根路径直接放行（由 app/page.tsx 处理重定向）
   if (pathname === '/') {
@@ -14,7 +23,8 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  // 如果第一段存在且不是有效语言代码，返回 404（rewrite 到 /en/404）
+  // 如果第一段存在且不是有效语言代码，返回 404
+  const firstSegment = pathname.split('/')[1];
   if (firstSegment && !validLangs.includes(firstSegment)) {
     const url = request.nextUrl.clone();
     url.pathname = '/en/404';
@@ -45,6 +55,5 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   return response;
 }
 
-export const config = {
-  matcher: '/((?!api|_next/static|_next/image|favicon.ico).*)',
-};
+// 删除 matcher，让 middleware 匹配所有路由
+// 排除逻辑已在函数内部处理
