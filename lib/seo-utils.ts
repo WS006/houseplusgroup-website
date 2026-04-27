@@ -34,6 +34,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
       description: config.description,
       url: canonicalUrl,
       siteName: siteConfig.name,
+      locale: config.lang,
       images: [
         {
           url: config.image || siteConfig.defaultImage,
@@ -55,14 +56,20 @@ export function generateMetadata(config: SEOConfig): Metadata {
     robots: 'index, follow',
     alternates: {
       canonical: canonicalUrl,
-      languages: {
-        'en': `${siteConfig.url}/en${config.url}`,
-        'es': `${siteConfig.url}/es${config.url}`,
-        'de': `${siteConfig.url}/de${config.url}`,
-        'fr': `${siteConfig.url}/fr${config.url}`,
-        'ar': `${siteConfig.url}/ar${config.url}`,
-        'x-default': `${siteConfig.url}/en${config.url}`,
-      },
+      languages: (() => {
+        // config.url 格式为 /{lang}/{subpath} 或 /{lang}
+        // 提取 subPath（去掉第一段语言前缀）
+        const urlParts = config.url.split('/').filter(Boolean);
+        const subPath = urlParts.length > 1 ? '/' + urlParts.slice(1).join('/') : '';
+        return {
+          'en': `${siteConfig.url}/en${subPath}`,
+          'es': `${siteConfig.url}/es${subPath}`,
+          'de': `${siteConfig.url}/de${subPath}`,
+          'fr': `${siteConfig.url}/fr${subPath}`,
+          'ar': `${siteConfig.url}/ar${subPath}`,
+          'x-default': `${siteConfig.url}/en${subPath}`,
+        };
+      })(),
     },
   };
 }
