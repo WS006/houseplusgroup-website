@@ -112,8 +112,9 @@ export default function Footer({ lang }: { lang: string }) {
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-slate-500">{content.copyright}</p>
           <div className="flex gap-6">
+            <Link href={`/${lang}/sitemap-page`} className="text-xs text-slate-500 hover:text-white">Sitemap</Link>
             <Link href={`/${lang}/privacy`} className="text-xs text-slate-500 hover:text-white">Privacy</Link>
-            <Link href={`/${lang}/support`} className="text-xs text-slate-500 hover:text-white">Support</Link>
+            <Link href={`/${lang}/terms`} className="text-xs text-slate-500 hover:text-white">Terms</Link>
           </div>
         </div>
       </div>
