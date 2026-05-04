@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface IndustrySectionProps {
   title: string;
@@ -46,6 +47,18 @@ export default function IndustrySection({
 }: IndustrySectionProps) {
   const isEven = industry_type === 'appliances';
   const config = industryConfig[industry_type];
+  const [imgSrc, setImgSrc] = useState(image?.filename || '');
+  const [imgError, setImgError] = useState(false);
+
+  const handleImageError = () => {
+    if (imgSrc === image?.filename) {
+      // First fallback: try a different Unsplash image
+      setImgSrc(`https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80`);
+    } else {
+      // Second fallback: use a colored background with icon
+      setImgError(true);
+    }
+  };
 
   return (
     <section
@@ -108,19 +121,26 @@ export default function IndustrySection({
           {/* Image */}
           <div className="flex-1 relative">
             <div className="relative h-[350px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-              {image?.filename && (
+              {!imgError && imgSrc && (
                 <Image
-                  src={image.filename}
+                  src={imgSrc}
                   alt={image.alt || title}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   quality={85}
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80';
-                  }}
+                  onError={handleImageError}
                 />
+              )}
+              {imgError && (
+                <div className={`w-full h-full bg-gradient-to-br ${config.color} flex items-center justify-center`}>
+                  <span className="text-8xl opacity-30">{config.icon}</span>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-xl font-bold bg-black/30 px-6 py-3 rounded-2xl backdrop-blur-sm">
+                      {config.label}
+                    </span>
+                  </div>
+                </div>
               )}
             </div>
             {/* Decorative gradient blob */}
