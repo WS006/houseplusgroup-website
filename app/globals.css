@@ -42,11 +42,6 @@ body {
   @apply bg-gray-900 text-white;
 }
 
-/* Prose customization for content */
-.prose-content {
-  @apply prose prose-lg max-w-none;
-}
-
 /* RTL support */
 [dir='rtl'] {
   direction: rtl;
@@ -59,23 +54,7 @@ body {
 
 /* Smooth transitions */
 * {
-  @apply transition-colors duration-200;
-}
-
-button,
-a {
-  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
-}
-
-/* Responsive typography */
-@media (max-width: 768px) {
-  h1 {
-    @apply text-3xl;
-  }
-  h2 {
-    @apply text-2xl;
-  }
-  h3 {
-    @apply text-xl;
-  }
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }

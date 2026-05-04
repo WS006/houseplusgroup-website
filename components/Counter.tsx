@@ -1,5 +1,6 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+
+import { useState, useEffect } from 'react';
 
 interface CounterProps {
   end: string;
@@ -8,68 +9,40 @@ interface CounterProps {
 
 export default function Counter({ end, label }: CounterProps) {
   const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  // Extract numeric part
-  const numericEnd = parseInt(end.replace(/\D/g, '')) || 0;
-  const suffix = end.replace(/[0-9]/g, '');
-
+  
   useEffect(() => {
-    setIsMounted(true);
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible || !isMounted) return;
-
-    let start = 0;
-    const duration = 2000; // 2 seconds
-    const increment = numericEnd / (duration / 16); // 60fps
-
+    // 简单的数字动画
+    const numericPart = parseInt(end.replace(/[^0-9]/g, ''));
+    if (isNaN(numericPart)) return;
+    
+    const duration = 2000; // 2秒
+    const steps = 60;
+    const increment = numericPart / steps;
+    let current = 0;
+    let step = 0;
+    
     const timer = setInterval(() => {
-      start += increment;
-      if (start >= numericEnd) {
-        setCount(numericEnd);
+      step++;
+      current += increment;
+      
+      if (step >= steps) {
         clearInterval(timer);
+        setCount(numericPart);
       } else {
-        setCount(Math.floor(start));
+        setCount(Math.floor(current));
       }
-    }, 16);
-
+    }, duration / steps);
+    
     return () => clearInterval(timer);
-  }, [isVisible, isMounted, numericEnd]);
-
-  // Before mounting on client (or SSR if it were used), show the end value but hidden or static
-  // Since we use dynamic(..., {ssr: false}), this component ONLY renders on client.
-  // We should show the end value immediately if not yet animated to avoid "0" flash if possible,
-  // but for counter effect, starting from 0 is desired.
+  }, [end]);
+  
+  // 保留原来的后缀（如 +, m 等）
+  const suffix = end.replace(/[0-9]/g, '');
   
   return (
-    <div ref={ref} className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-      <div className="text-3xl md:text-4xl font-black text-slate-900 mb-1 flex justify-center items-baseline">
-        <span>{isVisible ? count : 0}</span>
-        <span className="text-blue-600 ml-0.5">{suffix}</span>
-      </div>
-      <div className="text-xs md:text-sm text-slate-500 uppercase tracking-widest font-bold">{label}</div>
+    <div className="text-center">
+      <div className="text-4xl font-black text-blue-600">{count}{suffix}</div>
+      <div className="text-sm text-slate-600">{label}</div>
     </div>
   );
 }

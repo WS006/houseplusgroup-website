@@ -43,6 +43,8 @@ const productSlugs = [
   'solar-panel-500w',
 ];
 
+type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+
 function buildHreflangs(slug: string) {
   const languages: Record<string, string> = {};
   for (const lang of locales) {
@@ -53,7 +55,7 @@ function buildHreflangs(slug: string) {
   return languages;
 }
 
-function buildUrlEntry(slug: string, priority: number, changefreq: string) {
+function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq) {
   const lastmod = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   const entries = [];
 

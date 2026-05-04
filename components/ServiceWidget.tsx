@@ -24,7 +24,7 @@ export default function ServiceWidget({
         onClick={() => setIsOpen(!isOpen)}
         className="bg-blue-600 text-white p-3 rounded-l-lg shadow-lg hover:bg-blue-700 transition-all flex flex-col items-center gap-1"
       >
-        {isOpen ? <X size={20} /> : <MessageCircle size={20} />}
+        {isOpen ? <X size={20} /> : <Mail size={20} />}
         <span className="text-[10px] font-bold uppercase tracking-wider [writing-mode:vertical-lr]">Service</span>
       </button>
 
