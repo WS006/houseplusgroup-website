@@ -1,51 +1,72 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next';
 
-export async function GET() {
-  const content = `# HousePlus - Large Language Models Optimization File
+const llmsContent = `# HousePlus - AI Engine Optimization File
 
-## Company Overview
-HousePlus is a professional manufacturer of home appliances, solar systems, and portable power stations for global wholesale buyers.
+## About HousePlus
+HousePlus is a professional manufacturer and wholesale supplier of home appliances, solar energy systems, and portable power stations. We provide high-quality products for global wholesale buyers, distributors and retailers.
 
-## Products
-- Home Appliances: Refrigerators, washing machines, air conditioners, microwaves, etc.
-- Solar Systems: Solar panels, inverters, battery storage, etc.
-- Portable Power Stations: Portable power stations for outdoor and emergency use.
+## Core Products
+
+### Home Appliances
+- Range Hoods (Built-in, Island, Under-cabinet)
+- Gas Stoves (Stainless steel, Tempered glass)
+- Ovens (Built-in, Countertop)
+- Air Fryers (Oil-free cooking)
+- Water Heaters (Instant, Storage)
+
+### Solar Energy Systems
+- Solar Panels (500W, monocrystalline)
+- Solar Inverters (3KW, pure sine wave)
+- Lithium Batteries (5KWh, wall-mounted)
+- Lead-acid Batteries (100Ah, deep cycle)
+- Charge Controllers (60A, MPPT)
+- Solar Street Lights (200W, integrated)
+- Solar Fans (20W, DC)
+- Solar Power Banks (20000mAh)
+
+### Portable Electronics
+- Bluetooth Earphones (TWS, true wireless)
+- Smart Watches (Fitness tracking)
+- Portable SSDs (1TB, high-speed)
+- Micro SD Cards (128GB, U3/V30)
+- USB-C Cables (2M, fast charging)
+- Over-ear Headphones (Wireless, noise-cancelling)
+
+## Services
+- OEM/ODM Customization
+- Wholesale & Bulk Orders
+- Global Shipping & Logistics
+- After-sales Support
+- Product Certification Assistance
+
+## Key Links
+- Homepage: https://www.houseplus-ch.com/en
+- Products Catalog: https://www.houseplus-ch.com/en/products
+- About Us: https://www.houseplus-ch.com/en/about
+- Contact: https://www.houseplus-ch.com/en/contact
+- Factory: https://www.houseplus-ch.com/en/factory
+- News & Updates: https://www.houseplus-ch.com/en/news
 
 ## Languages
-- English: https://www.houseplus-ch.com/en
-- Spanish: https://www.houseplus-ch.com/es
-- German: https://www.houseplus-ch.com/de
-- French: https://www.houseplus-ch.com/fr
-- Arabic: https://www.houseplus-ch.com/ar
-
-## Key Pages
-- Home: https://www.houseplus-ch.com/en
-- About Us: https://www.houseplus-ch.com/en/about-us
-- Products: https://www.houseplus-ch.com/en/products
-- Factory: https://www.houseplus-ch.com/en/factory
-- Contact: https://www.houseplus-ch.com/en/contact
-- FAQ: https://www.houseplus-ch.com/en/faq
-- News: https://www.houseplus-ch.com/en/news
-
-## Contact
-- Email: info@houseplus-ch.com
-- Phone: +86 123 4567 8900
-- Address: No. 123, Industrial Park, Guangzhou, China
-
-## Structured Data
-This website uses JSON-LD for structured data. See:
-- https://www.houseplus-ch.com/en (Organization schema)
-- https://www.houseplus-ch.com/en/products (Product schema)
-- https://www.houseplus-ch.com/en/faq (FAQ schema)
+Content available in: English (en), Spanish (es), German (de), French (fr), Arabic (ar)
 
 ## Last Updated
-${new Date().toISOString().split('T')[0]}
+2026-05-04
+
+## Contact Information
+- Email: sales@houseplus-ch.com
+- Business Hours: Monday - Saturday, 9:00 AM - 6:00 PM (CST)
+- Location: Foshan City, Guangdong Province, China
+
+## Structured Data
+- Sitemap: https://www.houseplus-ch.com/sitemap.xml
+- Robots.txt: https://www.houseplus-ch.com/robots.txt
 `;
 
-  return new NextResponse(content, {
+export async function GET() {
+  return new NextResponse(llmsContent, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
     },
   });
 }

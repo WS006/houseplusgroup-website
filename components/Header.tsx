@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface NavItem {
   label: string;
@@ -78,7 +79,7 @@ export default function Header({ lang }: { lang: string }) {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             <div className={`flex gap-6 xl:gap-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
               {navItems.map((item) => (
                 <Link
@@ -90,6 +91,9 @@ export default function Header({ lang }: { lang: string }) {
                 </Link>
               ))}
             </div>
+            
+            {/* Language Switcher - Desktop */}
+            <LanguageSwitcher currentLang={lang} />
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,6 +120,11 @@ export default function Header({ lang }: { lang: string }) {
                 {item.label}
               </Link>
             ))}
+            
+            {/* Language Switcher - Mobile */}
+            <div className="px-4 py-3">
+              <LanguageSwitcher currentLang={lang} />
+            </div>
           </div>
         )}
       </nav>
