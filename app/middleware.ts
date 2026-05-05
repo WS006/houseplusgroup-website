@@ -2,19 +2,20 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const defaultLocale = 'en';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const firstSegment = pathname.split('/')[1];
 
-  // 根路径直接放行（由 app/page.tsx 处理重定向）
+  // Root path: issue real 302 redirect to /en
   if (pathname === '/') {
-    const response = NextResponse.next();
-    addSecurityHeaders(response);
-    return response;
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLocale}`;
+    return NextResponse.redirect(url, 302);
   }
 
-  // 如果第一段存在且不是有效语言代码，返回 404
+  // If first segment exists but is not a valid language code, rewrite to 404
   if (firstSegment && !validLangs.includes(firstSegment)) {
     const url = request.nextUrl.clone();
     url.pathname = '/en/404';
@@ -28,9 +29,6 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-/**
- * 添加安全响应头
- */
 function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'SAMEORIGIN');
@@ -39,3 +37,4 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   return response;
 }
+
