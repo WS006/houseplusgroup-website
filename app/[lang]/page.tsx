@@ -49,7 +49,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     {
       _uid: '1',
       image: {
-        filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1920&q=80',
+        filename: '/images/home/solar-hero.jpg',
         alt: 'HousePlus Solar Energy Solutions'
       },
       title: 'High-Efficiency Solar Solutions',
@@ -60,7 +60,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     {
       _uid: '2',
       image: {
-        filename: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80',
+        filename: '/images/home/appliances-hero.jpg',
         alt: 'HousePlus Home Appliances'
       },
       title: 'Smart Home Appliances',
@@ -71,7 +71,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     {
       _uid: '3',
       image: {
-        filename: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=1920&q=80',
+        filename: '/images/home/electronics-hero.jpg',
         alt: 'HousePlus 3C Electronics'
       },
       title: '3C Electronics & Accessories',
@@ -136,7 +136,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           <IndustrySection
             title="High-Efficiency Solar Energy Systems"
             description="We manufacture a wide range of solar products - from 100W monocrystalline panels to 3000W portable power stations. All products are CE, RoHS and IEC certified, ready for European, Middle Eastern and African markets."
-            image={{ filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&q=80', alt: 'Solar Energy Systems' }}
+            image={{ filename: '/images/home/solar-hero.jpg', alt: 'Solar Energy Systems' }}
             industry_type="solar"
             button_link={`/${lang}/products`}
             button_text="Explore Solar Products"
@@ -144,7 +144,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           <IndustrySection
             title="Energy-Efficient Home Appliances"
             description="From air fryers to electric kettles - our home appliance line is engineered for energy efficiency and durability. With in-house tooling and R&D team, we deliver OEM/ODM solutions that meet CE, FCC and RoHS standards."
-            image={{ filename: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', alt: 'Home Appliances' }}
+            image={{ filename: '/images/home/appliances-hero.jpg', alt: 'Home Appliances' }}
             industry_type="appliances"
             button_link={`/${lang}/products`}
             button_text="View Home Appliances"
@@ -152,7 +152,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           <IndustrySection
             title="3C Electronics & Accessories"
             description="From TWS earphones to portable SSDs - we supply a curated portfolio of 3C electronics. Each product undergoes rigorous quality control and supports private-label branding with custom packaging."
-            image={{ filename: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=800&q=80', alt: '3C Electronics' }}
+            image={{ filename: '/images/home/electronics-hero.jpg', alt: '3C Electronics' }}
             industry_type="electronics"
             button_link={`/${lang}/products`}
             button_text="View 3C Electronics"

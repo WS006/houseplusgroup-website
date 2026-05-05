@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import RegionSwitcher from './RegionSwitcher';
 
 interface NavItem {
   label: string;
@@ -91,6 +92,9 @@ export default function Header({ lang }: { lang: string }) {
                 </Link>
               ))}
             </div>
+            
+            {/* Region Switcher - Desktop */}
+            <RegionSwitcher lang={lang} />
             
             {/* Language Switcher - Desktop */}
             <LanguageSwitcher currentLang={lang} />

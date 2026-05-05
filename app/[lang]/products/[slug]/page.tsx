@@ -2,8 +2,13 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PRODUCT_DATA, CATEGORY_CONFIG } from '@/lib/product-data';
+import SEOHead from '@/components/SEOHead';
+import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
+
+const BASE_URL = 'https://www.houseplus-ch.com';
+const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
 export async function generateMetadata({
   params,
@@ -13,10 +18,28 @@ export async function generateMetadata({
   const { lang, slug } = await params;
   const product = PRODUCT_DATA[slug];
   const name = product?.name || slug;
+
+  const langAlternates: Record<string, string> = {};
+  for (const locale of LOCALES) {
+    langAlternates[locale] = `${BASE_URL}/${locale}/products/${slug}`;
+  }
+  langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}`;
+
   return {
     title: `${name} | HousePlus Products — Professional Wholesale`,
     description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs. Professional manufacturer since 2010.`,
-    alternates: { canonical: `/${lang}/products/${slug}` },
+    alternates: {
+      canonical: `${BASE_URL}/${lang}/products/${slug}`,
+      languages: langAlternates,
+    },
+    openGraph: {
+      title: `${name} | HousePlus`,
+      description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs.`,
+      url: `${BASE_URL}/${lang}/products/${slug}`,
+      siteName: 'HousePlus',
+      images: product?.coverImage ? [{ url: product.coverImage, width: 900, height: 675, alt: name }] : [],
+      type: 'website',
+    },
   };
 }
 
@@ -46,9 +69,34 @@ export default async function ProductDetailPage({
   }
 
   const catConfig = CATEGORY_CONFIG[product.category];
+  const productUrl = `${BASE_URL}/${lang}/products/${slug}`;
+  const modelSpec = product.specs.find((s) => s.key === 'Model');
+  const sku = modelSpec?.value || slug.toUpperCase();
+
+  // Generate structured data schemas
+  const productSchema = generateProductSchema({
+    name: product.name,
+    description: product.description,
+    image: product.coverImage,
+    sku,
+    url: productUrl,
+    availability: 'InStock',
+    category: product.category === 'solar'
+      ? 'Solar Energy Systems'
+      : product.category === 'appliances'
+      ? 'Home Appliances'
+      : '3C Electronics',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `${BASE_URL}/${lang}` },
+    { name: 'Products', url: `${BASE_URL}/${lang}/products` },
+    { name: product.name, url: productUrl },
+  ]);
 
   return (
     <main className="min-h-screen bg-white">
+      <SEOHead schemas={[productSchema, breadcrumbSchema]} />
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-100 py-3 px-4">
         <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm text-slate-500">

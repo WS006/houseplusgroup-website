@@ -1,15 +1,30 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import SEOHead from '@/components/SEOHead';
+import { generateItemListSchema } from '@/lib/schema-generator';
+
+const BASE_URL = 'https://www.houseplus-ch.com';
+const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const langAlternates: Record<string, string> = {};
+  for (const locale of LOCALES) {
+    langAlternates[locale] = `${BASE_URL}/${locale}/products`;
+  }
+  langAlternates['x-default'] = `${BASE_URL}/en/products`;
+
   return {
     title: 'Products | HousePlus — Solar Systems, Home Appliances & 3C Electronics',
     description: 'Browse HousePlus full product catalogue: solar panels, inverters, power banks, air fryers, kettles, headphones, smart watches and more. OEM/ODM available from MOQ 100 pcs.',
-    alternates: { canonical: `/${lang}/products` },
+    alternates: {
+      canonical: `${BASE_URL}/${lang}/products`,
+      languages: langAlternates,
+    },
   };
 }
 
@@ -221,8 +236,23 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
     { ...productCategories[2], items: electronicsProducts },
   ];
 
+  // Generate ItemList structured data
+  const itemListSchema = generateItemListSchema(
+    'HousePlus Complete Product Catalogue',
+    'Solar systems, home appliances and 3C electronics for global wholesale buyers.',
+    `${BASE_URL}/${lang}/products`,
+    products.map((p, i) => ({
+      position: i + 1,
+      name: p.name,
+      url: `${BASE_URL}/${lang}/products/${p.slug}`,
+      image: p.coverImage,
+      description: p.description,
+    }))
+  );
+
   return (
     <main className="min-h-screen bg-white">
+      <SEOHead schemas={[itemListSchema]} />
       {/* Page Header */}
       <div className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">

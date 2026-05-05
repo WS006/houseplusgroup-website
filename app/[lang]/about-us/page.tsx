@@ -97,7 +97,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1565034946487-077786996e27?w=800&q=80"
+                  src="/images/about/manufacturing-facility.jpg"
                   alt="HousePlus manufacturing facility"
                   fill
                   className="object-cover"
@@ -215,7 +215,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                  src="/images/about/production-line.jpg"
                   alt="HousePlus production line"
                   fill
                   className="object-cover"

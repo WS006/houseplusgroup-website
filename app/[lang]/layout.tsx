@@ -88,6 +88,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         'max-snippet': -1,
       },
     },
+    other: {
+      'geo.region': 'CN-GD',
+      'geo.placename': 'Foshan',
+      'geo.position': '23.1291;113.2644',
+      'ICBM': '23.1291, 113.2644',
+    },
   };
 }
 
