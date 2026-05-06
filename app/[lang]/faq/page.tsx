@@ -36,7 +36,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'HousePlus General Information',
         items: [
           { q: 'What is HousePlus?', a: 'HousePlus is a professional manufacturer specializing in HousePlus solar systems, HousePlus home appliances, and HousePlus 3C electronics for global wholesale buyers.' },
-          { q: 'How long has HousePlus been in business?', a: 'HousePlus was founded in 2010 and has over 10 years of HousePlus manufacturing and international trade experience.' },
+          { q: 'How long has HousePlus been in business?', a: 'HousePlus was founded in 2010 and has over 14 years of manufacturing and international trade experience.' },
           { q: 'Where is HousePlus located?', a: 'HousePlus is based in China with state-of-the-art HousePlus manufacturing facilities and a global HousePlus distribution network.' },
         ]
       },

@@ -30,6 +30,8 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'HousePlus Team', href: '/team' },
       { label: 'HousePlus Support', href: '/support' },
       { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'Cookie Policy', href: '/cookie-policy' },
     ],
     contact: [
       { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
@@ -115,6 +117,7 @@ export default function Footer({ lang }: { lang: string }) {
             <Link href={`/${lang}/sitemap-page`} className="text-xs text-slate-500 hover:text-white">Sitemap</Link>
             <Link href={`/${lang}/privacy`} className="text-xs text-slate-500 hover:text-white">Privacy</Link>
             <Link href={`/${lang}/terms`} className="text-xs text-slate-500 hover:text-white">Terms</Link>
+            <Link href={`/${lang}/cookie-policy`} className="text-xs text-slate-500 hover:text-white">Cookies</Link>
           </div>
         </div>
       </div>

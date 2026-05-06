@@ -17,7 +17,8 @@ const lastModDates: Record<string, string> = {
   'careers': '2026-03-15', // Careers - last update
   'support': '2026-04-20', // Support - last update
   'privacy': '2026-01-01', // Privacy - last major update
-  'terms': '2026-01-01', // Terms - last major update
+  'terms': '2026-05-06', // Terms of Service - created
+  'cookie-policy': '2026-05-06', // Cookie Policy - created
   'sitemap-page': '2026-05-04', // Sitemap - created date
 };
 
@@ -36,6 +37,7 @@ const staticPages = [
   { slug: 'support', priority: 0.6, changefreq: 'monthly' as const },
   { slug: 'privacy', priority: 0.3, changefreq: 'yearly' as const },
   { slug: 'terms', priority: 0.3, changefreq: 'yearly' as const },
+  { slug: 'cookie-policy', priority: 0.3, changefreq: 'yearly' as const },
   { slug: 'sitemap-page', priority: 0.3, changefreq: 'monthly' as const },
 ];
 

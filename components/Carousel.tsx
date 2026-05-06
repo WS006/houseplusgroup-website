@@ -22,9 +22,10 @@ interface CarouselItem {
 interface CarouselProps {
   items: CarouselItem[];
   autoPlayInterval?: number;
+  lang?: string;
 }
 
-export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselProps) {
+export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -37,7 +38,7 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
       title: 'High-Efficiency Solar Solutions',
       subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
       button_text: 'Explore Solar Products',
-      button_link: { url: '/en/products', cached_url: '/en/products' }
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
     },
     {
       _uid: 'default-2',
@@ -45,7 +46,7 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
       title: 'Smart Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
       button_text: 'View Appliances',
-      button_link: { url: '/en/products', cached_url: '/en/products' }
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
     },
     {
       _uid: 'default-3',
@@ -53,7 +54,7 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
       title: '3C Electronics & Accessories',
       subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
       button_text: 'View Electronics',
-      button_link: { url: '/en/products', cached_url: '/en/products' }
+      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
     }
   ];
 
@@ -131,7 +132,7 @@ export default function Carousel({ items, autoPlayInterval = 5000 }: CarouselPro
                     {item.button_text}
                   </Link>
                   <Link
-                    href="/en/contact"
+                    href={`/${lang}/contact`}
                     className="px-8 py-4 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white border border-white/40 font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
                     Get a Quote

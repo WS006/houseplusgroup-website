@@ -96,7 +96,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
       <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
         <section className="w-full">
-          <Carousel items={displayCarouselItems} autoPlayInterval={5000} />
+          <Carousel items={displayCarouselItems} autoPlayInterval={5000} lang={lang} />
         </section>
 
         <section className="py-20 px-4 text-center bg-gradient-to-b from-blue-50 to-white">
