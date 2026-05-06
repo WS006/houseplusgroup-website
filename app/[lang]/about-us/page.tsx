@@ -95,15 +95,19 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                   The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 500+ wholesale clients worldwide.
                 </p>
               </div>
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+              <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="/images/about/manufacturing-facility.jpg"
-                  alt="HousePlus manufacturing facility"
+                  src="/images/about/houseplus-group-factory.jpg"
+                  alt="HousePlus Group Factory - Manufacturing solar energy systems, home appliances and 3C electronics in Guangdong, China since 2010"
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-              </div>
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
+                  HousePlus Group Factory — Guangdong, China
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -213,14 +217,19 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                   ))}
                 </div>
               </div>
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+              <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
                   src="/images/about/production-line.jpg"
-                  alt="HousePlus production line"
+                  alt="HousePlus production line - Automated manufacturing for solar products, home appliances and 3C electronics with ISO 9001 quality control"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                 />
-              </div>
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
+                  Automated Production Lines — Monthly capacity 100,000+ units
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
