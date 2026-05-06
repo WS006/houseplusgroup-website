@@ -126,7 +126,10 @@ export default function Header({ lang }: { lang: string }) {
             ))}
             
             {/* Language Switcher - Mobile */}
-            <div className="px-4 py-3">
+            <div className="px-4 py-3 border-t border-slate-100">
+              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                Language
+              </div>
               <LanguageSwitcher currentLang={lang} />
             </div>
           </div>
