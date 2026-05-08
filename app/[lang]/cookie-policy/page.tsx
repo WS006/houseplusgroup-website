@@ -14,9 +14,17 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     ar: 'سياسة ملفات تعريف الارتباط - HousePlus',
   };
 
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus Cookie Policy — Learn how we use cookies and tracking technologies on houseplus-ch.com to improve your browsing experience.',
+    es: 'Política de cookies de HousePlus — Cómo utilizamos cookies y tecnologías de seguimiento en houseplus-ch.com para mejorar su experiencia.',
+    de: 'HousePlus Cookie-Richtlinie — Erfahren Sie, wie wir Cookies und Tracking-Technologien auf houseplus-ch.com einsetzen.',
+    fr: 'Politique de cookies HousePlus — Comment nous utilisons les cookies et technologies de suivi sur houseplus-ch.com.',
+    ar: 'سياسة ملفات تعريف الارتباط لـ HousePlus — تعرّف على كيفية استخدامنا للكوكيز وتقنيات التتبع على houseplus-ch.com.',
+  };
+
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
-    description: 'HousePlus Cookie Policy — Learn how we use cookies and tracking technologies on houseplus-ch.com to improve your browsing experience.',
+    description: descriptions[lang] || descriptions.en,
     keywords: ['cookie policy', 'cookies', 'tracking', 'GDPR cookies', 'HousePlus cookies'],
     url: `/${lang}/cookie-policy`,
     lang: lang as any,
