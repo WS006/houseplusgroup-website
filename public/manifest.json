@@ -1,0 +1,16 @@
+{
+  "name": "HousePlus - Global Trade Solutions",
+  "short_name": "HousePlus",
+  "description": "HousePlus is your trusted global trade partner for home appliances, solar energy systems, and consumer electronics.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a56db",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

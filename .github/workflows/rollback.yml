@@ -1,0 +1,28 @@
+name: Emergency Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_sha:
+        description: 'Target commit SHA to rollback to'
+        required: true
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Revert to target commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git revert --no-commit ${{ github.event.inputs.target_sha }}..HEAD || true
+          git commit -m "Rollback to ${{ github.event.inputs.target_sha }}" || echo "Nothing to revert"
+
+      - name: Push rollback
+        run: git push origin main

@@ -9,9 +9,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Services — OEM/ODM, Private Label & Technical Support',
+    es: 'Servicios HousePlus — OEM/ODM, Marca Propia y Soporte Técnico',
+    de: 'HousePlus Leistungen — OEM/ODM, Eigenmarken & Technischer Support',
+    fr: 'Services HousePlus — OEM/ODM, Marque Privée & Support Technique',
+    ar: 'خدمات HousePlus — تصنيع OEM/ODM والعلامة الخاصة والدعم التقني',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus offers comprehensive OEM/ODM manufacturing, private-label branding, custom packaging and dedicated after-sales technical support for global wholesale buyers.',
+    es: 'HousePlus ofrece fabricación OEM/ODM completa, marca propia, embalaje personalizado y soporte técnico postventa para compradores mayoristas globales.',
+    de: 'HousePlus bietet umfassende OEM/ODM-Fertigung, Eigenmarkenetikettierung, individuelle Verpackung und dedizierten After-Sales-Service für globale Großhändler.',
+    fr: "HousePlus propose la fabrication OEM/ODM complète, l'étiquetage marque privée, l'emballage personnalisé et un support technique après-vente dédié aux acheteurs mondiaux.",
+    ar: 'تقدم HousePlus تصنيع OEM/ODM شاملاً، ووضع العلامة الخاصة، والتغليف المخصص، ودعماً تقنياً مخصصاً بعد البيع لمشتري الجملة العالميين.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Services — OEM/ODM, Private Label & Technical Support',
-    description: 'HousePlus offers comprehensive OEM/ODM manufacturing, private-label branding, custom packaging and dedicated after-sales technical support for global wholesale buyers.',
+    title: titles[lang] || titles.en,
+    description: descriptions[lang] || descriptions.en,
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'technical support', 'wholesale services', 'HousePlus'],
     url: `/${lang}/service`,
     lang: lang as any,

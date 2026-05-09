@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Discover how HousePlus is redefining modern living with smart, energy-efficient home appliances. Explore our range of innovative products designed for global wholesale markets.',
-    es: 'Descubra cómo HousePlus está redefiniendo la vida moderna con electrodomésticos inteligentes y energéticamente eficientes. Explore nuestra gama de productos innovadores diseñados para mercados mayoristas globales.',
-    de: 'Entdecken Sie, wie HousePlus das moderne Leben mit intelligenten, energieeffizienten Haushaltsgeräten neu definiert. Entdecken Sie unser Sortiment an innovativen Produkten, die für globale Großhandelsmärkte entwickelt wurden.',
-    fr: 'Découvrez comment HousePlus redéfinit la vie moderne avec des appareils électroménagers intelligents et économes en énergie. Explorez notre gamme de produits innovants conçus pour les marchés de gros mondiaux.',
-    ar: 'اكتشف كيف تعيد HousePlus تعريف الحياة العصرية بأجهزة منزلية ذكية وموفرة للطاقة. استكشف مجموعتنا من المنتجات المبتكرة المصممة لأسواق الجملة العالمية.',
+    en: 'A buyer\'s guide to smart home appliances: HousePlus air fryers, induction cooktops, electric kettles, and LED lighting. Compare energy ratings, CE/RoHS compliance, and OEM options with MOQ from 100 pcs.',
+    es: 'Guía de compra de electrodomésticos inteligentes: freidoras de aire, cocinas de inducción y LED de HousePlus. Comparación de eficiencia energética, cumplimiento CE/RoHS y opciones OEM desde 100 uds.',
+    de: 'Einkaufsführer für smarte Haushaltsgeräte: HousePlus Heißluftfritteusen, Induktionsherde, Wasserkocher und LED. Energieklassen, CE/RoHS-Konformität und OEM-Optionen ab 100 Stk.',
+    fr: 'Guide d\'achat pour les appareils intelligents : friteuses à air, plaques à induction et LED HousePlus. Comparatif efficacité énergétique, conformité CE/RoHS et options OEM dès 100 pcs.',
+    ar: 'دليل المشتري للأجهزة المنزلية الذكية من HousePlus: مقلاة هوائية، موقد حثي، غلاية كهربائية وإضاءة LED. مقارنة كفاءة الطاقة وشهادات CE/RoHS وخيارات OEM بدءاً من 100 قطعة.',
   };
 
   return generateSEOMetadata({
