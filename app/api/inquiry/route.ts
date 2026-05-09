@@ -1,10 +1,5 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'info@houseplus-ch.com';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://houseplus-ch.com';
 
 // 速率限制（简单内存存储，生产环境建议使用 Redis）
 const rateLimit = new Map<string, { count: number; resetTime: number }>();
@@ -75,61 +70,8 @@ export async function POST(request: NextRequest) {
     // 例如：发送邮件、保存到数据库、发送到 Slack 等
     console.log('Inquiry received:', sanitizedData);
 
-    // Send email notification to admin via Resend
-    try {
-      await resend.emails.send({
-        from: 'HousePlus Website <noreply@houseplus-ch.com>',
-        to: [ADMIN_EMAIL],
-        subject: `[New Inquiry] from ${sanitizedData.name}${sanitizedData.company ? ` (${sanitizedData.company})` : ''}`,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <div style="background: #1a56db; color: white; padding: 20px; border-radius: 8px 8px 0 0;">
-              <h2 style="margin: 0;">New Inquiry Received</h2>
-            </div>
-            <div style="border: 1px solid #e5e7eb; padding: 20px; border-radius: 0 0 8px 8px;">
-              <table style="width: 100%; border-collapse: collapse;">
-                <tr><td style="padding: 8px 0; font-weight: bold; width: 120px;">Name:</td><td>${sanitizedData.name}</td></tr>
-                <tr><td style="padding: 8px 0; font-weight: bold;">Email:</td><td><a href="mailto:${sanitizedData.email}">${sanitizedData.email}</a></td></tr>
-                ${sanitizedData.company ? `<tr><td style="padding: 8px 0; font-weight: bold;">Company:</td><td>${sanitizedData.company}</td></tr>` : ''}
-                ${sanitizedData.phone ? `<tr><td style="padding: 8px 0; font-weight: bold;">Phone:</td><td>${sanitizedData.phone}</td></tr>` : ''}
-                <tr><td style="padding: 8px 0; font-weight: bold; vertical-align: top;">Message:</td><td style="white-space: pre-wrap;">${sanitizedData.message}</td></tr>
-              </table>
-              <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px;">
-                Received at ${new Date().toISOString()} | IP: ${clientIP}
-              </div>
-            </div>
-          </div>
-        `,
-      });
-
-      // Auto-reply to customer
-      await resend.emails.send({
-        from: 'HousePlus <noreply@houseplus-ch.com>',
-        to: [sanitizedData.email],
-        subject: 'Thank you for your inquiry - HousePlus',
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <div style="background: #1a56db; color: white; padding: 20px; border-radius: 8px 8px 0 0;">
-              <h2 style="margin: 0;">HousePlus</h2>
-              <p style="margin: 4px 0 0; opacity: 0.9;">Your Trusted Global Trade Partner</p>
-            </div>
-            <div style="border: 1px solid #e5e7eb; padding: 20px; border-radius: 0 0 8px 8px;">
-              <p>Dear ${sanitizedData.name},</p>
-              <p>Thank you for reaching out to HousePlus. We have received your inquiry and our team will review it within <strong>24 hours</strong>.</p>
-              <p>In the meantime, feel free to explore our product catalog at <a href="${SITE_URL}/en/products">${SITE_URL}/en/products</a>.</p>
-              <p>Best regards,<br><strong>HousePlus Team</strong></p>
-              <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px;">
-                Email: info@houseplus-ch.com<br>
-                Website: <a href="${SITE_URL}">${SITE_URL}</a>
-              </div>
-            </div>
-          </div>
-        `,
-      });
-    } catch (emailError) {
-      console.error('Failed to send email via Resend:', emailError);
-      // Still return success to user — email failure shouldn't block inquiry
-    }
+    // 模拟异步操作
+    await new Promise(resolve => setTimeout(resolve, 500));
 
     return NextResponse.json(
       { success: true, message: 'Inquiry submitted successfully.' },

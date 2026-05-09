@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Solar energy trends shaping 2026–2030: perovskite cells, bifacial panels, and grid-tie systems. HousePlus covers what wholesale buyers in Africa, Southeast Asia, and Europe need to know when sourcing solar products.',
-    es: 'Tendencias solares 2026–2030: células de perovskita, paneles bifaciales y sistemas conectados a la red. Lo que los compradores mayoristas en África, Sudeste Asiático y Europa deben saber al adquirir productos solares.',
-    de: 'Solarenergie-Trends 2026–2030: Perowskit-Zellen, bifaziale Paneele und Netzverbundsysteme. Was Großhändler in Afrika, Südostasien und Europa beim Einkauf von Solarprodukten wissen müssen.',
-    fr: 'Tendances solaires 2026–2030 : cellules pérovskite, panneaux bifaces et systèmes connectés au réseau. Ce que les acheteurs en gros en Afrique, Asie du Sud-Est et Europe doivent savoir pour s\'approvisionner.',
-    ar: 'اتجاهات الطاقة الشمسية 2026-2030: خلايا البيروفسكيت والألواح ثنائية الوجه وأنظمة الربط بالشبكة. ما يحتاج مشتري الجملة في أفريقيا وجنوب شرق آسيا وأوروبا معرفته عند التوريد.',
+    en: 'Explore the latest innovations in solar energy technology and how HousePlus is leading the way with high-efficiency solar panels, portable power stations, and sustainable solutions for global wholesale markets.',
+    es: 'Explore las últimas innovaciones en tecnología de energía solar y cómo HousePlus lidera el camino con paneles solares de alta eficiencia, estaciones de energía portátiles y soluciones sostenibles para mercados mayoristas globales.',
+    de: 'Entdecken Sie die neuesten Innovationen in der Solarenergietechnologie und wie HousePlus mit hocheffizienten Solarmodulen, tragbaren Kraftwerken und nachhaltigen Lösungen für globale Großhandelsmärkte führend ist.',
+    fr: 'Découvrez les dernières innovations en matière de technologie de l\'énergie solaire et comment HousePlus ouvre la voie avec des panneaux solaires à haut rendement, des centrales électriques portables et des solutions durables pour les marchés de gros mondiaux.',
+    ar: 'استكشف أحدث الابتكارات في تكنولوجيا الطاقة الشمسية وكيف تقود HousePlus الطريق بألواح شمسية عالية الكفاءة ومحطات طاقة محمولة وحلول مستدامة لأسواق الجملة العالمية.',
   };
 
   return generateSEOMetadata({

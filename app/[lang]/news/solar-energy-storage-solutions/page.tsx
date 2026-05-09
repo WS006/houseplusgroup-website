@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'LiFePO4 vs lead-acid battery storage for off-grid and hybrid solar systems: capacity, cycle life, and cost comparison. HousePlus wholesale guide for importers sourcing 5kWh–20kWh storage solutions with MOQ 50 units.',
-    es: 'LiFePO4 vs baterías plomo-ácido para sistemas solares: capacidad, ciclos de vida y comparativa de costes. Guía mayorista de HousePlus para importadores de almacenamiento 5kWh–20kWh, MOQ 50 uds.',
-    de: 'LiFePO4 vs. Blei-Säure-Speicher für Netzinsel- und Hybridsysteme: Kapazität, Zyklenlebensdauer und Kostenvergleich. HousePlus-Großhandelsführer für Importeure ab 50 Einheiten, 5–20 kWh.',
-    fr: 'LiFePO4 vs batterie plomb-acide pour systèmes solaires hors réseau : capacité, durée de cycle et coûts. Guide HousePlus pour importateurs de stockage 5kWh–20kWh, MOQ 50 pcs.',
-    ar: 'مقارنة بطاريات LiFePO4 مقابل الرصاص الحمضي لأنظمة الطاقة الشمسية المنفصلة: السعة ودورات الحياة والتكلفة. دليل HousePlus للمستوردين لحلول التخزين 5-20 كيلوواط، الحد الأدنى 50 وحدة.',
+    en: 'Explore HousePlus\'s advanced solar energy storage solutions, including battery systems and portable power stations, designed for efficiency and reliability in global wholesale markets.',
+    es: 'Explore las soluciones avanzadas de almacenamiento de energía solar de HousePlus, incluidos los sistemas de baterías y las estaciones de energía portátiles, diseñadas para la eficiencia y la fiabilidad en los mercados mayoristas globales.',
+    de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragbaren Kraftwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
+    fr: 'Découvrez les solutions avancées de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',
+    ar: 'استكشف حلول HousePlus المتقدمة لتخزين الطاقة الشمسية، بما في ذلك أنظمة البطاريات ومحطات الطاقة المحمولة، المصممة للكفاءة والموثوقية في أسواق الجملة العالمية.',
   };
 
   return generateSEOMetadata({
