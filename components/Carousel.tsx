@@ -25,6 +25,30 @@ interface CarouselProps {
   lang?: string;
 }
 
+/**
+ * Resolve button link from various Storyblok / default formats.
+ * Storyblok link objects may have: url, cached_url, linktype, story
+ * Default items have: { url, cached_url } (both are relative paths like /en/products)
+ * Fallback: if url starts with story/ or is missing, route to /{lang}/products
+ */
+function resolveLink(link: any, lang: string): string {
+  if (!link) return `/${lang}/products`;
+
+  // Prefer cached_url (Storyblok resolved), then url
+  const raw = link.cached_url || link.url || '';
+
+  if (!raw) return `/${lang}/products`;
+
+  // If the link is already a proper /{lang}/products path, use it directly
+  if (raw.startsWith(`/${lang}/`)) return raw;
+
+  // If link starts with '/' but missing lang prefix, prepend it
+  if (raw.startsWith('/')) return `/${lang}${raw}`;
+
+  // Storyblok sometimes returns just a story slug like "products" without /
+  return `/${lang}/${raw}`;
+}
+
 export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -126,7 +150,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
               {item.button_text && (
                 <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-400 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Link
-                    href={item.button_link?.cached_url || item.button_link?.url || '#'}
+                    href={resolveLink(item.button_link, lang)}
                     className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
                     {item.button_text}
