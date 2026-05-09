@@ -17,7 +17,6 @@ export const metadata: Metadata = {
       { url: '/apple-icon.png' },
     ],
   },
-  manifest: '/manifest.json',
 };
 
 storyblokInit({

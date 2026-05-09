@@ -9,26 +9,9 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-
-  const titles: Record<string, string> = {
-    en: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
-    es: 'Fábrica HousePlus — Instalación de 20.000 m² en Guangdong',
-    de: 'HousePlus Werk — 20.000 m² Produktionsstätte in Guangdong',
-    fr: 'Usine HousePlus — Installation de 20 000 m² à Guangdong',
-    ar: 'مصنع HousePlus — منشأة إنتاج 20,000 م² في غوانغدونغ',
-  };
-
-  const descriptions: Record<string, string> = {
-    en: 'Tour the HousePlus manufacturing facility: dedicated production lines for solar, home appliances and 3C electronics, in-house quality lab, and monthly capacity of 100,000+ units.',
-    es: 'Visita la planta de HousePlus: líneas de producción solar, electrodomésticos y 3C, laboratorio de calidad propio y capacidad mensual de +100,000 unidades.',
-    de: 'Besichtigen Sie das HousePlus-Werk: Produktionslinien für Solar, Haushaltsgeräte und 3C-Elektronik, eigenes Qualitätslabor und monatliche Kapazität von 100.000+ Einheiten.',
-    fr: "Visitez l'usine HousePlus : lignes de production solaire, électroménager et 3C, laboratoire qualité intégré et capacité mensuelle de 100 000+ unités.",
-    ar: 'جولة في مصنع HousePlus: خطوط إنتاج الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C، مختبر جودة داخلي، طاقة إنتاجية شهرية +100,000 وحدة.',
-  };
-
   return generateSEOMetadata({
-    title: titles[lang] || titles.en,
-    description: descriptions[lang] || descriptions.en,
+    title: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
+    description: 'Tour the HousePlus manufacturing facility: dedicated production lines for solar, home appliances and 3C electronics, in-house quality lab, and monthly capacity of 100,000+ units.',
     keywords: ['factory', 'manufacturing', 'production line', 'quality control', 'OEM ODM', 'Guangdong', 'HousePlus'],
     url: `/${lang}/factory`,
     lang: lang as any,

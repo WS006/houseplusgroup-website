@@ -5,42 +5,27 @@ const locales = ['en', 'es', 'de', 'fr', 'ar'];
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
-  '': '2026-05-01',
-  'about-us': '2026-04-15',
-  'products': '2026-05-01',
-  'news': '2026-05-08',
-  'factory': '2026-03-20',
-  'service': '2026-04-10',
-  'faq': '2026-04-25',
-  'contact': '2026-04-10',
-  'team': '2026-03-15',
-  'careers': '2026-03-15',
-  'support': '2026-04-20',
-  'regions': '2026-05-08',
-  'privacy': '2026-01-01',
-  'terms': '2026-05-06',
-  'cookie-policy': '2026-05-06',
-  'sitemap-page': '2026-05-04',
-  // News articles
-  'news/advanced-manufacturing-home-appliances': '2026-05-01',
-  'news/oem-odm-manufacturing-guide': '2026-05-01',
-  'news/energy-efficiency-standards-appliances': '2026-05-01',
-  'news/global-wholesale-guide-home-appliances': '2026-05-01',
-  'news/smart-home-appliances': '2026-05-01',
-  'news/solar-energy-storage-solutions': '2026-05-01',
-  'news/the-evolution-of-3c-electronics': '2026-05-01',
-  'news/the-future-of-smart-home-appliances': '2026-05-01',
-  'news/the-future-of-solar-energy': '2026-05-01',
-  // Region pages
-  'regions/africa': '2026-05-08',
-  'regions/southeast_asia': '2026-05-08',
-  'regions/europe': '2026-05-08',
+  '': '2026-05-01', // Homepage - last content review date
+  'about': '2026-04-15', // About page - last major update
+  'products': '2026-05-01', // Products list - content review date
+  'news': '2026-05-04', // News - recent update
+  'factory': '2026-03-20', // Factory - last major update
+  'service': '2026-04-10', // Service - last update
+  'faq': '2026-04-25', // FAQ - last update
+  'contact': '2026-04-10', // Contact - last update
+  'team': '2026-03-15', // Team - last update
+  'careers': '2026-03-15', // Careers - last update
+  'support': '2026-04-20', // Support - last update
+  'privacy': '2026-01-01', // Privacy - last major update
+  'terms': '2026-05-06', // Terms of Service - created
+  'cookie-policy': '2026-05-06', // Cookie Policy - created
+  'sitemap-page': '2026-05-04', // Sitemap - created date
 };
 
 // All static page slugs (relative to lang prefix)
 const staticPages = [
   { slug: '', priority: 1.0, changefreq: 'daily' as const },
-  { slug: 'about-us', priority: 0.9, changefreq: 'monthly' as const },
+  { slug: 'about', priority: 0.9, changefreq: 'monthly' as const },
   { slug: 'products', priority: 0.9, changefreq: 'daily' as const },
   { slug: 'news', priority: 0.8, changefreq: 'weekly' as const },
   { slug: 'factory', priority: 0.7, changefreq: 'monthly' as const },
@@ -50,28 +35,11 @@ const staticPages = [
   { slug: 'team', priority: 0.5, changefreq: 'monthly' as const },
   { slug: 'careers', priority: 0.5, changefreq: 'monthly' as const },
   { slug: 'support', priority: 0.6, changefreq: 'monthly' as const },
-  { slug: 'regions', priority: 0.7, changefreq: 'monthly' as const },
   { slug: 'privacy', priority: 0.3, changefreq: 'yearly' as const },
   { slug: 'terms', priority: 0.3, changefreq: 'yearly' as const },
   { slug: 'cookie-policy', priority: 0.3, changefreq: 'yearly' as const },
   { slug: 'sitemap-page', priority: 0.3, changefreq: 'monthly' as const },
 ];
-
-// Published news article slugs
-const newsSlugs = [
-  'advanced-manufacturing-home-appliances',
-  'oem-odm-manufacturing-guide',
-  'energy-efficiency-standards-appliances',
-  'global-wholesale-guide-home-appliances',
-  'smart-home-appliances',
-  'solar-energy-storage-solutions',
-  'the-evolution-of-3c-electronics',
-  'the-future-of-smart-home-appliances',
-  'the-future-of-solar-energy',
-];
-
-// Region pages
-const regionSlugs = ['africa', 'southeast_asia', 'europe'];
 
 // Product slugs from Storyblok (published stories under products/)
 const productSlugs = [
@@ -140,18 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Product detail pages
   for (const productSlug of productSlugs) {
     const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly');
-    allEntries.push(...entries);
-  }
-
-  // News article pages
-  for (const newsSlug of newsSlugs) {
-    const entries = buildUrlEntry(`news/${newsSlug}`, 0.6, 'monthly');
-    allEntries.push(...entries);
-  }
-
-  // Region pages
-  for (const regionSlug of regionSlugs) {
-    const entries = buildUrlEntry(`regions/${regionSlug}`, 0.7, 'monthly');
     allEntries.push(...entries);
   }
 

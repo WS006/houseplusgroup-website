@@ -17,17 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     ar: 'الأسئلة الشائعة HousePlus',
   };
 
-  const descriptions: Record<string, string> = {
-    en: 'Find answers to frequently asked questions about HousePlus products, services, and ordering.',
-    es: 'Encuentre respuestas a las preguntas más frecuentes sobre los productos, servicios y pedidos de HousePlus.',
-    de: 'Antworten auf häufig gestellte Fragen zu HousePlus-Produkten, Dienstleistungen und Bestellungen.',
-    fr: 'Trouvez des réponses aux questions fréquentes sur les produits, services et commandes HousePlus.',
-    ar: 'اعثر على إجابات للأسئلة الشائعة حول منتجات HousePlus وخدماتها والطلبات.',
-  };
-
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
-    description: descriptions[lang] || descriptions.en,
+    description: 'Find answers to frequently asked questions about HousePlus products, services, and ordering.',
     keywords: ['FAQ', 'questions', 'answers', 'help', 'support', 'HousePlus'],
     url: `/${lang}/faq`,
     lang: lang as any,

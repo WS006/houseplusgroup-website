@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'How AI-integrated and IoT-ready home appliances are reshaping the wholesale market by 2026. HousePlus explores connectivity trends, demand in emerging markets, and what importers need to know before placing bulk orders.',
-    es: 'Cómo los electrodomésticos con IA e IoT están transformando el mercado mayorista en 2026. Tendencias de conectividad, demanda en mercados emergentes y lo que los importadores necesitan saber antes de hacer pedidos.',
-    de: 'Wie KI-fähige und IoT-integrierte Haushaltsgeräte den Großhandelsmarkt 2026 verändern. Konnektivitätstrends, Nachfrage in Schwellenmärkten und wichtige Hinweise für Importeure.',
-    fr: 'Comment les appareils ménagers compatibles IA et IoT transforment le marché de gros en 2026. Tendances de connectivité, demande dans les marchés émergents et informations clés pour les importateurs.',
-    ar: 'كيف تعيد الأجهزة المنزلية المدعومة بالذكاء الاصطناعي وإنترنت الأشياء تشكيل سوق الجملة في 2026. اتجاهات الاتصال والطلب في الأسواق الناشئة وما يحتاج المستوردون معرفته قبل الطلبات الكبيرة.',
+    en: 'Discover how HousePlus is shaping the future of smart home appliances with energy-efficient, connected, and intuitive solutions for modern living and global wholesale markets.',
+    es: 'Descubra cómo HousePlus está dando forma al futuro de los electrodomésticos inteligentes con soluciones energéticamente eficientes, conectadas e intuitivas para la vida moderna y los mercados mayoristas globales.',
+    de: 'Entdecken Sie, wie HousePlus die Zukunft smarter Haushaltsgeräte mit energieeffizienten, vernetzten und intuitiven Lösungen für modernes Wohnen und globale Großhandelsmärkte gestaltet.',
+    fr: 'Découvrez comment HousePlus façonne l\'avenir des appareils électroménagers intelligents avec des solutions écoénergétiques, connectées et intuitives pour la vie moderne et les marchés de gros mondiaux.',
+    ar: 'اكتشف كيف تشكل HousePlus مستقبل الأجهزة المنزلية الذكية من خلال حلول موفرة للطاقة ومتصلة وبديهية للحياة العصرية وأسواق الجملة العالمية.',
   };
 
   return generateSEOMetadata({

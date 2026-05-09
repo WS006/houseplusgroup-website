@@ -2,63 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
-import { Metadata } from 'next';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
-
-  const titles: Record<string, string> = {
-    en: 'HousePlus Global Wholesale Markets — Africa, Southeast Asia & Europe',
-    es: 'Mercados Mayoristas Globales de HousePlus — África, Sudeste Asiático y Europa',
-    de: 'HousePlus Globale Großhandelsmärkte — Afrika, Südostasien & Europa',
-    fr: 'Marchés Mondiaux de Gros HousePlus — Afrique, Asie du Sud-Est et Europe',
-    ar: 'أسواق الجملة العالمية لـ HousePlus — أفريقيا وجنوب شرق آسيا وأوروبا',
-  };
-
-  const descriptions: Record<string, string> = {
-    en: 'HousePlus supplies solar systems, home appliances, and 3C electronics to wholesale buyers across Africa (Nigeria, Kenya), Southeast Asia (Vietnam, Indonesia), and Europe (Germany, France). CE certified, MOQ 100 pcs.',
-    es: 'HousePlus suministra sistemas solares, electrodomésticos y electrónica 3C a compradores mayoristas en África, Sudeste Asiático y Europa. Certificado CE, MOQ 100 unidades.',
-    de: 'HousePlus liefert Solarsysteme, Haushaltsgeräte und 3C-Elektronik an Großhändler in Afrika, Südostasien und Europa. CE-zertifiziert, MOQ 100 Stk.',
-    fr: "HousePlus fournit des systèmes solaires, électroménagers et électronique 3C aux grossistes en Afrique, Asie du Sud-Est et Europe. Certifié CE, MOQ 100 pcs.",
-    ar: 'تورد HousePlus أنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات للمشترين بالجملة في أفريقيا وجنوب شرق آسيا وأوروبا. شهادة CE، الحد الأدنى للطلب 100 قطعة.',
-  };
-
-  const title = titles[lang] || titles.en;
-  const description = descriptions[lang] || descriptions.en;
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `https://www.houseplus-ch.com/${lang}/regions`,
-      languages: {
-        en: 'https://www.houseplus-ch.com/en/regions',
-        es: 'https://www.houseplus-ch.com/es/regions',
-        de: 'https://www.houseplus-ch.com/de/regions',
-        fr: 'https://www.houseplus-ch.com/fr/regions',
-        ar: 'https://www.houseplus-ch.com/ar/regions',
-        'x-default': 'https://www.houseplus-ch.com/en/regions',
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `https://www.houseplus-ch.com/${lang}/regions`,
-      siteName: 'HousePlus',
-      type: 'website',
-    },
-  };
-}
-
-export default async function RegionsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function RegionsPage() {
   const breadcrumbs = [
-    { name: 'Home', url: `/${lang}` },
-    { name: 'Regions', url: `/${lang}/regions` },
+    { name: 'Home', url: '/' },
+    { name: 'Regions', url: '/regions' },
   ];
 
   const schemas = [
@@ -120,7 +68,7 @@ export default async function RegionsPage({ params }: { params: Promise<{ lang: 
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Africa */}
-              <Link href={`/${lang}/regions/africa`}>
+              <Link href="/en/regions/africa">
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-orange-200">
                   <h3 className="text-3xl font-bold mb-4 text-orange-600">🌍 Africa</h3>
                   <p className="text-gray-700 mb-6">
@@ -138,7 +86,7 @@ export default async function RegionsPage({ params }: { params: Promise<{ lang: 
               </Link>
 
               {/* Southeast Asia */}
-              <Link href={`/${lang}/regions/southeast_asia`}>
+              <Link href="/en/regions/southeast_asia">
                 <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-green-200">
                   <h3 className="text-3xl font-bold mb-4 text-green-600">🌏 Southeast Asia</h3>
                   <p className="text-gray-700 mb-6">
@@ -156,7 +104,7 @@ export default async function RegionsPage({ params }: { params: Promise<{ lang: 
               </Link>
 
               {/* Europe */}
-              <Link href={`/${lang}/regions/europe`}>
+              <Link href="/en/regions/europe">
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-blue-200">
                   <h3 className="text-3xl font-bold mb-4 text-blue-600">🌎 Europe</h3>
                   <p className="text-gray-700 mb-6">
@@ -212,7 +160,7 @@ export default async function RegionsPage({ params }: { params: Promise<{ lang: 
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href={`/${lang}/contact`}
+                href="/en/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-900"
               >
                 Contact HousePlus Sales
