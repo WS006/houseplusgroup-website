@@ -37,7 +37,7 @@ interface Dictionary {
 
 const dictionaries: Record<Locale, Dictionary> = {
   en: {
-    site: { title: "Solar Systems & Home Appliances Wholesale | HousePlus | Made in China", description: "HousePlus: Professional manufacturer of solar systems, home appliances, and 3C electronics. Global wholesale and OEM/ODM services. Contact us for competitive pricing and custom solutions." },
+    site: { title: "Solar Systems & Home Appliances Wholesale | HousePlus | Made in China", description: "HousePlus: Professional manufacturer of solar systems, home appliances, and 3C electronics. Global wholesale and OEM/ODM services. Contact us for competitive pricing and custom solutions. | Made in China" },
     meta: { homeDescription: "HousePlus is a professional manufacturer of high-quality solar systems, home appliances, and 3C electronics for global wholesale and OEM/ODM. Explore our products and get a quote today.", keywords: "solar systems, home appliances, 3C electronics, wholesale, OEM, ODM" },
     hero: {
       title: "Quality Home Appliances & Solar Solutions",
@@ -105,7 +105,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     hero: {
       title: "Qualitäts-Haushaltsgeräte & Solarlösungen",
       subtitle: "Führender chinesischer Hersteller von Solarwasserpumpen, Solarkabeln, Haushaltsgeräten und tragbaren Stromstationen.",
-      cta: { produkte: "Produkte ansehen", kontakt: "Angebot anfordern" },
+      cta: { products: "Produkte ansehen", contact: "Angebot anfordern" },
     },
     home: {
       categories: {
