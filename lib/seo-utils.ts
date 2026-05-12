@@ -16,7 +16,7 @@ export interface SEOConfig {
   geoPlacename?: string; // e.g., 'Guangzhou', 'New York'
 }
 
-const siteConfig = {
+export const siteConfig = {
   name: 'HousePlus',
   url: 'https://www.houseplus-ch.com',
   // Updated description for better SEO, incorporating core business and inquiry guidance
