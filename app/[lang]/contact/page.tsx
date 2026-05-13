@@ -3,12 +3,11 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { Metadata } from 'next';
-import Image from 'next/image'; // Import Image component
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const { lang } = params;
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
   
   const titles: Record<string, string> = {
     en: 'Contact HousePlus - Global Wholesale Support',
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     en: 'Contact HousePlus for wholesale inquiries, product information, and OEM/ODM services. We respond within 24 hours.',
     es: 'Póngase en contacto con HousePlus para consultas mayoristas y servicios OEM/ODM.',
     de: 'Kontaktieren Sie HousePlus für Großhandelsanfragen und OEM/ODM-Services.',
-    fr: 'Contactez HousePlus pour les demandes de gros und die OEM/ODM-Services.',
+    fr: 'Contactez HousePlus pour les demandes de gros et les services OEM/ODM.',
     ar: 'اتصل بـ HousePlus للاستفسارات بالجملة وخدمات OEM/ODM.',
   };
 
@@ -36,8 +35,8 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
-export default async function ContactPage({ params }: { params: { lang: string } }) {
-  const { lang } = params;
+export default async function ContactPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
@@ -68,7 +67,6 @@ export default async function ContactPage({ params }: { params: { lang: string }
 
             <div className="space-y-8">
               <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl shadow-slate-200">
-                <Image src="/logo.png" alt="HousePlus Logo" width={150} height={40} className="mb-6" /> {/* Added Logo */}
                 <h2 className="text-2xl font-bold mb-6">Direct Contact</h2>
                 <div className="space-y-6">
                   <div>
