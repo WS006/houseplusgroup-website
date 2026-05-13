@@ -126,7 +126,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
               {item.button_text && (
                 <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-400 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Link
-                    href={item.button_link?.cached_url || item.button_link?.url || '#'}
+                    href={item.button_link?.cached_url || item.button_link?.url || `/${lang}/products`}
                     className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
                     {item.button_text}
