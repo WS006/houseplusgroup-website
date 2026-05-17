@@ -138,7 +138,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             description="We manufacture a wide range of solar products - from 100W monocrystalline panels to 3000W portable power stations. All products are CE, RoHS and IEC certified, ready for European, Middle Eastern and African markets."
             image={{ filename: '/images/home/solar-hero.jpg', alt: 'Solar Energy Systems' }}
             industry_type="solar"
-            button_link={`/${lang}/products`}
+            button_link={`/${lang}/products?category=solar`}
             button_text="Explore Solar Products"
           />
           <IndustrySection
@@ -146,7 +146,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             description="From air fryers to electric kettles - our home appliance line is engineered for energy efficiency and durability. With in-house tooling and R&D team, we deliver OEM/ODM solutions that meet CE, FCC and RoHS standards."
             image={{ filename: '/images/home/appliances-hero.jpg', alt: 'Home Appliances' }}
             industry_type="appliances"
-            button_link={`/${lang}/products`}
+            button_link={`/${lang}/products?category=home-appliances`}
             button_text="View Home Appliances"
           />
           <IndustrySection
@@ -154,7 +154,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             description="From TWS earphones to portable SSDs - we supply a curated portfolio of 3C electronics. Each product undergoes rigorous quality control and supports private-label branding with custom packaging."
             image={{ filename: '/images/home/electronics-hero.jpg', alt: '3C Electronics' }}
             industry_type="electronics"
-            button_link={`/${lang}/products`}
+            button_link={`/${lang}/products?category=3c-electronics`}
             button_text="View 3C Electronics"
           />
         </div>

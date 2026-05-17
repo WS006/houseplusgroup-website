@@ -16,6 +16,7 @@ interface CarouselItem {
   button_link: {
     url: string;
     cached_url: string;
+    linktype?: string;
   };
 }
 
@@ -89,6 +90,23 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
+  const formatLink = (link: any) => {
+    if (!link) return `/${lang}/products`;
+    let url = link.cached_url || link.url || '';
+    
+    // Handle Storyblok internal links
+    if (link.linktype === 'story' && url && !url.startsWith('/')) {
+      return `/${lang}/${url}`;
+    }
+    
+    // Ensure absolute paths for internal links
+    if (url && !url.startsWith('http') && !url.startsWith('/')) {
+      return `/${lang}/${url}`;
+    }
+    
+    return url || `/${lang}/products`;
+  };
+
   return (
     <div
       className="relative w-full h-[520px] md:h-[680px] overflow-hidden group bg-slate-800"
@@ -126,7 +144,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
               {item.button_text && (
                 <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-400 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Link
-                    href={item.button_link?.cached_url || item.button_link?.url || `/${lang}/products`}
+                    href={formatLink(item.button_link)}
                     className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
                     {item.button_text}

@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
-import { useParams } from 'next/navigation';
+import { useParams, notFound } from 'next/navigation';
 
 export default function Page() {
   const params = useParams();
@@ -12,6 +12,7 @@ export default function Page() {
   const [story, setStory] = useState<any>(null);
   const [subStories, setSubStories] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,7 @@ export default function Page() {
         setStory(data?.story);
       } catch (e) {
         console.error('Error fetching story:', e);
+        setError(true);
       }
 
       try {
@@ -47,6 +49,11 @@ export default function Page() {
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
     </div>
   );
+
+  // If no story and no sub-stories, and we had an error fetching, trigger 404
+  if (error && subStories.length === 0) {
+    notFound();
+  }
 
   return (
     <main className="min-h-screen bg-white">

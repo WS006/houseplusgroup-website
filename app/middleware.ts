@@ -6,19 +6,40 @@ const defaultLocale = 'en';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const firstSegment = pathname.split('/')[1];
+  const segments = pathname.split('/');
+  const firstSegment = segments[1];
 
-  // Root path: issue real 302 redirect to /en
+  // Root path: redirect to /en
   if (pathname === '/') {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}`;
     return NextResponse.redirect(url, 302);
   }
 
-  // If first segment exists but is not a valid language code, rewrite to 404
-  if (firstSegment && !validLangs.includes(firstSegment)) {
+  // Handle /home or /[lang]/home -> redirect to /[lang]
+  if (firstSegment === 'home') {
     const url = request.nextUrl.clone();
-    url.pathname = '/en/404';
+    url.pathname = `/${defaultLocale}`;
+    return NextResponse.redirect(url, 302);
+  }
+  
+  if (validLangs.includes(firstSegment) && segments[2] === 'home') {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${firstSegment}`;
+    return NextResponse.redirect(url, 302);
+  }
+
+  // If first segment exists but is not a valid language code, rewrite to 404
+  // Skip static files and api routes
+  if (
+    firstSegment && 
+    !validLangs.includes(firstSegment) && 
+    !pathname.includes('.') && 
+    !pathname.startsWith('/api/') &&
+    !pathname.startsWith('/_next/')
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLocale}/404`;
     const response = NextResponse.rewrite(url, { status: 404 });
     addSecurityHeaders(response);
     return response;
@@ -37,4 +58,3 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   return response;
 }
-

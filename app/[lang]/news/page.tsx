@@ -47,6 +47,46 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
 
   const articles = [
     {
+      slug: '2026-smart-home-appliances-market-guide',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop',
+      imageAlt: 'Modern smart kitchen with integrated appliances, representing future home technology',
+      title: {
+        en: '2026 Global Smart Home Appliance Market Trends & B2B Procurement Guide',
+        es: 'Tendencias del Mercado Global de Electrodomésticos Inteligentes 2026 y Guía de Adquisiciones B2B',
+        de: 'Globale Smart-Home-Geräte-Markttrends 2026 & B2B-Beschaffungsleitfaden',
+        fr: 'Tendances du marché mondial des appareils électroménagers intelligents 2026 et guide d\'approvisionnement B2B',
+        ar: 'اتجاهات سوق الأجهزة المنزلية الذكية العالمية 2026 ودليل المشتريات B2B',
+      },
+      description: {
+        en: 'Explore the key trends shaping the smart home appliance market in 2026, including AI integration, energy efficiency, and sustainable manufacturing. A comprehensive guide for B2B buyers from HousePlus.',
+        es: 'Explore las tendencias clave que configuran el mercado de electrodomésticos inteligentes en 2026, incluida la integración de IA, la eficiencia energética y la fabricación sostenible. Una guía completa para compradores B2B de HousePlus.',
+        de: 'Entdecken Sie die wichtigsten Trends, die den Markt für intelligente Haushaltsgeräte im Jahr 2026 prägen, einschließlich KI-Integration, Energieeffizienz und nachhaltiger Fertigung. Ein umfassender Leitfaden für B2B-Käufer von HousePlus.',
+        fr: 'Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents en 2026, y compris l\'intégration de l\'IA, l\'efficacité énergétique et la fabrication durable. Un guide complet pour les acheteurs B2B de HousePlus.',
+        ar: 'استكشف الاتجاهات الرئيسية التي تشكل سوق الأجهزة المنزلية الذكية في عام 2026، بما في ذلك تكامل الذكاء الاصطناعي، وكفاءة الطاقة، والتصنيع المستدام. دليل شامل للمشترين B2B من HousePlus.',
+      },
+      date: '2026-05-15',
+    },
+    {
+      slug: 'solar-energy-storage-industrial-manufacturing',
+      image: 'https://images.unsplash.com/photo-1533745848-b8e668670500?w=800&h=600&fit=crop',
+      imageAlt: 'Large industrial facility with solar panels on the roof and energy storage units, symbolizing sustainable manufacturing',
+      title: {
+        en: 'Solar Energy Storage Systems in Industrial Manufacturing: A Sustainable Approach',
+        es: 'Sistemas de Almacenamiento de Energía Solar en la Fabricación Industrial: Un Enfoque Sostenible',
+        de: 'Solare Energiespeichersysteme in der industriellen Fertigung: Ein nachhaltiger Ansatz',
+        fr: 'Systèmes de stockage d\'énergie solaire dans la fabrication industrielle : Une approche durable',
+        ar: 'أنظمة تخزين الطاقة الشمسية في التصنيع الصناعي: نهج مستدام',
+      },
+      description: {
+        en: 'Explore the benefits and applications of solar energy storage systems in industrial manufacturing, focusing on sustainability, cost efficiency, and energy independence. Learn how HousePlus solutions empower a greener industrial future.',
+        es: 'Explore los beneficios y aplicaciones de los sistemas de almacenamiento de energía solar en la fabricación industrial, centrándose en la sostenibilidad, la eficiencia de costos y la independencia energética. Descubra cómo las soluciones de HousePlus impulsan un futuro industrial más verde.',
+        de: 'Entdecken Sie die Vorteile und Anwendungen von Solarenergiespeichersystemen in der industriellen Fertigung, mit Fokus auf Nachhaltigkeit, Kosteneffizienz und Energieunabhängigkeit. Erfahren Sie, wie HousePlus-Lösungen eine grünere industrielle Zukunft ermöglichen.',
+        fr: 'Explorez les avantages et les applications des systèmes de stockage d\'énergie solaire dans la fabrication industrielle, en mettant l\'accent sur la durabilité, l\'efficacité des coûts et l\'indépendance énergétique. Découvrez comment les solutions HousePlus favorisent un avenir industriel plus vert.',
+        ar: 'استكشف فوائد وتطبيقات أنظمة تخزين الطاقة الشمسية في التصنيع الصناعي، مع التركيز على الاستدامة وكفاءة التكلفة واستقلالية الطاقة. تعرف على كيفية تمكين حلول HousePlus لمستقبل صناعي أكثر اخضرارًا.',
+      },
+      date: '2026-05-15',
+    },
+    {
       slug: 'oem-odm-manufacturing-guide',
       image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=600&fit=crop',
       imageAlt: 'OEM ODM manufacturing process at HousePlus factory - custom product development',
@@ -101,7 +141,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         en: 'A comprehensive guide for wholesale buyers on sourcing high-quality home appliances from HousePlus. Learn about MOQ, OEM/ODM services, certifications, and how we support distributors across Africa, Southeast Asia, and Europe.',
         es: 'Una guía completa para compradores mayoristas sobre el abastecimiento de electrodomésticos de alta calidad de HousePlus. Conozca el MOQ, los servicios OEM/ODM, las certificaciones y cómo apoyamos a los distribuidores en África, el Sudeste Asiático y Europa.',
         de: 'Ein umfassender Leitfaden für Großhandelskäufer zur Beschaffung hochwertiger Haushaltsgeräte von HousePlus. Erfahren Sie mehr über MOQ, OEM/ODM-Dienstleistungen, Zertifizierungen und wie wir Distributoren in Afrika, Südostasien und Europa unterstützen.',
-        fr: 'Un guide complet pour les acheteurs en gros sur l\'approvisionnement en appareils électroménagers de haute qualité auprès de HousePlus. Découvrez le MOQ, les services OEM/ODM, les certifications et comment nous soutenons les distributeurs en Afrique, en Asie du Sud-Est et en Europe.',
+        fr: 'Un guide complet pour les acheteurs en gros sur l\'approvisionnement en appareils électroménagers de haute qualité auprès de HousePlus. Découvrez le MOQ, les services OEM/ODM, les certificaciones et how we support distributors en Afrique, en Asie du Sud-Est et en Europe.',
         ar: 'دليل شامل لمشتري الجملة حول مصادر الأجهزة المنزلية عالية الجودة من HousePlus. تعرف على MOQ وخدمات OEM/ODM والشهادات وكيف ندعم الموزعين في أفريقيا وجنوب شرق آسيا وأوروبا.',
       },
       date: '2025-01-20',
@@ -141,153 +181,47 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         en: 'Discover how HousePlus is shaping the future of smart home appliances with energy-efficient, connected, and intuitive solutions for modern living and global wholesale markets.',
         es: 'Descubra cómo HousePlus está dando forma al futuro de los electrodomésticos inteligentes con soluciones energéticamente eficientes, conectadas e intuitivas para la vida moderna y los mercados mayoristas globales.',
         de: 'Entdecken Sie, wie HousePlus die Zukunft smarter Haushaltsgeräte mit energieeffizienten, vernetzten und intuitiven Lösungen für modernes Wohnen und globale Großhandelsmärkte gestaltet.',
-        fr: 'Découvrez comment HousePlus façonne l\'avenir des appareils électroménagers intelligents avec des solutions écoénergétiques, connectées et intuitives pour la vie moderne et les marchés de gros mondiaux.',
+        fr: 'Découvrez how HousePlus is shaping the future of smart home appliances with energy-efficient, connected, and intuitive solutions for modern living and global wholesale markets.',
         ar: 'اكتشف كيف تشكل HousePlus مستقبل الأجهزة المنزلية الذكية من خلال حلول موفرة للطاقة ومتصلة وبديهية للحياة العصرية وأسواق الجملة العالمية.',
       },
-      date: '2024-06-30',
-    },
-    {
-      slug: 'solar-energy-storage-solutions',
-      image: 'https://images.unsplash.com/photo-1592833159155-c62df1b65634?w=800&h=600&fit=crop',
-      imageAlt: 'HousePlus portable power station and battery storage system',
-      title: {
-        en: 'Solar Energy Storage Solutions: HousePlus Innovations',
-        es: 'Soluciones de Almacenamiento de Energía Solar: Innovaciones HousePlus',
-        de: 'Solare Energiespeicherlösungen: HousePlus Innovationen',
-        fr: 'Solutions de stockage d\'énergie solaire : Innovations HousePlus',
-        ar: 'حلول تخزين الطاقة الشمسية: ابتكارات HousePlus',
-      },
-      description: {
-        en: 'Explore HousePlus\'s advanced solar energy storage solutions, including battery systems and portable power stations, designed for efficiency and reliability in global wholesale markets.',
-        es: 'Explore las soluciones avanzadas de almacenamiento de energía solar de HousePlus, incluidos los sistemas de baterías y las estaciones de energía portátiles, diseñadas para la eficiencia y la fiabilidad en los mercados mayoristas globales.',
-        de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
-        fr: 'Découvrez les solutions avanzadas de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',
-        ar: 'استكشف حلول HousePlus المتقدمة لتخزين الطاقة الشمسية، بما في ذلك أنظمة البطاريات ومحطات الطاقة المحمولة، المصممة للكفاءة والموثوقية في أسواق الجملة العالمية.',
-      },
-      date: '2024-02-19',
-    },
-    {
-      slug: 'the-evolution-of-3c-electronics',
-      image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&h=600&fit=crop',
-      imageAlt: 'Modern 3C electronics devices including wireless chargers and smart gadgets',
-      title: {
-        en: 'The Evolution of 3C Electronics: Innovation and HousePlus Solutions',
-        es: 'La Evolución de la Electrónica 3C: Innovación y Soluciones HousePlus',
-        de: 'Die Evolution der 3C-Elektronik: Innovation und HousePlus-Lösungen',
-        fr: 'L\'évolution de l\'électronique 3C : Innovation et solutions HousePlus',
-        ar: 'تطور الإلكترونيات 3C: الابتكار وحلول HousePlus',
-      },
-      description: {
-        en: 'Explore the rapid advancements in 3C electronics, from smart devices to LED lighting. Discover how HousePlus delivers cutting-edge, reliable solutions for global wholesale markets.',
-        es: 'Explore los rápidos avances en electrónica 3C, desde dispositivos inteligentes hasta iluminación LED. Descubra cómo HousePlus ofrece soluciones de vanguardia y confiables para los mercados mayoristas globales.',
-        de: 'Entdecken Sie die rasanten Fortschritte in der 3C-Elektronik, von Smart Devices bis zur LED-Beleuchtung. Erfahren Sie, wie HousePlus modernste, zuverlässige Lösungen für globale Großhandelsmärkte liefert.',
-        fr: 'Explorez les avancées rapides de l\'électronique 3C, des appareils intelligents à l\'éclairage LED. Découvrez comment HousePlus fournit des solutions de pointe et fiables pour les marchés de gros mondiaux.',
-        ar: 'استكشف التطورات السريعة في الإلكترونيات 3C، من الأجهزة الذكية إلى إضاءة LED. اكتشف كيف تقدم HousePlus حلولًا متطورة وموثوقة لأسواق الجملة العالمية.',
-      },
-      date: '2023-11-08',
-    },
-    {
-      slug: 'smart-home-appliances',
-      image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&h=600&fit=crop',
-      imageAlt: 'Modern kitchen with HousePlus smart home appliances',
-      title: {
-        en: 'Smart Home Appliances: Efficiency, Innovation, and HousePlus Solutions',
-        es: 'Electrodomésticos Inteligentes: Eficiencia, Innovación y Soluciones HousePlus',
-        de: 'Smarte Haushaltsgeräte: Effizienz, Innovation und HousePlus-Lösungen',
-        fr: 'Appareils électroménagers intelligents : Efficacité, innovation et solutions HousePlus',
-        ar: 'الأجهزة المنزلية الذكية: الكفاءة والابتكار وحلول HousePlus',
-      },
-      description: {
-        en: 'Discover how HousePlus is redefining modern living with smart, energy-efficient home appliances. Explore our range of innovative products designed for global wholesale markets.',
-        es: 'Descubra cómo HousePlus está redefiniendo la vida moderna con electrodomésticos inteligentes y energéticamente eficientes. Explore nuestra gama de productos innovadores diseñados para mercados mayoristas globales.',
-        de: 'Entdecken Sie, wie HousePlus das moderne Leben mit intelligenten, energieeffizienten Haushaltsgeräten neu definiert. Entdecken Sie unser Sortiment an innovativen Produkten, die für globale Großhandelsmärkte entwickelt wurden.',
-        fr: 'Découvrez comment HousePlus redéfinit la vie moderne avec des appareils électroménagers intelligents et économes en énergie. Explorez notre gamme de produits innovants conçus pour les marchés de gros mondiaux.',
-        ar: 'اكتشف كيف تعيد HousePlus تعريف الحياة العصرية بأجهزة منزلية ذكية وموفرة للطاقة. استكشف مجموعتنا من المنتجات المبتكرة المصممة لأسواق الجملة العالمية.',
-      },
-      date: '2023-07-22',
-    },
-    {
-      slug: 'the-future-of-solar-energy',
-      image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=600&fit=crop',
-      imageAlt: 'Large-scale solar farm with HousePlus solar panels',
-      title: {
-        en: 'The Future of Solar Energy: Innovations and HousePlus Solutions',
-        es: 'El Futuro de la Energía Solar: Innovaciones y Soluciones HousePlus',
-        de: 'Die Zukunft der Solarenergie: Innovationen und HousePlus-Lösungen',
-        fr: 'L\'avenir de l\'énergie solaire : Innovations et solutions HousePlus',
-        ar: 'مستقبل الطاقة الشمسية: الابتكارات وحلول HousePlus',
-      },
-      description: {
-        en: 'Explore the latest innovations in solar energy technology and how HousePlus is leading the way with high-efficiency solar panels, portable power stations, and sustainable solutions for global wholesale markets.',
-        es: 'Explore las últimas innovaciones en tecnología de energía solar y cómo HousePlus lidera el camino con paneles solares de alta eficiencia, estaciones de energía portátiles y soluciones sostenibles para mercados mayoristas globales.',
-        de: 'Entdecken Sie die neuesten Innovationen in der Solarenergietechnologie und wie HousePlus mit hocheffizienten Solarmodulen, tragbaren Kraftwerken und nachhaltigen Lösungen für globale Großhandelsmärkte führend ist.',
-        fr: 'Découvrez les dernières innovations en matière de technologie de l\'énergie solaire et comment HousePlus ouvre la voie avec des panneaux solaires à haut rendement, des centrales électriques portables et des solutions durables pour les marchés de gros mondiaux.',
-        ar: 'استكشف أحدث الابتكارات في تكنولوجيا الطاقة الشمسية وكيف تقود HousePlus الطريق بألواح شمسية عالية الكفاءة ومحطات طاقة محمولة وحلول مستدامة لأسواق الجملة العالمية.',
-      },
-      date: '2023-03-15',
+      date: '2024-08-01',
     },
   ];
 
   return (
-    <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]}>
-      <main className="min-h-screen bg-white">
-        <Breadcrumb lang={lang} />
-        <section className="py-24 px-4 bg-slate-50 border-b border-slate-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 tracking-tight">
-              {lang === 'en' && 'HousePlus News & Insights'}
-              {lang === 'es' && 'Noticias y Perspectivas de HousePlus'}
-              {lang === 'de' && 'HousePlus Nachrichten & Einblicke'}
-              {lang === 'fr' && 'Actualités et Perspectives HousePlus'}
-              {lang === 'ar' && 'أخبار ورؤى HousePlus'}
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
-              {lang === 'en' && 'Stay updated with the latest industry trends, innovations, and company news from HousePlus Group.'}
-              {lang === 'es' && 'Manténgase actualizado con las últimas tendencias de la industria, innovaciones y noticias de la empresa de HousePlus Group.'}
-              {lang === 'de' && 'Bleiben Sie auf dem Laufenden über die neuesten Branchentrends, Innovationen und Unternehmensnachrichten der HousePlus Group.'}
-              {lang === 'fr' && 'Restez informé des dernières tendances de l\'industrie, des innovations et des actualités de l\'entreprise du groupe HousePlus.'}
-              {lang === 'ar' && 'ابق على اطلاع دائم بأحدث اتجاهات الصناعة والابتكارات وأخبار الشركة من مجموعة HousePlus.'}
-            </p>
-          </div>
-        </section>
-        <section className="py-24 px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {articles.map((article, index) => (
-              <Link href={`/${lang}/news/${article.slug}`} key={index} className="block group bg-white rounded-[2rem] border border-slate-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                <div className="relative w-full h-72 overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <main className="min-h-screen bg-white">
+      <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]} />
+      <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
+        <div className="relative max-w-4xl mx-auto text-center z-10">
+          <Breadcrumb items={breadcrumbs} />
+          <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
+            {titles[lang] || titles.en}
+          </h1>
+          <p className="text-slate-300 text-lg md:text-xl mb-6">
+            {descriptions[lang] || descriptions.en}
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto py-20 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {articles.map((article) => (
+            <Link key={article.slug} href={`/${lang}/news/${article.slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <Image src={article.image} alt={article.imageAlt} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute top-6 left-6">
+                  <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-full">News & Insights</span>
                 </div>
-                <div className="p-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="px-4 py-1.5 bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] rounded-full">
-                      HousePlus Group Team
-                    </span>
-                    <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-                      {new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors duration-300 mb-4 leading-tight">
-                    {article.title[lang as keyof typeof article.title] || article.title.en}
-                  </h2>
-                  <p className="text-slate-500 text-base leading-relaxed mb-8 line-clamp-3">
-                    {article.description[lang as keyof typeof article.description] || article.description.en}
-                  </p>
-                  <div className="flex items-center text-blue-600 font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
-                    Read HousePlus Article
-                    <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      </main>
-    </SchemaRenderer>
+              </div>
+              <div className="p-10 flex flex-col flex-grow">
+                <h2 className="text-2xl font-black mb-4 text-slate-900 group-hover:text-blue-600 tracking-tight">{article.title[lang] || article.title.en}</h2>
+                <p className="text-slate-500 line-clamp-2 mb-8 flex-grow">{article.description[lang] || article.description.en}</p>
+                <div className="flex items-center text-blue-600 font-black text-xs uppercase tracking-widest">Read More →</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </main>
   );
 }

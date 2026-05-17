@@ -85,7 +85,7 @@ export default function Header({ lang }: { lang: string }) {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={`/${lang}${item.href}`}
+                  href={item.href === '/' ? `/${lang}` : `/${lang}${item.href}`}
                   className="text-slate-600 hover:text-blue-600 font-bold transition-all duration-200 text-[11px] xl:text-xs uppercase tracking-widest"
                 >
                   {item.label}
@@ -117,7 +117,7 @@ export default function Header({ lang }: { lang: string }) {
             {navItems.map((item) => (
               <Link
                 key={item.href}
-                href={`/${lang}${item.href}`}
+                href={item.href === '/' ? `/${lang}` : `/${lang}${item.href}`}
                 className="block px-4 py-3 rounded-2xl text-lg font-bold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
