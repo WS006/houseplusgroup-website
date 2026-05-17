@@ -248,6 +248,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     dateModified: content.dateModified,
     authorName: content.authorName,
     description: content.sections[0].text,
+  }, {
     url: `https://www.houseplus-ch.com/${lang}/news/2026-smart-home-appliances-market-guide`,
     lang,
   });
