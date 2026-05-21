@@ -12,26 +12,26 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
 
   const titles: Record<string, string> = {
-    en: 'Stay ahead in 2026 with HousePlus\'s latest 3C electronics - premium audio devices, smart wearables, and innovative power solutions for B2B distributors.',
-    es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
-    de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
+    en: 'Explore HousePlus\'s 2026 line of smart home appliances featuring AI-driven controls, energy monitoring, and seamless integration for wholesale buyers across Africa, Asia, and Europe.',
+    es: 'Explora la línea 2026 de electrodomésticos inteligentes de HousePlus con controles impulsados por IA, monitoreo de energía e integración perfecta para compradores mayoristas en África, Asia y Europa.',
+    de: 'Entdecke die 2026-Linie von smarten Haushaltsgeräten von HousePlus mit KI-gesteuerten Steuerungen, Energieüberwachung und nahtloser Integration für Großhandelskäufer in Afrika, Asien und Europa.',
     fr: 'Tendances du marché mondial des appareils électroménagers intelligents 2026 et guide d\'approvisionnement B2B',
-    ar: 'ابق في المقدمة في 2026 مع أحدث إلكترونيات 3C من HousePlus - أجهزة صوتية عالية الجودة، وأجهزة قابلة للارتداء الذكية، وحلول طاقة مبتكرة لموزعي B2B.',
+    ar: 'استكشف سلسلة 2026 من الأجهزة المنزلية الذكية من HousePlus التي تتميز بتحكم مدفوع بالذكاء الاصطناعي، ومراقبة الطاقة، والتكامل السلس لمشتري الجملة في أفريقيا وآسيا وأوروبا.',
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Stay ahead in 2026 with HousePlus\'s latest 3C electronics - premium audio devices, smart wearables, and innovative power solutions for B2B distributors.',
-    es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
-    de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
+    en: 'Explore HousePlus\'s 2026 line of smart home appliances featuring AI-driven controls, energy monitoring, and seamless integration for wholesale buyers across Africa, Asia, and Europe.',
+    es: 'Explora la línea 2026 de electrodomésticos inteligentes de HousePlus con controles impulsados por IA, monitoreo de energía e integración perfecta para compradores mayoristas en África, Asia y Europa.',
+    de: 'Entdecke die 2026-Linie von smarten Haushaltsgeräten von HousePlus mit KI-gesteuerten Steuerungen, Energieüberwachung und nahtloser Integration für Großhandelskäufer in Afrika, Asien und Europa.',
     fr: 'Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents en 2026, y compris l\'intégration de l\'IA, l\'efficacité énergétique et la fabrication durable. Un guide complet pour les acheteurs B2B de HousePlus.',
-    ar: 'ابق في المقدمة في 2026 مع أحدث إلكترونيات 3C من HousePlus - أجهزة صوتية عالية الجودة، وأجهزة قابلة للارتداء الذكية، وحلول طاقة مبتكرة لموزعي B2B.',
+    ar: 'استكشف سلسلة 2026 من الأجهزة المنزلية الذكية من HousePlus التي تتميز بتحكم مدفوع بالذكاء الاصطناعي، ومراقبة الطاقة، والتكامل السلس لمشتري الجملة في أفريقيا وآسيا وأوروبا.',
   };
 
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
-    keywords: ["3C electronics", "consumer electronics", "wholesale", "B2B", "wearables", "HousePlus"],
-    url: `/${lang}/news/2026-electronics-market-update`,
+    keywords: ["smart home", "home appliances", "energy efficiency", "AI integration", "wholesale", "HousePlus"],
+    url: `/${lang}/news/2026-appliances-market-update`,
     lang: lang as any,
     type: 'article',
   });
@@ -39,12 +39,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const articleContent: Record<string, any> = {
   en: {
-    title: '3C Electronics Trends 2026: HousePlus Wholesale Innovation',
+    title: 'Smart Home Appliances 2026: Energy-Efficient Designs for Global Markets',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
-    heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    datePublished: '2026-05-16',
+    dateModified: '2026-05-16',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    heroImageAlt: 'HousePlus smart home appliances lineup',
     sections: [
       {
         heading: 'Introduction: Industry Trends in 2026',
@@ -69,12 +69,12 @@ const articleContent: Record<string, any> = {
     ]
   },
   es: {
-    title: 'Tendencias en Electrónica 3C 2026: Innovación al por Mayor de HousePlus',
+    title: 'Electrodomésticos Inteligentes 2026: Diseños Eficientes Energéticamente para Mercados Globales',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
-    heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    datePublished: '2026-05-16',
+    dateModified: '2026-05-16',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    heroImageAlt: 'HousePlus smart home appliances lineup',
     sections: [
       {
         heading: 'Introducción: Tendencias de la Industria en 2026',
@@ -99,12 +99,12 @@ const articleContent: Record<string, any> = {
     ]
   },
   de: {
-    title: '3C-Elektronik-Trends 2026: HousePlus-Großhandelsinnovation',
+    title: 'Smart-Home-Geräte 2026: Energieeffiziente Designs für globale Märkte',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
-    heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    datePublished: '2026-05-16',
+    dateModified: '2026-05-16',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    heroImageAlt: 'HousePlus smart home appliances lineup',
     sections: [
       {
         heading: 'Einführung: Branchentrends im 2026',
@@ -129,12 +129,12 @@ const articleContent: Record<string, any> = {
     ]
   },
   fr: {
-    title: 'Tendances de l\'électronique 3C 2026: Innovation en gros de HousePlus',
+    title: 'Appareils électroménagers intelligents 2026: Des designs énergétiques pour les marchés mondiaux',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
-    heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    datePublished: '2026-05-16',
+    dateModified: '2026-05-16',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    heroImageAlt: 'HousePlus smart home appliances lineup',
     sections: [
       {
         heading: 'Introduction: Tendances de l\'industrie en 2026',
@@ -159,12 +159,12 @@ const articleContent: Record<string, any> = {
     ]
   },
   ar: {
-    title: 'اتجاهات الإلكترونيات 3C 2026: ابتكار الجملة من HousePlus',
+    title: 'الأجهزة المنزلية الذكية 2026: تصميمات موفرة للطاقة للأسواق العالمية',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
-    heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    datePublished: '2026-05-16',
+    dateModified: '2026-05-16',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    heroImageAlt: 'HousePlus smart home appliances lineup',
     sections: [
       {
         heading: 'مقدمة: اتجاهات الصناعة في 2026',
@@ -197,7 +197,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },
     { name: lang === 'en' ? 'News' : 'Noticias', url: `/${lang}/news` },
-    { name: content.title, url: `/${lang}/news/2026-electronics-market-update` },
+    { name: content.title, url: `/${lang}/news/2026-appliances-market-update` },
   ];
 
   const articleSchema = buildArticleSchema({
@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     authorName: content.authorName,
     description: content.sections[0].text,
   }, {
-    url: `https://www.houseplus-ch.com/${lang}/news/2026-electronics-market-update`,
+    url: `https://www.houseplus-ch.com/${lang}/news/2026-appliances-market-update`,
     lang,
   });
 

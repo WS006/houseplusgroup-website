@@ -75,6 +75,10 @@ function formatDate(date) {
   return date.toISOString().split('T')[0];
 }
 
+function escapeSingleQuotes(str) {
+  return str.replace(/'/g, "\\'");
+}
+
 function generateArticleData(template, month, year) {
   const day = Math.floor(Math.random() * 28) + 1;
   const dateStr = formatDate(new Date(year, month - 1, day));
@@ -162,8 +166,11 @@ function copyTemplateArticle(articleData) {
     const titleRegex = new RegExp(`    ${lang}: '[^']*',`, 'g');
     const descRegex = new RegExp(`    ${lang}: '[^']*',`, 'g');
     
-    content = content.replace(titleRegex, `    ${lang}: '${articleData.languages[lang].title}',`);
-    content = content.replace(descRegex, `    ${lang}: '${articleData.languages[lang].description}',`);
+    const escapedTitle = escapeSingleQuotes(articleData.languages[lang].title);
+    const escapedDesc = escapeSingleQuotes(articleData.languages[lang].description);
+    
+    content = content.replace(titleRegex, `    ${lang}: '${escapedTitle}',`);
+    content = content.replace(descRegex, `    ${lang}: '${escapedDesc}',`);
   });
   
   // Replace keywords
@@ -180,9 +187,15 @@ function copyTemplateArticle(articleData) {
 }
 
 function generateArticleContentJS(articleData) {
+  const enTitle = escapeSingleQuotes(articleData.languages.en.title);
+  const esTitle = escapeSingleQuotes(articleData.languages.es.title);
+  const deTitle = escapeSingleQuotes(articleData.languages.de.title);
+  const frTitle = escapeSingleQuotes(articleData.languages.fr.title);
+  const arTitle = escapeSingleQuotes(articleData.languages.ar.title);
+  
   return `const articleContent: Record<string, any> = {
   en: {
-    title: '${articleData.languages.en.title}',
+    title: '${enTitle}',
     authorName: '${articleData.languages.en.authorName}',
     datePublished: '${articleData.languages.en.datePublished}',
     dateModified: '${articleData.languages.en.dateModified}',
@@ -212,7 +225,7 @@ function generateArticleContentJS(articleData) {
     ]
   },
   es: {
-    title: '${articleData.languages.es.title}',
+    title: '${esTitle}',
     authorName: '${articleData.languages.es.authorName}',
     datePublished: '${articleData.languages.es.datePublished}',
     dateModified: '${articleData.languages.es.dateModified}',
@@ -242,7 +255,7 @@ function generateArticleContentJS(articleData) {
     ]
   },
   de: {
-    title: '${articleData.languages.de.title}',
+    title: '${deTitle}',
     authorName: '${articleData.languages.de.authorName}',
     datePublished: '${articleData.languages.de.datePublished}',
     dateModified: '${articleData.languages.de.dateModified}',
@@ -272,7 +285,7 @@ function generateArticleContentJS(articleData) {
     ]
   },
   fr: {
-    title: '${articleData.languages.fr.title}',
+    title: '${frTitle}',
     authorName: '${articleData.languages.fr.authorName}',
     datePublished: '${articleData.languages.fr.datePublished}',
     dateModified: '${articleData.languages.fr.dateModified}',
@@ -302,7 +315,7 @@ function generateArticleContentJS(articleData) {
     ]
   },
   ar: {
-    title: '${articleData.languages.ar.title}',
+    title: '${arTitle}',
     authorName: '${articleData.languages.ar.authorName}',
     datePublished: '${articleData.languages.ar.datePublished}',
     dateModified: '${articleData.languages.ar.dateModified}',
@@ -343,11 +356,11 @@ function updateNewsList(articles) {
     const existingArticlesStr = articlesMatch[1];
     const newEntries = articles.map(article => {
       const langTitleEntries = Object.keys(article.languages).map(lang => 
-        `    ${lang}: '${article.languages[lang].title}',`
+        `    ${lang}: '${escapeSingleQuotes(article.languages[lang].title)}',`
       ).join('\n');
       
       const langDescEntries = Object.keys(article.languages).map(lang => 
-        `    ${lang}: '${article.languages[lang].description}',`
+        `    ${lang}: '${escapeSingleQuotes(article.languages[lang].description)}',`
       ).join('\n');
       
       return `  {

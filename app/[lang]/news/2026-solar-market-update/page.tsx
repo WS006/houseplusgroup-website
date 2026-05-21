@@ -41,8 +41,8 @@ const articleContent: Record<string, any> = {
   en: {
     title: 'Solar Energy Innovations in 2026: HousePlus Leading the Industry',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-24',
-    dateModified: '2026-04-24',
+    datePublished: '2026-03-08',
+    dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus solar panels and energy storage solutions',
     sections: [
@@ -71,8 +71,8 @@ const articleContent: Record<string, any> = {
   es: {
     title: 'Innovaciones en Energía Solar en 2026: HousePlus Liderando la Industria',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-24',
-    dateModified: '2026-04-24',
+    datePublished: '2026-03-08',
+    dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus solar panels and energy storage solutions',
     sections: [
@@ -101,8 +101,8 @@ const articleContent: Record<string, any> = {
   de: {
     title: 'Innovationen in der Solarenergie im 2026: HousePlus an der Spitze der Branche',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-24',
-    dateModified: '2026-04-24',
+    datePublished: '2026-03-08',
+    dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus solar panels and energy storage solutions',
     sections: [
@@ -129,10 +129,10 @@ const articleContent: Record<string, any> = {
     ]
   },
   fr: {
-    title: 'Innovations en énergie solaire en 2026: HousePlus à la pointe de l'industrie',
+    title: 'Innovations en énergie solaire en 2026: HousePlus à la pointe de l\'industrie',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-24',
-    dateModified: '2026-04-24',
+    datePublished: '2026-03-08',
+    dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus solar panels and energy storage solutions',
     sections: [
@@ -161,8 +161,8 @@ const articleContent: Record<string, any> = {
   ar: {
     title: 'ابتكارات الطاقة الشمسية في 2026: HousePlus تقود الصناعة',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-24',
-    dateModified: '2026-04-24',
+    datePublished: '2026-03-08',
+    dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus solar panels and energy storage solutions',
     sections: [
