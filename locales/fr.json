@@ -1,0 +1,134 @@
+{
+  "site": {
+    "title": "Systèmes Solaires & Appareils Ménagers en Gros | HousePlus | Fabriqué en Chine",
+    "description": "HousePlus: Fabricant professionnel de systèmes solaires, d'appareils ménagers et d'électronique 3C. Services de gros et OEM/ODM mondiaux. Contactez-nous pour des prix compétitifs et des solutions personnalisées."
+  },
+  "meta": {
+    "homeDescription": "HousePlus est un fabricant professionnel de systèmes solaires, d'appareils ménagers et d'électronique 3C de haute qualité pour la vente en gros mondiale et OEM/ODM. Explorez nos produits et demandez un devis dès aujourd'hui.",
+    "keywords": "systèmes solaires, appareils ménagers, électronique 3C, vente en gros, OEM, ODM"
+  },
+  "hero": {
+    "title": "Appareils Ménagers de Qualité et Solutions Solaires",
+    "subtitle": "Fabricant chinois leader de pompes solaires, câbles solaires, appareils ménagers et stations d'énergie portables.",
+    "cta": {
+      "products": "Voir les Produits",
+      "contact": "Demander un Devis"
+    }
+  },
+  "nav": {
+    "about": "À Propos",
+    "products": "Produits",
+    "factory": "Usine",
+    "contact": "Contact"
+  },
+  "home": {
+    "tagline": "HousePlus - Fabricant Global B2B en Gros",
+    "mainTitle": "Groupe HousePlus - Fournisseur Professionnel en Gros",
+    "mainDescription": "Depuis 2010, HousePlus est un fabricant fiable de systèmes d'énergie solaire, d'appareils ménagers et d'électronique 3C. Nous servons des acheteurs en gros dans plus de 60 pays, offrant des services OEM/ODM avec certifications CE/FCC/RoHS et MOQ à partir de 100 unités.",
+    "browseProducts": "Voir Tous les Produits",
+    "requestQuote": "Demander un Devis",
+    "counter": {
+      "years": "Années de Fabrication",
+      "clients": "Clients Gros Globaux",
+      "countries": "Pays Desservis",
+      "warranty": "Garantie Produit"
+    },
+    "industries": [
+      {
+        "title": "Systèmes d'Énergie Solaire Haute Efficacité",
+        "description": "Nous fabriquons une large gamme de produits solaires - des panneaux monocristallins 100W aux centrales électriques portables 3000W. Tous les produits sont certifiés CE, RoHS et IEC, prêts pour les marchés européens, du Moyen-Orient et africains.",
+        "buttonText": "Explorer les Produits Solaires"
+      },
+      {
+        "title": "Appareils Ménagers Économes en Énergie",
+        "description": "Des friteuses à air aux bouilloires électriques - notre gamme d'appareils ménagers est conçue pour l'efficacité énergétique et la durabilité. Avec outillage interne et équipe R&D, nous fournissons des solutions OEM/ODM répondant aux normes CE, FCC et RoHS.",
+        "buttonText": "Voir les Appareils Ménagers"
+      },
+      {
+        "title": "Électronique 3C & Accessoires",
+        "description": "Des écouteurs TWS aux SSD portables - nous fournissons un portefeuille sélectionné d'électronique 3C. Chaque produit subit un contrôle de qualité rigoureux et prend en charge le branding de marque privée avec emballage personnalisé.",
+        "buttonText": "Voir l'Électronique 3C"
+      }
+    ],
+    "whyChoose": {
+      "title": "Pourquoi les Acheteurs Globaux Choisissent HousePlus",
+      "subtitle": "Avec plus de 14 ans d'expérience en fabrication et un service réactif, HousePlus livre des produits fiables à temps, à chaque fois. Votre succès est notre engagement.",
+      "features": [
+        {
+          "icon": "Factory",
+          "title": "Usine Verticalement Intégrée",
+          "desc": "Plus de 20 000 m2 d'espace de production avec outillage interne, lignes d'assemblage et laboratoires qualité - contrôle complet de la matière première au produit fini."
+        },
+        {
+          "icon": "Certified",
+          "title": "Certifications Internationales",
+          "desc": "Les certifications CE, FCC, RoHS, ISO 9001 et IEC garantissent que nos produits répondent aux exigences réglementaires de l'Europe, de l'Amérique du Nord et au-delà."
+        },
+        {
+          "icon": "Support",
+          "title": "Support Flexible OEM/ODM",
+          "desc": "Branding personnalisé, emballage de marque privée et modifications de produits disponibles à partir de MOQ 100 pièces. Gestionnaires de compte dédiés pour chaque client."
+        }
+      ]
+    },
+    "carousel": [
+      {
+        "imageAlt": "HousePlus Solutions d'Énergie Solaire",
+        "title": "Solutions Solaires Haute Efficacité",
+        "subtitle": "Panneaux solaires, onduleurs et centrales électriques portables de qualité professionnelle pour partenaires grossistes globaux",
+        "buttonText": "Explorer les Produits Solaires"
+      },
+      {
+        "imageAlt": "HousePlus Appareils Ménagers",
+        "title": "Appareils Ménagers Intelligents",
+        "subtitle": "Appareils de cuisine et ménagers économes en énergie avec support complet de personnalisation OEM/ODM",
+        "buttonText": "Voir les Appareils Ménagers"
+      },
+      {
+        "imageAlt": "HousePlus Électronique 3C",
+        "title": "Électronique 3C & Accessoires",
+        "subtitle": "Écouteurs premium, montres connectées, SSD portables et accessoires de charge pour consommateurs modernes",
+        "buttonText": "Voir l'Électronique"
+      }
+    ],
+    "categories": {
+      "title": "Nos Catégories de Produits",
+      "subtitle": "Des solutions complètes pour les foyers et entreprises du monde entier",
+      "items": [
+        {
+          "emoji": "☀️",
+          "title": "Pompes Solaires",
+          "description": "Systèmes de pompage à énergie solaire haute efficacité",
+          "href": "/products/solar-water-pumps"
+        },
+        {
+          "emoji": "⚡",
+          "title": "Câbles Solaires",
+          "description": "Solutions de câbles photovoltaïques premium",
+          "href": "/products/solar-cables"
+        },
+        {
+          "emoji": "🏠",
+          "title": "Appareils Ménagers",
+          "description": "Hottes, cuisinières, fours et plus",
+          "href": "/products/home-appliances"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à Partenariat?",
+      "subtitle": "Obtenez des prix compétitifs pour les commandes en gros et la personnalisation OEM.",
+      "button": "Demander un Devis"
+    }
+  },
+  "footer": {
+    "description": "Fabricant professionnel d'appareils ménagers, de systèmes solaires et de stations d'énergie portables. Servir les marchés mondiaux avec des capacités OEM/ODM.",
+    "quickLinks": "Liens Rapides",
+    "contactUs": "Contactez-nous",
+    "companyName": "HousePlus Group Co., Ltd.",
+    "email": "info@houseplus-ch.com",
+    "phone": "+86-123-4567-890",
+    "address": "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+    "serviceAreas": "Europe, Afrique, Asie du Sud-Est, Amérique du Nord"
+  }
+}

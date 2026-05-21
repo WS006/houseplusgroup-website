@@ -1,0 +1,183 @@
+{
+  "site": {
+    "title": "Solar Systems & Home Appliances Wholesale | HousePlus | Made in China",
+    "description": "HousePlus: Professional manufacturer of solar systems, home appliances, and 3C electronics. Global wholesale and OEM/ODM services. Contact us for competitive pricing and custom solutions. | Made in China"
+  },
+  "meta": {
+    "homeDescription": "HousePlus is a professional manufacturer of high-quality solar systems, home appliances, and 3C electronics for global wholesale and OEM/ODM. Explore our products and get a quote today.",
+    "keywords": "solar systems, home appliances, 3C electronics, wholesale, OEM, ODM"
+  },
+  "hero": {
+    "title": "Quality Home Appliances & Solar Solutions",
+    "subtitle": "Leading Chinese manufacturer of solar water pumps, solar cables, home appliances, and portable power stations. OEM/ODM services available.",
+    "cta": {
+      "products": "View Products",
+      "contact": "Get Quote"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About HousePlus",
+    "products": "Products",
+    "news": "News",
+    "factory": "Factory",
+    "service": "Service",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "tagline": "HousePlus - Global B2B Wholesale Manufacturer",
+    "mainTitle": "HousePlus Group - Professional Wholesale Supplier",
+    "mainDescription": "Since 2010, HousePlus has been a trusted manufacturer of solar energy systems, home appliances and 3C electronics. We serve wholesale buyers in 60+ countries, offering OEM/ODM services with CE/FCC/RoHS certifications and MOQ from 100 units.",
+    "browseProducts": "Browse All Products",
+    "requestQuote": "Request a Quote",
+    "counter": {
+      "years": "Years of Manufacturing",
+      "clients": "Global Wholesale Clients",
+      "countries": "Countries Served",
+      "warranty": "Product Warranty"
+    },
+    "industries": [
+      {
+        "title": "High-Efficiency Solar Energy Systems",
+        "description": "We manufacture a wide range of solar products - from 100W monocrystalline panels to 3000W portable power stations. All products are CE, RoHS and IEC certified, ready for European, Middle Eastern and African markets.",
+        "buttonText": "Explore Solar Products"
+      },
+      {
+        "title": "Energy-Efficient Home Appliances",
+        "description": "From air fryers to electric kettles - our home appliance line is engineered for energy efficiency and durability. With in-house tooling and R&D team, we deliver OEM/ODM solutions that meet CE, FCC and RoHS standards.",
+        "buttonText": "View Home Appliances"
+      },
+      {
+        "title": "3C Electronics & Accessories",
+        "description": "From TWS earphones to portable SSDs - we supply a curated portfolio of 3C electronics. Each product undergoes rigorous quality control and supports private-label branding with custom packaging.",
+        "buttonText": "View 3C Electronics"
+      }
+    ],
+    "whyChoose": {
+      "title": "Why Global Buyers Choose HousePlus",
+      "subtitle": "With 14+ years of manufacturing experience and responsive service, HousePlus delivers reliable products on time, every time. Your success is our commitment.",
+      "features": [
+        {
+          "icon": "Factory",
+          "title": "Vertically Integrated Factory",
+          "desc": "Over 20,000 m2 of production space with in-house tooling, assembly lines and quality labs - full control from raw material to finished product."
+        },
+        {
+          "icon": "Certified",
+          "title": "International Certifications",
+          "desc": "CE, FCC, RoHS, ISO 9001 and IEC certifications ensure our products meet the regulatory requirements of Europe, North America and beyond."
+        },
+        {
+          "icon": "Support",
+          "title": "Flexible OEM/ODM Support",
+          "desc": "Custom branding, private-label packaging and product modifications available from MOQ 100 pcs. Dedicated account managers for every client."
+        }
+      ]
+    },
+    "carousel": [
+      {
+        "imageAlt": "HousePlus Solar Energy Solutions",
+        "title": "High-Efficiency Solar Solutions",
+        "subtitle": "Professional-grade solar panels, inverters and portable power stations for global wholesale partners",
+        "buttonText": "Explore Solar Products"
+      },
+      {
+        "imageAlt": "HousePlus Home Appliances",
+        "title": "Smart Home Appliances",
+        "subtitle": "Energy-efficient kitchen and household appliances with full OEM/ODM customisation support",
+        "buttonText": "View Appliances"
+      },
+      {
+        "imageAlt": "HousePlus 3C Electronics",
+        "title": "3C Electronics & Accessories",
+        "subtitle": "Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers",
+        "buttonText": "View Electronics"
+      }
+    ],
+    "categories": {
+      "title": "Our Product Categories",
+      "subtitle": "Comprehensive solutions for homes and businesses worldwide",
+      "items": [
+        {
+          "emoji": "☀️",
+          "title": "Solar Water Pumps",
+          "description": "High-efficiency solar-powered pumping systems",
+          "href": "/products/solar-water-pumps"
+        },
+        {
+          "emoji": "⚡",
+          "title": "Solar Cables",
+          "description": "Premium photovoltaic cable solutions",
+          "href": "/products/solar-cables"
+        },
+        {
+          "emoji": "🏠",
+          "title": "Home Appliances",
+          "description": "Range hoods, gas stoves, ovens & more",
+          "href": "/products/home-appliances"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Partner with Us?",
+      "subtitle": "Get competitive pricing for bulk orders and OEM customization.",
+      "button": "Request a Quote"
+    }
+  },
+  "footer": {
+    "brand": "HousePlus",
+    "brandDescription": "Professional HousePlus manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.",
+    "quickLinks": "Quick Links",
+    "products": "Products",
+    "housePlusSolar": "HousePlus Solar",
+    "housePlusAppliances": "HousePlus Appliances",
+    "housePlusElectronics": "HousePlus Electronics",
+    "housePlusOemOdm": "HousePlus OEM/ODM",
+    "company": "HousePlus Group",
+    "housePlusFactory": "HousePlus Factory",
+    "housePlusTeam": "HousePlus Team",
+    "housePlusSupport": "HousePlus Support",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "contactUs": "Contact Us",
+    "directSupport": "Direct Support",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat ID",
+    "copyright": "© 2024 HousePlus Group. All rights reserved.",
+    "followUs": "Follow HousePlus",
+    "sitemap": "Sitemap",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Select Language",
+    "mobileLanguage": "Language"
+  },
+  "serviceWidget": {
+    "onlineSupport": "Online Support",
+    "service": "Service",
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "housePlusGlobalTrade": "HousePlus Global Trade"
+  },
+  "inquiryForm": {
+    "title": "HousePlus Inquiry",
+    "name": "Full Name *",
+    "email": "Business Email *",
+    "company": "Company Name",
+    "whatsapp": "WhatsApp (Optional)",
+    "product": "HousePlus Product of Interest",
+    "quantity": "Estimated Quantity",
+    "message": "Message *",
+    "submit": "Send HousePlus Inquiry",
+    "sending": "Sending...",
+    "success": "Thank you! HousePlus team will reply within 24 hours.",
+    "error": "Submission failed. Please try again later.",
+    "placeholderProduct": "e.g., HousePlus Solar Panel 500W",
+    "placeholderQuantity": "e.g., 500 pcs"
+  }
+}
