@@ -94,17 +94,19 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     if (!link) return `/${lang}/products`;
     let url = link.cached_url || link.url || '';
     
-    // Handle Storyblok internal links
-    if (link.linktype === 'story' && url && !url.startsWith('/')) {
-      return `/${lang}/${url}`;
+    if (url.startsWith('http')) {
+      return url;
     }
     
-    // Ensure absolute paths for internal links
-    if (url && !url.startsWith('http') && !url.startsWith('/')) {
-      return `/${lang}/${url}`;
+    if (url.startsWith(`/${lang}/`)) {
+      return url;
     }
     
-    return url || `/${lang}/products`;
+    if (url.startsWith('/')) {
+      return `/${lang}${url}`;
+    }
+    
+    return `/${lang}/${url}`;
   };
 
   return (
