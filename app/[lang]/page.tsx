@@ -55,7 +55,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
       title: 'High-Efficiency Solar Solutions',
       subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
       button_text: 'Explore Solar Products',
-      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+      button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: '2',
@@ -66,7 +66,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
       title: 'Smart Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
       button_text: 'View Appliances',
-      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+      button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: '3',
@@ -77,7 +77,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
       title: '3C Electronics & Accessories',
       subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
       button_text: 'View Electronics',
-      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+      button_link: { url: `/products`, cached_url: `/products` }
     },
   ];
 
