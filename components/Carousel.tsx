@@ -32,14 +32,14 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Professional HousePlus default items if none provided by Storyblok
-  const defaultItems: CarouselItem[] = [
+  const getDefaultItems = (): CarouselItem[] => [
     {
       _uid: 'default-1',
       image: { filename: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1920&q=80', alt: 'HousePlus Solar Solutions' },
       title: 'High-Efficiency Solar Solutions',
       subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
       button_text: 'Explore Solar Products',
-      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+      button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: 'default-2',
@@ -47,7 +47,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
       title: 'Smart Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
       button_text: 'View Appliances',
-      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+      button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: 'default-3',
@@ -55,9 +55,11 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
       title: '3C Electronics & Accessories',
       subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
       button_text: 'View Electronics',
-      button_link: { url: `/${lang}/products`, cached_url: `/${lang}/products` }
+      button_link: { url: `/products`, cached_url: `/products` }
     }
   ];
+
+  const defaultItems = getDefaultItems();
 
   const displayItems = items && items.length > 0 ? items : defaultItems;
 
