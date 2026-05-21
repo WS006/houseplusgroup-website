@@ -193,7 +193,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
       <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
         <div className="relative max-w-4xl mx-auto text-center z-10">
-          <Breadcrumb items={breadcrumbs} />
+          <Breadcrumb lang={lang} />
           <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
             {titles[lang] || titles.en}
           </h1>

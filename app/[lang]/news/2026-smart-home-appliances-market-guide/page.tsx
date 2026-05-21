@@ -266,7 +266,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           sizes="100vw"
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
-          <Breadcrumb items={breadcrumbs} />
+          <Breadcrumb lang={lang} customLabel={content.title} />
           <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
             {content.title}
           </h1>
