@@ -19,10 +19,21 @@ export interface SEOConfig {
 export const siteConfig = {
   name: 'HousePlus',
   url: 'https://www.houseplus-ch.com',
-  // Updated description for better SEO, incorporating core business and inquiry guidance
   description: 'HousePlus: Professional manufacturer of solar systems, home appliances, and 3C electronics. Global wholesale and OEM/ODM services. Contact us for competitive pricing and custom solutions. | Made in China',
   defaultImage: 'https://www.houseplus-ch.com/og-image.jpg',
 };
+
+// Get locale-specific Open Graph type
+function getOGLocale(lang: string): string {
+  const localeMap: Record<string, string> = {
+    en: 'en_US',
+    es: 'es_ES',
+    de: 'de_DE',
+    fr: 'fr_FR',
+    ar: 'ar_SA',
+  };
+  return localeMap[lang] || 'en_US';
+}
 
 export function generateMetadata(config: SEOConfig): Metadata {
   const canonicalUrl = `${siteConfig.url}${config.url}`;
@@ -41,15 +52,19 @@ export function generateMetadata(config: SEOConfig): Metadata {
       description: config.description,
       url: canonicalUrl,
       siteName: siteConfig.name,
+      locale: getOGLocale(config.lang),
+      alternateLocale: config.lang !== 'en' ? ['en_US'] : ['es_ES', 'de_DE', 'fr_FR', 'ar_SA'],
       images: [
         {
           url: config.image || siteConfig.defaultImage,
           width: 1200,
           height: 630,
           alt: config.title,
+          secureUrl: config.image || siteConfig.defaultImage,
+          type: 'image/jpeg',
         },
       ],
-      type: config.type === 'article' ? 'article' : config.type === 'product' ? 'website' : 'website',
+      type: config.type === 'article' ? 'article' : config.type === 'product' ? 'product' : 'website',
       ...(config.datePublished && { publishedTime: config.datePublished }),
       ...(config.dateModified && { modifiedTime: config.dateModified }),
     },
@@ -57,9 +72,18 @@ export function generateMetadata(config: SEOConfig): Metadata {
       card: 'summary_large_image',
       title: config.title,
       description: config.description,
-      images: [config.image || siteConfig.defaultImage],
+      site: '@HousePlusGroup',
+      creator: '@HousePlusGroup',
+      images: [
+        {
+          url: config.image || siteConfig.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: config.title,
+        }
+      ],
     },
-    robots: 'index, follow',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     alternates: {
       canonical: canonicalUrl,
       languages: {

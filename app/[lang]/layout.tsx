@@ -48,6 +48,19 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} suppressHydrationWarning>
+      <head>
+        {/* Preconnect to critical domains for better performance */}
+        <link rel="preconnect" href="https://a.storyblok.com" />
+        <link rel="dns-prefetch" href="https://a.storyblok.com" />
+        
+        {/* Preconnect to Cloudinary if used */}
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        
+        {/* Preconnect to fonts.googleapis.com */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      </head>
       <body suppressHydrationWarning>
         <Header lang={lang} />
         <main className="min-h-screen">{children}</main>

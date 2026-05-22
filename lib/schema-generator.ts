@@ -174,6 +174,61 @@ export interface ItemListSchemaItem {
   position: number;
 }
 
+export function generateLocalBusinessSchema(options: SchemaOptions) {
+  const { title, description, url, lang } = options;
+  
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'HousePlus Group',
+    alternateName: 'HousePlus',
+    description,
+    url,
+    logo: `${BASE_URL}/logo.png`,
+    image: `${BASE_URL}/og-image.jpg`,
+    telephone: '+86-155-7811-9543',
+    email: 'sales@houseplus-ch.com',
+    priceRange: '$$$',
+    foundingDate: '2010',
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: 500 },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Foshan',
+      addressRegion: 'Guangdong',
+      addressCountry: 'CN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '23.1291',
+      longitude: '113.2644',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday'
+      ],
+      opens: '09:00',
+      closes: '18:00',
+    },
+    sameAs: [
+      `${BASE_URL}/en`,
+      url,
+    ],
+    areaServed: 'Worldwide',
+    knowsAbout: [
+      'Solar Energy Systems',
+      'Home Appliances',
+      '3C Electronics',
+      'OEM Manufacturing',
+      'ODM Services',
+    ],
+  };
+}
+
 export function generateItemListSchema(
   name: string,
   description: string,

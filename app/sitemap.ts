@@ -5,10 +5,10 @@ const locales = ['en', 'es', 'de', 'fr', 'ar'];
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
-  '': '2026-05-01', // Homepage - last content review date
-  'about': '2026-04-15', // About page - last major update
-  'products': '2026-05-01', // Products list - content review date
-  'news': '2026-05-04', // News - recent update
+  '': '2026-05-22', // Homepage - last content review date
+  'about-us': '2026-05-22', // About page - last major update
+  'products': '2026-05-22', // Products list - content review date
+  'news': '2026-05-22', // News - recent update
   'factory': '2026-03-20', // Factory - last major update
   'service': '2026-04-10', // Service - last update
   'faq': '2026-04-25', // FAQ - last update
@@ -19,13 +19,13 @@ const lastModDates: Record<string, string> = {
   'privacy': '2026-01-01', // Privacy - last major update
   'terms': '2026-05-06', // Terms of Service - created
   'cookie-policy': '2026-05-06', // Cookie Policy - created
-  'sitemap-page': '2026-05-04', // Sitemap - created date
+  'sitemap-page': '2026-05-22', // Sitemap - created date
 };
 
 // All static page slugs (relative to lang prefix)
 const staticPages = [
   { slug: '', priority: 1.0, changefreq: 'daily' as const },
-  { slug: 'about', priority: 0.9, changefreq: 'monthly' as const },
+  { slug: 'about-us', priority: 0.9, changefreq: 'monthly' as const },
   { slug: 'products', priority: 0.9, changefreq: 'daily' as const },
   { slug: 'news', priority: 0.8, changefreq: 'weekly' as const },
   { slug: 'factory', priority: 0.7, changefreq: 'monthly' as const },
