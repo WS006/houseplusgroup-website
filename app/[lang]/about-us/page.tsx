@@ -219,15 +219,15 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="/images/about/production-line.jpg"
-                  alt="HousePlus production line - Automated manufacturing for solar products, home appliances and 3C electronics with ISO 9001 quality control"
+                  src="/images/about/houseplus-automated-manufacturing-facility.jpg"
+                  alt="HousePlus automated manufacturing facility - Professional production of solar energy systems, home appliances and 3C electronics with quality control"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   loading="lazy"
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
-                  Automated Production Lines — Monthly capacity 100,000+ units
+                  HousePlus Automated Manufacturing — Quality Control & Production Excellence
                 </figcaption>
               </figure>
             </div>
