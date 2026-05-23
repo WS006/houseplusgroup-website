@@ -1,12 +1,47 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import SchemaRenderer from '@/components/SchemaRenderer';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
 
-export default async function RegionsPage() {
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Global Wholesale Markets - Africa, Southeast Asia, Europe',
+    es: 'Mercados Mayoristas Globales de HousePlus - África, Sudeste Asiático, Europa',
+    de: 'HousePlus Globale Großhandelsmärkte - Afrika, Südostasien, Europa',
+    fr: 'Marchés de Gros Mondiaux HousePlus - Afrique, Asie du Sud-Est, Europe',
+    ar: 'أسواق الجملة العالمية HousePlus - أفريقيا، جنوب شرق آسيا، أوروبا',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus specialized wholesale solutions for Africa, Southeast Asia, and Europe. Local support, fast shipping, and certified products for global B2B buyers.',
+    es: 'Soluciones mayoristas especializadas de HousePlus para África, Sudeste Asiático y Europa. Soporte local, envíos rápidos y productos certificados para compradores B2B globales.',
+    de: 'HousePlus spezialisierte Großhandelslösungen für Afrika, Südostasien und Europa. Lokaler Support, schnelle Lieferungen und zertifizierte Produkte für globale B2B-Käufer.',
+    fr: 'Solutions de gros spécialisées HousePlus pour l\'Afrique, l\'Asie du Sud-Est et l\'Europe. Support local, livraison rapide et produits certifiés pour les acheteurs B2B mondiaux.',
+    ar: 'حلول الجملة المتخصصة HousePlus لأفريقيا وجنوب شرق آسيا وأوروبا. دعم محلي، شحن سريع، ومنتجات موثقة للمشترين B2B العالميين.',
+  };
+
+  return generateSEOMetadata({
+    title: titles[lang] || titles.en,
+    description: descriptions[lang] || descriptions.en,
+    keywords: ['global wholesale', 'regional distribution', 'Africa', 'Southeast Asia', 'Europe', 'HousePlus'],
+    url: `/${lang}/regions`,
+    lang: lang as any,
+    type: 'website',
+  });
+}
+
+export default async function RegionsPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  
   const breadcrumbs = [
-    { name: 'Home', url: '/' },
-    { name: 'Regions', url: '/regions' },
+    { name: lang === 'en' ? 'Home' : lang === 'es' ? 'Inicio' : lang === 'de' ? 'Startseite' : lang === 'fr' ? 'Accueil' : 'الرئيسية', url: `/${lang}` },
+    { name: lang === 'en' ? 'Regions' : lang === 'es' ? 'Regiones' : lang === 'de' ? 'Regionen' : lang === 'fr' ? 'Régions' : 'المناطق', url: `/${lang}/regions` },
   ];
 
   const schemas = [
@@ -68,7 +103,7 @@ export default async function RegionsPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Africa */}
-              <Link href="/en/regions/africa">
+              <Link href={`/${lang}/regions/africa`}>
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-orange-200">
                   <h3 className="text-3xl font-bold mb-4 text-orange-600">🌍 Africa</h3>
                   <p className="text-gray-700 mb-6">
@@ -86,7 +121,7 @@ export default async function RegionsPage() {
               </Link>
 
               {/* Southeast Asia */}
-              <Link href="/en/regions/southeast_asia">
+              <Link href={`/${lang}/regions/southeast_asia`}>
                 <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-green-200">
                   <h3 className="text-3xl font-bold mb-4 text-green-600">🌏 Southeast Asia</h3>
                   <p className="text-gray-700 mb-6">
@@ -104,7 +139,7 @@ export default async function RegionsPage() {
               </Link>
 
               {/* Europe */}
-              <Link href="/en/regions/europe">
+              <Link href={`/${lang}/regions/europe`}>
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all cursor-pointer h-full border border-blue-200">
                   <h3 className="text-3xl font-bold mb-4 text-blue-600">🌎 Europe</h3>
                   <p className="text-gray-700 mb-6">
@@ -160,7 +195,7 @@ export default async function RegionsPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/en/contact"
+                href={`/${lang}/contact`}
                 className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-900"
               >
                 Contact HousePlus Sales
