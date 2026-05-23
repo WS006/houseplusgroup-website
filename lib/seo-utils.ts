@@ -12,8 +12,8 @@ export interface SEOConfig {
   author?: string;
   datePublished?: string;
   dateModified?: string;
-  geoRegion?: string; // e.g., 'CN' for China, 'US' for United States
-  geoPlacename?: string; // e.g., 'Guangzhou', 'New York'
+  geoRegion?: string;
+  geoPlacename?: string;
 }
 
 export const siteConfig = {
@@ -23,7 +23,6 @@ export const siteConfig = {
   defaultImage: 'https://www.houseplus-ch.com/og-image.jpg',
 };
 
-// Get locale-specific Open Graph type
 function getOGLocale(lang: string): string {
   const localeMap: Record<string, string> = {
     en: 'en_US',
@@ -38,7 +37,6 @@ function getOGLocale(lang: string): string {
 export function generateMetadata(config: SEOConfig): Metadata {
   const canonicalUrl = `${siteConfig.url}${config.url}`;
   
-  // Default keywords if not provided, based on core business
   const defaultKeywords = ['solar systems', 'home appliances', '3C electronics', 'wholesale', 'OEM', 'ODM', 'Made in China'];
   const keywords = config.keywords && config.keywords.length > 0 ? config.keywords : defaultKeywords;
 
@@ -64,7 +62,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
           type: 'image/jpeg',
         },
       ],
-      type: config.type === 'article' ? 'article' : config.type === 'product' ? 'product' : 'website',
+      type: config.type === 'article' ? 'article' : 'website',
       ...(config.datePublished && { publishedTime: config.datePublished }),
       ...(config.dateModified && { modifiedTime: config.dateModified }),
     },
@@ -95,7 +93,6 @@ export function generateMetadata(config: SEOConfig): Metadata {
         'x-default': `${siteConfig.url}/en${config.url}`,
       },
     },
-    // Add GEO meta tags if provided
     ...(config.geoRegion && { 'geo.region': config.geoRegion }),
     ...(config.geoPlacename && { 'geo.placename': config.geoPlacename }),
   };
