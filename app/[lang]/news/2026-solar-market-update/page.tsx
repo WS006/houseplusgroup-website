@@ -12,179 +12,180 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
 
   const titles: Record<string, string> = {
-    en: 'Discover the latest solar energy innovations from HousePlus in 2026, including high-efficiency panels, advanced battery storage, and integrated smart solutions for B2B clients worldwide.',
-    es: 'Descubre las últimas innovaciones en energía solar de HousePlus en 2026, incluyendo paneles de alta eficiencia, almacenamiento de baterías avanzado y soluciones inteligentes integradas para clientes B2B en todo el mundo.',
-    de: 'Entdecke die neuesten Innovationen in der Solarenergie von HousePlus im 2026, darunter hocheffiziente Module, fortschrittliche Batteriespeicher und integrierte intelligente Lösungen für B2B-Kunden weltweit.',
-    fr: 'Tendances du marché mondial des appareils électroménagers intelligents 2026 et guide d\'approvisionnement B2B',
-    ar: 'اكتشف أحدث ابتكارات الطاقة الشمسية من HousePlus في 2026، بما في ذلك الألواح عالية الكفاءة، وتخزين البطاريات المتقدم، والحلول الذكية المتكاملة لعملاء B2B في جميع أنحاء العالم.',
+    en: '2026 Solar Energy Market Update: HousePlus Leading Innovation in High-Efficiency Panels and Storage Solutions',
+    es: 'Actualización del mercado de energía solar 2026: HousePlus liderando la innovación en paneles de alta eficiencia y soluciones de almacenamiento',
+    de: 'Aktualisierung des Solarenergiemarktes 2026: HousePlus führt Innovation bei hocheffizienten Modulen und Speicherlösungen an',
+    fr: 'Mise à jour du marché de l\'énergie solaire 2026: HousePlus à la pointe de l\'innovation dans les panneaux à haut rendement et les solutions de stockage',
+    ar: 'تحديث سوق الطاقة الشمسية 2026: HousePlus تقود الابتكار في الألواح عالية الكفاءة وحلول التخزين',
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Discover the latest solar energy innovations from HousePlus in 2026, including high-efficiency panels, advanced battery storage, and integrated smart solutions for B2B clients worldwide.',
-    es: 'Descubre las últimas innovaciones en energía solar de HousePlus en 2026, incluyendo paneles de alta eficiencia, almacenamiento de baterías avanzado y soluciones inteligentes integradas para clientes B2B en todo el mundo.',
-    de: 'Entdecke die neuesten Innovationen in der Solarenergie von HousePlus im 2026, darunter hocheffiziente Module, fortschrittliche Batteriespeicher und integrierte intelligente Lösungen für B2B-Kunden weltweit.',
-    fr: 'Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents en 2026, y compris l\'intégration de l\'IA, l\'efficacité énergétique et la fabrication durable. Un guide complet pour les acheteurs B2B de HousePlus.',
-    ar: 'اكتشف أحدث ابتكارات الطاقة الشمسية من HousePlus في 2026، بما في ذلك الألواح عالية الكفاءة، وتخزين البطاريات المتقدم، والحلول الذكية المتكاملة لعملاء B2B في جميع أنحاء العالم.',
+    en: '2026 solar market update from HousePlus: Discover our latest high-efficiency solar panels (26-30% conversion rate), advanced battery storage systems (5-20 kWh), and integrated smart energy management solutions for global B2B buyers.',
+    es: 'Actualización del mercado solar 2026 de HousePlus: Descubra nuestros últimos paneles solares de alta eficiencia (tasa de conversión del 26-30%), sistemas avanzados de almacenamiento de baterías (5-20 kWh) y soluciones integradas de gestión inteligente de energía para compradores B2B globales.',
+    de: 'Aktualisierung des Solarmarktes 2026 von HousePlus: Entdecken Sie unsere neuesten hocheffizienten Solarmodule (26-30% Wirkungsgrad), fortschrittliche Batteriespeichersysteme (5-20 kWh) und integrierte intelligente Energiemanagement-Lösungen für globale B2B-Käufer.',
+    fr: 'Mise à jour du marché solaire 2026 de HousePlus: Découvrez nos derniers panneaux solaires à haut rendement (taux de conversion de 26-30%), systèmes de stockage de batteries avancés (5-20 kWh) et solutions intégrées de gestion intelligente de l\'énergie pour les acheteurs B2B mondiaux.',
+    ar: 'تحديث سوق الطاقة الشمسية 2026 من HousePlus: اكتشف أحدث ألواحنا الشمسية عالية الكفاءة (معدل تحويل 26-30%)، وأنظمة تخزين البطاريات المتقدمة (5-20 كيلو وات ساعة) وحلول إدارة الطاقة الذكية المتكاملة لمشتري B2B العالميين.',
   };
 
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
-    keywords: ["solar energy", "solar panels", "battery storage", "renewable energy", "B2B procurement", "HousePlus"],
+    keywords: ["solar energy", "solar panels", "battery storage", "renewable energy", "B2B procurement", "HousePlus", "2026 market update", "high-efficiency panels", "energy storage"],
     url: `/${lang}/news/2026-solar-market-update`,
     lang: lang as any,
     type: 'article',
+    datePublished: '2026-03-08',
   });
 }
 
 const articleContent: Record<string, any> = {
   en: {
-    title: 'Solar Energy Innovations in 2026: HousePlus Leading the Industry',
-    authorName: 'HousePlus Editorial',
+    title: '2026 Solar Energy Market Update: HousePlus Leading Innovation in High-Efficiency Panels and Storage Solutions',
+    authorName: 'HousePlus Editorial Team',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus solar panels and energy storage solutions',
+    heroImageAlt: 'HousePlus high-efficiency solar panels installation',
     sections: [
       {
-        heading: 'Introduction: Industry Trends in 2026',
-        text: 'The market continues to evolve in 2026, with HousePlus at the forefront of innovation. This article explores our latest developments and what they mean for B2B buyers worldwide.'
+        heading: 'Solar Energy Market Overview 2026',
+        text: 'The global solar energy market continues its unprecedented growth in 2026, with HousePlus at the forefront of technological innovation. This year, we see significant adoption across Africa, Southeast Asia, and Europe as businesses and utilities transition to renewable energy sources. HousePlus is proud to be a trusted partner for distributors, developers, and EPC companies worldwide.'
       },
       {
-        heading: 'Product Innovation and Quality',
-        text: 'HousePlus maintains rigorous quality standards and innovative design approaches. All products meet international certifications including CE, FCC, RoHS, and ISO 9001.'
+        heading: 'Breakthrough in Solar Panel Efficiency',
+        text: 'HousePlus is proud to introduce our 2026 lineup of high-efficiency solar panels achieving 26-30% conversion rates through PERC-HJT hybrid technology. Our new monocrystalline panels feature anti-reflective coating, bifacial design, and temperature-resistant materials, ensuring optimal performance even in extreme climates. All panels are certified to IEC 61215, IEC 61730, and come with 25-year linear performance warranties.'
       },
       {
-        heading: 'Global Market Strategy',
-        text: 'HousePlus serves clients across Africa, Asia, Europe, and the Americas. Our OEM and ODM services provide flexible solutions for distributors and brand owners.'
+        heading: 'Advanced Battery Storage Systems',
+        text: 'Our 2026 energy storage portfolio includes 5kWh to 20kWh modular battery systems using LFP (Lithium Iron Phosphate) chemistry for enhanced safety and longevity. These systems feature smart BMS (Battery Management System), remote monitoring capabilities, and seamless integration with our solar inverters. With over 6,000 cycle life and 10-year warranty, HousePlus storage solutions deliver reliable backup power and peak shaving for commercial and industrial applications.'
       },
       {
-        heading: 'Sustainability Commitment',
-        text: 'We are committed to sustainable manufacturing practices, energy-efficient products, and reducing environmental impact throughout the supply chain.'
+        heading: 'Smart Energy Management & IoT Integration',
+        text: 'HousePlus introduces our integrated IoT platform for real-time energy monitoring and optimization. Features include AI-powered load forecasting, automated demand response, and comprehensive energy analytics accessible via web dashboard and mobile app. Our system supports Modbus, RS485, and Ethernet communication protocols, enabling easy integration with existing building management systems for our B2B partners.'
       },
       {
-        heading: 'Why Partner with HousePlus',
-        text: 'With competitive pricing, reliable quality, comprehensive after-sales support, and flexible MOQ options, HousePlus is your trusted partner for undefined products.'
+        heading: 'Why Choose HousePlus Solar Solutions',
+        text: 'With competitive factory-direct pricing, 24/7 technical support, custom OEM/ODM capabilities, and flexible MOQ starting at 100 units, HousePlus is your ideal partner for solar procurement. Our logistics team ensures timely delivery to Africa, Southeast Asia, Europe, and beyond, with comprehensive documentation and certification support for local market compliance.'
       }
     ]
   },
   es: {
-    title: 'Innovaciones en Energía Solar en 2026: HousePlus Liderando la Industria',
-    authorName: 'HousePlus Editorial',
+    title: 'Actualización del mercado de energía solar 2026: HousePlus liderando la innovación en paneles de alta eficiencia y soluciones de almacenamiento',
+    authorName: 'Equipo Editorial de HousePlus',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus solar panels and energy storage solutions',
+    heroImageAlt: 'Instalación de paneles solares de alta eficiencia HousePlus',
     sections: [
       {
-        heading: 'Introducción: Tendencias de la Industria en 2026',
-        text: 'El mercado continúa evolucionando en 2026, con HousePlus a la vanguardia de la innovación. Este artículo explora nuestros últimos desarrollos y lo que significan para los compradores B2B en todo el mundo.'
+        heading: 'Visión general del mercado de energía solar 2026',
+        text: 'El mercado global de energía solar continúa su crecimiento sin precedentes en 2026, con HousePlus a la vanguardia de la innovación tecnológica. Este año, vemos una adopción significativa en África, el sudeste asiático y Europa a medida que empresas y servicios públicos realizan la transición a fuentes de energía renovable. HousePlus está orgulloso de ser un socio de confianza para distribuidores, desarrolladores y empresas EPC en todo el mundo.'
       },
       {
-        heading: 'Innovación de Productos y Calidad',
-        text: 'HousePlus mantiene rigurosos estándares de calidad y enfoques de diseño innovadores. Todos los productos cumplen con certificaciones internacionales incluyendo CE, FCC, RoHS e ISO 9001.'
+        heading: 'Avance en la eficiencia de los paneles solares',
+        text: 'HousePlus se enorgullece de presentar nuestra línea 2026 de paneles solares de alta eficiencia que logran tasas de conversión del 26-30% mediante tecnología híbrida PERC-HJT. Nuevos paneles monocristalinos cuentan con revestimiento antirreflectante, diseño bifacial y materiales resistentes a la temperatura, garantizando un rendimiento óptimo incluso en climas extremos. Todos los paneles están certificados según IEC 61215, IEC 61730 y vienen con garantías de rendimiento lineal de 25 años.'
       },
       {
-        heading: 'Estrategia de Mercado Global',
-        text: 'HousePlus sirve a clientes en África, Asia, Europa y las Américas. Nuestros servicios OEM y ODM proporcionan soluciones flexibles para distribuidores y propietarios de marcas.'
+        heading: 'Sistemas avanzados de almacenamiento de baterías',
+        text: 'Nuestra cartera de almacenamiento de energía 2026 incluye sistemas de baterías modulares de 5kWh a 20kWh que utilizan química LFP (fosfato de hierro y litio) para mayor seguridad y durabilidad. Estos sistemas cuentan con BMS inteligente, capacidades de monitoreo remoto e integración perfecta con nuestros inversores solares. Con más de 6,000 ciclos de vida y garantía de 10 años, las soluciones de almacenamiento de HousePlus brindan energía de respaldo confiable y reducción de picos para aplicaciones comerciales e industriales.'
       },
       {
-        heading: 'Compromiso con la Sostenibilidad',
-        text: 'Estamos comprometidos con prácticas de fabricación sostenible, productos eficientes energéticamente y la reducción del impacto ambiental en toda la cadena de suministro.'
+        heading: 'Gestión inteligente de energía e integración IoT',
+        text: 'HousePlus presenta nuestra plataforma IoT integrada para monitoreo y optimización de energía en tiempo real. Las características incluyen pronóstico de carga impulsado por IA, respuesta a la demanda automatizada y análisis de energía integral accesibles a través de panel web y aplicación móvil. Nuestro sistema admite protocolos de comunicación Modbus, RS485 y Ethernet, lo que permite una integración sencilla con los sistemas de gestión de edificios existentes para nuestros socios B2B.'
       },
       {
-        heading: 'Por Qué Asociarse con HousePlus',
-        text: 'Con precios competitivos, calidad confiable, soporte post-venta completo y opciones flexibles de MOQ, HousePlus es su socio de confianza para productos de undefined.'
+        heading: 'Por qué elegir las soluciones solares de HousePlus',
+        text: 'Con precios competitivos directos de fábrica, soporte técnico 24/7, capacidades personalizadas de OEM/ODM y MOQ flexible a partir de 100 unidades, HousePlus es su socio ideal para el abastecimiento solar. Nuestro equipo de logística garantiza entrega oportuna a África, Sudeste Asiático, Europa y más allá, con documentación completa y soporte de certificación para el cumplimiento del mercado local.'
       }
     ]
   },
   de: {
-    title: 'Innovationen in der Solarenergie im 2026: HousePlus an der Spitze der Branche',
-    authorName: 'HousePlus Editorial',
+    title: 'Aktualisierung des Solarenergiemarktes 2026: HousePlus führt Innovation bei hocheffizienten Modulen und Speicherlösungen an',
+    authorName: 'HousePlus Redaktionsteam',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus solar panels and energy storage solutions',
+    heroImageAlt: 'HousePlus Hocheffiziente Solarpanel-Installation',
     sections: [
       {
-        heading: 'Einführung: Branchentrends im 2026',
-        text: 'Der Markt entwickelt sich im 2026 weiter, wobei HousePlus an der Spitze der Innovation steht. Dieser Artikel untersucht unsere neuesten Entwicklungen und was sie für B2B-Käufer weltweit bedeuten.'
+        heading: 'Solarenergiemarkt-Übersicht 2026',
+        text: 'Der globale Solarenergiemarkt setzt sein beispielloses Wachstum im 2026 fort, wobei HousePlus an der Spitze der technologischen Innovation steht. In diesem Jahr sehen wir eine signifikante Adoption in Afrika, Südostasien und Europa, da Unternehmen und Versorgungswerke auf erneuerbare Energiequellen umstellen. HousePlus ist stolz, ein vertrauenswürdiger Partner für Händler, Entwickler und EPC-Unternehmen weltweit zu sein.'
       },
       {
-        heading: 'Produktinnovation und Qualität',
-        text: 'HousePlus hält strenge Qualitätsstandards und innovative Designansätze ein. Alle Produkte erfüllen internationale Zertifizierungen wie CE, FCC, RoHS und ISO 9001.'
+        heading: 'Durchbruch in der Solarpanel-Effizienz',
+        text: 'HousePlus freut sich, unsere 2026er-Linie hocheffizienter Solarmodule vorzustellen, die durch PERC-HJT-Hybridtechnologie Wirkungsgrade von 26-30% erreichen. Unsere neuen monokristallinen Module verfügen über Antireflexbeschichtung, bifaziales Design und temperaturbeständige Materialien, die auch in extremen Klimen optimale Leistung gewährleisten. Alle Module sind nach IEC 61215, IEC 61730 zertifiziert und kommen mit 25-jähriger linearer Leistungsgarantie.'
       },
       {
-        heading: 'Globale Marktstrategie',
-        text: 'HousePlus bedient Kunden in Afrika, Asien, Europa und Amerika. Unsere OEM- und ODM-Dienste bieten flexible Lösungen für Distributoren und Markeninhaber.'
+        heading: 'Fortschrittliche Batteriespeichersysteme',
+        text: 'Unser 2026er-Energiespeicherportfolio umfasst modulare Batteriesysteme von 5kWh bis 20kWh mit LFP-Chemie (Lithium-Eisen-Phosphat) für erhöhte Sicherheit und Langlebigkeit. Diese Systeme verfügen über intelligentes BMS, Fernüberwachungsfunktionen und nahtlose Integration mit unseren Solarwechselrichtern. Mit über 6.000 Zyklen Lebensdauer und 10-jähriger Garantie liefern HousePlus-Speicherlösungen zuverlässige Notstromversorgung und Peak-Shaving für kommerzielle und industrielle Anwendungen.'
       },
       {
-        heading: 'Nachhaltigkeitsverpflichtung',
-        text: 'Wir sind nachhaltigen Herstellungsverfahren, energieeffizienten Produkten und der Reduktion der Umweltauswirkungen in der gesamten Lieferkette verpflichtet.'
+        heading: 'Intelligentes Energiemanagement & IoT-Integration',
+        text: 'HousePlus stellt unsere integrierte IoT-Plattform für Echtzeit-Energiemonitoring und -optimierung vor. Funktionen umfassen KI-gestützte Lastvorhersage, automatisierte Demand-Response und umfassende Energieanalysen, die über Web-Dashboard und mobile App zugänglich sind. Unser System unterstützt Modbus-, RS485- und Ethernet-Kommunikationsprotokolle und ermöglicht eine einfache Integration in bestehende Gebäudemanagementsysteme für unsere B2B-Partner.'
       },
       {
-        heading: 'Warum mit HousePlus zusammenarbeiten',
-        text: 'Mit wettbewerbsfähigen Preisen, zuverlässiger Qualität, umfassendem Kundendienst und flexiblen MOQ-Optionen ist HousePlus Ihr vertrauenswürdiger Partner für undefined-Produkte.'
+        heading: 'Warum HousePlus Solar-Lösungen wählen',
+        text: 'Mit wettbewerbsfähigen Direktpreisen aus der Fabrik, 24/7-Techniksupport, benutzerdefinierten OEM/ODM-Fähigkeiten und flexiblem MOQ ab 100 Einheiten ist HousePlus Ihr idealer Partner für Solarbeschaffung. Unser Logistikteam sorgt für pünktliche Lieferung nach Afrika, Südostasien, Europa und darüber hinaus, mit umfassender Dokumentation und Zertifizierungsunterstützung für lokale Marktanforderungen.'
       }
     ]
   },
   fr: {
-    title: 'Innovations en énergie solaire en 2026: HousePlus à la pointe de l\'industrie',
-    authorName: 'HousePlus Editorial',
+    title: 'Mise à jour du marché de l\'énergie solaire 2026: HousePlus à la pointe de l\'innovation dans les panneaux à haut rendement et les solutions de stockage',
+    authorName: 'Équipe éditoriale HousePlus',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus solar panels and energy storage solutions',
+    heroImageAlt: 'Installation de panneaux solaires à haut rendement HousePlus',
     sections: [
       {
-        heading: 'Introduction: Tendances de l\'industrie en 2026',
-        text: 'Le marché continue d\'évoluer en 2026, avec HousePlus à l\'avant-garde de l\'innovation. Cet article explore nos derniers développements et ce qu\'ils signifient pour les acheteurs B2B du monde entier.'
+        heading: 'Aperçu du marché de l\'énergie solaire 2026',
+        text: 'Le marché mondial de l\'énergie solaire poursuit sa croissance sans précédent en 2026, avec HousePlus à l\'avant-garde de l\'innovation technologique. Cette année, nous constatons une adoption significative en Afrique, en Asie du Sud-Est et en Europe, car les entreprises et les services publics se tournent vers des sources d\'énergie renouvelables. HousePlus est fier d\'être un partenaire de confiance pour les distributeurs, les développeurs et les entreprises EPC du monde entier.'
       },
       {
-        heading: 'Innovation produit et qualité',
-        text: 'HousePlus maintient des normes de qualité rigoureuses et des approches de conception innovantes. Tous les produits répondent aux certifications internationales, notamment CE, FCC, RoHS et ISO 9001.'
+        heading: 'Rupture dans l\'efficacité des panneaux solaires',
+        text: 'HousePlus est fier de présenter notre gamme 2026 de panneaux solaires à haut rendement atteignant des taux de conversion de 26-30% grâce à la technologie hybride PERC-HJT. Nos nouveaux panneaux monocristallins disposent d\'un revêtement antireflet, d\'une conception bifaciale et de matériaux résistants à la température, garantissant des performances optimales même dans des climats extrêmes. Tous les panneaux sont certifiés IEC 61215, IEC 61730 et sont accompagnés de garanties de performance linéaires de 25 ans.'
       },
       {
-        heading: 'Stratégie de marché mondial',
-        text: 'HousePlus dessert des clients en Afrique, Asie, Europe et Amériques. Nos services OEM et ODM fournissent des solutions flexibles pour les distributeurs et les propriétaires de marques.'
+        heading: 'Systèmes de stockage de batteries avancés',
+        text: 'Notre portefeuille de stockage d\'énergie 2026 inclut des systèmes de batteries modulaires de 5kWh à 20kWh utilisant la chimie LFP (phosphate de fer et de lithium) pour une sécurité et une longévité améliorées. Ces systèmes disposent d\'un BMS intelligent, de capacités de surveillance à distance et d\'une intégration transparente avec nos onduleurs solaires. Avec plus de 6 000 cycles de vie et une garantie de 10 ans, les solutions de stockage HousePlus offrent une alimentation de secours fiable et un peak shaving pour les applications commerciales et industrielles.'
       },
       {
-        heading: 'Engagement pour la durabilité',
-        text: 'Nous nous engageons pour des pratiques de fabrication durables, des produits énergétiques et la réduction de l\'impact environnemental tout au long de la chaîne d\'approvisionnement.'
+        heading: 'Gestion intelligente de l\'énergie et intégration IoT',
+        text: 'HousePlus présente notre plateforme IoT intégrée pour la surveillance et l\'optimisation de l\'énergie en temps réel. Les fonctionnalités incluent la prévision de charge alimentée par l\'IA, la réponse à la demande automatisée et des analyses énergétiques complètes accessibles via tableau de bord web et application mobile. Notre système prend en charge les protocoles de communication Modbus, RS485 et Ethernet, permettant une intégration facile avec les systèmes de gestion de bâtiment existants pour nos partenaires B2B.'
       },
       {
-        heading: 'Pourquoi s\'associer à HousePlus',
-        text: 'Avec des prix compétitifs, une qualité fiable, un support après-vente complet et des options MOQ flexibles, HousePlus est votre partenaire de confiance pour les produits undefined.'
+        heading: 'Pourquoi choisir les solutions solaires HousePlus',
+        text: 'Avec des prix compétitifs directs d\'usine, un support technique 24/7, des capacités OEM/ODM personnalisées et un MOQ flexible à partir de 100 unités, HousePlus est votre partenaire idéal pour l\'approvisionnement solaire. Notre équipe logistique garantit une livraison en temps opportun en Afrique, en Asie du Sud-Est, en Europe et au-delà, avec une documentation complète et un support de certification pour la conformité du marché local.'
       }
     ]
   },
   ar: {
-    title: 'ابتكارات الطاقة الشمسية في 2026: HousePlus تقود الصناعة',
-    authorName: 'HousePlus Editorial',
+    title: 'تحديث سوق الطاقة الشمسية 2026: HousePlus تقود الابتكار في الألواح عالية الكفاءة وحلول التخزين',
+    authorName: 'فريق تحرير HousePlus',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
-    heroImageAlt: 'HousePlus solar panels and energy storage solutions',
+    heroImageAlt: 'تركيب ألواح شمسية عالية الكفاءة من HousePlus',
     sections: [
       {
-        heading: 'مقدمة: اتجاهات الصناعة في 2026',
-        text: 'يستمر السوق في التطور في 2026، مع HousePlus في طليعة الابتكار. يستكشف هذا المقال أحدث تطوراتنا وما تعنيه لمشتري B2B في جميع أنحاء العالم.'
+        heading: 'نظرة عامة على سوق الطاقة الشمسية 2026',
+        text: 'يواصل سوق الطاقة الشمسية العالمي نموه غير المسبوق في 2026، مع HousePlus في طليعة الابتكار التكنولوجي. هذا العام، نرى اعتمادًا كبيرًا في أفريقيا وجنوب شرق آسيا وأوروبا حيث تنتقل الشركات والمرافق إلى مصادر الطاقة المتجددة. تفخر HousePlus بأن تكون شريكًا موثوقًا للموزعين والمطورين وشركات EPC في جميع أنحاء العالم.'
       },
       {
-        heading: 'الابتكار في المنتجات والجودة',
-        text: 'تحافظ HousePlus على معايير جودة صارمة ونهج تصميم مبتكرة. جميع المنتجات تتوافق مع الشهادات الدولية بما في ذلك CE و FCC و RoHS و ISO 9001.'
+        heading: 'اختراق في كفاءة الألواح الشمسية',
+        text: 'تفخر HousePlus بتقديم مجموعتنا 2026 من الألواح الشمسية عالية الكفاءة التي تحقق معدلات تحويل 26-30% من خلال تقنية PERC-HJT الهجينة. تتميز ألواحنا أحادية البلورة الجديدة بطبقة مضادة للانعكاس وتصميم وجهي ومواد مقاومة للحرارة، مما يضمن أداءً مثاليًا حتى في المناخات القاسية. جميع الألواح معتمدة وفقًا لـ IEC 61215 و IEC 61730 وتأتي مع ضمانات أداء خطية لمدة 25 عامًا.'
       },
       {
-        heading: 'استراتيجية السوق العالمية',
-        text: 'تخدم HousePlus العملاء في أفريقيا وآسيا وأوروبا والأمريكتين. توفر خدماتنا OEM و ODM حلولاً مرنة للموزعين وأصحاب العلامات التجارية.'
+        heading: 'أنظمة تخزين البطاريات المتقدمة',
+        text: 'تشمل محفظتنا لتخزين الطاقة 2026 أنظمة بطاريات معيارية من 5 كيلو وات ساعة إلى 20 كيلو وات ساعة تستخدم كيمياء LFP (فوسفات الحديد والليثيوم) لتحسين الأمان والطول العمر. تتميز هذه الأنظمة بـ BMS ذكي وقدرات مراقبة عن بعد وتكامل سلس مع محولاتنا الشمسية. مع أكثر من 6000 دورة حياة وضمان لمدة 10 عامًا، توفر حلول تخزين HousePlus طاقة احتياطية موثوقة وتقليل الذروة للتطبيقات التجارية والصناعية.'
       },
       {
-        heading: 'الالتزام بالاستدامة',
-        text: 'نحن ملتزمون بممارسات التصنيع المستدامة والمنتجات موفرة للطاقة وتقليل التأثير البيئي في جميع أنحاء سلسلة التوريد.'
+        heading: 'إدارة الطاقة الذكية وتكامل IoT',
+        text: 'تقديم HousePlus منصتنا IoT المتكاملة لمراقبة وتحسين الطاقة في الوقت الفعلي. تشمل الميزات التنبؤ بالحمل الذي يعمل بواسطة الذكاء الاصطناعي والاستجابة الآلية للطلب والتحليلات الطاقية الشاملة التي يمكن الوصول إليها عبر لوحة تحكم الويب وتطبيق الجوال. يدعم نظامنا بروتوكولات الاتصال Modbus و RS485 و Ethernet، مما يتيح تكاملًا سهلاً مع أنظمة إدارة المباني الحالية لشركائنا من B2B.'
       },
       {
-        heading: 'لماذا تشارك مع HousePlus',
-        text: 'مع أسعار تنافسية وجودة موثوقة ودعم شامل بعد البيع وخيارات MOQ مرنة، HousePlus هو شريكك الموثوق لمنتجات undefined.'
+        heading: 'لماذا تختار حلول HousePlus الشمسية',
+        text: 'مع أسعار تنافسية مباشرة من المصنع ودعم فني 24/7 وقدرات OEM/ODM مخصصة و MOQ مرن بدءًا من 100 وحدة، HousePlus هو شريكك المثالي لشراء الطاقة الشمسية. يضمن فريق الخدمات اللوجستية لدينا تسليمًا في الوقت المناسب إلى أفريقيا وجنوب شرق آسيا وأوروبا وما بعدها، مع وثائق شاملة ودعم للشهادات للامتثال لسوق المحلي.'
       }
     ]
   }
@@ -195,8 +196,8 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
   const content = articleContent[lang] || articleContent.en;
 
   const breadcrumbs = [
-    { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },
-    { name: lang === 'en' ? 'News' : 'Noticias', url: `/${lang}/news` },
+    { name: lang === 'en' ? 'Home' : lang === 'es' ? 'Inicio' : lang === 'de' ? 'Startseite' : lang === 'fr' ? 'Accueil' : 'الرئيسية', url: `/${lang}` },
+    { name: lang === 'en' ? 'News' : lang === 'es' ? 'Noticias' : lang === 'de' ? 'Neuigkeiten' : lang === 'fr' ? 'Actualités' : 'الأخبار', url: `/${lang}/news` },
     { name: content.title, url: `/${lang}/news/2026-solar-market-update` },
   ];
 
