@@ -14,6 +14,15 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async rewrites() {
+    return [
+      // Rewrite root key file to public folder
+      {
+        source: '/084fadfd7e4a435b942858f905846430.txt',
+        destination: '/084fadfd7e4a435b942858f905846430.txt',
+      },
+    ];
+  },
   async headers() {
     return [
       {
@@ -73,6 +82,20 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000',
+          },
+        ],
+      },
+      // Add cache headers for key file
+      {
+        source: '/084fadfd7e4a435b942858f905846430.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain; charset=utf-8',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600',
           },
         ],
       },
