@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.houseplus-ch.com/',
   },
+  other: {
+    'msvalidate.01': '084FADFD7E4A435B942858F905846430',
+  },
 };
 
 storyblokInit({

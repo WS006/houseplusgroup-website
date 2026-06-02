@@ -1,58 +1,97 @@
-'use client';
-import { useEffect, useState } from 'react';
+import { Metadata } from 'next';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
-import { useParams, notFound } from 'next/navigation';
 
-export default function Page() {
-  const params = useParams();
-  const lang = params.lang as string;
-  const slug = params.slug as string[];
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const fullSlug = slug?.join('/') || '';
+  const titleParts = fullSlug.split('/').filter(p => p);
+  
+  let title = '';
+  let description = '';
+  
+  if (titleParts.length > 0) {
+    const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+    const replacements: Record<string, string> = {
+      'about-us': 'About Us',
+      'contact': 'Contact',
+      'products': 'Products',
+      'news': 'News',
+      'regions': 'Regions',
+      'factory': 'Factory',
+      'service': 'Services',
+      'team': 'Team',
+      'faq': 'FAQ',
+      'careers': 'Careers',
+      'support': 'Support',
+      'privacy': 'Privacy Policy',
+      'terms': 'Terms of Service',
+      'cookie-policy': 'Cookie Policy',
+      'sitemap-page': 'Sitemap',
+    };
+    const humanizedParts = titleParts.map(p => replacements[p] || capitalize(p.replace(/-/g, ' ')));
+    
+    title = `${humanizedParts.join(' | ')} | HousePlus`;
+    description = `HousePlus ${humanizedParts.join(' - ')} page. Professional wholesale manufacturer of solar systems, home appliances and 3C electronics.`;
+  } else {
+    title = 'HousePlus - Professional Manufacturer';
+    description = 'HousePlus is a professional manufacturer of solar systems, home appliances and 3C electronics for global wholesale buyers.';
+  }
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+    },
+  };
+}
+
+export default async function CatchAllPage({ params }: { params: { lang: string; slug: string[] } }) {
+  const { lang, slug } = params;
   const fullSlug = slug?.join('/') || '';
   
-  const [story, setStory] = useState<any>(null);
-  const [subStories, setSubStories] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  let story: any = null;
+  let subStories: any[] = [];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const storyblokApi = getStoryblokApi();
-      try {
-        const { data } = await storyblokApi.getStory(fullSlug, { 
-          version: 'published', 
-          language: lang,
-          resolve_links: 'url',
-        });
-        setStory(data?.story);
-      } catch (e) {
-        console.error('Error fetching story:', e);
-        setError(true);
-      }
+  try {
+    const storyblokApi = getStoryblokApi();
+    const { data } = await storyblokApi.getStory(fullSlug, { 
+      version: 'published', 
+      language: lang,
+      resolve_links: 'url',
+    });
+    story = data?.story;
+  } catch (e) {
+    console.error('Error fetching story:', e);
+  }
 
-      try {
-        const { data: listData } = await storyblokApi.getStories({
-          starts_with: fullSlug + '/',
-          version: 'published',
-          language: lang,
-        });
-        setSubStories(listData?.stories || []);
-      } catch (e) {
-        console.error('Error fetching sub-stories:', e);
-      }
-      setLoading(false);
-    };
-    fetchData();
-  }, [fullSlug, lang]);
+  try {
+    const storyblokApi = getStoryblokApi();
+    const { data: listData } = await storyblokApi.getStories({
+      starts_with: fullSlug + '/',
+      version: 'published',
+      language: lang,
+    });
+    subStories = listData?.stories || [];
+  } catch (e) {
+    console.error('Error fetching sub-stories:', e);
+  }
 
-  if (loading) return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
-    </div>
-  );
-
-  // If no story and no sub-stories, and we had an error fetching, trigger 404
-  if (error && subStories.length === 0) {
-    notFound();
+  // If no story and no sub-stories, trigger 404
+  if (!story && subStories.length === 0) {
+    return (
+      <main className="min-h-screen bg-white">
+        <div className="max-w-4xl mx-auto py-20 px-4 text-center">
+          <h1 className="text-5xl font-black text-slate-900 mb-6">404 - Page Not Found</h1>
+          <p className="text-xl text-slate-600 mb-8">The page you're looking for doesn't exist.</p>
+          <a href={`/${lang}`} className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all">
+            ← Return to Home
+          </a>
+        </div>
+      </main>
+    );
   }
 
   return (
@@ -61,7 +100,7 @@ export default function Page() {
       <div className="bg-slate-50 py-24 px-4 border-b border-slate-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 tracking-tight">
-            {story?.content?.title || story?.name || fullSlug.split('/').pop()?.toUpperCase()}
+            {story?.content?.title || story?.name || fullSlug.split('/').pop()?.toUpperCase() || 'HousePlus'}
           </h1>
           <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
             {story?.content?.description || 'Professional HousePlus grade solution designed for reliability and performance.'}
