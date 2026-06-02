@@ -2,52 +2,167 @@
 
 import { useState } from 'react';
 
+const baseUrl = 'https://www.houseplus-ch.com';
+const locales = ['en', 'es', 'de', 'fr', 'ar'];
+
+// Main pages
+const staticPages = [
+  '', // homepage
+  'about-us',
+  'products',
+  'news',
+  'factory',
+  'service',
+  'faq',
+  'contact',
+  'team',
+  'careers',
+  'support',
+  'privacy',
+  'terms',
+  'cookie-policy',
+  'sitemap-page',
+];
+
+// Products
+const productSlugs = [
+  'headphone-over-ear',
+  'smart-watch',
+  'usb-c-cable-2m',
+  'solar-power-bank-20000mah',
+  'bluetooth-earphone-tws',
+  'portable-ssd-1tb',
+  'micro-sd-128gb',
+  'induction-cooktop-2000w',
+  'electric-kettle-1-5l',
+  'toaster-2-slice',
+  'air-fryer-5-8l',
+  'solar-fan-20w',
+  'solar-street-light-200w',
+  'charge-controller-60a',
+  'lead-acid-battery-100ah',
+  'lithium-battery-5kwh',
+  'solar-inverter-3kw',
+  'solar-panel-500w',
+];
+
+// News pages
+const newsSlugs = [
+  '2026-solar-market-update',
+  '2026-appliances-market-update',
+  '2026-electronics-market-update',
+  '2026-smart-home-appliances-market-guide',
+  'advanced-manufacturing-home-appliances',
+  'energy-efficiency-standards-appliances',
+  'global-wholesale-guide-home-appliances',
+  'oem-odm-manufacturing-guide',
+  'smart-home-appliances',
+  'solar-energy-storage-industrial-manufacturing',
+  'solar-energy-storage-solutions',
+  'the-evolution-of-3c-electronics',
+  'the-future-of-smart-home-appliances',
+  'the-future-of-solar-energy',
+];
+
+function generateAllUrls() {
+  const urls: string[] = [];
+
+  // Generate URLs for static pages (all languages)
+  for (const lang of locales) {
+    for (const page of staticPages) {
+      const url = page ? `${baseUrl}/${lang}/${page}` : `${baseUrl}/${lang}`;
+      urls.push(url);
+    }
+
+    // Generate product URLs (all languages)
+    for (const product of productSlugs) {
+      urls.push(`${baseUrl}/${lang}/products/${product}`);
+    }
+
+    // Generate news URLs (all languages)
+    for (const news of newsSlugs) {
+      urls.push(`${baseUrl}/${lang}/news/${news}`);
+    }
+  }
+
+  // Root homepage (without lang prefix)
+  urls.push(baseUrl);
+
+  return urls;
+}
+
 export default function IndexNowPage() {
   const [url, setUrl] = useState('https://www.houseplus-ch.com/en');
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
+  const [progress, setProgress] = useState(0);
+  const [results, setResults] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
+
+  const allUrls = generateAllUrls();
 
   const submitUrls = async (urlsToSubmit: string[]) => {
     setLoading(true);
     setError(null);
-    setResult(null);
+    setResults([]);
+    setProgress(0);
 
-    try {
-      const response = await fetch('/api/indexnow', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ urls: urlsToSubmit }),
-      });
-
-      const data = await response.json();
-      setResult(data);
-    } catch (err) {
-      setError((err as Error).message);
-    } finally {
-      setLoading(false);
+    // Split into batches
+    const batchSize = 100;
+    const batches: string[][] = [];
+    
+    for (let i = 0; i < urlsToSubmit.length; i += batchSize) {
+      batches.push(urlsToSubmit.slice(i, i + batchSize));
     }
+
+    // Submit batches sequentially
+    const submitBatch = async (index: number) => {
+      if (index >= batches.length) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/indexnow', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ urls: batches[index] }),
+        });
+
+        const data = await response.json();
+        setResults(prev => [...prev, { batch: index + 1, total: batches.length, urls: batches[index], result: data }]);
+        setProgress(Math.round(((index + 1) / batches.length) * 100));
+        
+        // Next batch after delay
+        setTimeout(() => submitBatch(index + 1), 2000);
+      } catch (err) {
+        setError((err as Error).message);
+        setLoading(false);
+      }
+    };
+
+    submitBatch(0);
   };
 
   const submitSingleUrl = () => {
     submitUrls([url]);
   };
 
-  const submitAllUrls = () => {
-    const allUrls = [
-      'https://www.houseplus-ch.com/',
-      'https://www.houseplus-ch.com/en',
-      'https://www.houseplus-ch.com/en/about-us',
-      'https://www.houseplus-ch.com/en/products',
-      'https://www.houseplus-ch.com/en/news',
-      'https://www.houseplus-ch.com/en/contact',
-      'https://www.houseplus-ch.com/es',
-      'https://www.houseplus-ch.com/de',
-      'https://www.houseplus-ch.com/fr',
-      'https://www.houseplus-ch.com/ar',
-    ];
+  const submitMainPages = () => {
+    const mainUrls = [
+      baseUrl,
+      ...locales.map(lang => `${baseUrl}/${lang}`),
+      ...locales.flatMap(lang => 
+        staticPages.slice(0, 6).map(page => 
+          page ? `${baseUrl}/${lang}/${page}` : `${baseUrl}/${lang}`
+        )
+      ),
+    ].filter((v, i, a) => a.indexOf(v) === i); // Remove duplicates
+    submitUrls(mainUrls);
+  };
+
+  const submitAll = () => {
     submitUrls(allUrls);
   };
 
@@ -59,6 +174,7 @@ export default function IndexNowPage() {
             IndexNow URL Submission Tool
           </h1>
 
+          {/* Single URL Submission */}
           <div className="mb-8">
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Enter URL to submit
@@ -72,7 +188,8 @@ export default function IndexNowPage() {
             />
           </div>
 
-          <div className="flex gap-4 mb-8">
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 mb-8">
             <button
               onClick={submitSingleUrl}
               disabled={loading}
@@ -81,39 +198,90 @@ export default function IndexNowPage() {
               {loading ? 'Submitting...' : 'Submit Single URL'}
             </button>
             <button
-              onClick={submitAllUrls}
+              onClick={submitMainPages}
               disabled={loading}
               className="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 disabled:bg-gray-400 transition-colors"
             >
-              Submit All Main URLs
+              Submit Main Pages (~50 URLs)
+            </button>
+            <button
+              onClick={submitAll}
+              disabled={loading}
+              className="px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 disabled:bg-gray-400 transition-colors"
+            >
+              Submit All Pages ({allUrls.length} URLs)
             </button>
           </div>
 
+          {/* Progress */}
+          {loading && (
+            <div className="mb-6">
+              <div className="flex justify-between text-sm text-gray-600 mb-2">
+              <span>Submitting...</span>
+              <span>{progress}%</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2.5">
+              <div 
+                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+          </div>
+          )}
+
+          {/* Error */}
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
               Error: {error}
             </div>
           )}
 
-          {result && (
-            <div className="border border-gray-200 rounded-lg p-6">
+          {/* Results */}
+          {results.length > 0 && (
+            <div className="border border-gray-200 rounded-lg p-6 mb-6">
               <h2 className="text-xl font-semibold mb-4">
-                {result.success ? '✅ Success!' : '⚠️ Result'}
+                {results.every(r => r.result?.success) ? '✅ All submissions successful!' : '📋 Results'}
               </h2>
-              <pre className="bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto">
-                {JSON.stringify(result, null, 2)}
-              </pre>
+              <div className="space-y-3 max-h-96 overflow-y-auto">
+                {results.map((res, i) => (
+                  <div key={i} className="bg-gray-50 p-3 rounded-lg">
+                    <div className="font-medium text-sm mb-1">
+                    Batch {res.batch}/{res.total} - {res.result?.success ? '✅ Success' : '⚠️ Completed'}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                    {res.urls.length} URLs submitted
+                  </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
+          {/* Info Section */}
           <div className="mt-8 border-t border-gray-200 pt-6">
             <h3 className="text-lg font-medium mb-4">How it works</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• IndexNow is a protocol to instantly notify search engines of new or updated content</li>
-              <li>• Your verification key: <code className="bg-gray-100 px-2 py-1 rounded">084fadfd7e4a435b942858f905846430</code></li>
-              <li>• Verification file available at: <code className="bg-gray-100 px-2 py-1 rounded">https://www.houseplus-ch.com/084fadfd7e4a435b942858f905846430.txt</code></li>
-              <li>• Supported search engines: Bing, Yandex, and more</li>
-            </ul>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-medium text-gray-800 mb-2">Statistics</h4>
+                <ul className="space-y-1 text-gray-600 text-sm">
+                  <li>• Total pages available: <strong>{allUrls.length}</strong></li>
+                  <li>• Languages: {locales.join(', ')}</li>
+                  <li>• Static pages: {staticPages.length}</li>
+                  <li>• Products: {productSlugs.length}</li>
+                  <li>• News articles: {newsSlugs.length}</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-medium text-gray-800 mb-2">IndexNow Details</h4>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>• IndexNow is a protocol to instantly notify search engines of new or updated content</li>
+                  <li>• Your verification key: <code className="bg-gray-100 px-2 py-0.5 rounded">084fadfd7e4a435b942858f905846430</code></li>
+                  <li>• Verification file: <a href={`${baseUrl}/084fadfd7e4a435b942858f905846430.txt`} className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">View file</a></li>
+                  <li>• Supported search engines: Bing, Yandex, and more</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
