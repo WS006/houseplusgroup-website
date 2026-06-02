@@ -7,39 +7,63 @@ on:
   workflow_dispatch:
     # Allow manual trigger
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   generate-news:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-      
+
+      - name: Configure git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
       - name: Run news generator script
         run: |
           cd scripts
           node news-generator.js
-      
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected"
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes to commit"
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
+        if: steps.git-check.outputs.changes == 'true'
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'feat: add monthly news articles'
           title: 'Monthly News Update'
           body: |
             This PR contains automatically generated news articles for this month.
-            
+
             Changes:
             - 2-3 new articles added
             - Random publish dates
             - Multi-language support (English, Spanish, German, French, Arabic)
             - News list page updated
-            
+
             Please review and merge.
           branch: monthly-news-update
           delete-branch: true
