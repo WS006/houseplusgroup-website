@@ -1,0 +1,97 @@
+name: IndexNow Auto Submit
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Generate URLs and submit to IndexNow
+        run: |
+          node -e "
+            const baseUrl = 'https://www.houseplus-ch.com';
+            const locales = ['en', 'es', 'de', 'fr', 'ar'];
+            
+            const staticPageSlugs = ['', 'about-us', 'products', 'news', 'factory', 'service', 'faq', 'contact', 'team', 'careers', 'support', 'privacy', 'terms', 'cookie-policy', 'sitemap-page'];
+            const productSlugs = ['headphone-over-ear', 'smart-watch', 'usb-c-cable-2m', 'solar-power-bank-20000mah', 'bluetooth-earphone-tws', 'portable-ssd-1tb', 'micro-sd-128gb', 'induction-cooktop-2000w', 'electric-kettle-1-5l', 'toaster-2-slice', 'air-fryer-5-8l', 'solar-fan-20w', 'solar-street-light-200w', 'charge-controller-60a', 'lead-acid-battery-100ah', 'lithium-battery-5kwh', 'solar-inverter-3kw', 'solar-panel-500w'];
+            const newsSlugs = ['2026-solar-market-update', '2026-appliances-market-update', '2026-electronics-market-update', '2026-smart-home-appliances-market-guide', 'advanced-manufacturing-home-appliances', 'energy-efficiency-standards-appliances', 'global-wholesale-guide-home-appliances', 'oem-odm-manufacturing-guide', 'smart-home-appliances', 'solar-energy-storage-industrial-manufacturing', 'solar-energy-storage-solutions', 'the-evolution-of-3c-electronics', 'the-future-of-smart-home-appliances', 'the-future-of-solar-energy'];
+            
+            const urls = [baseUrl];
+            
+            for (const lang of locales) {
+              for (const slug of staticPageSlugs) {
+                urls.push(slug ? \`\${baseUrl}/\${lang}/\${slug}\` : \`\${baseUrl}/\${lang}\`);
+              }
+              for (const product of productSlugs) {
+                urls.push(\`\${baseUrl}/\${lang}/products/\${product}\`);
+              }
+              for (const news of newsSlugs) {
+                urls.push(\`\${baseUrl}/\${lang}/news/\${news}\`);
+              }
+            }
+            
+            console.log(\`Generated \${urls.length} URLs\`);
+            
+            // Submit in batches
+            const batchSize = 100;
+            const indexNowKey = '084fadfd7e4a435b942858f905846430';
+            const endpoints = ['https://www.bing.com/indexnow', 'https://api.indexnow.org/indexnow'];
+            
+            async function submitBatch(batch) {
+              const payload = JSON.stringify({
+                host: 'www.houseplus-ch.com',
+                key: indexNowKey,
+                keyLocation: \`\${baseUrl}/\${indexNowKey}.txt\`,
+                urlList: batch
+              });
+              
+              for (const endpoint of endpoints) {
+                try {
+                  const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                    body: payload
+                  });
+                  
+                  if (response.ok) {
+                    console.log(\`Successfully submitted \${batch.length} URLs to \${endpoint}\`);
+                    return true;
+                  }
+                } catch (e) {
+                  console.log(\`Failed to submit to \${endpoint}: \${e.message}\`);
+                }
+              }
+              return false;
+            }
+            
+            async function run() {
+              for (let i = 0; i < urls.length; i += batchSize) {
+                const batch = urls.slice(i, i + batchSize);
+                console.log(\`Submitting batch \${Math.floor(i/batchSize) + 1} (\${batch.length} URLs)...\`);
+                await submitBatch(batch);
+                await new Promise(r => setTimeout(r, 2000));
+              }
+              console.log('All URLs submitted successfully!');
+            }
+            
+            run().catch(console.error);
+          "
+
+      - name: Notify completion
+        run: echo "IndexNow submission completed successfully."
