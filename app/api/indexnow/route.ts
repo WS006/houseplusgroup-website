@@ -1,19 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { searchEngines, WebhookConfig } from '@/lib/search-engines';
+import { submitToSearchEngines, sendWebhookNotification } from '@/lib/submission-service';
 
-const INDEXNOW_KEY = '084fadfd7e4a435b942858f905846430';
 const BASE_URL = 'https://www.houseplus-ch.com';
-
-// IndexNow endpoints for different search engines
-const INDEXNOW_ENDPOINTS = [
-  'https://api.indexnow.org/indexnow',
-  'https://www.bing.com/indexnow',
-  'https://yandex.com/indexnow',
-];
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { url, urls } = body;
+    const { url, urls, engines, notify } = body;
 
     if (!url && !urls) {
       return NextResponse.json(
@@ -34,50 +28,37 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const payload = {
-      host: 'www.houseplus-ch.com',
-      key: INDEXNOW_KEY,
-      keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`,
-      urlList: urlsToSubmit,
-    };
+    // Submit to search engines
+    const result = await submitToSearchEngines(urlsToSubmit, engines);
 
-    const results = [];
-
-    for (const endpoint of INDEXNOW_ENDPOINTS) {
-      try {
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json; charset=utf-8',
-          },
-          body: JSON.stringify(payload),
-        });
-
-        results.push({
-          endpoint,
-          status: response.status,
-          statusText: response.statusText,
-          success: response.ok,
-        });
-
-        if (response.ok) {
-          break; // Success with first endpoint that works
-        }
-      } catch (error) {
-        results.push({
-          endpoint,
-          error: (error as Error).message,
-          success: false,
+    // Send notifications if requested
+    if (notify) {
+      const webhooks: WebhookConfig[] = [];
+      
+      // Slack webhook from environment variable
+      if (process.env.SLACK_WEBHOOK_URL) {
+        webhooks.push({
+          id: 'slack',
+          name: 'Slack',
+          type: 'slack',
+          url: process.env.SLACK_WEBHOOK_URL,
+          active: true,
         });
       }
+
+      await sendWebhookNotification(result, webhooks);
     }
 
-    const success = results.some(r => r.success);
-
     return NextResponse.json({
-      success,
-      submittedUrls: urlsToSubmit.length,
-      results,
+      success: result.success,
+      submittedUrls: result.totalUrls,
+      timestamp: result.timestamp,
+      results: result.results.map(r => ({
+        engine: r.engineName,
+        success: r.success,
+        statusCode: r.statusCode,
+        message: r.message,
+      })),
     });
   } catch (error) {
     console.error('IndexNow error:', error);
@@ -96,15 +77,24 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         message: 'IndexNow API',
-        endpoints: INDEXNOW_ENDPOINTS,
-        usage: 'POST /api/indexnow with url or urls parameter',
-        example: 'POST {"url": "https://www.houseplus-ch.com/en"}',
+        supportedEngines: searchEngines.map(e => ({
+          id: e.id,
+          name: e.name,
+          requiresAuth: e.requiresAuth,
+          description: e.description,
+        })),
+        usage: 'POST /api/indexnow with url, urls, engines (optional), notify (optional) parameters',
+        example: {
+          single: 'POST {"url": "https://www.houseplus-ch.com/en"}',
+          multiple: 'POST {"urls": ["https://www.houseplus-ch.com/en", "https://www.houseplus-ch.com/en/about-us"]}',
+          withEngines: 'POST {"urls": [...], "engines": ["bing", "google"]}',
+          withNotify: 'POST {"urls": [...], "notify": true}',
+        },
       },
       { status: 200 }
     );
   }
 
-  // For GET requests, simulate submission
   if (!url.startsWith(BASE_URL)) {
     return NextResponse.json(
       { error: `URL must start with ${BASE_URL}` },
