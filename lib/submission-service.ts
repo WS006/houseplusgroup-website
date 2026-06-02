@@ -1,5 +1,6 @@
 import { searchEngines, SubmissionResult, SubmitResult, WebhookConfig } from './search-engines';
 import { baseUrl } from './urls';
+import jwt from 'jsonwebtoken';
 
 const INDEXNOW_KEY = '084fadfd7e4a435b942858f905846430';
 
@@ -140,8 +141,6 @@ async function submitToGoogle(urls: string[]): Promise<{ success: boolean; statu
 
 async function getGoogleAccessToken(serviceAccount: any): Promise<string | null> {
   try {
-    const jwt = require('jsonwebtoken');
-    
     const payload = {
       iss: serviceAccount.client_email,
       scope: 'https://www.googleapis.com/auth/indexing',
