@@ -77,45 +77,98 @@ async function submitToIndexNow(urls: string[], endpoint: string): Promise<{ suc
 }
 
 async function submitToGoogle(urls: string[]): Promise<{ success: boolean; statusCode?: number; message?: string }> {
-  const apiKey = process.env.GOOGLE_INDEXING_API_KEY;
+  const serviceAccountJson = process.env.GOOGLE_SERVICE_ACCOUNT;
   
-  if (!apiKey) {
+  if (!serviceAccountJson) {
     return {
       success: false,
-      message: 'Google API key not configured',
+      message: 'Google service account not configured',
     };
   }
 
-  let successCount = 0;
-
-  for (const url of urls) {
-    try {
-      const response = await fetch(
-        `https://indexing.googleapis.com/v3/urlNotifications:publish?key=${apiKey}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            url,
-            type: 'URL_UPDATED',
-          }),
-        }
-      );
-
-      if (response.ok) {
-        successCount++;
-      }
-    } catch (error) {
-      console.error(`Failed to submit ${url} to Google:`, error);
+  try {
+    const serviceAccount = JSON.parse(serviceAccountJson);
+    const accessToken = await getGoogleAccessToken(serviceAccount);
+    
+    if (!accessToken) {
+      return {
+        success: false,
+        message: 'Failed to get Google access token',
+      };
     }
-  }
 
-  return {
-    success: successCount === urls.length,
-    message: successCount === urls.length 
-      ? 'All URLs submitted successfully' 
-      : `${successCount}/${urls.length} URLs submitted`,
-  };
+    let successCount = 0;
+
+    for (const url of urls) {
+      try {
+        const response = await fetch(
+          'https://indexing.googleapis.com/v3/urlNotifications:publish',
+          {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${accessToken}`,
+            },
+            body: JSON.stringify({
+              url,
+              type: 'URL_UPDATED',
+            }),
+          }
+        );
+
+        if (response.ok) {
+          successCount++;
+        }
+      } catch (error) {
+        console.error(`Failed to submit ${url} to Google:`, error);
+      }
+    }
+
+    return {
+      success: successCount === urls.length,
+      message: successCount === urls.length 
+        ? 'All URLs submitted successfully' 
+        : `${successCount}/${urls.length} URLs submitted`,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: `Invalid Google service account: ${(error as Error).message}`,
+    };
+  }
+}
+
+async function getGoogleAccessToken(serviceAccount: any): Promise<string | null> {
+  try {
+    const jwt = require('jsonwebtoken');
+    
+    const payload = {
+      iss: serviceAccount.client_email,
+      scope: 'https://www.googleapis.com/auth/indexing',
+      aud: 'https://oauth2.googleapis.com/token',
+      exp: Math.floor(Date.now() / 1000) + 3600,
+      iat: Math.floor(Date.now() / 1000),
+    };
+
+    const token = jwt.sign(payload, serviceAccount.private_key, {
+      algorithm: 'RS256',
+    });
+
+    const response = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+        assertion: token,
+      }),
+    });
+
+    const data = await response.json();
+    return data.access_token || null;
+  } catch (error) {
+    console.error('Failed to get Google access token:', error);
+    return null;
+  }
 }
 
 export async function sendWebhookNotification(
