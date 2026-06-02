@@ -91,20 +91,41 @@ function generateAllUrls() {
   return urls;
 }
 
+function generateMainPageUrls() {
+  const urls: string[] = [];
+  // 根域名首页
+  urls.push(baseUrl);
+  // 每种语言的首页和主要页面
+  for (const lang of locales) {
+    urls.push(`${baseUrl}/${lang}`);
+    urls.push(`${baseUrl}/${lang}/about-us`);
+    urls.push(`${baseUrl}/${lang}/products`);
+    urls.push(`${baseUrl}/${lang}/news`);
+    urls.push(`${baseUrl}/${lang}/factory`);
+    urls.push(`${baseUrl}/${lang}/service`);
+    urls.push(`${baseUrl}/${lang}/faq`);
+    urls.push(`${baseUrl}/${lang}/contact`);
+  }
+  return urls;
+}
+
 export default function IndexNowPage() {
   const [url, setUrl] = useState('https://www.houseplus-ch.com/en');
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [showPreview, setShowPreview] = useState<'none' | 'main' | 'all'>('none');
 
   const allUrls = generateAllUrls();
+  const mainUrls = generateMainPageUrls();
 
   const submitUrls = async (urlsToSubmit: string[]) => {
     setLoading(true);
     setError(null);
     setResults([]);
     setProgress(0);
+    setShowPreview('none');
 
     // Split into batches
     const batchSize = 100;
@@ -150,15 +171,6 @@ export default function IndexNowPage() {
   };
 
   const submitMainPages = () => {
-    const mainUrls = [
-      baseUrl,
-      ...locales.map(lang => `${baseUrl}/${lang}`),
-      ...locales.flatMap(lang => 
-        staticPages.slice(0, 6).map(page => 
-          page ? `${baseUrl}/${lang}/${page}` : `${baseUrl}/${lang}`
-        )
-      ),
-    ].filter((v, i, a) => a.indexOf(v) === i); // Remove duplicates
     submitUrls(mainUrls);
   };
 
@@ -202,8 +214,28 @@ export default function IndexNowPage() {
               disabled={loading}
               className="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 disabled:bg-gray-400 transition-colors"
             >
-              Submit Main Pages (~50 URLs)
+              Submit Main Pages ({mainUrls.length} URLs)
             </button>
+            <button
+              onClick={() => setShowPreview(showPreview === 'main' ? 'none' : 'main')}
+              disabled={loading}
+              className="px-4 py-3 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 disabled:bg-gray-100 transition-colors"
+            >
+              {showPreview === 'main' ? 'Hide Preview' : 'Preview'}
+            </button>
+          </div>
+          
+          {/* Main Pages Preview */}
+          {showPreview === 'main' && (
+            <div className="mb-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+              <h4 className="font-medium text-gray-800 mb-2">Main Pages to Submit:</h4>
+              <div className="max-h-40 overflow-y-auto text-sm text-gray-600">
+                {mainUrls.map((u, i) => <div key={i}>{u}</div>)}
+              </div>
+            </div>
+          )}
+          
+          <div className="flex flex-wrap gap-4 mb-8">
             <button
               onClick={submitAll}
               disabled={loading}
@@ -211,7 +243,24 @@ export default function IndexNowPage() {
             >
               Submit All Pages ({allUrls.length} URLs)
             </button>
+            <button
+              onClick={() => setShowPreview(showPreview === 'all' ? 'none' : 'all')}
+              disabled={loading}
+              className="px-4 py-3 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 disabled:bg-gray-100 transition-colors"
+            >
+              {showPreview === 'all' ? 'Hide Preview' : 'Preview'}
+            </button>
           </div>
+          
+          {/* All Pages Preview */}
+          {showPreview === 'all' && (
+            <div className="mb-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+              <h4 className="font-medium text-gray-800 mb-2">All Pages to Submit:</h4>
+              <div className="max-h-60 overflow-y-auto text-sm text-gray-600">
+                {allUrls.map((u, i) => <div key={i}>{u}</div>)}
+              </div>
+            </div>
+          )}
 
           {/* Progress */}
           {loading && (
