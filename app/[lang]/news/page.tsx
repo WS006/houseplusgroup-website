@@ -62,6 +62,66 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   };
 
   const articles = [  {
+    slug: '2026-appliances-market-update',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    imageAlt: 'HousePlus smart home appliances lineup',
+    title: {
+    en: 'Smart Home Appliances 2026: Energy-Efficient Designs for Global Markets',
+    es: 'Electrodomésticos Inteligentes 2026: Diseños Eficientes Energéticamente para Mercados Globales',
+    de: 'Smart-Home-Geräte 2026: Energieeffiziente Designs für globale Märkte',
+    fr: 'Appareils électroménagers intelligents 2026: Des designs énergétiques pour les marchés mondiaux',
+    ar: 'الأجهزة المنزلية الذكية 2026: تصميمات موفرة للطاقة للأسواق العالمية',
+    },
+    description: {
+    en: 'Explore HousePlus\'s 2026 line of smart home appliances featuring AI-driven controls, energy monitoring, and seamless integration for wholesale buyers across Africa, Asia, and Europe.',
+    es: 'Explora la línea 2026 de electrodomésticos inteligentes de HousePlus con controles impulsados por IA, monitoreo de energía e integración perfecta para compradores mayoristas en África, Asia y Europa.',
+    de: 'Entdecke die 2026-Linie von smarten Haushaltsgeräten von HousePlus mit KI-gesteuerten Steuerungen, Energieüberwachung und nahtloser Integration für Großhandelskäufer in Afrika, Asien und Europa.',
+    fr: 'Explorez la gamme 2026 d\'appareils électroménagers intelligents de HousePlus, avec des commandes pilotées par IA, un suivi de l\'énergie et une intégration transparente pour les acheteurs en gros en Afrique, en Asie et en Europe.',
+    ar: 'استكشف سلسلة 2026 من الأجهزة المنزلية الذكية من HousePlus التي تتميز بتحكم مدفوع بالذكاء الاصطناعي، ومراقبة الطاقة، والتكامل السلس لمشتري الجملة في أفريقيا وآسيا وأوروبا.',
+    },
+    date: '2026-04-03',
+  },
+  {
+    slug: '2026-electronics-market-update',
+    image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
+    imageAlt: 'HousePlus 3C electronics product showcase',
+    title: {
+    en: '3C Electronics Trends 2026: HousePlus Wholesale Innovation',
+    es: 'Tendencias en Electrónica 3C 2026: Innovación al por Mayor de HousePlus',
+    de: '3C-Elektronik-Trends 2026: HousePlus-Großhandelsinnovation',
+    fr: 'Tendances de l\'électronique 3C 2026: Innovation en gros de HousePlus',
+    ar: 'اتجاهات الإلكترونيات 3C 2026: ابتكار الجملة من HousePlus',
+    },
+    description: {
+    en: 'Stay ahead in 2026 with HousePlus\'s latest 3C electronics - premium audio devices, smart wearables, and innovative power solutions for B2B distributors.',
+    es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
+    de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
+    fr: 'Restez en tête en 2026 avec les derniers produits d\'électronique 3C de HousePlus - des appareils audio premium, des wearables intelligents et des solutions d\'énergie innovantes pour les distributeurs B2B.',
+    ar: 'ابق في المقدمة في 2026 مع أحدث إلكترونيات 3C من HousePlus - أجهزة صوتية عالية الجودة، وأجهزة قابلة للارتداء الذكية، وحلول طاقة مبتكرة لموزعي B2B.',
+    },
+    date: '2026-06-20',
+  },
+  {
+    slug: '2026-solar-market-update',
+    image: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
+    imageAlt: 'HousePlus solar panels and energy storage solutions',
+    title: {
+    en: 'Solar Energy Innovations in 2026: HousePlus Leading the Industry',
+    es: 'Innovaciones en Energía Solar en 2026: HousePlus Liderando la Industria',
+    de: 'Innovationen in der Solarenergie im 2026: HousePlus an der Spitze der Branche',
+    fr: 'Innovations en énergie solaire en 2026: HousePlus à la pointe de l\'industrie',
+    ar: 'ابتكارات الطاقة الشمسية في 2026: HousePlus تقود الصناعة',
+    },
+    description: {
+    en: 'Discover the latest solar energy innovations from HousePlus in 2026, including high-efficiency panels, advanced battery storage, and integrated smart solutions for B2B clients worldwide.',
+    es: 'Descubre las últimas innovaciones en energía solar de HousePlus en 2026, incluyendo paneles de alta eficiencia, almacenamiento de baterías avanzado y soluciones inteligentes integradas para clientes B2B en todo el mundo.',
+    de: 'Entdecke die neuesten Innovationen in der Solarenergie von HousePlus im 2026, darunter hocheffiziente Module, fortschrittliche Batteriespeicher und integrierte intelligente Lösungen für B2B-Kunden weltweit.',
+    fr: 'Découvrez les dernières innovations en énergie solaire de HousePlus en 2026, incluant des panneaux à haut rendement, un stockage par batterie avancé et des solutions intelligentes intégrées pour les clients B2B du monde entier.',
+    ar: 'اكتشف أحدث ابتكارات الطاقة الشمسية من HousePlus في 2026، بما في ذلك الألواح عالية الكفاءة، وتخزين البطاريات المتقدم، والحلول الذكية المتكاملة لعملاء B2B في جميع أنحاء العالم.',
+    },
+    date: '2026-05-20',
+  },
+  {
     slug: '2026-solar-market-update',
     image: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     imageAlt: 'HousePlus solar panels and energy storage solutions',

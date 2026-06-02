@@ -41,8 +41,8 @@ const articleContent: Record<string, any> = {
   en: {
     title: '3C Electronics Trends 2026: HousePlus Wholesale Innovation',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
+    datePublished: '2026-06-20',
+    dateModified: '2026-06-20',
     heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
@@ -71,8 +71,8 @@ const articleContent: Record<string, any> = {
   es: {
     title: 'Tendencias en Electrónica 3C 2026: Innovación al por Mayor de HousePlus',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
+    datePublished: '2026-06-20',
+    dateModified: '2026-06-20',
     heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
@@ -101,8 +101,8 @@ const articleContent: Record<string, any> = {
   de: {
     title: '3C-Elektronik-Trends 2026: HousePlus-Großhandelsinnovation',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
+    datePublished: '2026-06-20',
+    dateModified: '2026-06-20',
     heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
@@ -131,8 +131,8 @@ const articleContent: Record<string, any> = {
   fr: {
     title: 'Tendances de l\'électronique 3C 2026: Innovation en gros de HousePlus',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
+    datePublished: '2026-06-20',
+    dateModified: '2026-06-20',
     heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
@@ -161,8 +161,8 @@ const articleContent: Record<string, any> = {
   ar: {
     title: 'اتجاهات الإلكترونيات 3C 2026: ابتكار الجملة من HousePlus',
     authorName: 'HousePlus Editorial',
-    datePublished: '2026-04-17',
-    dateModified: '2026-04-17',
+    datePublished: '2026-06-20',
+    dateModified: '2026-06-20',
     heroImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
