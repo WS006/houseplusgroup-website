@@ -1,67 +1,52 @@
 import { MetadataRoute } from 'next';
-
-const baseUrl = 'https://www.houseplus-ch.com';
-const locales = ['en', 'es', 'de', 'fr', 'ar'];
+import { baseUrl, locales, staticPageSlugs, productSlugs, newsSlugs } from '@/lib/urls';
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
-  '': '2026-05-22', // Homepage - last content review date
-  'about-us': '2026-05-22', // About page - last major update
-  'products': '2026-05-22', // Products list - content review date
-  'news': '2026-05-22', // News - recent update
-  'factory': '2026-03-20', // Factory - last major update
-  'service': '2026-04-10', // Service - last update
-  'faq': '2026-04-25', // FAQ - last update
-  'contact': '2026-04-10', // Contact - last update
-  'team': '2026-03-15', // Team - last update
-  'careers': '2026-03-15', // Careers - last update
-  'support': '2026-04-20', // Support - last update
-  'privacy': '2026-01-01', // Privacy - last major update
-  'terms': '2026-05-06', // Terms of Service - created
-  'cookie-policy': '2026-05-06', // Cookie Policy - created
-  'sitemap-page': '2026-05-22', // Sitemap - created date
+  '': '2026-05-22',
+  'about-us': '2026-05-22',
+  'products': '2026-05-22',
+  'news': '2026-05-22',
+  'factory': '2026-03-20',
+  'service': '2026-04-10',
+  'faq': '2026-04-25',
+  'contact': '2026-04-10',
+  'team': '2026-03-15',
+  'careers': '2026-03-15',
+  'support': '2026-04-20',
+  'privacy': '2026-01-01',
+  'terms': '2026-05-06',
+  'cookie-policy': '2026-05-06',
+  'sitemap-page': '2026-05-22',
 };
 
-// All static page slugs (relative to lang prefix)
-const staticPages = [
-  { slug: '', priority: 1.0, changefreq: 'daily' as const },
-  { slug: 'about-us', priority: 0.9, changefreq: 'monthly' as const },
-  { slug: 'products', priority: 0.9, changefreq: 'daily' as const },
-  { slug: 'news', priority: 0.8, changefreq: 'weekly' as const },
-  { slug: 'factory', priority: 0.7, changefreq: 'monthly' as const },
-  { slug: 'service', priority: 0.7, changefreq: 'monthly' as const },
-  { slug: 'faq', priority: 0.6, changefreq: 'monthly' as const },
-  { slug: 'contact', priority: 0.8, changefreq: 'monthly' as const },
-  { slug: 'team', priority: 0.5, changefreq: 'monthly' as const },
-  { slug: 'careers', priority: 0.5, changefreq: 'monthly' as const },
-  { slug: 'support', priority: 0.6, changefreq: 'monthly' as const },
-  { slug: 'privacy', priority: 0.3, changefreq: 'yearly' as const },
-  { slug: 'terms', priority: 0.3, changefreq: 'yearly' as const },
-  { slug: 'cookie-policy', priority: 0.3, changefreq: 'yearly' as const },
-  { slug: 'sitemap-page', priority: 0.3, changefreq: 'monthly' as const },
-];
-
-// Product slugs from Storyblok (published stories under products/)
-const productSlugs = [
-  'headphone-over-ear',
-  'smart-watch',
-  'usb-c-cable-2m',
-  'solar-power-bank-20000mah',
-  'bluetooth-earphone-tws',
-  'portable-ssd-1tb',
-  'micro-sd-128gb',
-  'induction-cooktop-2000w',
-  'electric-kettle-1-5l',
-  'toaster-2-slice',
-  'air-fryer-5-8l',
-  'solar-fan-20w',
-  'solar-street-light-200w',
-  'charge-controller-60a',
-  'lead-acid-battery-100ah',
-  'lithium-battery-5kwh',
-  'solar-inverter-3kw',
-  'solar-panel-500w',
-];
+// All static page slugs from single source of truth
+const staticPages = staticPageSlugs.map(slug => {
+  let priority: number;
+  let changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly';
+  
+  if (slug === '') {
+    priority = 1.0;
+    changefreq = 'daily';
+  } else if (['about-us', 'products'].includes(slug)) {
+    priority = 0.9;
+    changefreq = slug === 'products' ? 'daily' : 'monthly';
+  } else if (slug === 'news') {
+    priority = 0.8;
+    changefreq = 'weekly';
+  } else if (['factory', 'service', 'faq', 'contact'].includes(slug)) {
+    priority = 0.7;
+    changefreq = 'monthly';
+  } else if (['team', 'careers', 'support'].includes(slug)) {
+    priority = 0.6;
+    changefreq = 'monthly';
+  } else {
+    priority = 0.3;
+    changefreq = 'yearly';
+  }
+  
+  return { slug, priority, changefreq };
+});
 
 type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
 
@@ -108,6 +93,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Product detail pages
   for (const productSlug of productSlugs) {
     const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly');
+    allEntries.push(...entries);
+  }
+
+  // News pages
+  for (const newsSlug of newsSlugs) {
+    const entries = buildUrlEntry(`news/${newsSlug}`, 0.8, 'weekly');
     allEntries.push(...entries);
   }
 

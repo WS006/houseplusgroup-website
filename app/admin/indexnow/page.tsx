@@ -1,113 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-const baseUrl = 'https://www.houseplus-ch.com';
-const locales = ['en', 'es', 'de', 'fr', 'ar'];
-
-// Main pages
-const staticPages = [
-  '', // homepage
-  'about-us',
-  'products',
-  'news',
-  'factory',
-  'service',
-  'faq',
-  'contact',
-  'team',
-  'careers',
-  'support',
-  'privacy',
-  'terms',
-  'cookie-policy',
-  'sitemap-page',
-];
-
-// Products
-const productSlugs = [
-  'headphone-over-ear',
-  'smart-watch',
-  'usb-c-cable-2m',
-  'solar-power-bank-20000mah',
-  'bluetooth-earphone-tws',
-  'portable-ssd-1tb',
-  'micro-sd-128gb',
-  'induction-cooktop-2000w',
-  'electric-kettle-1-5l',
-  'toaster-2-slice',
-  'air-fryer-5-8l',
-  'solar-fan-20w',
-  'solar-street-light-200w',
-  'charge-controller-60a',
-  'lead-acid-battery-100ah',
-  'lithium-battery-5kwh',
-  'solar-inverter-3kw',
-  'solar-panel-500w',
-];
-
-// News pages
-const newsSlugs = [
-  '2026-solar-market-update',
-  '2026-appliances-market-update',
-  '2026-electronics-market-update',
-  '2026-smart-home-appliances-market-guide',
-  'advanced-manufacturing-home-appliances',
-  'energy-efficiency-standards-appliances',
-  'global-wholesale-guide-home-appliances',
-  'oem-odm-manufacturing-guide',
-  'smart-home-appliances',
-  'solar-energy-storage-industrial-manufacturing',
-  'solar-energy-storage-solutions',
-  'the-evolution-of-3c-electronics',
-  'the-future-of-smart-home-appliances',
-  'the-future-of-solar-energy',
-];
-
-function generateAllUrls() {
-  const urls: string[] = [];
-
-  // Generate URLs for static pages (all languages)
-  for (const lang of locales) {
-    for (const page of staticPages) {
-      const url = page ? `${baseUrl}/${lang}/${page}` : `${baseUrl}/${lang}`;
-      urls.push(url);
-    }
-
-    // Generate product URLs (all languages)
-    for (const product of productSlugs) {
-      urls.push(`${baseUrl}/${lang}/products/${product}`);
-    }
-
-    // Generate news URLs (all languages)
-    for (const news of newsSlugs) {
-      urls.push(`${baseUrl}/${lang}/news/${news}`);
-    }
-  }
-
-  // Root homepage (without lang prefix)
-  urls.push(baseUrl);
-
-  return urls;
-}
-
-function generateMainPageUrls() {
-  const urls: string[] = [];
-  // 根域名首页
-  urls.push(baseUrl);
-  // 每种语言的首页和主要页面
-  for (const lang of locales) {
-    urls.push(`${baseUrl}/${lang}`);
-    urls.push(`${baseUrl}/${lang}/about-us`);
-    urls.push(`${baseUrl}/${lang}/products`);
-    urls.push(`${baseUrl}/${lang}/news`);
-    urls.push(`${baseUrl}/${lang}/factory`);
-    urls.push(`${baseUrl}/${lang}/service`);
-    urls.push(`${baseUrl}/${lang}/faq`);
-    urls.push(`${baseUrl}/${lang}/contact`);
-  }
-  return urls;
-}
+import { baseUrl, generateAllUrls, generateMainPageUrls, staticPageSlugs, productSlugs, newsSlugs } from '@/lib/urls';
 
 export default function IndexNowPage() {
   const [url, setUrl] = useState('https://www.houseplus-ch.com/en');
@@ -119,6 +13,11 @@ export default function IndexNowPage() {
 
   const allUrls = generateAllUrls();
   const mainUrls = generateMainPageUrls();
+  
+  // Count of each type for display
+  const staticPagesCount = staticPageSlugs.length;
+  const productsCount = productSlugs.length;
+  const newsCount = newsSlugs.length;
 
   const submitUrls = async (urlsToSubmit: string[]) => {
     setLoading(true);
@@ -314,11 +213,21 @@ export default function IndexNowPage() {
                 <h4 className="font-medium text-gray-800 mb-2">Statistics</h4>
                 <ul className="space-y-1 text-gray-600 text-sm">
                   <li>• Total pages available: <strong>{allUrls.length}</strong></li>
-                  <li>• Languages: {locales.join(', ')}</li>
-                  <li>• Static pages: {staticPages.length}</li>
-                  <li>• Products: {productSlugs.length}</li>
-                  <li>• News articles: {newsSlugs.length}</li>
+                  <li>• Languages: 5 (en, es, de, fr, ar)</li>
+                  <li>• Static pages: {staticPagesCount}</li>
+                  <li>• Products: {productsCount}</li>
+                  <li>• News articles: {newsCount}</li>
                 </ul>
+              </div>
+              
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <h4 className="font-medium text-blue-800 mb-2">📝 How to Add New Pages</h4>
+                <ol className="list-decimal list-inside text-blue-700 text-sm space-y-1">
+                  <li>Edit the file <code className="bg-blue-100 px-1.5 py-0.5 rounded">lib/urls.ts</code></li>
+                  <li>Add your new page slug to the appropriate list (<code>staticPageSlugs</code>, <code>productSlugs</code>, or <code>newsSlugs</code>)</li>
+                  <li>Commit and deploy the changes</li>
+                  <li>Come back here and click "Submit All Pages" to notify search engines</li>
+                </ol>
               </div>
               
               <div>
