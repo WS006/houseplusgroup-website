@@ -1,12 +1,14 @@
 import { searchEngines, SubmissionResult, SubmitResult, WebhookConfig } from './search-engines';
 import { baseUrl } from './urls';
 import jwt from 'jsonwebtoken';
+import { addSubmissionHistory } from './submission-history';
 
 const INDEXNOW_KEY = '084fadfd7e4a435b942858f905846430';
 
 export async function submitToSearchEngines(
   urls: string[],
-  engineIds?: string[]
+  engineIds?: string[],
+  triggeredBy: 'manual' | 'auto' | 'scheduled' = 'manual'
 ): Promise<SubmitResult> {
   const enginesToSubmit = engineIds 
     ? searchEngines.filter(e => engineIds.includes(e.id))
@@ -17,6 +19,23 @@ export async function submitToSearchEngines(
   for (const engine of enginesToSubmit) {
     const result = await submitToEngine(urls, engine);
     results.push(result);
+  }
+
+  // 记录提交历史
+  try {
+    await addSubmissionHistory(
+      urls,
+      enginesToSubmit.map(e => e.id),
+      results.map(r => ({
+        engine: r.engineName,
+        success: r.success,
+        statusCode: r.statusCode,
+        message: r.message,
+      })),
+      triggeredBy
+    );
+  } catch (error) {
+    console.error('Failed to save submission history:', error);
   }
 
   return {
