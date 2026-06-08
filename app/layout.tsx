@@ -1,29 +1,6 @@
-import type { Metadata } from 'next';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { storyblokInit, apiPlugin } from '@storyblok/react';
-
-export const metadata: Metadata = {
-  title: 'HousePlus - Home Appliances & Solar Systems Wholesale',
-  description: 'Professional manufacturer of home appliances, solar systems, and portable power stations for global wholesale buyers.',
-  metadataBase: new URL('https://www.houseplus-ch.com'),
-  icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
-    ],
-    shortcut: '/favicon.ico',
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-  },
-  alternates: {
-    canonical: 'https://www.houseplus-ch.com/',
-  },
-  other: {
-    'msvalidate.01': '084FADFD7E4A435B942858F905846430',
-  },
-};
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN || '',
