@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateServiceSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,6 +28,24 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
     url: `https://www.houseplus-ch.com/${lang}/service`,
     lang,
     type: 'Organization',
+  });
+
+  const oemServiceSchema = generateServiceSchema({
+    name: 'OEM Manufacturing Service',
+    description: 'Professional OEM manufacturing services from HousePlus. Supply product specifications, drawings or samples and we manufacture to your exact requirements. MOQ from 100 units.',
+    url: `https://www.houseplus-ch.com/${lang}/service`,
+    serviceType: 'ManufacturingService',
+    areaServed: ['Worldwide', 'Africa', 'Southeast Asia', 'Europe'],
+    availableChannel: ['Online', 'Phone', 'Email', 'WhatsApp'],
+  });
+
+  const odmServiceSchema = generateServiceSchema({
+    name: 'ODM & Private Label Service',
+    description: 'ODM services with private-label branding. Choose from existing product portfolio and apply your own brand identity with custom logo printing, color variants and packaging design.',
+    url: `https://www.houseplus-ch.com/${lang}/service`,
+    serviceType: 'DesignService',
+    areaServed: ['Worldwide', 'Africa', 'Southeast Asia', 'Europe'],
+    availableChannel: ['Online', 'Phone', 'Email', 'WhatsApp'],
   });
 
   const services = [
@@ -80,7 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
 
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, oemServiceSchema, odmServiceSchema]} />
       <main className="min-h-screen bg-white">
 
         {/* Hero */}

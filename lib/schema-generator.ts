@@ -100,6 +100,26 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
+export interface ImageObjectOptions {
+  url: string;
+  caption?: string;
+  description?: string;
+  width?: number;
+  height?: number;
+}
+
+export function generateImageObjectSchema(options: ImageObjectOptions) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: options.url,
+    caption: options.caption,
+    description: options.description,
+    ...(options.width && { width: options.width }),
+    ...(options.height && { height: options.height }),
+  };
+}
+
 export interface ProductSchemaOptions {
   name: string;
   description: string;
@@ -109,6 +129,8 @@ export interface ProductSchemaOptions {
   url: string;
   availability?: 'InStock' | 'PreOrder' | 'OutOfStock';
   category?: string;
+  imageCaption?: string;
+  imageDescription?: string;
 }
 
 export function generateProductSchema(options: ProductSchemaOptions) {
@@ -121,6 +143,8 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     url,
     availability = 'InStock',
     category,
+    imageCaption,
+    imageDescription,
   } = options;
 
   return {
@@ -128,7 +152,12 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     '@type': 'Product',
     name,
     description,
-    image,
+    image: {
+      '@type': 'ImageObject',
+      contentUrl: image,
+      caption: imageCaption || name,
+      description: imageDescription || description,
+    },
     sku,
     mpn: sku,
     brand: {
@@ -163,6 +192,44 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         addressCountry: 'CN',
       },
     },
+  };
+}
+
+export interface ServiceSchemaOptions {
+  name: string;
+  description: string;
+  providerName?: string;
+  url: string;
+  serviceType?: string;
+  areaServed?: string[];
+  availableChannel?: string[];
+}
+
+export function generateServiceSchema(options: ServiceSchemaOptions) {
+  const {
+    name,
+    description,
+    providerName = 'HousePlus Group',
+    url,
+    serviceType,
+    areaServed,
+    availableChannel,
+  } = options;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: {
+      '@type': 'Organization',
+      name: providerName,
+      url: BASE_URL,
+    },
+    url,
+    ...(serviceType && { serviceType }),
+    ...(areaServed && { areaServed }),
+    ...(availableChannel && { availableChannel }),
   };
 }
 

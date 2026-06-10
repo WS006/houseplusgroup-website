@@ -86,6 +86,8 @@ export default async function ProductDetailPage({
       : product.category === 'appliances'
       ? 'Home Appliances'
       : '3C Electronics',
+    imageCaption: `HousePlus ${product.name} - Professional wholesale product`,
+    imageDescription: `High-quality ${product.name} from HousePlus, CE/RoHS certified, OEM/ODM available`,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
