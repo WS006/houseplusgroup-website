@@ -29,10 +29,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
-    keywords: ['global wholesale', 'regional distribution', 'Africa', 'Southeast Asia', 'Europe', 'HousePlus'],
+    keywords: ['global wholesale', 'regional distribution', 'Africa', 'Southeast Asia', 'Europe', 'HousePlus', 'international trade', 'B2B wholesale', 'OEM ODM'],
     url: `/${lang}/regions`,
     lang: lang as any,
     type: 'website',
+    geoRegion: 'CN-GD',
+    geoPlacename: 'Guangdong',
   });
 }
 
