@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PRODUCT_DATA, CATEGORY_CONFIG } from '@/lib/product-data';
 import SEOHead from '@/components/SEOHead';
-import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
 
@@ -76,7 +76,7 @@ export default async function ProductDetailPage({
   // Generate structured data schemas
   const productSchema = generateProductSchema({
     name: product.name,
-    description: product.description,
+    description: product.geoDescription || product.description,
     image: product.coverImage,
     sku,
     url: productUrl,
@@ -88,6 +88,7 @@ export default async function ProductDetailPage({
       : '3C Electronics',
     imageCaption: `HousePlus ${product.name} - Professional wholesale product`,
     imageDescription: `High-quality ${product.name} from HousePlus, CE/RoHS certified, OEM/ODM available`,
+    b2bInfo: product.b2bInfo,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -96,9 +97,13 @@ export default async function ProductDetailPage({
     { name: product.name, url: productUrl },
   ]);
 
+  const faqSchema = product.faq && product.faq.length > 0
+    ? generateFAQSchema(product.faq)
+    : null;
+
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[productSchema, breadcrumbSchema]} />
+      <SEOHead schemas={[productSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]} />
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-100 py-3 px-4">
         <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm text-slate-500">
@@ -164,6 +169,16 @@ export default async function ProductDetailPage({
             <p className="text-slate-600 leading-relaxed text-base">
               {product.description}
             </p>
+
+            {/* GEO Description */}
+            {product.geoDescription && (
+              <div className="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  <span className="font-bold text-amber-700">GEO Fact:</span>{' '}
+                  {product.geoDescription}
+                </p>
+              </div>
+            )}
 
             {/* Specifications Table */}
             {product.specs.length > 0 && (
@@ -252,6 +267,24 @@ export default async function ProductDetailPage({
                 </div>
               ))}
             </div>
+
+            {/* FAQ Section */}
+            {product.faq && product.faq.length > 0 && (
+              <div className="mt-8">
+                <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-3">
+                  {product.faq.map((faqItem, i) => (
+                    <div key={i} className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                      <p className="font-semibold text-slate-900 text-sm mb-1">Q: {faqItem.question}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">A: {faqItem.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* HousePlus CTA */}
             <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-200">

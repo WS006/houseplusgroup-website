@@ -120,6 +120,18 @@ export function generateImageObjectSchema(options: ImageObjectOptions) {
   };
 }
 
+export interface B2BSchemaInfo {
+  moq?: string;
+  leadTime?: string;
+  warranty?: string;
+  certifications?: string[];
+  oemOdm?: boolean;
+  factorySize?: string;
+  foundedYear?: number;
+  exportCountries?: number;
+  wholesaleClients?: number;
+}
+
 export interface ProductSchemaOptions {
   name: string;
   description: string;
@@ -131,6 +143,7 @@ export interface ProductSchemaOptions {
   category?: string;
   imageCaption?: string;
   imageDescription?: string;
+  b2bInfo?: B2BSchemaInfo;
 }
 
 export function generateProductSchema(options: ProductSchemaOptions) {
@@ -145,7 +158,73 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     category,
     imageCaption,
     imageDescription,
+    b2bInfo,
   } = options;
+
+  const additionalProperty = [];
+  if (b2bInfo?.moq) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'MOQ (Minimum Order Quantity)',
+      value: b2bInfo.moq,
+    });
+  }
+  if (b2bInfo?.leadTime) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Lead Time',
+      value: b2bInfo.leadTime,
+    });
+  }
+  if (b2bInfo?.warranty) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Warranty',
+      value: b2bInfo.warranty,
+    });
+  }
+  if (b2bInfo?.certifications && b2bInfo.certifications.length > 0) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Certifications',
+      value: b2bInfo.certifications.join(', '),
+    });
+  }
+  if (b2bInfo?.oemOdm) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'OEM/ODM Available',
+      value: 'Yes',
+    });
+  }
+  if (b2bInfo?.factorySize) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Factory Size',
+      value: b2bInfo.factorySize,
+    });
+  }
+  if (b2bInfo?.foundedYear) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Founded Year',
+      value: String(b2bInfo.foundedYear),
+    });
+  }
+  if (b2bInfo?.exportCountries) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Export Countries',
+      value: `${b2bInfo.exportCountries}+ countries`,
+    });
+  }
+  if (b2bInfo?.wholesaleClients) {
+    additionalProperty.push({
+      '@type': 'PropertyValue',
+      name: 'Wholesale Clients',
+      value: `${b2bInfo.wholesaleClients}+`,
+    });
+  }
 
   return {
     '@context': 'https://schema.org',
@@ -180,6 +259,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         url: BASE_URL,
       },
       itemCondition: 'https://schema.org/NewCondition',
+      ...(b2bInfo?.moq && { minimumOrderQuantity: { '@type': 'QuantitativeValue', value: b2bInfo.moq.replace(/\D/g, '') } }),
     },
     manufacturer: {
       '@type': 'Organization',
@@ -191,7 +271,10 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         addressRegion: 'Guangdong',
         addressCountry: 'CN',
       },
+      ...(b2bInfo?.foundedYear && { foundingDate: String(b2bInfo.foundedYear) }),
+      ...(b2bInfo?.exportCountries && { areaServed: `${b2bInfo.exportCountries}+ countries worldwide` }),
     },
+    ...(additionalProperty.length > 0 && { additionalProperty }),
   };
 }
 
