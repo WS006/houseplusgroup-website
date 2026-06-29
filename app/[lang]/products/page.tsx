@@ -410,7 +410,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
       <section className="bg-slate-50 border-b border-slate-100 py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-slate-700 text-lg leading-relaxed">
-            Since 2010, HousePlus has operated a <strong>20,000 m² ISO 9001 certified factory</strong> delivering solar energy systems, home appliances and 3C electronics to <strong>441+ wholesale clients across 53+ countries</strong>. All products carry CE, FCC and RoHS certifications. We offer flexible <strong>MOQ from 100 pcs</strong>, <strong>20–35 day lead times</strong> and comprehensive <strong>OEM/ODM services</strong> with 24-month warranty support.
+            Since 2010, HousePlus has operated a <strong>20,000 m² ISO 9001 certified factory</strong> delivering solar energy systems, home appliances and 3C electronics to <strong>441+ wholesale clients across 53+ countries</strong>. All products carry CE, FCC and RoHS certifications. We offer flexible <strong>MOQ from 100 pcs</strong>, <strong>20–35 day lead times</strong> and comprehensive <strong>OEM/ODM services</strong> with 12-month warranty support.
           </p>
         </div>
       </section>

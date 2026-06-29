@@ -54,7 +54,7 @@ Q: What certifications do HousePlus products have?
 A: Most HousePlus products are CE, FCC, RoHS, and ISO 9001 certified. We can assist with additional certifications per your requirement.
 
 Q: How long is the warranty on HousePlus products?
-A: 24 months for solar systems and electronics; 12 months for small appliances. Extended warranty available.
+A: 12 months for solar systems and electronics; 12 months for small appliances. Extended warranty available.
 
 ## Key Links
 - HousePlus Homepage: https://houseplus-ch.com/en

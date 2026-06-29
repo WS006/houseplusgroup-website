@@ -53,7 +53,7 @@ const articleContent: Record<string, any> = {
       },
       {
         heading: 'Breakthrough in Solar Panel Efficiency',
-        text: 'HousePlus is proud to introduce our 2026 lineup of high-efficiency solar panels achieving 26-30% conversion rates through PERC-HJT hybrid technology. Our new monocrystalline panels feature anti-reflective coating, bifacial design, and temperature-resistant materials, ensuring optimal performance even in extreme climates. All panels are certified to IEC 61215, IEC 61730, and come with 25-year linear performance warranties.'
+        text: 'HousePlus is proud to introduce our 2026 lineup of high-efficiency solar panels achieving 26-30% conversion rates through PERC-HJT hybrid technology. Our new monocrystalline panels feature anti-reflective coating, bifacial design, and temperature-resistant materials, ensuring optimal performance even in extreme climates. All panels are certified to IEC 61215, IEC 61730, and come with a 12-month warranty.'
       },
       {
         heading: 'Advanced Battery Storage Systems',

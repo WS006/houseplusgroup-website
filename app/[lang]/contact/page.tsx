@@ -101,7 +101,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                     <span className="text-xl">✓</span>
                     <div>
                       <p className="font-bold text-sm">MOQ 100 pcs · 20–35 Day Lead Time</p>
-                      <p className="text-blue-100 text-xs">24-month warranty · CE FCC RoHS</p>
+                      <p className="text-blue-100 text-xs">12-month warranty · CE FCC RoHS</p>
                     </div>
                   </div>
                 </div>

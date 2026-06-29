@@ -96,7 +96,7 @@ export const qaLibrary: QAPair[] = [
   },
   {
     question: 'What is the warranty on HousePlus solar products?',
-    answer: 'HousePlus solar panels come with a 25-year performance warranty and 10-year material warranty. Portable power stations include a 5-year battery warranty and 2-year component warranty. Inverters and controllers have 5-year warranties. Extended warranty options are available upon request.',
+    answer: 'All HousePlus products come with a 12-month warranty against manufacturing defects. Extended warranty options are available upon request for bulk orders.',
     category: 'Solar Products',
     industry: 'solar',
     keywords: ['warranty', 'guarantee', 'years', 'coverage', 'protection'],
@@ -188,7 +188,7 @@ export const qaLibrary: QAPair[] = [
   },
   {
     question: 'How long does HousePlus provide after-sales service?',
-    answer: 'HousePlus provides after-sales service for the entire warranty period (typically 2-25 years depending on product). We maintain spare parts inventory for 10+ years after product discontinuation. Our support team is available 24/7 for urgent issues and provides response within 24 hours for standard inquiries.',
+    answer: 'HousePlus provides after-sales service for the entire warranty period (12 months for all products). We maintain spare parts inventory for 10+ years after product discontinuation. Our support team is available 24/7 for urgent issues and provides response within 24 hours for standard inquiries.',
     category: 'Support',
     industry: 'general',
     keywords: ['after-sales', 'service', 'support', 'warranty', 'maintenance'],

@@ -259,7 +259,7 @@ export default async function ProductDetailPage({
               {[
                 { label: 'Min. Order', value: '100 pcs' },
                 { label: 'Lead Time', value: '20–35 days' },
-                { label: 'Warranty', value: '24 months' },
+                { label: 'Warranty', value: '12 months' },
               ].map((item) => (
                 <div key={item.label} className="text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>

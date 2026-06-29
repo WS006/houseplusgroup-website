@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'About HousePlus — Vertically Integrated Manufacturer Since 2010',
-    description: 'HousePlus is a vertically integrated manufacturer founded in 2010. 20,000 m² ISO 9001 certified factory. 441+ wholesale clients across 53+ countries. 16 years of manufacturing solar energy systems, home appliances and 3C electronics. MOQ 100 pcs, 20–35 day lead time, 24-month warranty.',
+    description: 'HousePlus is a vertically integrated manufacturer founded in 2010. 20,000 m² ISO 9001 certified factory. 441+ wholesale clients across 53+ countries. 16 years of manufacturing solar energy systems, home appliances and 3C electronics. MOQ 100 pcs, 20–35 day lead time, 12-month warranty.',
     keywords: ['about HousePlus', 'manufacturer', 'solar systems', 'home appliances', '3C electronics', 'OEM ODM', 'wholesale'],
     url: `/${lang}/about-us`,
     lang: lang as any,
@@ -99,7 +99,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>16 Years Experience</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>53+ Countries</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>441+ Wholesale Clients</div>
-                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>24-Month Warranty</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>12-Month Warranty</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>CE FCC RoHS ISO9001 IEC</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>MOQ 100 pcs</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>20–35 Day Lead Time</div>

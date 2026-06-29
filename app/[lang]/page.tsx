@@ -104,9 +104,9 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <Counter end="16+" label={dict.home.counter.years} />
-              <Counter end="500+" label={dict.home.counter.clients} />
-              <Counter end="60+" label={dict.home.counter.countries} />
-              <Counter end="24m" label={dict.home.counter.warranty} />
+              <Counter end="441+" label={dict.home.counter.clients} />
+              <Counter end="53+" label={dict.home.counter.countries} />
+              <Counter end="12m" label={dict.home.counter.warranty} />
             </div>
           </div>
         </section>

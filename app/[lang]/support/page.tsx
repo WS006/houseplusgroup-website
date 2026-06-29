@@ -99,7 +99,7 @@ export default async function SupportPage({ params }: { params: Promise<{ lang: 
         {
           icon: '🛡️',
           title: 'HousePlus Warranty',
-          desc: 'All HousePlus products come with a 24-month warranty. HousePlus handles warranty claims efficiently.',
+          desc: 'All HousePlus products come with a 12-month warranty. HousePlus handles warranty claims efficiently.',
         },
         {
           icon: '📋',

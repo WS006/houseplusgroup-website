@@ -23,7 +23,7 @@ export default async function OemOdmPage({ params }: { params: Promise<{ lang: s
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
-    description: 'OEM/ODM manufacturing for solar panels, power stations, air fryers, induction cooktops, TWS earphones and smart watches. MOQ from 100 pcs, 20–35 day lead time and 24-month warranty from a 20,000 m² ISO 9001 factory.',
+    description: 'OEM/ODM manufacturing for solar panels, power stations, air fryers, induction cooktops, TWS earphones and smart watches. MOQ from 100 pcs, 20–35 day lead time and 12-month warranty from a 20,000 m² ISO 9001 factory.',
     url: `https://www.houseplus-ch.com/${lang}/oem-odm`,
     lang,
     type: 'Organization',
@@ -80,7 +80,7 @@ export default async function OemOdmPage({ params }: { params: Promise<{ lang: s
     { step: '03', title: 'Sample Approval', desc: 'Client evaluates sample and requests up to 3 revisions at no charge. Final sign-off triggers production order confirmation.' },
     { step: '04', title: 'Order & Deposit', desc: 'Proforma invoice issued with production schedule. 30% deposit confirms order entry into HousePlus ERP system.' },
     { step: '05', title: 'Production & QC', desc: 'Mass production with IPQC at 4 checkpoints. Pre-shipment inspection report and photos are shared before dispatch.' },
-    { step: '06', title: 'Shipment & Support', desc: 'Balance payment triggers shipment. HousePlus provides 24-month warranty, spare parts support and dedicated account management.' },
+    { step: '06', title: 'Shipment & Support', desc: 'Balance payment triggers shipment. HousePlus provides 12-month warranty, spare parts support and dedicated account management.' },
   ];
 
   const moqTiers = [
@@ -107,7 +107,7 @@ export default async function OemOdmPage({ params }: { params: Promise<{ lang: s
                   20–35 Day Lead Time
                 </span>
                 <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full">
-                  24-Month Warranty
+                  12-Month Warranty
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-5 leading-tight">

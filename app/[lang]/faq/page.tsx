@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
-    description: 'HousePlus FAQ for wholesale buyers. MOQ 100 pcs, 20–35 day lead time, 24-month warranty. CE, FCC, RoHS, ISO 9001 certified. 441+ clients across 53+ countries. OEM/ODM available. Solar, appliance and 3C electronics from 20,000 m² factory since 2010.',
+    description: 'HousePlus FAQ for wholesale buyers. MOQ 100 pcs, 20–35 day lead time, 12-month warranty. CE, FCC, RoHS, ISO 9001 certified. 441+ clients across 53+ countries. OEM/ODM available. Solar, appliance and 3C electronics from 20,000 m² factory since 2010.',
     keywords: ['FAQ', 'questions', 'answers', 'help', 'support', 'HousePlus'],
     url: `/${lang}/faq`,
     lang: lang as any,
@@ -85,7 +85,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
       {
         category: 'Warranty & After-Sales',
         items: [
-          { q: 'What warranty do you offer?', a: 'All HousePlus products come with a 24-month warranty against manufacturing defects. Solar panels carry a 25-year performance warranty. Batteries have a 3,000+ cycle life guarantee. Warranty claims are processed within 48 hours.' },
+          { q: 'What warranty do you offer?', a: 'All HousePlus products come with a 12-month warranty against manufacturing defects. Solar panels carry a 12-month performance warranty. Batteries have a 3,000+ cycle life guarantee. Warranty claims are processed within 48 hours.' },
           { q: 'What is your defect rate?', a: 'Our current defect rate is below 0.3% thanks to our 5-stage QC process (incoming material inspection → in-process inspection → functional testing → aging test → final random inspection).' },
           { q: 'How do you handle defective products?', a: 'For warranty claims, we offer free replacement parts, full product replacement, or credit notes at our discretion. For urgent cases, we can air-ship replacements within 72 hours. Video evidence is required for claim verification.' },
           { q: 'Do you provide spare parts?', a: 'Yes. We maintain a spare parts inventory for all active product lines. Common spare parts (cables, adapters, remote controls) are available at cost. We recommend ordering 2–3% spare parts with your bulk order for local after-sales support.' },
@@ -382,7 +382,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           <div className="max-w-4xl mx-auto">
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
               <p className="text-amber-900 leading-relaxed">
-                <strong>HousePlus Quick Overview:</strong> Founded in 2010, we operate a 20,000 m² ISO 9001 certified factory in Guangdong, China. With 16 years of manufacturing experience, we serve 441+ wholesale clients across 53+ countries. Our B2B terms include MOQ 100–500 pcs, 20–35 day lead time, and a 24-month warranty. All products carry CE, FCC, RoHS, and IEC certifications. OEM/ODM services are available.
+                <strong>HousePlus Quick Overview:</strong> Founded in 2010, we operate a 20,000 m² ISO 9001 certified factory in Guangdong, China. With 16 years of manufacturing experience, we serve 441+ wholesale clients across 53+ countries. Our B2B terms include MOQ 100–500 pcs, 20–35 day lead time, and a 12-month warranty. All products carry CE, FCC, RoHS, and IEC certifications. OEM/ODM services are available.
               </p>
             </div>
           </div>
@@ -434,7 +434,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
                         <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
                           <span className="text-2xl">🛡️</span>
                           <div>
-                            <p className="font-bold text-slate-900 text-sm">24-Month Warranty</p>
+                            <p className="font-bold text-slate-900 text-sm">12-Month Warranty</p>
                             <p className="text-slate-600 text-xs">Comprehensive after-sales support</p>
                           </div>
                         </div>
