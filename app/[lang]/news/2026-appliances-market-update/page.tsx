@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: '2026 smart home appliances market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI-powered, energy-efficient A+++ line. CE/FCC/RoHS. OEM/ODM available.'
+    en: '2026 smart home appliances market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI-powered, energy-efficient A+++ line. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Actualización del mercado de electrodomésticos inteligentes 2026: Explora la nueva línea de refrigeradores, lavadoras, lavavajillas y acondicionadores de aire impulsados por IA de HousePlus con características de ahorro de energía (calificación A+++), conectividad IoT y capacidades de integración de hogar inteligente para socios B2B.',
     de: 'Marktupdate 2026 für smarte Haushaltsgeräte: Entdecken Sie HousePlus\' neue KI-gesteuerte Kühlschrank-, Waschmaschinen-, Geschirrspüler- und Klimagerätelinie mit Energiesparfunktionen (A+++-Einstufung), IoT-Konnektivität und Smart-Home-Integrationsfähigkeiten für B2B-Partner.',
     fr: 'Mise à jour du marché des appareils électroménagers intelligents 2026: Découvrez la nouvelle gamme de réfrigérateurs, lave-linge, lave-vaisselle et climatiseurs pilotés par l\'IA de HousePlus avec des fonctionnalités d\'économie d\'énergie (notation A+++), une connectivité IoT et des capacités d\'intégration de maison intelligente pour les partenaires B2B.',

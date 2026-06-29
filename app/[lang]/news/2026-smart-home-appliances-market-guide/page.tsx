@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: '2026 smart home appliances market guide from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI-powered appliances. CE/FCC/RoHS. OEM/ODM available.'
+    en: '2026 smart home appliances market guide from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI-powered appliances. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Explore las tendencias clave que configuran el mercado de electrodomésticos inteligentes en 2026, incluida la integración de IA, la eficiencia energética y la fabricación sostenible. Una guía completa para compradores B2B de HousePlus.',
     de: 'Entdecken Sie die wichtigsten Trends, die den Markt für intelligente Haushaltsgeräte im Jahr 2026 prägen, einschließlich KI-Integration, Energieeffizienz und nachhaltiger Fertigung. Ein umfassender Leitfaden für B2B-Käufer von HousePlus.',
     fr: 'Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents en 2026, y compris l\'intégration de l\'IA, l\'efficacité énergétique et la fabrication durable. Un guide complet pour les acheteurs B2B de HousePlus.',

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
 
   const titles: Record<string, string> = {
-    en: '2026 3C electronics market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. TWS, smart wearables, power banks. CE/FCC/RoHS. OEM/ODM available.'
+    en: '2026 3C electronics market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. TWS, smart wearables, power banks. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
     de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
     fr: 'Tendances du marché mondial des appareils électroménagers intelligents 2026 et guide d\'approvisionnement B2B',

@@ -368,7 +368,6 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     ],
     coverImage: 'https://images.unsplash.com/photo-1619193100632-68046777174b?w=900&q=85',
   },
-};
 
   // ===== P0 GEO-Optimized Products (Added 2026-06-26) =====
   'solar-panel-100w': {
@@ -1014,6 +1013,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     },
     coverImage: 'https://images.unsplash.com/photo-1619193100632-68046777174b?w=900&q=85',
   },
+};
 
 export const CATEGORY_CONFIG = {
   solar: {

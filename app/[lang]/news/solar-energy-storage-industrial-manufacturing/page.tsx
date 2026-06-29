@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore industrial solar energy storage manufacturing at HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. ESS production for global markets. CE/FCC/RoHS. OEM/ODM available.'
+    en: 'Explore industrial solar energy storage manufacturing at HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. ESS production for global markets. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Explore los beneficios y aplicaciones de los sistemas de almacenamiento de energía solar en la fabricación industrial, centrándose en la sostenibilidad, la eficiencia de costos y la independencia energética. Descubra cómo las soluciones de HousePlus impulsan un futuro industrial más verde.',
     de: 'Entdecken Sie die Vorteile und Anwendungen von Solarenergiespeichersystemen in der industriellen Fertigung, mit Fokus auf Nachhaltigkeit, Kosteneffizienz und Energieunabhängigkeit. Erfahren Sie, wie HousePlus-Lösungen eine grünere industrielle Zukunft ermöglichen.',
     fr: 'Explorez les avantages et les applications des systèmes de stockage d\'énergie solaire dans la fabrication industrielle, en mettant l\'accent sur la durabilité, l\'efficacité des coûts et l\'indépendance énergétique. Découvrez comment les solutions HousePlus favorisent un avenir industriel plus vert.',
