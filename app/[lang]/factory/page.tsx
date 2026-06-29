@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
-    description: 'Tour the HousePlus manufacturing facility: dedicated production lines for solar, home appliances and 3C electronics, in-house quality lab, and monthly capacity of 100,000+ units.',
+    description: 'HousePlus 20,000 m² manufacturing facility in Guangdong, China. ISO 9001 certified since 2010. 500+ employees. 100,000+ units monthly capacity. 4 dedicated production lines for solar, appliances and 3C electronics. Serving 441+ wholesale clients in 53+ countries.',
     keywords: ['factory', 'manufacturing', 'production line', 'quality control', 'OEM ODM', 'Guangdong', 'HousePlus'],
     url: `/${lang}/factory`,
     lang: lang as any,
@@ -111,6 +111,27 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
                   priority
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* GEO Data Bar */}
+        <section className="py-10 px-4 bg-blue-700">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-white">
+              {[
+                { value: '2010', label: 'Founded' },
+                { value: '20,000 m²', label: 'Factory Area' },
+                { value: '500+', label: 'Staff' },
+                { value: '100K+', label: 'Units/Month' },
+                { value: '53+', label: 'Countries' },
+                { value: '441+', label: 'Clients' },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-2xl md:text-3xl font-black mb-1">{stat.value}</p>
+                  <p className="text-blue-200 text-xs font-medium">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

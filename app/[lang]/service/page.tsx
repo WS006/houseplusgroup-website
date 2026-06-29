@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'HousePlus Services — OEM/ODM, Private Label & Technical Support',
-    description: 'HousePlus offers comprehensive OEM/ODM manufacturing, private-label branding, custom packaging and dedicated after-sales technical support for global wholesale buyers.',
+    description: 'HousePlus OEM/ODM services from 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. Private label, custom packaging, product modification. 441+ wholesale clients across 53+ countries. 14 years manufacturing solar, appliances and 3C electronics. 24-month warranty.',
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'technical support', 'wholesale services', 'HousePlus'],
     url: `/${lang}/service`,
     lang: lang as any,
@@ -113,6 +113,20 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               From OEM manufacturing and private-label branding to logistics coordination and after-sales support — <strong>HousePlus</strong> provides a complete service ecosystem for global wholesale partners. Choose <strong>HousePlus</strong> for professional, reliable services.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
+              <div className="bg-white p-4 rounded-xl border border-blue-200 text-center">
+                <div className="text-2xl font-black text-blue-600">15–20 days</div>
+                <div className="text-sm text-slate-600">Sample Lead Time</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-blue-200 text-center">
+                <div className="text-2xl font-black text-blue-600">20–35 days</div>
+                <div className="text-sm text-slate-600">Production Lead Time</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-blue-200 text-center">
+                <div className="text-2xl font-black text-blue-600">24 months</div>
+                <div className="text-sm text-slate-600">Product Warranty</div>
+              </div>
+            </div>
           </div>
         </section>
 

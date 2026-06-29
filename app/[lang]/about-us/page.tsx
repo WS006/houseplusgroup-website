@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'About HousePlus — Vertically Integrated Manufacturer Since 2010',
-    description: 'Discover the story behind HousePlus Group: a vertically integrated manufacturer of solar energy systems, home appliances and 3C electronics serving wholesale buyers in 60+ countries.',
+    description: 'HousePlus is a vertically integrated manufacturer founded in 2010. 20,000 m² ISO 9001 certified factory. 441+ wholesale clients across 53+ countries. 14 years of manufacturing solar energy systems, home appliances and 3C electronics. MOQ 100 pcs, 20–35 day lead time, 24-month warranty.',
     keywords: ['about HousePlus', 'manufacturer', 'solar systems', 'home appliances', '3C electronics', 'OEM ODM', 'wholesale'],
     url: `/${lang}/about-us`,
     lang: lang as any,
@@ -91,6 +91,20 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
                   <strong>HousePlus Group</strong> is a vertically integrated manufacturer specialising in solar energy systems, home appliances and 3C electronics. Over 14 years, <strong>HousePlus</strong> has grown from a single production line into a multi-division enterprise trusted by wholesale buyers across six continents. As a professional <strong>HousePlus</strong> manufacturer, we deliver OEM/ODM solutions with international certifications.
                 </p>
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
+                  <p className="text-sm text-amber-900 font-semibold mb-2">Key B2B Facts</p>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-amber-800">
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>Founded 2010</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>20,000 m² Factory</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>14 Years Experience</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>53+ Countries</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>441+ Wholesale Clients</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>24-Month Warranty</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>CE FCC RoHS ISO9001 IEC</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>MOQ 100 pcs</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>20–35 Day Lead Time</div>
+                  </div>
+                </div>
                 <p className="text-slate-600 leading-relaxed">
                   The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 500+ wholesale clients worldwide.
                 </p>

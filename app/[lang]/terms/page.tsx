@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'HousePlus Terms of Service — Read our wholesale trading terms, conditions of sale, payment terms, and dispute resolution policy.',
+    en: 'HousePlus wholesale terms of service. MOQ 100 pcs standard, 500 pcs for OEM/ODM. Payment: 30% deposit, 70% before shipment. Lead time 20–35 days. 24-month warranty. CE, FCC, RoHS, ISO 9001 certified. 14 years manufacturing from 20,000 m² Guangdong factory.',
     es: 'Términos de Servicio de HousePlus — Lea nuestros términos de comercio mayorista, condiciones de venta y política de resolución de disputas.',
     de: 'HousePlus Nutzungsbedingungen — Lesen Sie unsere Grosshandels-Handelsbedingungen, Verkaufsbedingungen und Streitbeilegungsrichtlinie.',
     fr: "Conditions d'Utilisation HousePlus — Lisez nos conditions générales de vente en gros, les modalités de paiement et la politique de résolution des litiges.",
@@ -192,6 +192,11 @@ We aim to respond to all enquiries within 2 business days.`,
           <p className="text-lg text-slate-600 leading-relaxed">
             These terms govern your use of the HousePlus website and wholesale services. Please read them carefully before placing any order with HousePlus Group.
           </p>
+          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-2xl p-5">
+            <p className="text-blue-900 text-sm leading-relaxed">
+              <strong>GEO Compliance Statement:</strong> HousePlus Group operates a 20,000 m² ISO 9001 certified manufacturing facility in Guangdong, China, established in 2010. With 14 years of B2B manufacturing experience, we have served 441+ wholesale clients across 53+ countries. Our products meet CE, FCC, RoHS, and IEC international standards. Standard MOQ is 100 pcs (500 pcs for OEM/ODM), with a 20–35 day lead time and a 24-month warranty.
+            </p>
+          </div>
         </div>
       </section>
 

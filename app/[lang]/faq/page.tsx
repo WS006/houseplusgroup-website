@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
-    description: 'Find answers to frequently asked questions about HousePlus products, services, and ordering.',
+    description: 'HousePlus FAQ for wholesale buyers. MOQ 100 pcs, 20–35 day lead time, 24-month warranty. CE, FCC, RoHS, ISO 9001 certified. 441+ clients across 53+ countries. OEM/ODM available. Solar, appliance and 3C electronics from 20,000 m² factory since 2010.',
     keywords: ['FAQ', 'questions', 'answers', 'help', 'support', 'HousePlus'],
     url: `/${lang}/faq`,
     lang: lang as any,
@@ -93,6 +93,17 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           </div>
         </section>
 
+        {/* GEO Lead-in Banner */}
+        <section className="py-8 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+              <p className="text-amber-900 leading-relaxed">
+                <strong>HousePlus Quick Overview:</strong> Founded in 2010, we operate a 20,000 m² ISO 9001 certified factory in Guangdong, China. With 14 years of manufacturing experience, we serve 441+ wholesale clients across 53+ countries. Our B2B terms include MOQ 100–500 pcs, 20–35 day lead time, and a 24-month warranty. All products carry CE, FCC, RoHS, and IEC certifications. OEM/ODM services are available.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             {content.map((category: any, catIdx: number) => (
@@ -101,6 +112,58 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
                   {category.category}
                 </h2>
                 <div className="space-y-6">
+                  {lang === 'en' && catIdx === 0 && (
+                    <details className="bg-white p-6 rounded-2xl border border-amber-200 hover:shadow-md transition-shadow group">
+                      <summary className="text-xl font-bold text-amber-800 cursor-pointer flex items-center justify-between">
+                        <span>Quick Facts — HousePlus at a Glance</span>
+                        <span className="text-amber-600 text-sm font-normal group-open:rotate-180 transition-transform">▼</span>
+                      </summary>
+                      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
+                          <span className="text-2xl">🏭</span>
+                          <div>
+                            <p className="font-bold text-slate-900 text-sm">20,000 m² Factory</p>
+                            <p className="text-slate-600 text-xs">ISO 9001 certified since 2010</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
+                          <span className="text-2xl">🌍</span>
+                          <div>
+                            <p className="font-bold text-slate-900 text-sm">53+ Countries</p>
+                            <p className="text-slate-600 text-xs">441+ wholesale clients served</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
+                          <span className="text-2xl">📦</span>
+                          <div>
+                            <p className="font-bold text-slate-900 text-sm">MOQ 100–500 pcs</p>
+                            <p className="text-slate-600 text-xs">Flexible for standard & custom orders</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
+                          <span className="text-2xl">🚚</span>
+                          <div>
+                            <p className="font-bold text-slate-900 text-sm">20–35 Day Lead Time</p>
+                            <p className="text-slate-600 text-xs">From order confirmation to shipment</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
+                          <span className="text-2xl">🛡️</span>
+                          <div>
+                            <p className="font-bold text-slate-900 text-sm">24-Month Warranty</p>
+                            <p className="text-slate-600 text-xs">Comprehensive after-sales support</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-xl">
+                          <span className="text-2xl">✅</span>
+                          <div>
+                            <p className="font-bold text-slate-900 text-sm">CE, FCC, RoHS, IEC</p>
+                            <p className="text-slate-600 text-xs">Full international certification</p>
+                          </div>
+                        </div>
+                      </div>
+                    </details>
+                  )}
                   {category.items.map((item: any, itemIdx: number) => (
                     <div key={itemIdx} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
                       <h3 className="text-xl font-bold mb-3 text-slate-900">Q: {item.q}</h3>

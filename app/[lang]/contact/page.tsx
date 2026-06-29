@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Contact HousePlus for wholesale inquiries, product information, and OEM/ODM services. We respond within 24 hours.',
-    es: 'Póngase en contacto con HousePlus para consultas mayoristas y servicios OEM/ODM.',
-    de: 'Kontaktieren Sie HousePlus für Großhandelsanfragen und OEM/ODM-Services.',
-    fr: 'Contactez HousePlus pour les demandes de gros et les services OEM/ODM.',
-    ar: 'اتصل بـ HousePlus للاستفسارات بالجملة وخدمات OEM/ODM.',
+    en: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    es: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    de: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    fr: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    ar: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
   };
 
   return generateSEOMetadata({
@@ -66,6 +66,47 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </div>
 
             <div className="space-y-8">
+              <div className="bg-blue-600 text-white p-8 rounded-3xl shadow-xl shadow-blue-200">
+                <h2 className="text-2xl font-bold mb-6">Why Choose HousePlus</h2>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🏭</span>
+                    <div>
+                      <p className="font-bold text-sm">20,000 m² ISO 9001 Factory</p>
+                      <p className="text-blue-100 text-xs">Guangdong, China — Founded 2010</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">📞</span>
+                    <div>
+                      <p className="font-bold text-sm">WhatsApp +86 155 7811 9543</p>
+                      <p className="text-blue-100 text-xs">24-hour response guaranteed</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">📧</span>
+                    <div>
+                      <p className="font-bold text-sm">jack@houseplus-ch.com</p>
+                      <p className="text-blue-100 text-xs">Direct sales inquiry</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🌍</span>
+                    <div>
+                      <p className="font-bold text-sm">441+ Clients in 53+ Countries</p>
+                      <p className="text-blue-100 text-xs">14 years of manufacturing trust</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">✓</span>
+                    <div>
+                      <p className="font-bold text-sm">MOQ 100 pcs · 20–35 Day Lead Time</p>
+                      <p className="text-blue-100 text-xs">24-month warranty · CE FCC RoHS</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl shadow-slate-200">
                 <h2 className="text-2xl font-bold mb-6">Direct Contact</h2>
                 <div className="space-y-6">

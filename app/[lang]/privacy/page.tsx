@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'HousePlus Privacy Policy - Learn how we collect, use, and protect your personal information when you use our website and services.',
+    en: 'HousePlus privacy policy for wholesale buyers. GDPR compliant data handling. 14 years trusted manufacturer. 441+ clients across 53+ countries. Secure inquiry and order processing from ISO 9001 certified 20,000 m² facility.',
     es: 'Política de Privacidad de HousePlus - Aprenda cómo recopilamos, usamos y protegemos su información personal.',
     de: 'HousePlus Datenschutzrichtlinie - Erfahren Sie, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.',
     fr: 'Politique de Confidentialité de HousePlus - Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles.',
@@ -40,7 +40,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
     en: {
       title: 'Privacy Policy',
       lastUpdated: 'Last Updated: January 15, 2025',
-      intro: 'HousePlus Group ("HousePlus", "we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.houseplus-ch.com or engage with our wholesale business services. Please read this policy carefully. If you disagree with its terms, please discontinue use of our site.',
+      intro: 'HousePlus Group ("HousePlus", "we", "us", or "our") is committed to protecting your privacy. With 14 years of trusted manufacturing experience, 441+ wholesale clients across 53+ countries, and ISO 9001 certified 20,000 m² facilities, we handle all inquiry and order data securely and in full GDPR compliance. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.houseplus-ch.com or engage with our wholesale business services. Please read this policy carefully. If you disagree with its terms, please discontinue use of our site.',
       sections: [
         {
           title: '1. Information We Collect',
