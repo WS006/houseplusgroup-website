@@ -45,7 +45,7 @@ export const qaLibrary: QAPair[] = [
   // ===== ORDERING & PRICING Q&A =====
   {
     question: 'What is the minimum order quantity (MOQ) for HousePlus products?',
-    answer: 'Our MOQ varies by product type: Solar systems: 100 units, Home appliances: 150 units, 3C electronics: 200 units. For bulk orders exceeding 500 units, we offer special pricing discounts. Contact our sales team for customized MOQ arrangements.',
+    answer: 'Our standard MOQ is 100 pcs for most products. For OEM/ODM customized products, the MOQ is 500 pcs. For bulk orders exceeding 500 units, we offer special pricing discounts. Contact our sales team for customized MOQ arrangements.',
     category: 'Ordering',
     industry: 'general',
     keywords: ['MOQ', 'minimum order', 'quantity', 'bulk'],

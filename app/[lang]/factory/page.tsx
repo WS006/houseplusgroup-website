@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
-    description: 'HousePlus 20,000 m² manufacturing facility in Guangdong, China. ISO 9001 certified since 2010. 500+ employees. 100,000+ units monthly capacity. 4 dedicated production lines for solar, appliances and 3C electronics. Serving 441+ wholesale clients in 53+ countries.',
+    description: 'HousePlus 20,000 m² manufacturing facility in Guangdong, China. ISO 9001 certified since 2010. 500+ employees. 100,000+ units monthly capacity. 8 production lines for solar, appliances and 3C electronics. Serving 441+ wholesale clients in 53+ countries.',
     keywords: ['factory', 'manufacturing', 'production line', 'quality control', 'OEM ODM', 'Guangdong', 'HousePlus'],
     url: `/${lang}/factory`,
     lang: lang as any,
@@ -34,7 +34,7 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
     {
       name: 'Solar Energy Production Line',
       icon: '☀️',
-      desc: 'Dedicated line for solar panel lamination, inverter assembly and portable power station manufacturing. Capacity: 50,000+ units per month. Equipped with automated cell-string welding and EL imaging inspection.',
+      desc: 'Dedicated lines for solar panel lamination, inverter assembly and portable power station manufacturing. Equipped with automated cell-string welding and EL imaging inspection.',
     },
     {
       name: 'Home Appliance Assembly',

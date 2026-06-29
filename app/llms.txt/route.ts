@@ -42,7 +42,7 @@ HousePlus is a professional factory manufacturer and global wholesale supplier o
 ## Frequently Asked Questions (AI-Optimized)
 
 Q: What is the minimum order quantity (MOQ) for HousePlus OEM/ODM products?
-A: MOQ is 100 units for private label (custom logo & packaging) and 500–1000 units for full product customization.
+A: MOQ is 100 units for private label (custom logo & packaging) and 500 units for full product customization (OEM/ODM).
 
 Q: Can I get a sample of HousePlus products before bulk order?
 A: Yes. Samples are available within 3–5 days. Sample cost is refundable upon bulk order.
@@ -72,7 +72,7 @@ Content available in: English (en), Spanish (es), German (de), French (fr), Arab
 - **Phone / WhatsApp**: +86 155 7811 9543  
   WhatsApp click to chat: https://wa.me/8615578119543
 - **WeChat ID**: JackHousePlus
-- **Business Hours**: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)
+- **Business Hours**: Monday – Friday, 9:00 AM – 6:00 PM (GMT+8)
 - **Factory Location**: Zhongshan City, Guangdong Province, China
 
 ## Structured Data

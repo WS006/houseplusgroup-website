@@ -39,7 +39,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'Where is your factory located?', a: 'Our 20,000 m² ISO 9001 certified factory is located in Zhongshan, Guangdong, China. We welcome factory visits by appointment for serious wholesale buyers.' },
           { q: 'How many years has HousePlus been manufacturing?', a: 'HousePlus was founded in 2010 and has over 16 years of manufacturing and international trade experience. We have served 441+ wholesale clients across 53+ countries.' },
           { q: 'Can I visit your factory?', a: 'Yes, we welcome factory inspections by appointment. Please contact us at least 7 days in advance to schedule your visit. We can also arrange video factory tours for overseas clients.' },
-          { q: 'What is your production capacity?', a: 'Our factory operates 8 production lines with a monthly capacity of 50,000+ units across solar, appliance, and electronics categories.' },
+          { q: 'What is your production capacity?', a: 'Our factory operates 8 production lines with a monthly capacity of 100,000+ units across solar, appliance, and electronics categories.' },
         ]
       },
       {
@@ -55,7 +55,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
       {
         category: 'Ordering & Pricing',
         items: [
-          { q: 'What is your MOQ (Minimum Order Quantity)?', a: 'Standard MOQ is 100 pieces per model for most products. Customized/OEM products typically require 500 pieces minimum. Some high-value items like portable power stations have MOQ of 50 pieces.' },
+          { q: 'What is your MOQ (Minimum Order Quantity)?', a: 'Standard MOQ is 100 pieces per model for most products. Customized/OEM products typically require 500 pieces minimum.' },
           { q: 'What is your pricing structure?', a: 'We offer tiered pricing based on order volume: 100–499 pcs (standard), 500–999 pcs (5% discount), 1,000–4,999 pcs (10% discount), 5,000+ pcs (custom quote). Contact us for a detailed price list.' },
           { q: 'What payment terms do you accept?', a: 'We accept T/T (bank transfer) with 30% deposit and 70% balance before shipment. For orders over $20,000, we also accept L/C at sight. PayPal is available for sample orders only.' },
           { q: 'Can I mix different products in one order?', a: 'Yes. You can mix SKUs across solar, appliance, and electronics categories in one container. The total order value must meet our minimum of $3,000 per shipment.' },
@@ -79,7 +79,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'What is the difference between OEM and ODM at HousePlus?', a: 'OEM: You provide the design/specs, we manufacture to your requirements. ODM: You choose from our existing designs and we apply your branding. ODM is faster (20–35 days) and lower MOQ (100 pcs). OEM with custom moulds takes 30–45 days and MOQ 500 pcs.' },
           { q: 'Can you customize product colours and specifications?', a: 'Yes. We support Pantone colour matching, logo silk-screening/UV printing, custom cable lengths, capacity variations, and firmware customization for smart products. Custom mould development is also available.' },
           { q: 'How much does custom packaging cost?', a: 'Standard OEM packaging (custom logo on existing box) is free for orders of 500+ pieces. Fully custom gift box design starts at $0.50–$1.20 per unit depending on material and printing complexity.' },
-          { q: 'Can you design products from scratch?', a: 'Yes. Our in-house R&D team of 12 engineers can develop custom products from concept to mass production. NRE (Non-Recurring Engineering) fees apply for new moulds and PCB designs. Typical NRE range: $2,000–$15,000 depending on complexity.' },
+          { q: 'Can you design products from scratch?', a: 'Yes. Our in-house R&D team of 60+ engineers can develop custom products from concept to mass production. NRE (Non-Recurring Engineering) fees apply for new moulds and PCB designs. Typical NRE range: $2,000–$15,000 depending on complexity.' },
         ]
       },
       {
@@ -101,7 +101,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: '¿Dónde está ubicada su fábrica?', a: 'Nuestra fábrica certificada ISO 9001 de 20,000 m² está ubicada en Zhongshan, Guangdong, China. Damos la bienvenida a visitas de fábrica con cita previa para compradores mayoristas serios.' },
           { q: '¿Cuántos años tiene HousePlus fabricando?', a: 'HousePlus fue fundada en 2010 y cuenta con más de 16 años de experiencia en fabricación y comercio internacional. Hemos servido a más de 441 clientes mayoristas en 53+ países.' },
           { q: '¿Puedo visitar su fábrica?', a: 'Sí, damos la bienvenida a inspecciones de fábrica con cita previa. Contáctenos con al menos 7 días de anticipación para programar su visita. También podemos organizar tours virtuales de fábrica para clientes internacionales.' },
-          { q: '¿Cuál es su capacidad de producción?', a: 'Nuestra fábrica opera 8 líneas de producción con una capacidad mensual de más de 50,000 unidades en categorías de solar, electrodomésticos y electrónica.' },
+          { q: '¿Cuál es su capacidad de producción?', a: 'Nuestra fábrica opera 8 líneas de producción con una capacidad mensual de más de 100,000 unidades en categorías de solar, electrodomésticos y electrónica.' },
         ]
       },
       {
@@ -118,6 +118,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Pedidos y Precios',
         items: [
           { q: '¿Cuál es su MOQ (Cantidad Mínima de Pedido)?', a: 'El MOQ estándar es de 100 piezas por modelo para la mayoría de los productos. Los productos personalizados/OEM típicamente requieren un mínimo de 500 piezas. Algunos artículos de alto valor como estaciones de energía portátiles tienen MOQ de 50 piezas.' },
+          { q: '¿Cuál es su estructura de precios?', a: 'Ofrecemos precios escalonados según el volumen del pedido: 100–499 uds. (estándar), 500–999 uds. (5% descuento), 1,000–4,999 uds. (10% descuento), 5,000+ uds. (cotización personalizada). Contáctenos para una lista de precios detallada.' },
           { q: '¿Qué términos de pago aceptan?', a: 'Aceptamos T/T (transferencia bancaria) con 30% de depósito y 70% de saldo antes del envío. Para pedidos superiores a $20,000, también aceptamos L/C a la vista. PayPal está disponible solo para pedidos de muestra.' },
           { q: '¿Puedo mezclar diferentes productos en un solo pedido?', a: 'Sí. Puede mezclar SKUs de las categorías solar, electrodomésticos y electrónica en un solo contenedor. El valor total del pedido debe alcanzar nuestro mínimo de $3,000 por envío.' },
           { q: '¿Ofrecen acuerdos de distribución exclusiva?', a: 'Sí. Para compradores que se comprometen a volúmenes anuales de compra de $100,000+, ofrecemos derechos de distribución territorial exclusivos con precios protegidos y soporte de marketing.' },
@@ -130,6 +131,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: '¿Qué métodos de envío ofrecen?', a: 'Ofrecemos carga marítima (FOB Shenzhen/CIF/DDP), carga aérea y mensajería express (DHL/FedEx/UPS). Para contenedores completos (FCL), recomendamos carga marítima. Para muestras urgentes, la mensajería express es la más rápida.' },
           { q: '¿Qué incoterm soportan?', a: 'Soportamos EXW, FOB Shenzhen, CIF y DDP. FOB es nuestro término estándar. DDP (entregado con derechos pagados) está disponible para UE, EE.UU., Reino Unido y destinos selectos de Oriente Medio con acuerdo previo.' },
           { q: '¿Cuánto tiempo tarda el envío?', a: 'Carga marítima: 15–35 días según el destino. Carga aérea: 5–10 días. Mensajería express: 3–7 días. Proporcionamos números de seguimiento y documentos de envío dentro de las 24 horas posteriores al despacho.' },
+          { q: '¿Pueden gestionar el despacho de aduanas?', a: 'Para envíos DDP, gestionamos el despacho de aduanas y los aranceles en el país de destino. Para FOB/CIF, el comprador es responsable de la importación. Proporcionamos todos los documentos necesarios: factura comercial, lista de empaque, B/L y certificados de origen.' },
         ]
       },
       {
@@ -139,6 +141,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: '¿Cuál es la diferencia entre OEM y ODM en HousePlus?', a: 'OEM: Usted proporciona el diseño/especificaciones, nosotros fabricamos según sus requisitos. ODM: Usted elige de nuestros diseños existentes y aplicamos su marca. ODM es más rápido (20–35 días) y menor MOQ (100 piezas). OEM con moldes personalizados tarda 30–45 días y MOQ 500 piezas.' },
           { q: '¿Pueden personalizar colores y especificaciones de productos?', a: 'Sí. Soportamos coincidencia de colores Pantone, serigrafía/impresión UV de logotipo, longitudes de cable personalizadas, variaciones de capacidad y personalización de firmware para productos inteligentes. El desarrollo de moldes personalizados también está disponible.' },
           { q: '¿Cuánto cuesta el empaque personalizado?', a: 'El empaque OEM estándar (logotipo personalizado en caja existente) es gratuito para pedidos de 500+ piezas. El diseño completamente personalizado de caja de regalo comienza en $0.50–$1.20 por unidad según el material y la complejidad de impresión.' },
+          { q: '¿Pueden diseñar productos desde cero?', a: 'Sí. Nuestro equipo de I+D interno de más de 60 ingenieros puede desarrollar productos personalizados desde el concepto hasta la producción en masa. Se aplican tarifas NRE (Ingeniería No Recurrente) para nuevos moldes y diseños de PCB. El rango típico de NRE: $2,000–$15,000 según la complejidad.' },
         ]
       },
       {
@@ -148,6 +151,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: '¿Cuál es su tasa de defectos?', a: 'Nuestra tasa de defectos actual es inferior al 0.3% gracias a nuestro proceso de QC de 5 etapas (inspección de materiales entrantes → inspección en proceso → prueba funcional → prueba de envejecimiento → inspección aleatoria final).' },
           { q: '¿Cómo manejan los productos defectuosos?', a: 'Para reclamaciones de garantía, ofrecemos piezas de repuesto gratuitas, reemplazo completo del producto o notas de crédito a nuestra discreción. Para casos urgentes, podemos enviar reemplazos por aire en 72 horas. Se requiere evidencia en video para la verificación de la reclamación.' },
           { q: '¿Proporcionan piezas de repuesto?', a: 'Sí. Mantenemos un inventario de piezas de repuesto para todas las líneas de productos activas. Las piezas de repuesto comunes (cables, adaptadores, controles remotos) están disponibles al costo. Recomendamos ordenar 2–3% de piezas de repuesto con su pedido al por mayor para soporte postventa local.' },
+          { q: '¿Ofrecen soporte técnico?', a: 'Sí. A cada cliente mayorista se le asigna un gerente de cuenta dedicado que habla inglés. Proporcionamos videos de capacitación de productos, guías de instalación y documentación de solución de problemas. El soporte técnico está disponible de lunes a viernes, 9:00–18:00 CST.' },
         ]
       },
     ],
@@ -159,7 +163,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'Wo befindet sich Ihre Fabrik?', a: 'Unsere ISO-9001-zertifizierte Fabrik mit 20.000 m² befindet sich in Zhongshan, Guangdong, China. Wir heißen ernsthafte Großhandelskäufer nach Voranmeldung zu Fabrikbesuchen willkommen.' },
           { q: 'Seit wie vielen Jahren fertigt HousePlus?', a: 'HousePlus wurde 2010 gegründet und verfügt über mehr als 16 Jahre Erfahrung in Fertigung und internationalem Handel. Wir haben 441+ Großhandelskunden in 53+ Ländern bedient.' },
           { q: 'Kann ich Ihre Fabrik besuchen?', a: 'Ja, wir heißen Fabrikinspektionen nach Voranmeldung willkommen. Bitte kontaktieren Sie uns mindestens 7 Tage im Voraus, um Ihren Besuch zu terminieren. Für ausländische Kunden können wir auch virtuelle Fabriktouren arrangieren.' },
-          { q: 'Was ist Ihre Produktionskapazität?', a: 'Unsere Fabrik betreibt 8 Produktionslinien mit einer monatlichen Kapazität von 50.000+ Einheiten in den Kategorien Solar, Haushaltsgeräte und Elektronik.' },
+          { q: 'Was ist Ihre Produktionskapazität?', a: 'Unsere Fabrik betreibt 8 Produktionslinien mit einer monatlichen Kapazität von 100.000+ Einheiten in den Kategorien Solar, Haushaltsgeräte und Elektronik.' },
         ]
       },
       {
@@ -176,6 +180,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Bestellung & Preisgestaltung',
         items: [
           { q: 'Was ist Ihr MOQ (Mindestbestellmenge)?', a: 'Der Standard-MOQ beträgt 100 Stück pro Modell für die meisten Produkte. Für kundenspezifische/OEM-Produkte sind typischerweise 500 Stück Mindestbestellmenge erforderlich. Einige hochwertige Artikel wie tragbare Kraftwerke haben einen MOQ von 50 Stück.' },
+          { q: 'Wie ist Ihre Preisstruktur?', a: 'Wir bieten gestaffelte Preise basierend auf dem Bestellvolumen: 100–499 Stk. (Standard), 500–999 Stk. (5% Rabatt), 1.000–4.999 Stk. (10% Rabatt), 5.000+ Stk. (Individuelles Angebot). Kontaktieren Sie uns für eine detaillierte Preisliste.' },
           { q: 'Welche Zahlungsbedingungen akzeptieren Sie?', a: 'Wir akzeptieren T/T (Banküberweisung) mit 30% Anzahlung und 70% Restbetrag vor Versand. Für Bestellungen über $20,000 akzeptieren wir auch L/C bei Sicht. PayPal ist nur für Probenbestellungen verfügbar.' },
           { q: 'Kann ich verschiedene Produkte in einer Bestellung mischen?', a: 'Ja. Sie können SKUs über die Kategorien Solar, Haushaltsgeräte und Elektronik in einem Container mischen. Der Gesamtbestellwert muss unser Minimum von $3,000 pro Sendung erreichen.' },
           { q: 'Bieten Sie exklusive Vertriebsvereinbarungen an?', a: 'Ja. Für Käufer, die sich zu jährlichen Einkaufsvolumina von $100,000+ verpflichten, bieten wir exklusive territoriale Vertriebsrechte mit geschützten Preisen und Marketingunterstützung an.' },
@@ -188,6 +193,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'Welche Versandmethoden bieten Sie an?', a: 'Wir bieten Seefracht (FOB Shenzhen/CIF/DDP), Luftfracht und Express-Kurier (DHL/FedEx/UPS) an. Für Containerladungen (FCL) empfehlen wir Seefracht. Für dringende Proben ist Express-Kurier am schnellsten.' },
           { q: 'Welche Incoterms unterstützen Sie?', a: 'Wir unterstützen EXW, FOB Shenzhen, CIF und DDP. FOB ist unser Standard. DDP (Delivered Duty Paid) ist für die EU, USA, UK und ausgewählte Naher Osten-Ziele mit vorheriger Absprache verfügbar.' },
           { q: 'Wie lange dauert der Versand?', a: 'Seefracht: 15–35 Tage je nach Ziel. Luftfracht: 5–10 Tage. Express-Kurier: 3–7 Tage. Wir stellen Tracking-Nummern und Versanddokumente innerhalb von 24 Stunden nach Versand bereit.' },
+          { q: 'Können Sie die Zollabwicklung übernehmen?', a: 'Für DDP-Sendungen übernehmen wir die Zollabwicklung und Zölle im Zielland. Bei FOB/CIF ist der Käufer für die Einfuhrabwicklung verantwortlich. Wir stellen alle erforderlichen Dokumente bereit: Handelsrechnung, Packliste, Konnossement und Ursprungszeugnisse.' },
         ]
       },
       {
@@ -197,6 +203,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'Was ist der Unterschied zwischen OEM und ODM bei HousePlus?', a: 'OEM: Sie stellen das Design/die Spezifikationen bereit, wir fertigen nach Ihren Anforderungen. ODM: Sie wählen aus unseren bestehenden Designs und wir wenden Ihr Branding an. ODM ist schneller (20–35 Tage) und niedrigerer MOQ (100 Stück). OEM mit kundenspezifischen Formen dauert 30–45 Tage und MOQ 500 Stück.' },
           { q: 'Können Sie Produktfarben und Spezifikationen anpassen?', a: 'Ja. Wir unterstützen Pantone-Farbanpassung, Logo-Siebdruck/UV-Druck, kundenspezifische Kabellängen, Kapazitätsvariationen und Firmware-Anpassung für Smart-Produkte. Auch kundenspezifische Formenentwicklung ist verfügbar.' },
           { q: 'Wie viel kostet kundenspezifische Verpackung?', a: 'Standard-OEM-Verpackung (kundenspezifisches Logo auf bestehender Box) ist kostenlos für Bestellungen von 500+ Stück. Vollständig kundenspezifisches Geschenkbox-Design beginnt bei $0,50–$1,20 pro Einheit je nach Material und Druckkomplexität.' },
+          { q: 'Können Sie Produkte von Grund auf neu entwickeln?', a: 'Ja. Unser interner F&E-Team aus 60+ Ingenieuren kann kundenspezifische Produkte vom Konzept bis zur Massenproduktion entwickeln. NRE-Gebühren (Non-Recurring Engineering) gelten für neue Formen und PCB-Designs. Typischer NRE-Bereich: $2.000–$15.000 je nach Komplexität.' },
         ]
       },
       {
@@ -206,6 +213,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'Wie hoch ist Ihre Fehlerrate?', a: 'Unsere aktuelle Fehlerrate liegt unter 0,3% dank unseres 5-stufigen QC-Prozesses (Eingangsmaterialinspektion → Prozessinspektion → Funktionstest → Alterungstest → abschließende Stichprobeninspektion).' },
           { q: 'Wie gehen Sie mit defekten Produkten um?', a: 'Für Garantieansprüche bieten wir kostenlose Ersatzteile, vollständigen Produktaustausch oder Gutschriften nach unserem Ermessen an. Für dringende Fälle können wir Ersatzteile innerhalb von 72 Stunden per Luftfracht versenden. Video-Beweis ist für die Anspruchsüberprüfung erforderlich.' },
           { q: 'Bieten Sie Ersatzteile an?', a: 'Ja. Wir führen ein Ersatzteillager für alle aktiven Produktlinien. Häufige Ersatzteile (Kabel, Adapter, Fernbedienungen) sind zum Selbstkostenpreis verfügbar. Wir empfehlen, 2–3% Ersatzteile mit Ihrer Großbestellung für lokalen After-Sales-Support zu bestellen.' },
+          { q: 'Bieten Sie technischen Support an?', a: 'Ja. Jedem Großhandelskunden wird ein dedizierter Kundenbetreuer mit Englischkenntnissen zugewiesen. Wir bieten Produkttrainingsvideos, Installationsanleitungen und Fehlerbehebungs-Dokumentation. Technischer Support ist von Montag bis Freitag, 9:00–18:00 MEZ verfügbar.' },
         ]
       },
     ],
@@ -217,7 +225,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'Où se trouve votre usine?', a: "Notre usine certifiée ISO 9001 de 20 000 m² est située à Zhongshan, Guangdong, en Chine. Nous accueillons les visites d'usine sur rendez-vous pour les acheteurs en gros sérieux." },
           { q: "Depuis combien d'années HousePlus fabrique-t-il?", a: "HousePlus a été fondée en 2010 et possède plus de 16 ans d'expérience dans la fabrication et le commerce international. Nous avons servi 441+ clients grossistes dans 53+ pays." },
           { q: "Puis-je visiter votre usine?", a: "Oui, nous accueillons les inspections d'usine sur rendez-vous. Veuillez nous contacter au moins 7 jours à l'avance pour planifier votre visite. Nous pouvons également organiser des visites virtuelles d'usine pour les clients internationaux." },
-          { q: 'Quelle est votre capacité de production?', a: "Notre usine exploite 8 lignes de production avec une capacité mensuelle de 50 000+ unités dans les catégories solaire, appareils ménagers et électronique." },
+          { q: 'Quelle est votre capacité de production?', a: "Notre usine exploite 8 lignes de production avec une capacité mensuelle de 100 000+ unités dans les catégories solaire, appareils ménagers et électronique." },
         ]
       },
       {
@@ -234,6 +242,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Commande & Tarification',
         items: [
           { q: "Quel est votre MOQ (Quantité Minimum de Commande)?", a: "Le MOQ standard est de 100 pièces par modèle pour la plupart des produits. Les produits personnalisés/OEM nécessitent généralement un minimum de 500 pièces. Certains articles à haute valeur comme les stations d'énergie portables ont un MOQ de 50 pièces." },
+          { q: "Quelle est votre structure de prix?", a: "Nous proposons des prix échelonnés selon le volume de commande : 100–499 pcs (standard), 500–999 pcs (remise 5%), 1 000–4 999 pcs (remise 10%), 5 000+ pcs (devis personnalisé). Contactez-nous pour une liste de prix détaillée." },
           { q: 'Quelles conditions de paiement acceptez-vous?', a: "Nous acceptons T/T (virement bancaire) avec 30% d'acompte et 70% de solde avant expédition. Pour les commandes de plus de $20,000, nous acceptons également L/C à vue. PayPal est disponible uniquement pour les commandes d'échantillons." },
           { q: 'Puis-je mélanger différents produits dans une seule commande?', a: "Oui. Vous pouvez mélanger des SKU dans les catégories solaire, appareils ménagers et électronique dans un seul conteneur. La valeur totale de la commande doit atteindre notre minimum de $3,000 par envoi." },
           { q: 'Proposez-vous des accords de distribution exclusifs?', a: "Oui. Pour les acheteurs s'engageant sur des volumes d'achat annuels de $100,000+, nous proposons des droits de distribution territoriaux exclusifs avec des prix protégés et un support marketing." },
@@ -246,6 +255,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: "Quelles méthodes d'expédition proposez-vous?", a: "Nous proposons le fret maritime (FOB Shenzhen/CIF/DDP), le fret aérien et le courrier express (DHL/FedEx/UPS). Pour les chargements complets de conteneurs (FCL), nous recommandons le fret maritime. Pour les échantillons urgents, le courrier express est le plus rapide." },
           { q: "Quels incoterms supportez-vous?", a: "Nous supportons EXW, FOB Shenzhen, CIF et DDP. FOB est notre terme standard. DDP (Delivered Duty Paid) est disponible pour l'UE, les États-Unis, le Royaume-Uni et certaines destinations du Moyen-Orient avec arrangement préalable." },
           { q: "Combien de temps dure l'expédition?", a: "Fret maritime: 15–35 jours selon la destination. Fret aérien: 5–10 jours. Courrier express: 3–7 jours. Nous fournissons les numéros de suivi et les documents d'expédition dans les 24 heures suivant l'expédition." },
+          { q: "Pouvez-vous gérer le dédouanement?", a: "Pour les expéditions DDP, nous gérons le dédouanement et les droits de douane dans le pays de destination. Pour FOB/CIF, l'acheteur est responsable du dédouanement à l'importation. Nous fournissons tous les documents nécessaires : facture commerciale, liste de colisage, B/L et certificats d'origine." },
         ]
       },
       {
@@ -255,6 +265,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: "Quelle est la différence entre OEM et ODM chez HousePlus?", a: "OEM: Vous fournissez le design/les spécifications, nous fabriquons selon vos exigences. ODM: Vous choisissez parmi nos designs existants et nous appliquons votre branding. L'ODM est plus rapide (20–35 jours) et MOQ plus bas (100 pièces). L'OEM avec moules personnalisés prend 30–45 jours et MOQ 500 pièces." },
           { q: 'Pouvez-vous personnaliser les couleurs et spécifications produits?', a: "Oui. Nous supportons la correspondance des couleurs Pantone, la sérigraphie/impression UV de logo, les longueurs de câble personnalisées, les variations de capacité et la personnalisation du firmware pour les produits intelligents. Le développement de moules personnalisés est également disponible." },
           { q: "Combien coûte l'emballage personnalisé?", a: "L'emballage OEM standard (logo personnalisé sur boîte existante) est gratuit pour les commandes de 500+ pièces. La conception complètement personnalisée de boîte cadeau commence à $0,50–$1,20 par unité selon le matériau et la complexité d'impression." },
+          { q: "Pouvez-vous concevoir des produits de zéro?", a: "Oui. Notre équipe R&D interne de plus de 60 ingénieurs peut développer des produits sur mesure du concept à la production en masse. Des frais NRE (Non-Recurring Engineering) s'appliquent pour les nouveaux moules et conceptions de PCB. Fourchette NRE typique : 2 000–15 000 $ selon la complexité." },
         ]
       },
       {
@@ -264,6 +275,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: "Quel est votre taux de défauts?", a: "Notre taux de défauts actuel est inférieur à 0,3% grâce à notre processus QC en 5 étapes (inspection des matériaux entrants → inspection en cours de processus → test fonctionnel → test de vieillissement → inspection aléatoire finale)." },
           { q: "Comment traitez-vous les produits défectueux?", a: "Pour les réclamations sous garantie, nous offrons des pièces de rechange gratuites, un remplacement complet du produit ou des notes de crédit à notre discrétion. Pour les cas urgents, nous pouvons expédier des remplacements par avion en 72 heures. Une preuve vidéo est requise pour la vérification de la réclamation." },
           { q: 'Fournissez-vous des pièces de rechange?', a: "Oui. Nous maintenons un inventaire de pièces de rechange pour toutes les lignes de produits actives. Les pièces de rechange courantes (câbles, adaptateurs, télécommandes) sont disponibles au prix coûtant. Nous recommandons de commander 2–3% de pièces de rechange avec votre commande en gros pour le support après-vente local." },
+          { q: "Proposez-vous un support technique?", a: "Oui. Chaque client en gros se voit attribuer un gestionnaire de compte dédié parlant anglais. Nous fournissons des vidéos de formation produits, des guides d'installation et de la documentation de dépannage. Le support technique est disponible du lundi au vendredi, 9h00–18h00 CST." },
         ]
       },
     ],
@@ -275,7 +287,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'أين يقع مصنعكم؟', a: 'يقع مصنعنا المعتمد ISO 9001 بمساحة 20,000 متر مربع في تشونغشان، قوانغدونغ، الصين. نرحب بزيارات المصنع بالموعد المسبق للمشترين الجادين بالجملة.' },
           { q: 'كم عدد سنوات تصنيع HousePlus؟', a: 'تأسست HousePlus في عام 2010 ولديها أكثر من 16 عامًا من الخبرة في التصنيع والتجارة الدولية. لقد خدمنا أكثر من 441 عميل جملة في أكثر من 53 دولة.' },
           { q: 'هل يمكنني زيارة مصنعكم؟', a: 'نعم، نرحب بتفتيش المصنع بالموعد المسبق. يرجى الاتصال بنا قبل 7 أيام على الأقل لتحديد موعد زيارتك. يمكننا أيضًا ترتيب جولات افتراضية للمصنع للعملاء الدوليين.' },
-          { q: 'ما هي قدرة الإنتاج لديكم؟', a: 'يعمل مصنعنا بـ 8 خطوط إنتاج بقدرة شهرية تزيد عن 50,000 وحدة في فئات الطاقة الشمسية والأجهزة المنزلية والإلكترونيات.' },
+          { q: 'ما هي قدرة الإنتاج لديكم؟', a: 'يعمل مصنعنا بـ 8 خطوط إنتاج بقدرة شهرية تزيد عن 100,000 وحدة في فئات الطاقة الشمسية والأجهزة المنزلية والإلكترونيات.' },
         ]
       },
       {
@@ -292,6 +304,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'الطلبات والأسعار',
         items: [
           { q: 'ما هو الحد الأدنى لكمية الطلب (MOQ)؟', a: 'الحد الأدنى للطلب القياسي هو 100 قطعة لكل طراز لمعظم المنتجات. المنتجات المخصصة/OEM تتطلب عادةً 500 قطعة كحد أدنى. بعض العناصر عالية القيمة مثل محطات الطاقة المحمولة لديها حد أدنى للطلب يبلغ 50 قطعة.' },
+          { q: 'ما هي هيكل التسعير لديكم؟', a: 'نقدم أسعارًا متدرجة بناءً على حجم الطلب: 100–499 قطعة (قياسي)، 500–999 قطعة (خصم 5%)، 1,000–4,999 قطعة (خصم 10%)، 5,000+ قطعة (عرض سعر مخصص). اتصل بنا للحصول على قائمة أسعار مفصلة.' },
           { q: 'ما هي شروط الدفع التي تقبلونها؟', a: 'نقبل التحويل البنكي (T/T) مع دفعة أولى 30% و70% قبل الشحن. للطلبات التي تزيد عن 20,000 دولار، نقبل أيضًا الاعتماد المستندي L/C عند الرؤية. يتوفر PayPal فقط لطلبات العينات.' },
           { q: 'هل يمكنني مزج منتجات مختلفة في طلب واحد؟', a: 'نعم. يمكنك مزج وحدات SKU عبر فئات الطاقة الشمسية والأجهزة المنزلية والإلكترونيات في حاوية واحدة. يجب أن يصل إجمالي قيمة الطلب إلى الحد الأدنى البالغ 3,000 دولار لكل شحنة.' },
           { q: 'هل تقدمون اتفاقيات توزيع حصرية؟', a: 'نعم. للمشترين الملتزمين بحجم شراء سنوي يبلغ 100,000 دولار أو أكثر، نقدم حقوق توزيع إقليمية حصرية مع أسعار محمية ودعم تسويقي.' },
@@ -304,6 +317,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'ما هي طرق الشحن التي تقدمونها؟', a: 'نقدم الشحن البحري (FOB شنتشن/CIF/DDP) والشحن الجوي والبريد السريع (DHL/FedEx/UPS). لحاويات الحمولة الكاملة (FCL)، نوصي بالشحن البحري. للعينات العاجلة، البريد السريع هو الأسرع.' },
           { q: 'ما هي شروط التجارة (Incoterms) التي تدعمونها؟', a: 'ندعم EXW وFOB شنتشن وCIF وDDP. FOB هو شرطنا القياسي. DDP (التسليم مع دفع الرسوم الجمركية) متاح للاتحاد الأوروبي والولايات المتحدة والمملكة المتحدة وبعض وجهات الشرق الأوسط بالترتيب المسبق.' },
           { q: 'كم يستغرق الشحن؟', a: 'الشحن البحري: 15–35 يومًا حسب الوجهة. الشحن الجوي: 5–10 أيام. البريد السريع: 3–7 أيام. نقدم أرقام التتبع ومستندات الشحن خلال 24 ساعة من الإرسال.' },
+          { q: 'هل يمكنكم التعامل مع التخليص الجمركي؟', a: 'لشحنات DDP، نتولى التخليص الجمركي والرسوم في بلد الوجهة. بالنسبة لـ FOB/CIF، المشتري مسؤول عن التخليص الجمركي. نقدم جميع المستندات اللازمة: فاتورة تجارية وقائمة تعبئة وبوليصة شحن وشهادات المنشأ.' },
         ]
       },
       {
@@ -313,6 +327,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'ما هو الفرق بين OEM وODM في HousePlus؟', a: 'OEM: تقدم التصميم/المواصفات، ونحن نصنع وفقًا لمتطلباتك. ODM: تختار من تصاميمنا الحالية ونطبق علامتك التجارية. ODM أسرع (20–35 يومًا) وحد أدنى للطلب أقل (100 قطعة). OEM مع قوالب مخصصة يستغرق 30–45 يومًا وحد أدنى للطلب 500 قطعة.' },
           { q: 'هل يمكنكم تخصيص ألوان ومواصفات المنتجات؟', a: 'نعم. ندعم مطابقة ألوان Pantone وطباعة الشعار بالشاشة الحريرية/الأشعة فوق البنفسجية وأطوال الكابلات المخصصة وتباينات السعة وتخصيص البرامج الثابتة للمنتجات الذكية. تطوير القوالب المخصصة متاح أيضًا.' },
           { q: 'كم تكلفة التغليف المخصص؟', a: 'التغليف OEM القياسي (شعار مخصص على الصندوق الحالي) مجاني لطلبات 500+ قطعة. تصميم علبة هدية مخصصة بالكامل يبدأ من 0.50–1.20 دولار للوحدة حسب المادة وتعقيد الطباعة.' },
+          { q: 'هل يمكنكم تصميم منتجات من الصفر؟', a: 'نعم. يمكن لفريق البحث والتطوير الداخلي لدينا المكون من أكثر من 60 مهندسًا تطوير منتجات مخصصة من المفهوم إلى الإنتاج الضخم. تنطبق رسوم NRE (هندسة غير متكررة) للقوالب وتصاميم PCB الجديدة. نطاق NRE النموذجي: 2,000–15,000 دولار حسب التعقيد.' },
         ]
       },
       {
@@ -322,6 +337,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           { q: 'ما هي معدل العيوب لديكم؟', a: 'معدل العيوب الحالي لدينا أقل من 0.3% بفضل عملية مراقبة الجودة من 5 مراحل (فحص المواد الواردة → الفحص أثناء العملية → الاختبار الوظيفي → اختبار التقادم → الفحص العشوائي النهائي).' },
           { q: 'كيف تتعاملون مع المنتجات المعيبة؟', a: 'لمطالبات الضمان، نقدم قطع غيار مجانية أو استبدال كامل للمنتج أو إشعارات ائتمان وفقًا لتقديرنا. للحالات العاجلة، يمكننا شحن البدائل جوًا خلال 72 ساعة. مطلوب دليل فيديو للتحقق من المطالبة.' },
           { q: 'هل تقدمون قطع الغيار؟', a: 'نعم. نحافظ على مخزون قطع الغيار لجميع خطوط الإنتاج النشطة. قطع الغيار الشائعة (الكابلات والمحولات وأجهزة التحكم عن بعد) متاحة بتكلفة الشراء. نوصي بطلب 2–3% من قطع الغيار مع طلبك بالجملة لدعم ما بعد البيع المحلي.' },
+          { q: 'هل تقدمون الدعم الفني؟', a: 'نعم. يتم تعيين مدير حساب مخصص يتحدث الإنجليزية لكل عميل جملة. نقدم فيديوهات تدريب على المنتجات وأدلة التثبيت ووثائق استكشاف الأخطاء وإصلاحها. الدعم الفني متاح من الاثنين إلى الجمعة، 9:00–18:00 بتوقيت الصين.' },
         ]
       },
     ],

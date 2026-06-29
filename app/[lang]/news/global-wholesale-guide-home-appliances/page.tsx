@@ -62,7 +62,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         },
         {
           heading: 'Logistics, Shipping, and After-Sales Support',
-          text: 'HousePlus offers comprehensive logistics support to ensure your orders arrive on time and in perfect condition. We work with leading freight forwarders and shipping lines to provide FOB, CIF, and DDP terms depending on your preference. Our export packaging is designed to withstand the rigors of international shipping, with reinforced cartons, foam padding, and moisture-resistant materials. For after-sales support, HousePlus provides a 12-24 month warranty on all products, technical documentation in multiple languages, and a dedicated after-sales team available via WhatsApp, email, and video call. We also offer spare parts supply and technical training for distributors who require deeper product knowledge. Partner with HousePlus today and experience the difference of working with a manufacturer that truly invests in your success.',
+          text: 'HousePlus offers comprehensive logistics support to ensure your orders arrive on time and in perfect condition. We work with leading freight forwarders and shipping lines to provide FOB, CIF, and DDP terms depending on your preference. Our export packaging is designed to withstand the rigors of international shipping, with reinforced cartons, foam padding, and moisture-resistant materials. For after-sales support, HousePlus provides a 24-month warranty on all products, technical documentation in multiple languages, and a dedicated after-sales team available via WhatsApp, email, and video call. We also offer spare parts supply and technical training for distributors who require deeper product knowledge. Partner with HousePlus today and experience the difference of working with a manufacturer that truly invests in your success.',
         },
       ],
     },
@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         },
         {
           heading: 'Logística, Envío y Soporte Posventa',
-          text: 'HousePlus ofrece soporte logístico integral para garantizar que sus pedidos lleguen a tiempo y en perfectas condiciones. Trabajamos con los principales transitarios y líneas navieras para proporcionar términos FOB, CIF y DDP según su preferencia. Para el soporte posventa, HousePlus proporciona una garantía de 12-24 meses en todos los productos y un equipo de posventa dedicado disponible a través de WhatsApp, correo electrónico y videollamada.',
+          text: 'HousePlus ofrece soporte logístico integral para garantizar que sus pedidos lleguen a tiempo y en perfectas condiciones. Trabajamos con los principales transitarios y líneas navieras para proporcionar términos FOB, CIF y DDP según su preferencia. Para el soporte posventa, HousePlus proporciona una garantía de 24 meses en todos los productos y un equipo de posventa dedicado disponible a través de WhatsApp, correo electrónico y videollamada.',
         },
       ],
     },
@@ -134,7 +134,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         },
         {
           heading: 'Logistik, Versand und After-Sales-Support',
-          text: 'HousePlus bietet umfassenden Logistiksupport, um sicherzustellen, dass Ihre Bestellungen pünktlich und in einwandfreiem Zustand ankommen. Wir arbeiten mit führenden Spediteuren und Reedereien zusammen, um FOB-, CIF- und DDP-Konditionen anzubieten. Für den After-Sales-Support bietet HousePlus eine 12-24-monatige Garantie auf alle Produkte und ein dediziertes After-Sales-Team, das über WhatsApp, E-Mail und Videoanruf erreichbar ist.',
+          text: 'HousePlus bietet umfassenden Logistiksupport, um sicherzustellen, dass Ihre Bestellungen pünktlich und in einwandfreiem Zustand ankommen. Wir arbeiten mit führenden Spediteuren und Reedereien zusammen, um FOB-, CIF- und DDP-Konditionen anzubieten. Für den After-Sales-Support bietet HousePlus eine 24-monatige Garantie auf alle Produkte und ein dediziertes After-Sales-Team, das über WhatsApp, E-Mail und Videoanruf erreichbar ist.',
         },
       ],
     },
@@ -170,7 +170,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         },
         {
           heading: 'Logistique, expédition et support après-vente',
-          text: 'HousePlus offre un support logistique complet pour s\'assurer que vos commandes arrivent à temps et en parfait état. Nous travaillons avec les principaux transitaires et compagnies maritimes pour proposer des conditions FOB, CIF et DDP. Pour le support après-vente, HousePlus fournit une garantie de 12 à 24 mois sur tous les produits et une équipe après-vente dédiée disponible via WhatsApp, e-mail et appel vidéo.',
+          text: 'HousePlus offre un support logistique complet pour s\'assurer que vos commandes arrivent à temps et en parfait état. Nous travaillons avec les principaux transitaires et compagnies maritimes pour proposer des conditions FOB, CIF et DDP. Pour le support après-vente, HousePlus fournit une garantie de 24 mois sur tous les produits et une équipe après-vente dédiée disponible via WhatsApp, e-mail et appel vidéo.',
         },
       ],
     },
@@ -206,7 +206,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         },
         {
           heading: 'الخدمات اللوجستية والشحن ودعم ما بعد البيع',
-          text: 'تقدم HousePlus دعمًا لوجستيًا شاملاً لضمان وصول طلباتك في الوقت المحدد وبحالة مثالية. نعمل مع كبار شركات الشحن والخطوط البحرية لتقديم شروط FOB وCIF وDDP. لدعم ما بعد البيع، تقدم HousePlus ضمانًا لمدة 12-24 شهرًا على جميع المنتجات وفريق مخصص متاح عبر WhatsApp والبريد الإلكتروني ومكالمات الفيديو.',
+          text: 'تقدم HousePlus دعمًا لوجستيًا شاملاً لضمان وصول طلباتك في الوقت المحدد وبحالة مثالية. نعمل مع كبار شركات الشحن والخطوط البحرية لتقديم شروط FOB وCIF وDDP. لدعم ما بعد البيع، تقدم HousePlus ضمانًا لمدة 24 شهرًا على جميع المنتجات وفريق مخصص متاح عبر WhatsApp والبريد الإلكتروني ومكالمات الفيديو.',
         },
       ],
     },
