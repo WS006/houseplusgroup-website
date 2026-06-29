@@ -23,7 +23,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 500 },
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Foshan',
+      addressLocality: 'Zhongshan',
       addressRegion: 'Guangdong',
       addressCountry: 'CN',
     },
@@ -267,7 +267,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       url: BASE_URL,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Foshan',
+        addressLocality: 'Zhongshan',
         addressRegion: 'Guangdong',
         addressCountry: 'CN',
       },
@@ -343,7 +343,7 @@ export function generateLocalBusinessSchema(options: SchemaOptions) {
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 500 },
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Foshan',
+      addressLocality: 'Zhongshan',
       addressRegion: 'Guangdong',
       addressCountry: 'CN',
     },

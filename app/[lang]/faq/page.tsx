@@ -36,7 +36,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Company & Factory',
         items: [
           { q: 'What is HousePlus?', a: 'HousePlus is a professional B2B manufacturer based in Guangdong, China, specializing in solar energy systems, home appliances, and 3C electronics for global wholesale buyers. We have been in business since 2010.' },
-          { q: 'Where is your factory located?', a: 'Our 20,000 m² ISO 9001 certified factory is located in Foshan, Guangdong, China. We welcome factory visits by appointment for serious wholesale buyers.' },
+          { q: 'Where is your factory located?', a: 'Our 20,000 m² ISO 9001 certified factory is located in Zhongshan, Guangdong, China. We welcome factory visits by appointment for serious wholesale buyers.' },
           { q: 'How many years has HousePlus been manufacturing?', a: 'HousePlus was founded in 2010 and has over 16 years of manufacturing and international trade experience. We have served 441+ wholesale clients across 53+ countries.' },
           { q: 'Can I visit your factory?', a: 'Yes, we welcome factory inspections by appointment. Please contact us at least 7 days in advance to schedule your visit. We can also arrange video factory tours for overseas clients.' },
           { q: 'What is your production capacity?', a: 'Our factory operates 8 production lines with a monthly capacity of 50,000+ units across solar, appliance, and electronics categories.' },
@@ -98,7 +98,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Empresa y Fábrica',
         items: [
           { q: '¿Qué es HousePlus?', a: 'HousePlus es un fabricante B2B profesional con sede en Guangdong, China, especializado en sistemas de energía solar, electrodomésticos y electrónica 3C para compradores mayoristas globales. Operamos desde 2010.' },
-          { q: '¿Dónde está ubicada su fábrica?', a: 'Nuestra fábrica certificada ISO 9001 de 20,000 m² está ubicada en Foshan, Guangdong, China. Damos la bienvenida a visitas de fábrica con cita previa para compradores mayoristas serios.' },
+          { q: '¿Dónde está ubicada su fábrica?', a: 'Nuestra fábrica certificada ISO 9001 de 20,000 m² está ubicada en Zhongshan, Guangdong, China. Damos la bienvenida a visitas de fábrica con cita previa para compradores mayoristas serios.' },
           { q: '¿Cuántos años tiene HousePlus fabricando?', a: 'HousePlus fue fundada en 2010 y cuenta con más de 16 años de experiencia en fabricación y comercio internacional. Hemos servido a más de 441 clientes mayoristas en 53+ países.' },
           { q: '¿Puedo visitar su fábrica?', a: 'Sí, damos la bienvenida a inspecciones de fábrica con cita previa. Contáctenos con al menos 7 días de anticipación para programar su visita. También podemos organizar tours virtuales de fábrica para clientes internacionales.' },
           { q: '¿Cuál es su capacidad de producción?', a: 'Nuestra fábrica opera 8 líneas de producción con una capacidad mensual de más de 50,000 unidades en categorías de solar, electrodomésticos y electrónica.' },
@@ -156,7 +156,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Unternehmen & Fabrik',
         items: [
           { q: 'Was ist HousePlus?', a: 'HousePlus ist ein professioneller B2B-Hersteller mit Sitz in Guangdong, China, der sich auf Solarenergiesysteme, Haushaltsgeräte und 3C-Elektronik für globale Großhandelskäufer spezialisiert hat. Wir sind seit 2010 im Geschäft.' },
-          { q: 'Wo befindet sich Ihre Fabrik?', a: 'Unsere ISO-9001-zertifizierte Fabrik mit 20.000 m² befindet sich in Foshan, Guangdong, China. Wir heißen ernsthafte Großhandelskäufer nach Voranmeldung zu Fabrikbesuchen willkommen.' },
+          { q: 'Wo befindet sich Ihre Fabrik?', a: 'Unsere ISO-9001-zertifizierte Fabrik mit 20.000 m² befindet sich in Zhongshan, Guangdong, China. Wir heißen ernsthafte Großhandelskäufer nach Voranmeldung zu Fabrikbesuchen willkommen.' },
           { q: 'Seit wie vielen Jahren fertigt HousePlus?', a: 'HousePlus wurde 2010 gegründet und verfügt über mehr als 16 Jahre Erfahrung in Fertigung und internationalem Handel. Wir haben 441+ Großhandelskunden in 53+ Ländern bedient.' },
           { q: 'Kann ich Ihre Fabrik besuchen?', a: 'Ja, wir heißen Fabrikinspektionen nach Voranmeldung willkommen. Bitte kontaktieren Sie uns mindestens 7 Tage im Voraus, um Ihren Besuch zu terminieren. Für ausländische Kunden können wir auch virtuelle Fabriktouren arrangieren.' },
           { q: 'Was ist Ihre Produktionskapazität?', a: 'Unsere Fabrik betreibt 8 Produktionslinien mit einer monatlichen Kapazität von 50.000+ Einheiten in den Kategorien Solar, Haushaltsgeräte und Elektronik.' },
@@ -214,7 +214,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'Entreprise & Usine',
         items: [
           { q: "Qu'est-ce que HousePlus?", a: "HousePlus est un fabricant B2B professionnel basé à Guangdong, en Chine, spécialisé dans les systèmes d'énergie solaire, les appareils ménagers et l'électronique 3C pour les acheteurs en gros mondiaux. Nous sommes en activité depuis 2010." },
-          { q: 'Où se trouve votre usine?', a: "Notre usine certifiée ISO 9001 de 20 000 m² est située à Foshan, Guangdong, en Chine. Nous accueillons les visites d'usine sur rendez-vous pour les acheteurs en gros sérieux." },
+          { q: 'Où se trouve votre usine?', a: "Notre usine certifiée ISO 9001 de 20 000 m² est située à Zhongshan, Guangdong, en Chine. Nous accueillons les visites d'usine sur rendez-vous pour les acheteurs en gros sérieux." },
           { q: "Depuis combien d'années HousePlus fabrique-t-il?", a: "HousePlus a été fondée en 2010 et possède plus de 16 ans d'expérience dans la fabrication et le commerce international. Nous avons servi 441+ clients grossistes dans 53+ pays." },
           { q: "Puis-je visiter votre usine?", a: "Oui, nous accueillons les inspections d'usine sur rendez-vous. Veuillez nous contacter au moins 7 jours à l'avance pour planifier votre visite. Nous pouvons également organiser des visites virtuelles d'usine pour les clients internationaux." },
           { q: 'Quelle est votre capacité de production?', a: "Notre usine exploite 8 lignes de production avec une capacité mensuelle de 50 000+ unités dans les catégories solaire, appareils ménagers et électronique." },
@@ -272,7 +272,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
         category: 'الشركة والمصنع',
         items: [
           { q: 'ما هو HousePlus؟', a: 'HousePlus هو مصنع محترف B2B مقرها في مقاطعة قوانغدونغ، الصين، متخصص في أنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C لمشترين الجملة العالميين. نحن نعمل منذ عام 2010.' },
-          { q: 'أين يقع مصنعكم؟', a: 'يقع مصنعنا المعتمد ISO 9001 بمساحة 20,000 متر مربع في فوشان، قوانغدونغ، الصين. نرحب بزيارات المصنع بالموعد المسبق للمشترين الجادين بالجملة.' },
+          { q: 'أين يقع مصنعكم؟', a: 'يقع مصنعنا المعتمد ISO 9001 بمساحة 20,000 متر مربع في تشونغشان، قوانغدونغ، الصين. نرحب بزيارات المصنع بالموعد المسبق للمشترين الجادين بالجملة.' },
           { q: 'كم عدد سنوات تصنيع HousePlus؟', a: 'تأسست HousePlus في عام 2010 ولديها أكثر من 16 عامًا من الخبرة في التصنيع والتجارة الدولية. لقد خدمنا أكثر من 441 عميل جملة في أكثر من 53 دولة.' },
           { q: 'هل يمكنني زيارة مصنعكم؟', a: 'نعم، نرحب بتفتيش المصنع بالموعد المسبق. يرجى الاتصال بنا قبل 7 أيام على الأقل لتحديد موعد زيارتك. يمكننا أيضًا ترتيب جولات افتراضية للمصنع للعملاء الدوليين.' },
           { q: 'ما هي قدرة الإنتاج لديكم؟', a: 'يعمل مصنعنا بـ 8 خطوط إنتاج بقدرة شهرية تزيد عن 50,000 وحدة في فئات الطاقة الشمسية والأجهزة المنزلية والإلكترونيات.' },

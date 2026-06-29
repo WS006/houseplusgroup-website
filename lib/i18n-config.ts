@@ -193,7 +193,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europe, Africa, Southeast Asia, North America"
     },
   },
@@ -294,7 +294,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europa, África, Sudeste Asiático, América del Norte"
     },
   },
@@ -395,7 +395,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europa, Afrika, Südostasien, Nordamerika"
     },
   },
@@ -496,7 +496,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europe, Afrique, Asie du Sud-Est, Amérique du Nord"
     },
   },
@@ -597,7 +597,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "أوروبا، أفريقيا، جنوب شرق آسيا، أمريكا الشمالية"
     },
   },

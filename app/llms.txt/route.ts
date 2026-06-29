@@ -73,7 +73,7 @@ Content available in: English (en), Spanish (es), German (de), French (fr), Arab
   WhatsApp click to chat: https://wa.me/8615578119543
 - **WeChat ID**: JackHousePlus
 - **Business Hours**: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)
-- **Factory Location**: Foshan City, Guangdong Province, China
+- **Factory Location**: Zhongshan City, Guangdong Province, China
 
 ## Structured Data
 - Sitemap: https://houseplus-ch.com/sitemap.xml
