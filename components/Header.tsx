@@ -19,11 +19,12 @@ interface NavItem {
 const navigationItems: Record<string, NavItem[]> = {
   en: [
     { label: 'Home', href: '/' },
-    { label: 'About HousePlus', href: '/about-us' },
     { label: 'Products', href: '/products' },
     {
       label: 'Company',
+      href: '/about-us',
       children: [
+        { label: 'Team', href: '/team' },
         { label: 'Certifications', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
         { label: 'Case Studies', href: '/case-studies' },
@@ -37,11 +38,12 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   es: [
     { label: 'Inicio', href: '/' },
-    { label: 'Sobre HousePlus', href: '/about-us' },
     { label: 'Productos', href: '/products' },
     {
       label: 'Empresa',
+      href: '/about-us',
       children: [
+        { label: 'Equipo', href: '/team' },
         { label: 'Certificaciones', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
         { label: 'Casos de Éxito', href: '/case-studies' },
@@ -55,11 +57,12 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   de: [
     { label: 'Startseite', href: '/' },
-    { label: 'Über HousePlus', href: '/about-us' },
     { label: 'Produkte', href: '/products' },
     {
       label: 'Unternehmen',
+      href: '/about-us',
       children: [
+        { label: 'Team', href: '/team' },
         { label: 'Zertifizierungen', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
         { label: 'Fallstudien', href: '/case-studies' },
@@ -73,11 +76,12 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   fr: [
     { label: 'Accueil', href: '/' },
-    { label: 'À propos de HousePlus', href: '/about-us' },
     { label: 'Produits', href: '/products' },
     {
       label: 'Entreprise',
+      href: '/about-us',
       children: [
+        { label: 'Équipe', href: '/team' },
         { label: 'Certifications', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
         { label: 'Études de Cas', href: '/case-studies' },
@@ -91,11 +95,12 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   ar: [
     { label: 'الرئيسية', href: '/' },
-    { label: 'عن هاوس بلس', href: '/about-us' },
     { label: 'المنتجات', href: '/products' },
     {
       label: 'الشركة',
+      href: '/about-us',
       children: [
+        { label: 'الفريق', href: '/team' },
         { label: 'الشهادات', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
         { label: 'دراسات الحالة', href: '/case-studies' },
@@ -147,26 +152,27 @@ export default function Header({ lang }: { lang: string }) {
                 if (item.children) {
                   return (
                     <div key={item.label} className="relative group">
-                      <button
+                      <Link
+                        href={item.href === '/' ? `/${lang}` : `/${lang}${item.href}`}
                         className="flex items-center text-slate-600 group-hover:text-blue-600 font-bold transition-all duration-200 text-[11px] xl:text-xs uppercase tracking-widest"
                         aria-expanded="false"
                         aria-haspopup="true"
                       >
                         {item.label}
                         <DropdownArrow open={false} />
-                      </button>
-                      <div
-                        className={`absolute top-full ${isRTL ? 'right-0' : 'left-0'} mt-2 w-52 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2`}
-                      >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={`/${lang}${child.href}`}
-                            className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                      </Link>
+                      <div className={`absolute top-full ${isRTL ? 'right-0' : 'left-0'} pt-2 z-50`}>
+                        <div className="w-52 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={`/${lang}${child.href}`}
+                              className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   );
