@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'OEM/ODM Manufacturing — Private Label & Custom Products from HousePlus',
-    description: 'HousePlus OEM/ODM services start from MOQ 100 pcs with 20-35 day lead time from a 20,000 m2 ISO 9001 factory serving 441+ wholesale clients across 53+ countries since 2010.',
+    description: 'HousePlus OEM/ODM services cover solar energy systems, home appliances and 3C electronics. MOQ from 100 pcs, 20–35 day lead time from a 20,000 m² ISO 9001 factory serving 441+ wholesale clients across 53+ countries since 2010.',
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'MOQ 100', 'HousePlus OEM', 'wholesale customization', 'Pantone color', 'custom packaging', 'mould development'],
     url: `/${lang}/oem-odm`,
     lang: lang as any,
@@ -23,7 +23,7 @@ export default async function OemOdmPage({ params }: { params: Promise<{ lang: s
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
-    description: 'OEM/ODM manufacturing with MOQ from 100 pcs, 20–35 day lead time and 24-month warranty from a 20,000 m² ISO 9001 factory.',
+    description: 'OEM/ODM manufacturing for solar panels, power stations, air fryers, induction cooktops, TWS earphones and smart watches. MOQ from 100 pcs, 20–35 day lead time and 24-month warranty from a 20,000 m² ISO 9001 factory.',
     url: `https://www.houseplus-ch.com/${lang}/oem-odm`,
     lang,
     type: 'Organization',
@@ -114,7 +114,7 @@ export default async function OemOdmPage({ params }: { params: Promise<{ lang: s
                 OEM/ODM Manufacturing — Private Label & Custom Products from HousePlus
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                <strong>HousePlus</strong> OEM/ODM services start from MOQ 100 pcs with 20–35 day lead time from a 20,000 m² ISO 9001 factory serving 441+ wholesale clients across 53+ countries since 2010. Custom packaging, Pantone colours and mould development — all under one roof.
+                <strong>HousePlus</strong> OEM/ODM services cover solar energy systems, home appliances and 3C electronics. MOQ from 100 pcs with 20–35 day lead time from a 20,000 m² ISO 9001 factory serving 441+ wholesale clients across 53+ countries since 2010. Custom packaging, Pantone colours and mould development — all under one roof.
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'HousePlus Certifications — CE, FCC, RoHS, ISO 9001, IEC, UN38.3',
-    description: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications from a 20,000 m2 factory serving 53+ countries and 441+ wholesale clients since 2010.',
+    description: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications covering solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches. 20,000 m² ISO 9001 factory serving 53+ countries and 441+ wholesale clients since 2010.',
     keywords: ['CE certification', 'FCC', 'RoHS', 'ISO 9001', 'IEC', 'UN38.3', 'HousePlus certifications', 'wholesale', 'factory certifications'],
     url: `/${lang}/certifications`,
     lang: lang as any,
@@ -23,7 +23,7 @@ export default async function CertificationsPage({ params }: { params: Promise<{
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
-    description: 'CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certified manufacturer from a 20,000 m2 factory serving 53+ countries and 441+ wholesale clients since 2010.',
+    description: 'CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certified manufacturer of solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches from a 20,000 m² factory serving 53+ countries and 441+ wholesale clients since 2010.',
     url: `https://www.houseplus-ch.com/${lang}/certifications`,
     lang,
     type: 'Organization',
@@ -104,7 +104,7 @@ export default async function CertificationsPage({ params }: { params: Promise<{
               HousePlus Certifications — CE, FCC, RoHS, ISO 9001, IEC, UN38.3
             </h1>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              <strong>HousePlus</strong> holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications from a 20,000 m² factory serving 53+ countries and 441+ wholesale clients since 2010. Every product ships with complete compliance documentation for seamless import clearance.
+              <strong>HousePlus</strong> holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications covering solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches. Our 20,000 m² ISO 9001 factory has served 53+ countries and 441+ wholesale clients since 2010. Every product ships with complete compliance documentation for seamless import clearance.
             </p>
           </div>
         </section>

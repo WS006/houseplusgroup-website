@@ -3,21 +3,24 @@ import { baseUrl, locales, staticPageSlugs, productSlugs, newsSlugs } from '@/li
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
-  '': '2026-05-22',
-  'about-us': '2026-05-22',
-  'products': '2026-05-22',
-  'news': '2026-05-22',
-  'factory': '2026-03-20',
-  'service': '2026-04-10',
-  'faq': '2026-04-25',
-  'contact': '2026-04-10',
-  'team': '2026-03-15',
-  'careers': '2026-03-15',
-  'support': '2026-04-20',
-  'privacy': '2026-01-01',
-  'terms': '2026-05-06',
-  'cookie-policy': '2026-05-06',
-  'sitemap-page': '2026-05-22',
+  '': '2026-06-29',
+  'about-us': '2026-06-29',
+  'products': '2026-06-29',
+  'news': '2026-06-29',
+  'factory': '2026-06-29',
+  'service': '2026-06-29',
+  'faq': '2026-06-29',
+  'contact': '2026-06-29',
+  'team': '2026-06-29',
+  'careers': '2026-06-29',
+  'support': '2026-06-29',
+  'privacy': '2026-06-29',
+  'terms': '2026-06-29',
+  'cookie-policy': '2026-06-29',
+  'sitemap-page': '2026-06-29',
+  'certifications': '2026-06-29',
+  'oem-odm': '2026-06-29',
+  'case-studies': '2026-06-29',
 };
 
 // All static page slugs from single source of truth
@@ -34,7 +37,7 @@ const staticPages = staticPageSlugs.map(slug => {
   } else if (slug === 'news') {
     priority = 0.8;
     changefreq = 'weekly';
-  } else if (['factory', 'service', 'faq', 'contact'].includes(slug)) {
+  } else if (['factory', 'service', 'faq', 'contact', 'certifications', 'oem-odm', 'case-studies'].includes(slug)) {
     priority = 0.7;
     changefreq = 'monthly';
   } else if (['team', 'careers', 'support'].includes(slug)) {

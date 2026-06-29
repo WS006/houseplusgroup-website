@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'HousePlus Case Studies — 441+ Wholesale Clients in 53+ Countries',
-    description: 'HousePlus has served 441+ wholesale clients across 53+ countries since 2010, delivering solar, appliance and 3C electronics with 24-month warranty and 20-35 day lead time from a 20,000 m2 factory.',
+    description: 'HousePlus has served 441+ wholesale clients across 53+ countries since 2010, delivering solar energy systems, home appliances and 3C electronics with 24-month warranty and 20–35 day lead time from a 20,000 m² factory.',
     keywords: ['HousePlus case studies', 'wholesale clients', 'solar distributor', 'appliance importer', '3C electronics', 'B2B manufacturing', 'global export'],
     url: `/${lang}/case-studies`,
     lang: lang as any,
@@ -24,7 +24,7 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ la
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
-    description: 'HousePlus has served 441+ wholesale clients across 53+ countries since 2010, delivering solar, appliance and 3C electronics with 24-month warranty and 20-35 day lead time from a 20,000 m² factory.',
+    description: 'HousePlus has served 441+ wholesale clients across 53+ countries since 2010, delivering solar energy systems, home appliances and 3C electronics with 24-month warranty and 20–35 day lead time from a 20,000 m² factory.',
     url: `https://www.houseplus-ch.com/${lang}/case-studies`,
     lang,
     type: 'Organization',
@@ -131,7 +131,7 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ la
               HousePlus Case Studies — 441+ Wholesale Clients in 53+ Countries
             </h1>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              <strong>HousePlus</strong> has served 441+ wholesale clients across 53+ countries since 2010, delivering solar, appliance and 3C electronics with 24-month warranty and 20–35 day lead time from a 20,000 m² factory. Explore how global buyers partner with <strong>HousePlus</strong> for long-term growth.
+              <strong>HousePlus</strong> has served 441+ wholesale clients across 53+ countries since 2010, delivering solar energy systems, home appliances and 3C electronics with 24-month warranty and 20–35 day lead time from a 20,000 m² factory. Explore how global buyers partner with <strong>HousePlus</strong> for long-term growth.
             </p>
           </div>
         </section>

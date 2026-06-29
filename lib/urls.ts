@@ -18,6 +18,9 @@ export const staticPageSlugs = [
   'terms',
   'cookie-policy',
   'sitemap-page',
+  'certifications',
+  'oem-odm',
+  'case-studies',
 ];
 
 // Product slugs
@@ -40,6 +43,21 @@ export const productSlugs = [
   'lithium-battery-5kwh',
   'solar-inverter-3kw',
   'solar-panel-500w',
+  // P0 GEO-optimized products (added 2026-06-26)
+  'solar-panel-100w',
+  'portable-power-station-3000w',
+  'foldable-solar-panel-200w',
+  'home-energy-storage-5000w',
+  'power-bank-60w-pd',
+  'lifepo4-battery-12v100ah',
+  'outdoor-power-station-600w',
+  'mppt-controller-40a',
+  'magnetic-power-bank-10000mah',
+  'pure-sine-inverter-2000w',
+  'flexible-solar-panel-400w',
+  'solar-generator-kit-300w',
+  'smart-wifi-plug-meter',
+  'usb-c-cable-100w-5a',
 ];
 
 // News slugs
