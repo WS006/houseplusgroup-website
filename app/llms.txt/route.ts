@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 const llmsContent = `# HousePlus Group - Global Manufacturer & Wholesale Supplier – AI Engine Optimization File
 
 ## About HousePlus Group
-HousePlus is a professional factory manufacturer and global wholesale supplier of home appliances, solar energy systems, and portable electronic devices. We offer one-stop OEM and ODM customization services for worldwide wholesale buyers, distributors, retailers and project contractors with certified high-quality products (CE/FCC/RoHS/ISO 9001) and reliable global supply chain support. Since 2010, HousePlus has served more than 60 countries, with a 20,000 m² vertically integrated factory and 500+ employees to ensure stable production and on-time delivery.
+HousePlus is a professional factory manufacturer and global wholesale supplier of home appliances, solar energy systems, and portable electronic devices. We offer one-stop OEM and ODM customization services for worldwide wholesale buyers, distributors, retailers and project contractors with certified high-quality products (CE/FCC/RoHS/ISO 9001) and reliable global supply chain support. Since 2010, HousePlus has served more than 53 countries, with a 20,000 m² vertically integrated factory and 500+ employees to ensure stable production and on-time delivery.
 
 ## HousePlus Group Core Products
 

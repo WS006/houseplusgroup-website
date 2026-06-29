@@ -40,7 +40,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Why Wholesale Home Appliances Represent a Massive Opportunity',
-          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. The global home appliances market is projected to exceed $1.2 trillion by 2030, driven by rapid urbanization, rising middle-class incomes, and increasing demand for energy-efficient products. For wholesale buyers and distributors, this represents an extraordinary opportunity to build profitable product portfolios. HousePlus has been at the forefront of this market for over a decade, supplying premium home appliances to more than 500 clients across 50+ countries. Our products span refrigerators, washing machines, air conditioners, kitchen appliances, and a wide range of small household devices — all manufactured to the highest international standards.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. The global home appliances market is projected to exceed $1.2 trillion by 2030, driven by rapid urbanization, rising middle-class incomes, and increasing demand for energy-efficient products. For wholesale buyers and distributors, this represents an extraordinary opportunity to build profitable product portfolios. HousePlus has been at the forefront of this market for over a decade, supplying premium home appliances to more than 441 wholesale clients across 53+ countries. Our products span refrigerators, washing machines, air conditioners, kitchen appliances, and a wide range of small household devices — all manufactured to the highest international standards.',
           image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop',
           imageAlt: 'Modern home appliances showroom with refrigerators and washing machines',
         },
@@ -76,7 +76,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Por Qué los Electrodomésticos al por Mayor Representan una Oportunidad Masiva',
-          text: 'Se proyecta que el mercado global de electrodomésticos supere los 1,2 billones de dólares para 2030, impulsado por la rápida urbanización, el aumento de los ingresos de la clase media y la creciente demanda de productos energéticamente eficientes. Para compradores mayoristas y distribuidores, esto representa una oportunidad extraordinaria para construir carteras de productos rentables. HousePlus ha estado a la vanguardia de este mercado durante más de una década, suministrando electrodomésticos premium a más de 500 clientes en más de 50 países.',
+          text: 'Se proyecta que el mercado global de electrodomésticos supere los 1,2 billones de dólares para 2030, impulsado por la rápida urbanización, el aumento de los ingresos de la clase media y la creciente demanda de productos energéticamente eficientes. Para compradores mayoristas y distribuidores, esto representa una oportunidad extraordinaria para construir carteras de productos rentables. HousePlus ha estado a la vanguardia de este mercado durante más de una década, suministrando electrodomésticos premium a más de 441 clientes mayoristas en más de 53 países.',
           image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop',
           imageAlt: 'Sala de exposición de electrodomésticos modernos con refrigeradores y lavadoras',
         },
@@ -112,7 +112,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Warum Haushaltsgeräte im Großhandel eine enorme Chance darstellen',
-          text: 'Der globale Markt für Haushaltsgeräte wird bis 2030 voraussichtlich 1,2 Billionen US-Dollar übersteigen, angetrieben durch schnelle Urbanisierung, steigende Mittelklasseeinkommen und eine wachsende Nachfrage nach energieeffizienten Produkten. HousePlus ist seit über einem Jahrzehnt an der Spitze dieses Marktes und beliefert mehr als 500 Kunden in über 50 Ländern mit Premium-Haushaltsgeräten.',
+          text: 'Der globale Markt für Haushaltsgeräte wird bis 2030 voraussichtlich 1,2 Billionen US-Dollar übersteigen, angetrieben durch schnelle Urbanisierung, steigende Mittelklasseeinkommen und eine wachsende Nachfrage nach energieeffizienten Produkten. HousePlus ist seit über einem Jahrzehnt an der Spitze dieses Marktes und beliefert mehr als 441 Großhandelskunden in über 53 Ländern mit Premium-Haushaltsgeräten.',
           image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop',
           imageAlt: 'Moderner Haushaltsgeräte-Showroom mit Kühlschränken und Waschmaschinen',
         },
@@ -148,7 +148,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Pourquoi les appareils électroménagers en gros représentent une opportunité massive',
-          text: 'Le marché mondial des appareils électroménagers devrait dépasser 1 200 milliards de dollars d\'ici 2030, porté par une urbanisation rapide, la hausse des revenus de la classe moyenne et une demande croissante de produits économes en énergie. HousePlus est à l\'avant-garde de ce marché depuis plus d\'une décennie, fournissant des appareils électroménagers haut de gamme à plus de 500 clients dans plus de 50 pays.',
+          text: 'Le marché mondial des appareils électroménagers devrait dépasser 1 200 milliards de dollars d\'ici 2030, porté par une urbanisation rapide, la hausse des revenus de la classe moyenne et une demande croissante de produits économes en énergie. HousePlus est à l\'avant-garde de ce marché depuis plus d\'une décennie, fournissant des appareils électroménagers haut de gamme à plus de 441 clients grossistes dans plus de 53 pays.',
           image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop',
           imageAlt: 'Showroom d\'appareils électroménagers modernes avec réfrigérateurs et machines à laver',
         },
@@ -184,7 +184,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'لماذا تمثل أجهزة المنزل بالجملة فرصة هائلة',
-          text: 'من المتوقع أن يتجاوز سوق الأجهزة المنزلية العالمي 1.2 تريليون دولار بحلول عام 2030، مدفوعًا بالتحضر السريع وارتفاع دخول الطبقة المتوسطة والطلب المتزايد على المنتجات الموفرة للطاقة. كانت HousePlus في طليعة هذا السوق لأكثر من عقد، حيث تزود أكثر من 500 عميل في أكثر من 50 دولة بأجهزة منزلية متميزة.',
+          text: 'من المتوقع أن يتجاوز سوق الأجهزة المنزلية العالمي 1.2 تريليون دولار بحلول عام 2030، مدفوعًا بالتحضر السريع وارتفاع دخول الطبقة المتوسطة والطلب المتزايد على المنتجات الموفرة للطاقة. كانت HousePlus في طليعة هذا السوق لأكثر من عقد، حيث تزود أكثر من 441 عميل جملة في أكثر من 53 دولة بأجهزة منزلية متميزة.',
           image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop',
           imageAlt: 'صالة عرض الأجهزة المنزلية الحديثة مع الثلاجات وآلات الغسيل',
         },

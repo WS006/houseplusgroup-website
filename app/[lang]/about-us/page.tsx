@@ -35,9 +35,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     { year: '2010', event: 'HousePlus founded in Guangdong, China, with an initial focus on home appliance OEM production.' },
     { year: '2013', event: 'Expanded into solar energy products; first export shipment to European distributors.' },
     { year: '2016', event: 'Obtained CE, RoHS and ISO 9001 certifications; opened dedicated 3C electronics division.' },
-    { year: '2019', event: 'Reached 300+ active wholesale clients across 40 countries; moved to 20,000 m² factory.' },
+    { year: '2019', event: 'Reached 441+ wholesale clients across 53+ countries; moved to 20,000 m² factory.' },
     { year: '2022', event: 'Launched LiFePO4 battery and portable power station product lines for off-grid markets.' },
-    { year: '2024', event: 'Serving 500+ clients in 60+ countries; annual production capacity exceeds 1.2 million units.' },
+    { year: '2024', event: 'Serving 441+ wholesale clients in 53+ countries; annual production capacity exceeds 1.2 million units.' },
   ];
 
   const values = [
@@ -106,7 +106,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                   </div>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 500+ wholesale clients worldwide.
+                  The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 441+ wholesale clients worldwide.
                 </p>
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
@@ -132,8 +132,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
               {[
                 { value: '16+', label: 'Years in Manufacturing' },
-                { value: '500+', label: 'Wholesale Clients' },
-                { value: '60+', label: 'Countries Served' },
+                { value: '441+', label: 'Wholesale Clients' },
+                { value: '53+', label: 'Countries Served' },
                 { value: '1.2M+', label: 'Units / Year' },
               ].map((stat) => (
                 <div key={stat.label}>

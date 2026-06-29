@@ -118,7 +118,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "Ready to Partner with Us?", subtitle: "Get competitive pricing for bulk orders and OEM customization.", button: "Request a Quote" },
       tagline: "HousePlus - Global B2B Wholesale Manufacturer",
       mainTitle: "HousePlus Group - Professional Wholesale Supplier",
-      mainDescription: "Since 2010, HousePlus has been a trusted manufacturer of solar energy systems, home appliances and 3C electronics. We serve wholesale buyers in 60+ countries, offering OEM/ODM services with CE/FCC/RoHS certifications and MOQ from 100 units.",
+      mainDescription: "Since 2010, HousePlus has been a trusted manufacturer of solar energy systems, home appliances and 3C electronics. We serve wholesale buyers in 53+ countries, offering OEM/ODM services with CE/FCC/RoHS certifications and MOQ from 100 units.",
       browseProducts: "Browse All Products",
       requestQuote: "Request a Quote",
       counter: {
@@ -219,7 +219,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "¿Listo para Asociarnos?", subtitle: "Obtenga precios competitivos para pedidos por mayor y personalización OEM.", button: "Solicitar Cotización" },
       tagline: "HousePlus - Fabricante Mayorista Global B2B",
       mainTitle: "Grupo HousePlus - Proveedor Mayorista Profesional",
-      mainDescription: "Desde 2010, HousePlus ha sido un fabricante confiable de sistemas de energía solar, electrodomésticos y electrónica 3C. Atendemos a compradores mayoristas en más de 60 países, ofreciendo servicios OEM/ODM con certificaciones CE/FCC/RoHS y MOQ desde 100 unidades.",
+      mainDescription: "Desde 2010, HousePlus ha sido un fabricante confiable de sistemas de energía solar, electrodomésticos y electrónica 3C. Atendemos a compradores mayoristas en más de 53 países, ofreciendo servicios OEM/ODM con certificaciones CE/FCC/RoHS y MOQ desde 100 unidades.",
       browseProducts: "Ver Todos los Productos",
       requestQuote: "Solicitar Cotización",
       counter: {
@@ -320,7 +320,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "Bereit für eine Partnerschaft?", subtitle: "Erhalten Sie wettbewerbsfähige Preise für Großbestellungen und OEM-Anpassung.", button: "Angebot anfordern" },
       tagline: "HousePlus - Globaler B2B-Großhandelshersteller",
       mainTitle: "HousePlus Group - Professioneller Großhandelslieferant",
-      mainDescription: "Seit 2010 ist HousePlus ein vertrauenswürdiger Hersteller von Solarenergiesystemen, Haushaltsgeräten und 3C-Elektronik. Wir beliefern Großhandelskäufer in über 60 Ländern und bieten OEM/ODM-Dienstleistungen mit CE/FCC/RoHS-Zertifizierungen und MOQ ab 100 Einheiten.",
+      mainDescription: "Seit 2010 ist HousePlus ein vertrauenswürdiger Hersteller von Solarenergiesystemen, Haushaltsgeräten und 3C-Elektronik. Wir beliefern Großhandelskäufer in über 53 Ländern und bieten OEM/ODM-Dienstleistungen mit CE/FCC/RoHS-Zertifizierungen und MOQ ab 100 Einheiten.",
       browseProducts: "Alle Produkte ansehen",
       requestQuote: "Angebot anfordern",
       counter: {
@@ -421,7 +421,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "Prêt à Partenariat ?", subtitle: "Obtenez des prix compétitifs pour les commandes en gros et la personnalisation OEM.", button: "Demander un Devis" },
       tagline: "HousePlus - Fabricant Global B2B en Gros",
       mainTitle: "Groupe HousePlus - Fournisseur Professionnel en Gros",
-      mainDescription: "Depuis 2010, HousePlus est un fabricant fiable de systèmes d'énergie solaire, d'appareils ménagers et d'électronique 3C. Nous servons des acheteurs en gros dans plus de 60 pays, offrant des services OEM/ODM avec certifications CE/FCC/RoHS et MOQ à partir de 100 unités.",
+      mainDescription: "Depuis 2010, HousePlus est un fabricant fiable de systèmes d'énergie solaire, d'appareils ménagers et d'électronique 3C. Nous servons des acheteurs en gros dans plus de 53 pays, offrant des services OEM/ODM avec certifications CE/FCC/RoHS et MOQ à partir de 100 unités.",
       browseProducts: "Voir Tous les Produits",
       requestQuote: "Demander un Devis",
       counter: {
@@ -522,7 +522,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "مستعد للشراكة؟", subtitle: "احصل على أسعار تنافسية للطلبات بالجملة والتخصيص OEM.", button: "طلب عرض سعر" },
       tagline: "HousePlus - مصنع جملة عالمي B2B",
       mainTitle: "مجموعة HousePlus - مورد جملة محترف",
-      mainDescription: "منذ عام 2010، HousePlus هو مصنع موثوق لأنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. نخدم مشتريي الجملة في أكثر من 60 دولة، ونقدم خدمات OEM/ODM مع شهادات CE/FCC/RoHS وMOQ بدءًا من 100 وحدة.",
+      mainDescription: "منذ عام 2010، HousePlus هو مصنع موثوق لأنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. نخدم مشتريي الجملة في أكثر من 53 دولة، ونقدم خدمات OEM/ODM مع شهادات CE/FCC/RoHS وMOQ بدءًا من 100 وحدة.",
       browseProducts: "عرض جميع المنتجات",
       requestQuote: "طلب عرض سعر",
       counter: {

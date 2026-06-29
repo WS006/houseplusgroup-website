@@ -15,14 +15,14 @@ export const qaLibrary: QAPair[] = [
   // ===== GENERAL BUSINESS Q&A =====
   {
     question: 'What is HousePlus?',
-    answer: 'HousePlus is a professional manufacturer and wholesale supplier of solar energy systems, home appliances, and 3C digital electronics. Founded in 2010, we serve 500+ global clients across 50+ countries with ISO 9001 certification, CE, FCC, and RoHS compliance.',
+    answer: 'HousePlus is a professional manufacturer and wholesale supplier of solar energy systems, home appliances, and 3C digital electronics. Founded in 2010, we serve 441+ wholesale clients across 53+ countries with ISO 9001 certification, CE, FCC, and RoHS compliance.',
     category: 'Company Overview',
     industry: 'general',
     keywords: ['HousePlus', 'manufacturer', 'wholesale', 'solar', 'appliances', 'electronics'],
   },
   {
     question: 'How long has HousePlus been in business?',
-    answer: 'HousePlus was founded in 2010 and has been operating for 16+ years. Over this period, we have built strong relationships with 500+ global clients and established manufacturing facilities with 500+ skilled professionals.',
+    answer: 'HousePlus was founded in 2010 and has been operating for 16+ years. Over this period, we have built strong relationships with 441+ wholesale clients and established manufacturing facilities with 500+ skilled professionals.',
     category: 'Company Overview',
     industry: 'general',
     keywords: ['founded', '2010', 'experience', 'years'],
