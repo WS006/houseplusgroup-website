@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore HousePlus\'s advanced solar energy storage solutions, including battery systems and portable power stations, designed for efficiency and reliability in global wholesale markets.',
+    en: 'Discover solar energy storage solutions from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Lithium-ion, solid-state, flow batteries. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Explore las soluciones avanzadas de almacenamiento de energía solar de HousePlus, incluidos los sistemas de baterías y las estaciones de energía portátiles, diseñadas para la eficiencia y la fiabilidad en los mercados mayoristas globales.',
     de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragbaren Kraftwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
     fr: 'Découvrez les solutions avancées de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',
@@ -57,7 +57,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
       sections: [
         {
           heading: 'The Growing Need for Energy Storage',
-          text: 'As solar energy adoption accelerates globally, the demand for efficient and reliable energy storage solutions has become paramount. Intermittent by nature, solar power requires robust storage systems to ensure a continuous and stable electricity supply. This is crucial for both residential and commercial applications, enabling energy independence and optimizing grid integration. HousePlus is at the forefront of developing advanced energy storage technologies that complement our high-performance solar panels.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified solar energy storage solutions. As the world transitions towards renewable energy, efficient energy storage has become the critical backbone of modern power systems. Solar energy storage solutions are no longer just an accessory to photovoltaic installations — they are essential components that determine the reliability, economics, and scalability of clean energy deployments. This comprehensive guide explores the cutting-edge technologies, market dynamics, and strategic considerations that B2B buyers need to understand when sourcing energy storage systems.',
           image: '/images/products/solar-power-station.jpg',
           imageAlt: 'Large-scale HousePlus solar power station with integrated storage',
         },

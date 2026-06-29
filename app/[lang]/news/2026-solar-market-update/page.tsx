@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: '2026 solar market update from HousePlus: Discover our latest high-efficiency solar panels (26-30% conversion rate), advanced battery storage systems (5-20 kWh), and integrated smart energy management solutions for global B2B buyers.',
+    en: '2026 solar market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Solar panels, inverters, lithium batteries. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Actualización del mercado solar 2026 de HousePlus: Descubra nuestros últimos paneles solares de alta eficiencia (tasa de conversión del 26-30%), sistemas avanzados de almacenamiento de baterías (5-20 kWh) y soluciones integradas de gestión inteligente de energía para compradores B2B globales.',
     de: 'Aktualisierung des Solarmarktes 2026 von HousePlus: Entdecken Sie unsere neuesten hocheffizienten Solarmodule (26-30% Wirkungsgrad), fortschrittliche Batteriespeichersysteme (5-20 kWh) und integrierte intelligente Energiemanagement-Lösungen für globale B2B-Käufer.',
     fr: 'Mise à jour du marché solaire 2026 de HousePlus: Découvrez nos derniers panneaux solaires à haut rendement (taux de conversion de 26-30%), systèmes de stockage de batteries avancés (5-20 kWh) et solutions intégrées de gestion intelligente de l\'énergie pour les acheteurs B2B mondiaux.',
@@ -49,7 +49,7 @@ const articleContent: Record<string, any> = {
     sections: [
       {
         heading: 'Solar Energy Market Overview 2026',
-        text: 'The global solar energy market continues its unprecedented growth in 2026, with HousePlus at the forefront of technological innovation. This year, we see significant adoption across Africa, Southeast Asia, and Europe as businesses and utilities transition to renewable energy sources. HousePlus is proud to be a trusted partner for distributors, developers, and EPC companies worldwide.'
+        text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified solar energy systems. The global solar energy market continues its unprecedented growth in 2026, with HousePlus at the forefront of technological innovation. This year, we see significant adoption across Africa, Southeast Asia, and Europe as businesses and utilities transition to renewable energy sources. HousePlus is proud to be a trusted partner for distributors, developers, and EPC companies worldwide.'
       },
       {
         heading: 'Breakthrough in Solar Panel Efficiency',
@@ -253,6 +253,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           </div>
         ))}
       </article>
+
+      {/* CTA */}
+      <div className="max-w-4xl mx-auto px-4 pb-12">
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">Source 2026 Solar Solutions from HousePlus</h3>
+          <p className="text-blue-700 mb-6">Contact our team for solar panel, inverter, and battery storage quotations. MOQ from 100 pcs, 20–35 day lead time, full CE/FCC/RoHS certification support.</p>
+          <Link
+            href={`/${lang}/contact`}
+            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Contact HousePlus
+          </Link>
+        </div>
+      </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">

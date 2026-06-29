@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore the rapid advancements in 3C electronics, from smart devices to LED lighting. Discover how HousePlus delivers cutting-edge, reliable solutions for global wholesale markets.',
+    en: 'Trace the evolution of 3C electronics with HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. AI-powered smart devices, TWS, wearables. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Explore los rápidos avances en electrónica 3C, desde dispositivos inteligentes hasta iluminación LED. Descubra cómo HousePlus ofrece soluciones de vanguardia y confiables para los mercados mayoristas globales.',
     de: 'Entdecken Sie die rasanten Fortschritte in der 3C-Elektronik, von Smart Devices bis zur LED-Beleuchtung. Erfahren Sie, wie HousePlus modernste, zuverlässige Lösungen für globale Großhandelsmärkte liefert.',
     fr: 'Explorez les avancées rapides de l\'électronique 3C, des appareils intelligents à l\'éclairage LED. Découvrez comment HousePlus fournit des solutions de pointe et fiables pour les marchés de gros mondiaux.',
@@ -57,7 +57,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       sections: [
         {
           heading: 'The Dynamic World of 3C Electronics',
-          text: 'The 3C electronics sector (Computer, Communication, Consumer Electronics) is one of the fastest-evolving industries globally. Driven by relentless innovation, it constantly introduces new technologies that reshape how we live, work, and interact. From powerful smartphones and smart wearables to advanced home entertainment systems and energy-efficient LED lighting, 3C electronics are integral to modern life. HousePlus is a key player in this dynamic market, offering a diverse portfolio of cutting-edge products.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified 3C electronics. The 3C electronics sector (Computer, Communication, Consumer Electronics) is one of the fastest-evolving industries globally. Driven by relentless innovation, it constantly introduces new technologies that reshape how we live, work, and interact. From powerful smartphones and smart wearables to advanced home entertainment systems and energy-efficient LED lighting, 3C electronics are integral to modern life. HousePlus is a key player in this dynamic market, offering a diverse portfolio of cutting-edge products.',
           image: '/images/products/led-lighting.jpg',
           imageAlt: 'HousePlus energy-efficient LED lighting solutions',
         },

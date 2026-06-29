@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Discover HousePlus\'s commitment to advanced manufacturing techniques, stringent quality control, and sustainable practices in producing high-quality home appliances for global wholesale markets.',
+    en: 'Discover advanced manufacturing for home appliances at HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. IoT, AI, automation. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Descubra el compromiso de HousePlus con las técnicas de fabricación avanzadas, el estricto control de calidad y las prácticas sostenibles en la producción de electrodomésticos de alta calidad para los mercados mayoristas globales.',
     de: 'Entdecken Sie das Engagement von HousePlus für fortschrittliche Fertigungstechniken, strenge Qualitätskontrolle und nachhaltige Praktiken bei der Herstellung hochwertiger Haushaltsgeräte für globale Großhandelsmärkte.',
     fr: 'Découvrez l\'engagement de HousePlus envers les techniques de fabrication avancées, le contrôle qualité rigoureux et les pratiques durables dans la production d\'appareils électroménagers de haute qualité pour les marchés de gros mondiaux.',
@@ -57,7 +57,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       sections: [
         {
           heading: 'The Foundation of Quality: Precision Manufacturing',
-          text: 'In the highly competitive home appliance market, manufacturing excellence is paramount. At HousePlus, we leverage state-of-the-art production lines and advanced automation technologies to ensure every appliance meets the highest standards of precision and durability. Our commitment to continuous improvement in manufacturing processes allows us to produce innovative and reliable products efficiently, catering to the diverse needs of our global wholesale partners.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. In the highly competitive home appliance market, manufacturing excellence is paramount. At HousePlus, we leverage state-of-the-art production lines and advanced automation technologies to ensure every appliance meets the highest standards of precision and durability. Our commitment to continuous improvement in manufacturing processes allows us to produce innovative and reliable products efficiently, catering to the diverse needs of our global wholesale partners.',
           image: '/images/factory/assembly-line.jpg',
           imageAlt: 'Automated assembly line for HousePlus home appliances',
         },

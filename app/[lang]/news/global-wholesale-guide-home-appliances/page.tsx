@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'The Complete Guide to Wholesale Home Appliances: How HousePlus Supports Global Buyers',
-    description: 'A comprehensive guide for wholesale buyers on sourcing high-quality home appliances from HousePlus. Learn about MOQ, OEM/ODM services, certifications, and how we support distributors across Africa, Southeast Asia, and Europe.',
+    description: 'Get the global wholesale guide for home appliances from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ clients in 53+ countries. MOQ 100 pcs, 20–35 day lead time. CE/FCC/RoHS certified.',
     keywords: ['wholesale home appliances', 'HousePlus wholesale', 'OEM appliances', 'bulk home appliances', 'global distributor'],
     url: `/${lang}/news/global-wholesale-guide-home-appliances`,
     lang: lang as any,
@@ -40,7 +40,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Why Wholesale Home Appliances Represent a Massive Opportunity',
-          text: 'The global home appliances market is projected to exceed $1.2 trillion by 2030, driven by rapid urbanization, rising middle-class incomes, and increasing demand for energy-efficient products. For wholesale buyers and distributors, this represents an extraordinary opportunity to build profitable product portfolios. HousePlus has been at the forefront of this market for over a decade, supplying premium home appliances to more than 500 clients across 50+ countries. Our products span refrigerators, washing machines, air conditioners, kitchen appliances, and a wide range of small household devices — all manufactured to the highest international standards.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. The global home appliances market is projected to exceed $1.2 trillion by 2030, driven by rapid urbanization, rising middle-class incomes, and increasing demand for energy-efficient products. For wholesale buyers and distributors, this represents an extraordinary opportunity to build profitable product portfolios. HousePlus has been at the forefront of this market for over a decade, supplying premium home appliances to more than 500 clients across 50+ countries. Our products span refrigerators, washing machines, air conditioners, kitchen appliances, and a wide range of small household devices — all manufactured to the highest international standards.',
           image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop',
           imageAlt: 'Modern home appliances showroom with refrigerators and washing machines',
         },

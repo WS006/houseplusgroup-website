@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore the benefits and applications of solar energy storage systems in industrial manufacturing, focusing on sustainability, cost efficiency, and energy independence. Learn how HousePlus solutions empower a greener industrial future.',
+    en: 'Explore industrial solar energy storage manufacturing at HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. ESS production for global markets. CE/FCC/RoHS. OEM/ODM available.'
     es: 'Explore los beneficios y aplicaciones de los sistemas de almacenamiento de energía solar en la fabricación industrial, centrándose en la sostenibilidad, la eficiencia de costos y la independencia energética. Descubra cómo las soluciones de HousePlus impulsan un futuro industrial más verde.',
     de: 'Entdecken Sie die Vorteile und Anwendungen von Solarenergiespeichersystemen in der industriellen Fertigung, mit Fokus auf Nachhaltigkeit, Kosteneffizienz und Energieunabhängigkeit. Erfahren Sie, wie HousePlus-Lösungen eine grünere industrielle Zukunft ermöglichen.',
     fr: 'Explorez les avantages et les applications des systèmes de stockage d\'énergie solaire dans la fabrication industrielle, en mettant l\'accent sur la durabilité, l\'efficacité des coûts et l\'indépendance énergétique. Découvrez comment les solutions HousePlus favorisent un avenir industriel plus vert.',
@@ -48,7 +48,7 @@ const articleContent: Record<string, any> = {
     sections: [
       {
         heading: 'Introduction: The Growing Need for Sustainable Energy in Industry',
-        text: 'Industrial manufacturing is a significant consumer of energy, often relying on fossil fuels. The escalating costs of traditional energy sources, coupled with increasing environmental regulations and corporate sustainability goals, are driving a paradigm shift towards renewable energy. Solar energy, when coupled with efficient storage systems, offers a compelling solution for industrial facilities to reduce their carbon footprint, achieve energy independence, and enhance operational resilience. This article explores the critical role of solar energy storage in modern industrial manufacturing and how HousePlus is contributing to this sustainable transformation.'
+        text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified solar energy storage systems. Industrial manufacturing is a significant consumer of energy, often relying on fossil fuels. The escalating costs of traditional energy sources, coupled with increasing environmental regulations and corporate sustainability goals, are driving a paradigm shift towards renewable energy. Solar energy, when coupled with efficient storage systems, offers a compelling solution for industrial facilities to reduce their carbon footprint, achieve energy independence, and enhance operational resilience. This article explores the critical role of solar energy storage in modern industrial manufacturing and how HousePlus is contributing to this sustainable transformation.'
       },
       {
         heading: 'Benefits of Solar Energy Storage in Manufacturing',
@@ -273,6 +273,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           </div>
         ))}
       </article>
+
+      {/* CTA */}
+      <div className="max-w-4xl mx-auto px-4 pb-12">
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">Partner with HousePlus for Industrial Solar Storage</h3>
+          <p className="text-blue-700 mb-6">Contact our team to discuss your industrial energy storage requirements. We offer free consultation, system design, and competitive OEM/ODM pricing for B2B partners worldwide.</p>
+          <Link
+            href={`/${lang}/contact`}
+            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Contact HousePlus
+          </Link>
+        </div>
+      </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">

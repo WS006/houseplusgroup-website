@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore the latest innovations in solar energy technology and how HousePlus is leading the way with high-efficiency solar panels, portable power stations, and sustainable solutions for global wholesale markets.',
+    en: 'Explore 2026 solar energy trends with HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Perovskite cells, bifacial panels, AI energy management. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Explore las últimas innovaciones en tecnología de energía solar y cómo HousePlus lidera el camino con paneles solares de alta eficiencia, estaciones de energía portátiles y soluciones sostenibles para mercados mayoristas globales.',
     de: 'Entdecken Sie die neuesten Innovationen in der Solarenergietechnologie und wie HousePlus mit hocheffizienten Solarmodulen, tragbaren Kraftwerken und nachhaltigen Lösungen für globale Großhandelsmärkte führend ist.',
     fr: 'Découvrez les dernières innovations en matière de technologie de l\'énergie solaire et comment HousePlus ouvre la voie avec des panneaux solaires à haut rendement, des centrales électriques portables et des solutions durables pour les marchés de gros mondiaux.',
@@ -57,7 +57,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
       sections: [
         {
           heading: 'The Global Shift Towards Renewable Energy',
-          text: 'The world is witnessing an unprecedented shift towards renewable energy sources, with solar power leading the charge. As concerns about climate change and energy security grow, the demand for efficient and sustainable solar solutions is skyrocketing. This global transition presents immense opportunities for businesses and consumers alike, driving innovation and technological advancements in the sector. HousePlus is at the forefront of this revolution, providing cutting-edge solar products to meet the evolving needs of the market.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified solar products. The world is witnessing an unprecedented shift towards renewable energy sources, with solar power leading the charge. As concerns about climate change and energy security grow, the demand for efficient and sustainable solar solutions is skyrocketing. This global transition presents immense opportunities for businesses and consumers alike, driving innovation and technological advancements in the sector. HousePlus is at the forefront of this revolution, providing cutting-edge solar products to meet the evolving needs of the market.',
           image: '/images/products/solar-panel-1.jpg',
           imageAlt: 'Professional solar panel installation on a rooftop',
         },
