@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 14 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    es: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 14 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    de: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 14 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    fr: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 14 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    ar: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 14 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    en: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    es: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    de: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    fr: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    ar: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
   };
 
   return generateSEOMetadata({
@@ -226,7 +226,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
           <div className="max-w-6xl mx-auto">
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8">
               <p className="text-slate-700 leading-relaxed">
-                <strong>HousePlus</strong> team consists of 500+ professionals across manufacturing, R&D, quality assurance and customer service. With 14 years of industry experience, our 60+ R&D engineers, 80+ QA specialists and 200+ production staff work from a 20,000 m² Guangdong facility to support 441+ wholesale clients in 53+ countries. Every department is committed to delivering CE, FCC, RoHS and ISO 9001 certified products with a 24-month warranty.
+                <strong>HousePlus</strong> team consists of 500+ professionals across manufacturing, R&D, quality assurance and customer service. With 16 years of industry experience, our 60+ R&D engineers, 80+ QA specialists and 200+ production staff work from a 20,000 m² Guangdong facility to support 441+ wholesale clients in 53+ countries. Every department is committed to delivering CE, FCC, RoHS and ISO 9001 certified products with a 24-month warranty.
               </p>
             </div>
           </div>

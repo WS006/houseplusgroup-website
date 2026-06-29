@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    es: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    de: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    fr: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    ar: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 14 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    en: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    es: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    de: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    fr: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    ar: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
   };
 
   return generateSEOMetadata({
@@ -94,7 +94,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                     <span className="text-xl">🌍</span>
                     <div>
                       <p className="font-bold text-sm">441+ Clients in 53+ Countries</p>
-                      <p className="text-blue-100 text-xs">14 years of manufacturing trust</p>
+                      <p className="text-blue-100 text-xs">16 years of manufacturing trust</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

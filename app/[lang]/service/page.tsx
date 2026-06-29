@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'HousePlus Services — OEM/ODM, Private Label & Technical Support',
-    description: 'HousePlus OEM/ODM services from 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. Private label, custom packaging, product modification. 441+ wholesale clients across 53+ countries. 14 years manufacturing solar, appliances and 3C electronics. 24-month warranty.',
+    description: 'HousePlus OEM/ODM services from 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. Private label, custom packaging, product modification. 441+ wholesale clients across 53+ countries. 16 years manufacturing solar, appliances and 3C electronics. 24-month warranty.',
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'technical support', 'wholesale services', 'HousePlus'],
     url: `/${lang}/service`,
     lang: lang as any,

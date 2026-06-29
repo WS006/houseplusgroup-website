@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'About HousePlus — Vertically Integrated Manufacturer Since 2010',
-    description: 'HousePlus is a vertically integrated manufacturer founded in 2010. 20,000 m² ISO 9001 certified factory. 441+ wholesale clients across 53+ countries. 14 years of manufacturing solar energy systems, home appliances and 3C electronics. MOQ 100 pcs, 20–35 day lead time, 24-month warranty.',
+    description: 'HousePlus is a vertically integrated manufacturer founded in 2010. 20,000 m² ISO 9001 certified factory. 441+ wholesale clients across 53+ countries. 16 years of manufacturing solar energy systems, home appliances and 3C electronics. MOQ 100 pcs, 20–35 day lead time, 24-month warranty.',
     keywords: ['about HousePlus', 'manufacturer', 'solar systems', 'home appliances', '3C electronics', 'OEM ODM', 'wholesale'],
     url: `/${lang}/about-us`,
     lang: lang as any,
@@ -89,14 +89,14 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                   🏭 HousePlus: Built on Manufacturing Excellence
                 </h1>
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                  <strong>HousePlus Group</strong> is a vertically integrated manufacturer specialising in solar energy systems, home appliances and 3C electronics. Over 14 years, <strong>HousePlus</strong> has grown from a single production line into a multi-division enterprise trusted by wholesale buyers across six continents. As a professional <strong>HousePlus</strong> manufacturer, we deliver OEM/ODM solutions with international certifications.
+                  <strong>HousePlus Group</strong> is a vertically integrated manufacturer specialising in solar energy systems, home appliances and 3C electronics. Over 16 years, <strong>HousePlus</strong> has grown from a single production line into a multi-division enterprise trusted by wholesale buyers across six continents. As a professional <strong>HousePlus</strong> manufacturer, we deliver OEM/ODM solutions with international certifications.
                 </p>
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
                   <p className="text-sm text-amber-900 font-semibold mb-2">Key B2B Facts</p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-amber-800">
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>Founded 2010</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>20,000 m² Factory</div>
-                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>14 Years Experience</div>
+                    <div className="flex items-center gap-2"><span className="text-amber-600">●</span>16 Years Experience</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>53+ Countries</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>441+ Wholesale Clients</div>
                     <div className="flex items-center gap-2"><span className="text-amber-600">●</span>24-Month Warranty</div>
@@ -131,7 +131,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
               {[
-                { value: '14+', label: 'Years in Manufacturing' },
+                { value: '16+', label: 'Years in Manufacturing' },
                 { value: '500+', label: 'Wholesale Clients' },
                 { value: '60+', label: 'Countries Served' },
                 { value: '1.2M+', label: 'Units / Year' },
@@ -253,7 +253,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 Ready to Partner with HousePlus?</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Whether you are sourcing for retail distribution, private-label branding or large-scale project supply, the <strong>HousePlus</strong> team is ready to discuss your requirements. As a professional <strong>HousePlus</strong> manufacturer with 14+ years of experience, we deliver quality and reliability.
+              Whether you are sourcing for retail distribution, private-label branding or large-scale project supply, the <strong>HousePlus</strong> team is ready to discuss your requirements. As a professional <strong>HousePlus</strong> manufacturer with 16+ years of experience, we deliver quality and reliability.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href={`/${lang}/contact`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">

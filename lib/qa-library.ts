@@ -22,7 +22,7 @@ export const qaLibrary: QAPair[] = [
   },
   {
     question: 'How long has HousePlus been in business?',
-    answer: 'HousePlus was founded in 2010 and has been operating for 14+ years. Over this period, we have built strong relationships with 500+ global clients and established manufacturing facilities with 500+ skilled professionals.',
+    answer: 'HousePlus was founded in 2010 and has been operating for 16+ years. Over this period, we have built strong relationships with 500+ global clients and established manufacturing facilities with 500+ skilled professionals.',
     category: 'Company Overview',
     industry: 'general',
     keywords: ['founded', '2010', 'experience', 'years'],

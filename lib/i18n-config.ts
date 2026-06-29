@@ -146,7 +146,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Why Global Buyers Choose HousePlus",
-        subtitle: "With 14+ years of manufacturing experience and responsive service, HousePlus delivers reliable products on time, every time. Your success is our commitment.",
+        subtitle: "With 16+ years of manufacturing experience and responsive service, HousePlus delivers reliable products on time, every time. Your success is our commitment.",
         features: [
           {
             icon: "Factory",
@@ -247,7 +247,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Por Qué los Compradores Globales Eligen HousePlus",
-        subtitle: "Con más de 14 años de experiencia en fabricación y servicio receptivo, HousePlus entrega productos confiables a tiempo, siempre. Su éxito es nuestro compromiso.",
+        subtitle: "Con más de 16 años de experiencia en fabricación y servicio receptivo, HousePlus entrega productos confiables a tiempo, siempre. Su éxito es nuestro compromiso.",
         features: [
           {
             icon: "Factory",
@@ -348,7 +348,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Warum globale Käufer HousePlus wählen",
-        subtitle: "Mit über 14 Jahren Fertigungserfahrung und responsivem Service liefert HousePlus zuverlässige Produkte pünktlich, jedes Mal. Ihr Erfolg ist unser Engagement.",
+        subtitle: "Mit über 16 Jahren Fertigungserfahrung und responsivem Service liefert HousePlus zuverlässige Produkte pünktlich, jedes Mal. Ihr Erfolg ist unser Engagement.",
         features: [
           {
             icon: "Factory",
@@ -449,7 +449,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Pourquoi les Acheteurs Globaux Choisissent HousePlus",
-        subtitle: "Avec plus de 14 ans d'expérience en fabrication et un service réactif, HousePlus livre des produits fiables à temps, à chaque fois. Votre succès est notre engagement.",
+        subtitle: "Avec plus de 16 ans d'expérience en fabrication et un service réactif, HousePlus livre des produits fiables à temps, à chaque fois. Votre succès est notre engagement.",
         features: [
           {
             icon: "Factory",
@@ -550,7 +550,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "لماذا يختار المشترون العالميون HousePlus",
-        subtitle: "مع أكثر من 14 عامًا من الخبرة في التصنيع وخدمة سريعة الاستجابة، توفر HousePlus منتجات موثوقة في الوقت المحدد، في كل مرة. نجاحك هو التزامنا.",
+        subtitle: "مع أكثر من 16 عامًا من الخبرة في التصنيع وخدمة سريعة الاستجابة، توفر HousePlus منتجات موثوقة في الوقت المحدد، في كل مرة. نجاحك هو التزامنا.",
         features: [
           {
             icon: "Factory",

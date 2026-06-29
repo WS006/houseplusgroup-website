@@ -103,7 +103,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         <section className="py-14 border-y border-slate-100 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <Counter end="14+" label={dict.home.counter.years} />
+              <Counter end="16+" label={dict.home.counter.years} />
               <Counter end="500+" label={dict.home.counter.clients} />
               <Counter end="60+" label={dict.home.counter.countries} />
               <Counter end="24m" label={dict.home.counter.warranty} />
@@ -119,7 +119,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { label: '14+ Years', sub: 'Manufacturing Experience' },
+                { label: '16+ Years', sub: 'Manufacturing Experience' },
                 { label: '20,000 m²', sub: 'ISO 9001 Factory' },
                 { label: '441+ Clients', sub: 'Global Wholesale Buyers' },
                 { label: '53+ Countries', sub: 'Worldwide Export' },
