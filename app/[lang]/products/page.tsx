@@ -308,7 +308,7 @@ const products = [
     name: '2000W Pure Sine Wave Inverter',
     category: 'solar',
     model: 'HP-SOL-INV2K',
-    coverImage: 'https://images.unsplash.com/photo-1620216503901-515bb5c34c30?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?w=900&q=85',
     description: '2000W pure sine wave inverter with 4000W surge. ≥92% efficiency. THD <3%. 12V/24V/48V input. 110V/220V output. 8 protection layers.',
     badge: 'CE Certified',
   },

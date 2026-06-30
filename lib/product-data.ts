@@ -55,7 +55,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Anodised aluminium alloy frame — corrosion-resistant and lightweight',
       'IP68-rated junction box with bypass diodes for shading protection',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=900&q=85',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206360/products/solar-panel-500w.jpg',
   },
   'solar-inverter-3kw': {
     name: '3kW Pure Sine Wave Solar Inverter',
@@ -74,7 +74,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'LCD display with real-time monitoring of voltage, current and power',
       'Multi-protection: over-voltage, over-current, short-circuit, thermal',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1620216503901-515bb5c34c30?w=900&q=85',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206915/products/solar-inverter-3kw.jpg',
   },
   'lithium-battery-5kwh': {
     name: '5kWh LiFePO4 Lithium Battery',
@@ -93,7 +93,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Wide operating temperature range: -20°C to +60°C',
       'Stackable design — expandable to 30kWh with parallel connection',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=85',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206406/products/lithium-battery-5kwh.jpg',
   },
   'lead-acid-battery-100ah': {
     name: '100Ah Deep Cycle Lead-Acid Battery',
@@ -111,7 +111,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Deep discharge recovery capability for extended service life',
       'Vibration-resistant construction for mobile and marine use',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1619641151040-af3bf8325790?w=900&q=85',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206924/products/lead-acid-battery-100ah.jpg',
   },
   'charge-controller-60a': {
     name: 'MPPT Solar Charge Controller 60A',
@@ -129,7 +129,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Backlit LCD display showing PV voltage, battery voltage and charge current',
       'Comprehensive protection: overcharge, over-discharge, short-circuit, reverse polarity',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1558444458-5f75bc94476c?w=900&q=85',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206928/products/charge-controller-60a.jpg',
   },
   'solar-street-light-200w': {
     name: '200W All-in-One Solar Street Light',
@@ -147,7 +147,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'PIR motion sensor with adjustable sensitivity and delay time',
       'Remote control for brightness adjustment and scheduling',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1542641728-6ca359b085f4?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=900&q=85',
   },
   'solar-fan-20w': {
     name: 'DC Solar Fan 20W',
@@ -165,7 +165,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Direct solar panel connection — no battery required in daylight',
       'Corrosion-resistant ABS housing for outdoor and humid environments',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1565151443325814491ebe?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=85',
   },
   'solar-power-bank-20000mah': {
     name: '20000mAh Solar Power Bank',
@@ -202,7 +202,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Digital touch screen with 8 one-touch preset programmes',
       '360° rapid air circulation for even, crispy results',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?w=900&q=85',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206932/products/air-fryer-5l.jpg',
   },
   'induction-cooktop-2000w': {
     name: '2000W Induction Cooktop',
@@ -220,7 +220,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Automatic pan detection — powers off when no cookware is detected',
       'Child lock and 3-hour auto shut-off for safety',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1624452085375-343547842776?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1585650503743-6fc1e7a0e2d0?w=900&q=85',
   },
   'electric-kettle-1-5l': {
     name: '1.5L Stainless Steel Electric Kettle',
@@ -238,7 +238,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '1500W rapid boil — 1.5L in under 3 minutes',
       '360° cordless base with auto shut-off and boil-dry protection',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1594212699903-ec8a3ecc50f1?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&q=85',
   },
   'toaster-2-slice': {
     name: '2-Slice Stainless Steel Toaster',
@@ -256,7 +256,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Extra-wide slots accommodate thick-cut bread and bagels',
       'Removable crumb tray for easy cleaning',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85',
   },
   'headphone-over-ear': {
     name: 'Over-Ear Headphone with Microphone',
@@ -294,7 +294,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Active noise cancellation (ANC) with transparency mode',
       'IPX5 sweat and water resistance for sports use',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1572569028738-411a196cb27c?w=900&q=85',
   },
   'smart-watch': {
     name: 'Smart Watch with Heart Rate Monitor',
@@ -330,7 +330,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Shock-resistant aluminium alloy casing — drop-tested to 2m',
       'Compact pocket-sized form factor — 50g lightweight',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1597872252165-4827a235d9bb?w=900&q=85',
   },
   'micro-sd-128gb': {
     name: '128GB Micro SD Card (Class 10 / A2)',
@@ -348,7 +348,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Waterproof, temperature-proof and X-ray-proof construction',
       'Includes full-size SD adapter for camera and laptop compatibility',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1558478551-1a378f63ad28?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=900&q=85',
   },
   'usb-c-cable-2m': {
     name: 'Fast Charging USB-C Cable 2m',
@@ -366,7 +366,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Supports PD 3.0 and QC 4.0 fast charging protocols',
       'Braided nylon jacket with aluminium connectors — 10,000+ bend cycles',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1619193100632-68046777174b?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=900&q=85',
   },
 
   // ===== P0 GEO-Optimized Products (Added 2026-06-26) =====
@@ -827,7 +827,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1620216503901-515bb5c34c30?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?w=900&q=85',
   },
   'flexible-solar-panel-400w': {
     name: '400W Semi-Flexible Solar Panel',
