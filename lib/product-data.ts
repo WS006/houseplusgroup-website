@@ -598,7 +598,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1609091839311-d53681962025?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1566554738544-d962991c3fee?w=900&q=85',
   },
   'lifepo4-battery-12v100ah': {
     name: '12V 100Ah LiFePO4 Battery',
@@ -873,7 +873,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=85',
   },
   'solar-generator-kit-300w': {
     name: 'Portable Solar Generator Kit 300W',
@@ -919,7 +919,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1548613053-220e75581890?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1662601619454-6fdb2afcf24a?w=900&q=85',
   },
   'smart-wifi-plug-meter': {
     name: 'Smart WiFi Plug with Energy Meter',
