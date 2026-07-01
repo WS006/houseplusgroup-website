@@ -441,11 +441,13 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
                     <Image
                       src={product.coverImage}
-                      alt={product.name}
+                      alt={`${product.name} ${product.model ? `(${product.model})` : ''} — Wholesale by HousePlus`}
+                      title={`${product.name} | CE/RoHS Certified Wholesale Product`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       quality={80}
+                      loading="lazy"
                     />
                     {product.badge && (
                       <span className="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-full">

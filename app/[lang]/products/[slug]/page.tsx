@@ -123,7 +123,8 @@ export default async function ProductDetailPage({
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50">
               <Image
                 src={product.coverImage}
-                alt={`HousePlus ${product.name}`}
+                alt={`${product.name} - Wholesale ${product.category === 'solar' ? 'Solar Energy' : product.category === 'appliances' ? 'Home Appliance' : '3C Electronic'} Product | HousePlus OEM/ODM`}
+                title={`${product.name} ${modelSpec ? `(${modelSpec.value})` : ''} — CE/RoHS Certified Wholesale Product by HousePlus`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
