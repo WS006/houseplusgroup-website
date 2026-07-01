@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { PRODUCT_DATA } from '@/lib/product-data';
 
 export const dynamic = 'force-dynamic';
 
@@ -275,8 +276,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
                     <Image
                       src={product.coverImage}
-                      alt={`${product.name} ${product.model ? `(${product.model})` : ''} — Wholesale by HousePlus`}
-                      title={`${product.name} | CE/RoHS Certified Wholesale Product`}
+                      alt={PRODUCT_DATA[product.slug]?.imageAlt || `${product.name} ${product.model ? `(${product.model})` : ''} — Wholesale by HousePlus`}
+                      title={PRODUCT_DATA[product.slug]?.imageTitle || `${product.name} | CE/RoHS Certified Wholesale Product`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

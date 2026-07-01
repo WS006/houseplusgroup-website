@@ -32,6 +32,8 @@ export interface ProductData {
   specs: ProductSpec[];
   features: string[];
   coverImage: string;
+  imageAlt?: string;
+  imageTitle?: string;
   badge?: string;
   faq?: ProductFAQ[];
   b2bInfo?: B2BInfo;
@@ -55,7 +57,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Anodised aluminium alloy frame — corrosion-resistant and lightweight',
       'IP68-rated junction box with bypass diodes for shading protection',
     ],
-    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206360/products/solar-panel-500w.jpg',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206360/products/solar-panel-500w.jpg',    imageAlt: '500W Monocrystalline Solar Panel HP-SP500 - High Efficiency Solar Energy Product | HousePlus Wholesale Solar Panel Supplier | 21.5% Conversion Rate | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '500W Monocrystalline Solar Panel HP-SP500 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | 441+ B2B Clients in 53+ Countries | Residential Commercial Solar Solutions | Contact: www.houseplus-ch.com',
+
   },
   'solar-inverter-3kw': {
     name: '3kW Pure Sine Wave Solar Inverter',
@@ -74,7 +78,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'LCD display with real-time monitoring of voltage, current and power',
       'Multi-protection: over-voltage, over-current, short-circuit, thermal',
     ],
-    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206915/products/solar-inverter-3kw.jpg',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206915/products/solar-inverter-3kw.jpg',    imageAlt: '3kW Pure Sine Wave Solar Inverter HP-INV3000 - Solar Energy Power Inverter | HousePlus Wholesale Solar Inverter Supplier | Built-in MPPT 99%+ Efficiency | CE Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '3kW Pure Sine Wave Solar Inverter HP-INV3000 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Grid-Tie Off-Grid Hybrid Inverter | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'lithium-battery-5kwh': {
     name: '5kWh LiFePO4 Lithium Battery',
@@ -93,7 +99,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Wide operating temperature range: -20°C to +60°C',
       'Stackable design — expandable to 30kWh with parallel connection',
     ],
-    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206406/products/lithium-battery-5kwh.jpg',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206406/products/lithium-battery-5kwh.jpg',    imageAlt: '5kWh LiFePO4 Lithium Battery HP-LFP5K - Solar Energy Storage Battery | HousePlus Wholesale Lithium Battery Supplier | 6000+ Cycles BMS Integrated | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '5kWh LiFePO4 Lithium Battery HP-LFP5K — HousePlus Professional Solar Energy Storage Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Home Commercial Backup Power | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'lead-acid-battery-100ah': {
     name: '100Ah Deep Cycle Lead-Acid Battery',
@@ -111,7 +119,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Deep discharge recovery capability for extended service life',
       'Vibration-resistant construction for mobile and marine use',
     ],
-    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206924/products/lead-acid-battery-100ah.jpg',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206924/products/lead-acid-battery-100ah.jpg',    imageAlt: '100Ah Deep Cycle Lead-Acid Battery HP-LA100 - Solar Energy Storage Battery | HousePlus Wholesale Deep Cycle Battery Supplier | VRLA AGM Maintenance-Free | CE Certified | OEM/ODM Available | www.houseplus-ch.com',
+    imageTitle: '100Ah Deep Cycle Lead-Acid Battery HP-LA100 — HousePlus Professional Solar Battery Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Marine RV UPS Solar Storage | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'charge-controller-60a': {
     name: 'MPPT Solar Charge Controller 60A',
@@ -129,7 +139,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Backlit LCD display showing PV voltage, battery voltage and charge current',
       'Comprehensive protection: overcharge, over-discharge, short-circuit, reverse polarity',
     ],
-    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206928/products/charge-controller-60a.jpg',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206928/products/charge-controller-60a.jpg',    imageAlt: 'MPPT Solar Charge Controller 60A HP-MPPT60 - Solar Energy Charge Controller | HousePlus Wholesale MPPT Controller Supplier | 99.5% Tracking Efficiency LCD Display | CE/RoHS Certified | OEM/ODM Bulk | www.houseplus-ch.com',
+    imageTitle: 'MPPT Solar Charge Controller 60A HP-MPPT60 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | 12V/24V/48V Auto Detection | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'solar-street-light-200w': {
     name: '200W All-in-One Solar Street Light',
@@ -147,7 +159,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'PIR motion sensor with adjustable sensitivity and delay time',
       'Remote control for brightness adjustment and scheduling',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=900&q=85',    imageAlt: '200W All-in-One Solar Street Light HP-SSL200 - Solar Energy Outdoor Lighting | HousePlus Wholesale Solar Street Light Supplier | Motion Sensor IP65 Waterproof | CE/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '200W All-in-One Solar Street Light HP-SSL200 — HousePlus Professional Solar Lighting Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | PIR Motion Sensor Remote Control | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'solar-fan-20w': {
     name: 'DC Solar Fan 20W',
@@ -165,7 +179,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Direct solar panel connection — no battery required in daylight',
       'Corrosion-resistant ABS housing for outdoor and humid environments',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=85',    imageAlt: 'DC Solar Fan 20W HP-SF20 - Solar Energy Ventilation Fan | HousePlus Wholesale Solar Fan Supplier | Brushless DC Motor 1200 m3/h | CE Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: 'DC Solar Fan 20W HP-SF20 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Greenhouse Livestock Off-Grid Cooling | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'solar-power-bank-20000mah': {
     name: '20000mAh Solar Power Bank',
@@ -183,7 +199,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Built-in solar panel for emergency top-up in outdoor environments',
       'IPX4 waterproof and dustproof construction',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1609091839311-d53681962025?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1609091839311-d53681962025?w=900&q=85',    imageAlt: '20000mAh Solar Power Bank HP-SPB20K - Solar Energy Portable Charger | HousePlus Wholesale Solar Power Bank Supplier | 18W PD Fast Charge Waterproof | CE/FCC/RoHS Certified | OEM/ODM Available | www.houseplus-ch.com',
+    imageTitle: '20000mAh Solar Power Bank HP-SPB20K — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Outdoor Emergency Camping Charging | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'air-fryer-5-8l': {
     name: '5.8L Digital Air Fryer',
@@ -202,7 +220,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Digital touch screen with 8 one-touch preset programmes',
       '360° rapid air circulation for even, crispy results',
     ],
-    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206932/products/air-fryer-5l.jpg',
+    coverImage: 'https://res.cloudinary.com/dgojpbdof/image/upload/v1777206932/products/air-fryer-5l.jpg',    imageAlt: '5.8L Digital Air Fryer HP-AF58 - Household Home Appliance | HousePlus Wholesale Kitchen Appliance Supplier | Oil-Free Cooking 8 Presets Touch Panel | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '5.8L Digital Air Fryer HP-AF58 — HousePlus Professional Home Appliance Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | 360 Rapid Air Circulation Healthy Cooking | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'induction-cooktop-2000w': {
     name: '2000W Induction Cooktop',
@@ -220,7 +240,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Automatic pan detection — powers off when no cookware is detected',
       'Child lock and 3-hour auto shut-off for safety',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1585650503743-6fc1e7a0e2d0?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1585650503743-6fc1e7a0e2d0?w=900&q=85',    imageAlt: '2000W Induction Cooktop HP-IC2000 - Household Home Appliance | HousePlus Wholesale Induction Cooker Supplier | Schott Ceran Glass 10 Power Levels | CE/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '2000W Induction Cooktop HP-IC2000 — HousePlus Professional Home Appliance Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Child Lock Auto Pan Detection Safety | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'electric-kettle-1-5l': {
     name: '1.5L Stainless Steel Electric Kettle',
@@ -238,7 +260,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '1500W rapid boil — 1.5L in under 3 minutes',
       '360° cordless base with auto shut-off and boil-dry protection',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&q=85',    imageAlt: '1.5L Stainless Steel Electric Kettle HP-EK15 - Household Home Appliance | HousePlus Wholesale Electric Kettle Supplier | BPA-Free 1500W Rapid Boil Cordless | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '1.5L Stainless Steel Electric Kettle HP-EK15 — HousePlus Professional Home Appliance Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Auto Shut-Off Boil-Dry Protection | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'toaster-2-slice': {
     name: '2-Slice Stainless Steel Toaster',
@@ -256,7 +280,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Extra-wide slots accommodate thick-cut bread and bagels',
       'Removable crumb tray for easy cleaning',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85',    imageAlt: '2-Slice Stainless Steel Toaster HP-TS2 - Household Home Appliance | HousePlus Wholesale Bread Toaster Supplier | 7 Browning Settings Wide Slots | CE/RoHS Certified | OEM/ODM Available | www.houseplus-ch.com',
+    imageTitle: '2-Slice Stainless Steel Toaster HP-TS2 — HousePlus Professional Home Appliance Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Cancel Reheat Defrost Removable Tray | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'headphone-over-ear': {
     name: 'Over-Ear Headphone with Microphone',
@@ -275,7 +301,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Omnidirectional built-in microphone for clear voice communication',
       'Foldable design with padded headband for comfortable extended wear',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=85',    imageAlt: 'Over-Ear Headphone with Microphone HP-HE01 - 3C Electronic Product | HousePlus Wholesale Gaming Headphone Supplier | 40mm Drivers Foldable Design 3.5mm Jack | CE/FCC Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: 'Over-Ear Headphone with Microphone HP-HE01 — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Gaming Calls Music Multimedia | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'bluetooth-earphone-tws': {
     name: 'True Wireless Bluetooth Earphones (TWS)',
@@ -294,7 +322,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Active noise cancellation (ANC) with transparency mode',
       'IPX5 sweat and water resistance for sports use',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1572569028738-411a196cb27c?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1572569028738-411a196cb27c?w=900&q=85',    imageAlt: 'True Wireless Bluetooth Earphones TWS HP-TWS01 - 3C Electronic Product | HousePlus Wholesale TWS Earbuds Supplier | Bluetooth 5.3 ANC IPX5 30h Total Playtime | CE/FCC/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: 'True Wireless Bluetooth Earphones TWS HP-TWS01 — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Active Noise Cancellation Sports Earbuds | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'smart-watch': {
     name: 'Smart Watch with Heart Rate Monitor',
@@ -312,7 +342,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '20+ sport modes with automatic activity recognition',
       'IP68 waterproof — safe for swimming and showering',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=85',    imageAlt: 'Smart Watch with Heart Rate Monitor HP-SW01 - 3C Electronic Product | HousePlus Wholesale Smart Watch Supplier | 1.7 Touch Screen SpO2 20+ Sports IP68 | CE/FCC/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: 'Smart Watch with Heart Rate Monitor HP-SW01 — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Fitness Tracker 7-Day Battery Life | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'portable-ssd-1tb': {
     name: '1TB USB-C Portable SSD',
@@ -330,7 +362,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Shock-resistant aluminium alloy casing — drop-tested to 2m',
       'Compact pocket-sized form factor — 50g lightweight',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1597872252165-4827a235d9bb?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1597872252165-4827a235d9bb?w=900&q=85',    imageAlt: '1TB USB-C Portable SSD HP-SSD1T - 3C Electronic Product | HousePlus Wholesale Portable SSD Supplier | 1050MB/s Read Shock-Resistant Aluminium | CE/FCC Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '1TB USB-C Portable SSD HP-SSD1T — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | USB 3.2 Gen 2 Pocket-Sized Data Storage | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'micro-sd-128gb': {
     name: '128GB Micro SD Card (Class 10 / A2)',
@@ -348,7 +382,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Waterproof, temperature-proof and X-ray-proof construction',
       'Includes full-size SD adapter for camera and laptop compatibility',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=900&q=85',    imageAlt: '128GB Micro SD Card Class 10 A2 HP-SD128 - 3C Electronic Product | HousePlus Wholesale Memory Card Supplier | 100MB/s Read UHS-I U3 Waterproof | CE/FCC/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '128GB Micro SD Card Class 10 A2 HP-SD128 — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Action Camera Drone Dashcam Storage | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'usb-c-cable-2m': {
     name: 'Fast Charging USB-C Cable 2m',
@@ -366,7 +402,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Supports PD 3.0 and QC 4.0 fast charging protocols',
       'Braided nylon jacket with aluminium connectors — 10,000+ bend cycles',
     ],
-    coverImage: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=900&q=85',    imageAlt: 'Fast Charging USB-C Cable 2m HP-CC2M - 3C Electronic Product | HousePlus Wholesale USB Cable Supplier | 100W PD 3.0 QC 4.0 Braided Nylon 480Mbps | CE/RoHS Certified | OEM/ODM Available | www.houseplus-ch.com',
+    imageTitle: 'Fast Charging USB-C Cable 2m HP-CC2M — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Laptop Phone Fast Charge Data Transfer | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
 
   // ===== P0 GEO-Optimized Products (Added 2026-06-26) =====
@@ -414,7 +452,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=900&q=85',    imageAlt: '100W Monocrystalline Solar Panel HP-SOL-100W - High Efficiency Solar Energy Product | HousePlus Wholesale Solar Panel Supplier | 21% Conversion Rate RV Marine Off-Grid | CE/IEC/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '100W Monocrystalline Solar Panel HP-SOL-100W — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Camping Cabin Outdoor Portable Solar | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'portable-power-station-3000w': {
     name: '3000W Portable Power Station',
@@ -460,7 +500,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1620216503901-515bb5c34c30?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1620216503901-515bb5c34c30?w=900&q=85',    imageAlt: '3000W Portable Power Station HP-SOL-3000P - Solar Energy Power Station | HousePlus Wholesale Portable Power Supplier | 3000Wh LiFePO4 Pure Sine Wave Solar Charge | CE/FCC/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '3000W Portable Power Station HP-SOL-3000P — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Emergency Backup Camping Outdoor Power | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'foldable-solar-panel-200w': {
     name: '200W Foldable Solar Panel',
@@ -506,7 +548,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1548613053-220e75581890?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1548613053-220e75581890?w=900&q=85',    imageAlt: '200W Foldable Solar Panel HP-SOL-200F - Portable Solar Energy Product | HousePlus Wholesale Foldable Solar Panel Supplier | Monocrystalline ETFE Waterproof Camping | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '200W Foldable Solar Panel HP-SOL-200F — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | RV Boat Outdoor Folding Solar Charger | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'home-energy-storage-5000w': {
     name: '5000W Home Energy Storage System',
@@ -552,7 +596,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=85',    imageAlt: '5000W Home Energy Storage System HP-SOL-5KES - Solar Energy Storage System | HousePlus Wholesale Energy Storage Supplier | 5kW Inverter 10kWh Battery All-in-One | CE/IEC/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '5000W Home Energy Storage System HP-SOL-5KES — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Residential Commercial Battery Backup | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'power-bank-60w-pd': {
     name: '60W PD Fast Charging Power Bank',
@@ -598,7 +644,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1566554738544-d962991c3fee?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1566554738544-d962991c3fee?w=900&q=85',    imageAlt: '60W PD Fast Charging Power Bank HP-3C-60W - 3C Electronic Product | HousePlus Wholesale Power Bank Supplier | 20000mAh QC3.0 Dual USB-C Aluminium 350g | CE/FCC/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '60W PD Fast Charging Power Bank HP-3C-60W — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Laptop Phone Fast Charge Portable Battery | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'lifepo4-battery-12v100ah': {
     name: '12V 100Ah LiFePO4 Battery',
@@ -644,7 +692,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1619641151040-af3bf8325790?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1619641151040-af3bf8325790?w=900&q=85',    imageAlt: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 - Solar Energy Storage Battery | HousePlus Wholesale LiFePO4 Battery Supplier | 1280Wh 3000+ Cycles BMS UN38.3 12.5kg | CE/IEC/RoHS Certified | OEM/ODM Bulk | www.houseplus-ch.com',
+    imageTitle: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | RV Marine Solar House Battery | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'outdoor-power-station-600w': {
     name: '600W Outdoor Power Station',
@@ -690,7 +740,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1624452085375-343547842776?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1624452085375-343547842776?w=900&q=85',    imageAlt: '600W Outdoor Power Station HP-SOL-600O - Solar Energy Portable Power | HousePlus Wholesale Outdoor Power Station Supplier | 600Wh LiFePO4 Pure Sine Wave Solar/AC/Car | CE/FCC/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '600W Outdoor Power Station HP-SOL-600O — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Camping Emergency Portable Power Supply | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'mppt-controller-40a': {
     name: 'MPPT 40A Solar Charge Controller',
@@ -735,7 +787,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1558444458-5f75bc94476c?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1558444458-5f75bc94476c?w=900&q=85',    imageAlt: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40 - Solar Energy Controller | HousePlus Wholesale MPPT Controller Supplier | 98% Efficiency Auto 12V/24V LCD Display | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Lead-Acid Gel LiFePO4 Battery Compatible | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'magnetic-power-bank-10000mah': {
     name: '10000mAh Magnetic Wireless Power Bank',
@@ -781,7 +835,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=900&q=85',    imageAlt: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K - 3C Electronic Product | HousePlus Wholesale MagSafe Power Bank Supplier | 15W Wireless 20W PD USB-C 220g PC+ABS | CE/FCC/RoHS Certified | OEM/ODM Bulk | www.houseplus-ch.com',
+    imageTitle: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | MagSafe Compatible iPhone Wireless Charger | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'pure-sine-inverter-2000w': {
     name: '2000W Pure Sine Wave Inverter',
@@ -827,7 +883,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?w=900&q=85',    imageAlt: '2000W Pure Sine Wave Inverter HP-SOL-INV2K - Solar Energy Power Inverter | HousePlus Wholesale Pure Sine Inverter Supplier | 4000W Surge 92% Efficiency THD<3% 8 Protection | CE/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: '2000W Pure Sine Wave Inverter HP-SOL-INV2K — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | RV Cabin Backup 12V/24V/48V Selectable | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'flexible-solar-panel-400w': {
     name: '400W Semi-Flexible Solar Panel',
@@ -873,7 +931,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=85',    imageAlt: '400W Semi-Flexible Solar Panel HP-SOL-400F - Flexible Solar Energy Product | HousePlus Wholesale Flexible Solar Panel Supplier | ETFE Surface 30 Bend 8.5kg 3mm Thin | CE/IEC/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: '400W Semi-Flexible Solar Panel HP-SOL-400F — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | RV Roof Marine Deck Curved Surface Mount | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'solar-generator-kit-300w': {
     name: 'Portable Solar Generator Kit 300W',
@@ -919,7 +979,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1662601619454-6fdb2afcf24a?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1662601619454-6fdb2afcf24a?w=900&q=85',    imageAlt: 'Portable Solar Generator Kit 300W HP-SOL-KIT300 - Solar Energy Generator Kit | HousePlus Wholesale Solar Generator Supplier | 100W Panel + 300Wh Battery + Cables + Bag | CE/FCC/RoHS Certified | OEM/ODM Factory Direct | www.houseplus-ch.com',
+    imageTitle: 'Portable Solar Generator Kit 300W HP-SOL-KIT300 — HousePlus Professional Solar Energy Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Camping Emergency All-in-One Solar Power | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'smart-wifi-plug-meter': {
     name: 'Smart WiFi Plug with Energy Meter',
@@ -965,7 +1027,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1558002038-1091a166111c?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1558002038-1091a166111c?w=900&q=85',    imageAlt: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10 - Smart Home Appliance | HousePlus Wholesale Smart Plug Supplier | 16A/3680W Alexa Google Home SmartLife APP | CE/FCC/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10 — HousePlus Professional Home Appliance Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Real-Time kWh Monitoring Home Automation | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
   'usb-c-cable-100w-5a': {
     name: 'Type-C 100W Fast Charging Cable (5A)',
@@ -1011,7 +1075,9 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.unsplash.com/photo-1619193100632-68046777174b?w=900&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1619193100632-68046777174b?w=900&q=85',    imageAlt: 'Type-C 100W Fast Charging Cable 5A HP-3C-100W5A - 3C Electronic Product | HousePlus Wholesale USB-C Cable Supplier | PD 3.0 QC 4.0 480Mbps Data Nylon Braid | CE/RoHS Certified | OEM/ODM Bulk Order | www.houseplus-ch.com',
+    imageTitle: 'Type-C 100W Fast Charging Cable 5A HP-3C-100W5A — HousePlus Professional 3C Electronics Manufacturer Since 2010 | 20,000㎡ ISO 9001 Factory | Laptop Phone 100W Power Delivery Cable | 441+ B2B Clients | Contact: www.houseplus-ch.com',
+
   },
 };
 
