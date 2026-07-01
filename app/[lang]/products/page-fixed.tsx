@@ -5,6 +5,26 @@ import { PRODUCT_DATA } from '@/lib/product-data';
 
 export const dynamic = 'force-dynamic';
 
+// Helpers: varied alt/title based on product name length (deterministic, avoids hydration mismatch)
+function getImageAlt(product: { name: string; model?: string; category: string }) {
+  const model = product.model ? `(${product.model})` : '';
+  const catMap: Record<string, string> = { solar: 'Solar Energy', appliances: 'Home Appliance', electronics: '3C Electronic' };
+  const cat = catMap[product.category] || 'Wholesale';
+  const v = product.name.length % 3;
+  if (v === 0) return `${product.name} ${model} — HousePlus ${cat} Wholesale`;
+  if (v === 1) return `HousePlus ${cat} Supplier — ${product.name} ${model}`;
+  return `${product.name} ${model} — CE/RoHS Certified HousePlus ${cat}`;
+}
+function getImageTitle(product: { name: string; model?: string; category: string }) {
+  const model = product.model ? `(${product.model})` : '';
+  const catMap: Record<string, string> = { solar: 'Solar Energy', appliances: 'Home Appliances', electronics: '3C Electronics' };
+  const cat = catMap[product.category] || 'Wholesale';
+  const v = product.name.length % 3;
+  if (v === 0) return `${product.name} | HousePlus OEM/ODM ${cat}`;
+  if (v === 1) return `HousePlus ${product.name} | Professional ${cat} Manufacturer`;
+  return `${product.name} ${model} | HousePlus ${cat} Export`;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   return {
@@ -276,8 +296,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
                     <Image
                       src={product.coverImage}
-                      alt={`${product.name} ${product.model ? `(${product.model})` : ''} — HousePlus Wholesale`}
-                      title={`${product.name} | HousePlus OEM/ODM`}
+                      alt={getImageAlt(product)}
+                      title={getImageTitle(product)}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
