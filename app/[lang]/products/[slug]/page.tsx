@@ -123,14 +123,18 @@ export default async function ProductDetailPage({
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50">
               <Image
                 src={product.coverImage}
-                alt={product.imageAlt || `${product.name} - Wholesale ${product.category === 'solar' ? 'Solar Energy' : product.category === 'appliances' ? 'Home Appliance' : '3C Electronic'} Product | HousePlus OEM/ODM`}
-                title={product.imageTitle || `${product.name} ${modelSpec ? `(${modelSpec.value})` : ''} — CE/RoHS Certified Wholesale Product by HousePlus`}
+                alt={`${product.name} ${modelSpec ? `(${modelSpec.value})` : ''} — HousePlus Wholesale`}
+                title={`${product.name} | HousePlus OEM/ODM`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 quality={90}
                 priority
               />
+              {/* Hidden SEO-rich context for search engines */}
+              <span className="sr-only" data-seo-alt={product.imageAlt || ''} data-seo-title={product.imageTitle || ''}>
+                {product.imageAlt || ''}
+              </span>
             </div>
             {/* Certifications */}
             <div className="mt-4 flex flex-wrap gap-2">

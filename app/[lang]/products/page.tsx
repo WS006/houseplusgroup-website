@@ -442,14 +442,18 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
                     <Image
                       src={product.coverImage}
-                      alt={PRODUCT_DATA[product.slug]?.imageAlt || `${product.name} ${product.model ? `(${product.model})` : ''} — Wholesale by HousePlus`}
-                      title={PRODUCT_DATA[product.slug]?.imageTitle || `${product.name} | CE/RoHS Certified Wholesale Product`}
+                      alt={`${product.name} ${product.model ? `(${product.model})` : ''} — HousePlus Wholesale`}
+                      title={`${product.name} | HousePlus OEM/ODM`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       quality={80}
                       loading="lazy"
                     />
+                    {/* Hidden SEO-rich context for search engines */}
+                    <span className="sr-only" data-seo-alt={PRODUCT_DATA[product.slug]?.imageAlt || ''} data-seo-title={PRODUCT_DATA[product.slug]?.imageTitle || ''}>
+                      {PRODUCT_DATA[product.slug]?.imageAlt || ''}
+                    </span>
                     {product.badge && (
                       <span className="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-full">
                         {product.badge}
