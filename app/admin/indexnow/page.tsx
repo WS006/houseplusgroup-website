@@ -153,8 +153,53 @@ export default function IndexNowPage() {
     submitUrls(allUrls);
   };
 
-  const submitImportedUrls = () => {
-    const urls = importUrls.split('\n').map(u => u.trim()).filter(u => u);
+  const parseSitemapXml = (xmlText: string): string[] => {
+    const urls: string[] = [];
+    const urlRegex = /<loc>([^<]+)<\/loc>/gi;
+    let match;
+    while ((match = urlRegex.exec(xmlText)) !== null) {
+      const url = match[1].trim();
+      if (url.startsWith('https://www.houseplus-ch.com')) {
+        urls.push(url);
+      }
+    }
+    return urls;
+  };
+
+  const submitImportedUrls = async () => {
+    let urls: string[] = [];
+
+    if (importType === 'sitemap') {
+      const sitemapUrl = importUrls.trim();
+      if (!sitemapUrl) return;
+
+      setLoading(true);
+      try {
+        const response = await fetch(sitemapUrl, {
+          headers: { 'Accept': 'application/xml,text/xml,*/*' },
+          mode: 'cors',
+        });
+        if (!response.ok) {
+          setError(`Failed to fetch sitemap: ${response.status} ${response.statusText}`);
+          setLoading(false);
+          return;
+        }
+        const xmlText = await response.text();
+        urls = parseSitemapXml(xmlText);
+        if (urls.length === 0) {
+          setError('No valid URLs found in sitemap XML');
+          setLoading(false);
+          return;
+        }
+      } catch (error) {
+        setError(`Failed to parse sitemap: ${(error as Error).message}`);
+        setLoading(false);
+        return;
+      }
+    } else {
+      urls = importUrls.split('\n').map(u => u.trim()).filter(u => u);
+    }
+
     if (urls.length > 0) {
       submitUrls(urls);
       setImportUrls('');
