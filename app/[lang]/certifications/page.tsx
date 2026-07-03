@@ -8,9 +8,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Certifications — CE, FCC, RoHS, ISO 9001',
+    es: 'Certificaciones de HousePlus — CE, FCC, RoHS, ISO 9001',
+    de: 'HousePlus Zertifizierungen — CE, FCC, RoHS, ISO 9001',
+    fr: 'Certifications HousePlus — CE, FCC, RoHS, ISO 9001',
+    ar: 'شهادات هاوس بلس — CE وFCC وRoHS وISO 9001',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications for solar panels, inverters, batteries, appliances and electronics. Trusted by 441+ clients in 53+ countries.',
+    es: 'HousePlus cuenta con certificaciones CE, FCC, RoHS, ISO 9001, IEC y UN38.3 para paneles solares, inversores, baterías, electrodomésticos y electrónica. Más de 441 clientes confían en nosotros.',
+    de: 'HousePlus verfügt über CE-, FCC-, RoHS-, ISO 9001-, IEC- und UN38.3-Zertifizierungen für Solarmodule, Wechselrichter, Batterien, Haushaltsgeräte und Elektronik. 441+ Kunden in 53+ Ländern.',
+    fr: 'HousePlus détient les certifications CE, FCC, RoHS, ISO 9001, IEC et UN38.3 pour panneaux solaires, onduleurs, batteries, électroménager et électronique. 441+ clients dans 53+ pays.',
+    ar: 'هاوس بلس حاصلة على شهادات CE وFCC وRoHS وISO 9001 وIEC وUN38.3 للألواح الشمسية والمحولات والبطاريات والأجهزة المنزلية والإلكترونيات. أكثر من ٤٤١ عميل في ٥٣ دولة.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Certifications — CE, FCC, RoHS, ISO 9001, IEC, UN38.3',
-    description: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications covering solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches. 20,000 m² ISO 9001 factory serving 53+ countries and 441+ wholesale clients since 2010.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['CE certification', 'FCC', 'RoHS', 'ISO 9001', 'IEC', 'UN38.3', 'HousePlus certifications', 'wholesale', 'factory certifications'],
     url: `/${lang}/certifications`,
     lang: lang as any,

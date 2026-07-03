@@ -9,9 +9,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
+    es: 'Fábrica de HousePlus — Planta de 20.000 m² en Guangdong',
+    de: 'HousePlus Fabrik — 20.000 m² Produktionsstätte in Guangdong',
+    fr: 'Usine HousePlus — Site de Production de 20 000 m² à Guangdong',
+    ar: 'مصنع هاوس بلس — منشأة تصنيع مساحتها ٢٠٬٠٠٠ م² في قوانغدونغ',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'Tour the HousePlus 20,000 m² ISO 9001 certified factory in Guangdong. 500+ employees, 8 production lines, 100,000+ units monthly. Quality control for solar, appliances and electronics.',
+    es: 'Conozca la fábrica de HousePlus de 20.000 m² certificada ISO 9001 en Guangdong. Más de 500 empleados, 8 líneas de producción, 100.000+ unidades al mes con control de calidad.',
+    de: 'Besichtigen Sie die 20.000 m² ISO 9001-zertifizierte HousePlus Fabrik in Guangdong. 500+ Mitarbeiter, 8 Produktionslinien, 100.000+ Einheiten monatlich. Qualitätskontrolle für Solar, Geräte und Elektronik.',
+    fr: 'Visitez l\'usine HousePlus de 20 000 m² certifiée ISO 9001 à Guangdong. 500+ collaborateurs, 8 lignes de production, 100 000+ unités par mois. Contrôle qualité pour solaire, électroménager et électronique.',
+    ar: 'جولة في مصنع هاوس بلس بمساحة ٢٠٬٠٠٠ م² الحاصل على شهادة ISO 9001 في قوانغدونغ. أكثر من ٥٠٠ موظف و٨ خطوط إنتاج و١٠٠٬٠٠٠+ وحدة شهرياً مع رقابة جودة شاملة.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
-    description: 'HousePlus 20,000 m² manufacturing facility in Guangdong, China. ISO 9001 certified since 2010. 500+ employees. 100,000+ units monthly capacity. 8 production lines for solar, appliances and 3C electronics. Serving 441+ wholesale clients in 53+ countries.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['factory', 'manufacturing', 'production line', 'quality control', 'OEM ODM', 'Guangdong', 'HousePlus'],
     url: `/${lang}/factory`,
     lang: lang as any,

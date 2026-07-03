@@ -43,16 +43,35 @@ export async function generateMetadata({
   }
   langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}`;
 
+  const titleTemplates: Record<string, string> = {
+    en: `${name} | HousePlus Wholesale — Professional Manufacturer`,
+    es: `${name} | HousePlus al por Mayor — Fabricante Profesional`,
+    de: `${name} | HousePlus Großhandel — Professioneller Hersteller`,
+    fr: `${name} | HousePlus Gros — Fabricant Professionnel`,
+    ar: `${name} | هاوس بلس بالجملة — مصنع احترافي`,
+  };
+
+  const descTemplates: Record<string, string> = {
+    en: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs. Trusted manufacturer since 2010, serving 53+ countries.`,
+    es: `Compre ${name} al por mayor con HousePlus. Certificación CE/RoHS, OEM/ODM disponibles, MOQ 100 unidades. Fabricante de confianza desde 2010 en 53+ países.`,
+    de: `${name} Großhandel bei HousePlus. CE/RoHS-zertifiziert, OEM/ODM verfügbar, MOQ 100 Stück. Zuverlässiger Hersteller seit 2010, beliefert 53+ Länder.`,
+    fr: `Achetez ${name} en gros chez HousePlus. Certification CE/RoHS, OEM/ODM disponibles, MOQ 100 pièces. Fabricant de confiance depuis 2010, présent dans 53+ pays.`,
+    ar: `اشترِ ${name} بالجملة من هاوس بلس. شهادة CE/RoHS مع توفر خدمات OEM/ODM والحد الأدنى للطلب ١٠٠ قطعة. مصنع موثوق منذ ٢٠١٠ يخدم أكثر من ٥٣ دولة.`,
+  };
+
+  const title = titleTemplates[lang] || titleTemplates['en'];
+  const description = descTemplates[lang] || descTemplates['en'];
+
   return {
-    title: `${name} | HousePlus Products — Professional Wholesale`,
-    description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs. Professional manufacturer since 2010.`,
+    title,
+    description,
     alternates: {
       canonical: `${BASE_URL}/${lang}/products/${slug}`,
       languages: langAlternates,
     },
     openGraph: {
-      title: `${name} | HousePlus`,
-      description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs.`,
+      title,
+      description,
       url: `${BASE_URL}/${lang}/products/${slug}`,
       siteName: 'HousePlus',
       images: product?.coverImage ? [{ url: product.coverImage, width: 900, height: 675, alt: name }] : [],

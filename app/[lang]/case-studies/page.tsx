@@ -9,9 +9,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Case Studies — 441+ Clients in 53+ Countries',
+    es: 'Casos de Éxito de HousePlus — 441+ Clientes en 53 Países',
+    de: 'HousePlus Referenzkunden — 441+ Kunden in 53+ Ländern',
+    fr: 'Références HousePlus — 441+ Clients dans 53 Pays',
+    ar: 'دراسات حالة هاوس بلس — أكثر من ٤٤١ عميل في ٥٣ دولة',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'Discover how HousePlus serves 441+ wholesale clients across 53+ countries with solar systems, appliances and electronics. Real partnerships, proven results.',
+    es: 'Descubra cómo HousePlus atiende a más de 441 clientes mayoristas en 53 países con sistemas solares, electrodomésticos y electrónica. Alianzas reales, resultados probados.',
+    de: 'Erfahren Sie, wie HousePlus 441+ Großhandelskunden in 53+ Ländern mit Solaranlagen, Haushaltsgeräten und Elektronik beliefert. Echte Partnerschaften, messbare Erfolge.',
+    fr: 'Découvrez comment HousePlus accompagne plus de 441 clients grossistes dans 53 pays avec des systèmes solaires, électroménager et électronique. Des partenariats concrets, des résultats prouvés.',
+    ar: 'اكتشف كيف تخدم هاوس بلس أكثر من ٤٤١ عميل جملة في ٥٣ دولة بأنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات. شراكات حقيقية ونتائج ملموسة.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Case Studies — 441+ Wholesale Clients in 53+ Countries',
-    description: 'HousePlus has served 441+ wholesale clients across 53+ countries since 2010, delivering solar energy systems, home appliances and 3C electronics with 12-month warranty and 20–35 day lead time from a 20,000 m² factory.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['HousePlus case studies', 'wholesale clients', 'solar distributor', 'appliance importer', '3C electronics', 'B2B manufacturing', 'global export'],
     url: `/${lang}/case-studies`,
     lang: lang as any,

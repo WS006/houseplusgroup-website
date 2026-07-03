@@ -8,9 +8,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'OEM/ODM Manufacturing — Private Label from HousePlus',
+    es: 'Fabricación OEM/ODM — Marca Privada con HousePlus',
+    de: 'OEM/ODM Fertigung — Private Label von HousePlus',
+    fr: 'Fabrication OEM/ODM — Marque Privée par HousePlus',
+    ar: 'تصنيع OEM/ODM — العلامات الخاصة من هاوس بلس',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus OEM/ODM services: custom manufacturing, private label branding, bespoke packaging and mould development. MOQ from 100 pcs with 20–35 day lead time. Solar, appliances and electronics.',
+    es: 'Servicios OEM/ODM de HousePlus: fabricación a medida, marca privada, empaque personalizado y desarrollo de moldes. MOQ desde 100 unidades, entrega en 20–35 días.',
+    de: 'HousePlus OEM/ODM Services: Maßanfertigung, Private Label, individuelle Verpackung und Formenentwicklung. MOQ ab 100 Stück, 20–35 Tage Lieferzeit für Solar, Geräte und Elektronik.',
+    fr: 'Services OEM/ODM HousePlus : fabrication sur mesure, marque privée, emballage personnalisé et développement de moules. MOQ à partir de 100 pièces, délai 20–35 jours.',
+    ar: 'خدمات OEM/ODM من هاوس بلس: تصنيع مخصص وملصقات تجارية خاصة وتعبئة حسب الطلب وتطوير القوالب. الحد الأدنى للطلب ١٠٠ قطعة مع فترة تسليم ٢٠-٣٥ يوماً.',
+  };
+
   return generateSEOMetadata({
-    title: 'OEM/ODM Manufacturing — Private Label & Custom Products from HousePlus',
-    description: 'HousePlus OEM/ODM services cover solar energy systems, home appliances and 3C electronics. MOQ from 100 pcs, 20–35 day lead time from a 20,000 m² ISO 9001 factory serving 441+ wholesale clients across 53+ countries since 2010.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'MOQ 100', 'HousePlus OEM', 'wholesale customization', 'Pantone color', 'custom packaging', 'mould development'],
     url: `/${lang}/oem-odm`,
     lang: lang as any,

@@ -9,9 +9,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Services — Technical Support & After-Sales',
+    es: 'Servicios de HousePlus — Soporte Técnico y Postventa',
+    de: 'HousePlus Service — Technischer Support & Kundendienst',
+    fr: 'Services HousePlus — Support Technique et SAV',
+    ar: 'خدمات هاوس بلس — الدعم الفني وخدمة ما بعد البيع',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus provides comprehensive B2B services: OEM manufacturing, private labelling, export logistics, market compliance and dedicated after-sales technical support for wholesale buyers worldwide.',
+    es: 'HousePlus ofrece servicios B2B integrales: fabricación OEM, marca privada, logística de exportación, cumplimiento normativo y soporte técnico postventa para compradores mayoristas.',
+    de: 'HousePlus bietet umfassende B2B-Dienstleistungen: OEM-Fertigung, Private Labelling, Exportlogistik, Marktzulassung und dedizierter technischer Kundendienst für Großhandelskäufer weltweit.',
+    fr: 'HousePlus propose des services B2B complets : fabrication OEM, marque privée, logistique export, conformité réglementaire et support technique après-vente pour clients grossistes.',
+    ar: 'توفر هاوس بلس خدمات شاملة للشركات: تصنيع OEM وملصقات تجارية خاصة ولوجستيات التصدير والامتثال للسوق ودعم تقني متخصص بعد البيع لمشتري الجملة حول العالم.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Services — OEM/ODM, Private Label & Technical Support',
-    description: 'HousePlus OEM/ODM services from 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. Private label, custom packaging, product modification. 441+ wholesale clients across 53+ countries. 16 years manufacturing solar, appliances and 3C electronics. 12-month warranty.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'technical support', 'wholesale services', 'HousePlus'],
     url: `/${lang}/service`,
     lang: lang as any,

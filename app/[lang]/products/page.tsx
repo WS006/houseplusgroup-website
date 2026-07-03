@@ -19,9 +19,25 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
   langAlternates['x-default'] = `${BASE_URL}/en/products`;
 
+  const titles: Record<string, string> = {
+    en: 'Products | HousePlus — Solar, Appliances & Electronics',
+    es: 'Productos | HousePlus — Solar, Electrodomésticos y Electrónica',
+    de: 'Produkte | HousePlus — Solar, Haushaltsgeräte & Elektronik',
+    fr: 'Produits | HousePlus — Solaire, Électroménager et Électronique',
+    ar: 'المنتجات | هاوس بلس — الطاقة الشمسية والأجهزة والإلكترونيات',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'Browse the full HousePlus product catalogue: solar panels, inverters, batteries, home appliances and 3C electronics. Wholesale pricing, OEM/ODM available. MOQ 100 pcs.',
+    es: 'Explore el catálogo completo de HousePlus: paneles solares, inversores, baterías, electrodomésticos y electrónica 3C. Precios al por mayor, OEM/ODM disponibles desde 100 unidades.',
+    de: 'Durchstöbern Sie das vollständige HousePlus-Produktprogramm: Solarmodule, Wechselrichter, Batterien, Haushaltsgeräte und 3C-Elektronik. Großhandelspreise, OEM/ODM ab 100 Stück.',
+    fr: 'Parcourez le catalogue complet HousePlus : panneaux solaires, onduleurs, batteries, électroménager et électronique 3C. Prix de gros, OEM/ODM disponibles dès 100 pièces.',
+    ar: 'تصفح كتالوج هاوس بلس الكامل: ألواح شمسية ومحولات وبطاريات وأجهزة منزلية وإلكترونيات 3C. أسعار الجملة مع توفر خدمات OEM/ODM ابتداءً من ١٠٠ قطعة.',
+  };
+
   return {
-    title: 'Products | HousePlus — Solar Systems, Home Appliances & 3C Electronics',
-    description: 'HousePlus product catalogue: solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones, smart watches and more. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. MOQ 100 pcs, 20–35 day lead time. CE/FCC/RoHS. OEM/ODM available.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     alternates: {
       canonical: `${BASE_URL}/${lang}/products`,
       languages: langAlternates,

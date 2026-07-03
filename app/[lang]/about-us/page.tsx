@@ -10,9 +10,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'About HousePlus — Vertically Integrated Manufacturer Since 2010',
+    es: 'Acerca de HousePlus — Fabricante Integrado desde 2010',
+    de: 'Über HousePlus — Vertikal Integrierter Hersteller seit 2010',
+    fr: 'À Propos de HousePlus — Fabricant Intégré depuis 2010',
+    ar: 'عن هاوس بلس — مصنع متكامل منذ عام ٢٠١٠',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus is a vertically integrated manufacturer founded in 2010 with a 20,000 m² ISO 9001 certified factory, 441+ wholesale clients in 53+ countries.',
+    es: 'HousePlus es un fabricante integrado fundado en 2010 con fábrica de 20.000 m² y certificación ISO 9001. Más de 441 clientes mayoristas en 53 países.',
+    de: 'HousePlus ist ein vertikal integrierter Hersteller seit 2010 mit 20.000 m² ISO 9001-zertifizierter Fabrik und 441+ Großhandelskunden in 53+ Ländern.',
+    fr: 'HousePlus est un fabricant intégré depuis 2010, usine de 20 000 m² certifiée ISO 9001. Plus de 441 clients grossistes dans 53 pays.',
+    ar: 'هاوس بلس هي شركة تصنيع متكاملة تأسست عام ٢٠١٠ بمصنع مساحته ٢٠٬٠٠٠ م² حاصل على شهادة ISO 9001 وأكثر من ٤٤١ عميل جملة في ٥٣ دولة.',
+  };
+
   return generateSEOMetadata({
-    title: 'About HousePlus — Vertically Integrated Manufacturer Since 2010',
-    description: 'HousePlus is a vertically integrated manufacturer founded in 2010. 20,000 m² ISO 9001 certified factory. 441+ wholesale clients across 53+ countries. 16 years of manufacturing solar energy systems, home appliances and 3C electronics. MOQ 100 pcs, 20–35 day lead time, 12-month warranty.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['about HousePlus', 'manufacturer', 'solar systems', 'home appliances', '3C electronics', 'OEM ODM', 'wholesale'],
     url: `/${lang}/about-us`,
     lang: lang as any,
