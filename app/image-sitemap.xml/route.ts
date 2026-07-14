@@ -1,12 +1,13 @@
 import { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
+const IMAGE_BASE_URL = 'https://images.houseplus-ch.com';
 
 interface ImageEntry {
   loc: string;
   title: string;
   caption: string;
-  geoLocation?: string;
+  license?: string;
 }
 
 interface PageImages {
@@ -16,158 +17,22 @@ interface PageImages {
 
 const articleImages: PageImages[] = [
   {
-    pageUrl: '/en/news/solar-storage-efficiency-optimization-guide',
+    pageUrl: '/en/news/the-future-of-smart-home-appliances',
     images: [
       {
-        loc: `${BASE_URL}/images/articles/solar-lifepo4-battery-storage-800x600.webp`,
-        title: 'LiFePO4 Solar Battery Storage System',
-        caption: 'Industrial LiFePO4 battery bank with 95% round-trip efficiency and 6000 cycle life',
-        geoLocation: 'Lagos, Nigeria',
+        loc: `${IMAGE_BASE_URL}/products/appliances-showcase.jpg`,
+        title: 'Modern Smart Home Appliances HousePlus',
+        caption: 'Modern smart home appliances showcase with stainless steel kitchen appliances and connected devices',
       },
       {
-        loc: `${BASE_URL}/images/articles/mppt-charge-controller-40a-800x600.webp`,
-        title: 'MPPT Solar Charge Controller 40A',
-        caption: 'MPPT charge controller with 98% conversion efficiency for solar battery systems',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/appliance-energy-efficiency-vs-actual-consumption',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/home-appliance-energy-rating-vs-actual-800x600.webp`,
-        title: 'Home Appliance Energy Rating vs Actual Consumption',
-        caption: 'Comparison chart showing 15-30% variance between rated and actual energy consumption',
+        loc: `${IMAGE_BASE_URL}/products/kitchen-appliances.jpg`,
+        title: 'HousePlus Smart Kitchen Appliances',
+        caption: 'Professional kitchen appliances collection with modern design and smart features',
       },
       {
-        loc: `${BASE_URL}/images/articles/refrigerator-energy-consumption-test-800x600.webp`,
-        title: 'Refrigerator Energy Consumption Test Conditions',
-        caption: 'Refrigerator tested at 25°C baseline with door opening frequency impact analysis',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/consumer-electronics-battery-life-testing',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/battery-cycle-life-test-equipment-800x600.webp`,
-        title: 'Battery Cycle Life Test Equipment',
-        caption: '1C charge-discharge cycle testing equipment at 25°C standard test conditions',
-      },
-      {
-        loc: `${BASE_URL}/images/articles/lithium-ion-capacity-retention-curve-800x600.webp`,
-        title: 'Lithium-ion Battery Capacity Retention Curve',
-        caption: 'Capacity retention curve showing 80% threshold at 500 charge-discharge cycles',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-solar-market-update',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/solar-panels-2026-installation-800x600.webp`,
-        title: 'HousePlus High-Efficiency Solar Panels 2026',
-        caption: 'High-efficiency solar panels installation for B2B wholesale market in 2026',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-appliances-market-update',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/home-appliances-2026-showcase-800x600.webp`,
-        title: 'HousePlus Home Appliances 2026 Collection',
-        caption: 'Premium home appliances lineup for 2026 wholesale distribution with energy efficiency ratings',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-electronics-market-update',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/3c-electronics-2026-lineup-800x600.webp`,
-        title: '3C Electronics 2026 Product Lineup',
-        caption: '3C electronics product lineup including headphones, smartwatches and power banks for B2B market',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-smart-home-appliances-market-guide',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/smart-home-appliances-2026-guide-800x600.webp`,
-        title: 'Smart Home Appliances 2026 Market Guide',
-        caption: 'Smart home appliances integration guide for residential and commercial applications',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/solar-energy-storage-solutions',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/solar-energy-storage-solutions-overview-800x600.webp`,
-        title: 'Solar Energy Storage Solutions Overview',
-        caption: 'Solar energy storage solutions for residential, commercial and industrial applications',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/solar-energy-storage-industrial-manufacturing',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/industrial-solar-storage-manufacturing-800x600.webp`,
-        title: 'Industrial Solar Storage Manufacturing Process',
-        caption: 'Industrial-grade solar storage system manufacturing in 20000 sqm ISO 9001 facility',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/energy-efficiency-standards-appliances',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/energy-efficiency-standards-compliance-800x600.webp`,
-        title: 'Energy Efficiency Standards Compliance',
-        caption: 'CE, FCC, RoHS and ISO 9001 energy efficiency standards compliance for home appliances',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/advanced-manufacturing-home-appliances',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/advanced-appliance-manufacturing-line-800x600.webp`,
-        title: 'Advanced Home Appliance Manufacturing Line',
-        caption: 'Advanced manufacturing line for premium home appliances with automated quality control',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/oem-odm-manufacturing-guide',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/oem-odm-manufacturing-process-800x600.webp`,
-        title: 'OEM ODM Manufacturing Service Process',
-        caption: 'OEM and ODM manufacturing service workflow from design to delivery with MOQ 100 units',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/global-wholesale-guide-home-appliances',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/global-appliance-wholesale-guide-800x600.webp`,
-        title: 'Global Wholesale Guide Home Appliances',
-        caption: 'Global wholesale distribution guide for home appliances to 53+ countries worldwide',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/smart-home-appliances',
-    images: [
-      {
-        loc: `${BASE_URL}/images/articles/smart-home-appliances-integration-800x600.webp`,
-        title: 'Smart Home Appliances Integration',
-        caption: 'Smart home appliances with IoT integration and remote control capabilities',
+        loc: `${IMAGE_BASE_URL}/products/appliances-package.jpg`,
+        title: 'HousePlus Appliances Package',
+        caption: 'Global wholesale distribution of home appliances with shipping containers at port',
       },
     ],
   },
@@ -175,19 +40,169 @@ const articleImages: PageImages[] = [
     pageUrl: '/en/news/the-future-of-solar-energy',
     images: [
       {
-        loc: `${BASE_URL}/images/articles/future-solar-energy-technology-800x600.webp`,
-        title: 'Future Solar Energy Technology Innovations',
-        caption: 'Future solar energy technology including perovskite cells and bifacial modules',
+        loc: `${IMAGE_BASE_URL}/products/solar-power-station.jpg`,
+        title: 'HousePlus Solar Power Station',
+        caption: 'Industrial solar power station with solar panels and energy storage systems',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/portable-power-station.jpg`,
+        title: 'HousePlus Portable Power Station',
+        caption: 'Portable solar power station for off-grid and emergency use',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-panel-3.jpg`,
+        title: 'HousePlus Solar Panels',
+        caption: 'High-efficiency monocrystalline solar panels for commercial installations',
       },
     ],
   },
   {
-    pageUrl: '/en/news/the-future-of-smart-home-appliances',
+    pageUrl: '/en/news/solar-energy-storage-solutions',
     images: [
       {
-        loc: `${BASE_URL}/images/articles/future-smart-home-appliances-800x600.webp`,
-        title: 'Future Smart Home Appliances Trends',
-        caption: 'Future smart home appliances with AI integration and energy-saving features',
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-energy-storage-battery-bank.jpg`,
+        title: 'Solar Energy Storage Battery Bank',
+        caption: 'Industrial-grade solar energy storage battery bank with LiFePO4 technology',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-power-station.jpg`,
+        title: 'Solar Power Station Outdoor',
+        caption: 'Outdoor solar power station in industrial setting',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/solar-energy-storage-industrial-manufacturing',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-energy-farm-panels.jpg`,
+        title: 'Industrial Solar Farm Panels',
+        caption: 'Large-scale industrial solar farm with solar panels under blue sky',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-panel-installation-rooftop.jpg`,
+        title: 'Solar Panel Installation Rooftop',
+        caption: 'Professional solar panel installation on commercial rooftop',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/solar-storage-efficiency-optimization-guide',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-energy-storage-battery-bank.jpg`,
+        title: 'LiFePO4 Solar Battery Storage',
+        caption: 'LiFePO4 battery bank with high round-trip efficiency',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-panel-sunset-industrial.jpg`,
+        title: 'Industrial Solar Panel Sunset',
+        caption: 'Industrial solar panels at sunset with power infrastructure',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/consumer-electronics-battery-life-testing',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/electronics/battery-testing-lab-equipment.jpg`,
+        title: 'Battery Testing Lab Equipment',
+        caption: 'Professional battery testing equipment in laboratory setting',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/power-bank.jpg`,
+        title: 'HousePlus Power Bank',
+        caption: 'High-capacity power bank with fast charging technology',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/energy-efficiency-standards-appliances',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/appliance-energy-efficiency-label.jpg`,
+        title: 'Appliance Energy Efficiency Label',
+        caption: 'Energy efficiency rating labels on home appliances',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/appliances-showcase.jpg`,
+        title: 'Energy Efficient Appliances',
+        caption: 'Energy-efficient smart home appliances collection',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/appliance-energy-efficiency-vs-actual-consumption',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/home-appliance-refrigerator-interior.jpg`,
+        title: 'Refrigerator Energy Efficiency',
+        caption: 'Energy-efficient refrigerator interior with LED lighting',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/home-appliance-washing-machine.jpg`,
+        title: 'Washing Machine Energy Efficiency',
+        caption: 'Modern energy-efficient washing machine',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/advanced-manufacturing-home-appliances',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/home-appliance-manufacturing-line.jpg`,
+        title: 'Home Appliance Manufacturing Line',
+        caption: 'Automated manufacturing line for home appliances',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/service/factory-production-line-automated.jpg`,
+        title: 'Automated Factory Production Line',
+        caption: 'Advanced automated production line in modern factory',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/oem-odm-manufacturing-guide',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/service/factory-assembly-workers.jpg`,
+        title: 'Factory Assembly Workers',
+        caption: 'Skilled workers assembling products in manufacturing facility',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/service/quality-control-lab-testing.jpg`,
+        title: 'Quality Control Lab Testing',
+        caption: 'Quality control testing in modern laboratory',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/global-wholesale-guide-home-appliances',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/home-appliance-wholesale-warehouse.jpg`,
+        title: 'Home Appliance Wholesale Warehouse',
+        caption: 'Large warehouse with home appliances for wholesale distribution',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/site/warehouse-logistics-shipping.jpg`,
+        title: 'Warehouse Logistics Shipping',
+        caption: 'Global logistics and shipping operations in warehouse',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/smart-home-appliances',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/smart-home-living-room.jpg`,
+        title: 'Smart Home Living Room',
+        caption: 'Modern smart home living room with connected devices',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/smart-kitchen-appliances-modern.jpg`,
+        title: 'Smart Kitchen Appliances',
+        caption: 'Modern smart kitchen with connected appliances',
       },
     ],
   },
@@ -195,9 +210,79 @@ const articleImages: PageImages[] = [
     pageUrl: '/en/news/the-evolution-of-3c-electronics',
     images: [
       {
-        loc: `${BASE_URL}/images/articles/evolution-3c-electronics-800x600.webp`,
-        title: 'Evolution of 3C Electronics Industry',
-        caption: 'Evolution of 3C electronics industry from wired to wireless smart devices',
+        loc: `${IMAGE_BASE_URL}/articles/electronics/electronics-headphones-product.jpg`,
+        title: '3C Electronics Headphones',
+        caption: 'Premium over-ear headphones with microphone',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/electronics/electronics-smartwatch-product.jpg`,
+        title: 'Smartwatch Product',
+        caption: 'Modern smartwatch with fitness tracking features',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/wireless-charger.jpg`,
+        title: 'Wireless Charger',
+        caption: 'Wireless charging pad for smartphones',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/2026-solar-market-update',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-power-station-outdoor.jpg`,
+        title: '2026 Solar Market Update',
+        caption: 'Outdoor solar power station for 2026 market',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-panel-3.jpg`,
+        title: 'HousePlus Solar Panels 2026',
+        caption: 'High-efficiency solar panels for 2026 wholesale market',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/2026-appliances-market-update',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/appliances-showcase.jpg`,
+        title: '2026 Home Appliances Market',
+        caption: '2026 home appliances collection for wholesale distribution',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/home-appliance-kitchen-modern.jpg`,
+        title: 'Modern Kitchen Appliances 2026',
+        caption: 'Modern kitchen with premium home appliances',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/2026-electronics-market-update',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/power-bank.jpg`,
+        title: '2026 Electronics Market Update',
+        caption: '2026 consumer electronics including power banks',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/articles/electronics/electronics-power-bank-product.jpg`,
+        title: 'Power Bank Product',
+        caption: 'High-capacity portable power bank for 2026 market',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/news/2026-smart-home-appliances-market-guide',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/appliances/smart-home-living-room.jpg`,
+        title: 'Smart Home Appliances 2026',
+        caption: 'Smart home appliances integration guide for 2026',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/products/kitchen-appliances.jpg`,
+        title: 'Smart Kitchen Appliances 2026',
+        caption: '2026 smart kitchen appliances collection',
       },
     ],
   },
@@ -208,9 +293,9 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-panel-500w',
     images: [
       {
-        loc: `${BASE_URL}/images/products/solar-panel-500w-monocrystalline-800x800.webp`,
+        loc: `${IMAGE_BASE_URL}/products/solar-panel-3.jpg`,
         title: '500W Monocrystalline Solar Panel',
-        caption: 'High-efficiency 500W monocrystalline solar panel for commercial and industrial installations',
+        caption: 'High-efficiency 500W monocrystalline solar panel for commercial installations',
       },
     ],
   },
@@ -218,9 +303,9 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/lithium-battery-5kwh',
     images: [
       {
-        loc: `${BASE_URL}/images/products/lifepo4-battery-5kwh-storage-800x800.webp`,
-        title: 'LiFePO4 Battery 5kWh Energy Storage',
-        caption: '5kWh LiFePO4 battery energy storage system with 6000 cycle life and 95% efficiency',
+        loc: `${IMAGE_BASE_URL}/articles/solar/solar-energy-storage-battery-bank.jpg`,
+        title: '5kWh LiFePO4 Lithium Battery',
+        caption: '5kWh LiFePO4 battery energy storage system with long cycle life',
       },
     ],
   },
@@ -228,16 +313,99 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/portable-power-station-3000w',
     images: [
       {
-        loc: `${BASE_URL}/images/products/portable-power-station-3000w-800x800.webp`,
+        loc: `${IMAGE_BASE_URL}/products/portable-power-station.jpg`,
         title: '3000W Portable Power Station',
-        caption: '3000W portable power station for off-grid solar applications with multiple output ports',
+        caption: '3000W portable power station for off-grid solar applications',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/air-fryer-5-8l',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/kitchen-appliances.jpg`,
+        title: '5.8L Digital Air Fryer',
+        caption: 'Digital air fryer with oil-free cooking technology',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/headphone-over-ear',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/articles/electronics/electronics-headphones-product.jpg`,
+        title: 'Over-Ear Headphones',
+        caption: 'Premium over-ear headphones with noise cancellation',
+      },
+    ],
+  },
+];
+
+const pageImages: PageImages[] = [
+  {
+    pageUrl: '/en',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/home/solar-hero.jpg`,
+        title: 'HousePlus Solar Energy Solutions',
+        caption: 'HousePlus solar energy systems and products for global wholesale',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/home/appliances-hero.jpg`,
+        title: 'HousePlus Home Appliances',
+        caption: 'HousePlus home appliances collection for B2B wholesale',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/home/electronics-hero.jpg`,
+        title: 'HousePlus 3C Electronics',
+        caption: 'HousePlus consumer electronics products',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/about-us',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/about/houseplus-group-factory.jpg`,
+        title: 'HousePlus Group Factory',
+        caption: 'HousePlus manufacturing facility in Zhongshan, Guangdong',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/about/houseplus-automated-manufacturing-facility.jpg`,
+        title: 'HousePlus Automated Manufacturing',
+        caption: 'Automated manufacturing facility with ISO 9001 certification',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/factory',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/factory/assembly-line.jpg`,
+        title: 'HousePlus Assembly Line',
+        caption: 'Assembly line in HousePlus manufacturing facility',
+      },
+      {
+        loc: `${IMAGE_BASE_URL}/factory/production-line.jpg`,
+        title: 'HousePlus Production Line',
+        caption: 'Production line for solar products and appliances',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/service',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/service/factory-production-line-automated.jpg`,
+        title: 'Automated Production Service',
+        caption: 'Automated production services for OEM/ODM clients',
       },
     ],
   },
 ];
 
 function generateImageSitemap(): string {
-  const allPages = [...articleImages, ...productImages];
+  const allPages = [...articleImages, ...productImages, ...pageImages];
   const lastmod = new Date().toISOString().split('T')[0];
 
   const urlEntries = allPages
@@ -248,7 +416,6 @@ function generateImageSitemap(): string {
       <image:loc>${img.loc}</image:loc>
       <image:title>${escapeXml(img.title)}</image:title>
       <image:caption>${escapeXml(img.caption)}</image:caption>
-      ${img.geoLocation ? `<image:geo_location>${escapeXml(img.geoLocation)}</image:geo_location>` : ''}
       <image:license>https://www.houseplus-ch.com/terms</image:license>
     </image:image>`
         )
