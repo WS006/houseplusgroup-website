@@ -369,6 +369,41 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
         </section>
       )}
 
+      <section className="max-w-4xl mx-auto px-4 pb-16">
+        <div className="bg-gradient-to-br from-amber-500 to-orange-700 rounded-3xl p-8 md:p-12 text-white text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">
+            {lang === 'en' ? 'Premium 3C Electronics with Long-Lasting Batteries' :
+             lang === 'es' ? 'Electrónica 3C Premium con Baterías de Larga Duración' :
+             lang === 'de' ? 'Premium 3C-Elektronik mit langlebigen Batterien' :
+             lang === 'fr' ? 'Électronique 3C premium avec batteries longue durée' :
+             'إلكترونيات 3C ممتازة ببطاريات طويلة العمر'}
+          </h2>
+          <p className="text-amber-100 mb-8 max-w-2xl mx-auto">
+            {lang === 'en' ? 'B2B wholesale 3C electronics with tested battery quality. 80% capacity after 500 cycles, UL/IEC certified, OEM/ODM custom branding. MOQ from 100 units.' :
+             lang === 'es' ? 'Electrónica 3C al por mayor B2B con calidad de batería probada. 80% capacidad después de 500 ciclos, certificada UL/IEC, marca personalizada OEM/ODM. MOQ desde 100 unidades.' :
+             lang === 'de' ? 'B2B-Großhandel 3C-Elektronik mit getesteter Batteriequalität. 80% Kapazität nach 500 Zyklen, UL/IEC zertifiziert, OEM/ODM Custom Branding. MOQ ab 100 Stück.' :
+             lang === 'fr' ? 'Électronique 3C en gros B2B avec qualité de batterie testée. 80% de capacité après 500 cycles, certifiée UL/IEC, personnalisation OEM/ODM. MOQ à partir de 100 unités.' :
+             'إلكترونيات 3C بالجملة لـ B2B بجودة بطارية مختبرة. 80% سعة بعد 500 دورة، معتمدة UL/IEC، علامة تجارية مخصصة OEM/ODM. الحد الأدنى للطلب من 100 وحدة.'}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href={`/${lang}/products`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-700 font-bold rounded-full hover:bg-orange-50 transition-colors">
+              {lang === 'en' ? 'Browse 3C Products' :
+               lang === 'es' ? 'Explorar Productos 3C' :
+               lang === 'de' ? '3C-Produkte durchsuchen' :
+               lang === 'fr' ? 'Parcourir les produits 3C' :
+               'تصفح منتجات 3C'}
+            </Link>
+            <Link href={`/${lang}/contact`} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+              {lang === 'en' ? 'Request OEM Samples' :
+               lang === 'es' ? 'Solicitar Muestras OEM' :
+               lang === 'de' ? 'OEM-Muster anfordern' :
+               lang === 'fr' ? 'Demander des échantillons OEM' :
+               'طلب عينات OEM'}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
           ← Back to all News & Insights

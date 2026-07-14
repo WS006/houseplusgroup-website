@@ -369,6 +369,41 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
         </section>
       )}
 
+      <section className="max-w-4xl mx-auto px-4 pb-16">
+        <div className="bg-gradient-to-br from-emerald-600 to-slate-900 rounded-3xl p-8 md:p-12 text-white text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">
+            {lang === 'en' ? 'Source Energy-Efficient Appliances for Your Market' :
+             lang === 'es' ? 'Fuente de Electrodomésticos Eficientes para su Mercado' :
+             lang === 'de' ? 'Energieeffiziente Geräte für Ihren Markt' :
+             lang === 'fr' ? 'Appareils économes en énergie pour votre marché' :
+             'أجهزة موفرة للطاقة لسوقك'}
+          </h2>
+          <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
+            {lang === 'en' ? 'Wholesale home appliances with verified efficiency ratings. 15-30% real-world savings, CE/FCC/RoHS certified, OEM/ODM available. MOQ from 100 units.' :
+             lang === 'es' ? 'Electrodomésticos al por mayor con calificaciones de eficiencia verificadas. 15-30% de ahorro real, certificados CE/FCC/RoHS, OEM/ODM disponible. MOQ desde 100 unidades.' :
+             lang === 'de' ? 'Großhandelshaushaltsgeräte mit verifizierten Effizienzklassen. 15-30% reale Einsparungen, CE/FCC/RoHS zertifiziert, OEM/ODM möglich. MOQ ab 100 Stück.' :
+             lang === 'fr' ? 'Électroménagers en gros avec des notes d\'efficacité vérifiées. 15-30% d\'économies réelles, certifiés CE/FCC/RoHS, OEM/ODM disponible. MOQ à partir de 100 unités.' :
+             'أجهزة منزلية بالجملة بتصنيفات كفاءة موثقة. توفير حقيقي 15-30%، معتمدة CE/FCC/RoHS، OEM/ODM متاح. الحد الأدنى للطلب من 100 وحدة.'}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href={`/${lang}/products`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 font-bold rounded-full hover:bg-emerald-50 transition-colors">
+              {lang === 'en' ? 'View Appliance Catalog' :
+               lang === 'es' ? 'Ver Catálogo de Electrodomésticos' :
+               lang === 'de' ? 'Gerätekatalog ansehen' :
+               lang === 'fr' ? 'Voir le catalogue d\'appareils' :
+               'عرض كتالوج الأجهزة'}
+            </Link>
+            <Link href={`/${lang}/contact`} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+              {lang === 'en' ? 'Get Wholesale Pricing' :
+               lang === 'es' ? 'Obtener Precios de Mayorista' :
+               lang === 'de' ? 'Großhandelspreise erhalten' :
+               lang === 'fr' ? 'Obtenir les prix de gros' :
+               'الحصول على أسعار الجملة'}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
           ← Back to all News & Insights

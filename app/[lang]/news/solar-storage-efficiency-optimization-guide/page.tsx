@@ -369,6 +369,41 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
         </section>
       )}
 
+      <section className="max-w-4xl mx-auto px-4 pb-16">
+        <div className="bg-gradient-to-br from-blue-600 to-slate-900 rounded-3xl p-8 md:p-12 text-white text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">
+            {lang === 'en' ? 'Need Solar Storage Solutions for Your Business?' :
+             lang === 'es' ? '¿Necesita Soluciones de Almacenamiento Solar?' :
+             lang === 'de' ? 'Benötigen Sie Solarspeicherlösungen?' :
+             lang === 'fr' ? 'Besoin de solutions de stockage solaire ?' :
+             'هل تحتاج إلى حلول تخزين الطاقة الشمسية؟'}
+          </h2>
+          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            {lang === 'en' ? 'Get a customized solar storage system design with LiFePO4 batteries. 95% round-trip efficiency, 6000+ cycle life, OEM/ODM available. MOQ from 100 units.' :
+             lang === 'es' ? 'Obtenga un diseño personalizado de sistema de almacenamiento solar con baterías LiFePO4. 95% eficiencia, 6000+ ciclos, OEM/ODM disponible. MOQ desde 100 unidades.' :
+             lang === 'de' ? 'Erhalten Sie ein maßgeschneidertes Solarspeichersystem mit LiFePO4-Batterien. 95% Effizienz, 6000+ Zyklen, OEM/ODM möglich. MOQ ab 100 Stück.' :
+             lang === 'fr' ? 'Obtenez un système de stockage solaire personnalisé avec batteries LiFePO4. 95% d\'efficacité, 6000+ cycles, OEM/ODM disponible. MOQ à partir de 100 unités.' :
+             'احصل على تصميم مخصص لنظام تخزين الطاقة الشمسية مع بطاريات LiFePO4. كفاءة 95%، أكثر من 6000 دورة، OEM/ODM متاح. الحد الأدنى للطلب من 100 وحدة.'}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href={`/${lang}/products`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition-colors">
+              {lang === 'en' ? 'Explore Solar Products' :
+               lang === 'es' ? 'Explorar Productos Solares' :
+               lang === 'de' ? 'Solarprodukte entdecken' :
+               lang === 'fr' ? 'Explorer les produits solaires' :
+               'استكشف المنتجات الشمسية'}
+            </Link>
+            <Link href={`/${lang}/contact`} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+              {lang === 'en' ? 'Request a Quote' :
+               lang === 'es' ? 'Solicitar Presupuesto' :
+               lang === 'de' ? 'Angebot anfordern' :
+               lang === 'fr' ? 'Demander un devis' :
+               'طلب عرض سعر'}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
           ← Back to all News & Insights
