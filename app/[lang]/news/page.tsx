@@ -61,8 +61,69 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     ar: 'اقرأ آخر الأخبار والمقالات والرؤى من مجموعة HousePlus. استكشف الاتجاهات في الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. مصدرك للمعرفة الصناعية وتحديثات الشركة.',
   };
 
-  const articles = [  {
-    slug: '2026-solar-market-update',
+  const articles = [
+    {
+      slug: 'consumer-electronics-battery-life-testing',
+      image: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800&h=600&fit=crop',
+      imageAlt: 'Battery testing laboratory with charge-discharge equipment',
+      title: {
+        en: 'Battery Cycle Life Testing Standards: Technical Analysis for Consumer Electronics',
+        es: 'Estándares de Prueba de Ciclos de Vida de Baterías: Análisis Técnico',
+        de: 'Batteriezykluslebensdauer-Teststandards: Technische Analyse',
+        fr: 'Normes d\'essai de durée de vie des batteries: Analyse technique',
+        ar: 'معايير اختبار دورة حياة البطارية: تحليل تقني للإلكترونيات الاستهلاكية',
+      },
+      description: {
+        en: 'Technical analysis of battery cycle life testing standards. Learn about 80% capacity retention threshold, 1C charge-discharge protocol, 25°C test temperature, and DOD impact on lifespan with quantified data.',
+        es: 'Análisis técnico de estándares de prueba de ciclos de vida de baterías. Datos cuantificados sobre umbral 80% retención, protocolo 1C, temperatura 25°C e impacto DOD.',
+        de: 'Technische Analyse von Batteriezykluslebensdauer-Teststandards. Quantifizierte Daten zu 80% Kapazitätserhalt, 1C-Protokoll, 25°C Testtemperatur und DOD-Einfluss.',
+        fr: 'Analyse technique des normes d\'essai de durée de vie des batteries. Données quantifiées sur seuil 80% rétention, protocole 1C, température 25°C et impact DOD.',
+        ar: 'تحليل تقني لمعايير اختبار دورة حياة البطارية. بيانات كمية عن عتبة 80% احتفاظ، بروتوكول 1C، حرارة 25 درجة مئوية وتأثير DOD.',
+      },
+      date: '2026-07-12',
+    },
+    {
+      slug: 'appliance-energy-efficiency-vs-actual-consumption',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+      imageAlt: 'Energy efficiency labels on home appliances with power monitoring',
+      title: {
+        en: 'Appliance Energy Efficiency Ratings vs Actual Consumption: Technical Analysis',
+        es: 'Calificaciones de Eficiencia Energética vs Consumo Real: Análisis Técnico',
+        de: 'Energieeffizienzklassen vs tatsächlicher Verbrauch: Technische Analyse',
+        fr: 'Classes d\'efficacité énergétique vs consommation réelle: Analyse technique',
+        ar: 'تصنيفات كفاءة الطاقة مقابل الاستهلاك الفعلي: تحليل تقني',
+      },
+      description: {
+        en: 'Technical analysis of why energy labels differ from real-world consumption. Learn about the 15-30% variance, temperature impact, standby power loss, and maintenance effects with quantified data.',
+        es: 'Análisis técnico de por qué etiquetas energéticas difieren del consumo real. Datos cuantificados sobre varianza 15-30%, impacto temperatura, pérdida standby y efectos mantenimiento.',
+        de: 'Technische Analyse warum Energielabels vom Realverbrauch abweichen. Quantifizierte Daten zu 15-30% Abweichung, Temperatureinfluss, Standby-Verlust und Wartungseffekten.',
+        fr: 'Analyse technique pourquoi les étiquettes diffèrent de la consommation réelle. Données quantifiées sur écart 15-30%, impact température, perte veille et effets maintenance.',
+        ar: 'تحليل تقني لسبب اختلاف الملصقات الطاقية عن الاستهلاك الفعلي. بيانات كمية عن التباين 15-30%، تأثير الحرارة، فقدان الاستعداد وتأثيرات الصيانة.',
+      },
+      date: '2026-07-08',
+    },
+    {
+      slug: 'solar-storage-efficiency-optimization-guide',
+      image: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
+      imageAlt: 'Solar energy storage system with battery banks and monitoring',
+      title: {
+        en: 'Solar Storage Efficiency Optimization: Technical Guide for Industrial Systems',
+        es: 'Optimización de Eficiencia de Almacenamiento Solar: Guía Técnica',
+        de: 'Solar Speichereffizienz Optimierung: Technischer Leitfaden',
+        fr: 'Optimisation Efficacité Stockage Solaire: Guide Technique',
+        ar: 'تحسين كفاءة تخزين الطاقة الشمسية: دليل تقني',
+      },
+      description: {
+        en: 'Technical guide to optimizing solar storage efficiency. Learn about 92-96% round-trip efficiency, 80% DOD best practice, 20-30°C optimal temperature, and EMS ROI with quantified data.',
+        es: 'Guía técnica para optimizar eficiencia de almacenamiento solar. Datos cuantificados sobre eficiencia 92-96%, DOD 80%, temperatura óptima 20-30°C y ROI de EMS.',
+        de: 'Technischer Leitfaden zur Optimierung der Solar Speichereffizienz. Quantifizierte Daten zu 92-96% Effizienz, 80% DOD, 20-30°C optimaler Temperatur und EMS ROI.',
+        fr: 'Guide technique pour optimiser l\'efficacité du stockage solaire. Données quantifiées sur efficacité 92-96%, DOD 80%, température optimale 20-30°C et ROI EMS.',
+        ar: 'دليل تقني لتحسين كفاءة التخزين الشمسي. بيانات كمية عن كفاءة 92-96%، DOD 80%، درجة حرارة مثالية 20-30 مئوية وعائد استثمار EMS.',
+      },
+      date: '2026-07-03',
+    },
+    {
+      slug: '2026-solar-market-update',
     image: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
     imageAlt: 'HousePlus solar panels and energy storage solutions',
     title: {
