@@ -121,7 +121,7 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                  src="/images/articles/service/factory-assembly-workers.jpg"
                   alt="HousePlus main production line"
                   fill
                   className="object-cover"
@@ -158,9 +158,9 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { src: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80', alt: 'Assembly line — precision manufacturing' },
-                { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80', alt: 'Quality control laboratory' },
-                { src: 'https://images.unsplash.com/photo-1565034946487-077786996e27?w=800&q=80', alt: 'Automated production equipment' },
+                { src: '/images/articles/appliances/home-appliance-manufacturing-line.jpg', alt: 'Assembly line — precision manufacturing' },
+                { src: '/images/articles/service/quality-control-lab-testing.jpg', alt: 'Quality control laboratory' },
+                { src: '/images/articles/service/factory-production-line-automated.jpg', alt: 'Automated production equipment' },
               ].map((img) => (
                 <div key={img.src} className="relative h-60 rounded-2xl overflow-hidden shadow-md border border-slate-100">
                   <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
@@ -214,7 +214,7 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80"
+                  src="/images/articles/service/quality-control-lab-testing.jpg"
                   alt="HousePlus quality assurance lab"
                   fill
                   className="object-cover"

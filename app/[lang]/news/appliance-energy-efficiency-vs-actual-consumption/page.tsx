@@ -45,7 +45,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technical Team',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'Comparison chart showing 15-30% variance between rated and actual home appliance energy consumption',
     sections: [
       {
@@ -96,7 +96,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Equipo Técnico HousePlus',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'Gráfico comparativo que muestra la variación del 15-30% entre el consumo nominal y real de electrodomésticos',
     sections: [
       {
@@ -147,7 +147,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technikteam',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'Vergleichsdiagramm mit 15-30% Abweichung zwischen Nenn- und tatsächlichem Haushaltsgeräteverbrauch',
     sections: [
       {
@@ -198,7 +198,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe Technique HousePlus',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'Graphique comparatif montrant écart 15-30% entre consommation nominale et réelle des appareils ménagers',
     sections: [
       {
@@ -249,7 +249,7 @@ const articleContent: Record<string, any> = {
     authorName: 'الفريق التقني HousePlus',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'مخطط مقارنة يُظهر تباين 15-30% بين الاستهلاك المُقَنن والفعلي للأجهزة المنزلية',
     sections: [
       {

@@ -243,7 +243,7 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ la
               </div>
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+                  src="/images/site/team-collaboration-office.jpg"
                   alt="HousePlus global wholesale partnerships"
                   fill
                   className="object-cover"

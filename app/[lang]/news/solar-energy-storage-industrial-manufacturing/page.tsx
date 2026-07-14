@@ -43,7 +43,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1533745848-b8e668670500?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Large industrial facility with solar panels on the roof and energy storage units, symbolizing sustainable manufacturing',
     sections: [
       {
@@ -77,7 +77,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1533745848-b8e668670500?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Instalación industrial grande con paneles solares en el techo y unidades de almacenamiento de energía, simbolizando la fabricación sostenible',
     sections: [
       {
@@ -111,7 +111,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1533745848-b8e668670500?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Große Industrieanlage mit Solarmodulen auf dem Dach und Energiespeichereinheiten, die nachhaltige Fertigung symbolisieren',
     sections: [
       {
@@ -145,7 +145,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1533745848-b8e668670500?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Grande installation industrielle avec des panneaux solaires sur le toit et des unités de stockage d\'énergie, symbolisant la fabrication durable',
     sections: [
       {
@@ -179,7 +179,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1533745848-b8e668670500?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'منشأة صناعية كبيرة مزودة بألواح شمسية على السطح ووحدات تخزين الطاقة، ترمز إلى التصنيع المستدام',
     sections: [
       {

@@ -176,7 +176,7 @@ export default async function SupportPage({ params }: { params: Promise<{ lang: 
         <section className="py-24 px-4 bg-slate-900 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
              <Image 
-                src="https://images.unsplash.com/photo-1521791136064-7986c295944b?w=1600&q=80" 
+                src="/images/site/customer-support-helpdesk.jpg" 
                 alt="HousePlus Support Background" 
                 fill 
                 className="object-cover"

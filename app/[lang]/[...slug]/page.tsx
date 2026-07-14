@@ -281,12 +281,12 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {subStories.map((s: any, idx: number) => {
               const images = [
-                'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&q=80',
-                'https://images.unsplash.com/photo-1542338106-2b22e0b8f528?w=800&q=80',
-                'https://images.unsplash.com/photo-1592833159155-c62df1b65634?w=800&q=80',
-                'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80',
-                'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&q=80',
-                'https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=800&q=80',
+                '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+                '/images/articles/solar/solar-panel-installation-rooftop.jpg',
+                '/images/articles/solar/solar-panel-sunset-industrial.jpg',
+                '/images/articles/solar/solar-power-station-outdoor.jpg',
+                '/images/site/factory-worker-precision.jpg',
+                '/images/articles/solar/solar-energy-farm-panels.jpg',
               ];
               const productImg = s.content?.image?.filename || images[idx % images.length];
 

@@ -367,7 +367,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           <div className="max-w-6xl mx-auto">
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop"
+                src="/images/site/team-collaboration-office.jpg"
                 alt="HousePlus customer support team answering wholesale buyer questions"
                 fill
                 className="object-cover"

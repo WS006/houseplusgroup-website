@@ -89,7 +89,7 @@ export default async function CareersPage({ params }: { params: Promise<{ lang: 
         <section className="relative py-24 px-4 bg-slate-900 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-40">
             <Image 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80" 
+              src="/images/site/team-collaboration-office.jpg" 
               alt="HousePlus Careers" 
               fill 
               className="object-cover"
@@ -129,7 +129,7 @@ export default async function CareersPage({ params }: { params: Promise<{ lang: 
               </div>
               <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=1000&fit=crop" 
+                  src="/images/site/office-meeting-boardroom.jpg" 
                   alt="HousePlus Team Collaboration" 
                   fill 
                   className="object-cover"

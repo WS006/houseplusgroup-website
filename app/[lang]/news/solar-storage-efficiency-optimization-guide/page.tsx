@@ -46,7 +46,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technical Team',
     datePublished: '2026-07-03',
     dateModified: '2026-07-03',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'LiFePO4 battery bank for industrial solar storage achieving 95% round-trip efficiency and 6000 cycle life',
     sections: [
       {
@@ -97,7 +97,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Equipo Técnico HousePlus',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Sistema de almacenamiento de energía solar con bancos de baterías y equipo de monitoreo',
     sections: [
       {
@@ -148,7 +148,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technikteam',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'LiFePO4-Batteriebank für industrielle Solarspeicherung mit 95% Round-Trip-Effizienz und 6000 Zyklen',
     sections: [
       {
@@ -199,7 +199,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe Technique HousePlus',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Banque de batteries LiFePO4 pour stockage solaire industriel avec 95% rendement aller-retour et 6000 cycles',
     sections: [
       {
@@ -250,7 +250,7 @@ const articleContent: Record<string, any> = {
     authorName: 'الفريق التقني HousePlus',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'بنك بطاريات LiFePO4 لتخزين الطاقة الشمسية الصناعية بكفاءة ذهاب وإياب 95% و6000 دورة',
     sections: [
       {

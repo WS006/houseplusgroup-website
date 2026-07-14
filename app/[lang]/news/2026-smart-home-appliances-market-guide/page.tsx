@@ -43,7 +43,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/appliances/smart-home-living-room.jpg',
     heroImageAlt: 'Modern smart kitchen with integrated appliances, representing future home technology',
     sections: [
       {
@@ -81,7 +81,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/appliances/smart-home-living-room.jpg',
     heroImageAlt: 'Cocina inteligente moderna con electrodomésticos integrados, que representa la tecnología del hogar del futuro',
     sections: [
       {
@@ -119,7 +119,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/appliances/smart-home-living-room.jpg',
     heroImageAlt: 'Moderne intelligente Küche mit integrierten Geräten, die zukünftige Heimtechnologie darstellt',
     sections: [
       {
@@ -157,7 +157,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/appliances/smart-home-living-room.jpg',
     heroImageAlt: 'Cuisine intelligente moderne avec appareils intégrés, représentant la technologie domestique future',
     sections: [
       {
@@ -195,7 +195,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Manus AI',
     datePublished: '2026-05-15',
     dateModified: '2026-05-15',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=675&fit=crop',
+    heroImage: '/images/articles/appliances/smart-home-living-room.jpg',
     heroImageAlt: 'مطبخ ذكي حديث مع أجهزة مدمجة، يمثل تكنولوجيا المنزل المستقبلية',
     sections: [
       {
