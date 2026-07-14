@@ -35,19 +35,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-05-08',
       dateModified: '2025-05-08',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
       sections: [
         {
           heading: 'Why Energy Efficiency Standards Matter for Wholesale Buyers',
           text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified appliances. Energy efficiency has become a critical factor in the global home appliances market. With rising electricity costs and increasing environmental awareness, consumers and businesses alike are prioritizing appliances that deliver maximum performance with minimal energy consumption. Understanding and complying with international energy efficiency standards is not just a regulatory requirement for manufacturers and exporters—it is a significant competitive advantage.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-energy-efficiency-label.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-energy-efficiency-label.jpg',
           imageAlt: 'Energy efficient LED lighting and smart home devices reducing power consumption',
         },
         {
           heading: 'CE Marking: The European Standard for Product Safety and Efficiency',
           text: 'The CE marking is mandatory for products sold within the European Economic Area (EEA). It indicates that a product meets EU safety, health, and environmental protection requirements. For home appliances, CE compliance covers the Low Voltage Directive (LVD), the Electromagnetic Compatibility Directive (EMC), and the Energy-Related Products Directive (ErP). HousePlus products undergo rigorous third-party testing at accredited laboratories to obtain CE certification. Our technical documentation includes Declaration of Conformity (DoC) files, test reports, and technical construction files — all available to our wholesale partners for customs clearance and regulatory audits. With CE-certified products from HousePlus, you can confidently enter European markets and meet the demands of EU retailers and distributors.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
           imageAlt: 'CE certified home appliances ready for European market distribution',
         },
         {
@@ -57,7 +57,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'FCC Certification and North American Market Access',
           text: 'For wholesale buyers targeting the North American market, FCC (Federal Communications Commission) certification is essential for electronic devices that emit radio frequency (RF) energy. HousePlus\'s 3C electronics, wireless chargers, smart home devices, and LED lighting products all carry FCC certification, ensuring they meet US and Canadian regulatory requirements. Our FCC-certified products include detailed test reports from accredited US laboratories, FCC ID numbers for each device, and compliance documentation for import clearance. We also hold ETL and UL certifications for select product lines, providing additional assurance for North American retailers and distributors.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-circuit-board-technology.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-circuit-board-technology.jpg',
           imageAlt: 'FCC certified electronic devices and smart home products from HousePlus',
         },
         {
@@ -71,19 +71,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-05-08',
       dateModified: '2025-05-08',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'Electrodomésticos eficientes energéticamente con etiquetas de certificación CE y RoHS',
       sections: [
         {
           heading: 'Por Qué los Estándares de Eficiencia Energética Importan para los Compradores Mayoristas',
           text: 'En el mercado global actual, la eficiencia energética ya no es solo un punto de venta, sino un requisito regulatorio. Los gobiernos de Europa, América del Norte y Asia han implementado estándares de eficiencia energética cada vez más estrictos. HousePlus ha construido toda su filosofía de desarrollo de productos en torno al cumplimiento de los estándares internacionales de eficiencia energética.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-energy-efficiency-label.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-energy-efficiency-label.jpg',
           imageAlt: 'Iluminación LED eficiente y dispositivos domésticos inteligentes que reducen el consumo de energía',
         },
         {
           heading: 'Marcado CE: El Estándar Europeo de Seguridad y Eficiencia del Producto',
           text: 'El marcado CE es obligatorio para los productos vendidos dentro del Espacio Económico Europeo (EEE). Los productos HousePlus se someten a rigurosas pruebas de terceros en laboratorios acreditados para obtener la certificación CE. Nuestra documentación técnica incluye archivos de Declaración de Conformidad (DoC), informes de pruebas y archivos de construcción técnica.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
           imageAlt: 'Electrodomésticos con certificación CE listos para distribución en el mercado europeo',
         },
         {
@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'Certificación FCC y Acceso al Mercado Norteamericano',
           text: 'Para los compradores mayoristas que apuntan al mercado norteamericano, la certificación FCC es esencial para los dispositivos electrónicos. Los productos electrónicos 3C de HousePlus, cargadores inalámbricos, dispositivos domésticos inteligentes y productos de iluminación LED llevan certificación FCC, asegurando que cumplan con los requisitos regulatorios de EE. UU. y Canadá.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-circuit-board-technology.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-circuit-board-technology.jpg',
           imageAlt: 'Dispositivos electrónicos certificados por FCC y productos domésticos inteligentes de HousePlus',
         },
         {
@@ -107,19 +107,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-05-08',
       dateModified: '2025-05-08',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'Energieeffiziente Haushaltsgeräte mit CE- und RoHS-Zertifizierungsetiketten',
       sections: [
         {
           heading: 'Warum Energieeffizienzstandards für Großhandelskäufer wichtig sind',
           text: 'Auf dem heutigen globalen Markt ist Energieeffizienz nicht mehr nur ein Verkaufsargument, sondern eine regulatorische Anforderung. HousePlus hat seine gesamte Produktentwicklungsphilosophie auf die Einhaltung internationaler Energieeffizienzstandards ausgerichtet.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-energy-efficiency-label.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-energy-efficiency-label.jpg',
           imageAlt: 'Energieeffiziente LED-Beleuchtung und Smart-Home-Geräte zur Reduzierung des Stromverbrauchs',
         },
         {
           heading: 'CE-Kennzeichnung: Der europäische Standard für Produktsicherheit und Effizienz',
           text: 'Die CE-Kennzeichnung ist für Produkte, die im Europäischen Wirtschaftsraum (EWR) verkauft werden, obligatorisch. HousePlus-Produkte werden in akkreditierten Labors rigoros getestet, um die CE-Zertifizierung zu erhalten. Unsere technische Dokumentation umfasst Konformitätserklärungen (DoC), Prüfberichte und technische Konstruktionsdateien.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
           imageAlt: 'CE-zertifizierte Haushaltsgeräte für den europäischen Marktvertrieb',
         },
         {
@@ -129,7 +129,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'FCC-Zertifizierung und Zugang zum nordamerikanischen Markt',
           text: 'Für Großhandelskäufer, die auf den nordamerikanischen Markt abzielen, ist die FCC-Zertifizierung für elektronische Geräte unerlässlich. Die 3C-Elektronik, drahtlosen Ladegeräte, Smart-Home-Geräte und LED-Beleuchtungsprodukte von HousePlus tragen alle FCC-Zertifizierung.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-circuit-board-technology.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-circuit-board-technology.jpg',
           imageAlt: 'FCC-zertifizierte elektronische Geräte und Smart-Home-Produkte von HousePlus',
         },
         {
@@ -143,19 +143,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-05-08',
       dateModified: '2025-05-08',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'Appareils électroménagers économes en énergie avec étiquettes de certification CE et RoHS',
       sections: [
         {
           heading: 'Pourquoi les normes d\'efficacité énergétique sont importantes pour les acheteurs en gros',
           text: 'Sur le marché mondial actuel, l\'efficacité énergétique n\'est plus seulement un argument de vente, c\'est une exigence réglementaire. HousePlus a construit toute sa philosophie de développement de produits autour de la conformité aux normes internationales d\'efficacité énergétique.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-energy-efficiency-label.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-energy-efficiency-label.jpg',
           imageAlt: 'Éclairage LED économe en énergie et appareils domotiques réduisant la consommation d\'énergie',
         },
         {
           heading: 'Marquage CE : La norme européenne de sécurité et d\'efficacité des produits',
           text: 'Le marquage CE est obligatoire pour les produits vendus dans l\'Espace économique européen (EEE). Les produits HousePlus subissent des tests rigoureux dans des laboratoires accrédités pour obtenir la certification CE. Notre documentation technique comprend des fichiers de Déclaration de Conformité (DoC), des rapports de test et des fichiers de construction technique.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
           imageAlt: 'Appareils électroménagers certifiés CE prêts pour la distribution sur le marché européen',
         },
         {
@@ -165,7 +165,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'Certification FCC et accès au marché nord-américain',
           text: 'Pour les acheteurs en gros ciblant le marché nord-américain, la certification FCC est essentielle pour les appareils électroniques. Les produits électroniques 3C, chargeurs sans fil, appareils domotiques et produits d\'éclairage LED de HousePlus portent tous la certification FCC.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-circuit-board-technology.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-circuit-board-technology.jpg',
           imageAlt: 'Appareils électroniques certifiés FCC et produits domotiques de HousePlus',
         },
         {
@@ -179,19 +179,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-05-08',
       dateModified: '2025-05-08',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'أجهزة منزلية موفرة للطاقة مع ملصقات شهادات CE وRoHS',
       sections: [
         {
           heading: 'لماذا تهم معايير كفاءة الطاقة لمشتري الجملة',
           text: 'في سوق اليوم العالمي، لم تعد كفاءة الطاقة مجرد نقطة بيع، بل أصبحت متطلبًا تنظيميًا. بنت HousePlus فلسفتها الكاملة في تطوير المنتجات حول الامتثال لمعايير كفاءة الطاقة الدولية.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-energy-efficiency-label.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-energy-efficiency-label.jpg',
           imageAlt: 'إضاءة LED موفرة للطاقة وأجهزة المنزل الذكية لتقليل استهلاك الطاقة',
         },
         {
           heading: 'علامة CE: المعيار الأوروبي لسلامة المنتج وكفاءته',
           text: 'علامة CE إلزامية للمنتجات المباعة داخل المنطقة الاقتصادية الأوروبية. تخضع منتجات HousePlus لاختبارات صارمة من طرف ثالث في مختبرات معتمدة للحصول على شهادة CE. تشمل وثائقنا الفنية ملفات إعلان المطابقة وتقارير الاختبار.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg',
           imageAlt: 'أجهزة منزلية معتمدة CE جاهزة للتوزيع في السوق الأوروبية',
         },
         {
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'شهادة FCC والوصول إلى السوق الأمريكية الشمالية',
           text: 'لمشتري الجملة الذين يستهدفون السوق الأمريكية الشمالية، تعد شهادة FCC ضرورية للأجهزة الإلكترونية. تحمل منتجات HousePlus الإلكترونية 3C وشواحن لاسلكية وأجهزة المنزل الذكية ومنتجات إضاءة LED شهادة FCC.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/appliance-circuit-board-technology.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/appliance-circuit-board-technology.jpg',
           imageAlt: 'أجهزة إلكترونية معتمدة FCC ومنتجات المنزل الذكي من HousePlus',
         },
         {
@@ -216,7 +216,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const articleSchema = buildArticleSchema({
     headline: data.title,
-    image: `https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg`,
+    image: `https://images.houseplus-ch.com/articles/appliances/home-appliance-kitchen-modern.jpg`,
     datePublished: data.datePublished,
     dateModified: data.dateModified,
     authorName: data.author,

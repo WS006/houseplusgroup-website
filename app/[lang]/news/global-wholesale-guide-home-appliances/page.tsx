@@ -35,19 +35,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-01-20',
       dateModified: '2025-01-20',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-wholesale-warehouse.jpg',
       imageAlt: 'Global wholesale distribution of home appliances - HousePlus international trade',
       sections: [
         {
           heading: 'Why Wholesale Home Appliances Represent a Massive Opportunity',
           text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. The global home appliances market is projected to exceed $1.2 trillion by 2030, driven by rapid urbanization, rising middle-class incomes, and increasing demand for energy-efficient products. For wholesale buyers and distributors, this represents an extraordinary opportunity to build profitable product portfolios. HousePlus has been at the forefront of this market for over a decade, supplying premium home appliances to more than 441 wholesale clients across 53+ countries. Our products span refrigerators, washing machines, air conditioners, kitchen appliances, and a wide range of small household devices — all manufactured to the highest international standards.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-washing-machine.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-washing-machine.jpg',
           imageAlt: 'Modern home appliances showroom with refrigerators and washing machines',
         },
         {
           heading: 'Understanding MOQ and Flexible Order Structures',
           text: 'One of the most common questions from first-time wholesale buyers is about minimum order quantities (MOQ). At HousePlus, we understand that different markets have different needs. Our standard MOQ starts at 100 units per product line, with flexible arrangements available for new partners entering specific regional markets. For large-volume orders exceeding 1,000 units, we offer preferential pricing tiers and dedicated account management. We also support mixed-container orders, allowing buyers to combine multiple product categories — such as kitchen appliances, small electronics, and solar products — within a single shipment. This flexibility is particularly valuable for distributors serving diverse retail channels across Africa, Southeast Asia, and the Middle East.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-refrigerator-interior.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-refrigerator-interior.jpg',
           imageAlt: 'Warehouse with organized home appliance inventory for wholesale distribution',
         },
         {
@@ -57,7 +57,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'OEM and ODM: Building Your Own Brand with HousePlus',
           text: 'Many of our most successful wholesale partners have leveraged our OEM and ODM capabilities to build their own branded product lines. Our OEM service allows you to place your brand name and logo on our existing, proven product designs. Our ODM service goes further, enabling custom product development from concept to production. HousePlus\'s R&D team works closely with partners to develop unique product specifications, packaging designs, and feature sets tailored to specific market demands. With a production capacity exceeding 100,000 units per month and lead times of 20-35 days for standard orders, we can support both small-batch launches and large-scale seasonal campaigns. Contact our sales team to discuss how we can help you create a differentiated product portfolio.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'HousePlus OEM production line with custom branded home appliances',
         },
         {
@@ -71,19 +71,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-01-20',
       dateModified: '2025-01-20',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-wholesale-warehouse.jpg',
       imageAlt: 'Distribución mayorista global de electrodomésticos - comercio internacional HousePlus',
       sections: [
         {
           heading: 'Por Qué los Electrodomésticos al por Mayor Representan una Oportunidad Masiva',
           text: 'Se proyecta que el mercado global de electrodomésticos supere los 1,2 billones de dólares para 2030, impulsado por la rápida urbanización, el aumento de los ingresos de la clase media y la creciente demanda de productos energéticamente eficientes. Para compradores mayoristas y distribuidores, esto representa una oportunidad extraordinaria para construir carteras de productos rentables. HousePlus ha estado a la vanguardia de este mercado durante más de una década, suministrando electrodomésticos premium a más de 441 clientes mayoristas en más de 53 países.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-washing-machine.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-washing-machine.jpg',
           imageAlt: 'Sala de exposición de electrodomésticos modernos con refrigeradores y lavadoras',
         },
         {
           heading: 'Comprensión del MOQ y Estructuras de Pedidos Flexibles',
           text: 'Una de las preguntas más comunes de los compradores mayoristas por primera vez es sobre las cantidades mínimas de pedido (MOQ). En HousePlus, entendemos que diferentes mercados tienen diferentes necesidades. Nuestro MOQ estándar comienza en 100 unidades por línea de productos, con acuerdos flexibles disponibles para nuevos socios que ingresan a mercados regionales específicos.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-refrigerator-interior.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-refrigerator-interior.jpg',
           imageAlt: 'Almacén con inventario organizado de electrodomésticos para distribución mayorista',
         },
         {
@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'OEM y ODM: Construyendo Su Propia Marca con HousePlus',
           text: 'Muchos de nuestros socios mayoristas más exitosos han aprovechado nuestras capacidades OEM y ODM para construir sus propias líneas de productos de marca. Nuestro servicio OEM le permite colocar su nombre de marca y logotipo en nuestros diseños de productos existentes y probados. Con una capacidad de producción superior a 100.000 unidades al mes y plazos de entrega de 20-35 días para pedidos estándar, podemos apoyar tanto lanzamientos en pequeños lotes como campañas estacionales a gran escala.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'Línea de producción OEM de HousePlus con electrodomésticos de marca personalizada',
         },
         {
@@ -107,19 +107,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-01-20',
       dateModified: '2025-01-20',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-wholesale-warehouse.jpg',
       imageAlt: 'Globaler Großhandelsvertrieb von Haushaltsgeräten - HousePlus internationaler Handel',
       sections: [
         {
           heading: 'Warum Haushaltsgeräte im Großhandel eine enorme Chance darstellen',
           text: 'Der globale Markt für Haushaltsgeräte wird bis 2030 voraussichtlich 1,2 Billionen US-Dollar übersteigen, angetrieben durch schnelle Urbanisierung, steigende Mittelklasseeinkommen und eine wachsende Nachfrage nach energieeffizienten Produkten. HousePlus ist seit über einem Jahrzehnt an der Spitze dieses Marktes und beliefert mehr als 441 Großhandelskunden in über 53 Ländern mit Premium-Haushaltsgeräten.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-washing-machine.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-washing-machine.jpg',
           imageAlt: 'Moderner Haushaltsgeräte-Showroom mit Kühlschränken und Waschmaschinen',
         },
         {
           heading: 'MOQ und flexible Bestellstrukturen verstehen',
           text: 'Eine der häufigsten Fragen von Erstkäufern im Großhandel betrifft die Mindestbestellmengen (MOQ). Bei HousePlus verstehen wir, dass verschiedene Märkte unterschiedliche Bedürfnisse haben. Unsere Standard-MOQ beginnt bei 100 Einheiten pro Produktlinie, mit flexiblen Vereinbarungen für neue Partner.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-refrigerator-interior.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-refrigerator-interior.jpg',
           imageAlt: 'Lager mit organisiertem Haushaltsgeräte-Inventar für den Großhandelsvertrieb',
         },
         {
@@ -129,7 +129,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'OEM und ODM: Aufbau Ihrer eigenen Marke mit HousePlus',
           text: 'Viele unserer erfolgreichsten Großhandelspartner haben unsere OEM- und ODM-Fähigkeiten genutzt, um ihre eigenen Markenproduktlinien aufzubauen. Mit einer Produktionskapazität von über 100.000 Einheiten pro Monat und Vorlaufzeiten von 20-35 Tagen für Standardbestellungen können wir sowohl Kleinserien-Launches als auch große saisonale Kampagnen unterstützen.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'HousePlus OEM-Produktionslinie mit individuell gebrandeten Haushaltsgeräten',
         },
         {
@@ -143,19 +143,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-01-20',
       dateModified: '2025-01-20',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-wholesale-warehouse.jpg',
       imageAlt: 'Distribution mondiale en gros d\'appareils électroménagers - commerce international HousePlus',
       sections: [
         {
           heading: 'Pourquoi les appareils électroménagers en gros représentent une opportunité massive',
           text: 'Le marché mondial des appareils électroménagers devrait dépasser 1 200 milliards de dollars d\'ici 2030, porté par une urbanisation rapide, la hausse des revenus de la classe moyenne et une demande croissante de produits économes en énergie. HousePlus est à l\'avant-garde de ce marché depuis plus d\'une décennie, fournissant des appareils électroménagers haut de gamme à plus de 441 clients grossistes dans plus de 53 pays.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-washing-machine.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-washing-machine.jpg',
           imageAlt: 'Showroom d\'appareils électroménagers modernes avec réfrigérateurs et machines à laver',
         },
         {
           heading: 'Comprendre le MOQ et les structures de commande flexibles',
           text: 'L\'une des questions les plus courantes des acheteurs en gros est celle des quantités minimales de commande (MOQ). Chez HousePlus, nous comprenons que différents marchés ont des besoins différents. Notre MOQ standard commence à 100 unités par ligne de produits, avec des arrangements flexibles disponibles pour les nouveaux partenaires.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-refrigerator-interior.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-refrigerator-interior.jpg',
           imageAlt: 'Entrepôt avec inventaire organisé d\'appareils électroménagers pour la distribution en gros',
         },
         {
@@ -165,7 +165,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'OEM et ODM : Construire votre propre marque avec HousePlus',
           text: 'Beaucoup de nos partenaires grossistes les plus prospères ont tiré parti de nos capacités OEM et ODM pour créer leurs propres gammes de produits de marque. Avec une capacité de production dépassant 100 000 unités par mois et des délais de 20 à 35 jours pour les commandes standard, nous pouvons soutenir aussi bien les lancements en petites séries que les grandes campagnes saisonnières.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'Ligne de production OEM HousePlus avec appareils électroménagers de marque personnalisée',
         },
         {
@@ -179,19 +179,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-01-20',
       dateModified: '2025-01-20',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-wholesale-warehouse.jpg',
       imageAlt: 'توزيع الأجهزة المنزلية بالجملة عالميًا - التجارة الدولية لـ HousePlus',
       sections: [
         {
           heading: 'لماذا تمثل أجهزة المنزل بالجملة فرصة هائلة',
           text: 'من المتوقع أن يتجاوز سوق الأجهزة المنزلية العالمي 1.2 تريليون دولار بحلول عام 2030، مدفوعًا بالتحضر السريع وارتفاع دخول الطبقة المتوسطة والطلب المتزايد على المنتجات الموفرة للطاقة. كانت HousePlus في طليعة هذا السوق لأكثر من عقد، حيث تزود أكثر من 441 عميل جملة في أكثر من 53 دولة بأجهزة منزلية متميزة.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-washing-machine.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-washing-machine.jpg',
           imageAlt: 'صالة عرض الأجهزة المنزلية الحديثة مع الثلاجات وآلات الغسيل',
         },
         {
           heading: 'فهم الحد الأدنى لكميات الطلب وهياكل الطلب المرنة',
           text: 'أحد الأسئلة الأكثر شيوعًا من مشتري الجملة لأول مرة يتعلق بالحد الأدنى لكميات الطلب (MOQ). في HousePlus، نتفهم أن الأسواق المختلفة لها احتياجات مختلفة. يبدأ MOQ القياسي لدينا من 100 وحدة لكل خط منتج، مع ترتيبات مرنة متاحة للشركاء الجدد.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-refrigerator-interior.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-refrigerator-interior.jpg',
           imageAlt: 'مستودع مع مخزون منظم من الأجهزة المنزلية للتوزيع بالجملة',
         },
         {
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'OEM وODM: بناء علامتك التجارية الخاصة مع HousePlus',
           text: 'استفاد كثير من شركائنا الأكثر نجاحًا في الجملة من قدراتنا في OEM وODM لبناء خطوط منتجاتهم الخاصة ذات العلامة التجارية. بطاقة إنتاج تتجاوز 100,000 وحدة شهريًا وأوقات تسليم تتراوح بين 20-35 يومًا للطلبات القياسية، يمكننا دعم إطلاق الدفعات الصغيرة والحملات الموسمية الكبيرة.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'خط إنتاج OEM لـ HousePlus مع أجهزة منزلية ذات علامة تجارية مخصصة',
         },
         {
@@ -216,7 +216,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const articleSchema = buildArticleSchema({
     headline: data.title,
-    image: `https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg`,
+    image: `https://images.houseplus-ch.com/articles/appliances/home-appliance-wholesale-warehouse.jpg`,
     datePublished: data.datePublished,
     dateModified: data.dateModified,
     authorName: data.author,

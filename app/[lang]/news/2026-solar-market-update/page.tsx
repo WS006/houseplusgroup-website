@@ -44,7 +44,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial Team',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
-    heroImage: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'HousePlus high-efficiency solar panels installation',
     sections: [
       {
@@ -74,7 +74,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Equipo Editorial de HousePlus',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
-    heroImage: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Instalación de paneles solares de alta eficiencia HousePlus',
     sections: [
       {
@@ -104,7 +104,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Redaktionsteam',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
-    heroImage: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'HousePlus Hocheffiziente Solarpanel-Installation',
     sections: [
       {
@@ -134,7 +134,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe éditoriale HousePlus',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
-    heroImage: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Installation de panneaux solaires à haut rendement HousePlus',
     sections: [
       {
@@ -164,7 +164,7 @@ const articleContent: Record<string, any> = {
     authorName: 'فريق تحرير HousePlus',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
-    heroImage: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'تركيب ألواح شمسية عالية الكفاءة من HousePlus',
     sections: [
       {

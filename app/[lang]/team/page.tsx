@@ -202,7 +202,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.houseplus-ch.com/images/site/team-collaboration-office.jpg"
+                  src="https://images.houseplus-ch.com/site/team-collaboration-office.jpg"
                   alt="HousePlus team collaboration and professional meeting"
                   fill
                   className="object-cover"
@@ -211,7 +211,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.houseplus-ch.com/images/site/team-working-together.jpg"
+                  src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus professionals working together in office"
                   fill
                   className="object-cover"
@@ -257,7 +257,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.houseplus-ch.com/images/site/team-working-together.jpg"
+                  src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus company culture and team environment"
                   fill
                   className="object-cover"

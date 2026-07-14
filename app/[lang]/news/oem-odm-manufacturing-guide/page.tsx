@@ -35,19 +35,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-09-17',
       dateModified: '2025-09-17',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
       imageAlt: 'OEM ODM manufacturing process at HousePlus factory - custom product development',
       sections: [
         {
           heading: 'Understanding OEM vs. ODM: What\'s the Difference?',
           text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with flexible OEM/ODM services. For wholesale buyers and brand owners, understanding the difference between OEM (Original Equipment Manufacturer) and ODM (Original Design Manufacturer) is fundamental to making the right sourcing decision. OEM manufacturing means you provide the product specifications, designs, and branding, while HousePlus manufactures the product according to your requirements. This approach gives you maximum control over product design and differentiation. ODM manufacturing, on the other hand, means HousePlus develops the product design and you apply your branding to our existing or modified designs. ODM is faster to market and typically requires lower upfront investment, making it ideal for brands entering new product categories or testing market demand. HousePlus offers both OEM and ODM services across our entire product range, including home appliances, solar products, and 3C electronics.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'HousePlus factory floor showing OEM and ODM production lines for custom appliances',
         },
         {
           heading: 'HousePlus OEM Capabilities: From Concept to Production',
           text: 'Our OEM manufacturing process begins with a detailed consultation to understand your product vision, target market, and technical requirements. Our R&D team, comprising over 50 engineers and designers, works closely with you to translate your concepts into manufacturable product specifications. We provide 3D CAD modeling, prototype development, and iterative testing to ensure the final product meets your exact standards. Once the design is approved, we prepare detailed manufacturing drawings, bill of materials (BOM), and quality control plans. Our production facilities are equipped with advanced CNC machining, injection molding, PCB assembly, and automated testing equipment to handle complex product requirements. We support custom packaging design, including branded cartons, instruction manuals in multiple languages, and retail-ready packaging that meets the requirements of major retail chains worldwide.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/factory-assembly-workers.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg',
           imageAlt: 'Engineers at HousePlus R&D center working on custom product design and prototyping',
         },
         {
@@ -57,7 +57,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'Quality Control and Testing in OEM/ODM Production',
           text: 'Quality assurance is embedded at every stage of our OEM/ODM manufacturing process. HousePlus operates a dedicated quality control department with over 30 QC engineers who conduct incoming material inspection, in-process quality checks, and final product testing. Our testing capabilities include electrical safety testing, EMC testing, environmental stress testing (temperature cycling, humidity testing, vibration testing), and performance testing. For solar products, we conduct IV curve testing, electroluminescence (EL) imaging, and flash testing to verify cell efficiency and panel performance. All OEM/ODM products undergo 100% functional testing before shipment, and we provide detailed quality inspection reports with each order. For clients requiring additional assurance, we support third-party factory audits and product inspections by internationally recognized inspection companies such as SGS, Bureau Veritas, and Intertek.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/quality-control-lab-testing.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
           imageAlt: 'Quality control testing of custom manufactured products at HousePlus facility',
         },
         {
@@ -71,19 +71,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-09-17',
       dateModified: '2025-09-17',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
       imageAlt: 'Proceso de fabricación OEM ODM en la fábrica HousePlus - desarrollo de productos personalizados',
       sections: [
         {
           heading: 'Entendiendo OEM vs. ODM: ¿Cuál es la Diferencia?',
           text: 'Para compradores mayoristas y propietarios de marcas, entender la diferencia entre OEM (Fabricante de Equipos Originales) y ODM (Fabricante de Diseño Original) es fundamental. La fabricación OEM significa que usted proporciona las especificaciones, diseños y marca del producto, mientras que HousePlus fabrica el producto según sus requisitos. La fabricación ODM significa que HousePlus desarrolla el diseño del producto y usted aplica su marca a nuestros diseños existentes o modificados.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'Planta de fabricación HousePlus que muestra líneas de producción OEM y ODM',
         },
         {
           heading: 'Capacidades OEM de HousePlus: Del Concepto a la Producción',
           text: 'Nuestro proceso de fabricación OEM comienza con una consulta detallada para comprender su visión del producto, mercado objetivo y requisitos técnicos. Nuestro equipo de I+D, compuesto por más de 50 ingenieros y diseñadores, trabaja estrechamente con usted para traducir sus conceptos en especificaciones de productos fabricables.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/factory-assembly-workers.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg',
           imageAlt: 'Ingenieros en el centro de I+D de HousePlus trabajando en diseño y prototipado de productos personalizados',
         },
         {
@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'Control de Calidad y Pruebas en Producción OEM/ODM',
           text: 'El aseguramiento de calidad está integrado en cada etapa de nuestro proceso de fabricación OEM/ODM. HousePlus opera un departamento de control de calidad dedicado con más de 30 ingenieros de QC. Todos los productos OEM/ODM se someten a pruebas funcionales al 100% antes del envío.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/quality-control-lab-testing.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
           imageAlt: 'Pruebas de control de calidad de productos fabricados a medida en las instalaciones de HousePlus',
         },
         {
@@ -107,19 +107,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-09-17',
       dateModified: '2025-09-17',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
       imageAlt: 'OEM-ODM-Fertigungsprozess im HousePlus-Werk - individuelle Produktentwicklung',
       sections: [
         {
           heading: 'OEM vs. ODM verstehen: Was ist der Unterschied?',
           text: 'Für Großhandelskäufer und Markeninhaber ist es grundlegend, den Unterschied zwischen OEM (Original Equipment Manufacturer) und ODM (Original Design Manufacturer) zu verstehen. OEM-Fertigung bedeutet, dass Sie die Produktspezifikationen, Designs und Markenidentität bereitstellen, während HousePlus das Produkt nach Ihren Anforderungen herstellt. ODM-Fertigung bedeutet, dass HousePlus das Produktdesign entwickelt und Sie Ihre Marke auf unsere bestehenden oder modifizierten Designs anwenden.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'HousePlus-Fabrikhalle mit OEM- und ODM-Produktionslinien für individuelle Geräte',
         },
         {
           heading: 'HousePlus OEM-Fähigkeiten: Vom Konzept zur Produktion',
           text: 'Unser OEM-Fertigungsprozess beginnt mit einer detaillierten Beratung, um Ihre Produktvision, Ihren Zielmarkt und Ihre technischen Anforderungen zu verstehen. Unser F&E-Team mit über 50 Ingenieuren und Designern arbeitet eng mit Ihnen zusammen, um Ihre Konzepte in fertigbare Produktspezifikationen umzusetzen.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/factory-assembly-workers.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg',
           imageAlt: 'Ingenieure im HousePlus F&E-Zentrum arbeiten an individuellem Produktdesign und Prototyping',
         },
         {
@@ -129,7 +129,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'Qualitätskontrolle und Tests in der OEM/ODM-Produktion',
           text: 'Qualitätssicherung ist in jeder Phase unseres OEM/ODM-Fertigungsprozesses verankert. HousePlus betreibt eine dedizierte Qualitätskontrollabteilung mit über 30 QC-Ingenieuren. Alle OEM/ODM-Produkte werden vor dem Versand zu 100% funktional getestet.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/quality-control-lab-testing.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
           imageAlt: 'Qualitätskontrolltests von individuell gefertigten Produkten in der HousePlus-Anlage',
         },
         {
@@ -143,19 +143,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-09-17',
       dateModified: '2025-09-17',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
       imageAlt: 'Processus de fabrication OEM ODM à l\'usine HousePlus - développement de produits personnalisés',
       sections: [
         {
           heading: 'Comprendre OEM vs. ODM : Quelle est la différence ?',
           text: 'Pour les acheteurs en gros et les propriétaires de marques, comprendre la différence entre OEM (Original Equipment Manufacturer) et ODM (Original Design Manufacturer) est fondamental. La fabrication OEM signifie que vous fournissez les spécifications, les designs et la marque du produit, tandis que HousePlus fabrique le produit selon vos exigences. La fabrication ODM signifie que HousePlus développe le design du produit et vous appliquez votre marque à nos designs existants ou modifiés.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'Atelier de fabrication HousePlus montrant les lignes de production OEM et ODM',
         },
         {
           heading: 'Capacités OEM de HousePlus : Du concept à la production',
           text: 'Notre processus de fabrication OEM commence par une consultation détaillée pour comprendre votre vision du produit, votre marché cible et vos exigences techniques. Notre équipe R&D, composée de plus de 50 ingénieurs et designers, travaille en étroite collaboration avec vous pour traduire vos concepts en spécifications de produits manufacturables.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/factory-assembly-workers.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg',
           imageAlt: 'Ingénieurs au centre R&D de HousePlus travaillant sur la conception et le prototypage de produits personnalisés',
         },
         {
@@ -165,7 +165,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'Contrôle qualité et tests dans la production OEM/ODM',
           text: 'L\'assurance qualité est intégrée à chaque étape de notre processus de fabrication OEM/ODM. HousePlus exploite un département de contrôle qualité dédié avec plus de 30 ingénieurs QC. Tous les produits OEM/ODM subissent des tests fonctionnels à 100% avant expédition.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/quality-control-lab-testing.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
           imageAlt: 'Tests de contrôle qualité de produits fabriqués sur mesure dans les installations HousePlus',
         },
         {
@@ -179,19 +179,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       author: 'HousePlus Editorial Team',
       datePublished: '2025-09-17',
       dateModified: '2025-09-17',
-      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+      image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
       imageAlt: 'عملية تصنيع OEM وODM في مصنع HousePlus - تطوير المنتجات المخصصة',
       sections: [
         {
           heading: 'فهم OEM مقابل ODM: ما الفرق؟',
           text: 'لمشتري الجملة وأصحاب العلامات التجارية، يعد فهم الفرق بين OEM (الشركة المصنعة للمعدات الأصلية) وODM (الشركة المصنعة للتصميم الأصلي) أمرًا أساسيًا. تصنيع OEM يعني أنك تقدم مواصفات المنتج والتصاميم والعلامة التجارية، بينما تصنع HousePlus المنتج وفقًا لمتطلباتك. تصنيع ODM يعني أن HousePlus تطور تصميم المنتج وتطبق علامتك التجارية على تصاميمنا الحالية أو المعدلة.',
-          image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+          image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
           imageAlt: 'أرضية مصنع HousePlus تُظهر خطوط إنتاج OEM وODM للأجهزة المخصصة',
         },
         {
           heading: 'قدرات OEM لدى HousePlus: من المفهوم إلى الإنتاج',
           text: 'تبدأ عملية تصنيع OEM لدينا بمشاورة تفصيلية لفهم رؤيتك للمنتج والسوق المستهدف والمتطلبات التقنية. يعمل فريق البحث والتطوير لدينا، المؤلف من أكثر من 50 مهندسًا ومصممًا، عن كثب معك لترجمة مفاهيمك إلى مواصفات منتج قابلة للتصنيع.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/factory-assembly-workers.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg',
           imageAlt: 'مهندسون في مركز البحث والتطوير لـ HousePlus يعملون على تصميم المنتجات المخصصة والنماذج الأولية',
         },
         {
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         {
           heading: 'مراقبة الجودة والاختبار في إنتاج OEM/ODM',
           text: 'ضمان الجودة مدمج في كل مرحلة من مراحل عملية تصنيع OEM/ODM لدينا. تدير HousePlus قسم مراقبة جودة مخصص مع أكثر من 30 مهندس QC. تخضع جميع منتجات OEM/ODM لاختبار وظيفي بنسبة 100% قبل الشحن.',
-          image: 'https://images.houseplus-ch.com/images/articles/service/quality-control-lab-testing.jpg',
+          image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
           imageAlt: 'اختبارات مراقبة الجودة للمنتجات المصنعة حسب الطلب في منشأة HousePlus',
         },
         {
@@ -216,7 +216,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const articleSchema = buildArticleSchema({
     headline: data.title,
-    image: `https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg`,
+    image: `https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg`,
     datePublished: data.datePublished,
     dateModified: data.dateModified,
     authorName: data.author,

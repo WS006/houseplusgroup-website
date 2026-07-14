@@ -52,25 +52,25 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       author: 'HousePlus Editorial Team',
       datePublished: '2023-11-08',
       dateModified: '2023-11-08',
-      image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+      image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
       imageAlt: 'Modern 3C electronics devices including wireless chargers and smart gadgets',
       sections: [
         {
           heading: 'The Dynamic World of 3C Electronics',
           text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified 3C electronics. The 3C electronics sector (Computer, Communication, Consumer Electronics) is one of the fastest-evolving industries globally. Driven by relentless innovation, it constantly introduces new technologies that reshape how we live, work, and interact. From powerful smartphones and smart wearables to advanced home entertainment systems and energy-efficient LED lighting, 3C electronics are integral to modern life. HousePlus is a key player in this dynamic market, offering a diverse portfolio of cutting-edge products.',
-          image: 'https://images.houseplus-ch.com/images/products/led-lighting.jpg',
+          image: 'https://images.houseplus-ch.com/products/led-lighting.jpg',
           imageAlt: 'HousePlus energy-efficient LED lighting solutions',
         },
         {
           heading: 'Innovation at the Core: Smart Devices and Connectivity',
           text: 'Connectivity and intelligence are the hallmarks of modern 3C electronics. The rise of IoT (Internet of Things) has led to an explosion of smart devices that seamlessly integrate into our daily routines. HousePlus embraces this trend by developing and manufacturing smart gadgets that offer superior performance, intuitive user experiences, and robust connectivity. Our products are designed to meet the demands of a tech-savvy global market, providing reliable solutions for wholesale partners.',
-          image: 'https://images.houseplus-ch.com/images/products/power-bank.jpg',
+          image: 'https://images.houseplus-ch.com/products/power-bank.jpg',
           imageAlt: 'HousePlus portable power bank and other smart devices',
         },
         {
           heading: 'HousePlus: Your Trusted Partner for 3C Electronics Wholesale',
           text: 'As a leading manufacturer, HousePlus specializes in providing high-quality 3C electronics to wholesale buyers in Africa, Southeast Asia, and Europe. Our extensive product range includes smart home devices, portable power solutions, and advanced LED lighting. We pride ourselves on our commitment to innovation, quality control, and customer satisfaction. All HousePlus products are CE/FCC/RoHS certified, ensuring they meet international standards. We offer flexible MOQ and comprehensive OEM/ODM services, making us the ideal partner for businesses looking to expand their 3C electronics offerings.',
-          image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+          image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
           imageAlt: 'HousePlus wireless charger and other 3C electronic products',
         },
         {
@@ -84,25 +84,25 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       author: 'HousePlus Editorial Team',
       datePublished: '2023-11-08',
       dateModified: '2023-11-08',
-      image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+      image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
       imageAlt: 'Dispositivos electrónicos 3C modernos que incluyen cargadores inalámbricos y gadgets inteligentes',
       sections: [
         {
           heading: 'El Mundo Dinámico de la Electrónica 3C',
           text: 'El sector de la electrónica 3C (Computación, Comunicación, Electrónica de Consumo) es una de las industrias de más rápida evolución a nivel mundial. Impulsado por una innovación implacable, introduce constantemente nuevas tecnologías que remodelan nuestra forma de vivir, trabajar e interactuar. Desde potentes teléfonos inteligentes y dispositivos portátiles inteligentes hasta sistemas avanzados de entretenimiento en el hogar e iluminación LED de bajo consumo, la electrónica 3C es parte integral de la vida moderna. HousePlus es un actor clave en este mercado dinámico, ofreciendo una cartera diversa de productos de vanguardia.',
-          image: 'https://images.houseplus-ch.com/images/products/led-lighting.jpg',
+          image: 'https://images.houseplus-ch.com/products/led-lighting.jpg',
           imageAlt: 'Soluciones de iluminación LED de bajo consumo de HousePlus',
         },
         {
           heading: 'La Innovación en el Núcleo: Dispositivos Inteligentes y Conectividad',
           text: 'La conectividad y la inteligencia son las características distintivas de la electrónica 3C moderna. El auge del IoT (Internet de las Cosas) ha llevado a una explosión de dispositivos inteligentes que se integran sin problemas en nuestras rutinas diarias. HousePlus abraza esta tendencia desarrollando y fabricando gadgets inteligentes que ofrecen un rendimiento superior, experiencias de usuario intuitivas y una conectividad robusta. Nuestros productos están diseñados para satisfacer las demandas de un mercado global conocedor de la tecnología, proporcionando soluciones confiables para socios mayoristas.',
-          image: 'https://images.houseplus-ch.com/images/products/power-bank.jpg',
+          image: 'https://images.houseplus-ch.com/products/power-bank.jpg',
           imageAlt: 'Batería externa portátil HousePlus y otros dispositivos inteligentes',
         },
         {
           heading: 'HousePlus: Su Socio de Confianza para la Venta al por Mayor de Electrónica 3C',
           text: 'Como fabricante líder, HousePlus se especializa en proporcionar electrónica 3C de alta calidad a compradores mayoristas en África, el Sudeste Asiático y Europa. Nuestra amplia gama de productos incluye dispositivos inteligentes para el hogar, soluciones de energía portátiles e iluminación LED avanzada. Nos enorgullecemos de nuestro compromiso con la innovación, el control de calidad y la satisfacción del cliente. Todos los productos HousePlus cuentan con certificación CE/FCC/RoHS, lo que garantiza que cumplen con los estándares internacionales. Ofrecemos MOQ flexibles y servicios OEM/ODM completos, lo que nos convierte en el socio ideal para empresas que buscan expandir sus ofertas de electrónica 3C.',
-          image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+          image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
           imageAlt: 'Cargador inalámbrico HousePlus y otros productos electrónicos 3C',
         },
         {
@@ -116,25 +116,25 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       author: 'HousePlus Editorial Team',
       datePublished: '2023-11-08',
       dateModified: '2023-11-08',
-      image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+      image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
       imageAlt: 'Moderne 3C-Elektronikgeräte, einschließlich kabelloser Ladegeräte und Smart Gadgets',
       sections: [
         {
           heading: 'Die dynamische Welt der 3C-Elektronik',
           text: 'Der 3C-Elektroniksektor (Computer, Kommunikation, Unterhaltungselektronik) ist eine der sich am schnellsten entwickelnden Branchen weltweit. Angetrieben von unermüdlicher Innovation führt er ständig neue Technologien ein, die unsere Art zu leben, zu arbeiten und zu interagieren neu gestalten. Von leistungsstarken Smartphones und intelligenten Wearables bis hin zu fortschrittlichen Home-Entertainment-Systemen und energieeffizienter LED-Beleuchtung ist die 3C-Elektronik integraler Bestandteil des modernen Lebens. HousePlus ist ein wichtiger Akteur in diesem dynamischen Markt und bietet ein vielfältiges Portfolio an hochmodernen Produkten.',
-          image: 'https://images.houseplus-ch.com/images/products/led-lighting.jpg',
+          image: 'https://images.houseplus-ch.com/products/led-lighting.jpg',
           imageAlt: 'HousePlus energieeffiziente LED-Beleuchtungslösungen',
         },
         {
           heading: 'Innovation im Kern: Smart Devices und Konnektivität',
           text: 'Konnektivität und Intelligenz sind die Kennzeichen der modernen 3C-Elektronik. Der Aufstieg des IoT (Internet der Dinge) hat zu einer Explosion von Smart Devices geführt, die sich nahtlos in unsere täglichen Routinen integrieren. HousePlus greift diesen Trend auf, indem es intelligente Gadgets entwickelt und herstellt, die überragende Leistung, intuitive Benutzererlebnisse und robuste Konnektivität bieten. Unsere Produkte sind darauf ausgelegt, die Anforderungen eines technikaffinen globalen Marktes zu erfüllen und zuverlässige Lösungen für Großhandelspartner bereitzustellen.',
-          image: 'https://images.houseplus-ch.com/images/products/power-bank.jpg',
+          image: 'https://images.houseplus-ch.com/products/power-bank.jpg',
           imageAlt: 'HousePlus tragbare Powerbank und andere Smart Devices',
         },
         {
           heading: 'HousePlus: Ihr vertrauenswürdiger Partner für den 3C-Elektronik-Großhandel',
           text: 'Als führender Hersteller ist HousePlus darauf spezialisiert, hochwertige 3C-Elektronik an Großhandelskäufer in Afrika, Südostasien und Europa zu liefern. Unser umfangreiches Produktsortiment umfasst Smart-Home-Geräte, tragbare Energielösungen und fortschrittliche LED-Beleuchtung. Wir sind stolz auf unser Engagement für Innovation, Qualitätskontrolle und Kundenzufriedenheit. Alle HousePlus-Produkte sind CE/FCC/RoHS-zertifiziert, um sicherzustellen, dass sie internationalen Standards entsprechen. Wir bieten flexible Mindestbestellmengen und umfassende OEM/ODM-Dienstleistungen an, was uns zum idealen Partner für Unternehmen macht, die ihr 3C-Elektronikangebot erweitern möchten.',
-          image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+          image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
           imageAlt: 'HousePlus kabelloses Ladegerät und andere 3C-Elektronikprodukte',
         },
         {
@@ -148,25 +148,25 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       author: 'HousePlus Editorial Team',
       datePublished: '2023-11-08',
       dateModified: '2023-11-08',
-      image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+      image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
       imageAlt: 'Appareils électroniques 3C modernes, y compris les chargeurs sans fil et les gadgets intelligents',
       sections: [
         {
           heading: 'Le monde dynamique de l\'électronique 3C',
           text: 'Le secteur de l\'électronique 3C (informatique, communication, électronique grand public) est l\'une des industries qui évoluent le plus rapidement au niveau mondial. Poussé par une innovation incessante, il introduit constamment de nouvelles technologies qui remodèlent notre façon de vivre, de travailler et d\'interagir. Des smartphones puissants et des wearables intelligents aux systèmes de divertissement à domicile avancés et à l\'éclairage LED économe en énergie, l\'électronique 3C fait partie intégrante de la vie moderne. HousePlus est un acteur clé de ce marché dynamique, offrant un portefeuille diversifié de produits de pointe.',
-          image: 'https://images.houseplus-ch.com/images/products/led-lighting.jpg',
+          image: 'https://images.houseplus-ch.com/products/led-lighting.jpg',
           imageAlt: 'Solutions d\'éclairage LED écoénergétiques HousePlus',
         },
         {
           heading: 'L\'innovation au cœur : Appareils intelligents et connectivité',
           text: 'La connectivité et l\'intelligence sont les caractéristiques de l\'électronique 3C moderne. L\'essor de l\'IoT (Internet des objets) a conduit à une explosion d\'appareils intelligents qui s\'intègrent de manière transparente dans nos routines quotidiennes. HousePlus adopte cette tendance en développant et en fabriquant des gadgets intelligents qui offrent des performances supérieures, des expériences utilisateur intuitives et une connectivité robuste. Nos produits sont conçus pour répondre aux exigences d\'un marché mondial féru de technologie, offrant des solutions fiables aux partenaires grossistes.',
-          image: 'https://images.houseplus-ch.com/images/products/power-bank.jpg',
+          image: 'https://images.houseplus-ch.com/products/power-bank.jpg',
           imageAlt: 'Batterie externe portable HousePlus et autres appareils intelligents',
         },
         {
           heading: 'HousePlus : Votre partenaire de confiance pour la vente en gros d\'électronique 3C',
           text: 'En tant que fabricant leader, HousePlus est spécialisé dans la fourniture d\'électronique 3C de haute qualité aux acheteurs en gros en Afrique, en Asie du Sud-Est et en Europe. Notre vaste gamme de produits comprend des appareils intelligents pour la maison, des solutions d\'alimentation portables et un éclairage LED avancé. Nous sommes fiers de notre engagement envers l\'innovation, le contrôle qualité et la satisfaction client. Tous les produits HousePlus sont certifiés CE/FCC/RoHS, garantissant qu\'ils répondent aux normes internationales. Nous offrons des MOQ flexibles et des services OEM/ODM complets, ce qui fait de nous le partenaire idéal pour les entreprises qui cherchent à étendre leurs offres d\'électronique 3C.',
-          image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+          image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
           imageAlt: 'Chargeur sans fil HousePlus et autres produits électroniques 3C',
         },
         {
@@ -180,25 +180,25 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       author: 'HousePlus Editorial Team',
       datePublished: '2023-11-08',
       dateModified: '2023-11-08',
-      image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+      image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
       imageAlt: 'أجهزة إلكترونيات 3C حديثة بما في ذلك الشواحن اللاسلكية والأدوات الذكية',
       sections: [
         {
           heading: 'العالم الديناميكي للإلكترونيات 3C',
           text: 'يعد قطاع الإلكترونيات 3C (الكمبيوتر والاتصالات والإلكترونيات الاستهلاكية) أحد أسرع الصناعات تطوراً على مستوى العالم. مدفوعًا بالابتكار المستمر، فإنه يقدم باستمرار تقنيات جديدة تعيد تشكيل طريقة عيشنا وعملنا وتفاعلنا. من الهواتف الذكية القوية والأجهزة القابلة للارتداء الذكية إلى أنظمة الترفيه المنزلية المتقدمة وإضاءة LED الموفرة للطاقة، تعد الإلكترونيات 3C جزءًا لا يتجزأ من الحياة الحديثة. HousePlus لاعب رئيسي في هذا السوق الديناميكي، حيث تقدم مجموعة متنوعة من المنتجات المتطورة.',
-          image: 'https://images.houseplus-ch.com/images/products/led-lighting.jpg',
+          image: 'https://images.houseplus-ch.com/products/led-lighting.jpg',
           imageAlt: 'حلول إضاءة LED الموفرة للطاقة من HousePlus',
         },
         {
           heading: 'الابتكار في الجوهر: الأجهزة الذكية والاتصال',
           text: 'الاتصال والذكاء هما السمتان المميزتان للإلكترونيات 3C الحديثة. أدى صعود إنترنت الأشياء (IoT) إلى انفجار في الأجهزة الذكية التي تتكامل بسلاسة في روتيننا اليومي. تتبنى HousePlus هذا الاتجاه من خلال تطوير وتصنيع الأدوات الذكية التي توفر أداءً فائقًا وتجارب مستخدم بديهية واتصالًا قويًا. تم تصميم منتجاتنا لتلبية متطلبات السوق العالمي المتطور تقنيًا، وتوفير حلول موثوقة لشركاء الجملة.',
-          image: 'https://images.houseplus-ch.com/images/products/power-bank.jpg',
+          image: 'https://images.houseplus-ch.com/products/power-bank.jpg',
           imageAlt: 'بنك طاقة محمول من HousePlus وأجهزة ذكية أخرى',
         },
         {
           heading: 'HousePlus: شريكك الموثوق به لبيع الإلكترونيات 3C بالجملة',
           text: 'بصفتها شركة مصنعة رائدة، تتخصص HousePlus في توفير إلكترونيات 3C عالية الجودة للمشترين بالجملة في إفريقيا وجنوب شرق آسيا وأوروبا. تشمل مجموعتنا الواسعة من المنتجات الأجهزة المنزلية الذكية، وحلول الطاقة المحمولة، وإضاءة LED المتقدمة. نفخر بالتزامنا بالابتكار ومراقبة الجودة ورضا العملاء. جميع منتجات HousePlus حاصلة على شهادات CE/FCC/RoHS، مما يضمن امتثالها للمعايير الدولية. نقدم حد أدنى مرن للطلب وخدمات OEM/ODM شاملة، مما يجعلنا الشريك المثالي للشركات التي تتطلع إلى توسيع عروضها من الإلكترونيات 3C.',
-          image: 'https://images.houseplus-ch.com/images/products/wireless-charger.jpg',
+          image: 'https://images.houseplus-ch.com/products/wireless-charger.jpg',
           imageAlt: 'شاحن لاسلكي من HousePlus ومنتجات إلكترونيات 3C أخرى',
         },
         {
