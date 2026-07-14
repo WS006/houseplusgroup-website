@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore the key trends shaping the smart home appliance market in 2026, including AI integration, energy efficiency, and sustainable manufacturing. A comprehensive guide for B2B buyers from HousePlus.',
+    en: '2026 smart home appliances market guide from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI-powered appliances. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Explore las tendencias clave que configuran el mercado de electrodomésticos inteligentes en 2026, incluida la integración de IA, la eficiencia energética y la fabricación sostenible. Una guía completa para compradores B2B de HousePlus.',
     de: 'Entdecken Sie die wichtigsten Trends, die den Markt für intelligente Haushaltsgeräte im Jahr 2026 prägen, einschließlich KI-Integration, Energieeffizienz und nachhaltiger Fertigung. Ein umfassender Leitfaden für B2B-Käufer von HousePlus.',
     fr: 'Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents en 2026, y compris l\'intégration de l\'IA, l\'efficacité énergétique et la fabrication durable. Un guide complet pour les acheteurs B2B de HousePlus.',
@@ -48,7 +48,7 @@ const articleContent: Record<string, any> = {
     sections: [
       {
         heading: 'Introduction: The Evolving Landscape of Smart Home Appliances',
-        text: 'The smart home appliance market is undergoing rapid transformation, driven by technological advancements and shifting consumer preferences. For B2B buyers, understanding these dynamics is crucial for strategic sourcing and product development. This guide from HousePlus delves into the key trends expected to dominate the market in 2026, offering insights for informed procurement decisions.'
+        text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The smart home appliance market is undergoing rapid transformation, driven by technological advancements and shifting consumer preferences. For B2B buyers, understanding these dynamics is crucial for strategic sourcing and product development. This guide from HousePlus delves into the key trends expected to dominate the market in 2026, offering insights for informed procurement decisions.'
       },
       {
         heading: 'Key Trend 1: AI Integration and Predictive Maintenance',
@@ -293,6 +293,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           </div>
         ))}
       </article>
+
+      {/* CTA */}
+      <div className="max-w-4xl mx-auto px-4 pb-12">
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">Procure Smart Home Appliances with HousePlus</h3>
+          <p className="text-blue-700 mb-6">Contact our team for 2026 smart appliance catalog and pricing. MOQ from 100 pcs, flexible OEM/ODM, CE/FCC/RoHS certified, 20–35 day lead time.</p>
+          <Link
+            href={`/${lang}/contact`}
+            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Contact HousePlus
+          </Link>
+        </div>
+      </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">

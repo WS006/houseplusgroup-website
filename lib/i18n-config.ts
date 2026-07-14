@@ -118,7 +118,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "Ready to Partner with Us?", subtitle: "Get competitive pricing for bulk orders and OEM customization.", button: "Request a Quote" },
       tagline: "HousePlus - Global B2B Wholesale Manufacturer",
       mainTitle: "HousePlus Group - Professional Wholesale Supplier",
-      mainDescription: "Since 2010, HousePlus has been a trusted manufacturer of solar energy systems, home appliances and 3C electronics. We serve wholesale buyers in 60+ countries, offering OEM/ODM services with CE/FCC/RoHS certifications and MOQ from 100 units.",
+      mainDescription: "Since 2010, HousePlus has been a trusted manufacturer of solar energy systems, home appliances and 3C electronics. We serve wholesale buyers in 53+ countries, offering OEM/ODM services with CE/FCC/RoHS certifications and MOQ from 100 units.",
       browseProducts: "Browse All Products",
       requestQuote: "Request a Quote",
       counter: {
@@ -146,7 +146,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Why Global Buyers Choose HousePlus",
-        subtitle: "With 14+ years of manufacturing experience and responsive service, HousePlus delivers reliable products on time, every time. Your success is our commitment.",
+        subtitle: "With 16+ years of manufacturing experience and responsive service, HousePlus delivers reliable products on time, every time. Your success is our commitment.",
         features: [
           {
             icon: "Factory",
@@ -193,7 +193,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europe, Africa, Southeast Asia, North America"
     },
   },
@@ -219,7 +219,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "¿Listo para Asociarnos?", subtitle: "Obtenga precios competitivos para pedidos por mayor y personalización OEM.", button: "Solicitar Cotización" },
       tagline: "HousePlus - Fabricante Mayorista Global B2B",
       mainTitle: "Grupo HousePlus - Proveedor Mayorista Profesional",
-      mainDescription: "Desde 2010, HousePlus ha sido un fabricante confiable de sistemas de energía solar, electrodomésticos y electrónica 3C. Atendemos a compradores mayoristas en más de 60 países, ofreciendo servicios OEM/ODM con certificaciones CE/FCC/RoHS y MOQ desde 100 unidades.",
+      mainDescription: "Desde 2010, HousePlus ha sido un fabricante confiable de sistemas de energía solar, electrodomésticos y electrónica 3C. Atendemos a compradores mayoristas en más de 53 países, ofreciendo servicios OEM/ODM con certificaciones CE/FCC/RoHS y MOQ desde 100 unidades.",
       browseProducts: "Ver Todos los Productos",
       requestQuote: "Solicitar Cotización",
       counter: {
@@ -247,7 +247,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Por Qué los Compradores Globales Eligen HousePlus",
-        subtitle: "Con más de 14 años de experiencia en fabricación y servicio receptivo, HousePlus entrega productos confiables a tiempo, siempre. Su éxito es nuestro compromiso.",
+        subtitle: "Con más de 16 años de experiencia en fabricación y servicio receptivo, HousePlus entrega productos confiables a tiempo, siempre. Su éxito es nuestro compromiso.",
         features: [
           {
             icon: "Factory",
@@ -294,7 +294,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europa, África, Sudeste Asiático, América del Norte"
     },
   },
@@ -320,7 +320,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "Bereit für eine Partnerschaft?", subtitle: "Erhalten Sie wettbewerbsfähige Preise für Großbestellungen und OEM-Anpassung.", button: "Angebot anfordern" },
       tagline: "HousePlus - Globaler B2B-Großhandelshersteller",
       mainTitle: "HousePlus Group - Professioneller Großhandelslieferant",
-      mainDescription: "Seit 2010 ist HousePlus ein vertrauenswürdiger Hersteller von Solarenergiesystemen, Haushaltsgeräten und 3C-Elektronik. Wir beliefern Großhandelskäufer in über 60 Ländern und bieten OEM/ODM-Dienstleistungen mit CE/FCC/RoHS-Zertifizierungen und MOQ ab 100 Einheiten.",
+      mainDescription: "Seit 2010 ist HousePlus ein vertrauenswürdiger Hersteller von Solarenergiesystemen, Haushaltsgeräten und 3C-Elektronik. Wir beliefern Großhandelskäufer in über 53 Ländern und bieten OEM/ODM-Dienstleistungen mit CE/FCC/RoHS-Zertifizierungen und MOQ ab 100 Einheiten.",
       browseProducts: "Alle Produkte ansehen",
       requestQuote: "Angebot anfordern",
       counter: {
@@ -348,7 +348,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Warum globale Käufer HousePlus wählen",
-        subtitle: "Mit über 14 Jahren Fertigungserfahrung und responsivem Service liefert HousePlus zuverlässige Produkte pünktlich, jedes Mal. Ihr Erfolg ist unser Engagement.",
+        subtitle: "Mit über 16 Jahren Fertigungserfahrung und responsivem Service liefert HousePlus zuverlässige Produkte pünktlich, jedes Mal. Ihr Erfolg ist unser Engagement.",
         features: [
           {
             icon: "Factory",
@@ -395,7 +395,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europa, Afrika, Südostasien, Nordamerika"
     },
   },
@@ -421,7 +421,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "Prêt à Partenariat ?", subtitle: "Obtenez des prix compétitifs pour les commandes en gros et la personnalisation OEM.", button: "Demander un Devis" },
       tagline: "HousePlus - Fabricant Global B2B en Gros",
       mainTitle: "Groupe HousePlus - Fournisseur Professionnel en Gros",
-      mainDescription: "Depuis 2010, HousePlus est un fabricant fiable de systèmes d'énergie solaire, d'appareils ménagers et d'électronique 3C. Nous servons des acheteurs en gros dans plus de 60 pays, offrant des services OEM/ODM avec certifications CE/FCC/RoHS et MOQ à partir de 100 unités.",
+      mainDescription: "Depuis 2010, HousePlus est un fabricant fiable de systèmes d'énergie solaire, d'appareils ménagers et d'électronique 3C. Nous servons des acheteurs en gros dans plus de 53 pays, offrant des services OEM/ODM avec certifications CE/FCC/RoHS et MOQ à partir de 100 unités.",
       browseProducts: "Voir Tous les Produits",
       requestQuote: "Demander un Devis",
       counter: {
@@ -449,7 +449,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "Pourquoi les Acheteurs Globaux Choisissent HousePlus",
-        subtitle: "Avec plus de 14 ans d'expérience en fabrication et un service réactif, HousePlus livre des produits fiables à temps, à chaque fois. Votre succès est notre engagement.",
+        subtitle: "Avec plus de 16 ans d'expérience en fabrication et un service réactif, HousePlus livre des produits fiables à temps, à chaque fois. Votre succès est notre engagement.",
         features: [
           {
             icon: "Factory",
@@ -496,7 +496,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "Europe, Afrique, Asie du Sud-Est, Amérique du Nord"
     },
   },
@@ -522,7 +522,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       cta: { title: "مستعد للشراكة؟", subtitle: "احصل على أسعار تنافسية للطلبات بالجملة والتخصيص OEM.", button: "طلب عرض سعر" },
       tagline: "HousePlus - مصنع جملة عالمي B2B",
       mainTitle: "مجموعة HousePlus - مورد جملة محترف",
-      mainDescription: "منذ عام 2010، HousePlus هو مصنع موثوق لأنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. نخدم مشتريي الجملة في أكثر من 60 دولة، ونقدم خدمات OEM/ODM مع شهادات CE/FCC/RoHS وMOQ بدءًا من 100 وحدة.",
+      mainDescription: "منذ عام 2010، HousePlus هو مصنع موثوق لأنظمة الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. نخدم مشتريي الجملة في أكثر من 53 دولة، ونقدم خدمات OEM/ODM مع شهادات CE/FCC/RoHS وMOQ بدءًا من 100 وحدة.",
       browseProducts: "عرض جميع المنتجات",
       requestQuote: "طلب عرض سعر",
       counter: {
@@ -550,7 +550,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ],
       whyChoose: {
         title: "لماذا يختار المشترون العالميون HousePlus",
-        subtitle: "مع أكثر من 14 عامًا من الخبرة في التصنيع وخدمة سريعة الاستجابة، توفر HousePlus منتجات موثوقة في الوقت المحدد، في كل مرة. نجاحك هو التزامنا.",
+        subtitle: "مع أكثر من 16 عامًا من الخبرة في التصنيع وخدمة سريعة الاستجابة، توفر HousePlus منتجات موثوقة في الوقت المحدد، في كل مرة. نجاحك هو التزامنا.",
         features: [
           {
             icon: "Factory",
@@ -597,7 +597,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       companyName: "HousePlus Group Co., Ltd.",
       email: "info@houseplus-ch.com",
       phone: "+86-123-4567-890",
-      address: "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+      address: "No. 88, Innovation Road, Zhongshan, Guangdong, China",
       serviceAreas: "أوروبا، أفريقيا، جنوب شرق آسيا، أمريكا الشمالية"
     },
   },

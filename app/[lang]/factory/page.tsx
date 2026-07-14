@@ -9,9 +9,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
+    es: 'Fábrica de HousePlus — Planta de 20.000 m² en Guangdong',
+    de: 'HousePlus Fabrik — 20.000 m² Produktionsstätte in Guangdong',
+    fr: 'Usine HousePlus — Site de Production de 20 000 m² à Guangdong',
+    ar: 'مصنع هاوس بلس — منشأة تصنيع مساحتها ٢٠٬٠٠٠ م² في قوانغدونغ',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'Tour the HousePlus 20,000 m² ISO 9001 certified factory in Guangdong. 500+ employees, 8 production lines, 100,000+ units monthly. Quality control for solar, appliances and electronics.',
+    es: 'Conozca la fábrica de HousePlus de 20.000 m² certificada ISO 9001 en Guangdong. Más de 500 empleados, 8 líneas de producción, 100.000+ unidades al mes con control de calidad.',
+    de: 'Besichtigen Sie die 20.000 m² ISO 9001-zertifizierte HousePlus Fabrik in Guangdong. 500+ Mitarbeiter, 8 Produktionslinien, 100.000+ Einheiten monatlich. Qualitätskontrolle für Solar, Geräte und Elektronik.',
+    fr: 'Visitez l\'usine HousePlus de 20 000 m² certifiée ISO 9001 à Guangdong. 500+ collaborateurs, 8 lignes de production, 100 000+ unités par mois. Contrôle qualité pour solaire, électroménager et électronique.',
+    ar: 'جولة في مصنع هاوس بلس بمساحة ٢٠٬٠٠٠ م² الحاصل على شهادة ISO 9001 في قوانغدونغ. أكثر من ٥٠٠ موظف و٨ خطوط إنتاج و١٠٠٬٠٠٠+ وحدة شهرياً مع رقابة جودة شاملة.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Factory — 20,000 m² Manufacturing Facility in Guangdong',
-    description: 'Tour the HousePlus manufacturing facility: dedicated production lines for solar, home appliances and 3C electronics, in-house quality lab, and monthly capacity of 100,000+ units.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['factory', 'manufacturing', 'production line', 'quality control', 'OEM ODM', 'Guangdong', 'HousePlus'],
     url: `/${lang}/factory`,
     lang: lang as any,
@@ -34,7 +51,7 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
     {
       name: 'Solar Energy Production Line',
       icon: '☀️',
-      desc: 'Dedicated line for solar panel lamination, inverter assembly and portable power station manufacturing. Capacity: 50,000+ units per month. Equipped with automated cell-string welding and EL imaging inspection.',
+      desc: 'Dedicated lines for solar panel lamination, inverter assembly and portable power station manufacturing. Equipped with automated cell-string welding and EL imaging inspection.',
     },
     {
       name: 'Home Appliance Assembly',
@@ -111,6 +128,27 @@ export default async function FactoryPage({ params }: { params: Promise<{ lang: 
                   priority
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* GEO Data Bar */}
+        <section className="py-10 px-4 bg-blue-700">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-white">
+              {[
+                { value: '2010', label: 'Founded' },
+                { value: '20,000 m²', label: 'Factory Area' },
+                { value: '500+', label: 'Staff' },
+                { value: '100K+', label: 'Units/Month' },
+                { value: '53+', label: 'Countries' },
+                { value: '441+', label: 'Clients' },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-2xl md:text-3xl font-black mb-1">{stat.value}</p>
+                  <p className="text-blue-200 text-xs font-medium">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

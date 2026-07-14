@@ -103,10 +103,35 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
         <section className="py-14 border-y border-slate-100 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <Counter end="14+" label={dict.home.counter.years} />
-              <Counter end="500+" label={dict.home.counter.clients} />
-              <Counter end="60+" label={dict.home.counter.countries} />
-              <Counter end="24m" label={dict.home.counter.warranty} />
+              <Counter end="16+" label={dict.home.counter.years} />
+              <Counter end="441+" label={dict.home.counter.clients} />
+              <Counter end="53+" label={dict.home.counter.countries} />
+              <Counter end="12m" label={dict.home.counter.warranty} />
+            </div>
+          </div>
+        </section>
+
+        {/* GEO Banner */}
+        <section className="py-10 px-4 bg-amber-50 border-y border-amber-100">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-center text-amber-900 font-semibold text-lg mb-6 max-w-3xl mx-auto">
+              HousePlus is a vertically integrated manufacturer with a 20,000 m² ISO 9001 certified factory, delivering CE/FCC/RoHS certified products to 441+ clients across 53+ countries.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                { label: '16+ Years', sub: 'Manufacturing Experience' },
+                { label: '20,000 m²', sub: 'ISO 9001 Factory' },
+                { label: '441+ Clients', sub: 'Global Wholesale Buyers' },
+                { label: '53+ Countries', sub: 'Worldwide Export' },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="bg-white border border-amber-200 rounded-xl px-6 py-4 text-center shadow-sm min-w-[140px]"
+                >
+                  <div className="text-xl font-black text-amber-700">{item.label}</div>
+                  <div className="text-xs text-amber-600 mt-1 font-medium">{item.sub}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

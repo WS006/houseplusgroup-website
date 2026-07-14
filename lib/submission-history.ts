@@ -18,6 +18,7 @@ export interface SubmissionHistory {
 }
 
 const HISTORY_FILE = 'data/submission-history.json';
+const DEDUP_WINDOW_MINUTES = 60; // 1小时内不重复提交相同URL
 
 // 简单文件存储（适用于 Vercel 等无状态环境）
 // 在生产环境中建议使用数据库或专门的存储服务
@@ -27,6 +28,7 @@ import { existsSync, mkdirSync } from 'fs';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const HISTORY_PATH = path.join(DATA_DIR, 'submission-history.json');
+const DEDUP_PATH = path.join(DATA_DIR, 'recent-submissions.json');
 
 // 确保数据目录存在
 function ensureDataDir() {
@@ -52,6 +54,61 @@ export async function getSubmissionHistory(limit = 50): Promise<SubmissionHistor
   }
 }
 
+// 检查URL是否在最近N分钟内已提交
+export async function isRecentlySubmitted(
+  urls: string[],
+  windowMinutes = DEDUP_WINDOW_MINUTES
+): Promise<{ blocked: boolean; recentlySubmitted: string[] }> {
+  try {
+    ensureDataDir();
+    const data = await fs.readFile(DEDUP_PATH, 'utf-8').catch(() => '{}');
+    const dedup: Record<string, number> = JSON.parse(data);
+    const now = Date.now();
+    const windowMs = windowMinutes * 60 * 1000;
+
+    const recentlySubmitted: string[] = [];
+    for (const url of urls) {
+      const lastSubmit = dedup[url];
+      if (lastSubmit && now - lastSubmit < windowMs) {
+        recentlySubmitted.push(url);
+      }
+    }
+
+    return {
+      blocked: recentlySubmitted.length > 0,
+      recentlySubmitted,
+    };
+  } catch {
+    return { blocked: false, recentlySubmitted: [] };
+  }
+}
+
+// 记录URL提交时间（用于防重复）
+export async function recordSubmissions(urls: string[]): Promise<void> {
+  try {
+    ensureDataDir();
+    const data = await fs.readFile(DEDUP_PATH, 'utf-8').catch(() => '{}');
+    const dedup: Record<string, number> = JSON.parse(data);
+    const now = Date.now();
+
+    for (const url of urls) {
+      dedup[url] = now;
+    }
+
+    // 清理超过24小时的记录
+    const cutoff = now - 24 * 60 * 60 * 1000;
+    for (const [url, time] of Object.entries(dedup)) {
+      if (time < cutoff) {
+        delete dedup[url];
+      }
+    }
+
+    await fs.writeFile(DEDUP_PATH, JSON.stringify(dedup, null, 2));
+  } catch (error) {
+    console.error('Failed to record submission dedup:', error);
+  }
+}
+
 // 添加新记录
 export async function addSubmissionHistory(
   urls: string[],
@@ -60,10 +117,10 @@ export async function addSubmissionHistory(
   triggeredBy: SubmissionHistory['triggeredBy'] = 'manual'
 ): Promise<SubmissionHistory> {
   ensureDataDir();
-  
+
   const successCount = results.filter(r => r.success).length;
   const failureCount = results.filter(r => !r.success).length;
-  
+
   const record: SubmissionHistory = {
     id: generateId(),
     timestamp: new Date().toISOString(),
@@ -82,6 +139,9 @@ export async function addSubmissionHistory(
     // 只保留最近 1000 条记录
     const toSave = existing.slice(0, 1000);
     await fs.writeFile(HISTORY_PATH, JSON.stringify(toSave, null, 2));
+
+    // 记录提交时间用于防重复
+    await recordSubmissions(urls);
   } catch (error) {
     console.error('Failed to save submission history:', error);
   }
@@ -92,15 +152,15 @@ export async function addSubmissionHistory(
 // 获取统计信息
 export async function getSubmissionStats() {
   const history = await getSubmissionHistory(1000);
-  
+
   const totalSubmissions = history.length;
   const totalUrls = history.reduce((sum, h) => sum + h.totalUrls, 0);
   const successfulSubmissions = history.filter(h => h.successCount > 0).length;
   const failedSubmissions = history.filter(h => h.failureCount > 0).length;
-  
+
   const engineStats: Record<string, { success: number; failed: number }> = {};
   const engines = ['bing', 'google', 'yandex', 'indexnow'];
-  
+
   for (const engine of engines) {
     engineStats[engine] = { success: 0, failed: 0 };
     for (const record of history) {
@@ -131,6 +191,7 @@ export async function clearSubmissionHistory(): Promise<void> {
   try {
     ensureDataDir();
     await fs.writeFile(HISTORY_PATH, JSON.stringify([], null, 2));
+    await fs.writeFile(DEDUP_PATH, JSON.stringify({}, null, 2));
   } catch (error) {
     console.error('Failed to clear submission history:', error);
     throw error;

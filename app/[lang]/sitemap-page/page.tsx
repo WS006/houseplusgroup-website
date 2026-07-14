@@ -104,6 +104,9 @@ const mainPages = [
   { en: 'Home', es: 'Inicio', de: 'Startseite', fr: 'Accueil', ar: 'الرئيسية' },
   { en: 'About Us', es: 'Sobre Nosotros', de: 'Über Uns', fr: 'À Propos', ar: 'من نحن' },
   { en: 'Products', es: 'Productos', de: 'Produkte', fr: 'Produits', ar: 'المنتجات' },
+  { en: 'Certifications', es: 'Certificaciones', de: 'Zertifizierungen', fr: 'Certifications', ar: 'الشهادات' },
+  { en: 'OEM/ODM', es: 'OEM/ODM', de: 'OEM/ODM', fr: 'OEM/ODM', ar: 'OEM/ODM' },
+  { en: 'Case Studies', es: 'Casos de Éxito', de: 'Fallstudien', fr: 'Études de Cas', ar: 'دراسات الحالة' },
   { en: 'News', es: 'Noticias', de: 'News', fr: 'Actualités', ar: 'الأخبار' },
   { en: 'Factory', es: 'Fábrica', de: 'Fabrik', fr: 'Usine', ar: 'المصنع' },
   { en: 'Service', es: 'Servicio', de: 'Service', fr: 'Service', ar: 'الخدمة' },
@@ -115,8 +118,8 @@ const mainPages = [
 ];
 
 const mainSlugs = [
-  '', 'about', 'products', 'news', 'factory',
-  'service', 'faq', 'contact', 'team', 'careers', 'support',
+  '', 'about-us', 'products', 'certifications', 'oem-odm', 'case-studies',
+  'news', 'factory', 'service', 'faq', 'contact', 'team', 'careers', 'support',
 ];
 
 const legalPages = [
@@ -146,6 +149,21 @@ const productSlugs = [
   'lithium-battery-5kwh',
   'solar-inverter-3kw',
   'solar-panel-500w',
+  // P0 GEO-optimized products (added 2026-06-26)
+  'solar-panel-100w',
+  'portable-power-station-3000w',
+  'foldable-solar-panel-200w',
+  'home-energy-storage-5000w',
+  'power-bank-60w-pd',
+  'lifepo4-battery-12v100ah',
+  'outdoor-power-station-600w',
+  'mppt-controller-40a',
+  'magnetic-power-bank-10000mah',
+  'pure-sine-inverter-2000w',
+  'flexible-solar-panel-400w',
+  'solar-generator-kit-300w',
+  'smart-wifi-plug-meter',
+  'usb-c-cable-100w-5a',
 ];
 
 function getLabel(labelMap: Record<string, string>, lang: string): string {

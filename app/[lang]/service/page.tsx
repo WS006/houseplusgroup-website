@@ -9,9 +9,26 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+
+  const titles: Record<string, string> = {
+    en: 'HousePlus Services — Technical Support & After-Sales',
+    es: 'Servicios de HousePlus — Soporte Técnico y Postventa',
+    de: 'HousePlus Service — Technischer Support & Kundendienst',
+    fr: 'Services HousePlus — Support Technique et SAV',
+    ar: 'خدمات هاوس بلس — الدعم الفني وخدمة ما بعد البيع',
+  };
+
+  const descriptions: Record<string, string> = {
+    en: 'HousePlus provides comprehensive B2B services: OEM manufacturing, private labelling, export logistics, market compliance and dedicated after-sales technical support for wholesale buyers worldwide.',
+    es: 'HousePlus ofrece servicios B2B integrales: fabricación OEM, marca privada, logística de exportación, cumplimiento normativo y soporte técnico postventa para compradores mayoristas.',
+    de: 'HousePlus bietet umfassende B2B-Dienstleistungen: OEM-Fertigung, Private Labelling, Exportlogistik, Marktzulassung und dedizierter technischer Kundendienst für Großhandelskäufer weltweit.',
+    fr: 'HousePlus propose des services B2B complets : fabrication OEM, marque privée, logistique export, conformité réglementaire et support technique après-vente pour clients grossistes.',
+    ar: 'توفر هاوس بلس خدمات شاملة للشركات: تصنيع OEM وملصقات تجارية خاصة ولوجستيات التصدير والامتثال للسوق ودعم تقني متخصص بعد البيع لمشتري الجملة حول العالم.',
+  };
+
   return generateSEOMetadata({
-    title: 'HousePlus Services — OEM/ODM, Private Label & Technical Support',
-    description: 'HousePlus offers comprehensive OEM/ODM manufacturing, private-label branding, custom packaging and dedicated after-sales technical support for global wholesale buyers.',
+    title: titles[lang] || titles['en'],
+    description: descriptions[lang] || descriptions['en'],
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'technical support', 'wholesale services', 'HousePlus'],
     url: `/${lang}/service`,
     lang: lang as any,
@@ -113,6 +130,20 @@ export default async function ServicePage({ params }: { params: Promise<{ lang: 
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               From OEM manufacturing and private-label branding to logistics coordination and after-sales support — <strong>HousePlus</strong> provides a complete service ecosystem for global wholesale partners. Choose <strong>HousePlus</strong> for professional, reliable services.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
+              <div className="bg-white p-4 rounded-xl border border-blue-200 text-center">
+                <div className="text-2xl font-black text-blue-600">15–20 days</div>
+                <div className="text-sm text-slate-600">Sample Lead Time</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-blue-200 text-center">
+                <div className="text-2xl font-black text-blue-600">20–35 days</div>
+                <div className="text-sm text-slate-600">Production Lead Time</div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-blue-200 text-center">
+                <div className="text-2xl font-black text-blue-600">12 months</div>
+                <div className="text-sm text-slate-600">Product Warranty</div>
+              </div>
+            </div>
           </div>
         </section>
 

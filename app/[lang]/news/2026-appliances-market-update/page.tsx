@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: '2026 smart home appliances market update: Explore HousePlus\'s new AI-powered refrigerator, washing machine, dishwasher, and air conditioner line with energy-saving features (A+++ rating), IoT connectivity, and smart home integration capabilities for B2B partners.',
+    en: '2026 smart home appliances market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI-powered, energy-efficient A+++ line. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Actualización del mercado de electrodomésticos inteligentes 2026: Explora la nueva línea de refrigeradores, lavadoras, lavavajillas y acondicionadores de aire impulsados por IA de HousePlus con características de ahorro de energía (calificación A+++), conectividad IoT y capacidades de integración de hogar inteligente para socios B2B.',
     de: 'Marktupdate 2026 für smarte Haushaltsgeräte: Entdecken Sie HousePlus\' neue KI-gesteuerte Kühlschrank-, Waschmaschinen-, Geschirrspüler- und Klimagerätelinie mit Energiesparfunktionen (A+++-Einstufung), IoT-Konnektivität und Smart-Home-Integrationsfähigkeiten für B2B-Partner.',
     fr: 'Mise à jour du marché des appareils électroménagers intelligents 2026: Découvrez la nouvelle gamme de réfrigérateurs, lave-linge, lave-vaisselle et climatiseurs pilotés par l\'IA de HousePlus avec des fonctionnalités d\'économie d\'énergie (notation A+++), une connectivité IoT et des capacités d\'intégration de maison intelligente pour les partenaires B2B.',
@@ -49,7 +49,7 @@ const articleContent: Record<string, any> = {
     sections: [
       {
         heading: 'Smart Home Appliances Market Trends 2026',
-        text: 'The global smart home appliances market is experiencing explosive growth in 2026, driven by energy efficiency regulations, AI adoption, and IoT integration. HousePlus is proud to announce our expanded product portfolio featuring next-generation smart appliances tailored for African, Southeast Asian, and European markets. Our appliances are designed for durability, energy savings, and seamless smart home ecosystem integration.'
+        text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The global smart home appliances market is experiencing explosive growth in 2026, driven by energy efficiency regulations, AI adoption, and IoT integration. HousePlus is proud to announce our expanded product portfolio featuring next-generation smart appliances tailored for African, Southeast Asian, and European markets. Our appliances are designed for durability, energy savings, and seamless smart home ecosystem integration.'
       },
       {
         heading: 'AI-Powered Refrigerator Lineup',
@@ -253,6 +253,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           </div>
         ))}
       </article>
+
+      {/* CTA */}
+      <div className="max-w-4xl mx-auto px-4 pb-12">
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">Partner with HousePlus for Smart Appliances</h3>
+          <p className="text-blue-700 mb-6">Contact our team for refrigerator, washing machine, dishwasher, and air conditioner quotations. MOQ from 200 pcs, flexible OEM/ODM, A+++ energy rating, CE/FCC/RoHS certified.</p>
+          <Link
+            href={`/${lang}/contact`}
+            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Contact HousePlus
+          </Link>
+        </div>
+      </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">

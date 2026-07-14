@@ -38,11 +38,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     'about-us': (parts, lang) => {
       const descriptions: Record<string, string> = {
-        en: `About HousePlus - Leading wholesale manufacturer of solar systems, home appliances, and 3C electronics. 14+ years of experience serving global B2B buyers across Africa, Asia, and Europe.`,
-        es: `Sobre HousePlus - Fabricante líder al por mayor de sistemas solares, electrodomésticos y electrónica 3C. Más de 14 años de experiencia sirviendo a compradores B2B globales en África, Asia y Europa.`,
-        de: `Über HousePlus - Führen Sie Großhandelshersteller von Solaranlagen, Haushaltsgeräten und 3C-Elektronik. Über 14 Jahre Erfahrung in der Betreuung globaler B2B-Käufer in Afrika, Asien und Europa.`,
-        fr: `À propos de HousePlus - Principal fabricant en gros de systèmes solaires, d'appareils électroménagers et d'électronique 3C. Plus de 14 ans d'expérience au service d'acheteurs B2B mondiaux en Afrique, en Asie et en Europe.`,
-        ar: `مع HousePlus - مصنع الجملة الرائد لأحكام الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. أكثر من 14 عامًا من الخبرة في خدمة مشتري B2B العالميين في أفريقيا وآسيا وأوروبا.`,
+        en: `About HousePlus - Leading wholesale manufacturer of solar systems, home appliances, and 3C electronics. 16+ years of experience serving global B2B buyers across Africa, Asia, and Europe.`,
+        es: `Sobre HousePlus - Fabricante líder al por mayor de sistemas solares, electrodomésticos y electrónica 3C. Más de 16 años de experiencia sirviendo a compradores B2B globales en África, Asia y Europa.`,
+        de: `Über HousePlus - Führen Sie Großhandelshersteller von Solaranlagen, Haushaltsgeräten und 3C-Elektronik. Über 16 Jahre Erfahrung in der Betreuung globaler B2B-Käufer in Afrika, Asien und Europa.`,
+        fr: `À propos de HousePlus - Principal fabricant en gros de systèmes solaires, d'appareils électroménagers et d'électronique 3C. Plus de 16 ans d'expérience au service d'acheteurs B2B mondiaux en Afrique, en Asie et en Europe.`,
+        ar: `مع HousePlus - مصنع الجملة الرائد لأحكام الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. أكثر من 16 عامًا من الخبرة في خدمة مشتري B2B العالميين في أفريقيا وآسيا وأوروبا.`,
       };
       return descriptions[lang] || descriptions.en;
     },

@@ -1,13 +1,31 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PRODUCT_DATA, CATEGORY_CONFIG } from '@/lib/product-data';
+import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
 import SEOHead from '@/components/SEOHead';
-import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
+
+// Helpers: varied alt/title based on product name length (deterministic, avoids hydration mismatch)
+function getDetailAlt(product: ProductData, model: string) {
+  const catMap: Record<string, string> = { solar: 'Solar Energy', appliances: 'Home Appliance', electronics: '3C Electronic' };
+  const cat = catMap[product.category] || 'Wholesale';
+  const v = product.name.length % 3;
+  if (v === 0) return `${product.name} (${model}) — HousePlus ${cat} Wholesale`;
+  if (v === 1) return `HousePlus ${cat} Supplier — ${product.name} (${model})`;
+  return `${product.name} (${model}) — CE/RoHS Certified HousePlus ${cat}`;
+}
+function getDetailTitle(product: ProductData, model: string) {
+  const catMap: Record<string, string> = { solar: 'Solar Energy', appliances: 'Home Appliances', electronics: '3C Electronics' };
+  const cat = catMap[product.category] || 'Wholesale';
+  const v = product.name.length % 3;
+  if (v === 0) return `${product.name} | HousePlus OEM/ODM ${cat}`;
+  if (v === 1) return `HousePlus ${product.name} | Professional ${cat} Manufacturer`;
+  return `${product.name} (${model}) | HousePlus ${cat} Export`;
+}
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
 export async function generateMetadata({
@@ -25,16 +43,35 @@ export async function generateMetadata({
   }
   langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}`;
 
+  const titleTemplates: Record<string, string> = {
+    en: `${name} | HousePlus Wholesale — Professional Manufacturer`,
+    es: `${name} | HousePlus al por Mayor — Fabricante Profesional`,
+    de: `${name} | HousePlus Großhandel — Professioneller Hersteller`,
+    fr: `${name} | HousePlus Gros — Fabricant Professionnel`,
+    ar: `${name} | هاوس بلس بالجملة — مصنع احترافي`,
+  };
+
+  const descTemplates: Record<string, string> = {
+    en: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs. Trusted manufacturer since 2010, serving 53+ countries.`,
+    es: `Compre ${name} al por mayor con HousePlus. Certificación CE/RoHS, OEM/ODM disponibles, MOQ 100 unidades. Fabricante de confianza desde 2010 en 53+ países.`,
+    de: `${name} Großhandel bei HousePlus. CE/RoHS-zertifiziert, OEM/ODM verfügbar, MOQ 100 Stück. Zuverlässiger Hersteller seit 2010, beliefert 53+ Länder.`,
+    fr: `Achetez ${name} en gros chez HousePlus. Certification CE/RoHS, OEM/ODM disponibles, MOQ 100 pièces. Fabricant de confiance depuis 2010, présent dans 53+ pays.`,
+    ar: `اشترِ ${name} بالجملة من هاوس بلس. شهادة CE/RoHS مع توفر خدمات OEM/ODM والحد الأدنى للطلب ١٠٠ قطعة. مصنع موثوق منذ ٢٠١٠ يخدم أكثر من ٥٣ دولة.`,
+  };
+
+  const title = titleTemplates[lang] || titleTemplates['en'];
+  const description = descTemplates[lang] || descTemplates['en'];
+
   return {
-    title: `${name} | HousePlus Products — Professional Wholesale`,
-    description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs. Professional manufacturer since 2010.`,
+    title,
+    description,
     alternates: {
       canonical: `${BASE_URL}/${lang}/products/${slug}`,
       languages: langAlternates,
     },
     openGraph: {
-      title: `${name} | HousePlus`,
-      description: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs.`,
+      title,
+      description,
       url: `${BASE_URL}/${lang}/products/${slug}`,
       siteName: 'HousePlus',
       images: product?.coverImage ? [{ url: product.coverImage, width: 900, height: 675, alt: name }] : [],
@@ -76,7 +113,7 @@ export default async function ProductDetailPage({
   // Generate structured data schemas
   const productSchema = generateProductSchema({
     name: product.name,
-    description: product.description,
+    description: product.geoDescription || product.description,
     image: product.coverImage,
     sku,
     url: productUrl,
@@ -88,6 +125,7 @@ export default async function ProductDetailPage({
       : '3C Electronics',
     imageCaption: `HousePlus ${product.name} - Professional wholesale product`,
     imageDescription: `High-quality ${product.name} from HousePlus, CE/RoHS certified, OEM/ODM available`,
+    b2bInfo: product.b2bInfo,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -96,9 +134,13 @@ export default async function ProductDetailPage({
     { name: product.name, url: productUrl },
   ]);
 
+  const faqSchema = product.faq && product.faq.length > 0
+    ? generateFAQSchema(product.faq)
+    : null;
+
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[productSchema, breadcrumbSchema]} />
+      <SEOHead schemas={[productSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]} />
       {/* Breadcrumb */}
       <div className="bg-slate-50 border-b border-slate-100 py-3 px-4">
         <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm text-slate-500">
@@ -118,13 +160,18 @@ export default async function ProductDetailPage({
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50">
               <Image
                 src={product.coverImage}
-                alt={`HousePlus ${product.name}`}
+                alt={getDetailAlt(product, modelSpec?.value || slug.toUpperCase())}
+                title={getDetailTitle(product, modelSpec?.value || slug.toUpperCase())}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 quality={90}
                 priority
               />
+              {/* Hidden SEO-rich context for search engines */}
+              <span className="sr-only" data-seo-alt={product.imageAlt || ''} data-seo-title={product.imageTitle || ''}>
+                {product.imageAlt || ''}
+              </span>
             </div>
             {/* Certifications */}
             <div className="mt-4 flex flex-wrap gap-2">
@@ -164,6 +211,16 @@ export default async function ProductDetailPage({
             <p className="text-slate-600 leading-relaxed text-base">
               {product.description}
             </p>
+
+            {/* GEO Description */}
+            {product.geoDescription && (
+              <div className="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  <span className="font-bold text-amber-700">GEO Fact:</span>{' '}
+                  {product.geoDescription}
+                </p>
+              </div>
+            )}
 
             {/* Specifications Table */}
             {product.specs.length > 0 && (
@@ -244,7 +301,7 @@ export default async function ProductDetailPage({
               {[
                 { label: 'Min. Order', value: '100 pcs' },
                 { label: 'Lead Time', value: '20–35 days' },
-                { label: 'Warranty', value: '24 months' },
+                { label: 'Warranty', value: '12 months' },
               ].map((item) => (
                 <div key={item.label} className="text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
@@ -252,6 +309,24 @@ export default async function ProductDetailPage({
                 </div>
               ))}
             </div>
+
+            {/* FAQ Section */}
+            {product.faq && product.faq.length > 0 && (
+              <div className="mt-8">
+                <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-3">
+                  {product.faq.map((faqItem, i) => (
+                    <div key={i} className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                      <p className="font-semibold text-slate-900 text-sm mb-1">Q: {faqItem.question}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">A: {faqItem.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* HousePlus CTA */}
             <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-200">

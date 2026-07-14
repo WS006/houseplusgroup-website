@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Discover how HousePlus is shaping the future of smart home appliances with energy-efficient, connected, and intuitive solutions for modern living and global wholesale markets.',
+    en: 'Discover 2026 smart home appliance trends from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI integration, energy efficiency, sustainable manufacturing. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Descubra cómo HousePlus está dando forma al futuro de los electrodomésticos inteligentes con soluciones energéticamente eficientes, conectadas e intuitivas para la vida moderna y los mercados mayoristas globales.',
     de: 'Entdecken Sie, wie HousePlus die Zukunft smarter Haushaltsgeräte mit energieeffizienten, vernetzten und intuitiven Lösungen für modernes Wohnen und globale Großhandelsmärkte gestaltet.',
     fr: 'Découvrez comment HousePlus façonne l\'avenir des appareils électroménagers intelligents avec des solutions écoénergétiques, connectées et intuitives pour la vie moderne et les marchés de gros mondiaux.',
@@ -57,7 +57,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
       sections: [
         {
           heading: 'The Connected Home Revolution',
-          text: 'The concept of a smart home is rapidly evolving, with appliances becoming increasingly connected, intelligent, and intuitive. From refrigerators that manage your grocery list to washing machines that optimize cycles based on fabric type, smart home appliances are designed to simplify daily life, enhance comfort, and improve energy efficiency. HousePlus is at the forefront of this revolution, developing and manufacturing innovative smart appliances that integrate seamlessly into the modern home.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The concept of a smart home is rapidly evolving, with appliances becoming increasingly connected, intelligent, and intuitive. From refrigerators that manage your grocery list to washing machines that optimize cycles based on fabric type, smart home appliances are designed to simplify daily life, enhance comfort, and improve energy efficiency. HousePlus is at the forefront of this revolution, developing and manufacturing innovative smart appliances that integrate seamlessly into the modern home.',
           image: '/images/products/kitchen-appliances.jpg',
           imageAlt: 'HousePlus smart kitchen appliances collection',
         },

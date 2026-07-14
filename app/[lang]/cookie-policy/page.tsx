@@ -81,7 +81,7 @@ Please note that disabling certain cookies may impact the functionality of our w
       content: `Different cookies have different retention periods:
 
 - **Session cookies**: Deleted when you close your browser
-- **Analytics cookies**: Typically retained for 13–24 months
+- **Analytics cookies**: Typically retained for 13–12 months
 - **Preference cookies**: Retained for up to 12 months
 - **Marketing cookies**: Typically retained for 30–90 days
 

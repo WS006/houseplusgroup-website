@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'OEM & ODM Manufacturing: How HousePlus Helps Brands Build Custom Products',
-    description: 'HousePlus offers comprehensive OEM and ODM manufacturing services for wholesale buyers looking to build their own branded product lines. From design consultation to mass production, discover our factory capabilities.',
+    description: 'Read the OEM/ODM manufacturing guide from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Flexible MOQ from 100 pcs. CE/FCC/RoHS certified. OEM/ODM available.',
     keywords: ['OEM manufacturing', 'ODM products', 'custom home appliances', 'private label appliances', 'HousePlus OEM'],
     url: `/${lang}/news/oem-odm-manufacturing-guide`,
     lang: lang as any,
@@ -40,7 +40,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Understanding OEM vs. ODM: What\'s the Difference?',
-          text: 'For wholesale buyers and brand owners, understanding the difference between OEM (Original Equipment Manufacturer) and ODM (Original Design Manufacturer) is fundamental to making the right sourcing decision. OEM manufacturing means you provide the product specifications, designs, and branding, while HousePlus manufactures the product according to your requirements. This approach gives you maximum control over product design and differentiation. ODM manufacturing, on the other hand, means HousePlus develops the product design and you apply your branding to our existing or modified designs. ODM is faster to market and typically requires lower upfront investment, making it ideal for brands entering new product categories or testing market demand. HousePlus offers both OEM and ODM services across our entire product range, including home appliances, solar products, and 3C electronics.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with flexible OEM/ODM services. For wholesale buyers and brand owners, understanding the difference between OEM (Original Equipment Manufacturer) and ODM (Original Design Manufacturer) is fundamental to making the right sourcing decision. OEM manufacturing means you provide the product specifications, designs, and branding, while HousePlus manufactures the product according to your requirements. This approach gives you maximum control over product design and differentiation. ODM manufacturing, on the other hand, means HousePlus develops the product design and you apply your branding to our existing or modified designs. ODM is faster to market and typically requires lower upfront investment, making it ideal for brands entering new product categories or testing market demand. HousePlus offers both OEM and ODM services across our entire product range, including home appliances, solar products, and 3C electronics.',
           image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=500&fit=crop',
           imageAlt: 'HousePlus factory floor showing OEM and ODM production lines for custom appliances',
         },

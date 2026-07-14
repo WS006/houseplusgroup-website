@@ -3,6 +3,8 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ServiceWidget from '@/components/ServiceWidget';
+import ChatBot from '@/components/ChatBot';
+import BackToTop from '@/components/BackToTop';
 import '../globals.css';
 import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n-config';
@@ -42,6 +44,8 @@ export default async function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer lang={lang} />
         <ServiceWidget />
+        <ChatBot />
+        <BackToTop />
       </body>
     </html>
   );

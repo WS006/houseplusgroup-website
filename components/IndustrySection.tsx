@@ -104,7 +104,7 @@ export default function IndustrySection({
               </div>
               <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Warranty</p>
-                <p className="text-lg font-black text-slate-900">24 Months</p>
+                <p className="text-lg font-black text-slate-900">12 Months</p>
               </div>
             </div>
 

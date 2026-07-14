@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   return generateSEOMetadata({
     title: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
-    description: 'Understanding international energy efficiency standards is critical for wholesale buyers. HousePlus products meet CE, FCC, RoHS, and ISO 9001 requirements, ensuring compliance and market access worldwide.',
+    description: 'Learn about energy efficiency standards for appliances from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. EU Ecodesign, US DOE, China GB. CE/FCC/RoHS certified.',
     keywords: ['energy efficiency appliances', 'CE certification', 'RoHS compliance', 'HousePlus certifications', 'ISO 9001 appliances'],
     url: `/${lang}/news/energy-efficiency-standards-appliances`,
     lang: lang as any,
@@ -40,7 +40,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       sections: [
         {
           heading: 'Why Energy Efficiency Standards Matter for Wholesale Buyers',
-          text: 'In today\'s global marketplace, energy efficiency is no longer just a selling point — it\'s a regulatory requirement. Governments across Europe, North America, and Asia have implemented increasingly stringent energy efficiency standards for home appliances, consumer electronics, and solar products. For wholesale buyers and distributors, understanding these standards is essential to ensure market access, avoid costly recalls, and meet the expectations of environmentally conscious consumers. HousePlus has built its entire product development philosophy around compliance with international energy efficiency standards, ensuring that every product we manufacture is ready for global markets from day one.',
+          text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified appliances. Energy efficiency has become a critical factor in the global home appliances market. With rising electricity costs and increasing environmental awareness, consumers and businesses alike are prioritizing appliances that deliver maximum performance with minimal energy consumption. Understanding and complying with international energy efficiency standards is not just a regulatory requirement for manufacturers and exporters—it is a significant competitive advantage.',
           image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=500&fit=crop',
           imageAlt: 'Energy efficient LED lighting and smart home devices reducing power consumption',
         },

@@ -4,10 +4,37 @@ import type { NextRequest } from 'next/server';
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const defaultLocale = 'en';
 
+// Admin protection config
+const ADMIN_PATH = '/admin';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'HousePlus2026!';
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const segments = pathname.split('/');
   const firstSegment = segments[1];
+
+  // Admin path protection
+  if (pathname.startsWith(ADMIN_PATH)) {
+    const authHeader = request.headers.get('authorization');
+    const basicAuth = authHeader?.split(' ')[1];
+
+    if (!basicAuth) {
+      return new NextResponse('Authentication required', {
+        status: 401,
+        headers: { 'WWW-Authenticate': 'Basic realm="Admin Panel"' },
+      });
+    }
+
+    const decoded = Buffer.from(basicAuth, 'base64').toString('utf-8');
+    const [user, pass] = decoded.split(':');
+
+    if (pass !== ADMIN_PASSWORD) {
+      return new NextResponse('Invalid credentials', {
+        status: 401,
+        headers: { 'WWW-Authenticate': 'Basic realm="Admin Panel"' },
+      });
+    }
+  }
 
   // Root path: redirect to /en
   if (pathname === '/') {
@@ -22,7 +49,7 @@ export function middleware(request: NextRequest) {
     url.pathname = `/${defaultLocale}`;
     return NextResponse.redirect(url, 302);
   }
-  
+
   if (validLangs.includes(firstSegment) && segments[2] === 'home') {
     const url = request.nextUrl.clone();
     url.pathname = `/${firstSegment}`;
@@ -32,9 +59,9 @@ export function middleware(request: NextRequest) {
   // If first segment exists but is not a valid language code, rewrite to 404
   // Skip static files and api routes
   if (
-    firstSegment && 
-    !validLangs.includes(firstSegment) && 
-    !pathname.includes('.') && 
+    firstSegment &&
+    !validLangs.includes(firstSegment) &&
+    !pathname.includes('.') &&
     !pathname.startsWith('/api/') &&
     !pathname.startsWith('/_next/')
   ) {
@@ -58,3 +85,10 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   return response;
 }
+
+export const config = {
+  matcher: [
+    // Skip all internal paths (_next, static files, api, etc.)
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2|ttf|eot|json|xml|txt|robots|sitemap)).*)',
+  ],
+};

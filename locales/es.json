@@ -4,7 +4,7 @@
     "description": "HousePlus: Fabricante profesional de sistemas solares, electrodomésticos y electrónica 3C. Servicios mayoristas y OEM/ODM globales. Contáctenos para precios competitivos y soluciones personalizadas."
   },
   "meta": {
-    "homeDescription": "HousePlus es un fabricante profesional de sistemas solares, electrodomésticos y electrónica 3C de alta calidad para venta al por mayor global y OEM/ODM. Explore nuestros productos y solicite una cotización hoy.",
+    "homeDescription": "HousePlus es un fabricante profesional de sistemas solares, electrodomésticos y electrónica 3C de alta calidad para venta al por mayor global y OEM/ODM. Desde 2010, operamos una fábrica certificada ISO 9001 de 20,000 m², atendiendo a 441+ clientes mayoristas en 53+ países. MOQ desde 100 piezas, plazo de entrega 20–35 días, garantía de 24 meses. Certificaciones CE, FCC y RoHS. Explore nuestros productos y solicite una cotización hoy.",
     "keywords": "sistemas solares, electrodomésticos, electrónica 3C, venta al por mayor, OEM, ODM"
   },
   "hero": {
@@ -24,7 +24,7 @@
   "home": {
     "tagline": "HousePlus - Fabricante Mayorista Global B2B",
     "mainTitle": "Grupo HousePlus - Proveedor Mayorista Profesional",
-    "mainDescription": "Desde 2010, HousePlus ha sido un fabricante confiable de sistemas de energía solar, electrodomésticos y electrónica 3C. Atendemos a compradores mayoristas en más de 60 países, ofreciendo servicios OEM/ODM con certificaciones CE/FCC/RoHS y MOQ desde 100 unidades.",
+    "mainDescription": "Desde 2010, HousePlus ha sido un fabricante confiable de sistemas de energía solar, electrodomésticos y electrónica 3C. Atendemos a compradores mayoristas en más de 53 países, ofreciendo servicios OEM/ODM con certificaciones CE/FCC/RoHS y MOQ desde 100 unidades.",
     "browseProducts": "Ver Todos los Productos",
     "requestQuote": "Solicitar Cotización",
     "counter": {
@@ -52,7 +52,7 @@
     ],
     "whyChoose": {
       "title": "Por Qué los Compradores Globales Eligen HousePlus",
-      "subtitle": "Con más de 14 años de experiencia en fabricación y servicio receptivo, HousePlus entrega productos confiables a tiempo, siempre. Su éxito es nuestro compromiso.",
+      "subtitle": "Con más de 16 años de experiencia en fabricación y servicio receptivo, HousePlus entrega productos confiables a tiempo, siempre. Su éxito es nuestro compromiso.",
       "features": [
         {
           "icon": "Factory",
@@ -128,7 +128,7 @@
     "companyName": "HousePlus Group Co., Ltd.",
     "email": "info@houseplus-ch.com",
     "phone": "+86-123-4567-890",
-    "address": "No. 88, Innovation Road, Chancheng District, Foshan, Guangdong, China",
+    "address": "No. 88, Innovation Road, Zhongshan, Guangdong, China",
     "serviceAreas": "Europa, África, Sudeste Asiático, América del Norte"
   }
 }

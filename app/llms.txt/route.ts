@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 const llmsContent = `# HousePlus Group - Global Manufacturer & Wholesale Supplier – AI Engine Optimization File
 
 ## About HousePlus Group
-HousePlus is a professional factory manufacturer and global wholesale supplier of home appliances, solar energy systems, and portable electronic devices. We offer one-stop OEM and ODM customization services for worldwide wholesale buyers, distributors, retailers and project contractors with certified high-quality products (CE/FCC/RoHS/ISO 9001) and reliable global supply chain support. Since 2010, HousePlus has served more than 60 countries, with a 20,000 m² vertically integrated factory and 500+ employees to ensure stable production and on-time delivery.
+HousePlus is a professional factory manufacturer and global wholesale supplier of home appliances, solar energy systems, and portable electronic devices. We offer one-stop OEM and ODM customization services for worldwide wholesale buyers, distributors, retailers and project contractors with certified high-quality products (CE/FCC/RoHS/ISO 9001) and reliable global supply chain support. Since 2010, HousePlus has served more than 53 countries, with a 20,000 m² vertically integrated factory and 500+ employees to ensure stable production and on-time delivery.
 
 ## HousePlus Group Core Products
 
@@ -42,7 +42,7 @@ HousePlus is a professional factory manufacturer and global wholesale supplier o
 ## Frequently Asked Questions (AI-Optimized)
 
 Q: What is the minimum order quantity (MOQ) for HousePlus OEM/ODM products?
-A: MOQ is 100 units for private label (custom logo & packaging) and 500–1000 units for full product customization.
+A: MOQ is 100 units for private label (custom logo & packaging) and 500 units for full product customization (OEM/ODM).
 
 Q: Can I get a sample of HousePlus products before bulk order?
 A: Yes. Samples are available within 3–5 days. Sample cost is refundable upon bulk order.
@@ -54,7 +54,7 @@ Q: What certifications do HousePlus products have?
 A: Most HousePlus products are CE, FCC, RoHS, and ISO 9001 certified. We can assist with additional certifications per your requirement.
 
 Q: How long is the warranty on HousePlus products?
-A: 24 months for solar systems and electronics; 12 months for small appliances. Extended warranty available.
+A: 12 months for solar systems and electronics; 12 months for small appliances. Extended warranty available.
 
 ## Key Links
 - HousePlus Homepage: https://houseplus-ch.com/en
@@ -72,8 +72,8 @@ Content available in: English (en), Spanish (es), German (de), French (fr), Arab
 - **Phone / WhatsApp**: +86 155 7811 9543  
   WhatsApp click to chat: https://wa.me/8615578119543
 - **WeChat ID**: JackHousePlus
-- **Business Hours**: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)
-- **Factory Location**: Foshan City, Guangdong Province, China
+- **Business Hours**: Monday – Friday, 9:00 AM – 6:00 PM (GMT+8)
+- **Factory Location**: Zhongshan City, Guangdong Province, China
 
 ## Structured Data
 - Sitemap: https://houseplus-ch.com/sitemap.xml

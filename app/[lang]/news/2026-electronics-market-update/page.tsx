@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
 
   const titles: Record<string, string> = {
-    en: 'Stay ahead in 2026 with HousePlus\'s latest 3C electronics - premium audio devices, smart wearables, and innovative power solutions for B2B distributors.',
+    en: '2026 3C electronics market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. TWS, smart wearables, power banks. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
     de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
     fr: 'Tendances du marché mondial des appareils électroménagers intelligents 2026 et guide d\'approvisionnement B2B',
@@ -48,7 +48,7 @@ const articleContent: Record<string, any> = {
     sections: [
       {
         heading: 'Introduction: Industry Trends in 2026',
-        text: 'The market continues to evolve in 2026, with HousePlus at the forefront of innovation. This article explores our latest developments and what they mean for B2B buyers worldwide.'
+        text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified 3C electronics. The market continues to evolve in 2026, with HousePlus at the forefront of innovation. This article explores our latest developments and what they mean for B2B buyers worldwide.'
       },
       {
         heading: 'Product Innovation and Quality',
@@ -252,6 +252,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           </div>
         ))}
       </article>
+
+      {/* CTA */}
+      <div className="max-w-4xl mx-auto px-4 pb-12">
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">Source 3C Electronics from HousePlus</h3>
+          <p className="text-blue-700 mb-6">Contact our team for TWS earphones, smart wearables, and power bank quotations. MOQ from 100 pcs, 20–35 day lead time, CE/FCC/RoHS certified. OEM/ODM available.</p>
+          <Link
+            href={`/${lang}/contact`}
+            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Contact HousePlus
+          </Link>
+        </div>
+      </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
