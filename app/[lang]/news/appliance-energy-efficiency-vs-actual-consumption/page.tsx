@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import { generateImageObjectSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
 
@@ -44,8 +45,8 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technical Team',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Energy efficiency labels on home appliances with power consumption monitoring',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImageAlt: 'Comparison chart showing 15-30% variance between rated and actual home appliance energy consumption',
     sections: [
       {
         heading: 'Labels Underestimate Real Consumption by 15-30%',
@@ -95,8 +96,8 @@ const articleContent: Record<string, any> = {
     authorName: 'Equipo Técnico HousePlus',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Etiquetas de eficiencia energética en electrodomésticos con monitoreo de consumo',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImageAlt: 'Gráfico comparativo que muestra la variación del 15-30% entre el consumo nominal y real de electrodomésticos',
     sections: [
       {
         heading: 'La Brecha del 15-30%: Etiqueta vs Consumo Real',
@@ -146,8 +147,8 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technikteam',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Energieeffizienzlabel an Haushaltsgeräten mit Stromverbrauchsüberwachung',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImageAlt: 'Vergleichsdiagramm mit 15-30% Abweichung zwischen Nenn- und tatsächlichem Haushaltsgeräteverbrauch',
     sections: [
       {
         heading: 'Die 15-30% Lücke: Label vs Realverbrauch',
@@ -197,8 +198,8 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe Technique HousePlus',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Étiquettes d\'efficacité énergétique sur appareils avec surveillance de consommation',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImageAlt: 'Graphique comparatif montrant écart 15-30% entre consommation nominale et réelle des appareils ménagers',
     sections: [
       {
         heading: 'L\'écart de 15-30%: étiquette vs consommation réelle',
@@ -248,8 +249,8 @@ const articleContent: Record<string, any> = {
     authorName: 'الفريق التقني HousePlus',
     datePublished: '2026-02-21',
     dateModified: '2026-02-21',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
-    heroImageAlt: 'ملصقات كفاءة الطاقة على الأجهزة المنزلية مع مراقبة استهلاك الطاقة',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/appliance-energy-rating-vs-actual-1200x675.webp',
+    heroImageAlt: 'مخطط مقارنة يُظهر تباين 15-30% بين الاستهلاك المُقَنن والفعلي للأجهزة المنزلية',
     sections: [
       {
         heading: 'الفجوة 15-30%: الملصق مقابل الاستهلاك الفعلي',
@@ -318,9 +319,17 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     lang,
   });
 
+  const imageObjectSchema = generateImageObjectSchema({
+    url: content.heroImage,
+    caption: content.heroImageAlt,
+    description: 'Comparison of home appliance energy efficiency ratings vs actual consumption showing 15-30% variance',
+    width: 1200,
+    height: 675,
+  });
+
   return (
     <main className="min-h-screen bg-white">
-      <SchemaRenderer schemas={[articleSchema, buildBreadcrumbSchema(breadcrumbs)]} />
+      <SchemaRenderer schemas={[articleSchema, imageObjectSchema, buildBreadcrumbSchema(breadcrumbs)]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
         <Image
           src={content.heroImage}

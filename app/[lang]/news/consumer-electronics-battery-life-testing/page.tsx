@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import { generateImageObjectSchema } from '@/lib/schema-generator';
 
 export const dynamic = 'force-dynamic';
 
@@ -44,8 +45,8 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technical Team',
     datePublished: '2026-07-12',
     dateModified: '2026-07-12',
-    heroImage: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Battery testing laboratory with charge-discharge equipment and monitoring systems',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/battery-cycle-life-test-equipment-1200x675.webp',
+    heroImageAlt: 'Battery cycle life testing equipment performing 1C charge-discharge cycles at 25°C standard conditions for consumer electronics',
     sections: [
       {
         heading: '80% Capacity Retention Defines End-of-Life',
@@ -95,8 +96,8 @@ const articleContent: Record<string, any> = {
     authorName: 'Equipo Técnico HousePlus',
     datePublished: '2026-06-08',
     dateModified: '2026-06-08',
-    heroImage: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Laboratorio de prueba de baterías con equipo de carga-descarga y sistemas de monitoreo',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/battery-cycle-life-test-equipment-1200x675.webp',
+    heroImageAlt: 'Equipo de prueba de ciclos de vida de baterías 1C carga-descarga a 25°C para electrónica de consumo',
     sections: [
       {
         heading: '80% de Retención Define Fin de Vida',
@@ -146,8 +147,8 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technikteam',
     datePublished: '2026-06-08',
     dateModified: '2026-06-08',
-    heroImage: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Batterieprüflabor mit Lade-Entlade-Geräten und Überwachungssystemen',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/battery-cycle-life-test-equipment-1200x675.webp',
+    heroImageAlt: 'Batterie-Zyklenlebensdauer-Prüfgerät mit 1C Lade-Entlade bei 25°C Standardbedingungen für Unterhaltungselektronik',
     sections: [
       {
         heading: '80% Kapazitätserhalt Definiert Lebensende',
@@ -197,8 +198,8 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe Technique HousePlus',
     datePublished: '2026-06-08',
     dateModified: '2026-06-08',
-    heroImage: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Laboratoire de test de batteries avec équipement charge-décharge et systèmes de surveillance',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/battery-cycle-life-test-equipment-1200x675.webp',
+    heroImageAlt: 'Équipement test cycles de vie batterie 1C charge-décharge à 25°C pour électronique grand public',
     sections: [
       {
         heading: '80% de Rétention Définit Fin de Vie',
@@ -248,8 +249,8 @@ const articleContent: Record<string, any> = {
     authorName: 'الفريق التقني HousePlus',
     datePublished: '2026-06-08',
     dateModified: '2026-06-08',
-    heroImage: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1200&h=675&fit=crop',
-    heroImageAlt: 'مختبر اختبار البطاريات مع معدات الشحن والتفريغ وأنظمة المراقبة',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/battery-cycle-life-test-equipment-1200x675.webp',
+    heroImageAlt: 'معدات اختبار دورة حياة البطارية 1C شحن-تفريغ عند 25 درجة مئوية للإلكترونيات الاستهلاكية',
     sections: [
       {
         heading: '80% من الاحتفاظ بالسعة يحدد نهاية العمر',
@@ -318,9 +319,17 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     lang,
   });
 
+  const imageObjectSchema = generateImageObjectSchema({
+    url: content.heroImage,
+    caption: content.heroImageAlt,
+    description: 'Battery cycle life testing equipment performing 1C charge-discharge cycles at 25°C standard test conditions',
+    width: 1200,
+    height: 675,
+  });
+
   return (
     <main className="min-h-screen bg-white">
-      <SchemaRenderer schemas={[articleSchema, buildBreadcrumbSchema(breadcrumbs)]} />
+      <SchemaRenderer schemas={[articleSchema, imageObjectSchema, buildBreadcrumbSchema(breadcrumbs)]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
         <Image
           src={content.heroImage}

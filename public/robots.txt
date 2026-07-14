@@ -27,9 +27,29 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
+# Googlebot-Image specific rules (for Google Images indexing)
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: /_next/image
+Disallow: /admin/
+Crawl-delay: 0
+
 # Bingbot specific rules
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
+
+# Bingbot-Image specific rules
+User-agent: Bingbot-Image
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Baidu image crawler
+User-agent: Baiduspider-image
+Allow: /
+Allow: /images/
 Crawl-delay: 1
 
 # AI Training Crawlers - Allow (for GEO/AEO optimization)
@@ -75,3 +95,4 @@ Disallow: /
 # Sitemap references
 Sitemap: https://www.houseplus-ch.com/sitemap.xml
 Sitemap: https://www.houseplus-ch.com/feed.xml
+Sitemap: https://www.houseplus-ch.com/image-sitemap.xml

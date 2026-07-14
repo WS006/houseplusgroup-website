@@ -6,6 +6,8 @@ import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
 
+import { generateImageObjectSchema } from '@/lib/schema-generator';
+
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -44,8 +46,8 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technical Team',
     datePublished: '2026-07-03',
     dateModified: '2026-07-03',
-    heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Solar energy storage system with battery banks and monitoring equipment',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImageAlt: 'LiFePO4 battery bank for industrial solar storage achieving 95% round-trip efficiency and 6000 cycle life',
     sections: [
       {
         heading: 'Round-Trip Efficiency Determines System Economics',
@@ -146,8 +148,8 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Technikteam',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Solarenergiespeichersystem mit Batteriebänken und Überwachungsgeräten',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImageAlt: 'LiFePO4-Batteriebank für industrielle Solarspeicherung mit 95% Round-Trip-Effizienz und 6000 Zyklen',
     sections: [
       {
         heading: 'Rundreiseeffizienz: Die zentrale Leistungskennzahl',
@@ -197,8 +199,8 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe Technique HousePlus',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1200&h=675&fit=crop',
-    heroImageAlt: 'Système de stockage d\'énergie solaire avec bancs de batteries et équipement de surveillance',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImageAlt: 'Banque de batteries LiFePO4 pour stockage solaire industriel avec 95% rendement aller-retour et 6000 cycles',
     sections: [
       {
         heading: 'Efficacité Aller-Retour: La Métrique de Performance Principale',
@@ -248,8 +250,8 @@ const articleContent: Record<string, any> = {
     authorName: 'الفريق التقني HousePlus',
     datePublished: '2026-04-12',
     dateModified: '2026-04-12',
-    heroImage: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=1200&h=675&fit=crop',
-    heroImageAlt: 'نظام تخزين الطاقة الشمسية مع بنوك البطاريات ومعدات المراقبة',
+    heroImage: 'https://www.houseplus-ch.com/images/articles/solar-lifepo4-battery-storage-1200x675.webp',
+    heroImageAlt: 'بنك بطاريات LiFePO4 لتخزين الطاقة الشمسية الصناعية بكفاءة ذهاب وإياب 95% و6000 دورة',
     sections: [
       {
         heading: 'كفاءة الذهاب والإياب: مقياس الأداء الأساسي',
@@ -318,9 +320,17 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     lang,
   });
 
+  const imageObjectSchema = generateImageObjectSchema({
+    url: content.heroImage,
+    caption: content.heroImageAlt,
+    description: 'LiFePO4 battery bank for industrial solar storage achieving 95% round-trip efficiency and 6000 cycle life',
+    width: 1200,
+    height: 675,
+  });
+
   return (
     <main className="min-h-screen bg-white">
-      <SchemaRenderer schemas={[articleSchema, buildBreadcrumbSchema(breadcrumbs)]} />
+      <SchemaRenderer schemas={[articleSchema, imageObjectSchema, buildBreadcrumbSchema(breadcrumbs)]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
         <Image
           src={content.heroImage}
