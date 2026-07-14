@@ -44,7 +44,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial Team',
     datePublished: '2026-05-16',
     dateModified: '2026-05-16',
-    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'HousePlus smart home appliances showcase',
     sections: [
       {
@@ -74,7 +74,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Equipo Editorial de HousePlus',
     datePublished: '2026-05-16',
     dateModified: '2026-05-16',
-    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'Exhibición de electrodomésticos inteligentes HousePlus',
     sections: [
       {
@@ -104,7 +104,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Redaktionsteam',
     datePublished: '2026-05-16',
     dateModified: '2026-05-16',
-    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'HousePlus Smart Home Geräte Ausstellung',
     sections: [
       {
@@ -134,7 +134,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Équipe éditoriale HousePlus',
     datePublished: '2026-05-16',
     dateModified: '2026-05-16',
-    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'Présentation des appareils électroménagers intelligents HousePlus',
     sections: [
       {
@@ -164,7 +164,7 @@ const articleContent: Record<string, any> = {
     authorName: 'فريق تحرير HousePlus',
     datePublished: '2026-05-16',
     dateModified: '2026-05-16',
-    heroImage: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     heroImageAlt: 'عرض الأجهزة المنزلية الذكية HousePlus',
     sections: [
       {

@@ -85,7 +85,7 @@ export default async function RegionsPage({ params }: { params: Promise<{ lang: 
           <div className="max-w-6xl mx-auto">
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/site/global-world-map-markets.jpg"
+                src="https://images.houseplus-ch.com/images/site/global-world-map-markets.jpg"
                 alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 fill
                 className="object-cover"

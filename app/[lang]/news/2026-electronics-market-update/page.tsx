@@ -43,7 +43,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial',
     datePublished: '2026-04-17',
     dateModified: '2026-04-17',
-    heroImage: '/images/articles/electronics/electronics-headphones-audio.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/electronics/electronics-headphones-audio.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
       {
@@ -73,7 +73,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial',
     datePublished: '2026-04-17',
     dateModified: '2026-04-17',
-    heroImage: '/images/articles/electronics/electronics-headphones-audio.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/electronics/electronics-headphones-audio.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
       {
@@ -103,7 +103,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial',
     datePublished: '2026-04-17',
     dateModified: '2026-04-17',
-    heroImage: '/images/articles/electronics/electronics-headphones-audio.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/electronics/electronics-headphones-audio.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
       {
@@ -133,7 +133,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial',
     datePublished: '2026-04-17',
     dateModified: '2026-04-17',
-    heroImage: '/images/articles/electronics/electronics-headphones-audio.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/electronics/electronics-headphones-audio.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
       {
@@ -163,7 +163,7 @@ const articleContent: Record<string, any> = {
     authorName: 'HousePlus Editorial',
     datePublished: '2026-04-17',
     dateModified: '2026-04-17',
-    heroImage: '/images/articles/electronics/electronics-headphones-audio.jpg',
+    heroImage: 'https://images.houseplus-ch.com/images/articles/electronics/electronics-headphones-audio.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
     sections: [
       {

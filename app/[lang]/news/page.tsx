@@ -64,7 +64,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   const articles = [
     {
       slug: 'consumer-electronics-battery-life-testing',
-      image: '/images/articles/electronics/battery-testing-lab-equipment.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/electronics/battery-testing-lab-equipment.jpg',
       imageAlt: 'Battery testing laboratory with charge-discharge equipment',
       title: {
         en: 'Battery Cycle Life Testing Standards: Technical Analysis for Consumer Electronics',
@@ -84,7 +84,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'appliance-energy-efficiency-vs-actual-consumption',
-      image: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'Energy efficiency labels on home appliances with power monitoring',
       title: {
         en: 'Appliance Energy Efficiency Ratings vs Actual Consumption: Technical Analysis',
@@ -104,7 +104,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'solar-storage-efficiency-optimization-guide',
-      image: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
       imageAlt: 'Solar energy storage system with battery banks and monitoring',
       title: {
         en: 'Solar Storage Efficiency Optimization: Technical Guide for Industrial Systems',
@@ -124,7 +124,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: '2026-solar-market-update',
-    image: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    image: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
     imageAlt: 'HousePlus solar panels and energy storage solutions',
     title: {
     en: 'Solar Energy Innovations in 2026: HousePlus Leading the Industry',
@@ -144,7 +144,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   },
   {
     slug: '2026-appliances-market-update',
-    image: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+    image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
     imageAlt: 'HousePlus smart home appliances lineup',
     title: {
     en: 'Smart Home Appliances 2026: Energy-Efficient Designs for Global Markets',
@@ -164,7 +164,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   },
   {
     slug: '2026-electronics-market-update',
-    image: '/images/articles/electronics/electronics-headphones-audio.jpg',
+    image: 'https://images.houseplus-ch.com/images/articles/electronics/electronics-headphones-audio.jpg',
     imageAlt: 'HousePlus 3C electronics product showcase',
     title: {
     en: '3C Electronics Trends 2026: HousePlus Wholesale Innovation',
@@ -185,7 +185,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
 
     {
       slug: '2026-smart-home-appliances-market-guide',
-      image: '/images/articles/appliances/smart-home-living-room.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/appliances/smart-home-living-room.jpg',
       imageAlt: 'Modern smart kitchen with integrated appliances, representing future home technology',
       title: {
         en: '2026 Global Smart Home Appliance Market Trends & B2B Procurement Guide',
@@ -205,7 +205,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'solar-energy-storage-industrial-manufacturing',
-      image: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
       imageAlt: 'Large industrial facility with solar panels on the roof and energy storage units, symbolizing sustainable manufacturing',
       title: {
         en: 'Solar Energy Storage Systems in Industrial Manufacturing: A Sustainable Approach',
@@ -225,7 +225,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'oem-odm-manufacturing-guide',
-      image: '/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-manufacturing-line.jpg',
       imageAlt: 'OEM ODM manufacturing process at HousePlus factory - custom product development',
       title: {
         en: 'OEM & ODM Manufacturing: How HousePlus Helps Brands Build Custom Products',
@@ -245,7 +245,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'energy-efficiency-standards-appliances',
-      image: '/images/articles/appliances/home-appliance-kitchen-modern.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-kitchen-modern.jpg',
       imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
       title: {
         en: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
@@ -265,7 +265,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'global-wholesale-guide-home-appliances',
-      image: '/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
       imageAlt: 'Global wholesale distribution of home appliances - HousePlus international trade',
       title: {
         en: 'The Complete Guide to Wholesale Home Appliances: How HousePlus Supports Global Buyers',
@@ -285,7 +285,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'advanced-manufacturing-home-appliances',
-      image: '/images/articles/service/factory-assembly-workers.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/service/factory-assembly-workers.jpg',
       imageAlt: 'HousePlus advanced home appliance manufacturing facility',
       title: {
         en: 'Advanced Manufacturing in Home Appliances: HousePlus Quality',
@@ -305,7 +305,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'the-future-of-smart-home-appliances',
-      image: '/images/articles/appliances/smart-kitchen-appliances-modern.jpg',
+      image: 'https://images.houseplus-ch.com/images/articles/appliances/smart-kitchen-appliances-modern.jpg',
       imageAlt: 'Modern smart home appliances from HousePlus',
       title: {
         en: 'The Future of Smart Home Appliances: HousePlus Innovations',

@@ -128,7 +128,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="/images/about/houseplus-group-factory.jpg"
+                  src="https://images.houseplus-ch.com/images/about/houseplus-group-factory.jpg"
                   alt="HousePlus Group Factory - Manufacturing solar energy systems, home appliances and 3C electronics in Guangdong, China since 2010"
                   fill
                   className="object-cover"
@@ -250,7 +250,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="/images/about/houseplus-automated-manufacturing-facility.jpg"
+                  src="https://images.houseplus-ch.com/images/about/houseplus-automated-manufacturing-facility.jpg"
                   alt="HousePlus automated manufacturing facility - Professional production of solar energy systems, home appliances and 3C electronics with quality control"
                   fill
                   className="object-cover"

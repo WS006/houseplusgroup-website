@@ -281,12 +281,12 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {subStories.map((s: any, idx: number) => {
               const images = [
-                '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
-                '/images/articles/solar/solar-panel-installation-rooftop.jpg',
-                '/images/articles/solar/solar-panel-sunset-industrial.jpg',
-                '/images/articles/solar/solar-power-station-outdoor.jpg',
-                '/images/site/factory-worker-precision.jpg',
-                '/images/articles/solar/solar-energy-farm-panels.jpg',
+                'https://images.houseplus-ch.com/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+                'https://images.houseplus-ch.com/images/articles/solar/solar-panel-installation-rooftop.jpg',
+                'https://images.houseplus-ch.com/images/articles/solar/solar-panel-sunset-industrial.jpg',
+                'https://images.houseplus-ch.com/images/articles/solar/solar-power-station-outdoor.jpg',
+                'https://images.houseplus-ch.com/images/site/factory-worker-precision.jpg',
+                'https://images.houseplus-ch.com/images/articles/solar/solar-energy-farm-panels.jpg',
               ];
               const productImg = s.content?.image?.filename || images[idx % images.length];
 
