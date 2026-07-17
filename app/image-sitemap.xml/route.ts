@@ -293,9 +293,19 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-panel-500w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-panel-3.jpg`,
-        title: '500W Monocrystalline Solar Panel',
-        caption: 'High-efficiency 500W monocrystalline solar panel for commercial installations',
+        loc: `${IMAGE_BASE_URL}/products/solar-panel-500w.jpg`,
+        title: '500W Monocrystalline Solar Panel HP-SP500',
+        caption: 'High-efficiency 500W monocrystalline solar panel with 21.5% conversion rate for commercial and off-grid installations',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/solar-inverter-3kw',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-inverter-3kw.jpg`,
+        title: '3kW Pure Sine Wave Solar Inverter HP-INV3000',
+        caption: '3kW pure sine wave solar inverter with built-in MPPT charge controller for grid-tie and off-grid operation',
       },
     ],
   },
@@ -303,19 +313,59 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/lithium-battery-5kwh',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/articles/solar/solar-energy-storage-battery-bank.jpg`,
-        title: '5kWh LiFePO4 Lithium Battery',
-        caption: '5kWh LiFePO4 battery energy storage system with long cycle life',
+        loc: `${IMAGE_BASE_URL}/products/lithium-battery-5kwh.jpg`,
+        title: '5kWh LiFePO4 Lithium Battery HP-LFP5K',
+        caption: '5kWh LiFePO4 battery with built-in BMS, 6000+ charge cycles, 10-year design life for solar storage',
       },
     ],
   },
   {
-    pageUrl: '/en/products/portable-power-station-3000w',
+    pageUrl: '/en/products/lead-acid-battery-100ah',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/portable-power-station.jpg`,
-        title: '3000W Portable Power Station',
-        caption: '3000W portable power station for off-grid solar applications',
+        loc: `${IMAGE_BASE_URL}/products/lead-acid-battery-100ah.jpg`,
+        title: '100Ah Deep Cycle Lead-Acid Battery HP-LA100',
+        caption: 'Maintenance-free VRLA deep-cycle battery for solar storage, UPS and marine applications',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/charge-controller-60a',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/charge-controller-60a.jpg`,
+        title: 'MPPT Solar Charge Controller 60A HP-MPPT60',
+        caption: '60A MPPT solar charge controller with 99.5% tracking efficiency and multi-protection for 12V/24V/48V systems',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/solar-street-light-200w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-street-light-200w.jpg`,
+        title: '200W All-in-One Solar Street Light HP-SSL200',
+        caption: '200W integrated solar street light with motion sensor, remote control and IP65 waterproof rating',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/solar-fan-20w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-fan-20w.jpg`,
+        title: 'DC Solar Fan 20W HP-SF20',
+        caption: '20W brushless DC solar fan for off-grid cabins, greenhouses and livestock shelters ventilation',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/solar-power-bank-20000mah',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-power-bank-20000mah.jpg`,
+        title: '20000mAh Solar Power Bank HP-SPB20K',
+        caption: '20000mAh solar power bank with dual USB, USB-C 18W PD fast charge and waterproof casing',
       },
     ],
   },
@@ -323,9 +373,39 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/air-fryer-5-8l',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/kitchen-appliances.jpg`,
-        title: '5.8L Digital Air Fryer',
-        caption: 'Digital air fryer with oil-free cooking technology',
+        loc: `${IMAGE_BASE_URL}/products/air-fryer-5-8l.jpg`,
+        title: '5.8L Digital Air Fryer HP-AF58',
+        caption: '5.8L digital air fryer with 8 preset programmes, touch panel and 360-degree rapid air circulation',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/induction-cooktop-2000w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/induction-cooktop-2000w.jpg`,
+        title: '2000W Induction Cooktop HP-IC2000',
+        caption: '2000W slim ceramic glass induction cooktop with 10 power levels and automatic pan detection',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/electric-kettle-1-5l',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/electric-kettle-1-5l.jpg`,
+        title: '1.5L Stainless Steel Electric Kettle HP-EK15',
+        caption: '1.5L BPA-free stainless steel electric kettle with 1500W rapid boil and auto shut-off protection',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/toaster-2-slice',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/toaster-2-slice.jpg`,
+        title: '2-Slice Stainless Steel Toaster HP-TS2',
+        caption: 'Wide-slot stainless steel toaster with 7 browning settings and removable crumb tray',
       },
     ],
   },
@@ -333,9 +413,59 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/headphone-over-ear',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/articles/electronics/electronics-headphones-product.jpg`,
-        title: 'Over-Ear Headphones',
-        caption: 'Premium over-ear headphones with noise cancellation',
+        loc: `${IMAGE_BASE_URL}/products/headphone-over-ear.jpg`,
+        title: 'Over-Ear Headphone with Microphone HP-HE01',
+        caption: 'Foldable over-ear headphone with 40mm drivers, built-in microphone and 3.5mm universal jack',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/bluetooth-earphone-tws',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/bluetooth-earphone-tws.jpg`,
+        title: 'True Wireless Bluetooth Earphones HP-TWS01',
+        caption: 'Bluetooth 5.3 TWS earbuds with active noise cancellation and 30-hour total playtime',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/smart-watch',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/smart-watch.jpg`,
+        title: 'Smart Watch with Heart Rate Monitor HP-SW01',
+        caption: '1.7 inch colour touch screen smartwatch with heart rate, SpO2 monitoring and 20+ sport modes',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/portable-ssd-1tb',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/portable-ssd-1tb.jpg`,
+        title: '1TB USB-C Portable SSD HP-SSD1T',
+        caption: '1TB portable SSD with up to 1050 MB/s read speed, shock-resistant aluminium casing and USB 3.2 Gen 2',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/micro-sd-128gb',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/micro-sd-128gb.jpg`,
+        title: '128GB Micro SD Card Class 10 A2 HP-SD128',
+        caption: '128GB UHS-I U3 A2 rated micro SD card with up to 100 MB/s read speed for cameras and drones',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/usb-c-cable-2m',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/usb-c-cable-2m.jpg`,
+        title: 'Fast Charging USB-C Cable 2m HP-CC2M',
+        caption: '100W USB-C to USB-C braided cable supporting PD 3.0, QC 4.0 and 480 Mbps data transfer',
       },
     ],
   },
