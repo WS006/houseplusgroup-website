@@ -667,7 +667,7 @@ const pageImages: PageImages[] = [
     pageUrl: '/en/service',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/service/factory-production-line-automated.jpg`,
+        loc: `${IMAGE_BASE_URL}/articles/service/factory-production-line-automated.jpg`,
         title: 'Automated Production Service',
         caption: 'Automated production services for OEM/ODM clients',
       },
