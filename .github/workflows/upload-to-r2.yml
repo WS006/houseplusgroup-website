@@ -1,0 +1,55 @@
+name: Upload Images to Cloudflare R2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/images/**'
+  workflow_dispatch:
+
+jobs:
+  upload-r2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install AWS CLI
+        run: |
+          pip install awscli
+
+      - name: Upload images to R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+        run: |
+          if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$AWS_SECRET_ACCESS_KEY" ] || [ -z "$R2_ACCOUNT_ID" ] || [ -z "$R2_BUCKET" ]; then
+            echo "R2 credentials not configured. Skipping upload."
+            echo "Please set the following secrets in GitHub:"
+            echo "  - R2_ACCESS_KEY_ID"
+            echo "  - R2_SECRET_ACCESS_KEY"
+            echo "  - R2_ACCOUNT_ID"
+            echo "  - R2_BUCKET_NAME"
+            exit 0
+          fi
+
+          ENDPOINT="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          
+          echo "Uploading images to R2 bucket: $R2_BUCKET"
+          echo "Endpoint: $ENDPOINT"
+          
+          # Count files
+          FILE_COUNT=$(find public/images -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" \) | wc -l)
+          echo "Found $FILE_COUNT images"
+          
+          # Sync all images to R2
+          aws s3 sync public/images/ "s3://${R2_BUCKET}/" \
+            --endpoint-url "$ENDPOINT" \
+            --acl public-read \
+            --storage-class STANDARD \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.DS_Store"
+          
+          echo "Upload complete!"

@@ -52,25 +52,25 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
       authorName: 'HousePlus Editorial Team',
       datePublished: '2024-06-30',
       dateModified: '2024-06-30',
-      image: '/images/products/appliances-showcase.jpg',
+      image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
       imageAlt: 'Modern smart home appliances from HousePlus',
       sections: [
         {
           heading: 'The Connected Home Revolution',
           text: 'HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The concept of a smart home is rapidly evolving, with appliances becoming increasingly connected, intelligent, and intuitive. From refrigerators that manage your grocery list to washing machines that optimize cycles based on fabric type, smart home appliances are designed to simplify daily life, enhance comfort, and improve energy efficiency. HousePlus is at the forefront of this revolution, developing and manufacturing innovative smart appliances that integrate seamlessly into the modern home.',
-          image: '/images/products/kitchen-appliances.jpg',
+          image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
           imageAlt: 'HousePlus smart kitchen appliances collection',
         },
         {
           heading: 'Energy Efficiency and Sustainability',
           text: 'Beyond connectivity, energy efficiency is a core pillar of future home appliances. Consumers and businesses alike are increasingly prioritizing products that reduce environmental impact and lower utility bills. HousePlus is committed to sustainability, designing appliances that not only perform exceptionally but also consume minimal energy. Our products feature advanced inverter technology, smart sensors, and eco-friendly modes, making them ideal for environmentally conscious markets in Africa, Southeast Asia, and Europe.',
-          image: '/images/products/appliances-package.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-package.jpg',
           imageAlt: 'HousePlus energy-efficient appliances package',
         },
         {
           heading: 'HousePlus: Your Partner for Smart Appliance Wholesale',
           text: 'As a leading manufacturer, HousePlus offers a comprehensive range of smart home appliances for wholesale buyers. Our portfolio includes smart washing machines, refrigerators, air conditioners, and kitchen appliances, all designed with cutting-edge technology and superior quality. We provide flexible MOQ and robust OEM/ODM services, allowing our partners to customize products to meet specific market demands. Partner with HousePlus to bring the future of smart living to your customers.',
-          image: '/images/products/appliances-showcase.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
           imageAlt: 'HousePlus smart home appliances showcase',
         },
         {
@@ -88,25 +88,25 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
       authorName: 'HousePlus Editorial Team',
       datePublished: '2024-06-30',
       dateModified: '2024-06-30',
-      image: '/images/products/appliances-showcase.jpg',
+      image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
       imageAlt: 'Electrodomésticos inteligentes modernos de HousePlus',
       sections: [
         {
           heading: 'La Revolución del Hogar Conectado',
           text: 'El concepto de hogar inteligente está evolucionando rápidamente, con electrodomésticos cada vez más conectados, inteligentes e intuitivos. Desde refrigeradores que gestionan su lista de compras hasta lavadoras que optimizan los ciclos según el tipo de tejido, los electrodomésticos inteligentes están diseñados para simplificar la vida diaria, mejorar la comodidad y aumentar la eficiencia energética. HousePlus está a la vanguardia de esta revolución, desarrollando y fabricando electrodomésticos inteligentes innovadores que se integran perfectamente en el hogar moderno.',
-          image: '/images/products/kitchen-appliances.jpg',
+          image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
           imageAlt: 'Colección de electrodomésticos de cocina inteligentes HousePlus',
         },
         {
           heading: 'Eficiencia Energética y Sostenibilidad',
           text: 'Más allá de la conectividad, la eficiencia energética es un pilar fundamental de los futuros electrodomésticos. Tanto los consumidores como las empresas priorizan cada vez más los productos que reducen el impacto ambiental y disminuyen las facturas de servicios públicos. HousePlus está comprometida con la sostenibilidad, diseñando electrodomésticos que no solo funcionan excepcionalmente, sino que también consumen una energía mínima. Nuestros productos cuentan con tecnología de inversor avanzada, sensores inteligentes y modos ecológicos, lo que los hace ideales para mercados conscientes del medio ambiente en África, el Sudeste Asiático y Europa.',
-          image: '/images/products/appliances-package.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-package.jpg',
           imageAlt: 'Paquete de electrodomésticos energéticamente eficientes HousePlus',
         },
         {
           heading: 'HousePlus: Su Socio para la Venta al por Mayor de Electrodomésticos Inteligentes',
           text: 'Como fabricante líder, HousePlus ofrece una amplia gama de electrodomésticos inteligentes para compradores mayoristas. Nuestra cartera incluye lavadoras inteligentes, refrigeradores, aires acondicionados y electrodomésticos de cocina, todos diseñados con tecnología de vanguardia y calidad superior. Ofrecemos MOQ flexibles y servicios OEM/ODM robustos, lo que permite a nuestros socios personalizar productos para satisfacer las demandas específicas del mercado. Asóciese con HousePlus para llevar el futuro de la vida inteligente a sus clientes.',
-          image: '/images/products/appliances-showcase.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
           imageAlt: 'Exhibición de electrodomésticos inteligentes HousePlus',
         },
         {
@@ -124,25 +124,25 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
       authorName: 'HousePlus Editorial Team',
       datePublished: '2024-06-30',
       dateModified: '2024-06-30',
-      image: '/images/products/appliances-showcase.jpg',
+      image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
       imageAlt: 'Moderne smarte Haushaltsgeräte von HousePlus',
       sections: [
         {
           heading: 'Die Revolution des vernetzten Zuhauses',
           text: 'Das Konzept des Smart Homes entwickelt sich rasant weiter, wobei Haushaltsgeräte zunehmend vernetzter, intelligenter und intuitiver werden. Von Kühlschränken, die Ihre Einkaufsliste verwalten, bis hin zu Waschmaschinen, die Zyklen basierend auf dem Stofftyp optimieren, sind smarte Haushaltsgeräte darauf ausgelegt, den Alltag zu vereinfachen, den Komfort zu erhöhen und die Energieeffizienz zu verbessern. HousePlus steht an vorderster Front dieser Revolution und entwickelt und fertigt innovative smarte Geräte, die sich nahtlos in das moderne Zuhause integrieren.',
-          image: '/images/products/kitchen-appliances.jpg',
+          image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
           imageAlt: 'HousePlus smarte Küchengeräte-Kollektion',
         },
         {
           heading: 'Energieeffizienz und Nachhaltigkeit',
           text: 'Neben der Konnektivität ist Energieeffizienz eine Kernsäule zukünftiger Haushaltsgeräte. Verbraucher und Unternehmen gleichermaßen priorisieren zunehmend Produkte, die die Umweltbelastung reduzieren und die Betriebskosten senken. HousePlus engagiert sich für Nachhaltigkeit und entwickelt Geräte, die nicht nur außergewöhnlich leistungsfähig sind, sondern auch minimal Energie verbrauchen. Unsere Produkte verfügen über fortschrittliche Inverter-Technologie, intelligente Sensoren und umweltfreundliche Modi, wodurch sie ideal für umweltbewusste Märkte in Afrika, Südostasien und Europa sind.',
-          image: '/images/products/appliances-package.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-package.jpg',
           imageAlt: 'HousePlus energieeffizientes Gerätepaket',
         },
         {
           heading: 'HousePlus: Ihr Partner für den Großhandel mit smarten Geräten',
           text: 'Als führender Hersteller bietet HousePlus eine umfassende Palette smarter Haushaltsgeräte für Großhandelskäufer an. Unser Portfolio umfasst smarte Waschmaschinen, Kühlschränke, Klimaanlagen und Küchengeräte, die alle mit modernster Technologie und höchster Qualität entwickelt wurden. Wir bieten flexible Mindestbestellmengen und robuste OEM/ODM-Dienstleistungen, die es unseren Partnern ermöglichen, Produkte an spezifische Marktanforderungen anzupassen. Arbeiten Sie mit HousePlus zusammen, um die Zukunft des smarten Wohnens zu Ihren Kunden zu bringen.',
-          image: '/images/products/appliances-showcase.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
           imageAlt: 'HousePlus smarte Haushaltsgeräte-Ausstellung',
         },
         {
@@ -160,25 +160,25 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
       authorName: 'HousePlus Editorial Team',
       datePublished: '2024-06-30',
       dateModified: '2024-06-30',
-      image: '/images/products/appliances-showcase.jpg',
+      image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
       imageAlt: 'Appareils électroménagers intelligents modernes de HousePlus',
       sections: [
         {
           heading: 'La Révolution de la Maison Connectée',
           text: 'Le concept de maison intelligente évolue rapidement, avec des appareils électroménagers de plus en plus connectés, intelligents et intuitifs. Des réfrigérateurs qui gèrent votre liste de courses aux machines à laver qui optimisent les cycles en fonction du type de tissu, les appareils électroménagers intelligents sont conçus pour simplifier la vie quotidienne, améliorer le confort et augmenter l\'efficacité énergétique. HousePlus est à l\'avant-garde de cette révolution, développant et fabriquant des appareils intelligents innovants qui s\'intègrent parfaitement dans la maison moderne.',
-          image: '/images/products/kitchen-appliances.jpg',
+          image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
           imageAlt: 'Collection d\'appareils de cuisine intelligents HousePlus',
         },
         {
           heading: 'Efficacité Énergétique et Durabilité',
           text: 'Au-delà de la connectivité, l\'efficacité énergétique est un pilier fondamental des futurs appareils électroménagers. Les consommateurs et les entreprises privilégient de plus en plus les produits qui réduisent l\'impact environnemental et diminuent les factures de services publics. HousePlus s\'engage en faveur de la durabilité, en concevant des appareils qui non seulement fonctionnent exceptionnellement, mais consomment également un minimum d\'énergie. Nos produits intègrent une technologie d\'onduleur avancée, des capteurs intelligents et des modes écologiques, ce qui les rend idéaux pour les marchés soucieux de l\'environnement en Afrique, en Asie du Sud-Est et en Europe.',
-          image: '/images/products/appliances-package.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-package.jpg',
           imageAlt: 'Pack d\'appareils électroménagers écoénergétiques HousePlus',
         },
         {
           heading: 'HousePlus : Votre Partenaire pour la Vente en Gros d\'Appareils Intelligents',
           text: 'En tant que fabricant leader, HousePlus propose une gamme complète d\'appareils électroménagers intelligents pour les acheteurs en gros. Notre portefeuille comprend des machines à laver intelligentes, des réfrigérateurs, des climatiseurs et des appareils de cuisine, tous conçus avec une technologie de pointe et une qualité supérieure. Nous offrons des MOQ flexibles et des services OEM/ODM robustes, permettant à nos partenaires de personnaliser les produits pour répondre aux demandes spécifiques du marché. Partenariat avec HousePlus pour apporter l\'avenir de la vie intelligente à vos clients.',
-          image: '/images/products/appliances-showcase.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
           imageAlt: 'Présentation des appareils électroménagers intelligents HousePlus',
         },
         {
@@ -196,25 +196,25 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: P
       authorName: 'HousePlus Editorial Team',
       datePublished: '2024-06-30',
       dateModified: '2024-06-30',
-      image: '/images/products/appliances-showcase.jpg',
+      image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
       imageAlt: 'أجهزة منزلية ذكية حديثة من HousePlus',
       sections: [
         {
           heading: 'ثورة المنزل المتصل',
           text: 'يتطور مفهوم المنزل الذكي بسرعة، حيث أصبحت الأجهزة متصلة وذكية وبديهية بشكل متزايد. من الثلاجات التي تدير قائمة البقالة الخاصة بك إلى الغسالات التي تحسن الدورات بناءً على نوع القماش، تم تصميم الأجهزة المنزلية الذكية لتبسيط الحياة اليومية، وتعزيز الراحة، وتحسين كفاءة الطاقة. HousePlus في طليعة هذه الثورة، حيث تقوم بتطوير وتصنيع أجهزة ذكية مبتكرة تتكامل بسلاسة في المنزل الحديث.',
-          image: '/images/products/kitchen-appliances.jpg',
+          image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
           imageAlt: 'مجموعة أجهزة المطبخ الذكية من HousePlus',
         },
         {
           heading: 'كفاءة الطاقة والاستدامة',
           text: 'بالإضافة إلى الاتصال، تعد كفاءة الطاقة ركيزة أساسية للأجهزة المنزلية المستقبلية. يولي المستهلكون والشركات على حد سواء أولوية متزايدة للمنتجات التي تقلل من التأثير البيئي وتخفض فواتير الخدمات. تلتزم HousePlus بالاستدامة، حيث تصمم أجهزة لا تؤدي أداءً استثنائيًا فحسب، بل تستهلك أيضًا الحد الأدنى من الطاقة. تتميز منتجاتنا بتقنية العاكس المتقدمة، وأجهزة الاستشعار الذكية، والأوضاع الصديقة للبيئة، مما يجعلها مثالية للأسواق الواعية بيئيًا في إفريقيا وجنوب شرق آسيا وأوروبا.',
-          image: '/images/products/appliances-package.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-package.jpg',
           imageAlt: 'حزمة أجهزة HousePlus الموفرة للطاقة',
         },
         {
           heading: 'HousePlus: شريكك في تجارة الأجهزة الذكية بالجملة',
           text: 'بصفتها شركة مصنعة رائدة، تقدم HousePlus مجموعة شاملة من الأجهزة المنزلية الذكية للمشترين بالجملة. تتضمن محفظتنا الغسالات الذكية، والثلاجات، ومكيفات الهواء، وأجهزة المطبخ، وكلها مصممة بأحدث التقنيات والجودة الفائقة. نقدم حد أدنى مرن للطلب وخدمات OEM/ODM قوية، مما يسمح لشركائنا بتخصيص المنتجات لتلبية متطلبات السوق المحددة. شارك مع HousePlus لجلب مستقبل الحياة الذكية لعملائك.',
-          image: '/images/products/appliances-showcase.jpg',
+          image: 'https://images.houseplus-ch.com/products/appliances-showcase.jpg',
           imageAlt: 'عرض أجهزة HousePlus المنزلية الذكية',
         },
         {
