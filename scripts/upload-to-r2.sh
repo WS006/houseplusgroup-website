@@ -3,7 +3,8 @@
 # Usage: export AWS_ACCESS_KEY_ID=xxx; export AWS_SECRET_ACCESS_KEY=xxx; ./upload-to-r2.sh
 
 BUCKET="houseplus-images"
-ENDPOINT="https://<account-id>.r2.cloudflarestorage.com"
+ACCOUNT_ID="5cd2f2781f30e866504997ad801d7dbd"
+ENDPOINT="https://${ACCOUNT_ID}.r2.cloudflarestorage.com"
 R2_PUBLIC_DOMAIN="https://images.houseplus-ch.com"
 LOCAL_DIR="../public/images"
 
@@ -35,7 +36,7 @@ echo ""
 
 # Upload with AWS CLI
 # Using --endpoint-url for R2
-aws s3 sync "$LOCAL_DIR" "s3://$BUCKET/images" \
+aws s3 sync "$LOCAL_DIR" "s3://$BUCKET/" \
     --endpoint-url "$ENDPOINT" \
     --acl public-read \
     --storage-class STANDARD \
