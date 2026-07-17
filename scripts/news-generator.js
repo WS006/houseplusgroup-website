@@ -21,8 +21,8 @@ const ARTICLE_TEMPLATES = [
       fr: 'Découvrez les dernières innovations en énergie solaire de HousePlus en {year}, incluant des panneaux à haut rendement, un stockage par batterie avancé et des solutions intelligentes intégrées pour les clients B2B du monde entier.',
       ar: 'اكتشف أحدث ابتكارات الطاقة الشمسية من HousePlus في {year}، بما في ذلك الألواح عالية الكفاءة، وتخزين البطاريات المتقدم، والحلول الذكية المتكاملة لعملاء B2B في جميع أنحاء العالم.'
     },
-    image: 'https://images.unsplash.com/photo-1509391366360-2e938aa1ef14?w=800&h=600&fit=crop',
-    imageAlt: 'HousePlus solar panels and energy storage solutions',
+    image: 'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
+    imageAlt: 'HousePlus solar panels and energy storage solutions for B2B wholesale',
     keywords: ['solar energy', 'solar panels', 'battery storage', 'renewable energy', 'B2B procurement', 'HousePlus']
   },
   {
@@ -41,8 +41,8 @@ const ARTICLE_TEMPLATES = [
       fr: 'Explorez la gamme {year} d\'appareils électroménagers intelligents de HousePlus, avec des commandes pilotées par IA, un suivi de l\'énergie et une intégration transparente pour les acheteurs en gros en Afrique, en Asie et en Europe.',
       ar: 'استكشف سلسلة {year} من الأجهزة المنزلية الذكية من HousePlus التي تتميز بتحكم مدفوع بالذكاء الاصطناعي، ومراقبة الطاقة، والتكامل السلس لمشتري الجملة في أفريقيا وآسيا وأوروبا.'
     },
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-    imageAlt: 'HousePlus smart home appliances lineup',
+    image: 'https://images.houseplus-ch.com/articles/appliances/smart-kitchen-appliances-modern.jpg',
+    imageAlt: 'HousePlus smart home appliances lineup for wholesale buyers',
     keywords: ['smart home', 'home appliances', 'energy efficiency', 'AI integration', 'wholesale', 'HousePlus']
   },
   {
@@ -61,8 +61,8 @@ const ARTICLE_TEMPLATES = [
       fr: 'Restez en tête en {year} avec les derniers produits d\'électronique 3C de HousePlus - des appareils audio premium, des wearables intelligents et des solutions d\'énergie innovantes pour les distributeurs B2B.',
       ar: 'ابق في المقدمة في {year} مع أحدث إلكترونيات 3C من HousePlus - أجهزة صوتية عالية الجودة، وأجهزة قابلة للارتداء الذكية، وحلول طاقة مبتكرة لموزعي B2B.'
     },
-    image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-    imageAlt: 'HousePlus 3C electronics product showcase',
+    image: 'https://images.houseplus-ch.com/articles/electronics/electronics-headphones-product.jpg',
+    imageAlt: 'HousePlus 3C electronics product showcase for B2B distributors',
     keywords: ['3C electronics', 'consumer electronics', 'wholesale', 'B2B', 'wearables', 'HousePlus']
   }
 ];

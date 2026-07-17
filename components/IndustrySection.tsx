@@ -51,13 +51,8 @@ export default function IndustrySection({
   const [imgError, setImgError] = useState(false);
 
   const handleImageError = () => {
-    if (imgSrc === image?.filename) {
-      // First fallback: try a different Unsplash image
-      setImgSrc(`https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80`);
-    } else {
-      // Second fallback: use a colored background with icon
-      setImgError(true);
-    }
+    // Direct fallback to colored background with icon — no external image dependencies
+    setImgError(true);
   };
 
   return (

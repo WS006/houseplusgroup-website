@@ -469,6 +469,147 @@ const productImages: PageImages[] = [
       },
     ],
   },
+  // ===== P0 GEO-Optimized Products =====
+  {
+    pageUrl: '/en/products/solar-panel-100w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-panel-100w.jpg`,
+        title: '100W Monocrystalline Solar Panel HP-SOL-100W',
+        caption: 'High-efficiency 100W monocrystalline solar panel with >=21% conversion rate for RV, marine and off-grid cabin applications',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/portable-power-station-3000w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/portable-power-station-3000w.jpg`,
+        title: '3000W Portable Power Station HP-SOL-3000',
+        caption: '3000Wh LiFePO4 portable power station with 3000W continuous output, solar/AC/car charging for outdoor construction and emergency backup',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/foldable-solar-panel-200w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/foldable-solar-panel-200w.jpg`,
+        title: '200W Foldable Solar Panel HP-SOL-200F',
+        caption: '200W foldable monocrystalline solar panel with ETFE surface, 5000+ fold cycles, IP65 waterproof for camping and RV power',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/home-energy-storage-5000w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/home-energy-storage-5000w.jpg`,
+        title: '5000W Home Energy Storage System HP-SOL-5000H',
+        caption: '5000Wh modular LiFePO4 home energy storage system with grid-tie/off-grid switchable, expandable to 30kWh',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/power-bank-60w-pd',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/power-bank-60w-pd.jpg`,
+        title: '60W PD Fast Charging Power Bank HP-3C-60W',
+        caption: '20000mAh power bank with 60W PD fast charging, dual USB-C + USB-A output, aluminium casing, 350g lightweight for laptop charging',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/lifepo4-battery-12v100ah',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/lifepo4-battery-12v100ah.jpg`,
+        title: '12V 100Ah LiFePO4 Battery HP-SOL-12V100',
+        caption: '12V 100Ah LiFePO4 deep cycle battery with 1280Wh capacity, integrated BMS, 3000+ cycles, UN38.3 certified for RV and marine',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/outdoor-power-station-600w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/outdoor-power-station-600w.jpg`,
+        title: '600W Outdoor Power Station HP-SOL-600O',
+        caption: '600Wh LiFePO4 outdoor power station with 600W pure sine wave output, 2xAC + 2xUSB + 1xDC, 7.2kg portable for camping',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/mppt-controller-40a',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/mppt-controller-40a.jpg`,
+        title: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40',
+        caption: 'MPPT 40A solar charge controller with >=98% efficiency, auto 12V/24V detection, LCD display for lead-acid, gel and LiFePO4 batteries',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/magnetic-power-bank-10000mah',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/magnetic-power-bank-10000mah.jpg`,
+        title: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K',
+        caption: '10000mAh MagSafe-compatible magnetic wireless power bank with 15W wireless and 20W PD USB-C, 220g ultra-light for iPhone wireless charging',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/pure-sine-inverter-2000w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/pure-sine-inverter-2000w.jpg`,
+        title: '2000W Pure Sine Wave Inverter HP-SOL-INV2K',
+        caption: '2000W pure sine wave inverter with 4000W surge, >=92% efficiency, THD <3%, selectable 12V/24V/48V input and 110V/220V output',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/flexible-solar-panel-400w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/flexible-solar-panel-400w.jpg`,
+        title: '400W Semi-Flexible Solar Panel HP-SOL-400F',
+        caption: '400W semi-flexible monocrystalline solar panel with ETFE surface, 30-degree bend radius, 8.5kg lightweight for RV curved roofs and marine decks',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/solar-generator-kit-300w',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/solar-generator-kit-300w.jpg`,
+        title: 'Portable Solar Generator Kit 300W HP-SOL-KIT300',
+        caption: 'All-in-one 300W solar generator kit with 100W panel, 300Wh LiFePO4 power station, cables and carry bag, 12kg total for camping and emergency',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/smart-wifi-plug-meter',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/smart-wifi-plug-meter.jpg`,
+        title: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10',
+        caption: 'Smart WiFi plug with real-time energy monitoring, 16A/3680W max, Alexa/Google Home compatible for home automation and energy saving',
+      },
+    ],
+  },
+  {
+    pageUrl: '/en/products/usb-c-cable-100w-5a',
+    images: [
+      {
+        loc: `${IMAGE_BASE_URL}/products/usb-c-cable-100w-5a.jpg`,
+        title: 'Type-C 100W Fast Charging Cable (5A) HP-3C-TC100W',
+        caption: '100W PD USB-C to USB-C cable with 5A current, nylon braided, aluminium connectors, 10000+ bend cycles for MacBook and laptop charging',
+      },
+    ],
+  },
 ];
 
 const pageImages: PageImages[] = [

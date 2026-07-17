@@ -4,8 +4,6 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'a.storyblok.com', pathname: '/f/**' },
       { protocol: 'https', hostname: '*.storyblok.com' },
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'plus.unsplash.com' },
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'images.houseplus-ch.com', pathname: '/**' },
     ],
