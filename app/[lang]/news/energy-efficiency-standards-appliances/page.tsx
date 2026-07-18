@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -287,6 +288,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
               {lang === 'ar' && 'طلب وثائق الشهادات'}
             </Link>
           </div>
+          <RelatedProducts lang={lang} slugs={['air-fryer-5-8l', 'induction-cooktop-2000w', 'electric-kettle-1-5l', 'toaster-2-slice']} />
         </article>
       </main>
     </SchemaRenderer>

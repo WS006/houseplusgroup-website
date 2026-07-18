@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -272,6 +273,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             )}
           </div>
         ))}
+        <RelatedProducts lang={lang} slugs={['home-energy-storage-5000w', 'lithium-battery-5kwh', 'solar-panel-500w', 'pure-sine-inverter-2000w']} />
       </article>
 
       {/* CTA */}

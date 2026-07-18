@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -261,6 +262,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
               </div>
             </section>
           ))}
+          <RelatedProducts lang={lang} slugs={['air-fryer-5-8l', 'induction-cooktop-2000w', 'electric-kettle-1-5l', 'toaster-2-slice', 'smart-wifi-plug-meter']} />
+
           <div className="mt-12 p-8 bg-blue-50 rounded-lg text-center">
             <h3 className="text-2xl font-bold mb-4 text-blue-700">
               {lang === 'en' && 'Ready to Start Wholesale Sourcing with HousePlus?'}

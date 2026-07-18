@@ -7,6 +7,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
 
 import { generateImageObjectSchema } from '@/lib/schema-generator';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -361,6 +362,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
           </div>
         ))}
+        <RelatedProducts lang={lang} slugs={['lithium-battery-5kwh', 'mppt-controller-40a', 'charge-controller-60a', 'home-energy-storage-5000w']} />
       </article>
 
       {content.faqs && content.faqs.length > 0 && (

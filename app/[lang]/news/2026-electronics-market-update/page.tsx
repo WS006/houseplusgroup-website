@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -251,6 +252,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             )}
           </div>
         ))}
+        <RelatedProducts lang={lang} slugs={['headphone-over-ear', 'bluetooth-earphone-tws', 'smart-watch', 'portable-ssd-1tb', 'micro-sd-128gb', 'usb-c-cable-2m']} />
       </article>
 
       {/* CTA */}

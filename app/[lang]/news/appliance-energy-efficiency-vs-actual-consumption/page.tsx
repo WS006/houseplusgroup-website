@@ -6,6 +6,7 @@ import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
 import { generateImageObjectSchema } from '@/lib/schema-generator';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -360,6 +361,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
           </div>
         ))}
+        <RelatedProducts lang={lang} slugs={['air-fryer-5-8l', 'induction-cooktop-2000w', 'electric-kettle-1-5l', 'toaster-2-slice']} />
       </article>
 
       {content.faqs && content.faqs.length > 0 && (

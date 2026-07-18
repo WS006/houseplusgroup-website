@@ -19,7 +19,15 @@ interface NavItem {
 const navigationItems: Record<string, NavItem[]> = {
   en: [
     { label: 'Home', href: '/' },
-    { label: 'Products', href: '/products' },
+    {
+      label: 'Products',
+      href: '/products',
+      children: [
+        { label: '☀️ Solar Energy Systems', href: '/products#solar' },
+        { label: '🏠 Home Appliances', href: '/products#appliances' },
+        { label: '📱 3C Electronics', href: '/products#electronics' },
+      ],
+    },
     {
       label: 'Company',
       href: '/about-us',
@@ -38,7 +46,15 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   es: [
     { label: 'Inicio', href: '/' },
-    { label: 'Productos', href: '/products' },
+    {
+      label: 'Productos',
+      href: '/products',
+      children: [
+        { label: '☀️ Sistemas de Energía Solar', href: '/products#solar' },
+        { label: '🏠 Electrodomésticos', href: '/products#appliances' },
+        { label: '📱 Electrónica 3C', href: '/products#electronics' },
+      ],
+    },
     {
       label: 'Empresa',
       href: '/about-us',
@@ -57,7 +73,15 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   de: [
     { label: 'Startseite', href: '/' },
-    { label: 'Produkte', href: '/products' },
+    {
+      label: 'Produkte',
+      href: '/products',
+      children: [
+        { label: '☀️ Solar-Energiesysteme', href: '/products#solar' },
+        { label: '🏠 Haushaltsgeräte', href: '/products#appliances' },
+        { label: '📱 3C-Elektronik', href: '/products#electronics' },
+      ],
+    },
     {
       label: 'Unternehmen',
       href: '/about-us',
@@ -76,7 +100,15 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   fr: [
     { label: 'Accueil', href: '/' },
-    { label: 'Produits', href: '/products' },
+    {
+      label: 'Produits',
+      href: '/products',
+      children: [
+        { label: '☀️ Systèmes d\'Énergie Solaire', href: '/products#solar' },
+        { label: '🏠 Appareils Électroménagers', href: '/products#appliances' },
+        { label: '📱 Électronique 3C', href: '/products#electronics' },
+      ],
+    },
     {
       label: 'Entreprise',
       href: '/about-us',
@@ -95,7 +127,15 @@ const navigationItems: Record<string, NavItem[]> = {
   ],
   ar: [
     { label: 'الرئيسية', href: '/' },
-    { label: 'المنتجات', href: '/products' },
+    {
+      label: 'المنتجات',
+      href: '/products',
+      children: [
+        { label: '☀️ أنظمة الطاقة الشمسية', href: '/products#solar' },
+        { label: '🏠 الأجهزة المنزلية', href: '/products#appliances' },
+        { label: '📱 إلكترونيات 3C', href: '/products#electronics' },
+      ],
+    },
     {
       label: 'الشركة',
       href: '/about-us',

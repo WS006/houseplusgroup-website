@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import RelatedProducts from '@/components/RelatedProducts';
 
 export const dynamic = 'force-dynamic';
 
@@ -301,6 +302,8 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
               </div>
             </section>
           ))}
+
+          <RelatedProducts lang={lang} slugs={['lithium-battery-5kwh', 'home-energy-storage-5000w', 'lead-acid-battery-100ah', 'lifepo4-battery-12v100ah']} />
 
           <div className="mt-12 p-8 bg-blue-50 rounded-lg text-center">
             <h3 className="text-2xl font-bold mb-4 text-blue-700">
