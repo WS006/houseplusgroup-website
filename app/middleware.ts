@@ -9,9 +9,17 @@ const ADMIN_PATH = '/admin';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'HousePlus2026!';
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, protocol, host } = request.nextUrl;
   const segments = pathname.split('/');
   const firstSegment = segments[1];
+
+  // Force HTTPS: redirect any HTTP request to HTTPS (301 permanent)
+  // Works behind Vercel/Cloudflare proxies that set x-forwarded-proto
+  const forwardedProto = request.headers.get('x-forwarded-proto');
+  if (forwardedProto === 'http' || protocol === 'http:') {
+    const httpsUrl = new URL(`https://${host}${pathname}${request.nextUrl.search}`);
+    return NextResponse.redirect(httpsUrl, 301);
+  }
 
   // Admin path protection
   if (pathname.startsWith(ADMIN_PATH)) {
@@ -83,6 +91,8 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  // HSTS: force HTTPS for 2 years (incl. subdomains), preload-list eligible
+  response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
   return response;
 }
 
