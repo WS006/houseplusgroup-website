@@ -267,9 +267,16 @@ export function buildArticleSchema(article: {
     datePublished: article.datePublished || new Date().toISOString(),
     dateModified: article.dateModified || new Date().toISOString(),
     author: {
-      '@type': 'Organization',
-      name: article.authorName || 'HousePlus',
-      url: 'https://www.houseplus-ch.com',
+      '@type': 'Person',
+      name: article.authorName || 'Jack Hu',
+      url: 'https://www.houseplus-ch.com/en/author/jack-hu',
+      image: 'https://images.houseplus-ch.com/team/jack-hu.jpg',
+      jobTitle: 'Founder & Editorial Lead',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'HousePlus',
+        url: 'https://www.houseplus-ch.com',
+      },
     },
     publisher: {
       '@type': 'Organization',
@@ -287,6 +294,36 @@ export function buildArticleSchema(article: {
     },
     articleBody: article.content || article.description,
     wordCount: article.content?.split(' ').length || 500,
+  };
+}
+
+// Person Schema - Author entity for GEO trust signals
+export function buildPersonSchema(person: {
+  name: string;
+  jobTitle?: string;
+  worksFor?: string;
+  email?: string;
+  image?: string;
+  description?: string;
+  url?: string;
+  sameAs?: string[];
+}, options: SchemaOptions = {}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': options.url || 'https://www.houseplus-ch.com/author/jack-hu',
+    name: person.name,
+    jobTitle: person.jobTitle || '',
+    image: person.image || '',
+    description: person.description || '',
+    url: person.url || options.url,
+    email: person.email || '',
+    worksFor: person.worksFor ? {
+      '@type': 'Organization',
+      name: person.worksFor,
+      url: 'https://www.houseplus-ch.com',
+    } : undefined,
+    sameAs: person.sameAs || [],
   };
 }
 

@@ -359,6 +359,19 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Find answers to common questions about HousePlus products and services.
             </p>
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-6 text-sm text-slate-500">
+              <span className="flex items-center gap-2">
+                👤 <a href={`/${lang}/author/jack-hu`} className="text-blue-600 hover:text-blue-700 font-semibold">Reviewed by Jack Hu</a>
+              </span>
+              <span className="text-slate-300">·</span>
+              <span className="text-emerald-600 font-semibold">
+                ✓ Updated July 18, 2026
+              </span>
+              <span className="text-slate-300">·</span>
+              <span>
+                🏭 ISO 9001 Certified Factory
+              </span>
+            </div>
           </div>
         </section>
 

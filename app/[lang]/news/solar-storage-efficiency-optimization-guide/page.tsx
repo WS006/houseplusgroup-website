@@ -8,6 +8,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder'
 
 import { generateImageObjectSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
+import ArticleMeta from '@/components/ArticleMeta';
 
 export const dynamic = 'force-dynamic';
 
@@ -44,43 +45,43 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const articleContent: Record<string, any> = {
   en: {
     title: 'Solar Storage Efficiency Optimization: Technical Guide for Industrial Systems',
-    authorName: 'HousePlus Technical Team',
+    authorName: 'Jack Hu',
     datePublished: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'LiFePO4 battery bank for industrial solar storage achieving 95% round-trip efficiency and 6000 cycle life',
     sections: [
       {
-        heading: 'Round-Trip Efficiency Determines System Economics',
-        text: 'LiFePO4 batteries deliver 92-96% round-trip efficiency at 0.5C rate. A 4% gap causes 800 kWh monthly loss for 100kWh daily-cycling systems, directly impacting ROI calculations.',
+        heading: 'How Does Round-Trip Efficiency Impact Solar Storage System Economics?',
+        text: 'Round-trip efficiency directly determines solar storage system economics — LiFePO4 batteries deliver 92-96% round-trip efficiency at 0.5C rate, and a 4% gap causes 800 kWh monthly loss for 100kWh daily-cycling systems, directly impacting ROI calculations.'
       },
       {
-        heading: '80% DOD Extends Battery Life 2.3x',
-        text: 'Limiting depth of discharge to 80% yields 6000 cycles vs 2600 cycles at 100% DOD. DOD management is the most impactful factor for long-term solar storage system value.',
+        heading: 'How Much Does 80% DOD Extend Battery Life?',
+        text: 'Limiting depth of discharge to 80% extends LiFePO4 battery life by 2.3x — yielding 6000 cycles vs 2600 cycles at 100% DOD — making DOD management the most impactful factor for long-term solar storage system value.'
       },
       {
-        heading: '20-30°C Is Optimal Operating Temperature',
-        text: 'Battery capacity drops 15-20% at -10°C vs 25°C baseline. Thermal management adds 3-5% capital cost but extends battery life by 40% in extreme climate deployments.',
+        heading: 'What Is the Optimal Operating Temperature for Solar Batteries?',
+        text: 'The optimal operating temperature for solar batteries is 20-30°C — battery capacity drops 15-20% at -10°C vs 25°C baseline, and while thermal management adds 3-5% capital cost, it extends battery life by 40% in extreme climate deployments.'
       },
       {
-        heading: '0.5C Charge Rate Optimizes Cycle Life',
-        text: 'Charging at 0.5C reduces internal heat by 45% and improves cycle life by 30% vs 1C rate. Fast charging above 1C accelerates SEI layer formation and capacity degradation.',
+        heading: 'What Charge Rate Optimizes Solar Battery Cycle Life?',
+        text: 'A 0.5C charge rate optimizes solar battery cycle life — charging at 0.5C reduces internal heat by 45% and improves cycle life by 30% vs 1C rate, while fast charging above 1C accelerates SEI layer formation and capacity degradation.'
       },
       {
-        heading: 'Cell Balancing Improves Efficiency 2-3%',
-        text: 'Parallel strings need 5% current balance tolerance; series cells require ±10mV voltage matching. Proper balancing prevents premature failure and boosts system-level efficiency.',
+        heading: 'How Much Does Cell Balancing Improve System Efficiency?',
+        text: 'Cell balancing improves system-level efficiency by 2-3% — parallel strings need 5% current balance tolerance, series cells require ±10mV voltage matching, and proper balancing prevents premature failure while boosting overall system performance.'
       },
       {
-        heading: 'EMS Delivers 18-25% Annual ROI',
-        text: 'Smart energy management systems cut peak demand charges 35-50% via load shifting. Two-hour daily time-of-use arbitrage generates strong returns in high-differential tariff regions.',
+        heading: 'What ROI Does an Energy Management System Deliver?',
+        text: 'A smart energy management system delivers 18-25% annual ROI — EMS algorithms cut peak demand charges 35-50% via load shifting, and two-hour daily time-of-use arbitrage generates strong returns in high-differential tariff regions.'
       },
       {
-        heading: 'Monthly Testing Detects Degradation Early',
-        text: 'Solar storage systems lose 2-3% capacity annually under normal use. 15-minute interval remote monitoring reduces unplanned downtime by 60% vs quarterly inspections.',
+        heading: 'How Often Should Solar Storage Systems Be Tested?',
+        text: 'Solar storage systems should undergo monthly capacity testing to detect degradation early — systems lose 2-3% capacity annually under normal use, and 15-minute interval remote monitoring reduces unplanned downtime by 60% vs quarterly inspections.'
       },
       {
-        heading: 'Core Conclusion',
-        text: '80% DOD, 20-30°C thermal control, and 0.5C charging achieve 95% efficiency and 6000+ cycles for optimized solar storage.',
+        heading: 'What Is the Optimal Solar Storage Efficiency Configuration?',
+        text: 'The optimal solar storage efficiency configuration combines 80% DOD, 20-30°C thermal control, and 0.5C charging to achieve 95% efficiency and 6000+ cycles for maximized long-term system value.'
       },
     ],
     faqs: [
@@ -95,43 +96,43 @@ const articleContent: Record<string, any> = {
   },
   es: {
     title: 'Optimización de Eficiencia de Almacenamiento Solar: Guía Técnica',
-    authorName: 'Equipo Técnico HousePlus',
+    authorName: 'Jack Hu',
     datePublished: '2026-04-12',
-    dateModified: '2026-04-12',
+    dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Sistema de almacenamiento de energía solar con bancos de baterías y equipo de monitoreo',
     sections: [
       {
-        heading: 'Eficiencia de Ida y Vuelta: La Métrica de Rendimiento Principal',
-        text: 'La eficiencia de ida y vuelta mide la energía retenida en ciclos de carga-descarga. Las baterías LiFePO4 modernas logran 92-96% de eficiencia a tasa 0.5C. Esta métrica determina directamente la economía del sistema.',
+        heading: '¿Cómo Impacta la Eficiencia de Ida y Vuelta la Economía del Almacenamiento Solar?',
+        text: 'La eficiencia de ida y vuelta determina directamente la economía del sistema de almacenamiento solar — las baterías LiFePO4 modernas logran 92-96% de eficiencia a tasa 0.5C, y una brecha del 4% causa una pérdida mensual de 800 kWh para sistemas de 100kWh con ciclo diario, impactando directamente los cálculos de ROI.'
       },
       {
-        heading: 'Relación entre Profundidad de Descarga y Vida Útil',
-        text: 'Limitar la DOD al 80% extiende la vida de la batería en 2.3x comparado con 100% DOD. Baterías LiFePO4 con 6000 ciclos a 80% DOD caen a 2600 ciclos a 100% DOD. La gestión DOD es el factor más impactante.',
+        heading: '¿Cuánto Extiende la Vida Útil una DOD del 80%?',
+        text: 'Limitar la profundidad de descarga al 80% extiende la vida de la batería LiFePO4 en 2.3 veces — rindiendo 6000 ciclos frente a 2600 ciclos al 100% DOD — haciendo de la gestión DOD el factor más impactante para el valor a largo plazo del sistema de almacenamiento solar.'
       },
       {
-        heading: 'Impacto de la Temperatura en el Rendimiento',
-        text: 'La capacidad de la batería cae 15-20% a -10°C comparado con la línea base de 25°C. El rango óptimo es 20-30°C, donde la eficiencia alcanza 95%. La gestión térmica añade 3-5% de costo pero extiende la vida 40%.',
+        heading: '¿Cuál Es la Temperatura Óptima de Operación para Baterías Solares?',
+        text: 'La temperatura óptima de operación para baterías solares es 20-30°C — la capacidad de la batería cae 15-20% a -10°C comparado con la línea base de 25°C, y aunque la gestión térmica añade 3-5% de costo de capital, extiende la vida de la batería en 40% en despliegues de climas extremos.'
       },
       {
-        heading: 'Estrategia de Optimización de Tasa de Carga',
-        text: 'Cargar a 0.5C en lugar de 1C reduce la generación de calor interno en 45% y mejora la vida útil en 30%. La carga rápida por encima de 1C debe limitarse a emergencias, ya que acelera la degradación.',
+        heading: '¿Qué Tasa de Carga Optimiza la Vida Útil de la Batería Solar?',
+        text: 'Una tasa de carga de 0.5C optimiza la vida útil de ciclo de la batería solar — cargar a 0.5C reduce la generación de calor interno en 45% y mejora la vida útil en 30% frente a tasa 1C, mientras que la carga rápida por encima de 1C acelera la formación de la capa SEI y la degradación de capacidad.'
       },
       {
-        heading: 'Mejores Prácticas de Configuración del Sistema',
-        text: 'Cadenas de baterías paralelas deben tener balanceo de corriente dentro de 5% de tolerancia. Configuraciones en serie requieren coincidencia de voltaje de celda a ±10mV. El balanceo adecuado mejora la eficiencia en 2-3%.',
+        heading: '¿Cuánto Mejora el Balanceo de Celdas la Eficiencia del Sistema?',
+        text: 'El balanceo de celdas mejora la eficiencia a nivel de sistema en 2-3% — las cadenas paralelas necesitan una tolerancia de balanceo de corriente del 5%, las celdas en serie requieren coincidencia de voltaje de ±10mV, y el balanceo adecuado previene fallos prematuros mientras impulsa el rendimiento general del sistema.'
       },
       {
-        heading: 'Programación del Sistema de Gestión Energética',
-        text: 'Los algoritmos EMS inteligentes reducen los cargos por demanda pico en 35-50% mediante desplazamiento de carga. El arbitraje por tiempo de uso con 2 horas de ciclado diario ofrece 18-25% de ROI anual.',
+        heading: '¿Qué ROI Ofrece un Sistema de Gestión Energética?',
+        text: 'Un sistema inteligente de gestión energética ofrece 18-25% de ROI anual — los algoritmos EMS reducen los cargos por demanda pico en 35-50% mediante desplazamiento de carga, y el arbitraje por tiempo de uso con dos horas diarias de ciclo genera fuertes retornos en regiones con diferenciales tarifarios altos.'
       },
       {
-        heading: 'Mantenimiento y Requisitos de Monitoreo',
-        text: 'Las pruebas de capacidad mensuales detectan degradación temprano — los sistemas pierden 2-3% de capacidad anualmente. El monitoreo remoto con intervalos de 15 minutos reduce el tiempo de inactividad en 60%.',
+        heading: '¿Con Qué Frecuencia Deben Probarse los Sistemas de Almacenamiento Solar?',
+        text: 'Los sistemas de almacenamiento solar deben someterse a pruebas de capacidad mensuales para detectar la degradación temprano — los sistemas pierden 2-3% de capacidad anualmente bajo uso normal, y el monitoreo remoto con intervalos de 15 minutos reduce el tiempo de inactividad no planificado en 60% frente a inspecciones trimestrales.'
       },
       {
-        heading: 'Conclusión Principal',
-        text: 'Optimice el almacenamiento solar con DOD del 80%, control térmico 20-30°C y carga 0.5C para lograr 95% de eficiencia y 6000+ ciclos.',
+        heading: '¿Cuál Es la Configuración Óptima de Eficiencia de Almacenamiento Solar?',
+        text: 'La configuración óptima de eficiencia de almacenamiento solar combina 80% DOD, control térmico de 20-30°C y carga de 0.5C para lograr 95% de eficiencia y más de 6000 ciclos para maximizar el valor del sistema a largo plazo.'
       },
     ],
     faqs: [
@@ -146,43 +147,43 @@ const articleContent: Record<string, any> = {
   },
   de: {
     title: 'Solar Speichereffizienz Optimierung: Technischer Leitfaden',
-    authorName: 'HousePlus Technikteam',
+    authorName: 'Jack Hu',
     datePublished: '2026-04-12',
-    dateModified: '2026-04-12',
+    dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'LiFePO4-Batteriebank für industrielle Solarspeicherung mit 95% Round-Trip-Effizienz und 6000 Zyklen',
     sections: [
       {
-        heading: 'Rundreiseeffizienz: Die zentrale Leistungskennzahl',
-        text: 'Die Rundreiseeffizienz misst die bei Lade-Entlade-Zyklen erhaltene Energie. Moderne LiFePO4-Batterien erreichen 92-96% Effizienz bei 0,5C-Rate. Diese Kennzahl bestimmt direkt die Systemökonomie.',
+        heading: 'Wie Beeinflusst die Rundreiseeffizienz die Solarspeicher-Ökonomie?',
+        text: 'Die Rundreiseeffizienz bestimmt direkt die Ökonomie von Solarspeichersystemen — moderne LiFePO4-Batterien erreichen 92-96% Effizienz bei 0,5C-Rate, und eine 4%-Lücke verursacht einen monatlichen Verlust von 800 kWh bei 100kWh-Tageszyklus-Systemen, was die ROI-Berechnungen direkt beeinflusst.'
       },
       {
-        heading: 'Zusammenhang zwischen Entladungstiefe und Lebensdauer',
-        text: 'Eine Begrenzung der DOD auf 80% verlängert die Batterielebensdauer um 2,3-fach im Vergleich zu 100% DOD. LiFePO4-Batterien mit 6000 Zyklen bei 80% DOD fallen auf 2600 Zyklen bei 100% DOD.',
+        heading: 'Wie Verlängert 80% DOD die Batterielebensdauer?',
+        text: 'Die Begrenzung der Entladungstiefe auf 80% verlängert die Lebensdauer von LiFePO4-Batterien um das 2,3-fache — was 6000 Zyklen gegenüber 2600 Zyklen bei 100% DOD ergibt — wodurch DOD-Management zum einflussreichsten Faktor für den langfristigen Wert von Solarspeichersystemen wird.'
       },
       {
-        heading: 'Temperatureinfluss auf die Speicherleistung',
-        text: 'Die Batteriekapazität sinkt um 15-20% bei -10°C gegenüber der 25°C-Baseline. Optimaler Betriebsbereich ist 20-30°C, wo die Effizienz bei 95% peakt. Thermomanagement fügt 3-5% Kosten hinzu.',
+        heading: 'Was Ist die Optimale Betriebstemperatur für Solarbatterien?',
+        text: 'Die optimale Betriebstemperatur für Solarbatterien liegt bei 20-30°C — die Batteriekapazität sinkt um 15-20% bei -10°C gegenüber der 25°C-Baseline, und obwohl Thermomanagement 3-5% Kapitalkosten hinzufügt, verlängert es die Batterielebensdauer um 40% bei Klimabereitstellungen mit Extremen.'
       },
       {
-        heading: 'Strategie zur Optimierung der Laderate',
-        text: 'Laden mit 0,5C statt 1C reduziert die interne Wärmeentwicklung um 45% und verbessert die Zyklenlebensdauer um 30%. Schnellladung über 1C sollte auf Notfälle beschränkt werden.',
+        heading: 'Welche Laderate Optimiert die Lebensdauer von Solarbatterien?',
+        text: 'Eine Laderate von 0,5C optimiert die Zyklenlebensdauer von Solarbatterien — Laden mit 0,5C reduziert die interne Wärmeentwicklung um 45% und verbessert die Zyklenlebensdauer um 30% gegenüber 1C-Rate, während Schnellladung über 1C die SEI-Schichtbildung und Kapazitätsdegradation beschleunigt.'
       },
       {
-        heading: 'Best Practices für Systemkonfiguration',
-        text: 'Parallele Batteriestränge sollten stromausgeglichen innerhalb von 5% Toleranz sein. Serienkonfigurationen erfordern Zellenspannungsanpassung auf ±10mV. Richtiges Balancing verbessert Systemeffizienz um 2-3%.',
+        heading: 'Wie Verbessert Zellbalancing die Systemeffizienz?',
+        text: 'Zellbalancing verbessert die Systemebeneffizienz um 2-3% — parallele Stränge benötigen eine Strombalancetoleranz von 5%, Serienzellen erfordern eine Zellenspannungsanpassung auf ±10mV, und ordnungsgemäßes Balancing verhindert vorzeitigen Ausfall während es die Gesamtsystemleistung steigert.'
       },
       {
-        heading: 'Energiemanagementsystem-Planung',
-        text: 'Intelligente EMS-Algorithmen reduzieren Spitzenlastgebühren um 35-50% durch Lastverschiebung. Time-of-Use-Arbitrage mit 2 Stunden täglichem Zyklus liefert 18-25% jährlichen ROI.',
+        heading: 'Welchen ROI Liefert ein Energiemanagementsystem?',
+        text: 'Ein intelligentes Energiemanagementsystem liefert 18-25% jährlichen ROI — EMS-Algorithmen reduzieren Spitzenlastgebühren um 35-50% durch Lastverschiebung, und zweistündige tägliche Time-of-Use-Arbitrage erzielt starke Renditen in Regionen mit hohen Tarifdifferenzen.'
       },
       {
-        heading: 'Wartungs- und Überwachungsanforderungen',
-        text: 'Monatliche Kapazitätstests erkennen Degradation früh — Systeme verlieren jährlich 2-3% Kapazität. Fernüberwachung mit 15-Minuten-Intervallen reduziert ungeplante Ausfallzeiten um 60%.',
+        heading: 'Wie Oft Sollten Solarspeichersysteme Geprüft Werden?',
+        text: 'Solarspeichersysteme sollten monatlichen Kapazitätstests unterzogen werden, um Degradation frühzeitig zu erkennen — Systeme verlieren jährlich 2-3% Kapazität bei normaler Nutzung, und Fernüberwachung mit 15-Minuten-Intervallen reduziert ungeplante Ausfallzeiten um 60% gegenüber vierteljährlichen Inspektionen.'
       },
       {
-        heading: 'Kernschlussfolgerung',
-        text: 'Optimieren Sie Solarspeicher mit 80% DOD, 20-30°C Thermokontrolle und 0,5C Ladung für 95% Effizienz und 6000+ Zyklen.',
+        heading: 'Was Ist die Optimale Solarspeicher-Effizienzkonfiguration?',
+        text: 'Die optimale Solarspeicher-Effizienzkonfiguration kombiniert 80% DOD, 20-30°C Thermokontrolle und 0,5C-Ladung, um 95% Effizienz und 6000+ Zyklen für maximierten langfristigen Systemwert zu erreichen.'
       },
     ],
     faqs: [
@@ -197,43 +198,43 @@ const articleContent: Record<string, any> = {
   },
   fr: {
     title: 'Optimisation Efficacité Stockage Solaire: Guide Technique',
-    authorName: 'Équipe Technique HousePlus',
+    authorName: 'Jack Hu',
     datePublished: '2026-04-12',
-    dateModified: '2026-04-12',
+    dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'Banque de batteries LiFePO4 pour stockage solaire industriel avec 95% rendement aller-retour et 6000 cycles',
     sections: [
       {
-        heading: 'Efficacité Aller-Retour: La Métrique de Performance Principale',
-        text: 'L\'efficacité aller-retour mesure l\'énergie conservée lors des cycles charge-décharge. Les batteries LiFePO4 modernes atteignent 92-96% d\'efficacité à taux 0,5C. Cette métrique détermine directement l\'économie du système.',
+        heading: 'Comment l\'Efficacité Aller-Retour Impacte-t-elle l\'Économie du Stockage Solaire?',
+        text: 'L\'efficacité aller-retour détermine directement l\'économie des systèmes de stockage solaire — les batteries LiFePO4 modernes atteignent 92-96% d\'efficacité à taux 0,5C, et un écart de 4% cause une perte mensuelle de 800 kWh pour les systèmes de 100kWh à cycle quotidien, impactant directement les calculs de ROI.'
       },
       {
-        heading: 'Relation Profondeur de Décharge et Durée de Vie',
-        text: 'Limiter la DOD à 80% prolonge la vie de la batterie de 2,3x comparé à 100% DOD. Les batteries LiFePO4 avec 6000 cycles à 80% DOD chutent à 2600 cycles à 100% DOD. La gestion DOD est le facteur le plus impactant.',
+        heading: 'Combien une DOD de 80% Prolonge-t-elle la Durée de Vie de la Batterie?',
+        text: 'Limiter la profondeur de décharge à 80% prolonge la durée de vie des batteries LiFePO4 de 2,3 fois — ce qui donne 6000 cycles contre 2600 cycles à 100% DOD — faisant de la gestion DOD le facteur le plus impactant pour la valeur à long terme du système de stockage solaire.'
       },
       {
-        heading: 'Impact de la Température sur la Performance',
-        text: 'La capacité de la batterie baisse de 15-20% à -10°C par rapport à la base 25°C. La plage optimale est 20-30°C, où l\'efficacité culmine à 95%. La gestion thermique ajoute 3-5% de coût.',
+        heading: 'Quelle Est la Température de Fonctionnement Optimale des Batteries Solaires?',
+        text: 'La température de fonctionnement optimale des batteries solaires est de 20-30°C — la capacité de la batterie baisse de 15-20% à -10°C par rapport à la base de 25°C, et bien que la gestion thermique ajoute 3-5% de coût en capital, elle prolonge la vie de la batterie de 40% dans les déploiements climatiques extrêmes.'
       },
       {
-        heading: 'Stratégie d\'Optimisation du Taux de Charge',
-        text: 'Charger à 0,5C au lieu de 1C réduit la génération de chaleur interne de 45% et améliore la durée de vie de 30%. La charge rapide au-dessus de 1C doit être limitée aux urgences.',
+        heading: 'Quel Taux de Charge Optimise la Durée de Vie des Batteries Solaires?',
+        text: 'Un taux de charge de 0,5C optimise la durée de vie des cycles des batteries solaires — charger à 0,5C réduit la génération de chaleur interne de 45% et améliore la durée de vie de 30% par rapport au taux 1C, tandis que la charge rapide au-dessus de 1C accélère la formation de la couche SEI et la dégradation de la capacité.'
       },
       {
-        heading: 'Meilleures Pratiques de Configuration Système',
-        text: 'Les chaînes de batteries parallèles doivent être équilibrées en courant dans une tolérance de 5%. Les configurations série nécessitent un assortiment de tension de cellule à ±10mV. L\'équilibrage améliore l\'efficacité de 2-3%.',
+        heading: 'Combien l\'Équilibrage des Cellules Améliore-t-il l\'Efficacité du Système?',
+        text: 'L\'équilibrage des cellules améliore l\'efficacité au niveau du système de 2-3% — les chaînes parallèles ont besoin d\'une tolérance d\'équilibre de courant de 5%, les cellules en série nécessitent un assortiment de tension de cellule à ±10mV, et un équilibrage approprié prévient les défaillances prématurées tout en améliorant les performances globales du système.'
       },
       {
-        heading: 'Programmation du Système de Gestion d\'Énergie',
-        text: 'Les algorithmes EMS intelligents réduisent les frais de pointe de 35-50% par décalage de charge. L\'arbitrage tarifaire avec 2 heures de cycle quotidien offre 18-25% de ROI annuel.',
+        heading: 'Quel ROI Fournit un Système de Gestion d\'Énergie?',
+        text: 'Un système intelligent de gestion d\'énergie fournit 18-25% de ROI annuel — les algorithmes EMS réduisent les frais de pointe de 35-50% par décalage de charge, et l\'arbitrage tarifaire de deux heures par jour génère des rendements élevés dans les régions à différentiels tarifaires élevés.'
       },
       {
-        heading: 'Maintenance et Exigences de Surveillance',
-        text: 'Les tests de capacité mensuels détectent la dégradation précocement — les systèmes perdent 2-3% de capacité annuellement. La surveillance à distance avec intervalles de 15 minutes réduit les temps d\'arrêt de 60%.',
+        heading: 'À Quelle Fréquence les Systèmes de Stockage Solaire Doivent-ils Être Testés?',
+        text: 'Les systèmes de stockage solaire doivent subir des tests de capacité mensuels pour détecter la dégradation précocement — les systèmes perdent 2-3% de capacité annuellement sous utilisation normale, et la surveillance à distance avec des intervalles de 15 minutes réduit les temps d\'arrêt non planifiés de 60% par rapport aux inspections trimestrielles.'
       },
       {
-        heading: 'Conclusion Principale',
-        text: 'Optimisez le stockage solaire avec 80% DOD, contrôle thermique 20-30°C et charge 0,5C pour 95% d\'efficacité et 6000+ cycles.',
+        heading: 'Quelle Est la Configuration Optimale d\'Efficacité du Stockage Solaire?',
+        text: 'La configuration optimale d\'efficacité du stockage solaire combine 80% DOD, un contrôle thermique de 20-30°C et une charge de 0,5C pour atteindre 95% d\'efficacité et plus de 6000 cycles pour une valeur système à long terme maximisée.'
       },
     ],
     faqs: [
@@ -248,43 +249,43 @@ const articleContent: Record<string, any> = {
   },
   ar: {
     title: 'تحسين كفاءة تخزين الطاقة الشمسية: دليل تقني',
-    authorName: 'الفريق التقني HousePlus',
+    authorName: 'Jack Hu',
     datePublished: '2026-04-12',
-    dateModified: '2026-04-12',
+    dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
     heroImageAlt: 'بنك بطاريات LiFePO4 لتخزين الطاقة الشمسية الصناعية بكفاءة ذهاب وإياب 95% و6000 دورة',
     sections: [
       {
-        heading: 'كفاءة الذهاب والإياب: مقياس الأداء الأساسي',
-        text: 'تقيس كفاءة الذهاب والإياب الطاقة المحتفاظ بها خلال دورات الشحن والتفريغ. تحقق بطاريات LiFePO4 الحديثة كفاءة 92-96% بمعدل 0.5C. يحدد هذا المقياس مباشرة اقتصاديات النظام.',
+        heading: 'كيف تؤثر كفاءة الذهاب والإياب على اقتصاديات تخزين الطاقة الشمسية؟',
+        text: 'تحدد كفاءة الذهاب والإياب مباشرة اقتصاديات نظام تخزين الطاقة الشمسية — تحقق بطاريات LiFePO4 الحديثة كفاءة 92-96% بمعدل 0.5C، ويتسبب فجوة بنسبة 4% في خسارة شهرية قدرها 800 كيلووات ساعة لأنظمة 100 كيلووات ساعة ذات الدورة اليومية، مما يؤثر مباشرة على حسابات عائد الاستثمار.'
       },
       {
-        heading: 'العلاقة بين عمق التفريغ وعمر البطارية',
-        text: 'يؤدي تقييد DOD إلى 80% إلى إطالة عمر البطارية بمقدار 2.3 مرة مقارنة بـ 100% DOD. تنخفض بطاريات LiFePO4 من 6000 دورة عند 80% DOD إلى 2600 دورة عند 100% DOD.',
+        heading: 'بكم يطيل DOD بنسبة 80% عمر البطارية؟',
+        text: 'يؤدي تقييد عمق التفريغ إلى 80% إلى إطالة عمر بطارية LiFePO4 بمقدار 2.3 مرة — مما ينتج عنه 6000 دورة مقابل 2600 دورة عند 100% DOD — مما يجعل إدارة DOD هو العامل الأكثر تأثيراً على قيمة نظام تخزين الطاقة الشمسية على المدى الطويل.'
       },
       {
-        heading: 'تأثير درجة الحرارة على أداء التخزين',
-        text: 'تنخفض سعة البطارية بنسبة 15-20% عند -10 درجة مئوية مقارنة بالخط الأساسي 25 درجة مئوية. النطاق الأمثل هو 20-30 درجة مئوية، حيث تبلغ الكفاءة ذروتها عند 95%.',
+        heading: 'ما هي درجة حرارة التشغيل المثلى للبطاريات الشمسية؟',
+        text: 'درجة حرارة التشغيل المثلى للبطاريات الشمسية هي 20-30 درجة مئوية — تنخفض سعة البطارية بنسبة 15-20% عند -10 درجة مئوية مقارنة بالخط الأساسي 25 درجة مئوية، وعلى الرغم من أن الإدارة الحرارية تضيف 3-5% من تكلفة رأس المال، إلا أنها تطيل عمر البطارية بنسبة 40% في عمليات النشر في المناخات القاسية.'
       },
       {
-        heading: 'استراتيجية تحسين معدل الشحن',
-        text: 'الشحن بمعدل 0.5C بدلاً من 1C يقلل من توليد الحرارة الداخلية بنسبة 45% ويحسن عمر الدورة بنسبة 30%. يجب تقييد الشحن السريع فوق 1C بالحالات الطارئة.',
+        heading: 'ما معدل الشحن الذي يحسن عمر دورة البطارية الشمسية؟',
+        text: 'معدل شحن قدره 0.5C يحسن عمر دورة البطارية الشمسية — الشحن بمعدل 0.5C يقلل من توليد الحرارة الداخلية بنسبة 45% ويحسن عمر الدورة بنسبة 30% مقارنة بمعدل 1C، بينما الشحن السريع فوق 1C يسرع تكوين طبقة SEI وتدهور السعة.'
       },
       {
-        heading: 'أفضل ممارسات تكوين النظام',
-        text: 'يجب موازنة سلاسل البطاريات المتوازية ضمن نطاق 5% من التسامح. تتطلب التكوينات المتسلسلة مطابقة جهد خلية بـ ±10mV. يحسن الموازنة المناسبة كفاءة النظام بنسبة 2-3%.',
+        heading: 'بكم يحسن توازن الخلايا كفاءة النظام؟',
+        text: 'يحسن توازن الخلايا كفاءة مستوى النظام بنسبة 2-3% — تحتاج السلاسل المتوازية إلى تفاوت توازن تيار يبلغ 5%، وتتطلب الخلايا المتسلسلة مطابقة جهد خلية بـ ±10mV، والتوازن المناسب يمنع الفشل المبكر مع تعزيز أداء النظام العام.'
       },
       {
-        heading: 'جدولة نظام إدارة الطاقة',
-        text: 'تقلل خوارزميات EMS الذكية من رسوم الذروة بنسبة 35-50% من خلال إزاحة الحمل. يوفر التحكيم بالوقت مع ساعتين من الدورة اليومية عائد استثمار سنوي 18-25%.',
+        heading: 'ما عائد الاستثمار الذي يوفره نظام إدارة الطاقة؟',
+        text: 'يوفر نظام إدارة الطاقة الذكي عائد استثمار سنوي يتراوح بين 18-25% — تقلل خوارزميات EMS من رسوم الذروة بنسبة 35-50% من خلال إزاحة الحمل، والتحكيم بالوقت لمدة ساعتين يومياً يولد عوائد قوية في المناطق ذات الفروق التعريفية المرتفعة.'
       },
       {
-        heading: 'متطلبات الصيانة والمراقبة',
-        text: 'تكتشف اختبارات السعة الشهرية التدهور مبكراً — تفقد الأنظمة 2-3% من السعة سنوياً. يقلل المراقبة عن بُعد بفواصل 15 دقيقة من وقت التوقف غير المخطط له بنسبة 60%.',
+        heading: 'بكم مرة يجب اختبار أنظمة تخزين الطاقة الشمسية؟',
+        text: 'يجب خضوع أنظمة تخزين الطاقة الشمسية لاختبارات السعة الشهرية للكشف المبكر عن التدهور — تفقد الأنظمة 2-3% من السعة سنوياً تحت الاستخدام الطبيعي، والمراقبة عن بُعد بفواصل 15 دقيقة تقلل من وقت التوقف غير المخطط له بنسبة 60% مقارنة بالفحوصات الفصلية.'
       },
       {
-        heading: 'الاستنتاج الأساسي',
-        text: 'حسّن تخزين الطاقة الشمسية بحدود DOD 80%، تحكم حراري 20-30 درجة مئوية، وشحن 0.5C لتحقيق كفاءة 95% وأكثر من 6000 دورة.',
+        heading: 'ما هي التكوين الأمثل لكفاءة تخزين الطاقة الشمسية؟',
+        text: 'التكوين الأمثل لكفاءة تخزين الطاقة الشمسية يجمع بين 80% DOD، وتحكم حراري 20-30 درجة مئوية، وشحن 0.5C لتحقيق 95% كفاءة وأكثر من 6000 دورة لقيمة نظام على المدى الطويل محسّنة.'
       },
     ],
     faqs: [
@@ -349,8 +350,13 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           <p className="text-slate-300 text-lg md:text-xl mb-6">
             {content.sections[0].text.split('.')[0] + '.'}
           </p>
-          <div className="text-slate-400 text-sm">
-            By {content.authorName} | Published on {content.datePublished}
+          <div className="max-w-3xl mx-auto px-4">
+            <ArticleMeta
+              lang={lang}
+              authorName={content.authorName}
+              datePublished={content.datePublished}
+              dateModified={content.dateModified}
+            />
           </div>
         </div>
       </div>

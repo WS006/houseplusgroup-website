@@ -8,7 +8,7 @@ export interface SEOConfig {
   image?: string;
   url: string;
   lang: Locale;
-  type?: 'website' | 'article' | 'product';
+  type?: 'website' | 'article' | 'product' | 'profile';
   author?: string;
   datePublished?: string;
   dateModified?: string;
