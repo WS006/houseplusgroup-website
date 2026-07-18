@@ -27,10 +27,21 @@ function getImageTitle(product: { name: string; model?: string; category: string
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const BASE_URL = 'https://www.houseplus-ch.com';
+  const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
+  const langAlternates: Record<string, string> = {};
+  for (const locale of LOCALES) {
+    langAlternates[locale] = `${BASE_URL}/${locale}/products`;
+  }
+  langAlternates['x-default'] = `${BASE_URL}/en/products`;
+
   return {
     title: 'Products | HousePlus — Solar Systems, Home Appliances & 3C Electronics',
     description: 'Browse HousePlus full product catalogue: solar panels, inverters, power banks, air fryers, kettles, headphones, smart watches and more. OEM/ODM available from MOQ 100 pcs.',
-    alternates: { canonical: `/${lang}/products` },
+    alternates: {
+      canonical: `${BASE_URL}/${lang}/products`,
+      languages: langAlternates,
+    },
   };
 }
 

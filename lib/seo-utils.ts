@@ -36,7 +36,11 @@ function getOGLocale(lang: string): string {
 
 export function generateMetadata(config: SEOConfig): Metadata {
   const canonicalUrl = `${siteConfig.url}${config.url}`;
-  
+
+  // Strip the /{lang} prefix from config.url to build clean hreflang URLs
+  // e.g. config.url = '/en/about-us' → path = '/about-us'
+  const pathWithoutLang = config.url.replace(/^\/(en|es|de|fr|ar)(\/|$)/, '/');
+
   const defaultKeywords = ['solar systems', 'home appliances', '3C electronics', 'wholesale', 'OEM', 'ODM', 'Made in China'];
   const keywords = config.keywords && config.keywords.length > 0 ? config.keywords : defaultKeywords;
 
@@ -85,12 +89,12 @@ export function generateMetadata(config: SEOConfig): Metadata {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${siteConfig.url}/en${config.url}`,
-        'es': `${siteConfig.url}/es${config.url}`,
-        'de': `${siteConfig.url}/de${config.url}`,
-        'fr': `${siteConfig.url}/fr${config.url}`,
-        'ar': `${siteConfig.url}/ar${config.url}`,
-        'x-default': `${siteConfig.url}/en${config.url}`,
+        'en': `${siteConfig.url}/en${pathWithoutLang}`,
+        'es': `${siteConfig.url}/es${pathWithoutLang}`,
+        'de': `${siteConfig.url}/de${pathWithoutLang}`,
+        'fr': `${siteConfig.url}/fr${pathWithoutLang}`,
+        'ar': `${siteConfig.url}/ar${pathWithoutLang}`,
+        'x-default': `${siteConfig.url}/en${pathWithoutLang}`,
       },
     },
     ...(config.geoRegion && { 'geo.region': config.geoRegion }),

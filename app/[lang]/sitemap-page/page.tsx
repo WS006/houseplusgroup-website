@@ -22,11 +22,21 @@ export async function generateMetadata({ params }: SitemapPageProps): Promise<Me
     fr: 'Vue d\'ensemble complète de toutes les pages du site HousePlus Group.',
     ar: 'نظرة عامة كاملة على جميع صفحات موقع HousePlus Group.',
   };
+
+  const BASE_URL = 'https://www.houseplus-ch.com';
+  const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
+  const langAlternates: Record<string, string> = {};
+  for (const locale of LOCALES) {
+    langAlternates[locale] = `${BASE_URL}/${locale}/sitemap-page`;
+  }
+  langAlternates['x-default'] = `${BASE_URL}/en/sitemap-page`;
+
   return {
     title: titles[params.lang] ?? titles.en,
     description: descriptions[params.lang] ?? descriptions.en,
     alternates: {
-      canonical: `https://www.houseplus-ch.com/${params.lang}/sitemap-page`,
+      canonical: `${BASE_URL}/${params.lang}/sitemap-page`,
+      languages: langAlternates,
     },
   };
 }

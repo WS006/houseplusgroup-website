@@ -198,9 +198,22 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description = defaultDescriptions[lang] || defaultDescriptions.en;
   }
 
+  const BASE_URL = 'https://www.houseplus-ch.com';
+  const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
+  const pathSlug = slug?.join('/') || '';
+  const langAlternates: Record<string, string> = {};
+  for (const locale of LOCALES) {
+    langAlternates[locale] = pathSlug ? `${BASE_URL}/${locale}/${pathSlug}` : `${BASE_URL}/${locale}`;
+  }
+  langAlternates['x-default'] = pathSlug ? `${BASE_URL}/en/${pathSlug}` : `${BASE_URL}/en`;
+
   return {
     title,
     description,
+    alternates: {
+      canonical: pathSlug ? `${BASE_URL}/${lang}/${pathSlug}` : `${BASE_URL}/${lang}`,
+      languages: langAlternates,
+    },
     openGraph: {
       title,
       description,
