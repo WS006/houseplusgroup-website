@@ -45,7 +45,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/bluetooth-earphone-tws.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
                     sections: [
       {
@@ -75,7 +75,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/bluetooth-earphone-tws.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
                     sections: [
       {
@@ -105,7 +105,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/bluetooth-earphone-tws.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
                     sections: [
       {
@@ -135,7 +135,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/bluetooth-earphone-tws.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
                     sections: [
       {
@@ -165,7 +165,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/bluetooth-earphone-tws.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     heroImageAlt: 'HousePlus 3C electronics product showcase',
                     sections: [
       {

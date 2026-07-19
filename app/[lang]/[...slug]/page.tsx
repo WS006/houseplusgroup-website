@@ -297,9 +297,9 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
                 'https://images.houseplus-ch.com/articles/solar/solar-energy-storage-battery-bank.jpg',
                 'https://images.houseplus-ch.com/articles/solar/solar-panel-installation-rooftop.jpg',
                 'https://images.houseplus-ch.com/articles/solar/solar-panel-sunset-industrial.jpg',
-                '/images/products/home-energy-storage-5000w.jpg',
+                'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
                 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
-                '/images/products/solar-panel-100w.jpg',
+                'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
               ];
               const productImg = s.content?.image?.filename || images[idx % images.length];
 

@@ -51,7 +51,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
     image: {
-      filename: `/images/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`,
+      filename: `https://images.houseplus-ch.com/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`,
       alt: item.imageAlt
     },
     title: item.title,
@@ -142,7 +142,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
               key={index}
               title={industry.title}
               description={industry.description}
-              image={{ filename: `/images/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`, alt: industry.title }}
+              image={{ filename: `https://images.houseplus-ch.com/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`, alt: industry.title }}
               industry_type={['solar', 'appliances', 'electronics'][index] as 'solar' | 'appliances' | 'electronics'}
               button_link={`/${lang}/products?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
               button_text={industry.buttonText}

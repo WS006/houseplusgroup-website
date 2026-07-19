@@ -54,7 +54,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
       imageAlt: 'HousePlus portable power station and battery storage system',
       sections: [
         {
@@ -66,19 +66,19 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
         {
           heading: 'What Battery Systems Does HousePlus Offer?',
           text: 'HousePlus offers a comprehensive range of battery energy storage systems (BESS) from compact residential units to large-scale industrial solutions, all using advanced lithium-ion technology with high energy density, long cycle life, and superior safety features. HousePlus offers a comprehensive range of battery energy storage systems (BESS) designed for various scales, from compact residential units to large-scale industrial solutions. Our battery systems utilize advanced lithium-ion technology, providing high energy density, long cycle life, and superior safety features. Integrated with intelligent energy management systems, they optimize energy usage, reduce electricity bills, and provide reliable backup power during outages. Partner with HousePlus for cutting-edge battery storage solutions.',
-          image: '/images/products/pure-sine-inverter-2000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
           imageAlt: 'HousePlus solar panel installation with battery storage unit',
         },
         {
           heading: 'What Are Portable Power Stations Used For?',
           text: 'Portable power stations are used for outdoor adventures, emergency preparedness, and remote work, providing lightweight, durable power that can be recharged via solar panels, AC outlets, or car chargers. Beyond fixed installations, HousePlus excels in portable power solutions. Our portable power stations, ranging from 300W to 3000W, are ideal for outdoor adventures, emergency preparedness, and remote work. They are lightweight, durable, and can be recharged via solar panels, AC outlets, or car chargers. These versatile devices embody the HousePlus commitment to providing flexible and accessible energy solutions, making them a popular choice for wholesale distributors targeting diverse markets in Africa, Southeast Asia, and Europe.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'HousePlus portable power station in an outdoor setting',
         },
         {
           heading: 'How Does Smart Integration and Sustainability Work?',
           text: 'HousePlus energy storage solutions work with existing solar installations and smart home ecosystems through seamless integration, with sustainability built into the entire product lifecycle from eco-friendly manufacturing to recyclable components. HousePlus energy storage solutions are designed for seamless integration with existing solar installations and smart home ecosystems. Our focus on sustainability extends to the entire product lifecycle, from eco-friendly manufacturing processes to recyclable components. By choosing HousePlus, our wholesale partners are not only investing in reliable technology but also contributing to a greener, more sustainable future. We offer comprehensive OEM/ODM services to tailor solutions to specific market demands.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'HousePlus solar panels and smart energy management system',
         },
         {
@@ -92,7 +92,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
       imageAlt: 'Estación de energía portátil HousePlus y sistema de almacenamiento de baterías',
       sections: [
         {
@@ -104,19 +104,19 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
         {
           heading: '¿Qué Sistemas de Baterías Ofrece HousePlus?',
           text: 'HousePlus ofrece una amplia gama de sistemas de almacenamiento de energía en baterías (BESS) para diversas escalas, desde unidades residenciales compactas hasta soluciones industriales a gran escala, que utilizan tecnología avanzada de iones de litio con alta densidad de energía y larga vida útil. HousePlus ofrece una amplia gama de sistemas de almacenamiento de energía en baterías (BESS) diseñados para diversas escalas, desde unidades residenciales compactas hasta soluciones industriales a gran escala. Nuestros sistemas de baterías utilizan tecnología avanzada de iones de litio, proporcionando alta densidad de energía, larga vida útil y características de seguridad superiores. Integrados con sistemas inteligentes de gestión de energía, optimizan el uso de la energía, reducen las facturas de electricidad y proporcionan energía de respaldo confiable durante los cortes. Asóciese con HousePlus para obtener soluciones de almacenamiento de baterías de vanguardia.',
-          image: '/images/products/pure-sine-inverter-2000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
           imageAlt: 'Instalación de paneles solares HousePlus con unidad de almacenamiento de baterías',
         },
         {
           heading: '¿Para Qué Se Usan las Estaciones de Energía Portátiles?',
           text: 'Las estaciones de energía portátiles se usan para aventuras al aire libre, preparación para emergencias y trabajo remoto, proporcionando energía ligera y duradera que se puede recargar a través de paneles solares, tomas de CA o cargadores de coche. Más allá de las instalaciones fijas, HousePlus se destaca en soluciones de energía portátil. Nuestras estaciones de energía portátiles, que van desde 300W hasta 3000W, son ideales para aventuras al aire libre, preparación para emergencias y trabajo remoto. Son livianas, duraderas y se pueden recargar a través de paneles solares, tomas de CA o cargadores de coche. Estos dispositivos versátiles encarnan el compromiso de HousePlus de proporcionar soluciones energéticas flexibles y accesibles, lo que los convierte en una opción popular para los distribuidores mayoristas que se dirigen a diversos mercados en África, el Sudeste Asiático y Europa.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'Estación de energía portátil HousePlus en un entorno exterior',
         },
         {
           heading: '¿Cómo Funcionan la Integración Inteligente y la Sostenibilidad?',
           text: 'Las soluciones de almacenamiento de energía de HousePlus funcionan con las instalaciones solares existentes y los ecosistemas de hogares inteligentes mediante integración perfecta, con sostenibilidad integrada en todo el ciclo de vida del producto, desde la fabricación ecológica hasta los componentes reciclables. Las soluciones de almacenamiento de energía de HousePlus están diseñadas para una integración perfecta con las instalaciones solares existentes y los ecosistemas de hogares inteligentes. Nuestro enfoque en la sostenibilidad se extiende a todo el ciclo de vida del producto, desde procesos de fabricación ecológicos hasta componentes reciclables. Al elegir HousePlus, nuestros socios mayoristas no solo invierten en tecnología confiable, sino que también contribuyen a un futuro más verde y sostenible. Ofrecemos servicios OEM/ODM completos para adaptar las soluciones a las demandas específicas del mercado.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'Paneles solares HousePlus y sistema inteligente de gestión de energía',
         },
         {
@@ -130,7 +130,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
       imageAlt: 'HousePlus tragbares Kraftwerk und Batteriespeichersystem',
       sections: [
         {
@@ -142,19 +142,19 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
         {
           heading: 'Welche Batteriesysteme bietet HousePlus an?',
           text: 'HousePlus bietet eine umfassende Palette von Batteriespeichersystemen (BESS) für verschiedene Größenordnungen an, von kompakten Wohneinheiten bis hin zu großtechnischen Industrielösungen, die alle fortschrittliche Lithium-Ionen-Technologie mit hoher Energiedichte und langer Lebensdauer verwenden. HousePlus bietet eine umfassende Palette von Batteriespeichersystemen (BESS) für verschiedene Größenordnungen an, von kompakten Wohneinheiten bis hin zu großtechnischen Industrielösungen. Unsere Batteriesysteme verwenden fortschrittliche Lithium-Ionen-Technologie, die eine hohe Energiedichte, eine lange Lebensdauer und überlegene Sicherheitsmerkmale bietet. Integriert in intelligente Energiemanagementsysteme optimieren sie den Energieverbrauch, senken die Stromrechnungen und bieten eine zuverlässige Notstromversorgung bei Ausfällen. Arbeiten Sie mit HousePlus für modernste Batteriespeicherlösungen zusammen.',
-          image: '/images/products/pure-sine-inverter-2000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
           imageAlt: 'HousePlus Solarmodulinstallation mit Batteriespeichereinheit',
         },
         {
           heading: 'Wofür werden tragbare Kraftwerke verwendet?',
           text: 'Tragbare Kraftwerke werden für Outdoor-Abenteuer, Notfallvorsorge und Remote-Arbeit verwendet und liefern leichte, langlebige Energie, die über Solarmodule, Wechselstromsteckdosen oder Autoladegeräte aufgeladen werden kann. Neben festen Installationen zeichnet sich HousePlus durch tragbare Energielösungen aus. Unsere tragbaren Kraftwerke, die von 300W bis 3000W reichen, sind ideal für Outdoor-Abenteuer, Notfallvorsorge und Remote-Arbeit. Sie sind leicht, langlebig und können über Solarmodule, Wechselstromsteckdosen oder Autoladegeräte aufgeladen werden. Diese vielseitigen Geräte verkörpern das HousePlus-Engagement, flexible und zugängliche Energielösungen anzubieten, was sie zu einer beliebten Wahl für Großhändler macht, die verschiedene Märkte in Afrika, Südostasien und Europa ansprechen.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'HousePlus tragbares Kraftwerk in einer Outdoor-Umgebung',
         },
         {
           heading: 'Wie funktionieren intelligente Integration und Nachhaltigkeit?',
           text: 'HousePlus Energiespeicherlösungen funktionieren mit bestehenden Solaranlagen und Smart-Home-Ökosystemen durch nahtlose Integration, wobei Nachhaltigkeit während des gesamten Produktlebenszyklus von umweltfreundlicher Herstellung bis zu recycelbaren Komponenten integriert ist. HousePlus Energiespeicherlösungen sind für die nahtlose Integration in bestehende Solaranlagen und Smart-Home-Ökosysteme konzipiert. Unser Fokus auf Nachhaltigkeit erstreckt sich über den gesamten Produktlebenszyklus, von umweltfreundlichen Herstellungsprozessen bis hin zu recycelbaren Komponenten. Durch die Wahl von HousePlus investieren unsere Großhandelspartner nicht nur in zuverlässige Technologie, sondern tragen auch zu einer grüneren, nachhaltigeren Zukunft bei. Wir bieten umfassende OEM/ODM-Dienstleistungen an, um Lösungen an spezifische Marktanforderungen anzupassen.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'HousePlus Solarmodule und intelligentes Energiemanagementsystem',
         },
         {
@@ -168,7 +168,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
       imageAlt: 'Centrale électrique portable HousePlus et système de stockage de batterie',
       sections: [
         {
@@ -180,19 +180,19 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
         {
           heading: 'Quels systèmes de batteries HousePlus propose-t-il?',
           text: 'HousePlus propose une gamme complète de systèmes de stockage d\'énergie par batterie (BESS) pour diverses échelles, des unités résidentielles compactes aux solutions industrielles à grande échelle, utilisant tous une technologie lithium-ion avancée avec une densité d\'énergie élevée et une longue durée de vie. HousePlus propose une gamme complète de systèmes de stockage d\'énergie par batterie (BESS) conçus pour diverses échelles, des unités résidentielles compactes aux solutions industrielles à grande échelle. Nos systèmes de batteries utilisent une technologie lithium-ion avancée, offrant une densité d\'énergie élevée, une longue durée de vie et des caractéristiques de sécurité supérieures. Intégrés à des systèmes intelligents de gestion de l\'énergie, ils optimisent la consommation d\'énergie, réduisent les factures d\'électricité et fournissent une alimentation de secours fiable pendant les pannes. Partenariat avec HousePlus pour des solutions de stockage de batterie de pointe.',
-          image: '/images/products/pure-sine-inverter-2000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
           imageAlt: 'Installation de panneaux solaires HousePlus avec unité de stockage de batterie',
         },
         {
           heading: 'À quoi servent les centrales électriques portables?',
           text: 'Les centrales électriques portables sont utilisées pour les aventures en plein air, la préparation aux urgences et le travail à distance, fournissant une énergie légère et durable qui peut être rechargée via des panneaux solaires, des prises CA ou des chargeurs de voiture. Au-delà des installations fixes, HousePlus excelle dans les solutions d\'alimentation portable. Nos centrales électriques portables, allant de 300W à 3000W, sont idéales pour les aventures en plein air, la préparation aux urgences et le travail à distance. Elles sont légères, durables et peuvent être rechargées via des panneaux solaires, des prises CA ou des chargeurs de voiture. Ces appareils polyvalents incarnent l\'engagement de HousePlus à fournir des solutions énergétiques flexibles et accessibles, ce qui en fait un choix populaire pour les distributeurs en gros ciblant divers marchés en Afrique, en Asie du Sud-Est et en Europe.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'Centrale électrique portable HousePlus en extérieur',
         },
         {
           heading: 'Comment fonctionnent l\'intégration intelligente et la durabilité?',
           text: 'Les solutions de stockage d\'énergie HousePlus fonctionnent avec les installations solaires existantes et les écosystèmes de maison intelligente grâce à une intégration transparente, avec une durabilité intégrée à l\'ensemble du cycle de vie du produit, de la fabrication écologique aux composants recyclables. Les solutions de stockage d\'énergie HousePlus sont conçues pour une intégration transparente avec les installations solaires existantes et les écosystèmes de maison intelligente. Notre accent sur la durabilité s\'étend à l\'ensemble du cycle de vie du produit, des processus de fabrication écologiques aux composants recyclables. En choisissant HousePlus, nos partenaires grossistes n\'investissent pas seulement dans une technologie fiable, mais contribuent également à un avenir plus vert et plus durable. Nous offrons des services OEM/ODM complets pour adapter les solutions aux demandes spécifiques du marché.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'Panneaux solaires HousePlus et système intelligent de gestion de l\'énergie',
         },
         {
@@ -206,7 +206,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
       imageAlt: 'محطة طاقة محمولة HousePlus ونظام تخزين البطارية',
       sections: [
         {
@@ -218,19 +218,19 @@ export default async function SolarEnergyStorageArticle({ params }: { params: Pr
         {
           heading: 'ما هي أنظمة البطاريات التي تقدمها HousePlus؟',
           text: 'تقدم HousePlus مجموعة شاملة من أنظمة تخزين الطاقة بالبطاريات (BESS) لمختلف المقاييس، من الوحدات السكنية المدمجة إلى الحلول الصناعية واسعة النطاق، وجميعها تستخدم تقنية الليثيوم أيون المتقدمة بكثافة طاقة عالية وعمر افتراضي طويل. تقدم HousePlus مجموعة شاملة من أنظمة تخزين الطاقة بالبطاريات (BESS) المصممة لمختلف المقاييس، من الوحدات السكنية المدمجة إلى الحلول الصناعية واسعة النطاق. تستخدم أنظمة البطاريات لدينا تقنية الليثيوم أيون المتقدمة، مما يوفر كثافة طاقة عالية، وعمر دورة طويل، وميزات أمان فائقة. متكاملة مع أنظمة إدارة الطاقة الذكية، فإنها تحسن استخدام الطاقة، وتقلل فواتير الكهرباء، وتوفر طاقة احتياطية موثوقة أثناء الانقطاعات. شارك مع HousePlus للحصول على حلول تخزين البطاريات المتطورة.',
-          image: '/images/products/pure-sine-inverter-2000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
           imageAlt: 'تركيب ألواح HousePlus الشمسية مع وحدة تخزين البطارية',
         },
         {
           heading: 'لما تُستخدم محطات الطاقة المحمولة؟',
           text: 'تُستخدم محطات الطاقة المحمولة للمغامرات الخارجية، والتأهب للطوارئ، والعمل عن بعد، وتوفر طاقة خفيفة الوزن ومتينة يمكن إعادة شحنها عبر الألواح الشمسية أو منافذ التيار المتردد أو شواحن السيارات. بالإضافة إلى التركيبات الثابتة، تتفوق HousePlus في حلول الطاقة المحمولة. محطات الطاقة المحمولة لدينا، التي تتراوح من 300 واط إلى 3000 واط، مثالية للمغامرات الخارجية، والتأهب للطوارئ، والعمل عن بعد. إنها خفيفة الوزن ومتينة، ويمكن إعادة شحنها عبر الألواح الشمسية أو منافذ التيار المتردد أو شواحن السيارات. تجسد هذه الأجهزة متعددة الاستخدامات التزام HousePlus بتوفير حلول طاقة مرنة ومتاحة، مما يجعلها خيارًا شائعًا لموزعي الجملة الذين يستهدفون أسواقًا متنوعة في إفريقيا وجنوب شرق آسيا وأوروبا.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'محطة طاقة محمولة HousePlus في بيئة خارجية',
         },
         {
           heading: 'كيف يعمل التكامل الذكي والاستدامة؟',
           text: 'حلول تخزين الطاقة من HousePlus تعمل مع التركيبات الشمسية الحالية وأنظمة المنزل الذكي من خلال التكامل السلس، مع الاستدامة المدمجة في دورة حياة المنتج بأكملها، من التصنيع الصديق للبيئة إلى المكونات القابلة لإعادة التدوير. تم تصميم حلول تخزين الطاقة من HousePlus للتكامل السلس مع التركيبات الشمسية الحالية وأنظمة المنزل الذكي. يمتد تركيزنا على الاستدامة إلى دورة حياة المنتج بأكملها، من عمليات التصنيع الصديقة للبيئة إلى المكونات القابلة لإعادة التدوير. باختيار HousePlus، لا يستثمر شركاؤنا بالجملة في التكنولوجيا الموثوقة فحسب، بل يساهمون أيضًا في مستقبل أكثر خضرة واستدامة. نقدم خدمات OEM/ODM شاملة لتكييف الحلول مع متطلبات السوق المحددة.',
-          image: '/images/products/home-energy-storage-5000w.jpg',
+          image: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',
           imageAlt: 'ألواح HousePlus الشمسية ونظام إدارة الطاقة الذكي',
         },
         {

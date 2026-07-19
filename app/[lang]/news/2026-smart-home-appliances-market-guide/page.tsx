@@ -45,7 +45,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/smart-wifi-plug-meter.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',
     heroImageAlt: 'Modern smart kitchen with integrated appliances, representing future home technology',
     sections: [
       {
@@ -83,7 +83,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/smart-wifi-plug-meter.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',
     heroImageAlt: 'Cocina inteligente moderna con electrodomésticos integrados, que representa la tecnología del hogar del futuro',
     sections: [
       {
@@ -121,7 +121,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/smart-wifi-plug-meter.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',
     heroImageAlt: 'Moderne intelligente Küche mit integrierten Geräten, die zukünftige Heimtechnologie darstellt',
     sections: [
       {
@@ -159,7 +159,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/smart-wifi-plug-meter.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',
     heroImageAlt: 'Cuisine intelligente moderne avec appareils intégrés, représentant la technologie domestique future',
     sections: [
       {
@@ -197,7 +197,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/products/smart-wifi-plug-meter.jpg',
+    heroImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',
     heroImageAlt: 'مطبخ ذكي حديث مع أجهزة مدمجة، يمثل تكنولوجيا المنزل المستقبلية',
     sections: [
       {
