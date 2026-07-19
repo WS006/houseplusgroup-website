@@ -46,7 +46,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-16',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
+    heroImage: '/images/products/induction-cooktop-2000w.jpg',
     heroImageAlt: 'HousePlus smart home appliances showcase',
     sections: [
       {
@@ -76,7 +76,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-16',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
+    heroImage: '/images/products/induction-cooktop-2000w.jpg',
     heroImageAlt: 'Exhibición de electrodomésticos inteligentes HousePlus',
     sections: [
       {
@@ -106,7 +106,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-16',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
+    heroImage: '/images/products/induction-cooktop-2000w.jpg',
     heroImageAlt: 'HousePlus Smart Home Geräte Ausstellung',
     sections: [
       {
@@ -136,7 +136,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-16',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
+    heroImage: '/images/products/induction-cooktop-2000w.jpg',
     heroImageAlt: 'Présentation des appareils électroménagers intelligents HousePlus',
     sections: [
       {
@@ -166,7 +166,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-16',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
+    heroImage: '/images/products/induction-cooktop-2000w.jpg',
     heroImageAlt: 'عرض الأجهزة المنزلية الذكية HousePlus',
     sections: [
       {

@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'How Do MOQ and Flexible Order Structures Work at HousePlus?',
         text: 'MOQ and flexible order structures at HousePlus work with standard minimum order quantities starting at 100 units per product line, with flexible arrangements for new partners entering specific regional markets, preferential pricing tiers for large-volume orders over 1,000 units, and mixed-container orders combining multiple product categories in a single shipment. One of the most common questions from first-time wholesale buyers is about minimum order quantities. At HousePlus, we understand that different markets have different needs. This flexibility is particularly valuable for distributors serving diverse retail channels across Africa, Southeast Asia, and the Middle East.',
-        image: 'https://images.houseplus-ch.com/products/toaster-2-slice.jpg',
+        image: '/images/products/toaster-2-slice.jpg',
         imageAlt: 'Warehouse with organized home appliance inventory for wholesale distribution',
       },
       {
@@ -85,7 +85,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: '¿Cómo Funcionan el MOQ y las Estructuras de Pedidos Flexibles en HousePlus?',
         text: 'El MOQ y las estructuras de pedidos flexibles en HousePlus funcionan con cantidades mínimas de pedido estándar que comienzan en 100 unidades por línea de productos, con acuerdos flexibles para nuevos socios que ingresan a mercados regionales específicos, niveles de precios preferenciales para pedidos de gran volumen de más de 1,000 unidades y pedidos de contenedores mixtos que combinan múltiples categorías de productos en un solo envío. Una de las preguntas más comunes de los compradores mayoristas por primera vez es sobre las cantidades mínimas de pedido.',
-        image: 'https://images.houseplus-ch.com/products/toaster-2-slice.jpg',
+        image: '/images/products/toaster-2-slice.jpg',
         imageAlt: 'Almacén con inventario organizado de electrodomésticos para distribución mayorista',
       },
       {
@@ -121,7 +121,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'Wie Funktionieren MOQ und Flexible Bestellstrukturen bei HousePlus?',
         text: 'MOQ und flexible Bestellstrukturen bei HousePlus funktionieren mit Standard-Mindestbestellmengen ab 100 Einheiten pro Produktlinie, mit flexiblen Vereinbarungen für neue Partner, die in bestimmte regionale Märkte eintreten, Vorzugspreisstufen für Großbestellungen über 1.000 Einheiten und Mischcontainerbestellungen, die mehrere Produktkategorien in einer einzigen Sendung kombinieren. Eine der häufigsten Fragen von Erstgroßhandelskäufern betrifft Mindestbestellmengen.',
-        image: 'https://images.houseplus-ch.com/products/toaster-2-slice.jpg',
+        image: '/images/products/toaster-2-slice.jpg',
         imageAlt: 'Lager mit organisiertem Haushaltsgerätebestand für Großvertrieb',
       },
       {
@@ -157,7 +157,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'Comment Fonctionnent le MOQ et les Structures de Commande Flexibles chez HousePlus ?',
         text: 'Le MOQ et les structures de commande flexibles chez HousePlus fonctionnent avec des quantités minimales de commande standard à partir de 100 unités par ligne de produits, avec des arrangements flexibles pour les nouveaux partenaires entrant sur des marchés régionaux spécifiques, des tarifs préférentiels pour les commandes de grand volume de plus de 1 000 unités et des commandes de conteneurs mixtes combinant plusieurs catégories de produits dans un seul envoi. L\'une des questions les plus fréquentes des premiers acheteurs en gros concerne les quantités minimales de commande.',
-        image: 'https://images.houseplus-ch.com/products/toaster-2-slice.jpg',
+        image: '/images/products/toaster-2-slice.jpg',
         imageAlt: 'Entrepôt avec inventaire organisé d\'appareils électroménagers pour la distribution en gros',
       },
       {
@@ -193,7 +193,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'كيف تعمل الحد الأدنى لكميات الطلب وهياكل الطلب المرنة في HousePlus؟',
         text: 'تعمل الحد الأدنى لكميات الطلب (MOQ) وهياكل الطلب المرنة في HousePlus بكميات طلب دنيا قياسية تبدأ من 100 وحدة لكل خط إنتاج، مع ترتيبات مرنة للشركاء الجدد الذين يدخلون أسواقًا إقليمية محددة، ومستويات أسعار تفضيلية للطلبات الكبيرة التي تزيد عن 1000 وحدة، وطلبات حاويات مختلطة تجمع بين فئات منتجات متعددة في شحنة واحدة. واحدة من أكثر الأسئلة شيوعًا من المشترين بالجملة لأول مرة تتعلق بالحد الأدنى لكميات الطلب.',
-        image: 'https://images.houseplus-ch.com/products/toaster-2-slice.jpg',
+        image: '/images/products/toaster-2-slice.jpg',
         imageAlt: 'مستودع مع مخزون منظم من الأجهزة المنزلية للتوزيع بالجملة',
       },
       {
