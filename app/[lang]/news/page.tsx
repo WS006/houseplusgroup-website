@@ -64,7 +64,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   const articles = [
     {
       slug: 'consumer-electronics-battery-life-testing',
-      image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/power-bank-60w-pd.jpg',
       imageAlt: 'Battery testing laboratory with charge-discharge equipment',
       title: {
         en: 'Battery Cycle Life Testing Standards: Technical Analysis for Consumer Electronics',
@@ -84,7 +84,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'appliance-energy-efficiency-vs-actual-consumption',
-      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
+      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
       imageAlt: 'Energy efficiency labels on home appliances with power monitoring',
       title: {
         en: 'Appliance Energy Efficiency Ratings vs Actual Consumption: Technical Analysis',
@@ -185,7 +185,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
 
     {
       slug: '2026-smart-home-appliances-market-guide',
-      image: 'https://images.houseplus-ch.com/products/electric-kettle-1-5l.jpg',
+      image: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',
       imageAlt: 'Modern smart kitchen with integrated appliances, representing future home technology',
       title: {
         en: '2026 Global Smart Home Appliance Market Trends & B2B Procurement Guide',

@@ -294,7 +294,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-panel-500w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-panel-100w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/solar-panel-500w.jpg`,
         title: '500W Monocrystalline Solar Panel HP-SP500',
         caption: 'High-efficiency 500W monocrystalline solar panel with 21.5% conversion rate for commercial and off-grid installations',
       },
@@ -304,7 +304,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-inverter-3kw',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/home-energy-storage-5000w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/solar-inverter-3kw.jpg`,
         title: '3kW Pure Sine Wave Solar Inverter HP-INV3000',
         caption: '3kW pure sine wave solar inverter with built-in MPPT charge controller for grid-tie and off-grid operation',
       },
@@ -314,7 +314,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/lithium-battery-5kwh',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/pure-sine-inverter-2000w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/lithium-battery-5kwh.jpg`,
         title: '5kWh LiFePO4 Lithium Battery HP-LFP5K',
         caption: '5kWh LiFePO4 battery with built-in BMS, 6000+ charge cycles, 10-year design life for solar storage',
       },
@@ -324,7 +324,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/lead-acid-battery-100ah',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-fan-20w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/lead-acid-battery-100ah.jpg`,
         title: '100Ah Deep Cycle Lead-Acid Battery HP-LA100',
         caption: 'Maintenance-free VRLA deep-cycle battery for solar storage, UPS and marine applications',
       },
@@ -334,7 +334,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/charge-controller-60a',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-generator-kit-300w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/charge-controller-60a.jpg`,
         title: 'MPPT Solar Charge Controller 60A HP-MPPT60',
         caption: '60A MPPT solar charge controller with 99.5% tracking efficiency and multi-protection for 12V/24V/48V systems',
       },
@@ -344,7 +344,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-street-light-200w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/power-bank-60w-pd.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/solar-street-light-200w.jpg`,
         title: '200W All-in-One Solar Street Light HP-SSL200',
         caption: '200W integrated solar street light with motion sensor, remote control and IP65 waterproof rating',
       },
@@ -364,7 +364,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-power-bank-20000mah',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/foldable-solar-panel-200w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/solar-power-bank-20000mah.jpg`,
         title: '20000mAh Solar Power Bank HP-SPB20K',
         caption: '20000mAh solar power bank with dual USB, USB-C 18W PD fast charge and waterproof casing',
       },
@@ -374,7 +374,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/air-fryer-5-8l',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/induction-cooktop-2000w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/air-fryer-5-8l.jpg`,
         title: '5.8L Digital Air Fryer HP-AF58',
         caption: '5.8L digital air fryer with 8 preset programmes, touch panel and 360-degree rapid air circulation',
       },
@@ -424,7 +424,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/bluetooth-earphone-tws',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/usb-c-cable-2m.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/bluetooth-earphone-tws.jpg`,
         title: 'True Wireless Bluetooth Earphones HP-TWS01',
         caption: 'Bluetooth 5.3 TWS earbuds with active noise cancellation and 30-hour total playtime',
       },
@@ -444,7 +444,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/portable-ssd-1tb',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/headphone-over-ear.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/portable-ssd-1tb.jpg`,
         title: '1TB USB-C Portable SSD HP-SSD1T',
         caption: '1TB portable SSD with up to 1050 MB/s read speed, shock-resistant aluminium casing and USB 3.2 Gen 2',
       },
@@ -454,7 +454,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/micro-sd-128gb',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/bluetooth-earphone-tws.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/micro-sd-128gb.jpg`,
         title: '128GB Micro SD Card Class 10 A2 HP-SD128',
         caption: '128GB UHS-I U3 A2 rated micro SD card with up to 100 MB/s read speed for cameras and drones',
       },
@@ -485,7 +485,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/portable-power-station-3000w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-panel-100w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/portable-power-station-3000w.jpg`,
         title: '3000W Portable Power Station HP-SOL-3000',
         caption: '3000Wh LiFePO4 portable power station with 3000W continuous output, solar/AC/car charging for outdoor construction and emergency backup',
       },
@@ -505,7 +505,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/home-energy-storage-5000w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/foldable-solar-panel-200w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/home-energy-storage-5000w.jpg`,
         title: '5000W Home Energy Storage System HP-SOL-5000H',
         caption: '5000Wh modular LiFePO4 home energy storage system with grid-tie/off-grid switchable, expandable to 30kWh',
       },
@@ -525,7 +525,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/lifepo4-battery-12v100ah',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/home-energy-storage-5000w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/lifepo4-battery-12v100ah.jpg`,
         title: '12V 100Ah LiFePO4 Battery HP-SOL-12V100',
         caption: '12V 100Ah LiFePO4 deep cycle battery with 1280Wh capacity, integrated BMS, 3000+ cycles, UN38.3 certified for RV and marine',
       },
@@ -535,7 +535,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/outdoor-power-station-600w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/pure-sine-inverter-2000w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/outdoor-power-station-600w.jpg`,
         title: '600W Outdoor Power Station HP-SOL-600O',
         caption: '600Wh LiFePO4 outdoor power station with 600W pure sine wave output, 2xAC + 2xUSB + 1xDC, 7.2kg portable for camping',
       },
@@ -545,7 +545,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/mppt-controller-40a',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-fan-20w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/mppt-controller-40a.jpg`,
         title: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40',
         caption: 'MPPT 40A solar charge controller with >=98% efficiency, auto 12V/24V detection, LCD display for lead-acid, gel and LiFePO4 batteries',
       },
@@ -555,7 +555,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/magnetic-power-bank-10000mah',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/smart-watch.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/magnetic-power-bank-10000mah.jpg`,
         title: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K',
         caption: '10000mAh MagSafe-compatible magnetic wireless power bank with 15W wireless and 20W PD USB-C, 220g ultra-light for iPhone wireless charging',
       },
@@ -565,7 +565,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/pure-sine-inverter-2000w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/foldable-solar-panel-200w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/pure-sine-inverter-2000w.jpg`,
         title: '2000W Pure Sine Wave Inverter HP-SOL-INV2K',
         caption: '2000W pure sine wave inverter with 4000W surge, >=92% efficiency, THD <3%, selectable 12V/24V/48V input and 110V/220V output',
       },
@@ -575,7 +575,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/flexible-solar-panel-400w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/solar-generator-kit-300w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/flexible-solar-panel-400w.jpg`,
         title: '400W Semi-Flexible Solar Panel HP-SOL-400F',
         caption: '400W semi-flexible monocrystalline solar panel with ETFE surface, 30-degree bend radius, 8.5kg lightweight for RV curved roofs and marine decks',
       },
@@ -585,7 +585,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/solar-generator-kit-300w',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/foldable-solar-panel-200w.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/solar-generator-kit-300w.jpg`,
         title: 'Portable Solar Generator Kit 300W HP-SOL-KIT300',
         caption: 'All-in-one 300W solar generator kit with 100W panel, 300Wh LiFePO4 power station, cables and carry bag, 12kg total for camping and emergency',
       },
@@ -595,7 +595,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/smart-wifi-plug-meter',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/electric-kettle-1-5l.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/smart-wifi-plug-meter.jpg`,
         title: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10',
         caption: 'Smart WiFi plug with real-time energy monitoring, 16A/3680W max, Alexa/Google Home compatible for home automation and energy saving',
       },
@@ -605,7 +605,7 @@ const productImages: PageImages[] = [
     pageUrl: '/en/products/usb-c-cable-100w-5a',
     images: [
       {
-        loc: `${IMAGE_BASE_URL}/products/usb-c-cable-2m.jpg`,
+        loc: `${IMAGE_BASE_URL}/products/usb-c-cable-100w-5a.jpg`,
         title: 'Type-C 100W Fast Charging Cable (5A) HP-3C-TC100W',
         caption: '100W PD USB-C to USB-C cable with 5A current, nylon braided, aluminium connectors, 10000+ bend cycles for MacBook and laptop charging',
       },
