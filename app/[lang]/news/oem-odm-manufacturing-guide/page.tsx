@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'What Are HousePlus OEM Capabilities from Concept to Production?',
         text: 'HousePlus OEM capabilities span the entire product development lifecycle from concept design and engineering to tooling, prototyping, testing, and full-scale mass production, with our experienced R&D team working closely with partners to bring custom product visions to life while ensuring quality, cost-effectiveness, and timely delivery. Our OEM service is ideal for brands with established product designs or specific technical requirements. We handle everything from initial CAD design and 3D prototyping through final production, with full transparency at every stage.',
-        image: 'https://images.houseplus-ch.com/factory/tooling-workshop.jpg',
+        image: 'https://images.houseplus-ch.com/articles/service/factory-production-line-automated.jpg',
         imageAlt: 'HousePlus engineering team working on OEM product development',
       },
       {
@@ -85,7 +85,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: '¿Cuáles Son las Capacidades OEM de HousePlus del Concepto a la Producción?',
         text: 'Las capacidades OEM de HousePlus abarcan todo el ciclo de vida de desarrollo de productos, desde el diseño conceptual y la ingeniería hasta la fabricación de herramientas, la creación de prototipos, las pruebas y la producción en masa a gran escala, con nuestro experimentado equipo de I+D trabajando estrechamente con los socios para dar vida a las visiones de productos personalizados mientras garantizan calidad, rentabilidad y entrega oportuna. Nuestro servicio OEM es ideal para marcas con diseños de productos establecidos o requisitos técnicos específicos.',
-        image: 'https://images.houseplus-ch.com/factory/tooling-workshop.jpg',
+        image: 'https://images.houseplus-ch.com/articles/service/factory-production-line-automated.jpg',
         imageAlt: 'Equipo de ingeniería HousePlus trabajando en desarrollo de productos OEM',
       },
       {
@@ -121,7 +121,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'Was Sind HousePlus OEM-Fähigkeiten vom Konzept zur Produktion?',
         text: 'Die OEM-Fähigkeiten von HousePlus umfassen den gesamten Produktentwicklungslebenszyklus von Konzeptdesign und Ingenieurwesen über Werkzeugbau, Prototypenerstellung, Tests bis hin zur vollständigen Massenproduktion, wobei unser erfahrenes F&E-Team eng mit Partnern zusammenarbeitet, um individuelle Produktvisionen zum Leben zu erwecken und gleichzeitig Qualität, Wirtschaftlichkeit und pünktliche Lieferung zu gewährleisten. Unser OEM-Service ist ideal für Marken mit etablierten Produktdesigns oder spezifischen technischen Anforderungen.',
-        image: 'https://images.houseplus-ch.com/factory/tooling-workshop.jpg',
+        image: 'https://images.houseplus-ch.com/articles/service/factory-production-line-automated.jpg',
         imageAlt: 'HousePlus Ingenieurteam arbeitet an OEM-Produktentwicklung',
       },
       {
@@ -157,7 +157,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'Quelles Sont les Capacités OEM de HousePlus du Concept à la Production ?',
         text: 'Les capacités OEM de HousePlus couvrent l\'ensemble du cycle de vie de développement de produit, de la conception et de l\'ingénierie à l\'outillage, au prototypage, aux tests et à la production de masse à grande échelle, avec notre équipe R&D expérimentée travaillant en étroite collaboration avec les partenaires pour donner vie aux visions de produits personnalisés tout en garantissant qualité, rentabilité et livraison à temps. Notre service OEM est idéal pour les marques avec des conceptions de produits établies ou des exigences techniques spécifiques.',
-        image: 'https://images.houseplus-ch.com/factory/tooling-workshop.jpg',
+        image: 'https://images.houseplus-ch.com/articles/service/factory-production-line-automated.jpg',
         imageAlt: 'Équipe d\'ingénierie HousePlus travaillant sur le développement de produits OEM',
       },
       {
@@ -193,7 +193,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'ما هي قدرات OEM لدى HousePlus من المفهوم إلى الإنتاج؟',
         text: 'تغطي قدرات OEM لدى HousePlus كامل دورة حياة تطوير المنتج من التصميم المفاهيمي والهندسة إلى تصنيع الأدوات وإنشاء النماذج الأولية والاختبارات والإنتاج الضخم على نطاق واسع، مع عمل فريق البحث والتطوير ذوي الخبرة لدينا بشكل وثيق مع الشركاء لتحقيق رؤى المنتجات المخصصة مع ضمان الجودة والفعالية من حيث التكلفة والتسليم في الوقت المحدد. خدمة OEM لدينا مثالية للعلامات التجارية ذات التصاميم المنتجات الراسخة أو المتطلبات التقنية المحددة.',
-        image: 'https://images.houseplus-ch.com/factory/tooling-workshop.jpg',
+        image: 'https://images.houseplus-ch.com/articles/service/factory-production-line-automated.jpg',
         imageAlt: 'فريق الهندسة في HousePlus يعمل على تطوير منتجات OEM',
       },
       {

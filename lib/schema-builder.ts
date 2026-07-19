@@ -270,7 +270,7 @@ export function buildArticleSchema(article: {
       '@type': 'Person',
       name: article.authorName || 'Jack Hu',
       url: 'https://www.houseplus-ch.com/en/author/jack-hu',
-      image: 'https://images.houseplus-ch.com/team/jack-hu.jpg',
+      image: 'https://images.houseplus-ch.com/site/team-collaboration-office.jpg',
       jobTitle: 'Founder & Editorial Lead',
       worksFor: {
         '@type': 'Organization',
