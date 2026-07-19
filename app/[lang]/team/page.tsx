@@ -202,7 +202,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: str
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.houseplus-ch.com/site/team-collaboration-office.jpg"
+                  src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus team collaboration and professional meeting"
                   fill
                   className="object-cover"
