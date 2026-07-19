@@ -57,7 +57,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Anodised aluminium alloy frame — corrosion-resistant and lightweight',
       'IP68-rated junction box with bypass diodes for shading protection',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',    imageAlt: '500W Monocrystalline Solar Panel HP-SP500 | 500W Monocrystalline | 21.5% Efficiency | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',    imageAlt: '500W Monocrystalline Solar Panel HP-SP500 | 500W Monocrystalline | 21.5% Efficiency | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '500W Monocrystalline Solar Panel HP-SP500 | HousePlus Professional Solar Energy Manufacturer | PERC Cell | Residential Commercial Solar | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -78,7 +78,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'LCD display with real-time monitoring of voltage, current and power',
       'Multi-protection: over-voltage, over-current, short-circuit, thermal',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/solar-inverter-3kw.jpg',    imageAlt: '3kW Pure Sine Wave Solar Inverter HP-INV3000 | 3kW Pure Sine Wave | MPPT Built-in | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',    imageAlt: '3kW Pure Sine Wave Solar Inverter HP-INV3000 | 3kW Pure Sine Wave | MPPT Built-in | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '3kW Pure Sine Wave Solar Inverter HP-INV3000 | HousePlus Professional Solar Energy Manufacturer | Grid-Tie Off-Grid Hybrid | 99% Efficiency | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -99,7 +99,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Wide operating temperature range: -20°C to +60°C',
       'Stackable design — expandable to 30kWh with parallel connection',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/lithium-battery-5kwh.jpg',    imageAlt: '5kWh LiFePO4 Lithium Battery HP-LFP5K | 5kWh LiFePO4 | 6000+ Cycles | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',    imageAlt: '5kWh LiFePO4 Lithium Battery HP-LFP5K | 5kWh LiFePO4 | 6000+ Cycles | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '5kWh LiFePO4 Lithium Battery HP-LFP5K | HousePlus Professional Solar Energy Manufacturer | BMS Integrated | Stackable Design | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -119,7 +119,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Deep discharge recovery capability for extended service life',
       'Vibration-resistant construction for mobile and marine use',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/lead-acid-battery-100ah.jpg',    imageAlt: '100Ah Deep Cycle Lead-Acid Battery HP-LA100 | 100Ah Deep Cycle | VRLA AGM | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-fan-20w.jpg',    imageAlt: '100Ah Deep Cycle Lead-Acid Battery HP-LA100 | 100Ah Deep Cycle | VRLA AGM | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '100Ah Deep Cycle Lead-Acid Battery HP-LA100 | HousePlus Professional Solar Energy Manufacturer | Maintenance-Free | Marine RV UPS | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -139,7 +139,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Backlit LCD display showing PV voltage, battery voltage and charge current',
       'Comprehensive protection: overcharge, over-discharge, short-circuit, reverse polarity',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/charge-controller-60a.jpg',    imageAlt: 'MPPT Solar Charge Controller 60A HP-MPPT60 | MPPT 60A | 99.5% Tracking | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-generator-kit-300w.jpg',    imageAlt: 'MPPT Solar Charge Controller 60A HP-MPPT60 | MPPT 60A | 99.5% Tracking | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: 'MPPT Solar Charge Controller 60A HP-MPPT60 | HousePlus Professional Solar Energy Manufacturer | LCD Display | 12V 24V 48V Auto | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -159,7 +159,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'PIR motion sensor with adjustable sensitivity and delay time',
       'Remote control for brightness adjustment and scheduling',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/solar-street-light-200w.jpg',    imageAlt: '200W All-in-One Solar Street Light HP-SSL200 | 200W All-in-One | PIR Motion Sensor | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/power-bank-60w-pd.jpg',    imageAlt: '200W All-in-One Solar Street Light HP-SSL200 | 200W All-in-One | PIR Motion Sensor | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '200W All-in-One Solar Street Light HP-SSL200 | HousePlus Professional Solar Energy Manufacturer | IP65 Waterproof | Remote Control | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -199,7 +199,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Built-in solar panel for emergency top-up in outdoor environments',
       'IPX4 waterproof and dustproof construction',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/solar-power-bank-20000mah.jpg',    imageAlt: '20000mAh Solar Power Bank HP-SPB20K | 20000mAh Solar Charger | 18W PD Fast Charge | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/foldable-solar-panel-200w.jpg',    imageAlt: '20000mAh Solar Power Bank HP-SPB20K | 20000mAh Solar Charger | 18W PD Fast Charge | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '20000mAh Solar Power Bank HP-SPB20K | HousePlus Professional Solar Energy Manufacturer | Waterproof Outdoor | Dual USB USB-C | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -220,7 +220,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Digital touch screen with 8 one-touch preset programmes',
       '360° rapid air circulation for even, crispy results',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',    imageAlt: '5.8L Digital Air Fryer HP-AF58 | 5.8L Digital Air Fryer | Oil-Free Cooking | HousePlus Wholesale Home Appliance Supplier | Household Home Appliance | Kitchen Appliance Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',    imageAlt: '5.8L Digital Air Fryer HP-AF58 | 5.8L Digital Air Fryer | Oil-Free Cooking | HousePlus Wholesale Home Appliance Supplier | Household Home Appliance | Kitchen Appliance Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '5.8L Digital Air Fryer HP-AF58 | HousePlus Professional Home Appliance Manufacturer | 8 Presets Touch | 360 Air Circulation | Cooking Appliance Supplier | Small Home Appliance Wholesale | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -322,7 +322,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Active noise cancellation (ANC) with transparency mode',
       'IPX5 sweat and water resistance for sports use',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',    imageAlt: 'True Wireless Bluetooth Earphones (TWS) HP-TWS01 | TWS Bluetooth 5.3 | ANC Noise Cancellation | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/usb-c-cable-2m.jpg',    imageAlt: 'True Wireless Bluetooth Earphones (TWS) HP-TWS01 | TWS Bluetooth 5.3 | ANC Noise Cancellation | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: 'True Wireless Bluetooth Earphones (TWS) HP-TWS01 | HousePlus Professional 3C Electronic Manufacturer | 30h Total Playtime | IPX5 Waterproof | Mobile Accessory Supplier | Digital Product Factory | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -362,7 +362,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Shock-resistant aluminium alloy casing — drop-tested to 2m',
       'Compact pocket-sized form factor — 50g lightweight',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/portable-ssd-1tb.jpg',    imageAlt: '1TB USB-C Portable SSD HP-SSD1T | 1TB Portable SSD | 1050MB/s Read | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/headphone-over-ear.jpg',    imageAlt: '1TB USB-C Portable SSD HP-SSD1T | 1TB Portable SSD | 1050MB/s Read | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '1TB USB-C Portable SSD HP-SSD1T | HousePlus Professional 3C Electronic Manufacturer | USB-C 3.2 Gen2 | Shock-Resistant | Mobile Accessory Supplier | Digital Product Factory | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -382,7 +382,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Waterproof, temperature-proof and X-ray-proof construction',
       'Includes full-size SD adapter for camera and laptop compatibility',
     ],
-    coverImage: 'https://images.houseplus-ch.com/products/micro-sd-128gb.jpg',    imageAlt: '128GB Micro SD Card (Class 10 / A2) HP-SD128 | 128GB Micro SD | UHS-I U3 A2 | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',    imageAlt: '128GB Micro SD Card (Class 10 / A2) HP-SD128 | 128GB Micro SD | UHS-I U3 A2 | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '128GB Micro SD Card (Class 10 / A2) HP-SD128 | HousePlus Professional 3C Electronic Manufacturer | 100MB/s Read | Waterproof Temperature-Proof | Mobile Accessory Supplier | Digital Product Factory | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -500,7 +500,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',    imageAlt: '3000W Portable Power Station HP-SOL-3000 | 3000W Power Station | 3000Wh LiFePO4 | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',    imageAlt: '3000W Portable Power Station HP-SOL-3000 | 3000W Power Station | 3000Wh LiFePO4 | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '3000W Portable Power Station HP-SOL-3000 | HousePlus Professional Solar Energy Manufacturer | 6000W Peak | Solar AC Car Charging | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -596,7 +596,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',    imageAlt: '5000W Home Energy Storage System HP-SOL-5000H | 5000W Home Storage | 5000Wh Modular | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/foldable-solar-panel-200w.jpg',    imageAlt: '5000W Home Energy Storage System HP-SOL-5000H | 5000W Home Storage | 5000Wh Modular | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '5000W Home Energy Storage System HP-SOL-5000H | HousePlus Professional Solar Energy Manufacturer | Grid-Tie Off-Grid | ≥6000 Cycles | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -692,7 +692,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/lifepo4-battery-12v100ah.jpg',    imageAlt: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 | 12V 100Ah LiFePO4 | 1280Wh Capacity | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',    imageAlt: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 | 12V 100Ah LiFePO4 | 1280Wh Capacity | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 | HousePlus Professional Solar Energy Manufacturer | 3000+ Cycles | UN38.3 Certified | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -740,7 +740,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/outdoor-power-station-600w.jpg',    imageAlt: '600W Outdoor Power Station HP-SOL-600O | 600W Outdoor Station | 600Wh LiFePO4 | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',    imageAlt: '600W Outdoor Power Station HP-SOL-600O | 600W Outdoor Station | 600Wh LiFePO4 | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '600W Outdoor Power Station HP-SOL-600O | HousePlus Professional Solar Energy Manufacturer | Pure Sine Wave | 7.2kg Portable | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -787,7 +787,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/mppt-controller-40a.jpg',    imageAlt: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40 | MPPT 40A Controller | ≥98% Efficiency | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-fan-20w.jpg',    imageAlt: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40 | MPPT 40A Controller | ≥98% Efficiency | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: 'MPPT 40A Solar Charge Controller HP-SOL-MPPT40 | HousePlus Professional Solar Energy Manufacturer | Auto 12V/24V | LCD Display | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -835,7 +835,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/magnetic-power-bank-10000mah.jpg',    imageAlt: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K | 10000mAh Magnetic | MagSafe Compatible | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/smart-watch.jpg',    imageAlt: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K | 10000mAh Magnetic | MagSafe Compatible | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '10000mAh Magnetic Wireless Power Bank HP-3C-MAG10K | HousePlus Professional 3C Electronic Manufacturer | 15W Wireless 20W PD | 220g Ultra-Light | Mobile Accessory Supplier | Digital Product Factory | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -883,7 +883,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',    imageAlt: '2000W Pure Sine Wave Inverter HP-SOL-INV2K | 2000W Pure Sine | 4000W Surge | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/foldable-solar-panel-200w.jpg',    imageAlt: '2000W Pure Sine Wave Inverter HP-SOL-INV2K | 2000W Pure Sine | 4000W Surge | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '2000W Pure Sine Wave Inverter HP-SOL-INV2K | HousePlus Professional Solar Energy Manufacturer | ≥92% Efficiency | THD <3% | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -931,7 +931,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/flexible-solar-panel-400w.jpg',    imageAlt: '400W Semi-Flexible Solar Panel HP-SOL-400F | 400W Semi-Flexible | ETFE Surface | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-generator-kit-300w.jpg',    imageAlt: '400W Semi-Flexible Solar Panel HP-SOL-400F | 400W Semi-Flexible | ETFE Surface | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: '400W Semi-Flexible Solar Panel HP-SOL-400F | HousePlus Professional Solar Energy Manufacturer | 30° Bend Radius | 8.5kg Lightweight | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -979,7 +979,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/solar-generator-kit-300w.jpg',    imageAlt: 'Portable Solar Generator Kit 300W HP-SOL-KIT300 | 300W Solar Generator | All-in-One Kit | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/foldable-solar-panel-200w.jpg',    imageAlt: 'Portable Solar Generator Kit 300W HP-SOL-KIT300 | 300W Solar Generator | All-in-One Kit | HousePlus Wholesale Solar Supplier | Solar Energy System | Solar Panel Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: 'Portable Solar Generator Kit 300W HP-SOL-KIT300 | HousePlus Professional Solar Energy Manufacturer | Camping Emergency | Lightweight Portable | Solar Power Solution | Off-Grid Solar | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -1027,7 +1027,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',    imageAlt: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10 | Smart WiFi Plug | Energy Meter Monitor | HousePlus Wholesale Home Appliance Supplier | Household Home Appliance | Kitchen Appliance Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/electric-kettle-1-5l.jpg',    imageAlt: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10 | Smart WiFi Plug | Energy Meter Monitor | HousePlus Wholesale Home Appliance Supplier | Household Home Appliance | Kitchen Appliance Manufacturer | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: 'Smart WiFi Plug with Energy Meter HP-HA-WIFI10 | HousePlus Professional Home Appliance Manufacturer | APP Remote Control | Timer Schedule | Cooking Appliance Supplier | Small Home Appliance Wholesale | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },
@@ -1075,7 +1075,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/products/usb-c-cable-100w-5a.jpg',    imageAlt: 'Type-C 100W Fast Charging Cable (5A) HP-3C-TC100W | 100W Type-C Cable | 5A Fast Charging | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
+    coverImage: 'https://images.houseplus-ch.com/products/usb-c-cable-2m.jpg',    imageAlt: 'Type-C 100W Fast Charging Cable (5A) HP-3C-TC100W | 100W Type-C Cable | 5A Fast Charging | HousePlus Wholesale 3C Electronic Supplier | 3C Electronic Product | Consumer Electronics Wholesale | China Factory Direct Supplier | Guangdong Manufacturer | Zhongshan Factory | CE/RoHS/FCC/ISO 9001 | OEM/ODM Bulk Order | jack@houseplus-ch.com | +2349078080738 | +8615578119543 | https://wa.me/8615578119543',
     imageTitle: 'Type-C 100W Fast Charging Cable (5A) HP-3C-TC100W | HousePlus Professional 3C Electronic Manufacturer | PD 3.0 QC 4.0 | Durable Braided | Mobile Accessory Supplier | Digital Product Factory | 8 Production Lines | Competitive Factory Price | Fast Delivery 20-35 Days | MOQ 100-500 pcs | 20,000㎡ ISO 9001 Factory Since 2010 | 441+ B2B Clients in 53+ Countries | 100,000+ Units/Month | 8 Production Lines | Email: jack@houseplus-ch.com | WhatsApp: +2349078080738 / +8615578119543 | Website: https://www.houseplus-ch.com | WeChat: JackHousePlus | WhatsApp: https://wa.me/8615578119543',
 
   },

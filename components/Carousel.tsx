@@ -43,7 +43,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     },
     {
       _uid: 'default-2',
-      image: { filename: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg', alt: 'HousePlus Smart Home Appliances — Air Fryers, Kettles and Kitchen Appliances OEM ODM' },
+      image: { filename: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg', alt: 'HousePlus Smart Home Appliances — Air Fryers, Kettles and Kitchen Appliances OEM ODM' },
       title: 'Smart Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
       button_text: 'View Appliances',

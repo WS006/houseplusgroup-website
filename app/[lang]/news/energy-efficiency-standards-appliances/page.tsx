@@ -37,7 +37,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
                                   sections: [
       {
@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'What Is CE Marking and Why Is It Important for Europe?',
         text: 'CE marking is a mandatory certification for products sold within the European Economic Area (EEA) that indicates a product meets EU safety, health, and environmental protection requirements, covering the Low Voltage Directive, EMC Directive, and Energy-Related Products Directive for home appliances. HousePlus products undergo rigorous third-party testing at accredited laboratories to obtain CE certification. Our technical documentation includes Declaration of Conformity files, test reports, and technical construction files — all available to our wholesale partners for customs clearance and regulatory audits.',
-        image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+        image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
         imageAlt: 'CE certified home appliances ready for European market distribution',
       },
       {
@@ -73,7 +73,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'Electrodomésticos eficientes energéticamente con etiquetas de certificación CE y RoHS',
                                   sections: [
       {
@@ -85,7 +85,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: '¿Qué Es el Marcado CE y Por Qué Es Importante para Europa?',
         text: 'El marcado CE es una certificación obligatoria para los productos vendidos dentro del Espacio Económico Europeo (EEE) que indica que un producto cumple con los requisitos de seguridad, salud y protección ambiental de la UE, cubriendo la Directiva de Baja Tensión, la Directiva de Compatibilidad Electromagnética y la Directiva de Productos Relacionados con la Energía para electrodomésticos. Los productos HousePlus se someten a rigurosas pruebas de terceros en laboratorios acreditados para obtener la certificación CE.',
-        image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+        image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
         imageAlt: 'Electrodomésticos con certificación CE listos para distribución en el mercado europeo',
       },
       {
@@ -109,7 +109,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'Energieeffiziente Haushaltsgeräte mit CE- und RoHS-Zertifizierungsetiketten',
                                   sections: [
       {
@@ -121,7 +121,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'Was Ist die CE-Kennzeichnung und Warum Ist Sie für Europa Wichtig?',
         text: 'Die CE-Kennzeichnung ist eine obligatorische Zertifizierung für Produkte, die im Europäischen Wirtschaftsraum (EWR) verkauft werden, und zeigt an, dass ein Produkt die EU-Anforderungen an Sicherheit, Gesundheit und Umweltschutz erfüllt, einschließlich der Niederspannungsrichtlinie, der EMV-Richtlinie und der Ökodesign-Richtlinie für Haushaltsgeräte. HousePlus-Produkte durchlaufen strenge Drittprüfungen in akkreditierten Labors, um die CE-Zertifizierung zu erhalten.',
-        image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+        image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
         imageAlt: 'CE-zertifizierte Haushaltsgeräte bereit für den europäischen Marktvertrieb',
       },
       {
@@ -145,7 +145,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'Appareils électroménagers économes en énergie avec étiquettes de certification CE et RoHS',
                                   sections: [
       {
@@ -157,7 +157,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'Qu\'Est-Ce que le Marquage CE et Pourquoi Est-Il Important pour l\'Europe ?',
         text: 'Le marquage CE est une certification obligatoire pour les produits vendus dans l\'Espace Économique Européen (EEE) qui indique qu\'un produit respecte les exigences de l\'UE en matière de sécurité, de santé et de protection de l\'environnement, couvrant la directive Basse Tension, la directive CEM et la directive sur les produits liés à l\'énergie pour les appareils électroménagers. Les produits HousePlus subissent des tests rigoureux par des tiers dans des laboratoires accrédités pour obtenir la certification CE.',
-        image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+        image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
         imageAlt: 'Appareils électroménagers certifiés CE prêts pour la distribution sur le marché européen',
       },
       {
@@ -181,7 +181,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'أجهزة منزلية موفرة للطاقة مع ملصقات شهادات CE وRoHS',
                                   sections: [
       {
@@ -193,7 +193,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       {
         heading: 'ما هي علامة CE ولماذا هي مهمة لأوروبا؟',
         text: 'علامة CE هي شهادة إلزامية للمنتجات المباعة داخل المنطقة الاقتصادية الأوروبية تشير إلى أن المنتج يلبي متطلبات السلامة والصحة وحماية البيئة للاتحاد الأوروبي، وتغطي توجيهات الجهد المنخفض والتوافق الكهرومغناطيسي والمنتجات المتعلقة بالطاقة للأجهزة المنزلية. تخضع منتجات HousePlus لاختبارات صارمة من جهات خارجية في المختبرات المعتمدة للحصول على شهادة CE.',
-        image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+        image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
         imageAlt: 'أجهزة منزلية معتمدة من CE جاهزة للتوزيع في السوق الأوروبية',
       },
       {
@@ -218,7 +218,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const articleSchema = buildArticleSchema({
     headline: data.title,
-    image: `https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg`,
+    image: `https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg`,
     datePublished: data.datePublished,
     dateModified: data.dateModified,
     authorName: data.authorName,

@@ -64,7 +64,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   const articles = [
     {
       slug: 'consumer-electronics-battery-life-testing',
-      image: 'https://images.houseplus-ch.com/products/lithium-battery-5kwh.jpg',
+      image: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',
       imageAlt: 'Battery testing laboratory with charge-discharge equipment',
       title: {
         en: 'Battery Cycle Life Testing Standards: Technical Analysis for Consumer Electronics',
@@ -84,7 +84,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'appliance-energy-efficiency-vs-actual-consumption',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'Energy efficiency labels on home appliances with power monitoring',
       title: {
         en: 'Appliance Energy Efficiency Ratings vs Actual Consumption: Technical Analysis',
@@ -144,7 +144,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   },
   {
     slug: '2026-appliances-market-update',
-    image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+    image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
     imageAlt: 'HousePlus smart home appliances lineup',
     title: {
     en: 'Smart Home Appliances 2026: Energy-Efficient Designs for Global Markets',
@@ -245,7 +245,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     },
     {
       slug: 'energy-efficiency-standards-appliances',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',
       imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
       title: {
         en: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
