@@ -128,7 +128,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.houseplus-ch.com/about/houseplus-group-factory.jpg"
+                  src="https://images.houseplus-ch.com/factory/production-line.jpg"
                   alt="HousePlus Group Factory - Manufacturing solar energy systems, home appliances and 3C electronics in Guangdong, China since 2010"
                   fill
                   className="object-cover"

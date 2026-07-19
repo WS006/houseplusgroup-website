@@ -66,13 +66,13 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       {
         heading: 'How Does Rigorous Quality Control Work from Raw Material to Finished Product?',
         text: 'Rigorous quality control at HousePlus works through a multi-tiered system starting with meticulous raw material selection, through in-process inspections, to comprehensive final product testing, with dedicated quality assurance teams using advanced testing equipment to ensure each home appliance performs flawlessly, is safe, and adheres to international certifications like CE, RoHS, and FCC. Quality is not just a buzzword at HousePlus; it is ingrained in every stage of our production. This rigorous approach guarantees the superior quality our wholesale clients expect.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'HousePlus quality control team inspecting home appliances',
       },
       {
         heading: 'What Sustainable Practices Are Used in Appliance Production?',
         text: 'HousePlus uses sustainable practices in appliance production including energy-efficient machinery, waste reduction programs, and responsible sourcing of materials, continuously exploring new ways to minimize ecological footprint while producing high-performance home appliances that benefit the planet and align with modern consumer values, providing a competitive edge for wholesale partners in Africa, Southeast Asia, and Europe. HousePlus is deeply committed to environmental responsibility. Our manufacturing facilities incorporate sustainable practices.',
-        image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
+        image: 'https://images.houseplus-ch.com/factory/production-line.jpg',
         imageAlt: 'Eco-friendly manufacturing processes at HousePlus',
       },
       {
@@ -104,13 +104,13 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       {
         heading: '¿Cómo Funciona el Control de Calidad Riguroso desde la Materia Prima hasta el Producto Terminado?',
         text: 'El control de calidad riguroso en HousePlus funciona a través de un sistema de varios niveles que comienza con la selección meticulosa de materias primas, pasando por inspecciones en proceso, hasta pruebas completas del producto final, con equipos dedicados de aseguramiento de calidad que utilizan equipos de prueba avanzados para garantizar que cada electrodoméstico funcione perfectamente, sea seguro y cumpla con certificaciones internacionales como CE, RoHS y FCC. La calidad no es solo una palabra de moda en HousePlus; está arraigada en cada etapa de nuestra producción.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'Equipo de control de calidad HousePlus inspeccionando electrodomésticos',
       },
       {
         heading: '¿Qué Prácticas Sostenibles se Utilizan en la Producción de Electrodomésticos?',
         text: 'HousePlus utiliza prácticas sostenibles en la producción de electrodomésticos que incluyen maquinaria energéticamente eficiente, programas de reducción de residuos y abastecimiento responsable de materiales, explorando continuamente nuevas formas de minimizar la huella ecológica mientras produce electrodomésticos de alto rendimiento que benefician al planeta y se alinean con los valores de los consumidores modernos, brindando una ventaja competitiva a los socios mayoristas en África, Sudeste Asiático y Europa. HousePlus está profundamente comprometida con la responsabilidad ambiental.',
-        image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
+        image: 'https://images.houseplus-ch.com/factory/production-line.jpg',
         imageAlt: 'Procesos de fabricación ecológicos en HousePlus',
       },
       {
@@ -142,13 +142,13 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       {
         heading: 'Wie Funktioniert Strenge Qualitätskontrolle vom Rohstoff bis zum Fertigprodukt?',
         text: 'Strenge Qualitätskontrolle bei HousePlus funktioniert durch ein mehrstufiges System, beginnend mit sorgfältiger Rohstoffauswahl, über In-Prozess-Inspektionen bis hin zu umfassenden Endprodukttests, mit engagierten Qualitätssicherungsteams, die fortschrittliche Prüfgeräte verwenden, um sicherzustellen, dass jedes Haushaltsgerät einwandfrei funktioniert, sicher ist und internationalen Zertifizierungen wie CE, RoHS und FCC entspricht. Qualität ist bei HousePlus nicht nur ein Modewort; sie ist in jeder Produktionsstufe verankert.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'HousePlus Qualitätskontrollteam prüft Haushaltsgeräte',
       },
       {
         heading: 'Welche Nachhaltigen Praktiken Werden in der Geräteproduktion Verwendet?',
         text: 'HousePlus verwendet nachhaltige Praktiken in der Geräteproduktion, einschließlich energieeffizienter Maschinen, Abfallreduzierungsprogrammen und verantwortungsvoller Materialbeschaffung, und erforscht kontinuierlich neue Wege, den ökologischen Fußabdruck zu minimieren und gleichzeitig leistungsstarke Haushaltsgeräte herzustellen, die dem Planeten zugutekommen und mit den Werten moderner Verbraucher übereinstimmen, was einen Wettbewerbsvorteil für Großhandelspartner in Afrika, Südostasien und Europa bietet. HousePlus engagiert sich zutiefst für Umweltverantwortung.',
-        image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
+        image: 'https://images.houseplus-ch.com/factory/production-line.jpg',
         imageAlt: 'Umweltfreundliche Fertigungsverfahren bei HousePlus',
       },
       {
@@ -180,13 +180,13 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       {
         heading: 'Comment Fonctionne un Contrôle Qualité Rigoureux de la Matière Première au Produit Fini ?',
         text: 'Un contrôle qualité rigoureux chez HousePlus fonctionne grâce à un système à plusieurs niveaux commençant par une sélection méticuleuse des matières premières, passant par des inspections en cours de processus, jusqu\'à des tests complets du produit final, avec des équipes d\'assurance qualité dédiées utilisant des équipements de test avancés pour garantir que chaque appareil électroménager fonctionne parfaitement, est sûr et respecte les certifications internationales telles que CE, RoHS et FCC. La qualité n\'est pas qu\'un mot à la mode chez HousePlus ; elle est ancrée dans chaque étape de notre production.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'Équipe de contrôle qualité HousePlus inspectant des appareils électroménagers',
       },
       {
         heading: 'Quelles Pratiques Durables Sont Utilisées dans la Production d\'Appareils ?',
         text: 'HousePlus utilise des pratiques durables dans la production d\'appareils, notamment des machines économes en énergie, des programmes de réduction des déchets et un approvisionnement responsable en matériaux, explorant continuellement de nouvelles façons de minimiser l\'empreinte écologique tout en produisant des appareils électroménagers performants qui bénéficient à la planète et s\'alignent sur les valeurs des consommateurs modernes, offrant un avantage concurrentiel aux partenaires de gros en Afrique, en Asie du Sud-Est et en Europe. HousePlus est profondément engagée dans la responsabilité environnementale.',
-        image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
+        image: 'https://images.houseplus-ch.com/factory/production-line.jpg',
         imageAlt: 'Procédés de fabrication écologiques chez HousePlus',
       },
       {
@@ -218,13 +218,13 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       {
         heading: 'كيف تعمل مراقبة الجودة الصارمة من المواد الخام إلى المنتج النهائي؟',
         text: 'تعمل مراقبة الجودة الصارمة في HousePlus من خلال نظام متعدد المستويات يبدأ بالاختيار الدقيق للمواد الخام، ويمر بفحوصات أثناء العملية، وصولاً إلى اختبارات شاملة للمنتج النهائي، مع فرق مخصصة لضمان الجودة تستخدم معدات اختبار متقدمة لضمان أن كل جهاز منزلي يعمل بشكل مثالي وآمن ويلبي الشهادات الدولية مثل CE و RoHS و FCC. الجودة ليست مجرد كلمة طنانة في HousePlus؛ بل هي متأصلة في كل مرحلة من مراحل إنتاجنا.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'فريق مراقبة الجودة في HousePlus يفحص الأجهزة المنزلية',
       },
       {
         heading: 'ما هي الممارسات المستدامة المستخدمة في إنتاج الأجهزة؟',
         text: 'تستخدم HousePlus ممارسات مستدامة في إنتاج الأجهزة تشمل الآلات الموفرة للطاقة وبرامج تقليل النفايات والشراء المسؤول للمواد، مع استكشاف مستمر لطرق جديدة لتقليل البصمة البيئية مع إنتاج أجهزة منزلية عالية الأداء تفيد الكوكب وتتماشى مع قيم المستهلكين الحديثين، مما يوفر ميزة تنافسية لشركاء الجملة في أفريقيا وجنوب شرق آسيا وأوروبا. تلتزم HousePlus بعمق بالمسؤولية البيئية.',
-        image: 'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
+        image: 'https://images.houseplus-ch.com/factory/production-line.jpg',
         imageAlt: 'عمليات تصنيع صديقة للبيئة في HousePlus',
       },
       {

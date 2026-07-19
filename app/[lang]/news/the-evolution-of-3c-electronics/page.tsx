@@ -168,7 +168,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       {
         heading: 'Pourquoi Choisir HousePlus comme Partenaire de Gros en Électronique 3C ?',
         text: 'HousePlus est le partenaire de gros idéal en électronique 3C parce que nous offrons une usine ISO 9001 de 20 000 m² à intégration verticale, plus de 15 ans d\'expérience, plus de 441 clients dans plus de 53 pays, des produits certifiés CE/FCC/RoHS, des services OEM/ODM flexibles et des prix de gros compétitifs avec des délais de livraison fiables. Ce qui nous distingue, c\'est notre engagement envers la qualité, l\'innovation et la réussite du client.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'Équipe de contrôle qualité HousePlus testant des produits électroniques 3C',
       },
       {
@@ -200,7 +200,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: Pro
       {
         heading: 'لماذا تختار HousePlus كشريكك للجملة في الإلكترونيات 3C؟',
         text: 'HousePlus هو الشريك المثالي للجملة في الإلكترونيات 3C لأننا نقدم مصنعًا ISO 9001 متكاملًا عموديًا بمساحة 20,000 متر مربع، وأكثر من 15 عامًا من الخبرة، وأكثر من 441 عميلًا في أكثر من 53 دولة، ومنتجات معتمدة من CE/FCC/RoHS، وخدمات OEM/ODM مرنة، وأسعار جملة تنافسية مع مواعيد تسليم موثوقة. ما يميزنا هو التزامنا بالجودة والابتكار ونجاح العملاء.',
-        image: 'https://images.houseplus-ch.com/articles/service/quality-control-lab-testing.jpg',
+        image: 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
         imageAlt: 'فريق مراقبة الجودة في HousePlus يختبر منتجات إلكترونية 3C',
       },
       {

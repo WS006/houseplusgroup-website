@@ -60,7 +60,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'What Is the Global Shift Towards Renewable Energy and Why Does It Matter?',
           text: 'The global shift towards renewable energy matters because solar power leads the fastest-growing energy transition worldwide, driven by climate change action and energy security demands that create immense business opportunities. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified solar products. As concerns about climate change and energy security grow, the demand for efficient and sustainable solar solutions is skyrocketing. This global transition presents immense opportunities for businesses and consumers alike, driving innovation and technological advancements in the sector. HousePlus is at the forefront of this revolution, providing cutting-edge solar products to meet the evolving needs of the market.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
+          image: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
           imageAlt: 'Professional solar panel installation on a rooftop',
         },
         {
@@ -72,7 +72,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'Why Choose HousePlus as Your Solar Solutions Partner?',
           text: 'HousePlus is the ideal solar partner because we offer high-efficiency panels, MPPT charge controllers, and portable power stations with flexible MOQ of 100-500 pcs, comprehensive OEM/ODM services, and full CE/FCC/RoHS certification for global markets. At HousePlus, we are committed to empowering our global partners with superior solar energy solutions. Our product range includes high-efficiency solar panels, robust MPPT charge controllers, and versatile portable power stations (from 300W to 3000W). We understand the diverse needs of wholesale buyers in Africa, Southeast Asia, and Europe, offering flexible MOQ (100-500 pcs) and comprehensive OEM/ODM services. Our products are CE/FCC/RoHS certified, ensuring compliance with international quality standards. Partner with HousePlus to provide your customers with reliable, sustainable, and innovative solar products.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-power-station-outdoor.jpg',
+          image: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',
           imageAlt: 'HousePlus portable power station with solar panel',
         },
         {
@@ -98,7 +98,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: '¿Qué Es el Cambio Global Hacia las Energías Renovables y Por Qué Importa?',
           text: 'El cambio global hacia las energías renovables importa porque la energía solar lidera la transición energética de más rápido crecimiento en todo el mundo, impulsada por la acción climática y las demandas de seguridad energética que crean inmensas oportunidades empresariales. El mundo está presenciando un cambio sin precedentes hacia las fuentes de energía renovables, con la energía solar liderando la carga. A medida que crecen las preocupaciones sobre el cambio climático y la seguridad energética, la demanda de soluciones solares eficientes y sostenibles se dispara. Esta transición global presenta inmensas oportunidades tanto para empresas como para consumidores, impulsando la innovación y los avances tecnológicos en el sector. HousePlus está a la vanguardia de esta revolución, proporcionando productos solares de vanguardia para satisfacer las necesidades cambiantes del mercado.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
+          image: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
           imageAlt: 'Instalación profesional de paneles solares en un tejado',
         },
         {
@@ -110,7 +110,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: '¿Por Qué Elegir HousePlus como Su Socio de Soluciones Solares?',
           text: 'HousePlus es el socio solar ideal porque ofrecemos paneles de alta eficiencia, controladores de carga MPPT y estaciones de energía portátiles con MOQ flexible de 100-500 piezas, servicios completos de OEM/ODM y certificación CE/FCC/RoHS completa para mercados globales. En HousePlus, estamos comprometidos a empoderar a nuestros socios globales con soluciones de energía solar superiores. Nuestra gama de productos incluye paneles solares de alta eficiencia, robustos controladores de carga MPPT y versátiles estaciones de energía portátiles (de 300W a 3000W). Entendemos las diversas necesidades de los compradores mayoristas en África, el Sudeste Asiático y Europa, ofreciendo MOQ flexibles (100-500 piezas) y servicios OEM/ODM completos. Nuestros productos cuentan con certificación CE/FCC/RoHS, lo que garantiza el cumplimiento de los estándares internacionales de calidad. Asóciese con HousePlus para proporcionar a sus clientes productos solares confiables, sostenibles e innovadores.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-power-station-outdoor.jpg',
+          image: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',
           imageAlt: 'Estación de energía portátil HousePlus con panel solar',
         },
         {
@@ -136,7 +136,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'Was ist der globale Wandel zu erneuerbaren Energien und warum ist er wichtig?',
           text: 'Der globale Wandel zu erneuerbaren Energien ist wichtig, weil Solarenergie die am schnellsten wachsende Energiewende weltweit führt, angetrieben von Klimaschutzmaßnahmen und Energiesicherheitsanforderungen, die immense Geschäftsmöglichkeiten schaffen. Die Welt erlebt einen beispiellosen Wandel hin zu erneuerbaren Energiequellen, wobei die Solarenergie die Führung übernimmt. Mit zunehmenden Bedenken hinsichtlich des Klimawandels und der Energiesicherheit steigt die Nachfrage nach effizienten und nachhaltigen Solarlösungen sprunghaft an. Dieser globale Übergang bietet sowohl Unternehmen als auch Verbrauchern immense Chancen und treibt Innovationen und technologische Fortschritte in diesem Sektor voran. HousePlus steht an vorderster Front dieser Revolution und bietet modernste Solarprodukte an, um den sich entwickelnden Anforderungen des Marktes gerecht zu werden.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
+          image: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
           imageAlt: 'Professionelle Solarmodulinstallation auf einem Dach',
         },
         {
@@ -148,7 +148,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'Warum sollten Sie HousePlus als Ihren Solar-Lösungspartner wählen?',
           text: 'HousePlus ist der ideale Solarpartner, weil wir hocheffiziente Module, MPPT-Laderegler und tragbare Kraftwerke mit flexibler MOQ von 100-500 Stück, umfassenden OEM/ODM-Dienstleistungen und vollständiger CE/FCC/RoHS-Zertifizierung für globale Märkte anbieten. Bei HousePlus setzen wir uns dafür ein, unsere globalen Partner mit überlegenen Solarenergielösungen zu unterstützen. Unser Produktsortiment umfasst hocheffiziente Solarmodule, robuste MPPT-Laderegler und vielseitige tragbare Kraftwerke (von 300W bis 3000W). Wir verstehen die vielfältigen Bedürfnisse von Großhandelskäufern in Afrika, Südostasien und Europa und bieten flexible Mindestbestellmengen (100-500 Stück) und umfassende OEM/ODM-Dienstleistungen an. Unsere Produkte sind CE/FCC/RoHS-zertifiziert und gewährleisten die Einhaltung internationaler Qualitätsstandards. Arbeiten Sie mit HousePlus zusammen, um Ihren Kunden zuverlässige, nachhaltige und innovative Solarprodukte anzubieten.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-power-station-outdoor.jpg',
+          image: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',
           imageAlt: 'HousePlus tragbares Kraftwerk mit Solarmodul',
         },
         {
@@ -174,7 +174,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'Qu\'est-ce que le virage mondial vers les énergies renouvelables et pourquoi est-ce important?',
           text: 'Le virage mondial vers les énergies renouvelables est important parce que l\'énergie solaire conduit la transition énergétique la plus rapide au monde, motivée par l\'action climatique et les exigences de sécurité énergétique qui créent d\'immenses opportunités commerciales. Le monde assiste à un virage sans précédent vers les sources d\'énergie renouvelables, l\'énergie solaire étant en tête. À mesure que les préoccupations concernant le changement climatique et la sécurité énergétique augmentent, la demande de solutions solaires efficaces et durables monte en flèche. Cette transition mondiale offre d\'immenses opportunités aux entreprises et aux consommateurs, stimulant l\'innovation et les avancées technologiques dans le secteur. HousePlus est à l\'avant-garde de cette révolution, fournissant des produits solaires de pointe pour répondre aux besoins changeants du marché.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
+          image: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
           imageAlt: 'Installation professionnelle de panneaux solaires sur un toit',
         },
         {
@@ -186,7 +186,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'Pourquoi choisir HousePlus comme partenaire de solutions solaires?',
           text: 'HousePlus est le partenaire solaire idéal parce que nous proposons des panneaux à haut rendement, des contrôleurs de charge MPPT et des centrales portables avec MOQ flexible de 100-500 pièces, des services OEM/ODM complets et une certification CE/FCC/RoHS complète pour les marchés mondiaux. Chez HousePlus, nous nous engageons à doter nos partenaires mondiaux de solutions d\'énergie solaire de qualité supérieure. Notre gamme de produits comprend des panneaux solaires à haut rendement, des contrôleurs de charge MPPT robustes et des centrales électriques portables polyvalentes (de 300W à 3000W). Nous comprenons les divers besoins des acheteurs en gros en Afrique, en Asie du Sud-Est et en Europe, offrant des MOQ flexibles (100-500 pièces) et des services OEM/ODM complets. Nos produits sont certifiés CE/FCC/RoHS, garantissant la conformité aux normes de qualité internationales. Partenaires avec HousePlus pour fournir à vos clients des produits solaires fiables, durables et innovants.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-power-station-outdoor.jpg',
+          image: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',
           imageAlt: 'Centrale électrique portable HousePlus avec panneau solaire',
         },
         {
@@ -212,7 +212,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'ما هو التحول العالمي نحو الطاقة المتجددة ولماذا يهم؟',
           text: 'التحول العالمي نحو الطاقة المتجددة يهم لأن الطاقة الشمسية تقود أسرع انتقال للطاقة في جميع أنحاء العالم، مدفوعًا بعمل المناخ ومطالب أمن الطاقة التي تخلق فرصًا تجارية هائلة. يشهد العالم تحولًا غير مسبوق نحو مصادر الطاقة المتجددة، مع تصدر الطاقة الشمسية المشهد. مع تزايد المخاوف بشأن تغير المناخ وأمن الطاقة، يتزايد الطلب على حلول الطاقة الشمسية الفعالة والمستدامة بشكل كبير. يوفر هذا التحول العالمي فرصًا هائلة للشركات والمستهلكين على حد سواء، مما يدفع الابتكار والتقدم التكنولوجي في هذا القطاع. HousePlus في طليعة هذه الثورة، حيث توفر منتجات شمسية متطورة لتلبية الاحتياجات المتغيرة للسوق.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
+          image: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
           imageAlt: 'تركيب احترافي للألواح الشمسية على سطح منزل',
         },
         {
@@ -224,7 +224,7 @@ export default async function SolarEnergyArticle({ params }: { params: Promise<{
         {
           heading: 'لماذا تختار HousePlus كشريك لحلول الطاقة الشمسية؟',
           text: 'HousePlus هو الشريك الشمسي المثالي لأننا نقدم ألواحًا عالية الكفاءة، ووحدات تحكم شحن MPPT، ومحطات طاقة محمولة مع حد أدنى مرن للطلب 100-500 قطعة، وخدمات OEM/ODM الشاملة، وشهادة CE/FCC/RoHS الكاملة للأسواق العالمية. في HousePlus، نحن ملتزمون بتمكين شركائنا العالميين بحلول طاقة شمسية متفوقة. تشمل مجموعة منتجاتنا ألواحًا شمسية عالية الكفاءة، ووحدات تحكم شحن MPPT قوية، ومحطات طاقة محمولة متعددة الاستخدامات (من 300 واط إلى 3000 واط). نحن نتفهم الاحتياجات المتنوعة للمشترين بالجملة في إفريقيا وجنوب شرق آسيا وأوروبا، حيث نقدم حد أدنى مرن للطلب (100-500 قطعة) وخدمات OEM/ODM شاملة. منتجاتنا حاصلة على شهادات CE/FCC/RoHS، مما يضمن الامتثال لمعايير الجودة الدولية. شارك مع HousePlus لتزويد عملائك بمنتجات طاقة شمسية موثوقة ومستدامة ومبتكرة.',
-          image: 'https://images.houseplus-ch.com/articles/solar/solar-power-station-outdoor.jpg',
+          image: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',
           imageAlt: 'محطة طاقة محمولة HousePlus مع لوح شمسي',
         },
         {
