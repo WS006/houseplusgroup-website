@@ -4,7 +4,7 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 interface RegionConfig {
   code: string;

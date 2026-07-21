@@ -6,7 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import Breadcrumb from '@/components/Breadcrumb';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -84,7 +84,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     <>
       <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
-        <Breadcrumb lang={lang} />
+        <Breadcrumb lang={lang} slug="about-us" />
 
         {/* Hero */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">

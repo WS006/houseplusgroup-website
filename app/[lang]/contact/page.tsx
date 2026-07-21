@@ -4,7 +4,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { Metadata } from 'next';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;

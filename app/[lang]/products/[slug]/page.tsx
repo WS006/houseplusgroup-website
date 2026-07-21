@@ -2,10 +2,11 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
+import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { generateProductSchema, generateFAQSchema } from '@/lib/schema-generator';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 
@@ -128,29 +129,14 @@ export default async function ProductDetailPage({
     b2bInfo: product.b2bInfo,
   });
 
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `${BASE_URL}/${lang}` },
-    { name: 'Products', url: `${BASE_URL}/${lang}/products` },
-    { name: product.name, url: productUrl },
-  ]);
-
   const faqSchema = product.faq && product.faq.length > 0
     ? generateFAQSchema(product.faq)
     : null;
 
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[productSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]} />
-      {/* Breadcrumb */}
-      <div className="bg-slate-50 border-b border-slate-100 py-3 px-4">
-        <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm text-slate-500">
-          <Link href={`/${lang}`} className="hover:text-blue-600 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href={`/${lang}/products`} className="hover:text-blue-600 transition-colors">Products</Link>
-          <span>/</span>
-          <span className="text-slate-800 font-medium">{product.name}</span>
-        </div>
-      </div>
+      <SEOHead schemas={[productSchema, ...(faqSchema ? [faqSchema] : [])]} />
+      <Breadcrumb lang={lang} slug={`products/${slug}`} customLabel={product.name} />
 
       {/* Product Hero */}
       <div className="max-w-6xl mx-auto px-4 py-12">

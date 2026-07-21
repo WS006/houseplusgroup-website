@@ -2,10 +2,11 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
-import { generateOrganizationSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema-generator';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -162,16 +163,13 @@ export default async function SupportPage({ params }: { params: Promise<{ lang: 
       type: 'Organization',
     }),
     generateFAQSchema(t.faqs.map((f: any) => ({ question: f.q, answer: f.a }))),
-    generateBreadcrumbSchema([
-      { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
-      { name: 'Support', url: `https://www.houseplus-ch.com/${lang}/support` },
-    ]),
   ];
 
   return (
     <>
       <SEOHead schemas={schemas} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="support" />
         {/* Hero Section */}
         <section className="py-24 px-4 bg-slate-900 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">

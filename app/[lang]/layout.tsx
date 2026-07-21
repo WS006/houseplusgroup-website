@@ -8,6 +8,7 @@ import BackToTop from '@/components/BackToTop';
 import '../globals.css';
 import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n-config';
+import { headers } from 'next/headers';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLK_TOKEN,

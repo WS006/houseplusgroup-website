@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
-import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import { buildOrganizationSchema } from '@/lib/schema-builder';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -47,7 +47,6 @@ export default async function CareersPage({ params }: { params: Promise<{ lang: 
 
   const schemas = [
     buildOrganizationSchema({ lang }),
-    buildBreadcrumbSchema(breadcrumbs),
   ];
 
   const jobListings = [
@@ -83,7 +82,7 @@ export default async function CareersPage({ params }: { params: Promise<{ lang: 
   return (
     <SchemaRenderer schemas={schemas}>
       <main className="min-h-screen bg-white">
-        <Breadcrumb lang={lang} />
+        <Breadcrumb lang={lang} slug="careers" />
         
         {/* Hero Section */}
         <section className="relative py-24 px-4 bg-slate-900 text-white overflow-hidden">

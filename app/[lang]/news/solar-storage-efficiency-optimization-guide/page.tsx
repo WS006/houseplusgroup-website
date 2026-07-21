@@ -4,13 +4,13 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import { buildArticleSchema } from '@/lib/schema-builder';
 
 import { generateImageObjectSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -332,7 +332,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
 
   return (
     <main className="min-h-screen bg-white">
-      <SchemaRenderer schemas={[articleSchema, imageObjectSchema, buildBreadcrumbSchema(breadcrumbs)]} />
+      <SchemaRenderer schemas={[articleSchema, imageObjectSchema]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
         <Image
           src={content.heroImage}

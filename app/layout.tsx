@@ -10,6 +10,31 @@ storyblokInit({
   },
 });
 
+export const metadata = {
+  title: 'HousePlus - Global Wholesale Solar & Home Appliances Manufacturer',
+  description: 'HousePlus is a professional OEM/ODM manufacturer specializing in solar products, home appliances, and 3C electronics. Wholesale solutions for global partners.',
+  applicationName: 'HousePlus',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'HousePlus',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.houseplus-ch.com',
+    siteName: 'HousePlus',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@houseplusglobal',
+    creator: '@houseplusglobal',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +49,26 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://images.houseplus-ch.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://a.storyblok.com"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="antialiased">
         {children}

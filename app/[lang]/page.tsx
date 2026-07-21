@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false });
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {

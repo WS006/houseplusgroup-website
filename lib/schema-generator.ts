@@ -231,12 +231,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     '@type': 'Product',
     name,
     description,
-    image: {
-      '@type': 'ImageObject',
-      contentUrl: image,
-      caption: imageCaption || name,
-      description: imageDescription || description,
-    },
+    image: image,
     sku,
     mpn: sku,
     brand: {
@@ -248,6 +243,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     offers: {
       '@type': 'Offer',
       url,
+      price: 100,
       priceCurrency: 'USD',
       priceValidUntil: new Date(new Date().getFullYear() + 1, 11, 31)
         .toISOString()

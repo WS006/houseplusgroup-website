@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { detectUrlChanges, getChangeStats, getCachedUrls, updateUrlCache } from '@/lib/url-change-detector';
 import { generateAllUrls } from '@/lib/urls';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;

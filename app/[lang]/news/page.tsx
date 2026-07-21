@@ -2,11 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
-import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildBreadcrumbSchema } from '@/lib/schema-builder';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -327,10 +325,9 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
 
   return (
     <main className="min-h-screen bg-white">
-      <SchemaRenderer schemas={[buildBreadcrumbSchema(breadcrumbs)]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
         <div className="relative max-w-4xl mx-auto text-center z-10">
-          <Breadcrumb lang={lang} />
+          <Breadcrumb lang={lang} slug="news" />
           <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
             {titles[lang] || titles.en}
           </h1>

@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildOrganizationSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import { buildOrganizationSchema } from '@/lib/schema-builder';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -48,25 +49,12 @@ export default async function RegionsPage({ params }: { params: Promise<{ lang: 
 
   const schemas = [
     buildOrganizationSchema(),
-    buildBreadcrumbSchema(breadcrumbs),
   ];
 
   return (
     <SchemaRenderer schemas={schemas}>
       <main className="min-h-screen bg-white">
-        {/* Breadcrumb Navigation */}
-        <nav className="bg-gray-100 py-4 px-4 md:px-8">
-          <div className="max-w-6xl mx-auto flex items-center space-x-2 text-sm">
-            {breadcrumbs.map((item, index) => (
-              <div key={index} className="flex items-center">
-                {index > 0 && <span className="mx-2 text-gray-400">/</span>}
-                <Link href={item.url} className="text-blue-600 hover:underline">
-                  {item.name}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </nav>
+        <Breadcrumb lang={lang} slug="regions" />
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4 md:px-8">

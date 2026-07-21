@@ -8,7 +8,7 @@ import { PRODUCT_DATA } from '@/lib/product-data';
 const BASE_URL = 'https://www.houseplus-ch.com';
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;

@@ -1,23 +1,15 @@
-'use client';
-
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { translations } from '@/lib/translations';
 
 interface BreadcrumbProps {
   lang: string;
+  slug?: string;
   customLabel?: string;
 }
 
-export default function Breadcrumb({ lang, customLabel }: BreadcrumbProps) {
-  const pathname = usePathname();
-  
-  // Extract segments from pathname
-  const segments = pathname
-    .split('/')
-    .filter(segment => segment && segment !== lang);
+export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps) {
+  const pathSegments = slug ? slug.split('/').filter(s => s && s !== lang) : [];
 
-  // Map page slugs to labels
   const pageLabels: Record<string, string> = {
     'about-us': translations[lang as keyof typeof translations]?.about?.title || 'About Us',
     'products': translations[lang as keyof typeof translations]?.nav?.products || 'Products',
@@ -30,27 +22,31 @@ export default function Breadcrumb({ lang, customLabel }: BreadcrumbProps) {
     'contact': translations[lang as keyof typeof translations]?.nav?.contact || 'Contact',
     'support': translations[lang as keyof typeof translations]?.nav?.support || 'Support',
     'privacy': translations[lang as keyof typeof translations]?.nav?.privacy || 'Privacy',
+    'terms': 'Terms',
+    'oem-odm': translations[lang as keyof typeof translations]?.service?.oem || 'OEM/ODM',
+    'certifications': 'Certifications',
+    'case-studies': 'Case Studies',
+    'regions': 'Regions',
+    'cookie-policy': 'Cookie Policy',
+    'sitemap-page': 'Sitemap',
   };
 
   const homeLabel = translations[lang as keyof typeof translations]?.nav?.home || 'Home';
 
-  // Build breadcrumb items
   const items = [
     { label: homeLabel, href: `/${lang}` },
   ];
 
-  segments.forEach((segment, index) => {
-    const href = `/${lang}/${segments.slice(0, index + 1).join('/')}`;
-    const label = pageLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1);
+  pathSegments.forEach((segment, index) => {
+    const href = `/${lang}/${pathSegments.slice(0, index + 1).join('/')}`;
+    const label = pageLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     items.push({ label, href });
   });
 
-  // If custom label provided, replace last item
   if (customLabel && items.length > 1) {
     items[items.length - 1].label = customLabel;
   }
 
-  // Generate JSON-LD structured data
   const breadcrumbList = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

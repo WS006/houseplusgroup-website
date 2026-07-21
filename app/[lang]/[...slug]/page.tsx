@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }): Promise<Metadata> {
   const { lang, slug } = await params;
@@ -255,17 +256,7 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
 
   // If no story and no sub-stories, trigger 404
   if (!story && subStories.length === 0) {
-    return (
-      <main className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto py-20 px-4 text-center">
-          <h1 className="text-5xl font-black text-slate-900 mb-6">404 - Page Not Found</h1>
-          <p className="text-xl text-slate-600 mb-8">The page you're looking for doesn't exist.</p>
-          <a href={`/${lang}`} className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all">
-            ← Return to Home
-          </a>
-        </div>
-      </main>
-    );
+    notFound();
   }
 
   return (

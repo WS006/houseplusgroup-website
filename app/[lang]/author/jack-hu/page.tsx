@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildPersonSchema, buildBreadcrumbSchema } from '@/lib/schema-builder';
+import { buildPersonSchema } from '@/lib/schema-builder';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -349,10 +350,13 @@ export default async function AuthorPage({ params }: { params: Promise<{ lang: s
 
   return (
       <main className={`min-h-screen bg-white ${isRTL ? 'rtl' : 'ltr'}`}>
-        <SEOHead schemas={[personSchema, buildBreadcrumbSchema(breadcrumbs)]} />
+        <SEOHead schemas={[personSchema]} />
 
         {/* Hero */}
         <section className="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-20 px-4">
+          <div className="max-w-5xl mx-auto mb-8">
+            <Breadcrumb lang={lang} slug="author/jack-hu" />
+          </div>
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden shadow-2xl flex-shrink-0 border-4 border-white/20">
               <Image

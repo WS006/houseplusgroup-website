@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>HousePlus Product Feed</title>
+    <link>https://www.houseplus-ch.com</link>
+    <description>HousePlus product feed for Google Merchant Center</description>
+    <language>en</language>
+    <item>
+      <g:id>solar-panel-500w</g:id>
+      <g:title>500W Monocrystalline Solar Panel</g:title>
+      <g:description>High-efficiency 500W monocrystalline solar panel for commercial installations</g:description>
+      <g:link>https://www.houseplus-ch.com/en/products/solar-panel-500w</g:link>
+      <g:image_link>https://images.houseplus-ch.com/products/solar-panel-500w.jpg</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>100.00 USD</g:price>
+      <g:gtin>SOL-500W</g:gtin>
+      <g:brand>HousePlus</g:brand>
+      <g:google_product_category>Energy &amp; Solar &gt; Solar Panels &amp; Kits</g:google_product_category>
+      <g:product_type>Solar Energy Systems</g:product_type>
+    </item>
+    <item>
+      <g:id>solar-inverter-3kw</g:id>
+      <g:title>3kW Pure Sine Wave Solar Inverter</g:title>
+      <g:description>3kW pure sine wave solar inverter with built-in MPPT charge controller</g:description>
+      <g:link>https://www.houseplus-ch.com/en/products/solar-inverter-3kw</g:link>
+      <g:image_link>https://images.houseplus-ch.com/products/solar-inverter-3kw.jpg</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>200.00 USD</g:price>
+      <g:gtin>INV-3KW</g:gtin>
+      <g:brand>HousePlus</g:brand>
+      <g:google_product_category>Energy &amp; Solar &gt; Solar Panels &amp; Kits</g:google_product_category>
+      <g:product_type>Solar Energy Systems</g:product_type>
+    </item>
+  </channel>
+</rss>
