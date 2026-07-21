@@ -1,44 +1,20 @@
 import { NextResponse } from 'next/server';
-import { getStoryblokApi } from '@storyblok/react/rsc';
+import { PRODUCT_DATA } from '@/lib/product-data';
 
 export const revalidate = 86400;
 
 export async function GET() {
   const baseUrl = 'https://www.houseplus-ch.com';
-  let products: any[] = [];
+  const products = Object.entries(PRODUCT_DATA);
 
-  try {
-    const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.getStories({
-      starts_with: 'products/',
-      version: 'published',
-      language: 'en',
-      resolve_links: 'url',
-    });
-    products = data?.stories || [];
-  } catch (e) {
-    console.error('Error fetching products from Storyblok:', e);
-  }
-
-  if (products.length === 0) {
-    return new NextResponse('<rss version="2.0"><channel><title>HousePlus Product Feed</title><description>No products available</description></channel></rss>', {
-      headers: { 'Content-Type': 'application/xml; charset=utf-8' },
-    });
-  }
-
-  const items = products.map((product) => {
-    const slug = product.full_slug?.replace('products/', '') || product.name?.toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'product';
-    const name = product.content?.title || product.name || 'Product';
-    const description = product.content?.description || product.content?.body?.[0]?.text || name;
-    const coverImage = product.content?.image?.filename || product.content?.cover_image?.filename || '';
-    const price = product.content?.price || 99;
-    
+  const items = products.map(([slug, product]) => {
+    const price = (product as any).price || 99;
     return `    <item>
       <g:id>${slug}</g:id>
-      <g:title><![CDATA[${name}]]></g:title>
-      <g:description><![CDATA[${description} - CE/FCC/RoHS certified wholesale product from HousePlus]]></g:description>
+      <g:title><![CDATA[${product.name}]]></g:title>
+      <g:description><![CDATA[${product.description || product.name} - CE/FCC/RoHS certified wholesale product from HousePlus]]></g:description>
       <g:link>${baseUrl}/en/products/${slug}</g:link>
-      ${coverImage ? `<g:image_link>${coverImage}</g:image_link>` : ''}
+      <g:image_link>${product.coverImage}</g:image_link>
       <g:price>${price} USD</g:price>
       <g:brand>HousePlus</g:brand>
       <g:condition>new</g:condition>
