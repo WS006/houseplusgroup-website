@@ -8,14 +8,20 @@ import { getDictionary } from '@/lib/i18n-config';
 import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false });
+
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamic = 'force-static';
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  if (!validLangs.includes(lang)) {
+    return {};
+  }
   const dict = await getDictionary(lang);
   return generateSEOMetadata({
     title: dict.site.title,
@@ -29,6 +35,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
+  if (!validLangs.includes(lang)) {
+    notFound();
+  }
   const dict = await getDictionary(lang);
   const storyblokApi = getStoryblokApi();
   let story: any = null;
