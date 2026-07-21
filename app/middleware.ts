@@ -101,6 +101,6 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|merchant-feed.xml|feed.xml|image-sitemap.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2|ttf|eot|json|xml|txt|robots|sitemap)).*)',
+    '/((?!_next/static|_next/image|favicon.ico|merchant-feed.xml|feed.xml|image-sitemap.xml|sitemap.xml|robots.txt|\\.xml$|\\.txt$|\\.json$|\\.svg$|\\.png$|\\.jpg$|\\.jpeg$|\\.gif$|\\.webp$|\\.ico$|\\.css$|\\.js$|\\.woff$|\\.woff2$|\\.ttf$|\\.eot$)).*)',
   ],
 };
