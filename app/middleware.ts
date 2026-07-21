@@ -65,13 +65,16 @@ export function middleware(request: NextRequest) {
   }
 
   // If first segment exists but is not a valid language code, rewrite to 404
-  // Skip static files and api routes
+  // Skip static files, api routes, and XML feeds
   if (
     firstSegment &&
     !validLangs.includes(firstSegment) &&
     !pathname.includes('.') &&
     !pathname.startsWith('/api/') &&
-    !pathname.startsWith('/_next/')
+    !pathname.startsWith('/_next/') &&
+    !pathname.startsWith('/merchant-feed.xml') &&
+    !pathname.startsWith('/feed.xml') &&
+    !pathname.startsWith('/image-sitemap.xml')
   ) {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}/404`;
@@ -98,7 +101,6 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next, static files, api, etc.)
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2|ttf|eot|json|xml|txt|robots|sitemap)).*)',
+    '/((?!_next/static|_next/image|favicon.ico|merchant-feed.xml|feed.xml|image-sitemap.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2|ttf|eot|json|xml|txt|robots|sitemap)).*)',
   ],
 };
