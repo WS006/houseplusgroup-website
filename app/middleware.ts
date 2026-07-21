@@ -21,13 +21,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(httpsUrl, 301);
   }
 
-  // Handle XML feed routes - rewrite to api route to bypass language routing
-  if (pathname === '/merchant-feed.xml') {
-    const url = request.nextUrl.clone();
-    url.pathname = '/api/merchant-feed';
-    return NextResponse.rewrite(url);
-  }
-  if (pathname === '/feed.xml' || pathname === '/image-sitemap.xml') {
+  // Handle XML feed routes - let public/ static files handle these
+  if (pathname === '/merchant-feed.xml' || pathname === '/feed.xml' || pathname === '/image-sitemap.xml') {
     const response = NextResponse.next();
     addSecurityHeaders(response);
     return response;
@@ -113,6 +108,6 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|feed.xml|image-sitemap.xml|sitemap.xml|robots.txt|api/|\\.txt$|\\.json$|\\.svg$|\\.png$|\\.jpg$|\\.jpeg$|\\.gif$|\\.webp$|\\.ico$|\\.css$|\\.js$|\\.woff$|\\.woff2$|\\.ttf$|\\.eot$)).*)',
+    '/((?!_next/static|_next/image|favicon.ico|feed.xml|image-sitemap.xml|sitemap.xml|robots.txt|\\.txt$|\\.json$|\\.svg$|\\.png$|\\.jpg$|\\.jpeg$|\\.gif$|\\.webp$|\\.ico$|\\.css$|\\.js$|\\.woff$|\\.woff2$|\\.ttf$|\\.eot$)).*)',
   ],
 };
