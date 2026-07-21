@@ -15,7 +15,11 @@ const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamic = 'force-static';
-export const dynamicParams = true;
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;

@@ -3,12 +3,7 @@
   "devCommand": "next dev",
   "installCommand": "pnpm install",
   "framework": "nextjs",
-  "rewrites": [
-    {
-      "source": "/merchant-feed.xml",
-      "destination": "/merchant-feed.xml"
-    }
-  ],
+  "rewrites": [],
   "headers": [
     {
       "source": "/(.*)",
