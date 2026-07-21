@@ -20,10 +20,13 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      // Rewrite root key file to public folder
       {
         source: '/084fadfd7e4a435b942858f905846430.txt',
         destination: '/084fadfd7e4a435b942858f905846430.txt',
+      },
+      {
+        source: '/merchant-feed.xml',
+        destination: '/merchant-feed.xml',
       },
     ];
   },
