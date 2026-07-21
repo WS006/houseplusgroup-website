@@ -21,6 +21,15 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(httpsUrl, 301);
   }
 
+  // Directly pass through XML feed routes - bypass all language handling
+  if (pathname === '/merchant-feed.xml' || 
+      pathname === '/feed.xml' || 
+      pathname === '/image-sitemap.xml') {
+    const response = NextResponse.next();
+    addSecurityHeaders(response);
+    return response;
+  }
+
   // Admin path protection
   if (pathname.startsWith(ADMIN_PATH)) {
     const authHeader = request.headers.get('authorization');

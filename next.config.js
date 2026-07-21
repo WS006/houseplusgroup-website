@@ -19,16 +19,7 @@ const nextConfig = {
     optimizeCss: true,
   },
   async rewrites() {
-    return [
-      {
-        source: '/084fadfd7e4a435b942858f905846430.txt',
-        destination: '/084fadfd7e4a435b942858f905846430.txt',
-      },
-      {
-        source: '/merchant-feed.xml',
-        destination: '/api/merchant-feed',
-      },
-    ];
+    return [];
   },
   async headers() {
     return [
