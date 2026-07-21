@@ -26,7 +26,7 @@ const nextConfig = {
       },
       {
         source: '/merchant-feed.xml',
-        destination: '/merchant-feed.xml',
+        destination: '/api/merchant-feed',
       },
     ];
   },

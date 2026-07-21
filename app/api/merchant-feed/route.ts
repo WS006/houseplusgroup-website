@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { PRODUCT_DATA } from '@/lib/product-data';
 
-export const dynamic = 'force-static';
-
 export async function GET() {
   const baseUrl = 'https://www.houseplus-ch.com';
 
