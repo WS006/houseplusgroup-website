@@ -2,8 +2,13 @@ import { Metadata } from 'next';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
 
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }): Promise<Metadata> {
   const { lang, slug } = await params;
+  if (!validLangs.includes(lang)) {
+    return {};
+  }
   const fullSlug = slug?.join('/') || '';
   const titleParts = fullSlug.split('/').filter(p => p);
   
@@ -225,6 +230,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function CatchAllPage({ params }: { params: { lang: string; slug: string[] } }) {
   const { lang, slug } = params;
+  if (!validLangs.includes(lang)) {
+    notFound();
+  }
   const fullSlug = slug?.join('/') || '';
   
   let story: any = null;
