@@ -39,15 +39,15 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     notFound();
   }
   const dict = await getDictionary(lang);
-  const storyblokApi = getStoryblokApi();
   let story: any = null;
   let carouselItems: any[] = [];
 
   try {
-    const { data } = await storyblokApi.getStory('home', { 
-      version: 'published', 
+    const storyblokApi = getStoryblokApi();
+    const { data } = await storyblokApi.getStory('home', {
+      version: 'published',
       language: lang,
-      cv: Date.now() 
+      cv: Date.now()
     });
     story = data.story;
     if (story?.content?.carousel && Array.isArray(story.content.carousel)) {
