@@ -1,6 +1,7 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { storyblokInit, apiPlugin } from '@storyblok/react';
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN || '',
@@ -40,6 +41,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = generateOrganizationSchema({
+    title: 'HousePlus',
+    description: 'Professional OEM/ODM manufacturer specializing in solar products, home appliances, and 3C electronics for global wholesale partners.',
+    url: 'https://www.houseplus-ch.com',
+    lang: 'en',
+    type: 'Organization',
+  });
+  const siteSchema = generateWebSiteSchema('en');
+  const graphSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [orgSchema, siteSchema],
+  };
+
   return (
     <html lang="en">
       <head>
@@ -68,6 +82,10 @@ export default function RootLayout({
           rel="preconnect"
           href="https://a.storyblok.com"
           crossOrigin="anonymous"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
         />
       </head>
       <body className="antialiased">

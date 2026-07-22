@@ -3,7 +3,7 @@ import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getDictionary } from '@/lib/i18n-config';
 import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
@@ -79,9 +79,11 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     type: 'Organization',
   });
 
+  const webSiteSchema = generateWebSiteSchema(lang);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, webSiteSchema]} />
       <main className="min-h-screen bg-white">
         <section className="w-full">
           <Carousel items={displayCarouselItems} autoPlayInterval={5000} lang={lang} />

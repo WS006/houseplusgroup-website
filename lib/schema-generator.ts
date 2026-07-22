@@ -14,12 +14,23 @@ export function generateOrganizationSchema(options: SchemaOptions) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${BASE_URL}/#organization`,
     name: title,
     alternateName: 'HousePlus Group',
     description,
-    url,
-    logo: `${BASE_URL}/icon.png`,
+    url: BASE_URL,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${BASE_URL}/icon.png`,
+      width: 512,
+      height: 512,
+    },
+    image: `${BASE_URL}/og-image.png`,
     foundingDate: '2010',
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Zhongshan, Guangdong, China',
+    },
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 500 },
     address: {
       '@type': 'PostalAddress',
@@ -36,22 +47,27 @@ export function generateOrganizationSchema(options: SchemaOptions) {
       {
         '@type': 'ContactPoint',
         telephone: '+86-155-7811-9543',
+        email: 'sales@houseplus-ch.com',
         contactType: 'sales',
         availableLanguage: ['English', 'Chinese'],
-        contactOption: 'TollFree',
-        areaServed: ['Worldwide', 'NG', 'DE', 'FR', 'AE'],
-      },
-      {
-        '@type': 'ContactPoint',
-        email: 'sales@houseplus-ch.com',
-        contactType: 'customer service',
         areaServed: ['Worldwide', 'NG', 'DE', 'FR', 'AE'],
       },
     ],
     sameAs: [
+      'https://www.facebook.com/houseplusgroup',
+      'https://www.linkedin.com/company/houseplusgroup',
+      'https://www.youtube.com/@houseplusgroup',
+      'https://twitter.com/houseplusglobal',
+      'https://www.instagram.com/houseplusgroup',
       `${BASE_URL}/en`,
     ],
-    areaServed: 'Worldwide',
+    areaServed: [
+      { '@type': 'Country', name: 'Worldwide' },
+      { '@type': 'Country', name: 'Nigeria' },
+      { '@type': 'Country', name: 'Germany' },
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'United Arab Emirates' },
+    ],
     knowsAbout: [
       'Solar Energy Systems',
       'Home Appliances',
@@ -59,6 +75,34 @@ export function generateOrganizationSchema(options: SchemaOptions) {
       'OEM Manufacturing',
       'ODM Services',
     ],
+    award: [
+      'ISO 9001:2015 Certified',
+      'CE Certified',
+      'FCC Certified',
+      'RoHS Certified',
+    ],
+  };
+}
+
+export function generateWebSiteSchema(lang: string = 'en') {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${BASE_URL}/#website`,
+    url: `${BASE_URL}/${lang}`,
+    name: 'HousePlus',
+    alternateName: 'HousePlus Group',
+    description: 'Global wholesale manufacturer of solar energy systems, home appliances, and 3C electronics.',
+    inLanguage: ['en', 'es', 'de', 'fr', 'ar'],
+    publisher: { '@id': `${BASE_URL}/#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${BASE_URL}/${lang}/products?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const dynamic = 'force-static';
@@ -48,6 +48,20 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     type: 'Organization',
   });
 
+  const webSiteSchema = generateWebSiteSchema(lang);
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `https://www.houseplus-ch.com/${lang}/about-us#webpage`,
+    url: `https://www.houseplus-ch.com/${lang}/about-us`,
+    name: 'About HousePlus',
+    description: 'HousePlus is a vertically integrated manufacturer founded in 2010 with a 20,000 m² ISO 9001 certified factory.',
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://www.houseplus-ch.com/#website' },
+    about: { '@id': 'https://www.houseplus-ch.com/#organization' },
+  };
+
   const milestones = [
     { year: '2010', event: 'HousePlus founded in Guangdong, China, with an initial focus on home appliance OEM production.' },
     { year: '2013', event: 'Expanded into solar energy products; first export shipment to European distributors.' },
@@ -82,7 +96,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, webSiteSchema, webPageSchema]} />
       <main className="min-h-screen bg-white">
         <Breadcrumb lang={lang} slug="about-us" />
 

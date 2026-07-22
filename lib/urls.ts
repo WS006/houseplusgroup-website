@@ -21,6 +21,14 @@ export const staticPageSlugs = [
   'certifications',
   'oem-odm',
   'case-studies',
+  'regions',
+];
+
+// Region slugs
+export const regionSlugs = [
+  'africa',
+  'southeast_asia',
+  'europe',
 ];
 
 // Product slugs
@@ -95,6 +103,11 @@ export function generateAllUrls(): string[] {
     // Product pages
     for (const product of productSlugs) {
       urls.push(`${baseUrl}/${lang}/products/${product}`);
+    }
+
+    // Region pages
+    for (const region of regionSlugs) {
+      urls.push(`${baseUrl}/${lang}/regions/${region}`);
     }
 
     // News pages

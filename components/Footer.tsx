@@ -38,11 +38,11 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookie Policy', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Email', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. All rights reserved.',
+    copyright: '© 2024-2025 HousePlus Group. All rights reserved.',
     followUs: 'Follow HousePlus',
   },
   es: {
@@ -71,11 +71,11 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookies', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'Correo', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Correo', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. Todos los derechos reservados.',
+    copyright: '© 2024-2025 HousePlus Group. Todos los derechos reservados.',
     followUs: 'Síguenos',
   },
   de: {
@@ -104,11 +104,11 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookies', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'E-Mail', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'E-Mail', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. Alle Rechte vorbehalten.',
+    copyright: '© 2024-2025 HousePlus Group. Alle Rechte vorbehalten.',
     followUs: 'Folgen Sie uns',
   },
   fr: {
@@ -137,11 +137,11 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookies', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Email', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. Tous droits réservés.',
+    copyright: '© 2024-2025 HousePlus Group. Tous droits réservés.',
     followUs: 'Suivez-nous',
   },
   ar: {
@@ -170,11 +170,11 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'ملفات تعريف الارتباط', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'البريد', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'البريد', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
       { label: 'واتس آب', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'ويتشات', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 مجموعة HousePlus. جميع الحقوق محفوظة.',
+    copyright: '© 2024-2025 مجموعة HousePlus. جميع الحقوق محفوظة.',
     followUs: 'تابعنا',
   },
 };
@@ -194,8 +194,11 @@ export default function Footer({ lang }: { lang: string }) {
               Professional HousePlus manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.
             </p>
             <div className="flex gap-4">
-              <a href="https://wa.me/8615578119543" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">W</a>
-              <a href="mailto:jack@houseplus-ch.com" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">@</a>
+              <a href="https://wa.me/8615578119543" aria-label="WhatsApp" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">W</a>
+              <a href="mailto:sales@houseplus-ch.com" aria-label="Email" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">@</a>
+              <a href="https://www.facebook.com/houseplusgroup" aria-label="Facebook" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">f</a>
+              <a href="https://www.linkedin.com/company/houseplusgroup" aria-label="LinkedIn" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">in</a>
+              <a href="https://www.youtube.com/@houseplusgroup" aria-label="YouTube" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">Y</a>
             </div>
           </div>
 
