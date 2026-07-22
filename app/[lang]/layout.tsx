@@ -53,12 +53,12 @@ export default async function RootLayout({
         {/* Preconnect to fonts.googleapis.com */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      </head>
+      <body suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
         />
-      </head>
-      <body suppressHydrationWarning>
         <Header lang={lang} />
         <main className="min-h-screen">{children}</main>
         <Footer lang={lang} />
