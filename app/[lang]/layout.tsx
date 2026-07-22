@@ -22,9 +22,9 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: string }>;
+  params: { lang: string };
 }) {
-  const { lang } = await params;
+  const { lang } = params;
 
   const orgSchema = generateOrganizationSchema({
     title: 'HousePlus',
