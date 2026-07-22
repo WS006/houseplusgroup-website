@@ -9,7 +9,6 @@ import '../globals.css';
 import { notFound } from 'next/navigation';
 import { isValidLocale } from '@/lib/i18n-config';
 import { headers } from 'next/headers';
-import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLK_TOKEN,
@@ -26,19 +25,6 @@ export default async function RootLayout({
 }) {
   const { lang } = params;
 
-  const orgSchema = generateOrganizationSchema({
-    title: 'HousePlus',
-    description: 'Professional OEM/ODM manufacturer specializing in solar products, home appliances, and 3C electronics for global wholesale partners.',
-    url: `https://www.houseplus-ch.com/${lang}`,
-    lang,
-    type: 'Organization',
-  });
-  const siteSchema = generateWebSiteSchema(lang);
-  const graphSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [orgSchema, siteSchema],
-  };
-
   return (
     <html lang={lang} suppressHydrationWarning>
       <head>
@@ -53,10 +39,6 @@ export default async function RootLayout({
         {/* Preconnect to fonts.googleapis.com */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
-        />
       </head>
       <body suppressHydrationWarning>
         <Header lang={lang} />
