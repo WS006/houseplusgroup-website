@@ -8,10 +8,17 @@ import { buildArticleSchema } from '@/lib/schema-builder';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
 
   const titles: Record<string, string> = {
     en: '2026 3C electronics market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. TWS, smart wearables, power banks. CE/FCC/RoHS. OEM/ODM available.',

@@ -8,10 +8,17 @@ import { PRODUCT_DATA } from '@/lib/product-data';
 const BASE_URL = 'https://www.houseplus-ch.com';
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
 
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
@@ -104,8 +111,8 @@ function getImageTitle(product: typeof products[0]) {
   return `${product.name} ${model} | HousePlus ${cat} Export`;
 }
 
-export default async function ProductsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function ProductsPage({ params }: { params: { lang: string } }) {
+  const { lang } = params;
 
   const solarProducts = products.filter((p) => p.category === 'solar');
   const applianceProducts = products.filter((p) => p.category === 'appliances');

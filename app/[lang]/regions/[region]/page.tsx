@@ -4,7 +4,14 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+
 export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return Object.keys(regionConfigs).map((region) => ({ region }));
+}
 
 interface RegionConfig {
   code: string;
@@ -82,9 +89,9 @@ const regionConfigs: Record<string, RegionConfig> = {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; region: string }>;
+  params: { lang: string; region: string };
 }): Promise<Metadata> {
-  const { lang, region } = await params;
+  const { lang, region } = params;
   const config = regionConfigs[region] || regionConfigs.africa;
 
   const titles: Record<string, Record<string, string>> = {
@@ -185,9 +192,9 @@ export async function generateMetadata({
 export default async function RegionPage({
   params,
 }: {
-  params: Promise<{ lang: string; region: string }>;
+  params: { lang: string; region: string };
 }) {
-  const { lang, region } = await params;
+  const { lang, region } = params;
   const config = regionConfigs[region] || regionConfigs.africa;
 
   const organizationSchema = generateOrganizationSchema({

@@ -4,10 +4,17 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
   
   const titles: Record<string, string> = {
     en: 'HousePlus Team - Experienced Professionals',
@@ -35,8 +42,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function TeamPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function TeamPage({ params }: { params: { lang: string } }) {
+  const { lang } = params;
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',

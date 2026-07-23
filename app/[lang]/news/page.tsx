@@ -4,10 +4,17 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
 
   const titles: Record<string, string> = {
     en: 'HousePlus News & Insights - Stay Updated with Industry Trends',
@@ -35,8 +42,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function NewsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function NewsPage({ params }: { params: { lang: string } }) {
+  const { lang } = params;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },

@@ -1,10 +1,17 @@
 import { Metadata } from 'next';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
 
   const titles: Record<string, string> = {
     en: 'Cookie Policy - HousePlus',
@@ -24,8 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function CookiePolicyPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function CookiePolicyPage({ params }: { params: { lang: string } }) {
+  const { lang } = params;
 
   const h1Labels: Record<string, string> = {
     en: 'Cookie Policy',

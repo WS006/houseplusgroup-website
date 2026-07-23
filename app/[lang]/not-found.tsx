@@ -1,6 +1,8 @@
 import NotFoundContent from '@/components/NotFoundContent';
 
-export default async function LangNotFound({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+
+export default async function LangNotFound({ params }: { params?: { lang?: string } }) {
+  const lang = params?.lang && validLangs.includes(params.lang) ? params.lang : 'en';
   return <NotFoundContent lang={lang} />;
 }

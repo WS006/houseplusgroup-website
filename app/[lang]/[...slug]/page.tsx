@@ -4,8 +4,15 @@ import { notFound } from 'next/navigation';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }): Promise<Metadata> {
-  const { lang, slug } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang, slug: [] as string[] }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string; slug: string[] } }): Promise<Metadata> {
+  const { lang, slug } = params;
   if (!validLangs.includes(lang)) {
     return {};
   }

@@ -15,10 +15,14 @@ const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamic = 'force-static';
-export const dynamicParams = true;
+export const dynamicParams = false;
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
   if (!validLangs.includes(lang)) {
     return {};
   }
@@ -33,8 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function LangHome({ params }: { params: { lang: string } }) {
+  const { lang } = params;
   if (!validLangs.includes(lang)) {
     notFound();
   }

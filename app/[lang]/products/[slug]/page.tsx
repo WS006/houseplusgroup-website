@@ -6,9 +6,16 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema } from '@/lib/schema-generator';
 
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+
 export const dynamic = 'force-static';
+export const dynamicParams = false;
 
 const BASE_URL = 'https://www.houseplus-ch.com';
+
+export function generateStaticParams() {
+  return Object.keys(PRODUCT_DATA).map((slug) => ({ slug }));
+}
 
 // Helpers: varied alt/title based on product name length (deterministic, avoids hydration mismatch)
 function getDetailAlt(product: ProductData, model: string) {
@@ -32,9 +39,9 @@ const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; slug: string }>;
+  params: { lang: string; slug: string };
 }): Promise<Metadata> {
-  const { lang, slug } = await params;
+  const { lang, slug } = params;
   const product = PRODUCT_DATA[slug];
   const name = product?.name || slug;
 
@@ -84,9 +91,9 @@ export async function generateMetadata({
 export default async function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ lang: string; slug: string }>;
+  params: { lang: string; slug: string };
 }) {
-  const { lang, slug } = await params;
+  const { lang, slug } = params;
   const product = PRODUCT_DATA[slug];
 
   if (!product) {

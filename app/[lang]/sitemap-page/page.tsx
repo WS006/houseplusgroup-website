@@ -3,11 +3,21 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import { getStoryblokApi } from '@storyblok/react/rsc';
 
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
 interface SitemapPageProps {
   params: { lang: string };
 }
 
 export async function generateMetadata({ params }: SitemapPageProps): Promise<Metadata> {
+  const { lang } = params;
   const titles: Record<string, string> = {
     en: 'Sitemap - HousePlus Group',
     es: 'Mapa del Sitio - HousePlus Group',
@@ -32,10 +42,10 @@ export async function generateMetadata({ params }: SitemapPageProps): Promise<Me
   langAlternates['x-default'] = `${BASE_URL}/en/sitemap-page`;
 
   return {
-    title: titles[params.lang] ?? titles.en,
-    description: descriptions[params.lang] ?? descriptions.en,
+    title: titles[lang] ?? titles.en,
+    description: descriptions[lang] ?? descriptions.en,
     alternates: {
-      canonical: `${BASE_URL}/${params.lang}/sitemap-page`,
+      canonical: `${BASE_URL}/${lang}/sitemap-page`,
       languages: langAlternates,
     },
   };

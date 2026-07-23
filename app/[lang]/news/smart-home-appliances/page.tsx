@@ -8,10 +8,17 @@ import { buildArticleSchema } from '@/lib/schema-builder';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
 
   const titles: Record<string, string> = {
     en: 'Smart Home Appliances: Efficiency, Innovation, and HousePlus Solutions',
@@ -39,8 +46,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function SmartHomeAppliancesArticle({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function SmartHomeAppliancesArticle({ params }: { params: { lang: string } }) {
+  const { lang } = params;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },

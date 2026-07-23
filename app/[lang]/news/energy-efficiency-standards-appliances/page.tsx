@@ -8,10 +8,17 @@ import { buildArticleSchema } from '@/lib/schema-builder';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 
-export const dynamic = 'force-static';
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return validLangs.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+  const { lang } = params;
   return generateSEOMetadata({
     title: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
     description: 'Learn about energy efficiency standards for appliances from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. EU Ecodesign, US DOE, China GB. CE/FCC/RoHS certified.',
@@ -22,8 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function ArticlePage({ params }: { params: { lang: string } }) {
+  const { lang } = params;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : lang === 'es' ? 'Inicio' : lang === 'de' ? 'Startseite' : lang === 'fr' ? 'Accueil' : 'الرئيسية', url: `/${lang}` },
