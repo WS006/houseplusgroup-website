@@ -5,10 +5,10 @@ import { notFound } from 'next/navigation';
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export function generateStaticParams() {
-  return validLangs.map((lang) => ({ lang, slug: [] as string[] }));
+  return [];
 }
 
 export async function generateMetadata({ params }: { params: { lang: string; slug: string[] } }): Promise<Metadata> {

@@ -22,13 +22,16 @@ export const staticPageSlugs = [
   'oem-odm',
   'case-studies',
   'regions',
+  'brand',
 ];
 
-// Region slugs
+// Region slugs (must match regionConfigs keys in app/[lang]/regions/[region]/page.tsx)
 export const regionSlugs = [
   'africa',
   'southeast_asia',
   'europe',
+  'ng',
+  'eu',
 ];
 
 // Product slugs

@@ -27,6 +27,7 @@ export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps)
     'certifications': 'Certifications',
     'case-studies': 'Case Studies',
     'regions': 'Regions',
+    'brand': 'Brand',
     'cookie-policy': 'Cookie Policy',
     'sitemap-page': 'Sitemap',
   };

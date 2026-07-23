@@ -32,6 +32,7 @@ const navigationItems: Record<string, NavItem[]> = {
       label: 'Company',
       href: '/about-us',
       children: [
+        { label: 'Brand', href: '/brand' },
         { label: 'Team', href: '/team' },
         { label: 'Certifications', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
@@ -59,6 +60,7 @@ const navigationItems: Record<string, NavItem[]> = {
       label: 'Empresa',
       href: '/about-us',
       children: [
+        { label: 'Marca', href: '/brand' },
         { label: 'Equipo', href: '/team' },
         { label: 'Certificaciones', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
@@ -86,6 +88,7 @@ const navigationItems: Record<string, NavItem[]> = {
       label: 'Unternehmen',
       href: '/about-us',
       children: [
+        { label: 'Marke', href: '/brand' },
         { label: 'Team', href: '/team' },
         { label: 'Zertifizierungen', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
@@ -113,6 +116,7 @@ const navigationItems: Record<string, NavItem[]> = {
       label: 'Entreprise',
       href: '/about-us',
       children: [
+        { label: 'Marque', href: '/brand' },
         { label: 'Équipe', href: '/team' },
         { label: 'Certifications', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },
@@ -140,6 +144,7 @@ const navigationItems: Record<string, NavItem[]> = {
       label: 'الشركة',
       href: '/about-us',
       children: [
+        { label: 'العلامة التجارية', href: '/brand' },
         { label: 'الفريق', href: '/team' },
         { label: 'الشهادات', href: '/certifications' },
         { label: 'OEM/ODM', href: '/oem-odm' },

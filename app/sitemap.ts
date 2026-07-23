@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { baseUrl, locales, staticPageSlugs, productSlugs, newsSlugs } from '@/lib/urls';
+import { baseUrl, locales, staticPageSlugs, productSlugs, newsSlugs, regionSlugs } from '@/lib/urls';
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
@@ -21,6 +21,7 @@ const lastModDates: Record<string, string> = {
   'certifications': '2026-06-29',
   'oem-odm': '2026-06-29',
   'case-studies': '2026-06-29',
+  'brand': '2026-07-23',
 };
 
 // All static page slugs from single source of truth
@@ -96,6 +97,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Product detail pages
   for (const productSlug of productSlugs) {
     const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly');
+    allEntries.push(...entries);
+  }
+
+  // Region pages
+  for (const regionSlug of regionSlugs) {
+    const entries = buildUrlEntry(`regions/${regionSlug}`, 0.7, 'monthly');
     allEntries.push(...entries);
   }
 
