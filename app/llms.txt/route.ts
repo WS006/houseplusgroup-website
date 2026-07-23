@@ -68,7 +68,7 @@ A: 12 months for solar systems and electronics; 12 months for small appliances. 
 Content available in: English (en), Spanish (es), German (de), French (fr), Arabic (ar)
 
 ## Contact Information
-- **Email**: sales@houseplus-ch.com
+- **Email**: jack@houseplus-ch.com
 - **Phone / WhatsApp**: +86 155 7811 9543  
   WhatsApp click to chat: https://wa.me/8615578119543
 - **WeChat ID**: JackHousePlus

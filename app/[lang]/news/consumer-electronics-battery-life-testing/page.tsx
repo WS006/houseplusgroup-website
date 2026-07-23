@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildArticleSchema } from '@/lib/schema-builder';
-import { generateImageObjectSchema } from '@/lib/schema-generator';
+import { generateArticleSchema, generateImageObjectSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 
@@ -316,16 +315,14 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     { name: content.title, url: `/${lang}/news/consumer-electronics-battery-life-testing` },
   ];
 
-  const articleSchema = buildArticleSchema({
+  const articleSchema = generateArticleSchema({
     headline: content.title,
     image: content.heroImage,
     datePublished: content.datePublished,
     dateModified: content.dateModified,
     authorName: content.authorName,
     description: content.sections[0].text,
-  }, {
     url: `https://www.houseplus-ch.com/${lang}/news/consumer-electronics-battery-life-testing`,
-    lang,
   });
 
   const imageObjectSchema = generateImageObjectSchema({

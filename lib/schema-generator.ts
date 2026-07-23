@@ -47,7 +47,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
       {
         '@type': 'ContactPoint',
         telephone: '+86-155-7811-9543',
-        email: 'sales@houseplus-ch.com',
+        email: 'jack@houseplus-ch.com',
         contactType: 'sales',
         availableLanguage: ['English', 'Chinese'],
         areaServed: ['Worldwide', 'NG', 'DE', 'FR', 'AE'],
@@ -55,7 +55,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     ],
     sameAs: [
       'https://www.facebook.com/houseplusgroup',
-      'https://www.linkedin.com/company/houseplusgroup',
+      'https://www.linkedin.com/company/houseplus-group',
       'https://www.youtube.com/@houseplusgroup',
       'https://twitter.com/houseplusglobal',
       'https://www.instagram.com/houseplusgroup',
@@ -377,7 +377,7 @@ export function generateLocalBusinessSchema(options: SchemaOptions) {
     logo: `${BASE_URL}/logo.png`,
     image: `${BASE_URL}/og-image.jpg`,
     telephone: '+86-155-7811-9543',
-    email: 'sales@houseplus-ch.com',
+    email: 'jack@houseplus-ch.com',
     priceRange: '$$$',
     foundingDate: '2010',
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 500 },
@@ -440,5 +440,118 @@ export function generateItemListSchema(
       image: item.image,
       description: item.description,
     })),
+  };
+}
+
+export interface ArticleSchemaOptions {
+  headline: string;
+  description: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+  authorName?: string;
+  authorUrl?: string;
+  authorImage?: string;
+  url?: string;
+}
+
+// Article / BlogPosting Schema - 统一品牌实体为 HousePlus Group，邮箱 jack@houseplus-ch.com
+export function generateArticleSchema(options: ArticleSchemaOptions) {
+  const {
+    headline,
+    description,
+    image,
+    datePublished,
+    dateModified,
+    authorName = 'Jack Hu',
+    authorUrl = `${BASE_URL}/en/author/jack-hu`,
+    authorImage = 'https://images.houseplus-ch.com/site/team-working-together.jpg',
+    url = BASE_URL,
+  } = options;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': url,
+    headline,
+    description,
+    image: image || `${BASE_URL}/og-image.png`,
+    datePublished: datePublished || new Date().toISOString(),
+    dateModified: dateModified || new Date().toISOString(),
+    author: {
+      '@type': 'Person',
+      '@id': authorUrl,
+      name: authorName,
+      url: authorUrl,
+      image: authorImage,
+      jobTitle: 'Founder & Editorial Lead',
+      email: 'jack@houseplus-ch.com',
+      worksFor: {
+        '@type': 'Organization',
+        '@id': `${BASE_URL}/#organization`,
+        name: 'HousePlus Group',
+        url: BASE_URL,
+      },
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'HousePlus Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/icon.png`,
+        width: 512,
+        height: 512,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    articleBody: description,
+  };
+}
+
+export interface PersonSchemaOptions {
+  name: string;
+  jobTitle?: string;
+  worksFor?: string;
+  email?: string;
+  image?: string;
+  description?: string;
+  url?: string;
+  sameAs?: string[];
+}
+
+// Person Schema - 作者实体，统一 worksFor 指向 HousePlus Group Organization
+export function generatePersonSchema(options: PersonSchemaOptions) {
+  const {
+    name,
+    jobTitle,
+    worksFor = 'HousePlus Group',
+    email = 'jack@houseplus-ch.com',
+    image,
+    description,
+    url,
+    sameAs,
+  } = options;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': url || `${BASE_URL}/en/author/jack-hu`,
+    name,
+    jobTitle: jobTitle || '',
+    image: image || '',
+    description: description || '',
+    url: url || `${BASE_URL}/en/author/jack-hu`,
+    email,
+    worksFor: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: worksFor,
+      url: BASE_URL,
+    },
+    sameAs: sameAs || [],
   };
 }

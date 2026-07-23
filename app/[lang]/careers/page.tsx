@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
-import { buildOrganizationSchema } from '@/lib/schema-builder';
+import { generateOrganizationSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -53,7 +53,7 @@ export default async function CareersPage({ params }: { params: { lang: string }
   ];
 
   const schemas = [
-    buildOrganizationSchema({ lang }),
+    generateOrganizationSchema({ title: 'HousePlus', description: 'HousePlus careers and open positions in manufacturing, sales and R&D.', url: 'https://www.houseplus-ch.com/' + lang + '/careers', lang, type: 'Organization' }),
   ];
 
   const jobListings = [

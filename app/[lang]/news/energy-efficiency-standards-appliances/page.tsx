@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildArticleSchema } from '@/lib/schema-builder';
+import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 
@@ -223,7 +223,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
 
   const data = articleContent[lang] || articleContent.en;
 
-  const articleSchema = buildArticleSchema({
+  const articleSchema = generateArticleSchema({
     headline: data.title,
     image: `https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg`,
     datePublished: data.datePublished,

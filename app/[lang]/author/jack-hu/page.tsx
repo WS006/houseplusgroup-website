@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildPersonSchema } from '@/lib/schema-builder';
+import { generatePersonSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -56,7 +56,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
     en: {
       name: 'Jack Hu',
       role: 'Founder & Editorial Lead',
-      company: 'HousePlus',
+      company: 'HousePlus Group',
       location: 'Zhongshan, Guangdong, China',
       email: 'jack@houseplus-ch.com',
       experience: '16+ years',
@@ -98,7 +98,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
     es: {
       name: 'Jack Hu',
       role: 'Fundador y Director Editorial',
-      company: 'HousePlus',
+      company: 'HousePlus Group',
       location: 'Zhongshan, Guangdong, China',
       email: 'jack@houseplus-ch.com',
       experience: '16+ años',
@@ -140,7 +140,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
     de: {
       name: 'Jack Hu',
       role: 'Gründer & Redaktionsleiter',
-      company: 'HousePlus',
+      company: 'HousePlus Group',
       location: 'Zhongshan, Guangdong, China',
       email: 'jack@houseplus-ch.com',
       experience: '16+ Jahre',
@@ -182,7 +182,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
     fr: {
       name: 'Jack Hu',
       role: 'Fondateur & Directeur de la Rédaction',
-      company: 'HousePlus',
+      company: 'HousePlus Group',
       location: 'Zhongshan, Guangdong, Chine',
       email: 'jack@houseplus-ch.com',
       experience: '16+ ans',
@@ -224,7 +224,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
     ar: {
       name: 'جاك هو',
       role: 'المؤسس والمدير التحريري',
-      company: 'HousePlus',
+      company: 'HousePlus Group',
       location: 'تشونغشان، قوانغدونغ، الصين',
       email: 'jack@houseplus-ch.com',
       experience: 'أكثر من ١٦ عامًا',
@@ -267,7 +267,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
 
   const data = authorBio[lang] || authorBio.en;
 
-  const personSchema = buildPersonSchema({
+  const personSchema = generatePersonSchema({
     name: data.name,
     jobTitle: data.role,
     worksFor: data.company,

@@ -340,7 +340,7 @@ CE, FCC, RoHS, ISO 9001
 
 ## Contact
 Website: https://www.houseplus-ch.com
-Email: sales@houseplus-ch.com
+Email: jack@houseplus-ch.com
 WhatsApp: +86-155-7811-9543
 ```
 

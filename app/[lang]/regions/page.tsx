@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { buildOrganizationSchema } from '@/lib/schema-builder';
+import { generateOrganizationSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -55,7 +55,7 @@ export default async function RegionsPage({ params }: { params: { lang: string }
   ];
 
   const schemas = [
-    buildOrganizationSchema(),
+    generateOrganizationSchema({ title: 'HousePlus', description: 'HousePlus global wholesale markets across Africa, Southeast Asia and Europe.', url: 'https://www.houseplus-ch.com/' + lang + '/regions', lang, type: 'Organization' }),
   ];
 
   return (

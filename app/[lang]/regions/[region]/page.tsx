@@ -311,10 +311,10 @@ export default async function RegionPage({
                   <div>
                     <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Email</p>
                     <a
-                      href="mailto:sales@houseplus-ch.com"
+                      href="mailto:jack@houseplus-ch.com"
                       className="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
                     >
-                      sales@houseplus-ch.com
+                      jack@houseplus-ch.com
                     </a>
                   </div>
                   <div>

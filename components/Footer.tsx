@@ -38,7 +38,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookie Policy', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'Email', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
+      { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -71,7 +71,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookies', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'Correo', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
+      { label: 'Correo', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -104,7 +104,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookies', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'E-Mail', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
+      { label: 'E-Mail', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -137,7 +137,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Cookies', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'Email', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
+      { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -170,7 +170,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'ملفات تعريف الارتباط', href: '/cookie-policy' },
     ],
     contact: [
-      { label: 'البريد', value: 'sales@houseplus-ch.com', href: 'mailto:sales@houseplus-ch.com' },
+      { label: 'البريد', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'واتس آب', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'ويتشات', value: 'JackHousePlus' },
     ],
@@ -195,9 +195,9 @@ export default function Footer({ lang }: { lang: string }) {
             </p>
             <div className="flex gap-4">
               <a href="https://wa.me/8615578119543" aria-label="WhatsApp" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">W</a>
-              <a href="mailto:sales@houseplus-ch.com" aria-label="Email" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">@</a>
+              <a href="mailto:jack@houseplus-ch.com" aria-label="Email" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">@</a>
               <a href="https://www.facebook.com/houseplusgroup" aria-label="Facebook" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">f</a>
-              <a href="https://www.linkedin.com/company/houseplusgroup" aria-label="LinkedIn" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">in</a>
+              <a href="https://www.linkedin.com/company/houseplus-group" aria-label="LinkedIn" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">in</a>
               <a href="https://www.youtube.com/@houseplusgroup" aria-label="YouTube" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">Y</a>
             </div>
           </div>
