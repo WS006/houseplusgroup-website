@@ -14,7 +14,9 @@ export const dynamicParams = false;
 const BASE_URL = 'https://www.houseplus-ch.com';
 
 export function generateStaticParams() {
-  return Object.keys(PRODUCT_DATA).map((slug) => ({ slug }));
+  return validLangs.flatMap((lang) =>
+    Object.keys(PRODUCT_DATA).map((slug) => ({ lang, slug }))
+  );
 }
 
 // Helpers: varied alt/title based on product name length (deterministic, avoids hydration mismatch)

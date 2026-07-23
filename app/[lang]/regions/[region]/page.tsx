@@ -10,7 +10,9 @@ export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.keys(regionConfigs).map((region) => ({ region }));
+  return validLangs.flatMap((lang) =>
+    Object.keys(regionConfigs).map((region) => ({ lang, region }))
+  );
 }
 
 interface RegionConfig {
