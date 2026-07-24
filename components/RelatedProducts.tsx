@@ -69,7 +69,7 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="64px"
-                    quality={75}
+                    quality={80}
                     loading="lazy"
                   />
                 </div>

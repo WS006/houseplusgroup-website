@@ -206,6 +206,7 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
                   className="object-cover"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={90}
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   HousePlus Group — ISO 9001 Certified Factory

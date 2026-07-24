@@ -223,8 +223,12 @@ export default async function ServicePage({ params }: { params: { lang: string }
                 <Image
                   src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus team collaboration"
+                  title="HousePlus team collaboration"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
+                  loading="lazy"
                 />
               </div>
             </div>

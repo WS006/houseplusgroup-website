@@ -63,9 +63,11 @@ export default function ArticleMeta({
           <Image
             src={avatar}
             alt={authorName}
+            title={authorName}
             fill
             className="object-cover"
-            quality={75}
+            sizes="44px"
+            quality={80}
             loading="lazy"
           />
         </div>

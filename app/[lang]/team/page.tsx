@@ -211,17 +211,24 @@ export default async function TeamPage({ params }: { params: { lang: string } })
                 <Image
                   src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus team collaboration and professional meeting"
+                  title="HousePlus team collaboration and professional meeting"
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus professionals working together in office"
+                  title="HousePlus professionals working together in office"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -266,8 +273,12 @@ export default async function TeamPage({ params }: { params: { lang: string } })
                 <Image
                   src="https://images.houseplus-ch.com/site/team-working-together.jpg"
                   alt="HousePlus company culture and team environment"
+                  title="HousePlus company culture and team environment"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
+                  loading="lazy"
                 />
               </div>
               <div>

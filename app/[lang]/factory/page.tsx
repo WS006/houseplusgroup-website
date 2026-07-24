@@ -130,9 +130,12 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                 <Image
                   src="https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg"
                   alt="HousePlus main production line"
+                  title="HousePlus main production line"
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
             </div>
@@ -170,7 +173,16 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                 { src: 'https://images.houseplus-ch.com/factory/production-line.jpg', alt: 'Automated production equipment' },
               ].map((img) => (
                 <div key={img.src} className="relative h-60 rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    title={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={80}
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>
@@ -223,8 +235,12 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                 <Image
                   src="https://images.houseplus-ch.com/factory/assembly-line.jpg"
                   alt="HousePlus quality assurance lab"
+                  title="HousePlus quality assurance lab"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
+                  loading="lazy"
                 />
               </div>
               <div>

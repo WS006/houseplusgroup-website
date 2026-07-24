@@ -282,6 +282,8 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
               fill
               className="object-cover"
               priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={90}
             />
           </div>
 
@@ -298,6 +300,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
                         alt={section.imageAlt}
                         fill
                         className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={80}
+                      loading="lazy"
                       />
                     </div>
                   )}
@@ -309,6 +314,9 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
                       alt={section.imageAlt}
                       fill
                       className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={80}
+                    loading="lazy"
                     />
                   </div>
                 )}

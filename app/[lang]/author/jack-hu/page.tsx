@@ -373,6 +373,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
                 className="object-cover"
                 priority
                 quality={85}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="text-center md:text-left">

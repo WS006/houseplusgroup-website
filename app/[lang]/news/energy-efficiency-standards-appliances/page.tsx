@@ -256,6 +256,8 @@ export default async function ArticlePage({ params }: { params: { lang: string }
               fill
               className="object-cover"
               priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={90}
             />
           </div>
           {data.sections.map((section: any, index: number) => (
@@ -272,6 +274,9 @@ export default async function ArticlePage({ params }: { params: { lang: string }
                       alt={section.imageAlt}
                       fill
                       className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={80}
+                    loading="lazy"
                     />
                   </div>
                 )}

@@ -254,6 +254,9 @@ export default async function CaseStudiesPage({ params }: { params: { lang: stri
                   alt="HousePlus global wholesale partnerships"
                   fill
                   className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={80}
+                loading="lazy"
                 />
               </div>
             </div>

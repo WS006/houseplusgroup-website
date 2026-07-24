@@ -230,6 +230,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           priority
           className="object-cover opacity-30"
           sizes="100vw"
+        quality={90}
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
@@ -260,6 +261,9 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
             {section.image && (
               <figure>
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={80}
+                loading="lazy"
                 <Image src={section.image} alt={section.imageAlt || section.heading} width={800} height={450} className="rounded-lg shadow-lg" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>

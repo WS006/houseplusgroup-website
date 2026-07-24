@@ -82,9 +82,12 @@ export default async function RegionsPage({ params }: { params: { lang: string }
               <Image
                 src="https://images.houseplus-ch.com/site/global-world-map-markets.jpg"
                 alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
+                title="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, 1200px"
+                quality={90}
               />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>

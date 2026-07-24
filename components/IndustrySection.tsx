@@ -120,10 +120,12 @@ export default function IndustrySection({
                 <Image
                   src={imgSrc}
                   alt={image.alt || title}
+                  title={title}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={85}
+                  quality={80}
+                  loading="lazy"
                   onError={handleImageError}
                 />
               )}

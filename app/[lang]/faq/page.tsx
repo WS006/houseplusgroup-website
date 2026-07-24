@@ -391,6 +391,9 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
                 alt="HousePlus customer support team answering wholesale buyer questions"
                 fill
                 className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={80}
+              loading="lazy"
               />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>

@@ -344,6 +344,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           priority
           className="object-cover opacity-30"
           sizes="100vw"
+        quality={90}
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />

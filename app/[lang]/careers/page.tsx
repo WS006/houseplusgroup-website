@@ -99,6 +99,9 @@ export default async function CareersPage({ params }: { params: { lang: string }
               alt="HousePlus Careers" 
               fill 
               className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            quality={80}
+            loading="lazy"
             />
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -139,6 +142,9 @@ export default async function CareersPage({ params }: { params: { lang: string }
                   alt="HousePlus Team Collaboration" 
                   fill 
                   className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={80}
+                loading="lazy"
                 />
               </div>
             </div>

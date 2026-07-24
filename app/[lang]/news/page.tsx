@@ -349,7 +349,16 @@ export default async function NewsPage({ params }: { params: { lang: string } })
           {articles.map((article) => (
             <Link key={article.slug} href={`/${lang}/news/${article.slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden relative">
-                <Image src={article.image} alt={article.imageAlt} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <Image
+                  src={article.image}
+                  alt={article.imageAlt}
+                  title={article.title[lang as keyof typeof article.title] || article.title.en}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={80}
+                  loading="lazy"
+                />
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-full">News & Insights</span>
                 </div>
