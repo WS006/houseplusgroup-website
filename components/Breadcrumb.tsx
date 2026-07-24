@@ -10,6 +10,13 @@ interface BreadcrumbProps {
 export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps) {
   const pathSegments = slug ? slug.split('/').filter(s => s && s !== lang) : [];
 
+  const validPages = new Set([
+    '', 'about-us', 'products', 'factory', 'team', 'service', 'careers', 'faq',
+    'news', 'contact', 'support', 'privacy', 'terms', 'oem-odm', 'certifications',
+    'case-studies', 'regions', 'brand', 'cookie-policy', 'sitemap-page',
+    'jack-hu',
+  ]);
+
   const pageLabels: Record<string, string> = {
     'about-us': translations[lang as keyof typeof translations]?.about?.title || 'About Us',
     'products': translations[lang as keyof typeof translations]?.nav?.products || 'Products',
@@ -30,28 +37,33 @@ export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps)
     'brand': 'Brand',
     'cookie-policy': 'Cookie Policy',
     'sitemap-page': 'Sitemap',
+    'author': 'Author',
+    'jack-hu': 'Jack Hu',
   };
 
   const homeLabel = translations[lang as keyof typeof translations]?.nav?.home || 'Home';
 
-  const items = [
-    { label: homeLabel, href: `/${lang}` },
+  const items: { label: string; href: string; isValidPage: boolean }[] = [
+    { label: homeLabel, href: `/${lang}`, isValidPage: true },
   ];
 
   pathSegments.forEach((segment, index) => {
-    const href = `/${lang}/${pathSegments.slice(0, index + 1).join('/')}`;
+    const pathSoFar = pathSegments.slice(0, index + 1).join('/');
+    const href = `/${lang}/${pathSoFar}`;
     const label = pageLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    items.push({ label, href });
+    const isValidPage = validPages.has(segment) || index === pathSegments.length - 1;
+    items.push({ label, href, isValidPage });
   });
 
   if (customLabel && items.length > 1) {
     items[items.length - 1].label = customLabel;
   }
 
+  const validItems = items.filter(item => item.isValidPage);
   const breadcrumbList = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    'itemListElement': items.map((item, index) => ({
+    'itemListElement': validItems.map((item, index) => ({
       '@type': 'ListItem',
       'position': index + 1,
       'name': item.label,
@@ -82,8 +94,8 @@ export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps)
                   />
                 </svg>
               )}
-              {index === items.length - 1 ? (
-                <span className="text-gray-700 font-medium">{item.label}</span>
+              {index === items.length - 1 || !item.isValidPage ? (
+                <span className={index === items.length - 1 ? 'text-gray-700 font-medium' : 'text-gray-500'}>{item.label}</span>
               ) : (
                 <Link
                   href={item.href}
