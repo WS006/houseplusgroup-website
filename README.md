@@ -13,6 +13,7 @@ Whether you're a retailer seeking quality products, a business needing customiza
 
 - **Phone (Nigeria):** +234 907 808 0738
 - **Phone (China):** +86 155 7811 9543
+- **WhatsApp:** https://wa.me/8615578119543
 - **Email:** jack@houseplus-ch.com
 - **WhatsApp:** Available 24/7
 - **Visit Our Website:** https://www.houseplus-ch.com
