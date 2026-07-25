@@ -57,7 +57,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Anodised aluminium alloy frame — corrosion-resistant and lightweight',
       'IP68-rated junction box with bypass diodes for shading protection',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20500W%20monocrystalline%20solar%20panel%20with%20blue%20cells%20and%20white%20frame%20isolated%20on%20white%20background&image_size=landscape_16_9',    imageAlt: '500W monocrystalline solar panel HP-SP500 for commercial solar installations',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',    imageAlt: '500W monocrystalline solar panel HP-SP500 for commercial solar installations',
     imageTitle: '500W Solar Panel HP-SP500 | HousePlus Solar Wholesale',
 
   },
@@ -78,7 +78,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'LCD display with real-time monitoring of voltage, current and power',
       'Multi-protection: over-voltage, over-current, short-circuit, thermal',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%203kW%20pure%20sine%20wave%20solar%20inverter%20with%20LCD%20display%20and%20terminal%20connections&image_size=landscape_16_9',    imageAlt: '3kW pure sine wave solar inverter HP-INV3000 with built-in MPPT for off-grid systems',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-inverter-3kw.jpg',    imageAlt: '3kW pure sine wave solar inverter HP-INV3000 with built-in MPPT for off-grid systems',
     imageTitle: '3kW Solar Inverter HP-INV3000 | HousePlus Solar Wholesale',
 
   },
@@ -99,7 +99,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Wide operating temperature range: -20°C to +60°C',
       'Stackable design — expandable to 30kWh with parallel connection',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%205kWh%20LiFePO4%20lithium%20battery%20pack%20with%20BMS%20and%20terminals&image_size=landscape_16_9',    imageAlt: '5kWh LiFePO4 lithium battery HP-LFP5K for home solar energy storage systems',
+    coverImage: 'https://images.houseplus-ch.com/products/lithium-battery-5kwh.jpg',    imageAlt: '5kWh LiFePO4 lithium battery HP-LFP5K for home solar energy storage systems',
     imageTitle: '5kWh Lithium Battery HP-LFP5K | HousePlus Solar Wholesale',
 
   },
@@ -119,7 +119,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Deep discharge recovery capability for extended service life',
       'Vibration-resistant construction for mobile and marine use',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20100Ah%20deep%20cycle%20lead-acid%20battery%20black%20casing%20yellow%20top&image_size=landscape_16_9',    imageAlt: '100Ah deep cycle lead-acid battery HP-LA100 for solar power storage backup',
+    coverImage: 'https://images.houseplus-ch.com/products/lead-acid-battery-100ah.jpg',    imageAlt: '100Ah deep cycle lead-acid battery HP-LA100 for solar power storage backup',
     imageTitle: '100Ah Lead-Acid Battery HP-LA100 | HousePlus Solar Wholesale',
 
   },
@@ -139,7 +139,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Backlit LCD display showing PV voltage, battery voltage and charge current',
       'Comprehensive protection: overcharge, over-discharge, short-circuit, reverse polarity',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2060A%20MPPT%20solar%20charge%20controller%20with%20LCD%20screen%20and%20buttons&image_size=landscape_16_9',    imageAlt: 'MPPT solar charge controller 60A HP-MPPT60 for large solar panel arrays',
+    coverImage: 'https://images.houseplus-ch.com/products/charge-controller-60a.jpg',    imageAlt: 'MPPT solar charge controller 60A HP-MPPT60 for large solar panel arrays',
     imageTitle: 'MPPT Controller 60A HP-MPPT60 | HousePlus Solar Wholesale',
 
   },
@@ -159,7 +159,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'PIR motion sensor with adjustable sensitivity and delay time',
       'Remote control for brightness adjustment and scheduling',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20200W%20all-in-one%20solar%20street%20light%20with%20integrated%20panel&image_size=landscape_16_9',    imageAlt: '200W all-in-one solar street light HP-SSL200 with motion sensor for outdoor lighting',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-street-light-200w.jpg',    imageAlt: '200W all-in-one solar street light HP-SSL200 with motion sensor for outdoor lighting',
     imageTitle: '200W Solar Street Light HP-SSL200 | HousePlus Solar Wholesale',
 
   },
@@ -179,7 +179,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Direct solar panel connection — no battery required in daylight',
       'Corrosion-resistant ABS housing for outdoor and humid environments',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2020W%20DC%20solar%20fan%20with%20brushless%20motor%20and%20solar%20panel&image_size=landscape_16_9',    imageAlt: '20W DC solar fan HP-SF20 brushless motor for greenhouse and off-grid ventilation',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-fan-20w.jpg',    imageAlt: '20W DC solar fan HP-SF20 brushless motor for greenhouse and off-grid ventilation',
     imageTitle: '20W Solar Fan HP-SF20 | HousePlus Solar Wholesale',
 
   },
@@ -199,7 +199,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Built-in solar panel for emergency top-up in outdoor environments',
       'IPX4 waterproof and dustproof construction',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2020000mAh%20solar%20power%20bank%20with%20built-in%20solar%20panel%20dual%20USB&image_size=landscape_16_9',    imageAlt: '20000mAh solar power bank HP-SPB20K with dual USB and 18W PD fast charging',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-power-bank-20000mah.jpg',    imageAlt: '20000mAh solar power bank HP-SPB20K with dual USB and 18W PD fast charging',
     imageTitle: '20000mAh Solar Power Bank HP-SPB20K | HousePlus Electronics Wholesale',
 
   },
@@ -220,7 +220,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Digital touch screen with 8 one-touch preset programmes',
       '360° rapid air circulation for even, crispy results',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%205.8L%20digital%20air%20fryer%20black%20design%20with%20touch%20panel&image_size=landscape_16_9',    imageAlt: '5.8L digital air fryer HP-AF58 with touch panel for oil-free healthy cooking',
+    coverImage: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',    imageAlt: '5.8L digital air fryer HP-AF58 with touch panel for oil-free healthy cooking',
     imageTitle: '5.8L Air Fryer HP-AF58 | HousePlus Appliance Wholesale',
 
   },
@@ -240,7 +240,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Automatic pan detection — powers off when no cookware is detected',
       'Child lock and 3-hour auto shut-off for safety',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%202000W%20induction%20cooktop%20black%20ceramic%20glass%20surface&image_size=landscape_16_9',    imageAlt: '2000W induction cooktop HP-IC2000 with ceramic glass for modern kitchen cooking',
+    coverImage: 'https://images.houseplus-ch.com/products/induction-cooktop-2000w.jpg',    imageAlt: '2000W induction cooktop HP-IC2000 with ceramic glass for modern kitchen cooking',
     imageTitle: '2000W Induction Cooktop HP-IC2000 | HousePlus Appliance Wholesale',
 
   },
@@ -260,7 +260,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '1500W rapid boil — 1.5L in under 3 minutes',
       '360° cordless base with auto shut-off and boil-dry protection',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%201.5L%20stainless%20steel%20electric%20kettle%20brushed%20metal%20finish&image_size=landscape_16_9',    imageAlt: '1.5L stainless steel electric kettle HP-EK15 with auto shut-off for home use',
+    coverImage: 'https://images.houseplus-ch.com/products/electric-kettle-1-5l.jpg',    imageAlt: '1.5L stainless steel electric kettle HP-EK15 with auto shut-off for home use',
     imageTitle: '1.5L Electric Kettle HP-EK15 | HousePlus Appliance Wholesale',
 
   },
@@ -280,7 +280,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Extra-wide slots accommodate thick-cut bread and bagels',
       'Removable crumb tray for easy cleaning',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%202-slice%20stainless%20steel%20toaster%20with%20wide%20slots&image_size=landscape_16_9',    imageAlt: '2-slice stainless steel toaster HP-TS2 with 7 browning settings for breakfast',
+    coverImage: 'https://images.houseplus-ch.com/products/toaster-2-slice.jpg',    imageAlt: '2-slice stainless steel toaster HP-TS2 with 7 browning settings for breakfast',
     imageTitle: '2-Slice Toaster HP-TS2 | HousePlus Appliance Wholesale',
 
   },
@@ -301,7 +301,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Omnidirectional built-in microphone for clear voice communication',
       'Foldable design with padded headband for comfortable extended wear',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20over-ear%20headphones%20black%20padded%20ear%20cups%20adjustable%20headband&image_size=landscape_16_9',    imageAlt: 'Over-ear headphone HP-HE01 with 40mm drivers and built-in microphone for calls',
+    coverImage: 'https://images.houseplus-ch.com/products/headphone-over-ear.jpg',    imageAlt: 'Over-ear headphone HP-HE01 with 40mm drivers and built-in microphone for calls',
     imageTitle: 'Over-Ear Headphone HP-HE01 | HousePlus Electronics Wholesale',
 
   },
@@ -322,7 +322,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Active noise cancellation (ANC) with transparency mode',
       'IPX5 sweat and water resistance for sports use',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20true%20wireless%20Bluetooth%20earbuds%20white%20with%20charging%20case&image_size=landscape_16_9',    imageAlt: 'True wireless Bluetooth earphones HP-TWS01 with ANC and 30-hour playtime',
+    coverImage: 'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',    imageAlt: 'True wireless Bluetooth earphones HP-TWS01 with ANC and 30-hour playtime',
     imageTitle: 'TWS Earphones HP-TWS01 | HousePlus Electronics Wholesale',
 
   },
@@ -342,7 +342,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '20+ sport modes with automatic activity recognition',
       'IP68 waterproof — safe for swimming and showering',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20smart%20watch%20with%20AMOLED%20display%20fitness%20tracking%20black%20silicone%20strap&image_size=landscape_16_9',    imageAlt: 'Smart watch HP-SW01 with heart rate SpO2 monitor and 20 sport modes for fitness',
+    coverImage: 'https://images.houseplus-ch.com/products/smart-watch.jpg',    imageAlt: 'Smart watch HP-SW01 with heart rate SpO2 monitor and 20 sport modes for fitness',
     imageTitle: 'Smart Watch HP-SW01 | HousePlus Electronics Wholesale',
 
   },
@@ -362,7 +362,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Shock-resistant aluminium alloy casing — drop-tested to 2m',
       'Compact pocket-sized form factor — 50g lightweight',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%201TB%20USB-C%20portable%20SSD%20slim%20aluminum%20casing%20space%20gray&image_size=landscape_16_9',    imageAlt: '1TB USB-C portable SSD HP-SSD1T with 1050MB/s read speed for data storage',
+    coverImage: 'https://images.houseplus-ch.com/products/portable-ssd-1tb.jpg',    imageAlt: '1TB USB-C portable SSD HP-SSD1T with 1050MB/s read speed for data storage',
     imageTitle: '1TB Portable SSD HP-SSD1T | HousePlus Electronics Wholesale',
 
   },
@@ -382,7 +382,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Waterproof, temperature-proof and X-ray-proof construction',
       'Includes full-size SD adapter for camera and laptop compatibility',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20128GB%20micro%20SD%20card%20with%20adapter%20gold%20contacts&image_size=landscape_16_9',    imageAlt: '128GB micro SD card HP-SD128 UHS-I U3 A2 for cameras drones and smartphones',
+    coverImage: 'https://images.houseplus-ch.com/products/micro-sd-128gb.jpg',    imageAlt: '128GB micro SD card HP-SD128 UHS-I U3 A2 for cameras drones and smartphones',
     imageTitle: '128GB Micro SD HP-SD128 | HousePlus Electronics Wholesale',
 
   },
@@ -402,7 +402,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Supports PD 3.0 and QC 4.0 fast charging protocols',
       'Braided nylon jacket with aluminium connectors — 10,000+ bend cycles',
     ],
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%202m%20USB-C%20charging%20cable%20braided%20nylon%20aluminum%20connectors&image_size=landscape_16_9',    imageAlt: 'Fast charging USB-C cable 2m HP-CC2M supporting 100W PD for laptops and phones',
+    coverImage: 'https://images.houseplus-ch.com/products/usb-c-cable-2m.jpg',    imageAlt: 'Fast charging USB-C cable 2m HP-CC2M supporting 100W PD for laptops and phones',
     imageTitle: 'USB-C Cable 2m HP-CC2M | HousePlus Electronics Wholesale',
 
   },
@@ -452,7 +452,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20100W%20monocrystalline%20solar%20panel%20compact%20RV%20marine%20use&image_size=landscape_16_9',    imageAlt: '100W monocrystalline solar panel HP-SOL-100W for RV marine and off-grid cabins',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',    imageAlt: '100W monocrystalline solar panel HP-SOL-100W for RV marine and off-grid cabins',
     imageTitle: '100W Solar Panel HP-SOL-100W | HousePlus Solar Wholesale',
 
   },
@@ -500,7 +500,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%203000W%20portable%20power%20station%20with%20LCD%20display%20wheels%20handle&image_size=landscape_16_9',    imageAlt: '3000W portable power station HP-SOL-3000 with LiFePO4 battery for outdoor backup',
+    coverImage: 'https://images.houseplus-ch.com/products/portable-power-station-3000w.jpg',    imageAlt: '3000W portable power station HP-SOL-3000 with LiFePO4 battery for outdoor backup',
     imageTitle: '3000W Power Station HP-SOL-3000 | HousePlus Solar Wholesale',
 
   },
@@ -548,7 +548,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20200W%20foldable%20solar%20panel%20ETFE%20surface%20compact&image_size=landscape_16_9',    imageAlt: '200W foldable solar panel HP-SOL-200F with ETFE surface for camping and RV use',
+    coverImage: 'https://images.houseplus-ch.com/products/foldable-solar-panel-200w.jpg',    imageAlt: '200W foldable solar panel HP-SOL-200F with ETFE surface for camping and RV use',
     imageTitle: '200W Foldable Solar Panel HP-SOL-200F | HousePlus Solar Wholesale',
 
   },
@@ -596,7 +596,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%205000W%20home%20energy%20storage%20system%20modular%20battery%20units&image_size=landscape_16_9',    imageAlt: '5000W home energy storage system HP-SOL-5000H with modular LiFePO4 for grid-tie',
+    coverImage: 'https://images.houseplus-ch.com/products/home-energy-storage-5000w.jpg',    imageAlt: '5000W home energy storage system HP-SOL-5000H with modular LiFePO4 for grid-tie',
     imageTitle: '5000W Home Storage HP-SOL-5000H | HousePlus Solar Wholesale',
 
   },
@@ -644,7 +644,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2060W%20PD%20fast%20charging%20power%20bank%20aluminum%20casing%20space%20gray&image_size=landscape_16_9',    imageAlt: '60W PD fast charging power bank HP-3C-60W 20000mAh for laptop and phone charging',
+    coverImage: 'https://images.houseplus-ch.com/products/power-bank-60w-pd.jpg',    imageAlt: '60W PD fast charging power bank HP-3C-60W 20000mAh for laptop and phone charging',
     imageTitle: '60W Power Bank HP-3C-60W | HousePlus Electronics Wholesale',
 
   },
@@ -692,7 +692,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2012V%20100Ah%20LiFePO4%20battery%20with%20BMS%20protection&image_size=landscape_16_9',    imageAlt: '12V 100Ah LiFePO4 battery HP-SOL-12V100 with BMS for RV and marine applications',
+    coverImage: 'https://images.houseplus-ch.com/products/lifepo4-battery-12v100ah.jpg',    imageAlt: '12V 100Ah LiFePO4 battery HP-SOL-12V100 with BMS for RV and marine applications',
     imageTitle: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 | HousePlus Solar Wholesale',
 
   },
@@ -740,7 +740,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20600W%20outdoor%20power%20station%20compact%20with%20handle&image_size=landscape_16_9',    imageAlt: '600W outdoor power station HP-SOL-600O with pure sine wave for camping power',
+    coverImage: 'https://images.houseplus-ch.com/products/outdoor-power-station-600w.jpg',    imageAlt: '600W outdoor power station HP-SOL-600O with pure sine wave for camping power',
     imageTitle: '600W Power Station HP-SOL-600O | HousePlus Solar Wholesale',
 
   },
@@ -787,7 +787,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2040A%20MPPT%20solar%20charge%20controller%20LCD%20screen%20terminal%20screws&image_size=landscape_16_9',    imageAlt: 'MPPT 40A solar charge controller HP-SOL-MPPT40 with 98% efficiency for solar systems',
+    coverImage: 'https://images.houseplus-ch.com/products/mppt-controller-40a.jpg',    imageAlt: 'MPPT 40A solar charge controller HP-SOL-MPPT40 with 98% efficiency for solar systems',
     imageTitle: 'MPPT 40A Controller HP-SOL-MPPT40 | HousePlus Solar Wholesale',
 
   },
@@ -835,7 +835,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%2010000mAh%20magnetic%20wireless%20power%20bank%20slim%20profile&image_size=landscape_16_9',    imageAlt: '10000mAh magnetic wireless power bank HP-3C-MAG10K with 15W MagSafe for iPhone',
+    coverImage: 'https://images.houseplus-ch.com/products/magnetic-power-bank-10000mah.jpg',    imageAlt: '10000mAh magnetic wireless power bank HP-3C-MAG10K with 15W MagSafe for iPhone',
     imageTitle: '10000mAh Magnetic Power Bank HP-3C-MAG10K | HousePlus Electronics Wholesale',
 
   },
@@ -883,7 +883,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%202000W%20pure%20sine%20wave%20inverter%20metal%20casing%20cooling%20fan&image_size=landscape_16_9',    imageAlt: '2000W pure sine wave inverter HP-SOL-INV2K with 4000W surge for off-grid power',
+    coverImage: 'https://images.houseplus-ch.com/products/pure-sine-inverter-2000w.jpg',    imageAlt: '2000W pure sine wave inverter HP-SOL-INV2K with 4000W surge for off-grid power',
     imageTitle: '2000W Sine Wave Inverter HP-SOL-INV2K | HousePlus Solar Wholesale',
 
   },
@@ -931,7 +931,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20400W%20semi-flexible%20solar%20panel%20curved%20thin%20ETFE&image_size=landscape_16_9',    imageAlt: '400W semi-flexible solar panel HP-SOL-400F with ETFE for RV curved roofs and marine',
+    coverImage: 'https://images.houseplus-ch.com/products/flexible-solar-panel-400w.jpg',    imageAlt: '400W semi-flexible solar panel HP-SOL-400F with ETFE for RV curved roofs and marine',
     imageTitle: '400W Flexible Solar Panel HP-SOL-400F | HousePlus Solar Wholesale',
 
   },
@@ -979,7 +979,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20300W%20portable%20solar%20generator%20kit%20panel%20and%20power%20station&image_size=landscape_16_9',    imageAlt: '300W portable solar generator kit HP-SOL-KIT300 with panel and power station for camping',
+    coverImage: 'https://images.houseplus-ch.com/products/solar-generator-kit-300w.jpg',    imageAlt: '300W portable solar generator kit HP-SOL-KIT300 with panel and power station for camping',
     imageTitle: '300W Solar Generator Kit HP-SOL-KIT300 | HousePlus Solar Wholesale',
 
   },
@@ -1027,7 +1027,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20smart%20WiFi%20plug%20with%20energy%20meter%20LED%20indicator&image_size=landscape_16_9',    imageAlt: 'Smart WiFi plug HP-HA-WIFI10 with energy meter and Alexa support for home automation',
+    coverImage: 'https://images.houseplus-ch.com/products/smart-wifi-plug-meter.jpg',    imageAlt: 'Smart WiFi plug HP-HA-WIFI10 with energy meter and Alexa support for home automation',
     imageTitle: 'Smart WiFi Plug HP-HA-WIFI10 | HousePlus Appliance Wholesale',
 
   },
@@ -1075,7 +1075,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20product%20photography%20of%20100W%20USB-C%20fast%20charging%20cable%20braided%205A%20rating&image_size=landscape_16_9',    imageAlt: 'Type-C 100W fast charging cable HP-3C-TC100W 5A nylon braided for MacBook charging',
+    coverImage: 'https://images.houseplus-ch.com/products/usb-c-cable-100w-5a.jpg',    imageAlt: 'Type-C 100W fast charging cable HP-3C-TC100W 5A nylon braided for MacBook charging',
     imageTitle: '100W USB-C Cable HP-3C-TC100W | HousePlus Electronics Wholesale',
 
   },
