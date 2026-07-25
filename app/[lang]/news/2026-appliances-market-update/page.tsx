@@ -332,10 +332,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
             {section.image && (
               <figure>
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={80}
-                loading="lazy"
-                <Image src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" quality={80} loading="lazy" />
+                <Image src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={80} loading="lazy" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>
             )}
