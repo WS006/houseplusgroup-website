@@ -1,0 +1,69 @@
+# Merchant Center 自动化监控与修复
+# ============================================
+# 每天 08:00 (北京时间) 自动检查 Merchant Center 状态
+# 如发现问题，自动触发 Feed 重新抓取并生成报告
+#
+# 所需 GitHub Secrets（在仓库 Settings > Secrets > Actions 中配置）:
+#   GOOGLE_SERVICE_ACCOUNT  - Service Account JSON 字符串
+#   GOOGLE_MERCHANT_ID      - Merchant Center ID (575397679)
+
+name: Merchant Center Auto-Monitor
+
+on:
+  schedule:
+    # 每天北京时间 08:00 (UTC 00:00) 执行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install jsonwebtoken
+
+      - name: Run Merchant Center diagnostics
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_MERCHANT_ID: ${{ secrets.GOOGLE_MERCHANT_ID }}
+        run: node scripts/merchant-center-manager.js report > mc-report.json
+
+      - name: Check for issues
+        id: check
+        run: |
+          ISSUES=$(jq '.accountIssues | length' mc-report.json)
+          PROBLEMS=$(jq '.problematicProducts | length' mc-report.json)
+          echo "issues=$ISSUES" >> $GITHUB_OUTPUT
+          echo "problems=$PROBLEMS" >> $GITHUB_OUTPUT
+          echo "发现 $ISSUES 个账号级问题, $PROBLEMS 个产品级问题"
+
+      - name: Auto-refetch feeds if issues found
+        if: steps.check.outputs.issues != '0' || steps.check.outputs.problems != '0'
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_MERCHANT_ID: ${{ secrets.GOOGLE_MERCHANT_ID }}
+        run: node scripts/merchant-center-manager.js refetch
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mc-report-${{ github.run_id }}
+          path: mc-report.json
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          echo "## Merchant Center 监控报告" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- 账号级问题: ${{ steps.check.outputs.issues }}" >> $GITHUB_STEP_SUMMARY
+          echo "- 产品级问题: ${{ steps.check.outputs.problems }}" >> $GITHUB_STEP_SUMMARY
+          cat mc-report.json | jq -r '.accountIssues[]? | "- [" + .severity + "] " + .title' >> $GITHUB_STEP_SUMMARY || true
