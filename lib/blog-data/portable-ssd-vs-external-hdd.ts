@@ -117,7 +117,7 @@ const article: BlogPost = {
         'Home Appliance OEM Manufacturer Guide: Sourcing from China in 2026',
       excerpt:
         'Complete guide to sourcing home appliances from Chinese OEM manufacturers.',
-      date: '2026-07-15',
+      date: '2026-08-01',
       readingTime: '11 min read',
     },
     {

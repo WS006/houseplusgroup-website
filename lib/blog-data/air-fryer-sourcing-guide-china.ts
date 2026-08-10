@@ -107,7 +107,7 @@ const article: BlogPost = {
         'Home Appliance OEM Manufacturer Guide: Sourcing from China in 2026',
       excerpt:
         'Complete guide to sourcing home appliances from Chinese OEM manufacturers.',
-      date: '2026-07-15',
+      date: '2026-08-01',
       readingTime: '11 min read',
     },
     {
@@ -116,7 +116,7 @@ const article: BlogPost = {
         'Best Kitchen Appliances for Wholesale: A Distributor Sourcing Guide',
       excerpt:
         'Compare and source top-selling kitchen appliances for wholesale distribution.',
-      date: '2026-07-15',
+      date: '2026-08-08',
       readingTime: '10 min read',
     },
     {
