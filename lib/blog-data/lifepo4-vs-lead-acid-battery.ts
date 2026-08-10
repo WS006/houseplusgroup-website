@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:
-    'https://images.houseplus-ch.com/blog/lifepo4-vs-lead-acid-battery.jpg',
+    'https://images.houseplus-ch.com/products/lifepo4-battery-12v100ah.jpg',
   heroImageAlt:
     'LiFePO4 lithium iron phosphate battery compared to traditional lead acid deep cycle battery for solar storage',
   sections: [
@@ -133,21 +133,21 @@ const article: BlogPost = {
       name: '12V 200Ah LiFePO4 Battery',
       desc: '6000+ cycles, built-in BMS, 80% DoD, 10-year lifespan',
       image:
-        'https://images.houseplus-ch.com/products/lifepo4-battery-200ah.jpg',
+        'https://images.houseplus-ch.com/products/lifepo4-battery-12v100ah.jpg',
     },
     {
       slug: 'lifepo4-battery-100ah',
       name: '12V 100Ah LiFePO4 Battery',
       desc: 'Compact design, 4000+ cycles, perfect for off-grid solar systems',
       image:
-        'https://images.houseplus-ch.com/products/lifepo4-battery-100ah.jpg',
+        'https://images.houseplus-ch.com/products/lifepo4-battery-12v100ah.jpg',
     },
     {
       slug: 'deep-cycle-gel-battery-150ah',
       name: '12V 150Ah Deep Cycle Gel Battery',
       desc: 'Maintenance-free gel battery, budget-friendly solar storage option',
       image:
-        'https://images.houseplus-ch.com/products/gel-battery-150ah.jpg',
+        'https://images.houseplus-ch.com/products/lead-acid-battery-100ah.jpg',
     },
   ],
 };

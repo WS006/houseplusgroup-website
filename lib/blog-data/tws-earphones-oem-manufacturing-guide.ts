@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '12 min read',
   category: '3C Electronics',
   heroImage:
-    'https://images.houseplus-ch.com/blog/tws-earphones-oem-guide.jpg',
+    'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
   heroImageAlt:
     'TWS true wireless stereo earphones on production line at HousePlus OEM manufacturing facility',
   sections: [
@@ -140,21 +140,21 @@ const article: BlogPost = {
       name: 'TWS Earphones Bluetooth 5.3 with ENC',
       desc: '13mm dynamic driver, 30h playtime with case, IPX5 rated, CE/FCC/RoHS certified',
       image:
-        'https://images.houseplus-ch.com/products/tws-earphones-bt53.jpg',
+        'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     },
     {
       slug: 'tws-earphones-anc-noise-cancelling',
       name: 'ANC Noise Cancelling TWS Earphones',
       desc: 'Active noise cancellation up to 35dB, aptX HD, wireless charging case',
       image:
-        'https://images.houseplus-ch.com/products/tws-earphones-anc.jpg',
+        'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     },
     {
       slug: 'tws-earphones-gaming-low-latency',
       name: 'Gaming TWS Earphones Low Latency',
       desc: '45ms ultra-low latency, Bluetooth 5.3, RGB lighting, dual-mode gaming/music',
       image:
-        'https://images.houseplus-ch.com/products/tws-earphones-gaming.jpg',
+        'https://images.houseplus-ch.com/products/bluetooth-earphone-tws.jpg',
     },
   ],
 };

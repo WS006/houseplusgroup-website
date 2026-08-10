@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:
-    'https://images.houseplus-ch.com/blog/kitchen-appliances-wholesale-guide.jpg',
+    'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
   heroImageAlt:
     'Range of kitchen appliances including blenders electric kettles rice cookers and juicers arranged for wholesale export display',
   sections: [
@@ -135,20 +135,20 @@ const article: BlogPost = {
       slug: 'blender-1500w-professional',
       name: '1500W Professional Blender',
       desc: '30,000 RPM, 2L Tritan jar, 6 blades, pulse function, CE/RoHS certified',
-      image: 'https://images.houseplus-ch.com/products/blender-1500w.jpg',
+      image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
     },
     {
       slug: 'slow-juicer-masticating',
       name: 'Slow Masticating Juicer',
       desc: '80 RPM cold press, 7-segment spiral auger, <55dB quiet operation',
-      image: 'https://images.houseplus-ch.com/products/slow-juicer.jpg',
+      image: 'https://images.houseplus-ch.com/products/kitchen-appliances.jpg',
     },
     {
       slug: 'electric-kettle-1.7l-stainless',
       name: '1.7L Stainless Steel Electric Kettle',
       desc: '2200W fast boil, STRIX controller, auto shut-off, boil-dry protection',
       image:
-        'https://images.houseplus-ch.com/products/electric-kettle-1.7l.jpg',
+        'https://images.houseplus-ch.com/products/electric-kettle-1-5l.jpg',
     },
   ],
 };

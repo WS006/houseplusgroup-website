@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '12 min read',
   category: 'Procurement Guide',
   heroImage:
-    'https://images.houseplus-ch.com/blog/solar-panel-manufacturer-china-guide.jpg',
+    'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
   heroImageAlt:
     'HousePlus solar panel manufacturing facility in Zhongshan China with production line',
   sections: [
@@ -167,7 +167,7 @@ const article: BlogPost = {
       slug: 'monocrystalline-solar-panel-450w',
       name: '450W Monocrystalline Solar Panel',
       desc: 'Tier-1 grade A cells, CE & IEC certified, ideal for commercial projects',
-      image: 'https://images.houseplus-ch.com/products/solar-panel-450w.jpg',
+      image: 'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
     },
     {
       slug: 'solar-panel-100w-portable',

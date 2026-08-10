@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Solar Energy Systems',
   heroImage:
-    'https://images.houseplus-ch.com/blog/how-to-choose-wholesale-solar-panels.jpg',
+    'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
   heroImageAlt:
     'HousePlus monocrystalline solar panels stacked in warehouse ready for wholesale export',
   sections: [
@@ -152,7 +152,7 @@ const article: BlogPost = {
       slug: 'monocrystalline-solar-panel-450w',
       name: '450W Monocrystalline Solar Panel',
       desc: 'Tier-1 grade A cells, CE & IEC certified, ideal for commercial projects',
-      image: 'https://images.houseplus-ch.com/products/solar-panel-450w.jpg',
+      image: 'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
     },
     {
       slug: 'solar-panel-100w-portable',

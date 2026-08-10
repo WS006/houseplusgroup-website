@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Price Guide',
   heroImage:
-    'https://images.houseplus-ch.com/blog/solar-panel-wholesale-price-guide.jpg',
+    'https://images.houseplus-ch.com/articles/solar/solar-energy-farm-panels.jpg',
   heroImageAlt:
     'Solar panel wholesale pricing chart showing 2026 market trends and price per watt analysis',
   sections: [
@@ -144,21 +144,21 @@ const article: BlogPost = {
       name: '550W Monocrystalline Solar Panel (Wholesale)',
       desc: 'Best value per watt at volume, $0.18/W at 500+ pcs',
       image:
-        'https://images.houseplus-ch.com/products/solar-panel-550w-wholesale.jpg',
+        'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
     },
     {
       slug: 'monocrystalline-solar-panel-450w',
       name: '450W Monocrystalline Solar Panel (Bulk)',
       desc: 'Popular commercial grade, tiered pricing from 100 pcs',
       image:
-        'https://images.houseplus-ch.com/products/solar-panel-450w-bulk.jpg',
+        'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
     },
     {
       slug: 'solar-panel-100w-portable',
       name: '100W Portable Solar Panel (Wholesale)',
       desc: 'Compact panels for retail distribution, low MOQ of 100 pcs',
       image:
-        'https://images.houseplus-ch.com/products/solar-panel-100w-wholesale.jpg',
+        'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
     },
   ],
 };

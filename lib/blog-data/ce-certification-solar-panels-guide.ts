@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '8 min read',
   category: 'Certification Guide',
   heroImage:
-    'https://images.houseplus-ch.com/blog/ce-certification-solar-panels.jpg',
+    'https://images.houseplus-ch.com/articles/solar/solar-panel-installation-rooftop.jpg',
   heroImageAlt:
     'CE certification mark on solar panel with IEC 61215 and IEC 61730 test certificates',
   sections: [
@@ -120,21 +120,21 @@ const article: BlogPost = {
       name: '450W CE-Certified Monocrystalline Solar Panel',
       desc: 'IEC 61215 & IEC 61730 certified, CE marked, RoHS compliant',
       image:
-        'https://images.houseplus-ch.com/products/solar-panel-450w-ce.jpg',
+        'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
     },
     {
       slug: 'monocrystalline-solar-panel-550w',
       name: '550W CE-Certified PERC Solar Panel',
       desc: 'Full CE documentation, UL and IEC certified for global markets',
       image:
-        'https://images.houseplus-ch.com/products/solar-panel-550w-ce.jpg',
+        'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
     },
     {
       slug: 'solar-panel-200w-flexible',
       name: '200W Flexible CE-Certified Solar Panel',
       desc: 'Lightweight flexible panel with CE and RoHS certification',
       image:
-        'https://images.houseplus-ch.com/products/flexible-solar-panel-200w.jpg',
+        'https://images.houseplus-ch.com/products/foldable-solar-panel-200w.jpg',
     },
   ],
 };
