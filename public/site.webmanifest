@@ -1,0 +1,32 @@
+{
+  "name": "HousePlus — Solar & Home Appliance Manufacturer",
+  "short_name": "HousePlus",
+  "description": "Wholesale solar systems, home appliances, and 3C electronics manufacturer from China",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E85D2F",
+  "icons": [
+    {
+      "src": "/houseplus-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
