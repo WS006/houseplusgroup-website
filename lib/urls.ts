@@ -87,6 +87,18 @@ export const newsSlugs = [
   'the-evolution-of-3c-electronics',
   'the-future-of-smart-home-appliances',
   'the-future-of-solar-energy',
+  'how-to-choose-wholesale-solar-panels',
+  'how-to-choose-solar-panel-manufacturer-china',
+  'mono-vs-poly-vs-perc-solar-panels',
+  'lifepo4-vs-lead-acid-battery',
+  'ce-certification-solar-panels-guide',
+  'mppt-vs-pwm-charge-controller',
+  'solar-panel-wholesale-price-guide',
+  'tws-earphones-oem-manufacturing-guide',
+  'portable-ssd-vs-external-hdd',
+  'home-appliance-oem-manufacturer-guide-china',
+  'air-fryer-sourcing-guide-china',
+  'kitchen-appliances-wholesale-guide',
 ];
 
 // Generate ALL URLs from the single source of truth

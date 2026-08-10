@@ -22,6 +22,18 @@ const lastModDates: Record<string, string> = {
   'oem-odm': '2026-06-29',
   'case-studies': '2026-06-29',
   'brand': '2026-07-23',
+  'news/how-to-choose-wholesale-solar-panels': '2026-08-10',
+  'news/how-to-choose-solar-panel-manufacturer-china': '2026-08-10',
+  'news/mono-vs-poly-vs-perc-solar-panels': '2026-08-10',
+  'news/lifepo4-vs-lead-acid-battery': '2026-08-10',
+  'news/ce-certification-solar-panels-guide': '2026-08-10',
+  'news/mppt-vs-pwm-charge-controller': '2026-08-10',
+  'news/solar-panel-wholesale-price-guide': '2026-08-10',
+  'news/tws-earphones-oem-manufacturing-guide': '2026-08-10',
+  'news/portable-ssd-vs-external-hdd': '2026-08-10',
+  'news/home-appliance-oem-manufacturer-guide-china': '2026-08-10',
+  'news/air-fryer-sourcing-guide-china': '2026-08-10',
+  'news/kitchen-appliances-wholesale-guide': '2026-08-10',
 };
 
 // All static page slugs from single source of truth

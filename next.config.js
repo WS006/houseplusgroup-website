@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: true,
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'a.storyblok.com', pathname: '/f/**' },
@@ -17,6 +19,25 @@ const nextConfig = {
   poweredByHeader: false,
   async rewrites() {
     return [];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/products/:slug',
+        destination: '/en/products/:slug',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: '/en/about-us',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: '/en/contact',
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [
@@ -99,6 +120,22 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendor',
+            chunks: 'all',
+            priority: 10,
+          },
+        },
+      };
+    }
+    return config;
   },
 };
 

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { sortedBlogPosts } from '@/lib/blog-data';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -66,7 +67,17 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     ar: 'اقرأ آخر الأخبار والمقالات والرؤى من مجموعة HousePlus. استكشف الاتجاهات في الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. مصدرك للمعرفة الصناعية وتحديثات الشركة.',
   };
 
+  const blogArticles = sortedBlogPosts.map((post) => ({
+    slug: post.slug,
+    image: post.heroImage,
+    imageAlt: post.heroImageAlt,
+    title: { en: post.title },
+    description: { en: post.description },
+    date: post.datePublished,
+  }));
+
   const articles = [
+    ...blogArticles,
     {
       slug: 'consumer-electronics-battery-life-testing',
       image: 'https://images.houseplus-ch.com/products/power-bank-60w-pd.jpg',
