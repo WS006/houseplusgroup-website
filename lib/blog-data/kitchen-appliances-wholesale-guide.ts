@@ -10,8 +10,8 @@ const article: BlogPost = {
     'kitchen appliances wholesale, small kitchen appliances sourcing, blender manufacturer China, electric kettle wholesale, rice cooker supplier, juicer OEM, kitchen appliance distributor',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Manufacturing',
-  datePublished: '2026-09-29',
-  dateModified: '2026-09-29',
+  datePublished: '2026-08-08',
+  dateModified: '2026-08-10',
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:

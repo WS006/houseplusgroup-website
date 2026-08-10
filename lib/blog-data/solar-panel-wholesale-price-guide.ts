@@ -9,8 +9,8 @@ const article: BlogPost = {
     'solar panel wholesale price, solar panel price per watt, bulk solar panels, solar panel cost, wholesale solar panels, solar panel pricing trends, solar panel import cost',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-09-08',
-  dateModified: '2026-09-08',
+  datePublished: '2026-07-15',
+  dateModified: '2026-08-06',
   readingTime: '10 min read',
   category: 'Price Guide',
   heroImage:

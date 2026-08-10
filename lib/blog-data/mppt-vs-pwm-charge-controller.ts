@@ -9,8 +9,8 @@ const article: BlogPost = {
     'MPPT vs PWM, solar charge controller, MPPT charge controller, PWM charge controller, solar panel charge controller, maximum power point tracking, solar power regulation',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-09-01',
-  dateModified: '2026-09-01',
+  datePublished: '2026-07-03',
+  dateModified: '2026-07-25',
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:

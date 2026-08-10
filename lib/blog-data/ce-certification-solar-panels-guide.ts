@@ -9,8 +9,8 @@ const article: BlogPost = {
     'CE certification solar panels, IEC 61215, IEC 61730, solar panel compliance, RoHS compliance, solar panel import regulations, CE marking requirements',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-08-25',
-  dateModified: '2026-08-25',
+  datePublished: '2026-06-20',
+  dateModified: '2026-08-01',
   readingTime: '8 min read',
   category: 'Certification Guide',
   heroImage:

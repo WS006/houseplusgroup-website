@@ -10,8 +10,8 @@ const article: BlogPost = {
     'TWS earphones OEM, Bluetooth earbuds manufacturer China, wireless earphones wholesale, TWS earphone factory, Bluetooth 5.3 earphones, ANC noise cancelling earbuds, earphone OEM ODM',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Manufacturing',
-  datePublished: '2026-08-10',
-  dateModified: '2026-08-10',
+  datePublished: '2026-07-22',
+  dateModified: '2026-08-08',
   readingTime: '12 min read',
   category: '3C Electronics',
   heroImage:

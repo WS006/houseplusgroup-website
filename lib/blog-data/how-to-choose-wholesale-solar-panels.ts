@@ -10,7 +10,7 @@ const article: BlogPost = {
     'wholesale solar panels, buy solar panels in bulk, monocrystalline vs polycrystalline, solar panel efficiency, OEM solar panels, solar panel manufacturer China, MOQ solar panels, solar panel certifications, solar panel price per watt',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-07-15',
+  datePublished: '2026-03-12',
   dateModified: '2026-07-28',
   readingTime: '9 min read',
   category: 'Solar Energy Systems',

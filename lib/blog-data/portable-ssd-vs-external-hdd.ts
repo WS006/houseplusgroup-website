@@ -10,8 +10,8 @@ const article: BlogPost = {
     'portable SSD vs external HDD, portable storage comparison, NAND flash storage, SSD wholesale, external hard drive, USB-C storage, storage device manufacturer China',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Manufacturing',
-  datePublished: '2026-08-10',
-  dateModified: '2026-08-10',
+  datePublished: '2026-07-29',
+  dateModified: '2026-08-09',
   readingTime: '10 min read',
   category: '3C Electronics',
   heroImage:

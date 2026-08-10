@@ -9,8 +9,8 @@ const article: BlogPost = {
     'solar panel manufacturer China, wholesale solar panels, OEM solar panels, solar panel factory China, MOQ solar panels, solar panel certifications, solar panel supplier selection',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-08-04',
-  dateModified: '2026-08-04',
+  datePublished: '2026-04-08',
+  dateModified: '2026-08-05',
   readingTime: '12 min read',
   category: 'Procurement Guide',
   heroImage:

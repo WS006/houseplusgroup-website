@@ -9,8 +9,8 @@ const article: BlogPost = {
     'LiFePO4 vs lead acid battery, solar battery storage, lithium iron phosphate battery, deep cycle battery, battery cycle life, solar energy storage, lithium battery vs lead acid',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-08-18',
-  dateModified: '2026-08-18',
+  datePublished: '2026-06-02',
+  dateModified: '2026-07-15',
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:

@@ -9,8 +9,8 @@ const article: BlogPost = {
     'monocrystalline vs polycrystalline, PERC solar panel technology, solar panel efficiency, solar panel types comparison, solar cell technology, monocrystalline solar panels, polycrystalline solar panels',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Solar Manufacturing',
-  datePublished: '2026-08-11',
-  dateModified: '2026-08-11',
+  datePublished: '2026-05-15',
+  dateModified: '2026-07-20',
   readingTime: '10 min read',
   category: 'Technical Comparison',
   heroImage:

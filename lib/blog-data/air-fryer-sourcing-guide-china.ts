@@ -9,8 +9,8 @@ const article: BlogPost = {
     'air fryer manufacturer China, air fryer OEM, air fryer sourcing, air fryer wholesale, rapid air technology, air fryer certification, air fryer import guide',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Manufacturing',
-  datePublished: '2026-09-22',
-  dateModified: '2026-09-22',
+  datePublished: '2026-08-05',
+  dateModified: '2026-08-09',
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:

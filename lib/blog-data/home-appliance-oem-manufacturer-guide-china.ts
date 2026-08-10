@@ -9,8 +9,8 @@ const article: BlogPost = {
     'home appliance OEM manufacturer China, small appliance manufacturing, kitchen appliance OEM, home appliance sourcing China, appliance factory Zhongshan, OEM ODM appliances',
   author: 'Jack (Founder & CEO)',
   authorRole: 'HousePlus Manufacturing',
-  datePublished: '2026-09-15',
-  dateModified: '2026-09-15',
+  datePublished: '2026-08-01',
+  dateModified: '2026-08-07',
   readingTime: '11 min read',
   category: 'Home Appliances',
   heroImage:
