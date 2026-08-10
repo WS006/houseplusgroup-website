@@ -117,7 +117,7 @@ const article: BlogPost = {
       title: 'Air Fryer Market Guide: How to Source and Import from China',
       excerpt:
         'Complete sourcing guide for air fryers from Chinese manufacturers.',
-      date: '2026-09-22',
+      date: '2026-07-15',
       readingTime: '10 min read',
     },
     {
@@ -126,7 +126,7 @@ const article: BlogPost = {
         'Best Kitchen Appliances for Wholesale: A Distributor Sourcing Guide',
       excerpt:
         'Compare and source top-selling kitchen appliances for wholesale distribution.',
-      date: '2026-09-29',
+      date: '2026-07-15',
       readingTime: '10 min read',
     },
     {
@@ -135,7 +135,7 @@ const article: BlogPost = {
         'TWS Earphones OEM Manufacturing Guide: Sourcing Bluetooth Earbuds from China',
       excerpt:
         'Complete guide to OEM manufacturing of TWS Bluetooth earphones.',
-      date: '2026-08-10',
+      date: '2026-07-22',
       readingTime: '12 min read',
     },
   ],

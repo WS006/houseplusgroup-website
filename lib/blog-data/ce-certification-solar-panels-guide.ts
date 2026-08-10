@@ -94,7 +94,7 @@ const article: BlogPost = {
         'How to Choose a Solar Panel Manufacturer in China: 2026 Complete Guide',
       excerpt:
         'Complete guide to evaluating and selecting a solar panel manufacturer.',
-      date: '2026-08-04',
+      date: '2026-04-08',
       readingTime: '12 min read',
     },
     {
@@ -102,7 +102,7 @@ const article: BlogPost = {
       title: 'Solar Panel Wholesale Price Guide: 2026 Market Analysis',
       excerpt:
         'Current wholesale pricing trends and price-per-watt benchmarks.',
-      date: '2026-09-08',
+      date: '2026-07-15',
       readingTime: '10 min read',
     },
     {
@@ -110,7 +110,7 @@ const article: BlogPost = {
       title:
         'Monocrystalline vs Polycrystalline vs PERC: Which Solar Panel Wins?',
       excerpt: 'Compare the three dominant solar cell technologies.',
-      date: '2026-08-11',
+      date: '2026-05-15',
       readingTime: '10 min read',
     },
   ],

@@ -113,7 +113,7 @@ const article: BlogPost = {
         'Home Appliance OEM Manufacturer Guide: Sourcing from China in 2026',
       excerpt:
         'Complete guide to sourcing home appliances from Chinese OEM manufacturers.',
-      date: '2026-09-15',
+      date: '2026-07-15',
       readingTime: '11 min read',
     },
     {
@@ -122,7 +122,7 @@ const article: BlogPost = {
         'Portable SSD vs External HDD: Which Storage Solution Wins in 2026?',
       excerpt:
         'Compare speed, durability, and cost of portable SSDs vs HDDs.',
-      date: '2026-08-10',
+      date: '2026-07-29',
       readingTime: '10 min read',
     },
     {
@@ -130,7 +130,7 @@ const article: BlogPost = {
       title: 'CE Certification for Solar Panels: Complete Import Guide',
       excerpt:
         'Everything you need to know about CE marking requirements.',
-      date: '2026-08-25',
+      date: '2026-06-20',
       readingTime: '8 min read',
     },
   ],

@@ -136,7 +136,7 @@ const article: BlogPost = {
         'Monocrystalline vs Polycrystalline vs PERC: Which Solar Panel Wins?',
       excerpt:
         'Compare the three dominant solar cell technologies by efficiency, cost, and application.',
-      date: '2026-08-11',
+      date: '2026-05-15',
       readingTime: '10 min read',
     },
     {
@@ -144,7 +144,7 @@ const article: BlogPost = {
       title: 'CE Certification for Solar Panels: Complete Import Guide',
       excerpt:
         'Everything you need to know about CE marking requirements for solar panel imports.',
-      date: '2026-08-25',
+      date: '2026-06-20',
       readingTime: '8 min read',
     },
     {
@@ -152,7 +152,7 @@ const article: BlogPost = {
       title: 'Solar Panel Wholesale Price Guide: 2026 Market Analysis',
       excerpt:
         'Current wholesale pricing trends and price-per-watt benchmarks for 2026.',
-      date: '2026-09-08',
+      date: '2026-07-15',
       readingTime: '10 min read',
     },
   ],

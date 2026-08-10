@@ -106,7 +106,7 @@ const article: BlogPost = {
       title: 'MPPT vs PWM Charge Controller: Which Do You Need?',
       excerpt:
         'Understanding charge controller technology for optimal battery charging.',
-      date: '2026-09-01',
+      date: '2026-07-03',
       readingTime: '9 min read',
     },
     {
@@ -115,7 +115,7 @@ const article: BlogPost = {
         'How to Choose a Solar Panel Manufacturer in China: 2026 Complete Guide',
       excerpt:
         'Complete guide to evaluating and selecting a solar panel manufacturer.',
-      date: '2026-08-04',
+      date: '2026-04-08',
       readingTime: '12 min read',
     },
     {
@@ -123,7 +123,7 @@ const article: BlogPost = {
       title:
         'Monocrystalline vs Polycrystalline vs PERC: Which Solar Panel Wins?',
       excerpt: 'Compare the three dominant solar cell technologies.',
-      date: '2026-08-11',
+      date: '2026-05-15',
       readingTime: '10 min read',
     },
   ],

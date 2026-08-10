@@ -108,7 +108,7 @@ const article: BlogPost = {
         'TWS Earphones OEM Manufacturing Guide: Sourcing Bluetooth Earbuds from China',
       excerpt:
         'Complete guide to OEM manufacturing of TWS Bluetooth earphones.',
-      date: '2026-08-10',
+      date: '2026-07-22',
       readingTime: '12 min read',
     },
     {
@@ -117,7 +117,7 @@ const article: BlogPost = {
         'Home Appliance OEM Manufacturer Guide: Sourcing from China in 2026',
       excerpt:
         'Complete guide to sourcing home appliances from Chinese OEM manufacturers.',
-      date: '2026-09-15',
+      date: '2026-07-15',
       readingTime: '11 min read',
     },
     {
@@ -125,7 +125,7 @@ const article: BlogPost = {
       title: 'Solar Panel Wholesale Price Guide: 2026 Market Analysis',
       excerpt:
         'Current wholesale pricing trends and price-per-watt benchmarks.',
-      date: '2026-09-08',
+      date: '2026-07-15',
       readingTime: '10 min read',
     },
   ],
