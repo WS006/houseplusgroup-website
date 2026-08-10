@@ -253,7 +253,7 @@ export default function ProductDetailPage() {
   const seoMeta = generateProductMeta({
     name: product.name,
     slug: product.slug,
-    certifications: 'CE, RoHS, IEC 61215, IEC 61730',
+    certifications: ['CE', 'RoHS', 'IEC 61215', 'IEC 61730'],
     image: product.images[0].src,
   });
 

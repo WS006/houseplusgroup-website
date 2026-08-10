@@ -41,7 +41,6 @@ interface BlogPostPageProps {
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = blogSlugs.map((slug) => ({
     params: { slug },
-    locale: 'en',
   }));
 
   return {

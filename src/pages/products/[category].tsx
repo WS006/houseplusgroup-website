@@ -518,8 +518,6 @@ const SORT_OPTIONS: { id: SortOption; label: string }[] = [
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = Object.keys(categories).map((slug) => ({
     params: { category: slug },
-    // Generate the default locale; other locales reuse the same slug.
-    locale: 'en',
   }));
 
   return {

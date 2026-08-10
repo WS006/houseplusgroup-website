@@ -1,6 +1,6 @@
 /**
  * HousePlus Custom Document
- * Updated: 2026-07-28
+ * Updated: 2026-08-10
  *
  * Sets the HTML lang attribute for international SEO and preloads
  * critical fonts for performance. This file runs once on the server
@@ -15,16 +15,17 @@
  * 3. Declares DNS prefetch for CDN and analytics domains.
  */
 
-import { Html, Head, Main, NextScript } from 'next/document';
-import { GetInitialPropsContext } from 'next/document';
+import NextDocument, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  type DocumentContext,
+  type DocumentInitialProps as NextDocInitialProps,
+} from 'next/document';
 
 const SUPPORTED_LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 const RTL_LOCALES = ['ar'];
-
-type DocumentInitialProps = {
-  locale: string;
-  htmlProps: Record<string, string>;
-};
 
 // Extract locale from the URL path (e.g. /en/products → "en")
 function getLocaleFromPath(asPath: string): string {
@@ -35,9 +36,13 @@ function getLocaleFromPath(asPath: string): string {
   return 'en'; // default fallback
 }
 
-Document.getInitialProps = async (ctx: GetInitialPropsContext): Promise<DocumentInitialProps & Record<string, unknown>> => {
-  const initialProps = await (Html.getInitialProps ? Html.getInitialProps(ctx) : {});
-  const asPath = ctx.ctx?.asPath || '/';
+type HousePlusDocumentProps = NextDocInitialProps & { locale?: string };
+
+NextDocument.getInitialProps = async (
+  ctx: DocumentContext
+): Promise<HousePlusDocumentProps> => {
+  const initialProps = await NextDocument.getInitialProps(ctx);
+  const asPath = ctx.asPath || '/';
   const locale = getLocaleFromPath(asPath);
 
   return {
@@ -46,7 +51,7 @@ Document.getInitialProps = async (ctx: GetInitialPropsContext): Promise<Document
   };
 };
 
-export default function Document({ locale = 'en' }: DocumentInitialProps) {
+export default function Document({ locale = 'en' }: HousePlusDocumentProps) {
   const isRTL = RTL_LOCALES.includes(locale);
 
   return (

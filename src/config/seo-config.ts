@@ -62,7 +62,7 @@ export const productListMeta = {
 // === OPTIMIZED: Product Detail Page Meta Template ===
 // BEFORE: "500W Monocrystalline Solar Panel | HousePlus Wholesale — Professional Manufacturer" (82 chars — too long)
 // AFTER:  Multi-tier truncation to ensure title stays under 60 chars for optimal SERP display
-export function generateProductMeta(product: { name: string; description?: string }) {
+export function generateProductMeta(product: { name: string; description?: string; certifications?: string[]; slug?: string; image?: string }) {
   // Tier 1: Full title with certification keywords (best for SEO if fits)
   const fullTitle = `${product.name} | HousePlus Wholesale — CE/RoHS Certified`;
   // Tier 2: Shorter without certification (fallback)
@@ -76,7 +76,10 @@ export function generateProductMeta(product: { name: string; description?: strin
   if (shortTitle.length > 60) shortTitle = minTitle;
   if (shortTitle.length > 60) shortTitle = shortTitle.substring(0, 57) + '...';
 
-  const description = `Buy ${product.name} wholesale from HousePlus. ${product.certifications || "CE/RoHS certified"}, OEM/ODM available, MOQ 100 pcs. Trusted manufacturer since 2010, serving 53+ countries.`;
+  const certStr = product.certifications
+    ? product.certifications.join('/')
+    : 'CE/RoHS';
+  const description = `Buy ${product.name} wholesale from HousePlus. ${certStr} certified, OEM/ODM available, MOQ 100 pcs. Trusted manufacturer since 2010, serving 53+ countries.`;
 
   return {
     title: shortTitle,

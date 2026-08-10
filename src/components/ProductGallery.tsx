@@ -88,13 +88,13 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
   const total = images.length;
 
   // Guard against empty image arrays (production safety).
-  if (total === 0) return null;
-
-  const current = images[Math.min(currentIndex, total - 1)];
+  // NOTE: Must return after all hooks to comply with Rules of Hooks.
+  const current = total > 0 ? images[Math.min(currentIndex, total - 1)] : null;
 
   /** Clamp + wrap navigation to a valid index. */
   const goTo = useCallback(
     (index: number) => {
+      if (total === 0) return;
       setCurrentIndex(((index % total) + total) % total);
     },
     [total]
@@ -105,7 +105,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
 
   // Lightbox: keyboard navigation + body scroll lock.
   useEffect(() => {
-    if (!isLightboxOpen) return;
+    if (!isLightboxOpen || total === 0) return;
 
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsLightboxOpen(false);
@@ -121,7 +121,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
       document.removeEventListener('keydown', handleKey);
       document.body.style.overflow = previousOverflow;
     };
-  }, [isLightboxOpen, next, prev]);
+  }, [isLightboxOpen, next, prev, total]);
 
   /** Touch handlers for mobile swipe navigation (main view + lightbox). */
   const onTouchStart = (e: React.TouchEvent) => {
@@ -165,6 +165,9 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
       representativeOfPage: true,
     })),
   };
+
+  // Guard against empty image arrays (after all hooks).
+  if (total === 0 || !current) return null;
 
   return (
     <>
