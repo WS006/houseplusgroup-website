@@ -74,6 +74,14 @@ export const productSlugs = [
   'solar-generator-kit-300w',
   'smart-wifi-plug-meter',
   'usb-c-cable-100w-5a',
+  // P1 Kitchen & Home Appliances (added 2026-08-11)
+  'electric-blender-1500w',
+  'air-fryer-8l-digital',
+  'gas-stove-4-burner',
+  'built-in-oven-65l',
+  'microwave-oven-25l',
+  'gas-water-heater-12l',
+  'range-hood-900mm',
 ];
 
 // News slugs
