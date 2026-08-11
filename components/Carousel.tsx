@@ -34,7 +34,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   const getDefaultItems = (): CarouselItem[] => [
     {
       _uid: 'default-1',
-      image: { filename: '/images/products/solar-panel-500w.jpg', alt: 'HousePlus Solar Energy Solutions — Solar Panels and Power Stations for Wholesale' },
+      image: { filename: '/images/carousel/houseplus-solar-hero.jpg', alt: 'HousePlus Solar Energy Solutions — Solar Panels, Inverters and Battery Storage for Wholesale' },
       title: 'High-Efficiency Solar Solutions',
       subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
       button_text: 'Explore Solar Products',
@@ -42,7 +42,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     },
     {
       _uid: 'default-2',
-      image: { filename: '/images/products/induction-cooktop-2000w.jpg', alt: 'HousePlus Smart Home Appliances — Air Fryers, Kettles and Kitchen Appliances OEM ODM' },
+      image: { filename: '/images/carousel/houseplus-home-appliances-hero.jpg', alt: 'HousePlus Smart Home Appliances — Induction Cooktops, Air Fryers and Electric Kettles for OEM ODM' },
       title: 'Smart Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
       button_text: 'View Appliances',
@@ -50,7 +50,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     },
     {
       _uid: 'default-3',
-      image: { filename: '/images/products/3c-electronics-banner.jpg', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
+      image: { filename: '/images/carousel/houseplus-3c-electronics-hero.jpg', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
       title: '3C Electronics & Accessories',
       subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
       button_text: 'View Electronics',

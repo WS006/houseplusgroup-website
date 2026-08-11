@@ -1,11 +1,9 @@
-import { getStoryblokApi } from '@storyblok/react';
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getDictionary } from '@/lib/i18n-config';
-import { localizeCarouselItems } from '@/lib/image-utils';
 import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
 import Link from 'next/link';
@@ -44,28 +42,10 @@ export default async function LangHome({ params }: { params: { lang: string } })
     notFound();
   }
   const dict = await getDictionary(lang);
-  let story: any = null;
-  let carouselItems: any[] = [];
-
-  try {
-    const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.getStory('home', {
-      version: 'published',
-      language: lang,
-      cv: Date.now()
-    });
-    story = data.story;
-    if (story?.content?.carousel && Array.isArray(story.content.carousel)) {
-      carouselItems = story.content.carousel;
-    }
-  } catch (error) {
-    console.error(`Error fetching home for ${lang}:`, error);
-  }
-
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
     image: {
-      filename: `/images/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', '3c-electronics-banner.jpg'][index]}`,
+      filename: `/images/carousel/${['houseplus-solar-hero.jpg', 'houseplus-home-appliances-hero.jpg', 'houseplus-3c-electronics-hero.jpg'][index]}`,
       alt: item.imageAlt
     },
     title: item.title,
@@ -74,7 +54,10 @@ export default async function LangHome({ params }: { params: { lang: string } })
     button_link: { url: '/products', cached_url: '/products' }
   }));
 
-  const displayCarouselItems = carouselItems.length >= 3 ? localizeCarouselItems(carouselItems) : defaultCarouselItems;
+  // The published CMS carousel still references the legacy, mismatched image set.
+  // Keep the homepage hero self-hosted and versioned with this repository so the
+  // image-to-category mapping is deterministic in every deployed language.
+  const displayCarouselItems = defaultCarouselItems;
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
@@ -158,7 +141,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
               key={index}
               title={industry.title}
               description={industry.description}
-              image={{ filename: `/images/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`, alt: industry.title }}
+              image={{ filename: `/images/products/${['solar-panel-1.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`, alt: industry.title }}
               industry_type={['solar', 'appliances', 'electronics'][index] as 'solar' | 'appliances' | 'electronics'}
               button_link={`/${lang}/products?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
               button_text={industry.buttonText}
