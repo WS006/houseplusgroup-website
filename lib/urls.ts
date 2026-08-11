@@ -103,6 +103,11 @@ export const productSlugs = [
   'gas-water-heater-8l',
   'gas-water-heater-10l',
   'electric-water-heater-50l',
+  // P5 Induction & Ceramic Hob expansion (added 2026-08-11)
+  'portable-induction-cooker-2000w',
+  'induction-hob-4-zone-built-in',
+  'ceramic-hob-4-zone-built-in',
+  'induction-hob-3-zone-flex',
 ];
 
 // News slugs
