@@ -1,14 +1,12 @@
 import { PRODUCT_DATA } from '@/lib/product-data';
+import { blogPosts } from '@/lib/blog-data';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
-const IMAGE_BASE_URL = 'https://www.houseplus-ch.com/images';
-const R2_BASE_URL = 'https://www.houseplus-ch.com/images';
 
 interface ImageEntry {
   loc: string;
   title: string;
   caption: string;
-  license?: string;
 }
 
 interface PageImages {
@@ -16,384 +14,135 @@ interface PageImages {
   images: ImageEntry[];
 }
 
-const articleImages: PageImages[] = [
-  {
-    pageUrl: '/en/news/the-future-of-smart-home-appliances',
-    images: [
-      {
-        loc: `${IMAGE_BASE_URL}/products/appliances-showcase.jpg`,
-        title: 'Modern Smart Home Appliances HousePlus',
-        caption: 'Modern smart home appliances showcase with stainless steel kitchen appliances and connected devices',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/kitchen-appliances.jpg`,
-        title: 'HousePlus Smart Kitchen Appliances',
-        caption: 'Professional kitchen appliances collection with modern design and smart features',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/appliances-package.jpg`,
-        title: 'HousePlus Appliances Package',
-        caption: 'Global wholesale distribution of home appliances with shipping containers at port',
-      },
-    ],
+const ARTICLE_COVERS: Record<string, { title: string; caption: string }> = {
+  'consumer-electronics-battery-life-testing': {
+    title: 'Consumer electronics battery cycle life testing',
+    caption: 'Battery cycle life testing in a controlled consumer electronics laboratory in Zhongshan, Guangdong, China.',
   },
-  {
-    pageUrl: '/en/news/the-future-of-solar-energy',
-    images: [
-      {
-        loc: `${IMAGE_BASE_URL}/products/solar-power-station.jpg`,
-        title: 'HousePlus Solar Power Station',
-        caption: 'Industrial solar power station with solar panels and energy storage systems',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/portable-power-station.jpg`,
-        title: 'HousePlus Portable Power Station',
-        caption: 'Portable solar power station for off-grid and emergency use',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/solar-panel-3.jpg`,
-        title: 'HousePlus Solar Panels',
-        caption: 'High-efficiency monocrystalline solar panels for commercial installations',
-      },
-    ],
+  'appliance-energy-efficiency-vs-actual-consumption': {
+    title: 'Appliance energy consumption measurement',
+    caption: 'Energy consumption measurement for home appliances in a professional test environment in Zhongshan, Guangdong, China.',
   },
-  {
-    pageUrl: '/en/news/solar-energy-storage-solutions',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/solar/solar-energy-storage-battery-bank.jpg`,
-        title: 'Solar Energy Storage Battery Bank',
-        caption: 'Industrial-grade solar energy storage battery bank with LiFePO4 technology',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/solar-power-station.jpg`,
-        title: 'Solar Power Station Outdoor',
-        caption: 'Outdoor solar power station in industrial setting',
-      },
-    ],
+  'solar-storage-efficiency-optimization-guide': {
+    title: 'Industrial solar storage efficiency optimization',
+    caption: 'Engineer reviewing an industrial solar energy storage system for efficiency optimization in Zhongshan, Guangdong, China.',
   },
-  {
-    pageUrl: '/en/news/solar-energy-storage-industrial-manufacturing',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/solar/solar-energy-farm-panels.jpg`,
-        title: 'Industrial Solar Farm Panels',
-        caption: 'Large-scale industrial solar farm with solar panels under blue sky',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/solar/solar-panel-installation-rooftop.jpg`,
-        title: 'Solar Panel Installation Rooftop',
-        caption: 'Professional solar panel installation on commercial rooftop',
-      },
-    ],
+  '2026-solar-market-update': {
+    title: 'Solar energy innovations for 2026',
+    caption: 'Modern solar microgrid and battery energy storage equipment for global B2B wholesale markets.',
   },
-  {
-    pageUrl: '/en/news/solar-storage-efficiency-optimization-guide',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/solar/solar-energy-storage-battery-bank.jpg`,
-        title: 'LiFePO4 Solar Battery Storage',
-        caption: 'LiFePO4 battery bank with high round-trip efficiency',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/solar/solar-panel-sunset-industrial.jpg`,
-        title: 'Industrial Solar Panel Sunset',
-        caption: 'Industrial solar panels at sunset with power infrastructure',
-      },
-    ],
+  '2026-appliances-market-update': {
+    title: 'Energy-efficient smart home appliances for 2026',
+    caption: 'Connected kitchen appliances for global wholesale buyers, sourced from Zhongshan, Guangdong, China.',
   },
-  {
-    pageUrl: '/en/news/consumer-electronics-battery-life-testing',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/electronics/battery-testing-lab-equipment.jpg`,
-        title: 'Battery Testing Lab Equipment',
-        caption: 'Professional battery testing equipment in laboratory setting',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/power-bank.jpg`,
-        title: 'HousePlus Power Bank',
-        caption: 'High-capacity power bank with fast charging technology',
-      },
-    ],
+  '2026-electronics-market-update': {
+    title: '3C electronics trends for 2026',
+    caption: 'Curated 3C electronics collection including audio, storage and charging accessories for global B2B distribution.',
   },
-  {
-    pageUrl: '/en/news/energy-efficiency-standards-appliances',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/appliance-energy-efficiency-label.jpg`,
-        title: 'Appliance Energy Efficiency Label',
-        caption: 'Energy efficiency rating labels on home appliances',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/appliances-showcase.jpg`,
-        title: 'Energy Efficient Appliances',
-        caption: 'Energy-efficient smart home appliances collection',
-      },
-    ],
+  '2026-smart-home-appliances-market-guide': {
+    title: 'Smart home appliance procurement guide',
+    caption: 'Connected smart home appliances and energy monitoring products for 2026 B2B procurement.',
   },
-  {
-    pageUrl: '/en/news/appliance-energy-efficiency-vs-actual-consumption',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/home-appliance-refrigerator-interior.jpg`,
-        title: 'Refrigerator Energy Efficiency',
-        caption: 'Energy-efficient refrigerator interior with LED lighting',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/home-appliance-washing-machine.jpg`,
-        title: 'Washing Machine Energy Efficiency',
-        caption: 'Modern energy-efficient washing machine',
-      },
-    ],
+  'solar-energy-storage-industrial-manufacturing': {
+    title: 'Industrial solar energy storage systems',
+    caption: 'Industrial lithium battery racks and solar energy storage infrastructure for sustainable manufacturing.',
   },
-  {
-    pageUrl: '/en/news/advanced-manufacturing-home-appliances',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/home-appliance-manufacturing-line.jpg`,
-        title: 'Home Appliance Manufacturing Line',
-        caption: 'Automated manufacturing line for home appliances',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/service/factory-production-line-automated.jpg`,
-        title: 'Automated Factory Production Line',
-        caption: 'Advanced automated production line in modern factory',
-      },
-    ],
+  'oem-odm-manufacturing-guide': {
+    title: 'OEM and ODM appliance product development',
+    caption: 'Product development table with appliance prototypes and packaging samples for OEM and ODM manufacturing.',
   },
-  {
-    pageUrl: '/en/news/oem-odm-manufacturing-guide',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/service/factory-assembly-workers.jpg`,
-        title: 'Factory Assembly Workers',
-        caption: 'Skilled workers assembling products in manufacturing facility',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/service/quality-control-lab-testing.jpg`,
-        title: 'Quality Control Lab Testing',
-        caption: 'Quality control testing in modern laboratory',
-      },
-    ],
+  'energy-efficiency-standards-appliances': {
+    title: 'Home appliance energy efficiency standards',
+    caption: 'Home appliance compliance testing for CE and RoHS-ready international wholesale distribution.',
   },
-  {
-    pageUrl: '/en/news/global-wholesale-guide-home-appliances',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/home-appliance-wholesale-warehouse.jpg`,
-        title: 'Home Appliance Wholesale Warehouse',
-        caption: 'Large warehouse with home appliances for wholesale distribution',
-      },
-      {
-        loc: `${R2_BASE_URL}/site/warehouse-logistics-shipping.jpg`,
-        title: 'Warehouse Logistics Shipping',
-        caption: 'Global logistics and shipping operations in warehouse',
-      },
-    ],
+  'global-wholesale-guide-home-appliances': {
+    title: 'Global wholesale home appliance distribution',
+    caption: 'Export-ready home appliances prepared for global B2B warehouse logistics.',
   },
-  {
-    pageUrl: '/en/news/smart-home-appliances',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/smart-home-living-room.jpg`,
-        title: 'Smart Home Living Room',
-        caption: 'Modern smart home living room with connected devices',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/smart-kitchen-appliances-modern.jpg`,
-        title: 'Smart Kitchen Appliances',
-        caption: 'Modern smart kitchen with connected appliances',
-      },
-    ],
+  'advanced-manufacturing-home-appliances': {
+    title: 'Advanced home appliance manufacturing',
+    caption: 'Robotic manufacturing line for quality-controlled home appliance production in Zhongshan, Guangdong, China.',
   },
-  {
-    pageUrl: '/en/news/the-evolution-of-3c-electronics',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/electronics/electronics-headphones-product.jpg`,
-        title: '3C Electronics Headphones',
-        caption: 'Premium over-ear headphones with microphone',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/electronics/electronics-smartwatch-product.jpg`,
-        title: 'Smartwatch Product',
-        caption: 'Modern smartwatch with fitness tracking features',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/wireless-charger.jpg`,
-        title: 'Wireless Charger',
-        caption: 'Wireless charging pad for smartphones',
-      },
-    ],
+  'the-future-of-smart-home-appliances': {
+    title: 'Future-ready smart home appliances',
+    caption: 'Connected energy-efficient appliances in a refined contemporary smart-home environment.',
   },
-  {
-    pageUrl: '/en/news/2026-solar-market-update',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/solar/solar-power-station-outdoor.jpg`,
-        title: '2026 Solar Market Update',
-        caption: 'Outdoor solar power station for 2026 market',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/solar-panel-3.jpg`,
-        title: 'HousePlus Solar Panels 2026',
-        caption: 'High-efficiency solar panels for 2026 wholesale market',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-appliances-market-update',
-    images: [
-      {
-        loc: `${IMAGE_BASE_URL}/products/appliances-showcase.jpg`,
-        title: '2026 Home Appliances Market',
-        caption: '2026 home appliances collection for wholesale distribution',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/home-appliance-kitchen-modern.jpg`,
-        title: 'Modern Kitchen Appliances 2026',
-        caption: 'Modern kitchen with premium home appliances',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-electronics-market-update',
-    images: [
-      {
-        loc: `${IMAGE_BASE_URL}/products/power-bank.jpg`,
-        title: '2026 Electronics Market Update',
-        caption: '2026 consumer electronics including power banks',
-      },
-      {
-        loc: `${R2_BASE_URL}/articles/electronics/electronics-power-bank-product.jpg`,
-        title: 'Power Bank Product',
-        caption: 'High-capacity portable power bank for 2026 market',
-      },
-    ],
-  },
-  {
-    pageUrl: '/en/news/2026-smart-home-appliances-market-guide',
-    images: [
-      {
-        loc: `${R2_BASE_URL}/articles/appliances/smart-home-living-room.jpg`,
-        title: 'Smart Home Appliances 2026',
-        caption: 'Smart home appliances integration guide for 2026',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/products/kitchen-appliances.jpg`,
-        title: 'Smart Kitchen Appliances 2026',
-        caption: '2026 smart kitchen appliances collection',
-      },
-    ],
-  },
-];
+};
+
+function absolute(path: string): string {
+  return path.startsWith('http') ? path : `${BASE_URL}${path}`;
+}
+
+function coverPath(slug: string): string {
+  return `/images/articles/covers/${slug}.jpg`;
+}
+
+const dynamicArticleImages: PageImages[] = Object.values(blogPosts).map((post) => ({
+  pageUrl: `/en/news/${post.slug}`,
+  images: [{
+    loc: absolute(post.heroImage),
+    title: post.title,
+    caption: post.heroImageAlt,
+  }],
+}));
+
+const staticArticleImages: PageImages[] = Object.entries(ARTICLE_COVERS).map(([slug, image]) => ({
+  pageUrl: `/en/news/${slug}`,
+  images: [{
+    loc: absolute(coverPath(slug)),
+    title: image.title,
+    caption: image.caption,
+  }],
+}));
 
 const productImages: PageImages[] = Object.entries(PRODUCT_DATA).map(([slug, product]) => ({
   pageUrl: `/en/products/${slug}`,
-  images: [
-    {
-      loc: `${BASE_URL}${product.coverImage}`,
-      title: product.imageTitle || product.name,
-      caption: product.imageAlt || product.description,
-    },
-  ],
+  images: [{
+    loc: absolute(product.coverImage),
+    title: product.imageTitle || product.name,
+    caption: product.imageAlt || product.description,
+  }],
 }));
 
-const pageImages: PageImages[] = [
+const corePageImages: PageImages[] = [
   {
     pageUrl: '/en',
     images: [
-      {
-        loc: `${IMAGE_BASE_URL}/home/solar-hero.jpg`,
-        title: 'HousePlus Solar Energy Solutions',
-        caption: 'HousePlus solar energy systems and products for global wholesale',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/home/appliances-hero.jpg`,
-        title: 'HousePlus Home Appliances',
-        caption: 'HousePlus home appliances collection for B2B wholesale',
-      },
-      {
-        loc: `${IMAGE_BASE_URL}/home/electronics-hero.jpg`,
-        title: 'HousePlus 3C Electronics',
-        caption: 'HousePlus consumer electronics products',
-      },
+      { loc: absolute('/logo.png'), title: 'HousePlus Group logo', caption: 'HousePlus global wholesale manufacturer logo based in Zhongshan, Guangdong, China.' },
+      { loc: absolute('/images/carousel/houseplus-solar-hero.jpg'), title: 'HousePlus solar energy solutions', caption: 'Solar panels, inverters and energy storage solutions for global wholesale buyers.' },
+      { loc: absolute('/images/carousel/houseplus-home-appliances-hero.jpg'), title: 'HousePlus home appliances', caption: 'Energy-efficient home appliances with OEM and ODM support from Zhongshan, Guangdong, China.' },
+      { loc: absolute('/images/carousel/houseplus-3c-electronics-hero.jpg'), title: 'HousePlus 3C electronics', caption: '3C electronics and accessories for international B2B distribution.' },
     ],
   },
   {
-    pageUrl: '/en/about-us',
+    pageUrl: '/en/brand',
     images: [
-      {
-        loc: `${R2_BASE_URL}/about/houseplus-group-factory.jpg`,
-        title: 'HousePlus Group Factory',
-        caption: 'HousePlus manufacturing facility in Zhongshan, Guangdong',
-      },
-      {
-        loc: `${R2_BASE_URL}/about/houseplus-automated-manufacturing-facility.jpg`,
-        title: 'HousePlus Automated Manufacturing',
-        caption: 'Automated manufacturing facility with ISO 9001 certification',
-      },
+      { loc: absolute('/logo.png'), title: 'HousePlus Group brand logo', caption: 'HousePlus Group global wholesale manufacturer brand identity.' },
+      { loc: absolute('/images/factory/production-line.jpg'), title: 'HousePlus production line', caption: 'Home appliance manufacturing production line in Zhongshan, Guangdong, China.' },
     ],
+  },
+  {
+    pageUrl: '/en/contact',
+    images: [{ loc: absolute('/logo.png'), title: 'Contact HousePlus', caption: 'HousePlus wholesale manufacturer contact page for global B2B buyers.' }],
   },
   {
     pageUrl: '/en/factory',
     images: [
-      {
-        loc: `${R2_BASE_URL}/factory/assembly-line.jpg`,
-        title: 'HousePlus Assembly Line',
-        caption: 'Assembly line in HousePlus manufacturing facility',
-      },
-      {
-        loc: `${R2_BASE_URL}/factory/production-line.jpg`,
-        title: 'HousePlus Production Line',
-        caption: 'Production line for solar products and appliances',
-      },
+      { loc: absolute('/images/articles/service/factory-assembly-workers.jpg'), title: 'HousePlus factory operations', caption: 'HousePlus manufacturing operations in Zhongshan, Guangdong, China.' },
+      { loc: absolute('/images/factory/production-line.jpg'), title: 'Home appliance production line', caption: 'Precision manufacturing line for home appliances.' },
+      { loc: absolute('/images/factory/factory-solar-assembly-line.jpg'), title: 'Solar energy assembly line', caption: 'Solar energy equipment assembly line at HousePlus.' },
+      { loc: absolute('/images/factory/factory-appliance-qc-lab.jpg'), title: 'HousePlus appliance quality laboratory', caption: 'Home appliance quality assurance laboratory in Zhongshan, Guangdong, China.' },
     ],
   },
   {
-    pageUrl: '/en/service',
+    pageUrl: '/en/team',
     images: [
-      {
-        loc: `${R2_BASE_URL}/articles/service/factory-production-line-automated.jpg`,
-        title: 'Automated Production Service',
-        caption: 'Automated production services for OEM/ODM clients',
-      },
+      { loc: absolute('/images/team/team-manufacturing-collaboration.jpg'), title: 'HousePlus manufacturing collaboration team', caption: 'Manufacturing operations team collaborating in Zhongshan, Guangdong, China.' },
+      { loc: absolute('/images/team/team-quality-engineering.jpg'), title: 'HousePlus quality engineering team', caption: 'Quality engineers conducting product testing for international compliance.' },
+      { loc: absolute('/images/team/team-innovation-culture.jpg'), title: 'HousePlus innovation and R&D culture', caption: 'Research and development team collaborating on product innovation.' },
     ],
   },
 ];
-
-function generateImageSitemap(): string {
-  const allPages = [...articleImages, ...productImages, ...pageImages];
-  const lastmod = new Date().toISOString().split('T')[0];
-
-  const urlEntries = allPages
-    .map((page) => {
-      const imageTags = page.images
-        .map(
-          (img) => `    <image:image>
-      <image:loc>${img.loc}</image:loc>
-      <image:title>${escapeXml(img.title)}</image:title>
-      <image:caption>${escapeXml(img.caption)}</image:caption>
-      <image:license>https://www.houseplus-ch.com/terms</image:license>
-    </image:image>`
-        )
-        .join('\n');
-
-      return `  <url>
-    <loc>${BASE_URL}${page.pageUrl}</loc>
-    <lastmod>${lastmod}</lastmod>
-${imageTags}
-  </url>`;
-    })
-    .join('\n');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${urlEntries}
-</urlset>`;
-}
 
 function escapeXml(text: string): string {
   return text
@@ -404,10 +153,20 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;');
 }
 
-export async function GET() {
-  const xml = generateImageSitemap();
+function generateImageSitemap(): string {
+  const lastmod = new Date().toISOString().split('T')[0];
+  const pages = [...dynamicArticleImages, ...staticArticleImages, ...productImages, ...corePageImages];
 
-  return new Response(xml, {
+  const urlEntries = pages.map((page) => {
+    const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${BASE_URL}/terms</image:license>\n    </image:image>`).join('\n');
+    return `  <url>\n    <loc>${BASE_URL}${page.pageUrl}</loc>\n    <lastmod>${lastmod}</lastmod>\n${imageTags}\n  </url>`;
+  }).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urlEntries}\n</urlset>`;
+}
+
+export async function GET() {
+  return new Response(generateImageSitemap(), {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
       'Cache-Control': 'public, max-age=3600, s-maxage=3600',

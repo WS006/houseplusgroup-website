@@ -67,7 +67,7 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
                     title={product.imageTitle || product.name}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
-                  />
+                   decoding="async" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">

@@ -83,7 +83,7 @@ export default async function RegionsPage({ params }: { params: { lang: string }
                 alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 title="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 className="object-cover"
-              />
+               decoding="async" />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>
           </div>

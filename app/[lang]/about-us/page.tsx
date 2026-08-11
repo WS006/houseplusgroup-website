@@ -152,7 +152,7 @@ export default async function AboutPage({ params }: { params: { lang: string } }
                   alt="HousePlus Group Factory - Manufacturing solar energy systems, home appliances and 3C electronics in Guangdong, China since 2010"
                   title="HousePlus Group Factory — Guangdong, China"
                   className="object-cover"
-                />
+                 decoding="async" />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   HousePlus Group Factory — Guangdong, China
                 </figcaption>
@@ -273,7 +273,7 @@ export default async function AboutPage({ params }: { params: { lang: string } }
                   title="HousePlus Automated Manufacturing — Quality Control & Production Excellence"
                   className="object-cover"
                   loading="lazy"
-                />
+                 decoding="async" />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   HousePlus Automated Manufacturing — Quality Control & Production Excellence
                 </figcaption>

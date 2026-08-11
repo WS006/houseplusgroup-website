@@ -179,12 +179,13 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center justify-center mb-7 rounded-2xl bg-white px-6 py-4 shadow-lg shadow-blue-100/70 ring-1 ring-blue-100">
+                <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-blue-100/80 ring-1 ring-blue-100">
                   <img
                     src="/logo.png"
                     alt="HousePlus Group logo"
-                    className="h-10 md:h-12 w-auto object-contain"
-                  />
+                    title="HousePlus Group global wholesale manufacturer logo"
+                    className="h-14 w-auto object-contain md:h-[4.5rem]"
+                   decoding="async" />
                 </div>
                 <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
                   HousePlus Group
@@ -209,7 +210,7 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
                   src="/images/factory/production-line.jpg"
                   alt="HousePlus Group manufacturing facility in Guangdong, China"
                   className="object-cover"
-                />
+                 title="HousePlus Group manufacturing facility in Guangdong, China" decoding="async" />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   HousePlus Group — ISO 9001 Certified Factory
                 </figcaption>

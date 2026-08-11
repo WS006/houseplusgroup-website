@@ -369,7 +369,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
                 src={data.image}
                 alt={data.imageAlt}
                 className="object-cover"
-              />
+               title={data.imageAlt} decoding="async" />
             </div>
             <div className="text-center md:text-left">
               <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-4">

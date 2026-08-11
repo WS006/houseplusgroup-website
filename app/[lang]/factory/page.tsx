@@ -138,7 +138,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                   alt="HousePlus main production line"
                   title="HousePlus main production line"
                   className="object-cover"
-                />
+                 decoding="async" />
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                     title={img.alt}
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
-                  />
+                   decoding="async" />
                 </div>
               ))}
             </div>
@@ -237,7 +237,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                   title="HousePlus appliance quality assurance laboratory"
                   className="w-full h-full object-cover"
                   loading="lazy"
-                />
+                 decoding="async" />
               </div>
               <div>
                 <h2 className="text-3xl font-black text-slate-900 mb-6">🏭 HousePlus Quality Assurance</h2>

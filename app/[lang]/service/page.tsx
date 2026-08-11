@@ -232,7 +232,7 @@ export default async function ServicePage({ params }: { params: { lang: string }
                   title="HousePlus team collaboration"
                   className="object-cover"
                   loading="lazy"
-                />
+                 decoding="async" />
               </div>
             </div>
           </div>

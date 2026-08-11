@@ -297,7 +297,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
           src={content.heroImage}
           alt={content.heroImageAlt}
           className="object-cover opacity-30"
-        />
+         title={content.heroImageAlt} decoding="async" />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
           <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
@@ -327,7 +327,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
             {section.image && (
               <figure>
-                <img src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" loading="lazy" />
+                <img src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" loading="lazy"  decoding="async" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>
             )}

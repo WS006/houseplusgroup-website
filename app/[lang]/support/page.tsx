@@ -185,7 +185,7 @@ export default async function SupportPage({ params }: { params: { lang: string }
                 title="HousePlus Support Background"
                 className="object-cover"
                 loading="lazy"
-             />
+              decoding="async" />
           </div>
           <div className="max-w-4xl mx-auto relative z-10">
             <h1 className="text-5xl md:text-6xl font-black mb-6">{t.title}</h1>

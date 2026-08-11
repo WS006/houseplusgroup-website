@@ -66,12 +66,13 @@ export default async function ContactPage({ params }: { params: { lang: string }
         <Breadcrumb lang={lang} slug="contact" />
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center mb-7 rounded-2xl bg-white px-6 py-4 shadow-lg shadow-slate-200/70 ring-1 ring-slate-100">
+            <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100">
               <img
                 src="/logo.png"
                 alt="HousePlus logo"
-                className="h-10 md:h-12 w-auto object-contain"
-              />
+                title="HousePlus global wholesale manufacturer logo"
+                className="h-14 w-auto object-contain md:h-[4.5rem]"
+               decoding="async" />
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
               Contact HousePlus

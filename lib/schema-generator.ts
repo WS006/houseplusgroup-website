@@ -21,7 +21,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     url: BASE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${BASE_URL}/icon.png`,
+      url: `${BASE_URL}/logo.png`,
       width: 512,
       height: 512,
     },
@@ -40,8 +40,8 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '23.1291',
-      longitude: '113.2644',
+      latitude: '22.5170',
+      longitude: '113.3925',
     },
     contactPoint: [
       {
@@ -161,6 +161,16 @@ export function generateImageObjectSchema(options: ImageObjectOptions) {
     description: options.description,
     ...(options.width && { width: options.width }),
     ...(options.height && { height: options.height }),
+    contentLocation: {
+      '@type': 'Place',
+      name: 'Zhongshan, Guangdong, China',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zhongshan',
+        addressRegion: 'Guangdong',
+        addressCountry: 'CN',
+      },
+    },
   };
 }
 
@@ -306,6 +316,16 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       caption: imageCaption || name,
       description: imageDescription || description,
       name: imageCaption || name,
+      contentLocation: {
+        '@type': 'Place',
+        name: 'Zhongshan, Guangdong, China',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Zhongshan',
+          addressRegion: 'Guangdong',
+          addressCountry: 'CN',
+        },
+      },
     },
     sku,
     mpn: sku,
@@ -435,8 +455,8 @@ export function generateLocalBusinessSchema(options: SchemaOptions) {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '23.1291',
-      longitude: '113.2644',
+      latitude: '22.5170',
+      longitude: '113.3925',
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -529,6 +549,16 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
       height: 630,
       caption: headline,
       description: description,
+      contentLocation: {
+        '@type': 'Place',
+        name: 'Zhongshan, Guangdong, China',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Zhongshan',
+          addressRegion: 'Guangdong',
+          addressCountry: 'CN',
+        },
+      },
     },
     datePublished: datePublished || new Date().toISOString(),
     dateModified: dateModified || new Date().toISOString(),

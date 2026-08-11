@@ -64,7 +64,7 @@ export default function ArticleMeta({
             title={authorName}
             className="w-full h-full object-cover"
             loading="lazy"
-          />
+           decoding="async" />
         </div>
         <div>
           <div className="text-sm font-bold text-slate-900">

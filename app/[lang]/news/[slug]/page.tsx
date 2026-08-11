@@ -91,7 +91,7 @@ export default async function BlogPostPage({
           src={post.heroImage}
           alt={post.heroImageAlt}
           className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-45"
-        />
+         title={post.heroImageAlt} decoding="async" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/95 via-slate-900/80 to-blue-950/70" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <Breadcrumb lang={lang} slug={`news/${slug}`} customLabel={post.title} />

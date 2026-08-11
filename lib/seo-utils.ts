@@ -34,8 +34,14 @@ function getOGLocale(lang: string): string {
   return localeMap[lang] || 'en_US';
 }
 
+function toAbsoluteImageUrl(image?: string): string {
+  const source = image || siteConfig.defaultImage;
+  return source.startsWith('http') ? source : `${siteConfig.url}${source}`;
+}
+
 export function generateMetadata(config: SEOConfig): Metadata {
   const canonicalUrl = `${siteConfig.url}${config.url}`;
+  const imageUrl = toAbsoluteImageUrl(config.image);
 
   // Strip the /{lang} prefix from config.url to build clean hreflang URLs
   // e.g. config.url = '/en/about-us' → path = '/about-us'
@@ -58,11 +64,11 @@ export function generateMetadata(config: SEOConfig): Metadata {
       alternateLocale: config.lang !== 'en' ? ['en_US'] : ['es_ES', 'de_DE', 'fr_FR', 'ar_SA'],
       images: [
         {
-          url: config.image || siteConfig.defaultImage,
+          url: imageUrl,
           width: 1200,
-          height: 630,
+          height: 675,
           alt: config.title,
-          secureUrl: config.image || siteConfig.defaultImage,
+          secureUrl: imageUrl,
           type: 'image/jpeg',
         },
       ],
@@ -78,9 +84,9 @@ export function generateMetadata(config: SEOConfig): Metadata {
       creator: '@HousePlusGroup',
       images: [
         {
-          url: config.image || siteConfig.defaultImage,
+          url: imageUrl,
           width: 1200,
-          height: 630,
+          height: 675,
           alt: config.title,
         }
       ],
@@ -97,8 +103,12 @@ export function generateMetadata(config: SEOConfig): Metadata {
         'x-default': `${siteConfig.url}/en${pathWithoutLang}`,
       },
     },
-    ...(config.geoRegion && { 'geo.region': config.geoRegion }),
-    ...(config.geoPlacename && { 'geo.placename': config.geoPlacename }),
+    other: {
+      'geo.region': config.geoRegion || 'CN-GD',
+      'geo.placename': config.geoPlacename || 'Zhongshan, Guangdong, China',
+      'geo.position': '22.5170;113.3925',
+      'ICBM': '22.5170, 113.3925',
+    },
   };
 }
 

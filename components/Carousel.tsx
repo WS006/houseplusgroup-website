@@ -127,7 +127,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             src={item.image.filename}
             alt={item.image.alt || item.title}
             className="absolute inset-0 w-full h-full object-cover brightness-[0.75]"
-          />
+           title={item.image.alt || item.title} decoding="async" />
           {/* Left-aligned gradient overlay for business style */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/65 via-slate-800/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-start px-8 md:px-20">

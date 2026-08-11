@@ -282,7 +282,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
               src={data.image}
               alt={data.imageAlt}
               className="object-cover"
-            />
+             title={data.imageAlt} decoding="async" />
           </div>
 
           {data.sections.map((section: any, index: number) => (
@@ -298,7 +298,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
                         alt={section.imageAlt}
                         className="object-cover"
                       loading="lazy"
-                      />
+                       title={section.imageAlt} decoding="async" />
                     </div>
                   )}
                 </div>
@@ -309,7 +309,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
                       alt={section.imageAlt}
                       className="object-cover"
                     loading="lazy"
-                    />
+                     title={section.imageAlt} decoding="async" />
                   </div>
                 )}
               </div>

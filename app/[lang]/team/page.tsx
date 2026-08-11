@@ -219,7 +219,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
                   alt="HousePlus manufacturing operations team reviewing production performance"
                   title="HousePlus manufacturing operations team"
                   className="w-full h-full object-cover"
-                />
+                 decoding="async" />
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <img
@@ -228,7 +228,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
                   title="HousePlus quality engineering team"
                   className="w-full h-full object-cover"
                   loading="lazy"
-                />
+                 decoding="async" />
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
                   title="HousePlus innovation and company culture"
                   className="w-full h-full object-cover"
                   loading="lazy"
-                />
+                 decoding="async" />
               </div>
               <div>
                 <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 {data.culture}</h2>

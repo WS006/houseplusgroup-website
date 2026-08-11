@@ -157,7 +157,7 @@ export default async function ProductDetailPage({
                 alt={getDetailAlt(product, modelSpec?.value || slug.toUpperCase())}
                 title={getDetailTitle(product, modelSpec?.value || slug.toUpperCase())}
                 className="absolute inset-0 w-full h-full object-cover"
-              />
+               decoding="async" />
               {/* Hidden SEO-rich context for search engines */}
               <span className="sr-only" data-seo-alt={product.imageAlt || ''} data-seo-title={product.imageTitle || ''}>
                 {product.imageAlt || ''}

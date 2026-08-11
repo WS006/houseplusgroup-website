@@ -397,7 +397,7 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
                 alt="HousePlus customer support team answering wholesale buyer questions"
                 className="object-cover"
               loading="lazy"
-              />
+               title="HousePlus customer support team answering wholesale buyer questions" decoding="async" />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>
           </div>

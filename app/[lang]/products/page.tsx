@@ -256,7 +256,7 @@ export default async function ProductsPage({ params }: { params: { lang: string 
                       title={getImageTitle(product)}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
-                    />
+                     decoding="async" />
                     {/* Hidden SEO-rich context for search engines */}
                     <span className="sr-only" data-seo-alt={PRODUCT_DATA[product.slug]?.imageAlt || ''} data-seo-title={PRODUCT_DATA[product.slug]?.imageTitle || ''}>
                       {PRODUCT_DATA[product.slug]?.imageAlt || ''}

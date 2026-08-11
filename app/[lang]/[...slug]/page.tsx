@@ -313,7 +313,7 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
               return (
                 <a key={s.uuid} href={`/${lang}/${s.full_slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
                   <div className="aspect-[4/3] overflow-hidden relative">
-                    <img src={productImg} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={productImg} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"  title={s.name} decoding="async" />
                     <div className="absolute top-6 left-6">
                       <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-full">HousePlus Certified</span>
                     </div>

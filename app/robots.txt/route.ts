@@ -6,7 +6,7 @@ export async function GET() {
 
   const robotsTxt = `# Robots.txt for HousePlus Website
 # https://www.houseplus-ch.com
-# SEO/GEO/AEO Optimized Configuration
+# SEO / Generative Engine Optimization (GEO) / Answer Engine Optimization (AEO) Configuration
 
 # ====================
 # GENERAL SEO RULES
@@ -23,6 +23,7 @@ Allow: /sitemap.xml
 Allow: /feed.xml
 Allow: /image-sitemap.xml
 Allow: /merchant-feed.xml
+Allow: /llms.txt
 Allow: /favicon.ico
 Allow: /apple-touch-icon.png
 Disallow: /api/
@@ -67,7 +68,7 @@ Allow: /
 Allow: /images/
 
 # ====================
-# AI CRAWLERS (GEO)
+# AI CRAWLERS (GENERATIVE ENGINE OPTIMIZATION)
 # ====================
 
 User-agent: GPTBot
@@ -76,6 +77,8 @@ Allow: /news/
 Allow: /products/
 Allow: /service/
 Allow: /about-us/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
 Disallow: /api/
 Disallow: /admin/
 
@@ -83,6 +86,8 @@ User-agent: ChatGPT-User
 Allow: /
 Allow: /news/
 Allow: /products/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
 Disallow: /api/
 Disallow: /admin/
 
@@ -98,6 +103,8 @@ User-agent: anthropic-ai
 Allow: /
 Allow: /news/
 Allow: /products/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
 Disallow: /api/
 Disallow: /admin/
 
@@ -105,6 +112,8 @@ User-agent: Claude-Web
 Allow: /
 Allow: /news/
 Allow: /products/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
 Disallow: /api/
 Disallow: /admin/
 
@@ -112,6 +121,8 @@ User-agent: PerplexityBot
 Allow: /
 Allow: /news/
 Allow: /products/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
 Disallow: /api/
 Disallow: /admin/
 

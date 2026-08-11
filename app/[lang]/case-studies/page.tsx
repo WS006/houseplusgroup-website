@@ -260,7 +260,7 @@ export default async function CaseStudiesPage({ params }: { params: { lang: stri
                   alt="HousePlus global wholesale partnerships"
                   className="object-cover"
                 loading="lazy"
-                />
+                 title="HousePlus global wholesale partnerships" decoding="async" />
               </div>
             </div>
           </div>

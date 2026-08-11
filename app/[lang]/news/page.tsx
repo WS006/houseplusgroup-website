@@ -369,7 +369,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
                   title={article.title[lang as keyof typeof article.title] || article.title.en}
                   className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
                   loading="lazy"
-                />
+                 decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" aria-hidden="true" />
                 <div className="absolute left-4 top-4">
                   <span className="rounded-full border border-white/30 bg-slate-950/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-white backdrop-blur-md">News & Insights</span>

@@ -12,6 +12,7 @@ storyblokInit({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.houseplus-ch.com'),
   title: 'HousePlus - Global Wholesale Solar & Home Appliances Manufacturer',
   description: 'HousePlus is a professional OEM/ODM manufacturer specializing in solar products, home appliances, and 3C electronics. Wholesale solutions for global partners.',
   applicationName: 'HousePlus',
@@ -28,11 +29,24 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.houseplus-ch.com',
     siteName: 'HousePlus',
+    images: [{
+      url: '/og-image.jpg',
+      width: 1200,
+      height: 675,
+      alt: 'HousePlus global wholesale solar systems, home appliances and 3C electronics',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@houseplusglobal',
     creator: '@houseplusglobal',
+    images: ['/og-image.jpg'],
+  },
+  other: {
+    'geo.region': 'CN-GD',
+    'geo.placename': 'Zhongshan, Guangdong, China',
+    'geo.position': '22.5170;113.3925',
+    'ICBM': '22.5170, 113.3925',
   },
 };
 

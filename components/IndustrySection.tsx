@@ -123,7 +123,7 @@ export default function IndustrySection({
                   className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
                   onError={handleImageError}
-                />
+                 decoding="async" />
               )}
               {imgError && (
                 <div className={`w-full h-full bg-gradient-to-br ${config.color} flex items-center justify-center`}>
