@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     ar: 'سياسة خصوصية HousePlus - تعرف على كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك الشخصية.',
   };
 
-  return generateSEOMetadata({
+  const seoMetadata = generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
     keywords: ['privacy policy', 'GDPR', 'data protection', 'HousePlus privacy'],
@@ -38,11 +38,12 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     lang: lang as any,
     type: 'website',
   });
-}
 
-export const metadata = {
-  robots: { index: false, follow: true },
-};
+  return {
+    ...seoMetadata,
+    robots: { index: false, follow: true },
+  };
+}
 
 export default async function PrivacyPage({ params }: { params: { lang: string } }) {
   const { lang } = params;

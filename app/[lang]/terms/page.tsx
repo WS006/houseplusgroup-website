@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     ar: 'شروط خدمة HousePlus — اقرأ شروط تجارة الجملة وشروط البيع وسياسة حل النزاعات.',
   };
 
-  return generateSEOMetadata({
+  const seoMetadata = generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
     keywords: ['terms of service', 'terms and conditions', 'wholesale terms', 'trading conditions', 'HousePlus terms'],
@@ -37,11 +37,12 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     lang: lang as any,
     type: 'website',
   });
-}
 
-export const metadata = {
-  robots: { index: false, follow: true },
-};
+  return {
+    ...seoMetadata,
+    robots: { index: false, follow: true },
+  };
+}
 
 export default async function TermsPage({ params }: { params: { lang: string } }) {
   const { lang } = params;

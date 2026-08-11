@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     ar: 'سياسة ملفات تعريف الارتباط - HousePlus',
   };
 
-  return generateSEOMetadata({
+  const seoMetadata = generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: 'HousePlus Cookie Policy — Learn how we use cookies and tracking technologies on houseplus-ch.com to improve your browsing experience.',
     keywords: ['cookie policy', 'cookies', 'tracking', 'GDPR cookies', 'HousePlus cookies'],
@@ -29,11 +29,12 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     lang: lang as any,
     type: 'website',
   });
-}
 
-export const metadata = {
-  robots: { index: false, follow: true },
-};
+  return {
+    ...seoMetadata,
+    robots: { index: false, follow: true },
+  };
+}
 
 export default async function CookiePolicyPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
