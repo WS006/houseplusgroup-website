@@ -179,6 +179,13 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
+                <div className="inline-flex items-center justify-center mb-7 rounded-2xl bg-white px-6 py-4 shadow-lg shadow-blue-100/70 ring-1 ring-blue-100">
+                  <img
+                    src="/logo.png"
+                    alt="HousePlus Group logo"
+                    className="h-10 md:h-12 w-auto object-contain"
+                  />
+                </div>
                 <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
                   HousePlus Group
                 </span>

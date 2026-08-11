@@ -511,7 +511,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     dateModified,
     authorName = 'Jack Hu',
     authorUrl = `${BASE_URL}/en/author/jack-hu`,
-    authorImage = '/images/site/team-working-together.jpg',
+    authorImage = '/logo.png',
     url = BASE_URL,
   } = options;
 

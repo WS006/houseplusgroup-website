@@ -227,7 +227,7 @@ export default async function ServicePage({ params }: { params: { lang: string }
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <img
-                  src="/images/site/team-working-together.jpg"
+                  src="/images/site/service-technical-consultation.jpg"
                   alt="HousePlus team collaboration"
                   title="HousePlus team collaboration"
                   className="object-cover"

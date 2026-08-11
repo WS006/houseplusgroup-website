@@ -94,7 +94,7 @@ export default async function CareersPage({ params }: { params: { lang: string }
         <section className="relative py-24 px-4 bg-slate-900 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-40">
             <img 
-              src="/images/site/team-working-together.jpg" 
+              src="/images/site/careers-growth-workshop.jpg" 
               alt="HousePlus Careers" 
               className="object-cover"
             loading="lazy"

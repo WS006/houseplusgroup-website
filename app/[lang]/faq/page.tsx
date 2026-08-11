@@ -393,7 +393,7 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
           <div className="max-w-6xl mx-auto">
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/site/team-working-together.jpg"
+                src="/images/site/faq-support-specialist.jpg"
                 alt="HousePlus customer support team answering wholesale buyer questions"
                 className="object-cover"
               loading="lazy"

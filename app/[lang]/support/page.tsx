@@ -180,7 +180,7 @@ export default async function SupportPage({ params }: { params: { lang: string }
         <section className="py-24 px-4 bg-slate-900 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
              <img
-                src="/images/site/team-working-together.jpg"
+                src="/images/site/support-customer-service.jpg"
                 alt="HousePlus Support Background"
                 title="HousePlus Support Background"
                 className="object-cover"

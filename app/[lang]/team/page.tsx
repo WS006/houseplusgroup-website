@@ -215,18 +215,18 @@ export default async function TeamPage({ params }: { params: { lang: string } })
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/site/team-working-together.jpg"
-                  alt="HousePlus team collaboration and professional meeting"
-                  title="HousePlus team collaboration and professional meeting"
-                  className="object-cover"
+                  src="/images/team/team-manufacturing-collaboration.jpg"
+                  alt="HousePlus manufacturing operations team reviewing production performance"
+                  title="HousePlus manufacturing operations team"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/site/team-working-together.jpg"
-                  alt="HousePlus professionals working together in office"
-                  title="HousePlus professionals working together in office"
-                  className="object-cover"
+                  src="/images/team/team-quality-engineering.jpg"
+                  alt="HousePlus quality engineers conducting product testing"
+                  title="HousePlus quality engineering team"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
@@ -270,10 +270,10 @@ export default async function TeamPage({ params }: { params: { lang: string } })
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <img
-                  src="/images/site/team-working-together.jpg"
-                  alt="HousePlus company culture and team environment"
-                  title="HousePlus company culture and team environment"
-                  className="object-cover"
+                  src="/images/team/team-innovation-culture.jpg"
+                  alt="HousePlus R&D team collaborating on product innovation"
+                  title="HousePlus innovation and company culture"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>

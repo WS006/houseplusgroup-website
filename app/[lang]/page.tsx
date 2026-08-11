@@ -79,6 +79,13 @@ export default async function LangHome({ params }: { params: { lang: string } })
 
         <section className="py-20 px-4 text-center bg-gradient-to-b from-blue-50 to-white">
           <div className="max-w-5xl mx-auto">
+            <div className="inline-flex items-center justify-center mb-7 rounded-2xl bg-white px-6 py-4 shadow-lg shadow-blue-100/70 ring-1 ring-blue-100">
+              <img
+                src="/logo.png"
+                alt="HousePlus logo"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+            </div>
             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
               {dict.home.tagline}
             </span>

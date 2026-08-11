@@ -52,7 +52,7 @@ export default function ArticleMeta({
   const t = labels[lang] || labels.en;
   const isRTL = lang === 'ar';
   const isModified = datePublished !== dateModified;
-  const avatar = authorImage || '/images/site/team-working-together.jpg';
+  const avatar = authorImage || '/logo.png';
 
   return (
     <div className={`flex flex-wrap items-center gap-4 ${className} ${isRTL ? 'rtl' : 'ltr'}`}>
