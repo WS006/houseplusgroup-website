@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -78,7 +77,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
       },
       {
         heading: 'Why Choose HousePlus as Your 3C Electronics Wholesale Partner?',
-        text: 'HousePlus is the ideal 3C electronics wholesale partner because we offer high-quality products including smart home devices, portable power solutions, and advanced LED lighting, with CE/FCC/RoHS certification, flexible MOQ, comprehensive OEM/ODM services, and a strong commitment to innovation, quality control, and customer satisfaction. As a leading manufacturer, HousePlus specializes in providing high-quality 3C electronics to wholesale buyers in Africa, Southeast Asia, and Europe. We pride ourselves on our commitment to innovation, quality control, and customer satisfaction.',
+        text: 'HousePlus is the ideal 3C electronics wholesale partner because we offer high-quality products including smart home devices, portable power solutions, and advanced LED lighting, with CE/FCC/RoHS certification, flexible MOQ, comprehensive OEM/ODM services, and a strong commitment to innovation, control, and customer satisfaction. As a leading manufacturer, HousePlus specializes in providing high-quality 3C electronics to wholesale buyers in Africa, Southeast Asia, and Europe. We pride ourselves on our commitment to innovation, control, and customer satisfaction.',
         image: '/images/products/power-bank-60w-pd.jpg',
         imageAlt: 'HousePlus wireless charger and other 3C electronic products',
       },
@@ -250,14 +249,10 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
           </div>
 
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
 
@@ -269,13 +264,10 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <Image
+                      <img
                         src={section.image}
                         alt={section.imageAlt}
-                        fill
                         className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={80}
                       loading="lazy"
                       />
                     </div>
@@ -283,13 +275,10 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

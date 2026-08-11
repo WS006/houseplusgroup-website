@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -393,13 +392,10 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-              <Image
+              <img
                 src="/images/site/team-working-together.jpg"
                 alt="HousePlus customer support team answering wholesale buyer questions"
-                fill
                 className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              quality={80}
               loading="lazy"
               />
               <div className="absolute inset-0 bg-blue-900/30" />

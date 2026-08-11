@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -211,7 +210,7 @@ export default async function ServicePage({ params }: { params: { lang: string }
                 <h2 className="text-3xl font-black text-slate-900 mb-6">🏭 Why Buyers Choose HousePlus Services</h2>
                 <div className="space-y-4">
                   {[
-                    { title: 'Single-Source Convenience', desc: 'Solar, appliances and electronics — one supplier, one relationship, one quality standard.' },
+                    { title: 'Single-Source Convenience', desc: 'Solar, appliances and electronics — one supplier, one relationship, one standard.' },
                     { title: 'Transparent Pricing', desc: 'Itemised quotations with no hidden fees. Volume discounts available for orders above 500 units.' },
                     { title: 'Fast Turnaround', desc: 'Standard orders ship within 20–35 days. Expedited production available for urgent requirements.' },
                     { title: 'Certification Ready', desc: 'All products ship with the certifications your market requires — CE, FCC, RoHS, ISO 9001.' },
@@ -227,14 +226,11 @@ export default async function ServicePage({ params }: { params: { lang: string }
                 </div>
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/site/team-working-together.jpg"
                   alt="HousePlus team collaboration"
                   title="HousePlus team collaboration"
-                  fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={80}
                   loading="lazy"
                 />
               </div>

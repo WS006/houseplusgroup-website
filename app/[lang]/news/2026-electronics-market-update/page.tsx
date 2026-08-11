@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -63,9 +62,9 @@ const articleContent: Record<string, any> = {
       },
       {
         heading: 'How Does HousePlus Drive Product Innovation and Quality?',
-        text: 'HousePlus drives product innovation and quality through continuous R&D investment, advanced manufacturing technologies, rigorous quality control processes, and a dedicated engineering team that ensures every product meets international standards and exceeds customer expectations for performance and reliability. Our product portfolio includes wireless chargers, smart home devices, power banks, LED lighting, and audio accessories — all designed with the latest technology trends in mind. We focus on user-centric design and durable construction.',
+        text: 'HousePlus drives product innovation and through continuous R&D investment, advanced manufacturing technologies, rigorous control processes, and a dedicated engineering team that ensures every product meets international standards and exceeds customer expectations for performance and reliability. Our product portfolio includes wireless chargers, smart home devices, power banks, LED lighting, and audio accessories — all designed with the latest technology trends in mind. We focus on user-centric design and durable construction.',
         image: '/images/products/portable-ssd-1tb.jpg',
-        imageAlt: 'Premium electronics with advanced manufacturing quality',
+        imageAlt: 'Premium electronics with advanced manufacturing',
       },
       {
         heading: 'What Is HousePlus Global Market Strategy for 2026?',
@@ -273,14 +272,10 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={[articleSchema]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <Image
+        <img
           src={content.heroImage}
           alt={content.heroImageAlt}
-          fill
-          priority
           className="object-cover opacity-30"
-          sizes="100vw"
-        quality={90}
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
@@ -311,7 +306,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
             {section.image && (
               <figure>
-                <Image src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={80} loading="lazy" />
+                <img src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" loading="lazy" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>
             )}

@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { sortedBlogPosts } from '@/lib/blog-data';
@@ -311,7 +310,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
         ar: 'التصنيع المتقدم في الأجهزة المنزلية: جودة HousePlus',
       },
       description: {
-        en: 'Discover HousePlus\'s commitment to advanced manufacturing techniques, stringent quality control, and sustainable practices in producing high-quality home appliances for global wholesale markets.',
+        en: 'Discover HousePlus\'s commitment to advanced manufacturing techniques, stringent control, and sustainable practices in producing high-quality home appliances for global wholesale markets.',
         es: 'Descubra el compromiso de HousePlus con las técnicas de fabricación avanzadas, el estricto control de calidad y las prácticas sostenibles en la producción de electrodomésticos de alta calidad para los mercados mayoristas globales.',
         de: 'Entdecken Sie das Engagement von HousePlus für fortschrittliche Fertigungstechniken, strenge Qualitätskontrolle und nachhaltige Praktiken bei der Herstellung hochwertiger Haushaltsgeräte für globale Großhandelsmärkte.',
         fr: 'Découvrez l\'engagement de HousePlus envers les techniques de fabrication avancées, le contrôle qualité rigoureux et les pratiques durables dans la production d\'appareils électroménagers de haute qualité pour les marchés de gros mondiaux.',
@@ -360,14 +359,11 @@ export default async function NewsPage({ params }: { params: { lang: string } })
           {articles.map((article) => (
             <Link key={article.slug} href={`/${lang}/news/${article.slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden relative">
-                <Image
+                <img
                   src={article.image}
                   alt={article.imageAlt}
                   title={article.title[lang as keyof typeof article.title] || article.title.en}
-                  fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  quality={80}
                   loading="lazy"
                 />
                 <div className="absolute top-6 left-6">

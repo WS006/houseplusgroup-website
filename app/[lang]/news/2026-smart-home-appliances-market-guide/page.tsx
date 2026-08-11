@@ -1,6 +1,5 @@
 ﻿import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -92,7 +91,7 @@ const articleContent: Record<string, any> = {
       },
       {
         heading: 'What Should B2B Buyers Look for When Procuring Smart Appliances in 2026?',
-        text: 'B2B buyers procuring smart home appliances in 2026 should focus on technological maturity, certifications, scalability and customization, supply chain reliability, and after-sales support as the five critical aspects for successful procurement. When procuring smart home appliances in 2026, key considerations include:\n\n*   **Technological Maturity**: Evaluate the sophistication of AI, IoT, and connectivity features.\n*   **Certifications**: Ensure products meet international safety, quality, and energy efficiency standards (CE, FCC, RoHS, ISO 9001).\n*   **Scalability & Customization**: Look for manufacturers offering flexible OEM/ODM services to adapt products to specific market needs.\n*   **Supply Chain Reliability**: Partner with manufacturers like HousePlus who have robust supply chains and a proven track record of on-time delivery.\n*   **After-Sales Support**: Assess the manufacturer\'s commitment to long-term support, warranties, and spare parts availability.',
+        text: 'B2B buyers procuring smart home appliances in 2026 should focus on technological maturity, certifications, scalability and customization, supply chain reliability, and after-sales support as the five critical aspects for successful procurement. When procuring smart home appliances in 2026, key considerations include:\n\n*   **Technological Maturity**: Evaluate the sophistication of AI, IoT, and connectivity features.\n*   **Certifications**: Ensure products meet international safety,, and energy efficiency standards (CE, FCC, RoHS, ISO 9001).\n*   **Scalability & Customization**: Look for manufacturers offering flexible OEM/ODM services to adapt products to specific market needs.\n*   **Supply Chain Reliability**: Partner with manufacturers like HousePlus who have robust supply chains and a proven track record of on-time delivery.\n*   **After-Sales Support**: Assess the manufacturer\'s commitment to long-term support, warranties, and spare parts availability.',
         image: '/images/products/smart-wifi-plug-meter.jpg',
         imageAlt: 'B2B procurement guide for smart home appliances',
       },
@@ -359,14 +358,10 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={[articleSchema]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <Image
+        <img
           src={content.heroImage}
           alt={content.heroImageAlt}
-          fill
-          priority
           className="object-cover opacity-30"
-          sizes="100vw"
-        quality={90}
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
@@ -397,7 +392,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
             {section.image && (
               <figure>
-                <Image src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={80} loading="lazy" />
+                <img src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" loading="lazy" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>
             )}

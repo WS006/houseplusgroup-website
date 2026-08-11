@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -66,15 +65,15 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
                           sections: [
       {
         heading: 'How Does Precision Manufacturing Form the Foundation of Quality?',
-        text: 'Precision manufacturing forms the foundation of quality at HousePlus through state-of-the-art production lines and advanced automation technologies that ensure every appliance meets the highest standards of precision and durability, with continuous improvement in manufacturing processes enabling efficient production of innovative and reliable products for global wholesale partners. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. In the highly competitive home appliance market, manufacturing excellence is paramount.',
+        text: 'Precision manufacturing forms the foundation of at HousePlus through state-of-the-art production lines and advanced automation technologies that ensure every appliance meets the highest standards of precision and durability, with continuous improvement in manufacturing processes enabling efficient production of innovative and reliable products for global wholesale partners. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. In the highly competitive home appliance market, manufacturing excellence is paramount.',
         image: '/images/factory/assembly-line.jpg',
         imageAlt: 'Automated assembly line for HousePlus home appliances',
       },
       {
         heading: 'How Does Rigorous Quality Control Work from Raw Material to Finished Product?',
-        text: 'Rigorous quality control at HousePlus works through a multi-tiered system starting with meticulous raw material selection, through in-process inspections, to comprehensive final product testing, with dedicated quality assurance teams using advanced testing equipment to ensure each home appliance performs flawlessly, is safe, and adheres to international certifications like CE, RoHS, and FCC. Quality is not just a buzzword at HousePlus; it is ingrained in every stage of our production. This rigorous approach guarantees the superior quality our wholesale clients expect.',
+        text: 'Rigorous control at HousePlus works through a multi-tiered system starting with meticulous raw material selection, through in-process inspections, to comprehensive final product testing, with dedicated assurance teams using advanced testing equipment to ensure each home appliance performs flawlessly, is safe, and adheres to international certifications like CE, RoHS, and FCC. Quality is not just a buzzword at HousePlus; it is ingrained in every stage of our production. This rigorous approach guarantees the superior our wholesale clients expect.',
         image: '/images/factory/assembly-line.jpg',
-        imageAlt: 'HousePlus quality control team inspecting home appliances',
+        imageAlt: 'HousePlus control team inspecting home appliances',
       },
       {
         heading: 'What Sustainable Practices Are Used in Appliance Production?',
@@ -90,7 +89,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       },
       {
         heading: 'Why Partner with HousePlus for Manufacturing Excellence?',
-        text: 'Partnering with HousePlus for manufacturing excellence means choosing unparalleled quality, innovation, and reliability, with advanced manufacturing capabilities coupled with commitment to sustainability and flexible OEM/ODM services making us the ideal choice for wholesale distributors worldwide who want to elevate their product offerings with appliances built to last and designed for the future. Choosing HousePlus as your home appliance manufacturing partner means opting for unparalleled quality, innovation, and reliability. Experience the HousePlus difference.',
+        text: 'Partnering with HousePlus for manufacturing excellence means choosing unparalleled, innovation, and reliability, with advanced manufacturing capabilities coupled with commitment to sustainability and flexible OEM/ODM services making us the ideal choice for wholesale distributors worldwide who want to elevate their product offerings with appliances built to last and designed for the future. Choosing HousePlus as your home appliance manufacturing partner means opting for unparalleled, innovation, and reliability. Experience the HousePlus difference.',
       },
     ],
     },
@@ -279,14 +278,10 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
           </div>
 
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
 
@@ -298,13 +293,10 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <Image
+                      <img
                         src={section.image}
                         alt={section.imageAlt}
-                        fill
                         className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={80}
                       loading="lazy"
                       />
                     </div>
@@ -312,13 +304,10 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

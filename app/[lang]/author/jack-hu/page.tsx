@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
@@ -72,7 +71,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
       expertise: [
         'Solar energy systems engineering & manufacturing',
         'Home appliance OEM/ODM product development',
-        '3C electronics design and quality assurance',
+        '3C electronics design and assurance',
         'International B2B wholesale strategy',
         'Supply chain optimization and QC management',
         'Energy efficiency standards and compliance',
@@ -366,14 +365,10 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
           </div>
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden shadow-2xl flex-shrink-0 border-4 border-white/20">
-              <Image
+              <img
                 src={data.image}
                 alt={data.imageAlt}
-                fill
                 className="object-cover"
-                priority
-                quality={85}
-              sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="text-center md:text-left">

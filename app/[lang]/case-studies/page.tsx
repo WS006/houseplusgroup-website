@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -256,13 +255,10 @@ export default async function CaseStudiesPage({ params }: { params: { lang: stri
                 </div>
               </div>
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/site/team-working-together.jpg"
                   alt="HousePlus global wholesale partnerships"
-                  fill
                   className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={80}
                 loading="lazy"
                 />
               </div>

@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -58,7 +57,7 @@ const articleContent: Record<string, any> = {
         sections: [
       {
         heading: 'What Defines Battery End-of-Life in Consumer Electronics?',
-        text: 'Industry standard defines battery end-of-life at 80% capacity retention after cycling, meaning that when a battery can only hold 80% of its original charge capacity, it is considered to have reached the end of its useful life for most consumer electronics applications. Most consumer electronics warranties guarantee 80% capacity after 300-500 full charge-discharge cycles under normal use conditions, which serves as the baseline performance metric for battery quality and durability.',
+        text: 'Industry standard defines battery end-of-life at 80% capacity retention after cycling, meaning that when a battery can only hold 80% of its original charge capacity, it is considered to have reached the end of its useful life for most consumer electronics applications. Most consumer electronics warranties guarantee 80% capacity after 300-500 full charge-discharge cycles under normal use conditions, which serves as the baseline performance metric for battery and durability.',
       },
       {
         heading: 'What Is the Standard Charge-Discharge Rate for Battery Life Testing?',
@@ -337,14 +336,10 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={[articleSchema, imageObjectSchema]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <Image
+        <img
           src={content.heroImage}
           alt={content.heroImageAlt}
-          fill
-          priority
           className="object-cover opacity-30"
-          sizes="100vw"
-        quality={90}
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
@@ -404,7 +399,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
              'إلكترونيات 3C ممتازة ببطاريات طويلة العمر'}
           </h2>
           <p className="text-amber-100 mb-8 max-w-2xl mx-auto">
-            {lang === 'en' ? 'B2B wholesale 3C electronics with tested battery quality. 80% capacity after 500 cycles, UL/IEC certified, OEM/ODM custom branding. MOQ from 100 units.' :
+            {lang === 'en' ? 'B2B wholesale 3C electronics with tested battery. 80% capacity after 500 cycles, UL/IEC certified, OEM/ODM custom branding. MOQ from 100 units.' :
              lang === 'es' ? 'Electrónica 3C al por mayor B2B con calidad de batería probada. 80% capacidad después de 500 ciclos, certificada UL/IEC, marca personalizada OEM/ODM. MOQ desde 100 unidades.' :
              lang === 'de' ? 'B2B-Großhandel 3C-Elektronik mit getesteter Batteriequalität. 80% Kapazität nach 500 Zyklen, UL/IEC zertifiziert, OEM/ODM Custom Branding. MOQ ab 100 Stück.' :
              lang === 'fr' ? 'Électronique 3C en gros B2B avec qualité de batterie testée. 80% de capacité après 500 cycles, certifiée UL/IEC, personnalisation OEM/ODM. MOQ à partir de 100 unités.' :

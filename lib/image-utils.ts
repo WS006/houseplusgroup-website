@@ -5,9 +5,9 @@
  */
 
 const unsplashToLocalMap: Record<string, string> = {
-  'photo-1491933382434-500287f9b54b': '/images/carousel/carousel-solar-energy.jpg',
-  'photo-1509391366360-2e959784a276': '/images/carousel/carousel-home-appliances.jpg',
-  'photo-1556909114-f6e7ad7d3136': '/images/carousel/carousel-electronics.jpg',
+  'photo-1491933382434-500287f9b54b': '/images/products/solar-panel-500w.jpg',
+  'photo-1509391366360-2e959784a276': '/images/products/induction-cooktop-2000w.jpg',
+  'photo-1556909114-f6e7ad7d3136': '/images/products/3c-electronics-banner.jpg',
 };
 
 /**

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -55,17 +54,17 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       },
       {
         heading: 'What Are HousePlus OEM Capabilities from Concept to Production?',
-        text: 'HousePlus OEM capabilities span the entire product development lifecycle from concept design and engineering to tooling, prototyping, testing, and full-scale mass production, with our experienced R&D team working closely with partners to bring custom product visions to life while ensuring quality, cost-effectiveness, and timely delivery. Our OEM service is ideal for brands with established product designs or specific technical requirements. We handle everything from initial CAD design and 3D prototyping through final production, with full transparency at every stage.',
+        text: 'HousePlus OEM capabilities span the entire product development lifecycle from concept design and engineering to tooling, prototyping, testing, and full-scale mass production, with our experienced R&D team working closely with partners to bring custom product visions to life while ensuring, cost-effectiveness, and timely delivery. Our OEM service is ideal for brands with established product designs or specific technical requirements. We handle everything from initial CAD design and 3D prototyping through final production, with full transparency at every stage.',
         image: '/images/factory/production-line.jpg',
         imageAlt: 'HousePlus engineering team working on OEM product development',
       },
       {
         heading: 'What ODM Ready-to-Brand Solutions Does HousePlus Offer?',
-        text: 'HousePlus offers ODM ready-to-brand solutions across home appliances and 3C electronics including refrigerators, washing machines, air conditioners, kitchen appliances, wireless chargers, power banks, LED lighting, and smart home devices, all with proven designs that can be customized with your branding, packaging, and selected feature modifications. Our ODM portfolio is the perfect solution for buyers who want to launch their own brand quickly without the time and cost of full product development. All our ODM products meet international safety and quality standards.',
+        text: 'HousePlus offers ODM ready-to-brand solutions across home appliances and 3C electronics including refrigerators, washing machines, air conditioners, kitchen appliances, wireless chargers, power banks, LED lighting, and smart home devices, all with proven designs that can be customized with your branding, packaging, and selected feature modifications. Our ODM portfolio is the perfect solution for buyers who want to launch their own brand quickly without the time and cost of full product development. All our ODM products meet international safety and standards.',
       },
       {
         heading: 'How Does Quality Control and Testing Work in OEM/ODM Production?',
-        text: 'Quality control and testing in OEM/ODM production at HousePlus works through a comprehensive multi-stage process including incoming material inspection, in-process quality checks, functional testing, safety testing, reliability testing, and final pre-shipment inspection, all performed by our dedicated QA team using advanced testing equipment. We ensure every unit meets your specifications and international standards including CE, RoHS, and FCC. Our testing protocols cover electrical safety, performance durability, environmental stress, and cosmetic inspection to guarantee consistent quality across production runs.',
+        text: 'Quality control and testing in OEM/ODM production at HousePlus works through a comprehensive multi-stage process including incoming material inspection, in-process checks, functional testing, safety testing, reliability testing, and final pre-shipment inspection, all performed by our dedicated QA team using advanced testing equipment. We ensure every unit meets your specifications and international standards including CE, RoHS, and FCC. Our testing protocols cover electrical safety, performance durability, environmental stress, and cosmetic inspection to guarantee consistent across production runs.',
         image: '/images/factory/assembly-line.jpg',
         imageAlt: 'Quality control laboratory testing electronic and appliance products',
       },
@@ -250,14 +249,10 @@ export default async function ArticlePage({ params }: { params: { lang: string }
             By <span className="font-semibold text-blue-600">{data.author}</span> | {new Date(data.datePublished).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
           </div>
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
           {data.sections.map((section: any, index: number) => (
@@ -269,13 +264,10 @@ export default async function ArticlePage({ params }: { params: { lang: string }
                 </div>
                 {section.image && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md w-full">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -199,14 +198,10 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
                 </div>
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/factory/production-line.jpg"
                   alt="HousePlus Group manufacturing facility in Guangdong, China"
-                  fill
                   className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={90}
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   HousePlus Group — ISO 9001 Certified Factory
@@ -271,7 +266,7 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{t.capabilities}</h2>
               <p className="text-slate-600 max-w-2xl mx-auto">
-                HousePlus Group controls the entire production journey — from raw materials to finished goods — ensuring consistent quality and competitive pricing.
+                HousePlus Group controls the entire production journey — from raw materials to finished goods — ensuring consistent and competitive pricing.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

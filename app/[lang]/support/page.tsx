@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -180,14 +179,11 @@ export default async function SupportPage({ params }: { params: { lang: string }
         {/* Hero Section */}
         <section className="py-24 px-4 bg-slate-900 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-             <Image
+             <img
                 src="/images/site/team-working-together.jpg"
                 alt="HousePlus Support Background"
                 title="HousePlus Support Background"
-                fill
                 className="object-cover"
-                sizes="100vw"
-                quality={80}
                 loading="lazy"
              />
           </div>

@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -62,7 +61,7 @@ export default async function CareersPage({ params }: { params: { lang: string }
       title: 'Manufacturing Engineer',
       department: 'Manufacturing',
       location: 'Shenzhen, China',
-      description: 'Oversee HousePlus manufacturing processes for solar systems and home appliances. Ensure HousePlus quality standards and optimize production efficiency.',
+      description: 'Oversee HousePlus manufacturing processes for solar systems and home appliances. Ensure HousePlus standards and optimize production efficiency.',
     },
     {
       id: 2,
@@ -94,13 +93,10 @@ export default async function CareersPage({ params }: { params: { lang: string }
         {/* Hero Section */}
         <section className="relative py-24 px-4 bg-slate-900 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-40">
-            <Image 
+            <img 
               src="/images/site/team-working-together.jpg" 
               alt="HousePlus Careers" 
-              fill 
               className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            quality={80}
             loading="lazy"
             />
           </div>
@@ -137,13 +133,10 @@ export default async function CareersPage({ params }: { params: { lang: string }
                 </div>
               </div>
               <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-                <Image 
+                <img 
                   src="/images/site/office-meeting-boardroom.jpg" 
                   alt="HousePlus Team Collaboration" 
-                  fill 
                   className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={80}
                 loading="lazy"
                 />
               </div>

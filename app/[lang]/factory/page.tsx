@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -80,8 +79,8 @@ export default async function FactoryPage({ params }: { params: { lang: string }
 
   const processSteps = [
     { step: '01', title: 'Design & Engineering', desc: 'Our R&D team translates client briefs into detailed product specifications, 3D models and prototype samples within 15–20 working days.' },
-    { step: '02', title: 'Material Procurement', desc: 'Raw materials and components are sourced exclusively from audited, certified suppliers. Incoming quality inspection (IQC) is performed on every delivery.' },
-    { step: '03', title: 'Production', desc: 'Manufacturing follows ISO 9001-aligned work instructions. In-process quality control (IPQC) checkpoints are built into every assembly stage.' },
+    { step: '02', title: 'Material Procurement', desc: 'Raw materials and components are sourced exclusively from audited, certified suppliers. Incoming inspection (IQC) is performed on every delivery.' },
+    { step: '03', title: 'Production', desc: 'Manufacturing follows ISO 9001-aligned work instructions. In-process control (IPQC) checkpoints are built into every assembly stage.' },
     { step: '04', title: 'Quality Testing', desc: '100% finished-goods inspection covers appearance, function, safety and packaging integrity before any unit is cleared for shipment.' },
     { step: '05', title: 'Packaging & Labelling', desc: 'Products are packed in custom or standard cartons with client-specified branding, barcodes and compliance labels for the target market.' },
     { step: '06', title: 'Logistics & Export', desc: 'We coordinate FOB, CIF and DDP shipments via sea, air or express courier, with full documentation including CO, packing list and commercial invoice.' },
@@ -118,7 +117,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                   🏭 Where HousePlus Products Are Made
                 </h1>
                 <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  The <strong>HousePlus</strong> vertically integrated factory in Guangdong houses four dedicated production divisions, an in-house tooling workshop and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is the <strong>HousePlus</strong> advantage.
+                  The <strong>HousePlus</strong> vertically integrated factory in Guangdong houses four dedicated production divisions, an in-house tooling workshop and a fully equipped laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is the <strong>HousePlus</strong> advantage.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
                   {[
@@ -134,15 +133,11 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                 </div>
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
-                <Image
+                <img
                   src="/images/articles/service/factory-assembly-workers.jpg"
                   alt="HousePlus main production line"
                   title="HousePlus main production line"
-                  fill
                   className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={90}
                 />
               </div>
             </div>
@@ -180,14 +175,11 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                 { src: '/images/factory/production-line.jpg', alt: 'Automated production equipment' },
               ].map((img) => (
                 <div key={img.src} className="relative h-60 rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                  <Image
+                  <img
                     src={img.src}
                     alt={img.alt}
                     title={img.alt}
-                    fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    quality={80}
                     loading="lazy"
                   />
                 </div>
@@ -239,14 +231,11 @@ export default async function FactoryPage({ params }: { params: { lang: string }
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/factory/assembly-line.jpg"
-                  alt="HousePlus quality assurance lab"
-                  title="HousePlus quality assurance lab"
-                  fill
+                  alt="HousePlus assurance lab"
+                  title="HousePlus assurance lab"
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={80}
                   loading="lazy"
                 />
               </div>
@@ -254,7 +243,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
                 <h2 className="text-3xl font-black text-slate-900 mb-6">🏭 HousePlus Quality Assurance</h2>
                 <div className="space-y-4">
                   {[
-                    'ISO 9001:2015 certified quality management system',
+                    'ISO 9001:2015 certified management system',
                     '100% finished-goods inspection before shipment',
                     'Environmental chamber testing: −20°C to +70°C, 95% RH',
                     'Electrical safety testing: hi-pot, insulation resistance, leakage current',

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -90,7 +89,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
         },
         {
           heading: 'Why Choose HousePlus for Energy Storage Solutions?',
-          text: 'HousePlus stands out as an energy storage partner because of our unwavering commitment to quality, innovation, and customer support, with CE/FCC/RoHS certified products, flexible MOQ, and robust supply chain management for global wholesale buyers. HousePlus stands out as a trusted partner due to our unwavering commitment to quality, innovation, and customer support. Our energy storage products are CE/FCC/RoHS certified, ensuring global market compliance. We provide flexible MOQ and robust supply chain management, making us the preferred choice for wholesale buyers seeking to offer advanced, reliable, and sustainable energy storage solutions. Join HousePlus and power the future with us.',
+          text: 'HousePlus stands out as an energy storage partner because of our unwavering commitment to, innovation, and customer support, with CE/FCC/RoHS certified products, flexible MOQ, and robust supply chain management for global wholesale buyers. HousePlus stands out as a trusted partner due to our unwavering commitment to, innovation, and customer support. Our energy storage products are CE/FCC/RoHS certified, ensuring global market compliance. We provide flexible MOQ and robust supply chain management, making us the preferred choice for wholesale buyers seeking to offer advanced, reliable, and sustainable energy storage solutions. Join HousePlus and power the future with us.',
         },
       ],
     },
@@ -276,14 +275,10 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
           </div>
 
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
 
@@ -295,13 +290,10 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <Image
+                      <img
                         src={section.image}
                         alt={section.imageAlt}
-                        fill
                         className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={80}
                       loading="lazy"
                       />
                     </div>
@@ -309,13 +301,10 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

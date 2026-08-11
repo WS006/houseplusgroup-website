@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -79,15 +78,11 @@ export default async function RegionsPage({ params }: { params: { lang: string }
         <section className="py-8 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
-              <Image
+              <img
                 src="/images/site/global-world-map-markets.jpg"
                 alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 title="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
-                fill
                 className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 1200px"
-                quality={90}
               />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>

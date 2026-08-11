@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -61,7 +60,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       },
       {
         heading: 'How Do HousePlus Certifications Help with Global Market Entry?',
-        text: 'HousePlus certifications help with global market entry by providing CE certification for Europe, FCC certification for the US and Canada, RoHS compliance for restricted hazardous substances, ISO 9001:2015 quality management certification, and IEC standards for solar products, all backed by full documentation packages including test reports, certificates of conformity, and customs declaration support. Regulatory compliance is non-negotiable for wholesale buyers. These certifications are not just checkboxes — they represent our commitment to product safety, environmental responsibility, and quality assurance.',
+        text: 'HousePlus certifications help with global market entry by providing CE certification for Europe, FCC certification for the US and Canada, RoHS compliance for restricted hazardous substances, ISO 9001:2015 management certification, and IEC standards for solar products, all backed by full documentation packages including test reports, certificates of conformity, and customs declaration support. Regulatory compliance is non-negotiable for wholesale buyers. These certifications are not just checkboxes — they represent our commitment to product safety, environmental responsibility, and assurance.',
       },
       {
         heading: 'How Can OEM and ODM Services Help Build Your Own Brand?',
@@ -250,14 +249,10 @@ export default async function ArticlePage({ params }: { params: { lang: string }
             By <span className="font-semibold text-blue-600">{data.author}</span> | {new Date(data.datePublished).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
           </div>
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
           {data.sections.map((section: any, index: number) => (
@@ -269,13 +264,10 @@ export default async function ArticlePage({ params }: { params: { lang: string }
                 </div>
                 {section.image && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md w-full">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

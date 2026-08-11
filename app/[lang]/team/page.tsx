@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 
   const descriptions: Record<string, string> = {
-    en: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    en: 'HousePlus team: 500+ professionals across manufacturing, R&D, assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
     es: 'Equipo de HousePlus: 500+ profesionales en fabricación, I+D, control de calidad y servicio al cliente. 16 años de experiencia. 60+ ingenieros de I+D. 80+ especialistas de QA. 200+ personal de producción. Apoyamos a 441+ clientes mayoristas en 53+ países desde nuestra instalación de 20.000 m² en Guangdong.',
     de: 'HousePlus-Team: 500+ Fachleute in Fertigung, F&E, Qualitätsicherung und Kundenservice. 16 Jahre Erfahrung. 60+ F&E-Ingenieure. 80+ QA-Spezialisten. 200+ Produktionsmitarbeiter. Wir unterstützen 441+ Großhandelskunden in 53+ Ländern von unserer 20.000 m² Anlage in Guangdong.',
     fr: 'Équipe HousePlus : 500+ professionnels en fabrication, R&D, assurance qualité et service client. 16 ans d\'expérience. 60+ ingénieurs R&D. 80+ spécialistes QA. 200+ personnel de production. Nous accompagnons 441+ clients de gros dans 53+ pays depuis notre installation de 20 000 m² au Guangdong.',
@@ -57,7 +56,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
   const content: Record<string, any> = {
     en: {
       title: 'Our HousePlus Team',
-      intro: 'HousePlus is powered by a dedicated team of 500+ skilled professionals with expertise in manufacturing, engineering, quality assurance, and customer service.',
+      intro: 'HousePlus is powered by a dedicated team of 500+ skilled professionals with expertise in manufacturing, engineering, assurance, and customer service.',
       departments: 'HousePlus Departments',
       deptList: [
         {
@@ -67,7 +66,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
         },
         {
           name: 'HousePlus Quality Assurance',
-          desc: 'Certified HousePlus quality engineers ensuring every product meets international standards.',
+          desc: 'Certified HousePlus engineers ensuring every product meets international standards.',
           team: '80+ professionals',
         },
         {
@@ -215,26 +214,19 @@ export default async function TeamPage({ params }: { params: { lang: string } })
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
-                <Image
+                <img
                   src="/images/site/team-working-together.jpg"
                   alt="HousePlus team collaboration and professional meeting"
                   title="HousePlus team collaboration and professional meeting"
-                  fill
                   className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={90}
                 />
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
-                <Image
+                <img
                   src="/images/site/team-working-together.jpg"
                   alt="HousePlus professionals working together in office"
                   title="HousePlus professionals working together in office"
-                  fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={80}
                   loading="lazy"
                 />
               </div>
@@ -247,7 +239,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
           <div className="max-w-6xl mx-auto">
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8">
               <p className="text-slate-700 leading-relaxed">
-                <strong>HousePlus</strong> team consists of 500+ professionals across manufacturing, R&D, quality assurance and customer service. With 16 years of industry experience, our 60+ R&D engineers, 80+ QA specialists and 200+ production staff work from a 20,000 m² Guangdong facility to support 441+ wholesale clients in 53+ countries. Every department is committed to delivering CE, FCC, RoHS and ISO 9001 certified products with a 12-month warranty.
+                <strong>HousePlus</strong> team consists of 500+ professionals across manufacturing, R&D, assurance and customer service. With 16 years of industry experience, our 60+ R&D engineers, 80+ QA specialists and 200+ production staff work from a 20,000 m² Guangdong facility to support 441+ wholesale clients in 53+ countries. Every department is committed to delivering CE, FCC, RoHS and ISO 9001 certified products with a 12-month warranty.
               </p>
             </div>
           </div>
@@ -277,14 +269,11 @@ export default async function TeamPage({ params }: { params: { lang: string } })
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/site/team-working-together.jpg"
                   alt="HousePlus company culture and team environment"
                   title="HousePlus company culture and team environment"
-                  fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={80}
                   loading="lazy"
                 />
               </div>
@@ -314,7 +303,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { name: 'Jack Hu', role: 'Founder & CEO', bio: 'Visionary leader with 20+ years in manufacturing and international trade' },
-                { name: 'Sarah Chen', role: 'VP Manufacturing', bio: 'Expert in production optimization and quality management systems' },
+                { name: 'Sarah Chen', role: 'VP Manufacturing', bio: 'Expert in production optimization and management systems' },
                 { name: 'Michael Rodriguez', role: 'VP Sales & Business Development', bio: 'Experienced in wholesale distribution and global market expansion' },
               ].map((leader) => (
                 <div key={leader.name} className="bg-white rounded-2xl p-6 text-center border border-blue-100 shadow-sm">

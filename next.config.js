@@ -103,6 +103,15 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+        ],
+      },
       // Add cache headers for key file
       {
         source: '/084fadfd7e4a435b942858f905846430.txt',

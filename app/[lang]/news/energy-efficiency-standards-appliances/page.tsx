@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -71,7 +70,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       },
       {
         heading: 'How Does ISO 9001:2015 Demonstrate HousePlus Quality Commitment?',
-        text: 'ISO 9001:2015 demonstrates HousePlus quality commitment by certifying our quality management system meets international standards for consistent quality, continuous improvement, and customer satisfaction across every stage of production from raw material procurement to after-sales service. For wholesale buyers, ISO 9001 certification provides assurance that HousePlus operates with systematic processes, documented procedures, and measurable quality objectives. We conduct regular internal audits and management reviews, and our certification is renewed annually by an accredited third-party body.',
+        text: 'ISO 9001:2015 demonstrates HousePlus commitment by certifying our management system meets international standards for consistent, continuous improvement, and customer satisfaction across every stage of production from raw material procurement to after-sales service. For wholesale buyers, ISO 9001 certification provides assurance that HousePlus operates with systematic processes, documented procedures, and measurable objectives. We conduct regular internal audits and management reviews, and our certification is renewed annually by an accredited third-party body.',
       },
     ],
     },
@@ -250,14 +249,10 @@ export default async function ArticlePage({ params }: { params: { lang: string }
             By <span className="font-semibold text-blue-600">{data.author}</span> | {new Date(data.datePublished).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
           </div>
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
           {data.sections.map((section: any, index: number) => (
@@ -269,13 +264,10 @@ export default async function ArticlePage({ params }: { params: { lang: string }
                 </div>
                 {section.image && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md w-full">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -316,14 +315,10 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={[articleSchema]} />
       <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <Image
+        <img
           src={content.heroImage}
           alt={content.heroImageAlt}
-          fill
-          priority
           className="object-cover opacity-30"
-          sizes="100vw"
-        quality={90}
         />
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
@@ -351,7 +346,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             <p>{section.text}</p>
             {section.image && (
               <figure>
-                <Image src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={80} loading="lazy" />
+                <img src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" loading="lazy" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>
             )}

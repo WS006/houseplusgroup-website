@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -82,7 +81,7 @@ export default async function AboutPage({ params }: { params: { lang: string } }
     {
       icon: '🔬',
       title: 'Precision Manufacturing',
-      desc: 'Every product leaves our factory only after passing multi-stage quality inspections aligned with international standards. We invest continuously in automated testing equipment and process improvement.',
+      desc: 'Every product leaves our factory only after passing multi-stage inspections aligned with international standards. We invest continuously in automated testing equipment and process improvement.',
     },
     {
       icon: '🌱',
@@ -144,19 +143,15 @@ export default async function AboutPage({ params }: { params: { lang: string } }
                   </div>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped quality laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 441+ wholesale clients worldwide.
+                  The <strong>HousePlus</strong> factory spans 20,000 m² in Guangdong and houses dedicated assembly lines for each product category, an in-house tooling workshop, and a fully equipped laboratory — giving <strong>HousePlus</strong> complete control from raw material to finished product. This is why <strong>HousePlus</strong> is trusted by 441+ wholesale clients worldwide.
                 </p>
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/factory/production-line.jpg"
                   alt="HousePlus Group Factory - Manufacturing solar energy systems, home appliances and 3C electronics in Guangdong, China since 2010"
                   title="HousePlus Group Factory — Guangdong, China"
-                  fill
                   className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  quality={90}
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   HousePlus Group Factory — Guangdong, China
@@ -192,7 +187,7 @@ export default async function AboutPage({ params }: { params: { lang: string } }
               <div className="text-3xl mb-4">🎯</div>
               <h2 className="text-2xl font-bold text-slate-900 mb-3">Our Mission</h2>
               <p className="text-slate-600 leading-relaxed">
-                To manufacture reliable, certified products that empower wholesale buyers to build profitable businesses — delivering consistent quality, competitive pricing and responsive support at every stage of the partnership.
+                To manufacture reliable, certified products that empower wholesale buyers to build profitable businesses — delivering consistent, competitive pricing and responsive support at every stage of the partnership.
               </p>
             </div>
             <div className="bg-green-50 border border-green-100 p-8 rounded-2xl">
@@ -260,7 +255,7 @@ export default async function AboutPage({ params }: { params: { lang: string } }
                     'Dedicated assembly lines for solar, appliances and 3C electronics',
                     'In-house tooling and mould workshop for rapid prototyping',
                     'Automated SMT and wave-soldering production for electronics',
-                    'Full-cycle quality lab: incoming inspection, in-process QC, final testing',
+                    'Full-cycle lab: incoming inspection, in-process QC, final testing',
                     'OEM/ODM services: custom design, private-label branding, bespoke packaging',
                     'Monthly capacity: 100,000+ units across all product categories',
                   ].map((cap, i) => (
@@ -272,14 +267,11 @@ export default async function AboutPage({ params }: { params: { lang: string } }
                 </div>
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <Image
+                <img
                   src="/images/about/houseplus-automated-manufacturing-facility.jpg"
-                  alt="HousePlus automated manufacturing facility - Professional production of solar energy systems, home appliances and 3C electronics with quality control"
+                  alt="HousePlus automated manufacturing facility - Professional production of solar energy systems, home appliances and 3C electronics with control"
                   title="HousePlus Automated Manufacturing — Quality Control & Production Excellence"
-                  fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  quality={80}
                   loading="lazy"
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
@@ -295,7 +287,7 @@ export default async function AboutPage({ params }: { params: { lang: string } }
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 Ready to Partner with HousePlus?</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Whether you are sourcing for retail distribution, private-label branding or large-scale project supply, the <strong>HousePlus</strong> team is ready to discuss your requirements. As a professional <strong>HousePlus</strong> manufacturer with 16+ years of experience, we deliver quality and reliability.
+              Whether you are sourcing for retail distribution, private-label branding or large-scale project supply, the <strong>HousePlus</strong> team is ready to discuss your requirements. As a professional <strong>HousePlus</strong> manufacturer with 16+ years of experience, we deliver and reliability.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href={`/${lang}/contact`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">

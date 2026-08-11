@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -78,7 +77,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
         },
         {
           heading: 'Why Choose HousePlus as Your Solar Solutions Partner?',
-          text: 'HousePlus is the ideal solar partner because we offer high-efficiency panels, MPPT charge controllers, and portable power stations with flexible MOQ of 100-500 pcs, comprehensive OEM/ODM services, and full CE/FCC/RoHS certification for global markets. At HousePlus, we are committed to empowering our global partners with superior solar energy solutions. Our product range includes high-efficiency solar panels, robust MPPT charge controllers, and versatile portable power stations (from 300W to 3000W). We understand the diverse needs of wholesale buyers in Africa, Southeast Asia, and Europe, offering flexible MOQ (100-500 pcs) and comprehensive OEM/ODM services. Our products are CE/FCC/RoHS certified, ensuring compliance with international quality standards. Partner with HousePlus to provide your customers with reliable, sustainable, and innovative solar products.',
+          text: 'HousePlus is the ideal solar partner because we offer high-efficiency panels, MPPT charge controllers, and portable power stations with flexible MOQ of 100-500 pcs, comprehensive OEM/ODM services, and full CE/FCC/RoHS certification for global markets. At HousePlus, we are committed to empowering our global partners with superior solar energy solutions. Our product range includes high-efficiency solar panels, robust MPPT charge controllers, and versatile portable power stations (from 300W to 3000W). We understand the diverse needs of wholesale buyers in Africa, Southeast Asia, and Europe, offering flexible MOQ (100-500 pcs) and comprehensive OEM/ODM services. Our products are CE/FCC/RoHS certified, ensuring compliance with international standards. Partner with HousePlus to provide your customers with reliable, sustainable, and innovative solar products.',
           image: '/images/products/home-energy-storage-5000w.jpg',
           imageAlt: 'HousePlus portable power station with solar panel',
         },
@@ -277,14 +276,10 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
           </div>
 
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
 
@@ -296,13 +291,10 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <Image
+                      <img
                         src={section.image}
                         alt={section.imageAlt}
-                        fill
                         className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={80}
                       loading="lazy"
                       />
                     </div>
@@ -310,13 +302,10 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -66,13 +65,13 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       sections: [
         {
           heading: 'What Are Smart Home Appliances and How Have They Evolved?',
-          text: 'Smart home appliances are internet-connected, AI-enhanced devices that automate household tasks, reduce energy use, and improve quality of life — they have evolved from basic functional tools to intelligent, connected ecosystems that simplify daily living. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The modern home is becoming increasingly connected and intelligent. Home appliances are no longer just functional; they are smart, energy-efficient, and designed to simplify daily life. This evolution is driven by consumer demand for convenience, sustainability, and advanced technology. HousePlus is at the forefront of this transformation, offering a wide range of innovative home appliances that meet the highest standards of quality and performance.',
+          text: 'Smart home appliances are internet-connected, AI-enhanced devices that automate household tasks, reduce energy use, and improve of life — they have evolved from basic functional tools to intelligent, connected ecosystems that simplify daily living. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The modern home is becoming increasingly connected and intelligent. Home appliances are no longer just functional; they are smart, energy-efficient, and designed to simplify daily life. This evolution is driven by consumer demand for convenience, sustainability, and advanced technology. HousePlus is at the forefront of this transformation, offering a wide range of innovative home appliances that meet the highest standards of and performance.',
           image: '/images/products/induction-cooktop-2000w.jpg',
           imageAlt: 'Showcase of HousePlus energy-efficient home appliances',
         },
         {
           heading: 'Why Is Energy Efficiency So Important in Modern Appliances?',
-          text: 'Energy efficiency is critical because it reduces utility costs by 20-40%, lowers environmental impact, and ensures compliance with increasingly strict global regulations — making it a top purchasing priority for both consumers and businesses. With rising energy costs and growing environmental awareness, energy efficiency has become a critical factor in home appliance design. HousePlus prioritizes the development of appliances that consume less power without compromising on performance. Our products feature advanced inverter technology, smart sensors, and eco-friendly modes to help consumers reduce their carbon footprint and save on utility bills. This commitment to sustainability is a cornerstone of the HousePlus brand.',
+          text: 'Energy efficiency is critical because it reduces utility costs by 20-40%, lowers environmental impact, and ensures compliance with increasingly strict global regulations — making it a top purchasing for both consumers and businesses. With rising energy costs and growing environmental awareness, energy efficiency has become a critical factor in home appliance design. HousePlus prioritizes the development of appliances that consume less power without compromising on performance. Our products feature advanced inverter technology, smart sensors, and eco-friendly modes to help consumers reduce their carbon footprint and save on utility bills. This commitment to sustainability is a cornerstone of the HousePlus brand.',
           image: '/images/products/electric-kettle-1-5l.jpg',
           imageAlt: 'HousePlus home appliance package with energy star rating',
         },
@@ -90,7 +89,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
         },
         {
           heading: 'Why Should Wholesale Distributors Partner with HousePlus?',
-          text: 'Wholesale distributors should partner with HousePlus because we offer CE/FCC/RoHS certified appliances, flexible MOQ options, reliable global supply chains, comprehensive OEM/ODM services, and a 15+ year track record of quality and innovation across 53+ countries. Choosing HousePlus means partnering with a manufacturer committed to quality, innovation, and customer satisfaction. Our home appliances are CE/FCC/RoHS certified, ensuring global compliance. We offer flexible MOQ and reliable supply chains, making us the ideal partner for wholesale distributors looking to expand their market share with premium, energy-efficient, and smart home solutions. Join the HousePlus family and grow your business with us.',
+          text: 'Wholesale distributors should partner with HousePlus because we offer CE/FCC/RoHS certified appliances, flexible MOQ options, reliable global supply chains, comprehensive OEM/ODM services, and a 15+ year track record of and innovation across 53+ countries. Choosing HousePlus means partnering with a manufacturer committed to, innovation, and customer satisfaction. Our home appliances are CE/FCC/RoHS certified, ensuring global compliance. We offer flexible MOQ and reliable supply chains, making us the ideal partner for wholesale distributors looking to expand their market share with premium, energy-efficient, and smart home solutions. Join the HousePlus family and grow your business with us.',
         },
       ],
     },
@@ -280,14 +279,10 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
           </div>
 
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
 
@@ -299,13 +294,10 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <Image
+                      <img
                         src={section.image}
                         alt={section.imageAlt}
-                        fill
                         className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={80}
                       loading="lazy"
                       />
                     </div>
@@ -313,13 +305,10 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>

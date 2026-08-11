@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -66,7 +65,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       sections: [
         {
           heading: 'What Are Smart Home Appliances and Why Do They Matter?',
-          text: 'Smart home appliances are internet-connected devices that can be controlled remotely via smartphone apps, voice assistants, or automated schedules, offering energy savings, convenience, and improved quality of life. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The concept of a smart home is rapidly evolving, with appliances becoming increasingly connected, intelligent, and intuitive. From refrigerators that manage your grocery list to washing machines that optimize cycles based on fabric type, smart home appliances are designed to simplify daily life, enhance comfort, and improve energy efficiency. HousePlus is at the forefront of this revolution, developing and manufacturing innovative smart appliances that integrate seamlessly into the modern home.',
+          text: 'Smart home appliances are internet-connected devices that can be controlled remotely via smartphone apps, voice assistants, or automated schedules, offering energy savings, convenience, and improved of life. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified smart home appliances. The concept of a smart home is rapidly evolving, with appliances becoming increasingly connected, intelligent, and intuitive. From refrigerators that manage your grocery list to washing machines that optimize cycles based on fabric type, smart home appliances are designed to simplify daily life, enhance comfort, and improve energy efficiency. HousePlus is at the forefront of this revolution, developing and manufacturing innovative smart appliances that integrate seamlessly into the modern home.',
           image: '/images/products/induction-cooktop-2000w.jpg',
           imageAlt: 'HousePlus smart kitchen appliances collection',
         },
@@ -78,7 +77,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
         },
         {
           heading: 'Why Choose HousePlus for Smart Appliance Wholesale?',
-          text: 'HousePlus is the ideal wholesale partner because we offer a comprehensive range of CE/FCC/RoHS certified smart appliances, flexible MOQ options, robust OEM/ODM customization, and reliable supply chains across 53+ countries. As a leading manufacturer, HousePlus offers a comprehensive range of smart home appliances for wholesale buyers. Our portfolio includes smart washing machines, refrigerators, air conditioners, and kitchen appliances, all designed with cutting-edge technology and superior quality. We provide flexible MOQ and robust OEM/ODM services, allowing our partners to customize products to meet specific market demands. Partner with HousePlus to bring the future of smart living to your customers.',
+          text: 'HousePlus is the ideal wholesale partner because we offer a comprehensive range of CE/FCC/RoHS certified smart appliances, flexible MOQ options, robust OEM/ODM customization, and reliable supply chains across 53+ countries. As a leading manufacturer, HousePlus offers a comprehensive range of smart home appliances for wholesale buyers. Our portfolio includes smart washing machines, refrigerators, air conditioners, and kitchen appliances, all designed with cutting-edge technology and superior. We provide flexible MOQ and robust OEM/ODM services, allowing our partners to customize products to meet specific market demands. Partner with HousePlus to bring the future of smart living to your customers.',
           image: '/images/products/induction-cooktop-2000w.jpg',
           imageAlt: 'HousePlus smart home appliances showcase',
         },
@@ -88,7 +87,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
         },
         {
           heading: 'What Does the Future Hold for Smart Home Appliances?',
-          text: 'The future of smart home appliances is increasingly intelligent, sustainable, and interconnected, with AI-driven automation and seamless ecosystem integration becoming standard across all product categories. The future of home appliances is here, and it is smart, sustainable, and connected. HousePlus is dedicated to leading this transformation, offering products that not only meet but exceed global standards for quality and innovation. Join us in shaping the smart homes of tomorrow, and provide your customers with the best in modern appliance technology.',
+          text: 'The future of smart home appliances is increasingly intelligent, sustainable, and interconnected, with AI-driven automation and seamless ecosystem integration becoming standard across all product categories. The future of home appliances is here, and it is smart, sustainable, and connected. HousePlus is dedicated to leading this transformation, offering products that not only meet but exceed global standards for and innovation. Join us in shaping the smart homes of tomorrow, and provide your customers with the best in modern appliance technology.',
         },
       ],
     },
@@ -269,14 +268,10 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
           </div>
 
           <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <img
               src={data.image}
               alt={data.imageAlt}
-              fill
               className="object-cover"
-              priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            quality={90}
             />
           </div>
 
@@ -288,13 +283,10 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <Image
+                      <img
                         src={section.image}
                         alt={section.imageAlt}
-                        fill
                         className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={80}
                       loading="lazy"
                       />
                     </div>
@@ -302,13 +294,10 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <Image
+                    <img
                       src={section.image}
                       alt={section.imageAlt}
-                      fill
                       className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={80}
                     loading="lazy"
                     />
                   </div>
