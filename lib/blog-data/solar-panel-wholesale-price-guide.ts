@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Price Guide',
   heroImage:
-    '/images/articles/solar/solar-energy-farm-panels.jpg',
+    '/images/articles/covers/solar-panel-wholesale-price-guide.jpg',
   heroImageAlt:
-    'Solar panel wholesale pricing chart showing 2026 market trends and price per watt analysis',
+    'Solar panels prepared for wholesale distribution in a logistics warehouse',
   sections: [
     {
       heading: 'Solar Panel Wholesale Pricing in 2026: An Overview',

@@ -15,9 +15,9 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Solar Energy Systems',
   heroImage:
-    '/images/products/solar-panel-500w.jpg',
+    '/images/articles/covers/how-to-choose-wholesale-solar-panels.jpg',
   heroImageAlt:
-    'HousePlus monocrystalline solar panels stacked in warehouse ready for wholesale export',
+    'Export-ready solar panels on wholesale logistics pallets',
   sections: [
     {
       heading: 'Why Choosing the Right Wholesale Solar Panel Supplier Matters',

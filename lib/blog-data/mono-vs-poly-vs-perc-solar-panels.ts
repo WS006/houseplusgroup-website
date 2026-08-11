@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Technical Comparison',
   heroImage:
-    '/images/products/solar-panel-500w.jpg',
+    '/images/articles/covers/mono-vs-poly-vs-perc-solar-panels.jpg',
   heroImageAlt:
-    'Side-by-side comparison of monocrystalline polycrystalline and PERC solar cells under magnification',
+    'Distinct solar panel cell technologies in a technical comparison display',
   sections: [
     {
       heading: 'Understanding Solar Cell Technologies: A 2026 Overview',

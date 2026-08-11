@@ -15,9 +15,9 @@ const article: BlogPost = {
   readingTime: '12 min read',
   category: '3C Electronics',
   heroImage:
-    '/images/products/bluetooth-earphone-tws.jpg',
+    '/images/articles/covers/tws-earphones-oem-manufacturing-guide.jpg',
   heroImageAlt:
-    'TWS true wireless stereo earphones on production line at HousePlus OEM manufacturing facility',
+    'TWS earbuds and charging cases in an OEM quality inspection setting',
   sections: [
     {
       heading: 'Why the TWS Earphones Market Is Booming in 2026',

@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '11 min read',
   category: 'Home Appliances',
   heroImage:
-    '/images/articles/appliances/home-appliance-manufacturing-line.jpg',
+    '/images/articles/covers/home-appliance-oem-manufacturer-guide-china.jpg',
   heroImageAlt:
-    'HousePlus home appliance manufacturing facility showing air fryer and kitchen appliance assembly lines in Zhongshan China',
+    'Engineers reviewing home appliance OEM production on a modern assembly line',
   sections: [
     {
       heading: 'Why China Dominates Home Appliance Manufacturing in 2026',

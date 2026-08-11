@@ -86,13 +86,14 @@ export default async function BlogPostPage({
       <SchemaRenderer schemas={schemas} />
 
       {/* Hero Section */}
-      <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
+      <div className="relative isolate overflow-hidden bg-slate-950 px-4 py-24 text-white md:py-32">
         <img
           src={post.heroImage}
           alt={post.heroImageAlt}
-          className="object-cover opacity-30"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-45"
         />
-        <div className="relative max-w-4xl mx-auto text-center z-10">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/95 via-slate-900/80 to-blue-950/70" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <Breadcrumb lang={lang} slug={`news/${slug}`} customLabel={post.title} />
           <span className="inline-block px-4 py-1.5 bg-blue-600/20 backdrop-blur-sm text-blue-300 text-xs font-black uppercase tracking-widest rounded-full mb-6">
             {post.category}

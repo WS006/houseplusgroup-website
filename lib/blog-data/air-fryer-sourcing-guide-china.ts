@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:
-    '/images/products/air-fryer-5-8l.jpg',
+    '/images/articles/covers/air-fryer-sourcing-guide-china.jpg',
   heroImageAlt:
-    'Various air fryer models on display at HousePlus appliance factory showing different capacities and designs for OEM export',
+    'Procurement specialist inspecting an air fryer at a Chinese supplier showroom',
   sections: [
     {
       heading: 'The Air Fryer Market Boom: Why 2026 Is the Year to Source',

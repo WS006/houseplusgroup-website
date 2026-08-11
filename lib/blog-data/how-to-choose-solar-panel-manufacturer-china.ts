@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '12 min read',
   category: 'Procurement Guide',
   heroImage:
-    '/images/articles/solar/solar-energy-farm-panels.jpg',
+    '/images/articles/covers/how-to-choose-solar-panel-manufacturer-china.jpg',
   heroImageAlt:
-    'HousePlus solar panel manufacturing facility in Zhongshan China with production line',
+    'Procurement review of solar panel quality at a module factory',
   sections: [
     {
       heading: 'Why Choosing the Right Solar Panel Manufacturer in China Matters',

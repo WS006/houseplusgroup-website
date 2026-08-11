@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '8 min read',
   category: 'Certification Guide',
   heroImage:
-    '/images/articles/solar/solar-panel-installation-rooftop.jpg',
+    '/images/articles/covers/ce-certification-solar-panels-guide.jpg',
   heroImageAlt:
-    'CE certification mark on solar panel with IEC 61215 and IEC 61730 test certificates',
+    'Solar panel compliance testing in a professional certification laboratory',
   sections: [
     {
       heading: 'Why CE Certification Matters for Solar Panel Imports',

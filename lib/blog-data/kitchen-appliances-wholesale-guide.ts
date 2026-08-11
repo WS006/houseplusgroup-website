@@ -15,9 +15,9 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:
-    '/images/products/kitchen-appliances.jpg',
+    '/images/articles/covers/kitchen-appliances-wholesale-guide.jpg',
   heroImageAlt:
-    'Range of kitchen appliances including blenders electric kettles rice cookers and juicers arranged for wholesale export display',
+    'Wholesale collection of premium kitchen appliances',
   sections: [
     {
       heading: 'The Kitchen Appliance Wholesale Opportunity in 2026',

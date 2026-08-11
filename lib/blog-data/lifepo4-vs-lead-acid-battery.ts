@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:
-    '/images/products/lifepo4-battery-12v100ah.jpg',
+    '/images/articles/covers/lifepo4-vs-lead-acid-battery.jpg',
   heroImageAlt:
-    'LiFePO4 lithium iron phosphate battery compared to traditional lead acid deep cycle battery for solar storage',
+    'LiFePO4 and lead-acid batteries prepared for solar storage comparison',
   sections: [
     {
       heading: 'Why Battery Choice Is Critical for Solar Energy Storage',

@@ -14,9 +14,9 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:
-    '/images/products/mppt-controller-40a.jpg',
+    '/images/articles/covers/mppt-vs-pwm-charge-controller.jpg',
   heroImageAlt:
-    'MPPT and PWM solar charge controllers side by side comparison for solar power systems',
+    'MPPT and PWM solar charge controllers on an engineering workbench',
   sections: [
     {
       heading: 'Why Your Solar Charge Controller Choice Matters',

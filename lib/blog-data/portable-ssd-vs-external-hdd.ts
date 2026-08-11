@@ -15,9 +15,9 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: '3C Electronics',
   heroImage:
-    '/images/products/portable-ssd-1tb.jpg',
+    '/images/articles/covers/portable-ssd-vs-external-hdd.jpg',
   heroImageAlt:
-    'Portable SSD drive compared to external HDD hard disk drive showing speed and durability differences',
+    'Portable SSD and external hard drive storage devices for comparison',
   sections: [
     {
       heading: 'The Portable Storage Market in 2026: SSDs Take the Lead',

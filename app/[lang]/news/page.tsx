@@ -79,8 +79,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     ...blogArticles,
     {
       slug: 'consumer-electronics-battery-life-testing',
-      image: '/images/products/power-bank-60w-pd.jpg',
-      imageAlt: 'Battery testing laboratory with charge-discharge equipment',
+      image: '/images/articles/covers/consumer-electronics-battery-life-testing.jpg',
+      imageAlt: 'Consumer electronics battery cycle life testing in a controlled laboratory',
       title: {
         en: 'Battery Cycle Life Testing Standards: Technical Analysis for Consumer Electronics',
         es: 'Estándares de Prueba de Ciclos de Vida de Baterías: Análisis Técnico',
@@ -99,8 +99,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'appliance-energy-efficiency-vs-actual-consumption',
-      image: '/images/products/air-fryer-5-8l.jpg',
-      imageAlt: 'Energy efficiency labels on home appliances with power monitoring',
+      image: '/images/articles/covers/appliance-energy-efficiency-vs-actual-consumption.jpg',
+      imageAlt: 'Appliance energy consumption measurement with a laboratory power meter',
       title: {
         en: 'Appliance Energy Efficiency Ratings vs Actual Consumption: Technical Analysis',
         es: 'Calificaciones de Eficiencia Energética vs Consumo Real: Análisis Técnico',
@@ -119,8 +119,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'solar-storage-efficiency-optimization-guide',
-      image: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
-      imageAlt: 'Solar energy storage system with battery banks and monitoring',
+      image: '/images/articles/covers/solar-storage-efficiency-optimization-guide.jpg',
+      imageAlt: 'Engineer reviewing industrial solar storage efficiency equipment',
       title: {
         en: 'Solar Storage Efficiency Optimization: Technical Guide for Industrial Systems',
         es: 'Optimización de Eficiencia de Almacenamiento Solar: Guía Técnica',
@@ -139,8 +139,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: '2026-solar-market-update',
-    image: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
-    imageAlt: 'HousePlus solar panels and energy storage solutions',
+    image: '/images/articles/covers/2026-solar-market-update.jpg',
+    imageAlt: 'Modern solar microgrid and battery energy storage equipment',
     title: {
     en: 'Solar Energy Innovations in 2026: HousePlus Leading the Industry',
     es: 'Innovaciones en Energía Solar en 2026: HousePlus Liderando la Industria',
@@ -159,8 +159,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
   },
   {
     slug: '2026-appliances-market-update',
-    image: '/images/products/induction-cooktop-2000w.jpg',
-    imageAlt: 'HousePlus smart home appliances lineup',
+    image: '/images/articles/covers/2026-appliances-market-update.jpg',
+    imageAlt: 'Energy-efficient smart home appliances in a modern kitchen',
     title: {
     en: 'Smart Home Appliances 2026: Energy-Efficient Designs for Global Markets',
     es: 'Electrodomésticos Inteligentes 2026: Diseños Eficientes Energéticamente para Mercados Globales',
@@ -179,8 +179,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
   },
   {
     slug: '2026-electronics-market-update',
-    image: '/images/products/bluetooth-earphone-tws.jpg',
-    imageAlt: 'HousePlus 3C electronics product showcase',
+    image: '/images/articles/covers/2026-electronics-market-update.jpg',
+    imageAlt: '2026 3C electronics collection of audio, storage and charging products',
     title: {
     en: '3C Electronics Trends 2026: HousePlus Wholesale Innovation',
     es: 'Tendencias en Electrónica 3C 2026: Innovación al por Mayor de HousePlus',
@@ -200,8 +200,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
 
     {
       slug: '2026-smart-home-appliances-market-guide',
-      image: '/images/products/smart-wifi-plug-meter.jpg',
-      imageAlt: 'Modern smart kitchen with integrated appliances, representing future home technology',
+      image: '/images/articles/covers/2026-smart-home-appliances-market-guide.jpg',
+      imageAlt: 'Connected smart home appliances and energy monitoring products',
       title: {
         en: '2026 Global Smart Home Appliance Market Trends & B2B Procurement Guide',
         es: 'Tendencias del Mercado Global de Electrodomésticos Inteligentes 2026 y Guía de Adquisiciones B2B',
@@ -220,8 +220,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'solar-energy-storage-industrial-manufacturing',
-      image: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
-      imageAlt: 'Large industrial facility with solar panels on the roof and energy storage units, symbolizing sustainable manufacturing',
+      image: '/images/articles/covers/solar-energy-storage-industrial-manufacturing.jpg',
+      imageAlt: 'Industrial lithium battery racks and solar energy storage infrastructure',
       title: {
         en: 'Solar Energy Storage Systems in Industrial Manufacturing: A Sustainable Approach',
         es: 'Sistemas de Almacenamiento de Energía Solar en la Fabricación Industrial: Un Enfoque Sostenible',
@@ -240,8 +240,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'oem-odm-manufacturing-guide',
-      image: '/images/factory/production-line.jpg',
-      imageAlt: 'OEM ODM manufacturing process at HousePlus factory - custom product development',
+      image: '/images/articles/covers/oem-odm-manufacturing-guide.jpg',
+      imageAlt: 'OEM and ODM product development with appliance prototypes and packaging samples',
       title: {
         en: 'OEM & ODM Manufacturing: How HousePlus Helps Brands Build Custom Products',
         es: 'Fabricación OEM y ODM: Cómo HousePlus Ayuda a las Marcas a Construir Productos Personalizados',
@@ -260,8 +260,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'energy-efficiency-standards-appliances',
-      image: '/images/products/induction-cooktop-2000w.jpg',
-      imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
+      image: '/images/articles/covers/energy-efficiency-standards-appliances.jpg',
+      imageAlt: 'Home appliance compliance testing in an energy efficiency laboratory',
       title: {
         en: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
         es: 'Estándares de Eficiencia Energética en Electrodomésticos Modernos: Cumplimiento CE y RoHS de HousePlus',
@@ -280,8 +280,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'global-wholesale-guide-home-appliances',
-      image: '/images/articles/appliances/home-appliance-wholesale-warehouse.jpg',
-      imageAlt: 'Global wholesale distribution of home appliances - HousePlus international trade',
+      image: '/images/articles/covers/global-wholesale-guide-home-appliances.jpg',
+      imageAlt: 'Global wholesale logistics for export-ready home appliances',
       title: {
         en: 'The Complete Guide to Wholesale Home Appliances: How HousePlus Supports Global Buyers',
         es: 'La Guía Completa para Electrodomésticos al por Mayor: Cómo HousePlus Apoya a los Compradores Globales',
@@ -300,8 +300,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'advanced-manufacturing-home-appliances',
-      image: '/images/articles/service/factory-assembly-workers.jpg',
-      imageAlt: 'HousePlus advanced home appliance manufacturing facility',
+      image: '/images/articles/covers/advanced-manufacturing-home-appliances.jpg',
+      imageAlt: 'Advanced robotic manufacturing line for home appliances',
       title: {
         en: 'Advanced Manufacturing in Home Appliances: HousePlus Quality',
         es: 'Fabricación Avanzada en Electrodomésticos: Calidad HousePlus',
@@ -320,8 +320,8 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'the-future-of-smart-home-appliances',
-      image: '/images/products/induction-cooktop-2000w.jpg',
-      imageAlt: 'Modern smart home appliances from HousePlus',
+      image: '/images/articles/covers/the-future-of-smart-home-appliances.jpg',
+      imageAlt: 'Future-ready connected home appliances in a refined contemporary interior',
       title: {
         en: 'The Future of Smart Home Appliances: HousePlus Innovations',
         es: 'El Futuro de los Electrodomésticos Inteligentes: Innovaciones HousePlus',
@@ -357,23 +357,32 @@ export default async function NewsPage({ params }: { params: { lang: string } })
       <div className="max-w-6xl mx-auto py-20 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {articles.map((article) => (
-            <Link key={article.slug} href={`/${lang}/news/${article.slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
-              <div className="aspect-[4/3] overflow-hidden relative">
+            <Link
+              key={article.slug}
+              href={`/${lang}/news/${article.slug}`}
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
+            >
+              <div className="relative aspect-video overflow-hidden bg-slate-100">
                 <img
                   src={article.image}
                   alt={article.imageAlt}
                   title={article.title[lang as keyof typeof article.title] || article.title.en}
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
-                <div className="absolute top-6 left-6">
-                  <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-full">News & Insights</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" aria-hidden="true" />
+                <div className="absolute left-4 top-4">
+                  <span className="rounded-full border border-white/30 bg-slate-950/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-white backdrop-blur-md">News & Insights</span>
                 </div>
               </div>
-              <div className="p-10 flex flex-col flex-grow">
-                <h2 className="text-2xl font-black mb-4 text-slate-900 group-hover:text-blue-600 tracking-tight">{article.title[lang as keyof typeof article.title] || article.title.en}</h2>
-                <p className="text-slate-500 line-clamp-2 mb-8 flex-grow">{article.description[lang as keyof typeof article.description] || article.description.en}</p>
-                <div className="flex items-center text-blue-600 font-black text-xs uppercase tracking-widest">Read More →</div>
+              <div className="flex flex-grow flex-col p-6 md:p-8">
+                <h2 className="mb-3 line-clamp-3 text-xl font-black leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-blue-700 md:text-2xl">
+                  {article.title[lang as keyof typeof article.title] || article.title.en}
+                </h2>
+                <p className="mb-7 line-clamp-3 flex-grow text-sm leading-6 text-slate-600 md:text-base">
+                  {article.description[lang as keyof typeof article.description] || article.description.en}
+                </p>
+                <div className="flex items-center text-xs font-black uppercase tracking-widest text-blue-700">Read More <span className="ml-2 text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span></div>
               </div>
             </Link>
           ))}
