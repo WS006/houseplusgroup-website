@@ -141,7 +141,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
               key={index}
               title={industry.title}
               description={industry.description}
-              image={{ filename: `/images/products/${['solar-panel-1.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`, alt: industry.title }}
+              image={{ filename: ['/images/products/solar-panel-1.jpg', '/images/home/home-appliances-collection-b.jpg', '/images/products/headphone-over-ear.jpg'][index], alt: industry.title }}
               industry_type={['solar', 'appliances', 'electronics'][index] as 'solar' | 'appliances' | 'electronics'}
               button_link={`/${lang}/products?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
               button_text={industry.buttonText}
