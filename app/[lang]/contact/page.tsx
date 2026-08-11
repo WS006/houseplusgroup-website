@@ -26,10 +26,10 @@ export async function generateMetadata({ params }: { params: { lang: string } })
 
   const descriptions: Record<string, string> = {
     en: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    es: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    de: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    fr: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    ar: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
+    es: 'Contacte al equipo mayorista de HousePlus para consultas de energía solar, electrodomésticos y electrónica 3C. Respuesta en 24 horas. WhatsApp +86 155 7811 9543. 16 años de experiencia. Fábrica ISO 9001 de 20.000 m². MOQ 100 pcs, entrega 20–35 días. 441+ clientes en 53+ países.',
+    de: 'Kontaktieren Sie das HousePlus-Großhandelsteam für Anfragen zu Solar, Haushaltsgeräten und 3C-Elektronik. Antwort in 24 Stunden. WhatsApp +86 155 7811 9543. 16 Jahre Erfahrung. ISO 9001 Fabrik mit 20.000 m². MOQ 100 Stk., Lieferzeit 20–35 Tage. 441+ Kunden in 53+ Ländern.',
+    fr: 'Contactez l\'équipe de vente en gros HousePlus pour les demandes de solaire, d\'électroménager et d\'électronique 3C. Réponse en 24 heures. WhatsApp +86 155 7811 9543. 16 ans d\'expérience. Usine ISO 9001 de 20 000 m². MOQ 100 pcs, délai 20–35 jours. 441+ clients dans 53+ pays.',
+    ar: 'اتصل بفريق الجملة في HousePlus لاستفسارات الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. رد خلال 24 ساعة. واتساب +86 155 7811 9543. 16 سنة خبرة. مصنع ISO 9001 بمساحة 20,000 م². الحد الأدنى 100 قطعة، تسليم 20–35 يوم. 441+ عميل في 53+ دولة.',
   };
 
   return generateSEOMetadata({

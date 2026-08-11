@@ -26,10 +26,10 @@ export async function generateMetadata({ params }: { params: { lang: string } })
 
   const descriptions: Record<string, string> = {
     en: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    es: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    de: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    fr: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
-    ar: 'HousePlus team: 500+ professionals across manufacturing, R&D, quality assurance and customer service. 16 years of industry experience. 60+ R&D engineers. 80+ QA specialists. 200+ production staff. Supporting 441+ wholesale clients in 53+ countries from our 20,000 m² Guangdong facility.',
+    es: 'Equipo de HousePlus: 500+ profesionales en fabricación, I+D, control de calidad y servicio al cliente. 16 años de experiencia. 60+ ingenieros de I+D. 80+ especialistas de QA. 200+ personal de producción. Apoyamos a 441+ clientes mayoristas en 53+ países desde nuestra instalación de 20.000 m² en Guangdong.',
+    de: 'HousePlus-Team: 500+ Fachleute in Fertigung, F&E, Qualitätsicherung und Kundenservice. 16 Jahre Erfahrung. 60+ F&E-Ingenieure. 80+ QA-Spezialisten. 200+ Produktionsmitarbeiter. Wir unterstützen 441+ Großhandelskunden in 53+ Ländern von unserer 20.000 m² Anlage in Guangdong.',
+    fr: 'Équipe HousePlus : 500+ professionnels en fabrication, R&D, assurance qualité et service client. 16 ans d\'expérience. 60+ ingénieurs R&D. 80+ spécialistes QA. 200+ personnel de production. Nous accompagnons 441+ clients de gros dans 53+ pays depuis notre installation de 20 000 m² au Guangdong.',
+    ar: 'فريق HousePlus: أكثر من 500 محترف في التصنيع والبحث والتطوير وضمان الجودة وخدمة العملاء. 16 سنة خبرة. 60+ مهندس بحث وتطوير. 80+ متخصص ضمان الجودة. 200+ موظف إنتاج. ندعم 441+ عميل جملة في 53+ دولة من منشأتنا بمساحة 20,000 م² في قوانغدونغ.',
   };
 
   return generateSEOMetadata({
