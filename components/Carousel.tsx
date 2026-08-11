@@ -51,7 +51,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     },
     {
       _uid: 'default-3',
-      image: { filename: '/images/products/headphone-over-ear.jpg', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
+      image: { filename: '/images/products/3c-electronics-banner.jpg', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
       title: '3C Electronics & Accessories',
       subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
       button_text: 'View Electronics',
