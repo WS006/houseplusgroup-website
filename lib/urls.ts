@@ -108,6 +108,9 @@ export const productSlugs = [
   'induction-hob-4-zone-built-in',
   'ceramic-hob-4-zone-built-in',
   'induction-hob-3-zone-flex',
+  // P6 Cassette Gas Stove (added 2026-08-11)
+  'cassette-gas-stove-portable',
+  'cassette-gas-stove-double-burner',
 ];
 
 // News slugs
