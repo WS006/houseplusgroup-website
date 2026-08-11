@@ -95,6 +95,14 @@ export const productSlugs = [
   'range-hood-750mm-inclined',
   'range-hood-island-900mm',
   'range-hood-900mm-curved-glass',
+  // P4 Air Fryer, Oven & Water Heater expansion (added 2026-08-11)
+  'air-fryer-4-5l-visual',
+  'air-fryer-12l-rotisserie',
+  'built-in-gas-oven-60l',
+  'steam-oven-30l-built-in',
+  'gas-water-heater-8l',
+  'gas-water-heater-10l',
+  'electric-water-heater-50l',
 ];
 
 // News slugs
