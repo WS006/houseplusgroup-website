@@ -22,7 +22,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Handle XML feed routes - let public/ static files handle these
-  if (pathname === '/merchant-feed.xml' || pathname === '/feed.xml' || pathname === '/image-sitemap.xml') {
+  if (pathname === '/merchant-feed.xml' || pathname === '/feed.xml' || pathname === '/image-sitemap.xml' || pathname === '/manifest.webmanifest') {
     const response = NextResponse.next();
     addSecurityHeaders(response);
     return response;

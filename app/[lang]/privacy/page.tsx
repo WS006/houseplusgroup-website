@@ -33,12 +33,16 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
     description: descriptions[lang] || descriptions.en,
-    keywords: ['privacy policy', 'data protection', 'GDPR', 'HousePlus privacy'],
+    keywords: ['privacy policy', 'GDPR', 'data protection', 'HousePlus privacy'],
     url: `/${lang}/privacy`,
     lang: lang as any,
     type: 'website',
   });
 }
+
+export const metadata = {
+  robots: { index: false, follow: true },
+};
 
 export default async function PrivacyPage({ params }: { params: { lang: string } }) {
   const { lang } = params;

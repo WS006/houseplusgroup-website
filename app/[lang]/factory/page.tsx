@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -86,10 +87,16 @@ export default async function FactoryPage({ params }: { params: { lang: string }
     { step: '06', title: 'Logistics & Export', desc: 'We coordinate FOB, CIF and DDP shipments via sea, air or express courier, with full documentation including CO, packing list and commercial invoice.' },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'Factory', url: `https://www.houseplus-ch.com/${lang}/factory` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="factory" />
 
         {/* Hero */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800 to-blue-900 text-white">

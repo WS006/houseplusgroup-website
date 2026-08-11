@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema, generateServiceSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -120,10 +121,16 @@ export default async function ServicePage({ params }: { params: { lang: string }
     { step: '06', title: 'After-Sales Support', desc: 'Your dedicated account manager remains available for warranty claims, reorders and any technical queries throughout the product lifecycle.' },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'Services', url: `https://www.houseplus-ch.com/${lang}/service` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema, oemServiceSchema, odmServiceSchema]} />
+      <SEOHead schemas={[organizationSchema, oemServiceSchema, odmServiceSchema, breadcrumbSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="service" />
 
         {/* Hero */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">

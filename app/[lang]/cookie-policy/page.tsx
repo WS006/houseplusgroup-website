@@ -31,6 +31,10 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
+export const metadata = {
+  robots: { index: false, follow: true },
+};
+
 export default async function CookiePolicyPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
 

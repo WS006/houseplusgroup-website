@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateFAQSchema } from '@/lib/schema-generator';
+import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -354,10 +355,16 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
   const allFaqs = content.flatMap((cat: any) => cat.items.map((item: any) => ({ question: item.q, answer: item.a })));
   const faqSchema = generateFAQSchema(allFaqs);
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'FAQ', url: `https://www.houseplus-ch.com/${lang}/faq` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[faqSchema]} />
+      <SEOHead schemas={[faqSchema, breadcrumbSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="faq" />
         <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">

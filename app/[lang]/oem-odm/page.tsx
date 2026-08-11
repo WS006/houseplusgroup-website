@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema, generateServiceSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -114,10 +115,16 @@ export default async function OemOdmPage({ params }: { params: { lang: string } 
     { tier: '1000+ pcs', discount: '7–10% volume discount', products: 'Full product lines, mixed container loads', sampleLead: '20–25 days' },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'OEM/ODM', url: `https://www.houseplus-ch.com/${lang}/oem-odm` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema, manufacturingServiceSchema, designServiceSchema]} />
+      <SEOHead schemas={[organizationSchema, manufacturingServiceSchema, designServiceSchema, breadcrumbSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="oem-odm" />
 
         {/* Hero */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">

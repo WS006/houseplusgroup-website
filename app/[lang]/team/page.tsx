@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -188,10 +189,16 @@ export default async function TeamPage({ params }: { params: { lang: string } })
 
   const data = content[lang] || content.en;
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'Team', url: `https://www.houseplus-ch.com/${lang}/team` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="team" />
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
           <div className="max-w-6xl mx-auto text-center">

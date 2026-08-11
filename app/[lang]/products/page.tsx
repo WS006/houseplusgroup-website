@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
-import { generateItemListSchema } from '@/lib/schema-generator';
+import Breadcrumb from '@/components/Breadcrumb';
+import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { PRODUCT_DATA } from '@/lib/product-data';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
@@ -191,9 +192,15 @@ export default async function ProductsPage({ params }: { params: { lang: string 
     }))
   );
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `${BASE_URL}/${lang}` },
+    { name: 'Products', url: `${BASE_URL}/${lang}/products` },
+  ]);
+
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[itemListSchema]} />
+      <SEOHead schemas={[itemListSchema, breadcrumbSchema]} />
+      <Breadcrumb lang={lang} slug="products" />
       {/* Page Header */}
       <div className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">

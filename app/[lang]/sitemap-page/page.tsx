@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: SitemapPageProps): Promise<Me
   return {
     title: titles[lang] ?? titles.en,
     description: descriptions[lang] ?? descriptions.en,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `${BASE_URL}/${lang}/sitemap-page`,
       languages: langAlternates,

@@ -2,6 +2,7 @@ export const baseUrl = 'https://www.houseplus-ch.com';
 export const locales = ['en', 'es', 'de', 'fr', 'ar'] as const;
 
 // All static page slugs (single source of truth)
+// Pages marked as noindex (privacy, terms, cookie-policy, sitemap-page) are excluded from sitemap
 export const staticPageSlugs = [
   '', // homepage
   'about-us',
@@ -14,15 +15,19 @@ export const staticPageSlugs = [
   'team',
   'careers',
   'support',
-  'privacy',
-  'terms',
-  'cookie-policy',
-  'sitemap-page',
   'certifications',
   'oem-odm',
   'case-studies',
   'regions',
   'brand',
+];
+
+// Pages that should be noindex (not in sitemap, robots meta noindex)
+export const noIndexPageSlugs = [
+  'privacy',
+  'terms',
+  'cookie-policy',
+  'sitemap-page',
 ];
 
 // Region slugs (must match regionConfigs keys in app/[lang]/regions/[region]/page.tsx)

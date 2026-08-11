@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -132,10 +133,16 @@ export default async function CaseStudiesPage({ params }: { params: { lang: stri
     },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'Case Studies', url: `https://www.houseplus-ch.com/${lang}/case-studies` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
       <main className="min-h-screen bg-white">
+        <Breadcrumb lang={lang} slug="case-studies" />
 
         {/* Hero */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">

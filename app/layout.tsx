@@ -59,6 +59,8 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1d4ed8" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
         <link rel="shortcut icon" href="/favicon.ico" />

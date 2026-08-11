@@ -1,7 +1,8 @@
 import InquiryForm from '../../../components/InquiryForm';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { Metadata } from 'next';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
@@ -53,10 +54,16 @@ export default async function ContactPage({ params }: { params: { lang: string }
     type: 'Organization',
   });
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: 'Contact', url: `https://www.houseplus-ch.com/${lang}/contact` },
+  ]);
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema]} />
+      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
       <main className="min-h-screen py-20 px-4 bg-slate-50">
+        <Breadcrumb lang={lang} slug="contact" />
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
