@@ -86,6 +86,15 @@ export const productSlugs = [
   'gas-electric-hybrid-cooktop',
   'induction-cooktop-2000w-built-in',
   'ceramic-hob-double-zone',
+  // P3 Gas Stoves & Range Hoods expansion (added 2026-08-11)
+  'gas-stove-2-burner-portable',
+  'gas-stove-3-burner',
+  'gas-stove-5-burner-wok',
+  'gas-stove-freestanding-oven',
+  'range-hood-600mm',
+  'range-hood-750mm-inclined',
+  'range-hood-island-900mm',
+  'range-hood-900mm-curved-glass',
 ];
 
 // News slugs
