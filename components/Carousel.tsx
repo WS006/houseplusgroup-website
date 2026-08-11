@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -124,14 +123,10 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             index === currentIndex ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 scale-105 pointer-events-none'
           }`}
         >
-          <Image
+          <img
             src={item.image.filename}
             alt={item.image.alt || item.title}
-            fill
-            className="object-cover brightness-[0.75]"
-            priority={index === 0}
-            sizes="100vw"
-            quality={90}
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.75]"
           />
           {/* Left-aligned gradient overlay for business style */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/65 via-slate-800/40 to-transparent" />

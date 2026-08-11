@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { PRODUCT_DATA } from '@/lib/product-data';
 
 interface RelatedProductsProps {
@@ -62,14 +61,11 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
                 className="group flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all"
               >
                 <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-slate-50">
-                  <Image
+                  <img
                     src={product.coverImage}
                     alt={product.imageAlt || product.name}
                     title={product.imageTitle || product.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="64px"
-                    quality={80}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>

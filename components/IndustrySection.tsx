@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -117,14 +116,11 @@ export default function IndustrySection({
           <div className="flex-1 relative">
             <div className="relative h-[350px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
               {!imgError && imgSrc && (
-                <Image
+                <img
                   src={imgSrc}
                   alt={image.alt || title}
                   title={title}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-1000"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  quality={80}
+                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
                   onError={handleImageError}
                 />

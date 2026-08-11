@@ -65,7 +65,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
     image: {
-      filename: `/images/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', 'headphone-over-ear.jpg'][index]}`,
+      filename: `/images/products/${['solar-panel-500w.jpg', 'induction-cooktop-2000w.jpg', '3c-electronics-banner.jpg'][index]}`,
       alt: item.imageAlt
     },
     title: item.title,

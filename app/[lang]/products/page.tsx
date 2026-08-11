@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
@@ -251,14 +250,11 @@ export default async function ProductsPage({ params }: { params: { lang: string 
                 >
                   {/* Cover Image */}
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
-                    <Image
+                    <img
                       src={product.coverImage}
                       alt={getImageAlt(product)}
                       title={getImageTitle(product)}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      quality={80}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                     {/* Hidden SEO-rich context for search engines */}
