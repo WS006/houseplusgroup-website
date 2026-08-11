@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
+import { localizeImageUrl } from '@/lib/image-utils';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -307,7 +308,7 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
                 'https://images.houseplus-ch.com/factory/assembly-line.jpg',
                 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
               ];
-              const productImg = s.content?.image?.filename || images[idx % images.length];
+              const productImg = localizeImageUrl(s.content?.image?.filename) || images[idx % images.length];
 
               return (
                 <a key={s.uuid} href={`/${lang}/${s.full_slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">

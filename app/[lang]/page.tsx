@@ -5,6 +5,7 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getDictionary } from '@/lib/i18n-config';
+import { localizeCarouselItems } from '@/lib/image-utils';
 import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
 import Link from 'next/link';
@@ -73,7 +74,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
     button_link: { url: '/products', cached_url: '/products' }
   }));
 
-  const displayCarouselItems = carouselItems.length >= 3 ? carouselItems : defaultCarouselItems;
+  const displayCarouselItems = carouselItems.length >= 3 ? localizeCarouselItems(carouselItems) : defaultCarouselItems;
 
   const organizationSchema = generateOrganizationSchema({
     title: 'HousePlus',
