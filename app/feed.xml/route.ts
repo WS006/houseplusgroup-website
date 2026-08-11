@@ -42,7 +42,7 @@ export async function GET() {
       <pubDate>${pubDate}</pubDate>
       <description>${description}</description>
       <content:encoded><![CDATA[
-        <img src="${post.heroImage}" alt="${escapeXml(post.heroImageAlt)}" style="max-width:100%;height:auto;" />
+        <img src="${baseUrl}${post.heroImage}" alt="${escapeXml(post.heroImageAlt)}" style="max-width:100%;height:auto;" />
         ${contentHtml}
       ]]></content:encoded>
       <category>${category}</category>

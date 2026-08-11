@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Solar Energy Systems',
   heroImage:
-    'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
+    '/images/products/solar-panel-500w.jpg',
   heroImageAlt:
     'HousePlus monocrystalline solar panels stacked in warehouse ready for wholesale export',
   sections: [
@@ -146,19 +146,19 @@ const article: BlogPost = {
       slug: 'monocrystalline-solar-panel-500w',
       name: '500W Monocrystalline Solar Panel',
       desc: 'High-efficiency 21.5% PERC monocrystalline panel with 12-year warranty',
-      image: 'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
+      image: '/images/products/solar-panel-500w.jpg',
     },
     {
       slug: 'monocrystalline-solar-panel-450w',
       name: '450W Monocrystalline Solar Panel',
       desc: 'Tier-1 grade A cells, CE & IEC certified, ideal for commercial projects',
-      image: 'https://images.houseplus-ch.com/products/solar-panel-500w.jpg',
+      image: '/images/products/solar-panel-500w.jpg',
     },
     {
       slug: 'solar-panel-100w-portable',
       name: '100W Portable Solar Panel',
       desc: 'Foldable monocrystalline panel for off-grid and mobile applications',
-      image: 'https://images.houseplus-ch.com/products/solar-panel-100w.jpg',
+      image: '/images/products/solar-panel-100w.jpg',
     },
   ],
 };

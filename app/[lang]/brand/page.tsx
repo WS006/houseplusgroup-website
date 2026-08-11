@@ -200,7 +200,7 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.houseplus-ch.com/factory/production-line.jpg"
+                  src="/images/factory/production-line.jpg"
                   alt="HousePlus Group manufacturing facility in Guangdong, China"
                   fill
                   className="object-cover"

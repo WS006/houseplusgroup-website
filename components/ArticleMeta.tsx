@@ -54,7 +54,7 @@ export default function ArticleMeta({
   const t = labels[lang] || labels.en;
   const isRTL = lang === 'ar';
   const isModified = datePublished !== dateModified;
-  const avatar = authorImage || 'https://images.houseplus-ch.com/site/team-working-together.jpg';
+  const avatar = authorImage || '/images/site/team-working-together.jpg';
 
   return (
     <div className={`flex flex-wrap items-center gap-4 ${className} ${isRTL ? 'rtl' : 'ltr'}`}>

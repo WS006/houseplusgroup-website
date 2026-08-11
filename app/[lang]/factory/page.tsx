@@ -135,7 +135,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.houseplus-ch.com/articles/service/factory-assembly-workers.jpg"
+                  src="/images/articles/service/factory-assembly-workers.jpg"
                   alt="HousePlus main production line"
                   title="HousePlus main production line"
                   fill
@@ -175,9 +175,9 @@ export default async function FactoryPage({ params }: { params: { lang: string }
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { src: 'https://images.houseplus-ch.com/factory/production-line.jpg', alt: 'Assembly line — precision manufacturing' },
-                { src: 'https://images.houseplus-ch.com/factory/assembly-line.jpg', alt: 'Quality control laboratory' },
-                { src: 'https://images.houseplus-ch.com/factory/production-line.jpg', alt: 'Automated production equipment' },
+                { src: '/images/factory/production-line.jpg', alt: 'Assembly line — precision manufacturing' },
+                { src: '/images/factory/assembly-line.jpg', alt: 'Quality control laboratory' },
+                { src: '/images/factory/production-line.jpg', alt: 'Automated production equipment' },
               ].map((img) => (
                 <div key={img.src} className="relative h-60 rounded-2xl overflow-hidden shadow-md border border-slate-100">
                   <Image
@@ -240,7 +240,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <Image
-                  src="https://images.houseplus-ch.com/factory/assembly-line.jpg"
+                  src="/images/factory/assembly-line.jpg"
                   alt="HousePlus quality assurance lab"
                   title="HousePlus quality assurance lab"
                   fill

@@ -22,8 +22,8 @@ export async function GET() {
       <g:title><![CDATA[${product.name} | HousePlus Wholesale]]></g:title>
       <g:description><![CDATA[${product.geoDescription || product.description}]]></g:description>
       <g:link>${BASE_URL}/en/products/${slug}</g:link>
-      <g:image_link>${product.coverImage}</g:image_link>
-      <g:additional_image_link>${product.coverImage}</g:additional_image_link>
+      <g:image_link>${BASE_URL}${product.coverImage}</g:image_link>
+      <g:additional_image_link>${BASE_URL}${product.coverImage}</g:additional_image_link>
       <g:availability>${availability}</g:availability>
       <g:price>${price}.00 USD</g:price>
       <g:brand>HousePlus</g:brand>

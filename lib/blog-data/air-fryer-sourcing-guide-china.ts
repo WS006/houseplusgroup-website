@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:
-    'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+    '/images/products/air-fryer-5-8l.jpg',
   heroImageAlt:
     'Various air fryer models on display at HousePlus appliance factory showing different capacities and designs for OEM export',
   sections: [
@@ -134,19 +134,19 @@ const article: BlogPost = {
       slug: 'air-fryer-6l-digital',
       name: '6L Digital Air Fryer',
       desc: '1700W, 8 presets, rapid air technology, PFOA-free basket, CE/RoHS certified',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: '/images/products/air-fryer-5-8l.jpg',
     },
     {
       slug: 'air-fryer-8l-touchscreen',
       name: '8L Touchscreen Air Fryer',
       desc: '1800W, large family size, 10 presets, dehydrate function, ETL certified',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: '/images/products/air-fryer-5-8l.jpg',
     },
     {
       slug: 'air-fryer-35l-compact',
       name: '3.5L Compact Air Fryer',
       desc: '1200W, space-saving design, ideal for small households, 6 presets',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: '/images/products/air-fryer-5-8l.jpg',
     },
   ],
 };

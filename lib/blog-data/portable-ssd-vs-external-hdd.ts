@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: '3C Electronics',
   heroImage:
-    'https://images.houseplus-ch.com/products/portable-ssd-1tb.jpg',
+    '/images/products/portable-ssd-1tb.jpg',
   heroImageAlt:
     'Portable SSD drive compared to external HDD hard disk drive showing speed and durability differences',
   sections: [
@@ -135,21 +135,21 @@ const article: BlogPost = {
       name: '1TB Portable SSD USB-C',
       desc: 'USB 3.2 Gen 2, 1050MB/s read, TLC NAND, CE/FCC/RoHS certified',
       image:
-        'https://images.houseplus-ch.com/products/portable-ssd-1tb.jpg',
+        '/images/products/portable-ssd-1tb.jpg',
     },
     {
       slug: 'portable-ssd-2tb-type-c',
       name: '2TB Portable SSD Type-C',
       desc: 'NVMe-based, 1000MB/s, aluminum housing, shock resistant up to 2m',
       image:
-        'https://images.houseplus-ch.com/products/portable-ssd-1tb.jpg',
+        '/images/products/portable-ssd-1tb.jpg',
     },
     {
       slug: 'power-bank-20000mah-fast-charge',
       name: '20000mAh Power Bank PD Fast Charge',
       desc: '22.5W PD, USB-C input/output, dual USB-A ports, LED display',
       image:
-        'https://images.houseplus-ch.com/products/power-bank-60w-pd.jpg',
+        '/images/products/power-bank-60w-pd.jpg',
     },
   ],
 };

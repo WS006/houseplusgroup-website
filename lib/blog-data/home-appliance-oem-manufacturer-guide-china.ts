@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '11 min read',
   category: 'Home Appliances',
   heroImage:
-    'https://images.houseplus-ch.com/articles/appliances/home-appliance-manufacturing-line.jpg',
+    '/images/articles/appliances/home-appliance-manufacturing-line.jpg',
   heroImageAlt:
     'HousePlus home appliance manufacturing facility showing air fryer and kitchen appliance assembly lines in Zhongshan China',
   sections: [
@@ -144,20 +144,20 @@ const article: BlogPost = {
       slug: 'air-fryer-6l-digital',
       name: '6L Digital Air Fryer OEM',
       desc: '1700W, 8 presets, rapid air technology, FDA/CE/RoHS certified, MOQ 500 pcs',
-      image: 'https://images.houseplus-ch.com/products/air-fryer-5-8l.jpg',
+      image: '/images/products/air-fryer-5-8l.jpg',
     },
     {
       slug: 'electric-kettle-1.7l-stainless',
       name: '1.7L Stainless Steel Electric Kettle',
       desc: '2200W, fast boil, auto shut-off, STRIX controller, CE/ETL certified',
       image:
-        'https://images.houseplus-ch.com/products/electric-kettle-1-5l.jpg',
+        '/images/products/electric-kettle-1-5l.jpg',
     },
     {
       slug: 'rice-cooker-5l-smart',
       name: '5L Smart Rice Cooker',
       desc: 'IH heating, 12 cooking modes, LED display, PFC non-stick inner pot',
-      image: 'https://images.houseplus-ch.com/products/product-rice-cooker.jpg',
+      image: '/images/products/product-rice-cooker.jpg',
     },
   ],
 };

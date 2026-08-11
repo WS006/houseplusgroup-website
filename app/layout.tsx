@@ -77,11 +77,6 @@ export default function RootLayout({
         />
         <link
           rel="preconnect"
-          href="https://images.houseplus-ch.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preconnect"
           href="https://a.storyblok.com"
           crossOrigin="anonymous"
         />
