@@ -82,6 +82,10 @@ export const productSlugs = [
   'microwave-oven-25l',
   'gas-water-heater-12l',
   'range-hood-900mm',
+  // P2 Cooktops & Hobs (added 2026-08-11)
+  'gas-electric-hybrid-cooktop',
+  'induction-cooktop-2000w-built-in',
+  'ceramic-hob-double-zone',
 ];
 
 // News slugs
