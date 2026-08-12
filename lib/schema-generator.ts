@@ -3,6 +3,7 @@ import { r2MediaUrl } from './r2-media-map';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
+const OFFICIAL_HORIZONTAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
 
 interface SchemaOptions {
   title: string;
@@ -25,10 +26,13 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     url: BASE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: r2MediaUrl('/logo.png'),
-      contentUrl: r2MediaUrl('/logo.png'),
-      width: 512,
-      height: 512,
+      '@id': `${OFFICIAL_HORIZONTAL_LOGO}#logo`,
+      url: OFFICIAL_HORIZONTAL_LOGO,
+      contentUrl: OFFICIAL_HORIZONTAL_LOGO,
+      width: 611,
+      height: 246,
+      caption: 'Official HousePlus Group horizontal logo',
+      representativeOfPage: true,
       license: `${BASE_URL}/terms`,
       copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     },

@@ -179,12 +179,67 @@ const footerContent: Record<string, FooterContent> = {
   },
 };
 
+const BASE_URL = 'https://www.houseplus-ch.com';
+const FOOTER_LOGO_URL = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
+
 export default function Footer({ lang }: { lang: string }) {
   const content = footerContent[lang] || footerContent.en;
   const isRTL = lang === 'ar';
+  const localizedUrl = (href: string) => `${BASE_URL}/${lang}${href}`.replace(/([^:]\/)\/+/, '$1');
+  const footerLinks = [...content.quickLinks, ...content.company];
+  const footerSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${BASE_URL}/#organization`,
+        name: 'HousePlus Group',
+        alternateName: 'HousePlus',
+        url: BASE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          '@id': `${FOOTER_LOGO_URL}#logo`,
+          url: FOOTER_LOGO_URL,
+          contentUrl: FOOTER_LOGO_URL,
+          width: 611,
+          height: 246,
+          caption: 'Official HousePlus Group horizontal logo',
+          representativeOfPage: true,
+          copyrightHolder: { '@id': `${BASE_URL}/#organization` },
+          license: `${BASE_URL}/terms`,
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          telephone: '+86-155-7811-9543',
+          email: 'jack@houseplus-ch.com',
+          availableLanguage: ['English', 'Chinese'],
+          areaServed: 'Worldwide',
+        },
+        sameAs: [
+          'https://www.facebook.com/houseplusgroup',
+          'https://www.linkedin.com/company/houseplus-group',
+          'https://www.youtube.com/@houseplusgroup',
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${BASE_URL}/#footer-navigation-${lang}`,
+        name: 'HousePlus footer navigation',
+        inLanguage: lang,
+        itemListElement: footerLinks.map((link, index) => ({
+          '@type': 'SiteNavigationElement',
+          position: index + 1,
+          name: link.label,
+          url: localizedUrl(link.href),
+        })),
+      },
+    ],
+  };
 
   return (
-    <footer className={`bg-slate-900 text-slate-400 py-16 ${isRTL ? 'rtl' : 'ltr'}`}>
+    <footer id="site-footer" role="contentinfo" aria-label="HousePlus site footer" className={`bg-slate-900 text-slate-400 py-16 ${isRTL ? 'rtl' : 'ltr'}`}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(footerSchema) }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -204,18 +259,18 @@ export default function Footer({ lang }: { lang: string }) {
             <p className="text-sm leading-relaxed mb-6">
               Professional HousePlus manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.
             </p>
-            <div className="flex gap-4">
-              <a href="https://wa.me/8615578119543" aria-label="WhatsApp" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">W</a>
-              <a href="mailto:jack@houseplus-ch.com" aria-label="Email" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">@</a>
-              <a href="https://www.facebook.com/houseplusgroup" aria-label="Facebook" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">f</a>
-              <a href="https://www.linkedin.com/company/houseplus-group" aria-label="LinkedIn" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">in</a>
-              <a href="https://www.youtube.com/@houseplusgroup" aria-label="YouTube" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white">Y</a>
-            </div>
+            <nav aria-label="HousePlus social and contact channels" className={`flex gap-4 ${isRTL ? 'justify-end' : ''}`}>
+              <a href="https://wa.me/8615578119543" aria-label="Contact HousePlus on WhatsApp" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white"><span aria-hidden="true">W</span></a>
+              <a href="mailto:jack@houseplus-ch.com" aria-label="Email the HousePlus sales team" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white"><span aria-hidden="true">@</span></a>
+              <a href="https://www.facebook.com/houseplusgroup" aria-label="Visit HousePlus on Facebook" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white"><span aria-hidden="true">f</span></a>
+              <a href="https://www.linkedin.com/company/houseplus-group" aria-label="Visit HousePlus on LinkedIn" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white"><span aria-hidden="true">in</span></a>
+              <a href="https://www.youtube.com/@houseplusgroup" aria-label="Visit HousePlus on YouTube" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-white"><span aria-hidden="true">Y</span></a>
+            </nav>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
+          <nav aria-labelledby="footer-quick-links-heading" className={isRTL ? 'text-right' : ''}>
+            <h2 id="footer-quick-links-heading" className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h2>
             <ul className="space-y-4">
               {content.quickLinks.map((link) => (
                 <li key={link.href}>
@@ -225,11 +280,11 @@ export default function Footer({ lang }: { lang: string }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Company */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">HousePlus Group</h4>
+          <nav aria-labelledby="footer-company-links-heading" className={isRTL ? 'text-right' : ''}>
+            <h2 id="footer-company-links-heading" className="text-white font-bold mb-6 uppercase tracking-widest text-xs">HousePlus Group</h2>
             <ul className="space-y-4">
               {content.company.map((link) => (
                 <li key={link.href}>
@@ -239,17 +294,17 @@ export default function Footer({ lang }: { lang: string }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Direct Support</h4>
+          <section aria-labelledby="footer-support-heading" className={isRTL ? 'text-right' : ''}>
+            <h2 id="footer-support-heading" className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Direct Support</h2>
             <ul className="space-y-4">
               {content.contact.map((item, idx) => (
                 <li key={idx} className="text-sm">
                   <span className="block text-slate-500 text-xs mb-1">{item.label}</span>
                   {item.href ? (
-                    <a href={item.href} className="text-white font-medium hover:text-blue-400 transition-colors">
+                    <a href={item.href} aria-label={`${item.label}: ${item.value}`} className="text-white font-medium hover:text-blue-400 transition-colors">
                       {item.value}
                     </a>
                   ) : (
@@ -258,17 +313,17 @@ export default function Footer({ lang }: { lang: string }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className={`pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
           <p className="text-xs text-slate-500">{content.copyright}</p>
-          <div className="flex gap-6">
+          <nav aria-label="Footer legal links" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href={`/${lang}/sitemap-page`} className="text-xs text-slate-500 hover:text-white">Sitemap</Link>
             <Link href={`/${lang}/privacy`} className="text-xs text-slate-500 hover:text-white">Privacy</Link>
             <Link href={`/${lang}/terms`} className="text-xs text-slate-500 hover:text-white">Terms</Link>
             <Link href={`/${lang}/cookie-policy`} className="text-xs text-slate-500 hover:text-white">Cookies</Link>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>
