@@ -52,12 +52,24 @@ function normalizePublicSlug(value) {
 
 async function getPublicAsset(env, identifier) {
   return env.MEDIA_DB.prepare(
-    'SELECT asset_id, public_slug, r2_key, content_type, original_filename, status FROM assets WHERE asset_id = ? OR public_slug = ? LIMIT 1'
+    'SELECT asset_id, public_slug, r2_key, content_type, original_filename, status, metadata_json FROM assets WHERE asset_id = ? OR public_slug = ? LIMIT 1'
   ).bind(identifier, identifier).first();
 }
 
 function publicMediaUrl(asset) {
   return `${PUBLIC_MEDIA_ORIGIN}/media/${asset.public_slug || asset.asset_id}/`;
+}
+
+function assetMetadata(asset) {
+  try {
+    return asset.metadata_json ? JSON.parse(asset.metadata_json) : {};
+  } catch {
+    return {};
+  }
+}
+
+function webpVariantKey(asset) {
+  return assetMetadata(asset)?.variants?.webp_1920?.key || null;
 }
 
 async function listAssets(env, filters, isAdmin) {
@@ -110,17 +122,24 @@ async function updateAssetStatus(env, assetId, status, seoIndexable) {
 async function serveMedia(request, env, identifier, allowUnapproved = false) {
   const asset = await getPublicAsset(env, identifier);
   if (!asset || (!allowUnapproved && asset.status !== 'approved')) return json({ error: 'Media asset not found' }, 404, getCorsHeaders(request));
-  const object = await env.MEDIA_BUCKET.get(asset.r2_key, { range: request.headers });
+  const acceptsWebp = /image\/webp/i.test(request.headers.get('accept') || '');
+  const variantKey = acceptsWebp ? webpVariantKey(asset) : null;
+  const variant = variantKey ? await env.MEDIA_BUCKET.get(variantKey, { range: request.headers }) : null;
+  const object = variant || await env.MEDIA_BUCKET.get(asset.r2_key, { range: request.headers });
   if (!object) return json({ error: 'Media object unavailable' }, 404, getCorsHeaders(request));
+  const isWebp = Boolean(variant);
+  const deliveryName = isWebp ? asset.original_filename.replace(/\.[a-z0-9]{2,5}$/i, '.webp') : asset.original_filename;
   const headers = new Headers({
-    'content-type': asset.content_type || 'application/octet-stream',
-    'content-disposition': `inline; filename="${asset.original_filename.replaceAll('"', '')}"`,
+    'content-type': isWebp ? 'image/webp' : (asset.content_type || 'application/octet-stream'),
+    'content-disposition': `inline; filename="${deliveryName.replaceAll('"', '')}"`,
     'cache-control': 'public, max-age=31536000, immutable',
     'etag': object.httpEtag,
+    'vary': 'Accept',
     'x-content-type-options': 'nosniff',
   });
   object.writeHttpMetadata(headers);
-  return new Response('body' in object ? object.body : null, { status: 'body' in object ? 200 : 412, headers });
+  headers.set('content-type', isWebp ? 'image/webp' : (asset.content_type || 'application/octet-stream'));
+  return new Response(request.method === 'HEAD' ? null : ('body' in object ? object.body : null), { status: 'body' in object ? 200 : 412, headers });
 }
 
 async function imageSitemap(request, env) {
@@ -180,6 +199,7 @@ export default {
 
     const assetMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)$/);
     const relationMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)\/relations\/?$/);
+    const webpVariantMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)\/variants\/webp-1920\/?$/);
     if (request.method === 'GET' && assetMatch) {
       const asset = await getAsset(env, assetMatch[1]);
       if (!asset || (!isAdmin && asset.status !== 'approved')) return json({ error: 'Asset not found' }, 404, cors);
@@ -189,6 +209,20 @@ export default {
     }
 
     if (!isAdmin) return json({ error: 'Admin authorization required' }, 401, cors);
+
+    if (request.method === 'POST' && webpVariantMatch) {
+      const asset = await getAsset(env, webpVariantMatch[1]);
+      if (!asset) return json({ error: 'Asset not found' }, 404, cors);
+      if (request.headers.get('content-type') !== 'image/webp') return json({ error: 'WebP upload required' }, 415, cors);
+      const key = `variants/${asset.asset_id}/webp-1920.webp`;
+      const object = await env.MEDIA_BUCKET.put(key, request.body, { httpMetadata: { contentType: 'image/webp' } });
+      if (!object) return json({ error: 'Variant upload precondition failed' }, 412, cors);
+      const metadata = assetMetadata(asset);
+      metadata.variants = { ...(metadata.variants || {}), webp_1920: { key, size: object.size, updated_at: new Date().toISOString() } };
+      await env.MEDIA_DB.prepare('UPDATE assets SET metadata_json = ?, updated_at = CURRENT_TIMESTAMP WHERE asset_id = ?').bind(JSON.stringify(metadata), asset.asset_id).run();
+      await audit(env, asset.asset_id, 'webp_variant_uploaded', { key, size: object.size });
+      return json({ asset_id: asset.asset_id, key, size: object.size, content_type: 'image/webp' }, 201, cors);
+    }
 
     if (request.method === 'POST' && url.pathname === '/v1/upload') {
       const filename = request.headers.get('x-filename') || `asset-${crypto.randomUUID()}`;
