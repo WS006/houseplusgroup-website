@@ -3,7 +3,7 @@ import { getStoryblokApi, renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
 import { localizeImageUrl } from '@/lib/image-utils';
 import SEOHead from '@/components/SEOHead';
-import { generateImageObjectSchema } from '@/lib/schema-generator';
+import { generateImageObjectSchema, generateWebPageSchema } from '@/lib/schema-generator';
 import { getR2MediaDetails, r2ImageDimensions } from '@/lib/r2-media-details';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
@@ -304,23 +304,35 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
   const fallbackImage = PAGE_IMAGE_BY_TYPE[fullSlug.split('/')[0]] || DEFAULT_PAGE_IMAGE;
   const pageImage = localizeImageUrl(story?.content?.image?.filename) || fallbackImage;
   const pageImageDetails = getR2MediaDetails(pageImage);
+  const pageTitle = story?.content?.title || story?.name || fullSlug.split('/').pop()?.toUpperCase() || 'HousePlus';
+  const pageDescription = story?.content?.description || 'Professional HousePlus B2B manufacturing, product or service solution designed for reliability and performance.';
+  const canonicalUrl = `https://www.houseplus-ch.com/${lang}/${fullSlug}`;
   const pageImageSchema = generateImageObjectSchema({
     url: pageImage,
-    caption: pageImageDetails?.title || story?.content?.title || story?.name || 'HousePlus visual evidence',
-    description: pageImageDetails?.description || story?.content?.description || 'HousePlus B2B manufacturing, product or service visual evidence.',
+    caption: pageImageDetails?.title || pageTitle,
+    description: pageImageDetails?.description || pageDescription,
+  });
+  const pageSchema = generateWebPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    lang,
+    image: pageImage,
+    type: fullSlug.startsWith('about-us') ? 'AboutPage' : fullSlug.startsWith('contact') ? 'ContactPage' : fullSlug.startsWith('service') ? 'Service' : 'WebPage',
+    about: [fullSlug.split('/')[0].replace(/-/g, ' '), 'HousePlus B2B manufacturing'],
   });
 
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[pageImageSchema]}/>
+      <SEOHead schemas={[pageSchema, pageImageSchema]}/>
       {/* Hero */}
       <div className="bg-slate-50 py-24 px-4 border-b border-slate-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 tracking-tight">
-            {story?.content?.title || story?.name || fullSlug.split('/').pop()?.toUpperCase() || 'HousePlus'}
+            {pageTitle}
           </h1>
           <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
-            {story?.content?.description || 'Professional HousePlus grade solution designed for reliability and performance.'}
+            {pageDescription}
           </p>
         </div>
       </div>

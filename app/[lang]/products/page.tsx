@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
-import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
 
@@ -218,6 +218,15 @@ export default async function ProductsPage({ params }: { params: { lang: string 
     }))
   );
 
+  const catalogSchema = generateCollectionPageSchema({
+    name: 'HousePlus Complete Product Catalogue',
+    description: 'Solar energy systems, home appliances and 3C electronics for global wholesale buyers.',
+    url: `${BASE_URL}/${lang}/products`,
+    lang,
+    image: products[0]?.coverImage,
+    categories: ['Solar Energy Systems', 'Home Appliances', '3C Electronics'],
+  });
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: `${BASE_URL}/${lang}` },
     { name: 'Products', url: `${BASE_URL}/${lang}/products` },
@@ -225,7 +234,7 @@ export default async function ProductsPage({ params }: { params: { lang: string 
 
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[itemListSchema, breadcrumbSchema]} />
+      <SEOHead schemas={[catalogSchema, itemListSchema, breadcrumbSchema]} />
       <Breadcrumb lang={lang} slug="products" />
       {/* Page Header */}
       <div className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">

@@ -225,23 +225,6 @@ export interface ProductSchemaOptions {
 }
 
 
-function getProductPrice(category?: string, sku?: string): number {
-  const basePrices: Record<string, number> = {
-    solar: 180,
-    appliances: 75,
-    electronics: 35,
-  };
-  const base = category && basePrices[category] ? basePrices[category] : 100;
-  if (!sku) return base;
-  let hash = 0;
-  for (let i = 0; i < sku.length; i++) {
-    hash = ((hash << 5) - hash) + sku.charCodeAt(i);
-    hash = hash & hash;
-  }
-  const variation = Math.abs(hash) % 50 - 25;
-  return Math.max(15, base + variation);
-}
-
 export function generateProductSchema(options: ProductSchemaOptions) {
   const {
     name,
@@ -331,6 +314,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `${url}#product`,
     name,
     description,
     image: image,
@@ -370,38 +354,17 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     category,
     offers: {
       '@type': 'Offer',
+      '@id': `${url}#offer`,
       url,
-      price: getProductPrice(category, sku),
-      priceCurrency: 'USD',
-      priceValidUntil: new Date(new Date().getFullYear() + 1, 11, 31)
-        .toISOString()
-        .split('T')[0],
       availability: `https://schema.org/${availability}`,
-      seller: {
-        '@type': 'Organization',
-        name: 'HousePlus Group',
-        url: BASE_URL,
-      },
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: getProductPrice(category, sku),
-        priceCurrency: 'USD',
-        referenceQuantity: {
-          '@type': 'QuantitativeValue',
-          value: 1,
-          unitCode: 'H87',
-        },
-      },
-      eligibleQuantity: {
-        '@type': 'QuantitativeValue',
-        minValue: b2bInfo?.moq ? parseInt(b2bInfo.moq) : 100,
-        unitCode: 'H87',
-      },
       itemCondition: 'https://schema.org/NewCondition',
-      ...(b2bInfo?.moq && { minimumOrderQuantity: { '@type': 'QuantitativeValue', value: b2bInfo.moq.replace(/\D/g, '') } }),
+      businessFunction: 'https://purl.org/goodrelations/v1#Sell',
+      seller: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group', url: BASE_URL },
+      ...(b2bInfo?.moq && { eligibleQuantity: { '@type': 'QuantitativeValue', minValue: Number(b2bInfo.moq.replace(/\D/g, '')) || undefined, unitCode: 'H87' } }),
     },
     manufacturer: {
       '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
       name: 'HousePlus Group',
       url: BASE_URL,
       address: {
@@ -413,6 +376,8 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       ...(b2bInfo?.foundedYear && { foundingDate: String(b2bInfo.foundedYear) }),
       ...(b2bInfo?.exportCountries && { areaServed: `${b2bInfo.exportCountries}+ countries worldwide` }),
     },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    isRelatedTo: { '@id': `${BASE_URL}/#organization` },
     ...(additionalProperty.length > 0 && { additionalProperty }),
   };
 }
@@ -527,6 +492,7 @@ export function generateItemListSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
+    '@id': `${url}#itemlist`,
     name,
     description,
     url,
@@ -539,6 +505,61 @@ export function generateItemListSchema(
       image: item.image,
       description: item.description,
     })),
+  };
+}
+
+export interface CollectionPageSchemaOptions {
+  name: string;
+  description: string;
+  url: string;
+  lang: string;
+  image?: string;
+  itemListId?: string;
+  categories?: string[];
+}
+
+export function generateCollectionPageSchema(options: CollectionPageSchemaOptions) {
+  const { name, description, url, lang, image = DEFAULT_SOCIAL_IMAGE, itemListId = `${url}#itemlist`, categories = [] } = options;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: lang,
+    isPartOf: { '@id': `${BASE_URL}/#website` },
+    publisher: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    mainEntity: { '@id': itemListId },
+    primaryImageOfPage: { '@type': 'ImageObject', '@id': `${image}#image`, url: image, contentUrl: image },
+    ...(categories.length > 0 && { about: categories.map((category) => ({ '@type': 'Thing', name: category })) }),
+  };
+}
+
+export interface WebPageSchemaOptions {
+  name: string;
+  description: string;
+  url: string;
+  lang: string;
+  image?: string;
+  type?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'Service';
+  about?: string[];
+}
+
+export function generateWebPageSchema(options: WebPageSchemaOptions) {
+  const { name, description, url, lang, image = DEFAULT_SOCIAL_IMAGE, type = 'WebPage', about = [] } = options;
+  return {
+    '@context': 'https://schema.org',
+    '@type': type,
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: lang,
+    isPartOf: { '@id': `${BASE_URL}/#website` },
+    publisher: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    primaryImageOfPage: { '@type': 'ImageObject', '@id': `${image}#image`, url: image, contentUrl: image },
+    ...(about.length > 0 && { about: about.map((topic) => ({ '@type': 'Thing', name: topic })) }),
   };
 }
 
@@ -567,11 +588,14 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     authorImage = 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
     url = BASE_URL,
   } = options;
+  const inferredLanguage = (() => {
+    try { return new URL(url).pathname.split('/').filter(Boolean)[0] || 'en'; } catch { return 'en'; }
+  })();
 
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    '@id': url,
+    '@id': `${url}#article`,
     headline,
     description,
     image: image || DEFAULT_SOCIAL_IMAGE,
@@ -606,8 +630,11 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
       },
       };
     })(),
-    datePublished: datePublished || new Date().toISOString(),
-    dateModified: dateModified || new Date().toISOString(),
+    ...(datePublished && { datePublished }),
+    ...(dateModified && { dateModified }),
+    inLanguage: inferredLanguage,
+    isPartOf: { '@id': `${BASE_URL}/#website` },
+    about: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     author: {
       '@type': 'Person',
       '@id': authorUrl,
@@ -640,9 +667,8 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': url,
+      '@id': `${url}#webpage`,
     },
-    articleBody: description,
   };
 }
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateArticleSchema, generateImageObjectSchema } from '@/lib/schema-generator';
+import { generateArticleSchema, generateFAQSchema, generateImageObjectSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
@@ -332,10 +332,13 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
     width: 1200,
     height: 675,
   });
+  const faqSchema = content.faqs?.length
+    ? generateFAQSchema(content.faqs.map((faq: any) => ({ question: faq.q, answer: faq.a })))
+    : null;
 
   return (
     <main className="min-h-screen bg-white">
-      <SchemaRenderer schemas={[articleSchema, imageObjectSchema]} />
+      <SchemaRenderer schemas={[articleSchema, imageObjectSchema, ...(faqSchema ? [faqSchema] : [])]} />
       <header className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-4 pb-20 pt-20 text-white md:pb-28 md:pt-28">
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
