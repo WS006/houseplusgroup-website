@@ -4,7 +4,8 @@ import { baseUrl } from './urls';
 import { addSubmissionHistory, isRecentlySubmitted } from './submission-history';
 
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '084fadfd7e4a435b942858f905846430';
-const GOOGLE_SITE_URL = process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL || baseUrl;
+// The Search Console property is a Domain property, not the www URL-prefix property.
+const GOOGLE_SITE_URL = process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL || 'sc-domain:houseplus-ch.com';
 const CANONICAL_SITEMAP_URL = `${baseUrl}/sitemap.xml`;
 
 type TriggeredBy = 'manual' | 'auto' | 'scheduled';
@@ -21,6 +22,7 @@ interface GoogleSitemapStatus {
   available: boolean;
   serviceAccountEmail?: string;
   googleCloudProjectId?: string;
+  searchConsoleProperty?: string;
   message: string;
   sitemap?: {
     path?: string;
@@ -194,7 +196,7 @@ async function submitGoogleSitemap(): Promise<{ success: boolean; statusCode?: n
 export async function getGoogleSearchConsoleStatus(): Promise<GoogleSitemapStatus> {
   const serviceAccount = getGoogleServiceAccount();
   if (!serviceAccount) return { configured: false, available: false, message: 'Google Search Console service account is not configured' };
-  const identity = { serviceAccountEmail: serviceAccount.client_email, googleCloudProjectId: serviceAccount.project_id };
+  const identity = { serviceAccountEmail: serviceAccount.client_email, googleCloudProjectId: serviceAccount.project_id, searchConsoleProperty: GOOGLE_SITE_URL };
   const accessToken = await getGoogleAccessToken(serviceAccount);
   if (!accessToken) return { configured: true, available: false, ...identity, message: 'Google Search Console access token could not be created' };
 
