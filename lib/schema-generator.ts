@@ -2,7 +2,7 @@ import { getR2MediaDetails, r2ImageDimensions } from './r2-media-details';
 import { r2MediaUrl } from './r2-media-map';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
-const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/';
+const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
 
 interface SchemaOptions {
   title: string;
@@ -560,7 +560,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     dateModified,
     authorName = 'Jack Hu',
     authorUrl = `${BASE_URL}/en/author/jack-hu`,
-    authorImage = 'https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7/',
+    authorImage = 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
     url = BASE_URL,
   } = options;
 

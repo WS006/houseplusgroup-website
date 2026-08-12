@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '8 min read',
   category: 'Certification Guide',
   heroImage:
-    'https://images.houseplus-ch.com/media/9547b8fb-b6d7-488c-95c3-a156e7c1a937/',
+    'https://images.houseplus-ch.com/media/houseplus-articles-covers-ce-certification-solar-panels-guide-b2b-guide/',
   heroImageAlt:
     'Solar panel compliance testing in a professional certification laboratory',
   sections: [
@@ -120,21 +120,21 @@ const article: BlogPost = {
       name: '450W CE-Certified Monocrystalline Solar Panel',
       desc: 'IEC 61215 & IEC 61730 certified, CE marked, RoHS compliant',
       image:
-        'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
+        'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
     },
     {
       slug: 'monocrystalline-solar-panel-550w',
       name: '550W CE-Certified PERC Solar Panel',
       desc: 'Full CE documentation, UL and IEC certified for global markets',
       image:
-        'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
+        'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
     },
     {
       slug: 'solar-panel-200w-flexible',
       name: '200W Flexible CE-Certified Solar Panel',
       desc: 'Lightweight flexible panel with CE and RoHS certification',
       image:
-        'https://images.houseplus-ch.com/media/524e182e-6794-475d-b75f-563d55031eec/',
+        'https://images.houseplus-ch.com/media/houseplus-foldable-solar-panel-200w-wholesale/',
     },
   ],
 };

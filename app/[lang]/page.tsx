@@ -82,7 +82,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
           <div className="max-w-5xl mx-auto">
             <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-blue-100/80 ring-1 ring-blue-100">
               <img
-                src="https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7/"
+                src="https://images.houseplus-ch.com/media/houseplus-group-logo/"
                 alt="HousePlus logo"
                 title="HousePlus global wholesale manufacturer logo"
                 className="h-16 w-auto object-contain md:h-20"
@@ -150,7 +150,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
               key={index}
               title={industry.title}
               description={industry.description}
-              image={{ filename: ['https://images.houseplus-ch.com/media/8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d/', 'https://images.houseplus-ch.com/media/5735b9be-6402-4007-bc79-fc2ee8581f7b/', 'https://images.houseplus-ch.com/media/6b234004-d413-4690-8a78-4a3fbbf299f4/'][index], alt: industry.title }}
+              image={{ filename: ['https://images.houseplus-ch.com/media/houseplus-solar-panel-1-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-home-home-appliances-collection-b/', 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/'][index], alt: industry.title }}
               industry_type={['solar', 'appliances', 'electronics'][index] as 'solar' | 'appliances' | 'electronics'}
               button_link={`/${lang}/products?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
               button_text={industry.buttonText}

@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '12 min read',
   category: 'Procurement Guide',
   heroImage:
-    'https://images.houseplus-ch.com/media/479fc9ee-005a-4fb4-aa60-80180c522a2c/',
+    'https://images.houseplus-ch.com/media/houseplus-articles-covers-how-to-choose-solar-panel-manufacturer-china-b2b-guide/',
   heroImageAlt:
     'Procurement review of solar panel quality at a module factory',
   sections: [
@@ -161,19 +161,19 @@ const article: BlogPost = {
       slug: 'monocrystalline-solar-panel-500w',
       name: '500W Monocrystalline Solar Panel',
       desc: 'High-efficiency 21.5% PERC monocrystalline panel with 12-year warranty',
-      image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
     },
     {
       slug: 'monocrystalline-solar-panel-450w',
       name: '450W Monocrystalline Solar Panel',
       desc: 'Tier-1 grade A cells, CE & IEC certified, ideal for commercial projects',
-      image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
     },
     {
       slug: 'solar-panel-100w-portable',
       name: '100W Portable Solar Panel',
       desc: 'Foldable monocrystalline panel for off-grid and mobile applications',
-      image: 'https://images.houseplus-ch.com/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-100w-wholesale/',
     },
   ],
 };

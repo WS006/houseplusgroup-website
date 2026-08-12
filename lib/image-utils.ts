@@ -5,9 +5,9 @@
  */
 
 const unsplashToLocalMap: Record<string, string> = {
-  'photo-1491933382434-500287f9b54b': 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
-  'photo-1509391366360-2e959784a276': 'https://images.houseplus-ch.com/media/daf64118-fa8e-4bf1-bbf3-05795dc72c3d/',
-  'photo-1556909114-f6e7ad7d3136': 'https://images.houseplus-ch.com/media/53c1ad46-cc96-43d0-aace-a8926f2e55a3/',
+  'photo-1491933382434-500287f9b54b': 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
+  'photo-1509391366360-2e959784a276': 'https://images.houseplus-ch.com/media/houseplus-induction-cooktop-2000w-wholesale/',
+  'photo-1556909114-f6e7ad7d3136': 'https://images.houseplus-ch.com/media/houseplus-3c-electronics-banner-wholesale/',
 };
 
 /**

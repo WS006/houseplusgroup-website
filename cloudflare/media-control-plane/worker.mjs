@@ -17,7 +17,7 @@ function getCorsHeaders(request) {
   const origin = request.headers.get('origin') || '';
   const allowed = new Set(['https://www.houseplus-ch.com', 'https://houseplus-ch.com']);
   return allowed.has(origin)
-    ? { 'access-control-allow-origin': origin, 'access-control-allow-methods': 'GET, POST, PATCH, OPTIONS', 'access-control-allow-headers': 'authorization, content-type, x-filename, x-asset-type, x-topic' }
+    ? { 'access-control-allow-origin': origin, 'access-control-allow-methods': 'GET, POST, PATCH, OPTIONS', 'access-control-allow-headers': 'authorization, content-type, x-filename, x-asset-type, x-topic, x-public-slug' }
     : {};
 }
 
@@ -40,6 +40,26 @@ async function getAsset(env, assetId) {
   return env.MEDIA_DB.prepare('SELECT * FROM assets WHERE asset_id = ?').bind(assetId).first();
 }
 
+function normalizePublicSlug(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/\.[a-z0-9]{2,5}$/i, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/-{2,}/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 128);
+}
+
+async function getPublicAsset(env, identifier) {
+  return env.MEDIA_DB.prepare(
+    'SELECT asset_id, public_slug, r2_key, content_type, original_filename, status FROM assets WHERE asset_id = ? OR public_slug = ? LIMIT 1'
+  ).bind(identifier, identifier).first();
+}
+
+function publicMediaUrl(asset) {
+  return `${PUBLIC_MEDIA_ORIGIN}/media/${asset.public_slug || asset.asset_id}/`;
+}
+
 async function listAssets(env, filters, isAdmin) {
   const status = isAdmin && filters.status && ALLOWED_STATUSES.has(filters.status) ? filters.status : 'approved';
   const topic = filters.topic || null;
@@ -50,7 +70,7 @@ async function listAssets(env, filters, isAdmin) {
   const searchClause = search ? "AND (LOWER(a.original_filename) LIKE ? OR LOWER(a.r2_key) LIKE ? OR LOWER(COALESCE(a.topic, '')) LIKE ? OR LOWER(COALESCE(t.alt_text, '')) LIKE ? OR LOWER(COALESCE(t.title, '')) LIKE ?)" : '';
   const where = `WHERE a.status = ? ${topic ? 'AND a.topic = ?' : ''} ${searchClause}`;
   const base = `
-    SELECT a.asset_id, a.r2_key, a.public_url, a.original_filename, a.content_type, a.byte_size,
+    SELECT a.asset_id, a.public_slug, a.r2_key, a.public_url, a.original_filename, a.content_type, a.byte_size,
            a.width, a.height, a.asset_type, a.topic, a.status, a.focal_x, a.focal_y,
            a.seo_indexable, a.created_at, a.updated_at, a.approved_at,
            t.alt_text, t.title, t.caption, t.description
@@ -87,8 +107,8 @@ async function updateAssetStatus(env, assetId, status, seoIndexable) {
   ).bind(status, seoIndexable ? 1 : 0, status, status, assetId).run();
 }
 
-async function serveMedia(request, env, assetId, allowUnapproved = false) {
-  const asset = await env.MEDIA_DB.prepare('SELECT asset_id, r2_key, content_type, original_filename, status FROM assets WHERE asset_id = ?').bind(assetId).first();
+async function serveMedia(request, env, identifier, allowUnapproved = false) {
+  const asset = await getPublicAsset(env, identifier);
   if (!asset || (!allowUnapproved && asset.status !== 'approved')) return json({ error: 'Media asset not found' }, 404, getCorsHeaders(request));
   const object = await env.MEDIA_BUCKET.get(asset.r2_key, { range: request.headers });
   if (!object) return json({ error: 'Media object unavailable' }, 404, getCorsHeaders(request));
@@ -105,7 +125,7 @@ async function serveMedia(request, env, assetId, allowUnapproved = false) {
 
 async function imageSitemap(request, env) {
   const rows = await env.MEDIA_DB.prepare(`
-    SELECT a.asset_id, a.r2_key, a.updated_at, a.license_scope, a.copyright_owner,
+    SELECT a.asset_id, a.public_slug, a.r2_key, a.updated_at, a.license_scope, a.copyright_owner,
            t.alt_text, t.title, t.caption, t.description, r.canonical_url
     FROM assets a
     JOIN asset_relations r ON r.asset_id = a.asset_id
@@ -124,7 +144,7 @@ async function imageSitemap(request, env) {
     const images = assets.map((asset) => {
       const title = asset.title || asset.alt_text || asset.r2_key;
       const caption = asset.caption || asset.description || asset.alt_text || title;
-      return `\n    <image:image><image:loc>${escapeXml(`${PUBLIC_MEDIA_ORIGIN}/media/${asset.asset_id}/`)}</image:loc><image:title>${escapeXml(title)}</image:title><image:caption>${escapeXml(caption)}</image:caption><image:license>${escapeXml('https://www.houseplus-ch.com/terms')}</image:license></image:image>`;
+      return `\n    <image:image><image:loc>${escapeXml(publicMediaUrl(asset))}</image:loc><image:title>${escapeXml(title)}</image:title><image:caption>${escapeXml(caption)}</image:caption><image:license>${escapeXml('https://www.houseplus-ch.com/terms')}</image:license></image:image>`;
     }).join('');
     return `\n  <url><loc>${escapeXml(pageUrl)}</loc>${lastmod ? `<lastmod>${escapeXml(lastmod.slice(0, 10))}</lastmod>` : ''}${images}\n  </url>`;
   }).join('');
@@ -145,8 +165,8 @@ export default {
     if (url.pathname === '/sitemap-images.xml') return imageSitemap(request, env);
 
     const isAdmin = requireAdmin(request, env);
-    const mediaMatch = url.pathname.match(/^\/media\/([a-z0-9-]+)$/);
-    if (request.method === 'GET' && mediaMatch) return serveMedia(request, env, mediaMatch[1]);
+    const mediaMatch = url.pathname.match(/^\/media\/([a-z0-9-]+)\/?$/);
+    if ((request.method === 'GET' || request.method === 'HEAD') && mediaMatch) return serveMedia(request, env, mediaMatch[1]);
 
     const adminFileMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)\/file$/);
     if (request.method === 'GET' && adminFileMatch) {
@@ -176,15 +196,19 @@ export default {
       if (!contentType) return json({ error: 'Only image uploads are accepted' }, 415, cors);
       const assetId = crypto.randomUUID();
       const safeName = filename.toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'image';
+      const requestedSlug = normalizePublicSlug(request.headers.get('x-public-slug') || `houseplus-${safeName}`) || `houseplus-media-${assetId.slice(0, 8)}`;
+      const existingSlug = await env.MEDIA_DB.prepare('SELECT asset_id FROM assets WHERE public_slug = ?').bind(requestedSlug).first();
+      const publicSlug = existingSlug ? `${requestedSlug}-${assetId.slice(0, 8)}` : requestedSlug;
+      const publicUrl = `${PUBLIC_MEDIA_ORIGIN}/media/${publicSlug}/`;
       const key = `ingest/${new Date().toISOString().slice(0, 10)}/${assetId}/${safeName}`;
       const object = await env.MEDIA_BUCKET.put(key, request.body, { httpMetadata: { contentType } });
       if (!object) return json({ error: 'Upload precondition failed' }, 412, cors);
       await env.MEDIA_DB.prepare(`
-        INSERT INTO assets (asset_id, r2_key, original_filename, content_type, byte_size, content_hash, asset_type, topic, status, seo_indexable)
-        VALUES (?, ?, ?, ?, ?, ?, 'image', ?, 'draft', 0)
-      `).bind(assetId, key, filename, contentType, object.size, object.etag, request.headers.get('x-topic') || 'uncategorized').run();
-      await audit(env, assetId, 'uploaded', { key, filename, contentType, size: object.size });
-      return json({ asset_id: assetId, status: 'draft', r2_key: key }, 201, cors);
+        INSERT INTO assets (asset_id, public_slug, public_url, r2_key, original_filename, content_type, byte_size, content_hash, asset_type, topic, status, seo_indexable)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'image', ?, 'draft', 0)
+      `).bind(assetId, publicSlug, publicUrl, key, filename, contentType, object.size, object.etag, request.headers.get('x-topic') || 'uncategorized').run();
+      await audit(env, assetId, 'uploaded', { key, filename, contentType, size: object.size, public_slug: publicSlug });
+      return json({ asset_id: assetId, status: 'draft', r2_key: key, public_slug: publicSlug, public_url: publicUrl }, 201, cors);
     }
 
     if (request.method === 'PATCH' && assetMatch) {
@@ -195,18 +219,25 @@ export default {
       const seoIndexable = typeof body.seo_indexable === 'boolean' ? body.seo_indexable : Boolean(asset.seo_indexable);
       const focalX = Number.isFinite(body.focal_x) ? Math.min(1, Math.max(0, body.focal_x)) : asset.focal_x;
       const focalY = Number.isFinite(body.focal_y) ? Math.min(1, Math.max(0, body.focal_y)) : asset.focal_y;
+      const requestedPublicSlug = body.public_slug === undefined ? asset.public_slug : normalizePublicSlug(body.public_slug);
+      if (body.public_slug !== undefined && !requestedPublicSlug) return json({ error: 'A valid public slug is required' }, 422, cors);
+      if (requestedPublicSlug && requestedPublicSlug !== asset.public_slug) {
+        const collision = await env.MEDIA_DB.prepare('SELECT asset_id FROM assets WHERE public_slug = ? AND asset_id != ?').bind(requestedPublicSlug, asset.asset_id).first();
+        if (collision) return json({ error: 'Public slug already exists' }, 409, cors);
+      }
+      const publicUrl = requestedPublicSlug ? `${PUBLIC_MEDIA_ORIGIN}/media/${requestedPublicSlug}/` : asset.public_url;
       await env.MEDIA_DB.prepare(`
-        UPDATE assets SET topic = ?, status = ?, seo_indexable = ?, focal_x = ?, focal_y = ?, copyright_owner = ?, license_scope = ?, source_url = ?, metadata_json = ?, updated_at = CURRENT_TIMESTAMP
+        UPDATE assets SET public_slug = ?, public_url = ?, topic = ?, status = ?, seo_indexable = ?, focal_x = ?, focal_y = ?, copyright_owner = ?, license_scope = ?, source_url = ?, metadata_json = ?, updated_at = CURRENT_TIMESTAMP
         WHERE asset_id = ?
-      `).bind(body.topic ?? asset.topic, status, seoIndexable ? 1 : 0, focalX, focalY, body.copyright_owner ?? asset.copyright_owner, body.license_scope ?? asset.license_scope, body.source_url ?? asset.source_url, body.metadata_json ? JSON.stringify(body.metadata_json) : asset.metadata_json, asset.asset_id).run();
+      `).bind(requestedPublicSlug, publicUrl, body.topic ?? asset.topic, status, seoIndexable ? 1 : 0, focalX, focalY, body.copyright_owner ?? asset.copyright_owner, body.license_scope ?? asset.license_scope, body.source_url ?? asset.source_url, body.metadata_json ? JSON.stringify(body.metadata_json) : asset.metadata_json, asset.asset_id).run();
       if (body.translation) await upsertTranslation(env, asset.asset_id, body.translation.locale || 'en', body.translation);
       if (status === 'approved') {
         const translation = await env.MEDIA_DB.prepare("SELECT alt_text FROM asset_translations WHERE asset_id = ? AND locale = 'en'").bind(asset.asset_id).first();
         if (!translation?.alt_text) return json({ error: 'English alt text is required before approval' }, 422, cors);
       }
       await updateAssetStatus(env, asset.asset_id, status, seoIndexable);
-      await audit(env, asset.asset_id, 'asset_updated', { status, seo_indexable: seoIndexable });
-      return json({ asset_id: asset.asset_id, status, seo_indexable: seoIndexable }, 200, cors);
+      await audit(env, asset.asset_id, 'asset_updated', { status, seo_indexable: seoIndexable, public_slug: requestedPublicSlug });
+      return json({ asset_id: asset.asset_id, status, seo_indexable: seoIndexable, public_slug: requestedPublicSlug, public_url: publicUrl }, 200, cors);
     }
 
     if (request.method === 'POST' && relationMatch) {

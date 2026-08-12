@@ -215,7 +215,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.houseplus-ch.com/media/2946709f-9053-4d33-991a-28e37dfd3f27/"
+                  src="https://images.houseplus-ch.com/media/houseplus-team-team-manufacturing-collaboration/"
                   alt="HousePlus manufacturing operations team reviewing production performance"
                   title="HousePlus manufacturing operations team"
                   className="w-full h-full object-cover"
@@ -223,7 +223,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.houseplus-ch.com/media/93e131d6-97cb-4ef4-a371-909061a46afc/"
+                  src="https://images.houseplus-ch.com/media/houseplus-team-team-quality-engineering/"
                   alt="HousePlus quality engineers conducting product testing"
                   title="HousePlus quality engineering team"
                   className="w-full h-full object-cover"
@@ -270,7 +270,7 @@ export default async function TeamPage({ params }: { params: { lang: string } })
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <img
-                  src="https://images.houseplus-ch.com/media/886e83cd-9f61-4f90-a1e7-5d8e2c290394/"
+                  src="https://images.houseplus-ch.com/media/houseplus-team-team-innovation-culture/"
                   alt="HousePlus R&D team collaborating on product innovation"
                   title="HousePlus innovation and company culture"
                   className="w-full h-full object-cover"

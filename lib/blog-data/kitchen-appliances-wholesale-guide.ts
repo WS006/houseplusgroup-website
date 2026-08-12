@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:
-    'https://images.houseplus-ch.com/media/832688c7-3f11-4854-a56a-04f042603449/',
+    'https://images.houseplus-ch.com/media/houseplus-articles-covers-kitchen-appliances-wholesale-guide-b2b-guide/',
   heroImageAlt:
     'Wholesale collection of premium kitchen appliances',
   sections: [
@@ -135,20 +135,20 @@ const article: BlogPost = {
       slug: 'blender-1500w-professional',
       name: '1500W Professional Blender',
       desc: '30,000 RPM, 2L Tritan jar, 6 blades, pulse function, CE/RoHS certified',
-      image: 'https://images.houseplus-ch.com/media/6c3c4c04-475a-4549-ab50-d9bfdcdfd604/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-kitchen-appliances-wholesale/',
     },
     {
       slug: 'slow-juicer-masticating',
       name: 'Slow Masticating Juicer',
       desc: '80 RPM cold press, 7-segment spiral auger, <55dB quiet operation',
-      image: 'https://images.houseplus-ch.com/media/6c3c4c04-475a-4549-ab50-d9bfdcdfd604/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-kitchen-appliances-wholesale/',
     },
     {
       slug: 'electric-kettle-1.7l-stainless',
       name: '1.7L Stainless Steel Electric Kettle',
       desc: '2200W fast boil, STRIX controller, auto shut-off, boil-dry protection',
       image:
-        'https://images.houseplus-ch.com/media/7c1147cf-92c3-45b1-b683-1e7070703c89/',
+        'https://images.houseplus-ch.com/media/houseplus-electric-kettle-1-5l-wholesale/',
     },
   ],
 };

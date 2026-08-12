@@ -22,9 +22,11 @@ async function proxy(request: NextRequest, segments: string[]) {
   const contentType = request.headers.get('content-type');
   const fileName = request.headers.get('x-filename');
   const topic = request.headers.get('x-topic');
+  const publicSlug = request.headers.get('x-public-slug');
   if (contentType) headers.set('content-type', contentType);
   if (fileName) headers.set('x-filename', fileName);
   if (topic) headers.set('x-topic', topic);
+  if (publicSlug) headers.set('x-public-slug', publicSlug);
 
   const init: RequestInit = { method: request.method, headers, cache: 'no-store' };
   if (!['GET', 'HEAD'].includes(request.method)) init.body = await request.arrayBuffer();

@@ -79,7 +79,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     ...blogArticles,
     {
       slug: 'consumer-electronics-battery-life-testing',
-      image: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-consumer-electronics-battery-life-testing-b2b-guide/',
       imageAlt: 'Consumer electronics battery cycle life testing in a controlled laboratory',
       title: {
         en: 'Battery Cycle Life Testing Standards: Technical Analysis for Consumer Electronics',
@@ -99,7 +99,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'appliance-energy-efficiency-vs-actual-consumption',
-      image: 'https://images.houseplus-ch.com/media/a01d9b03-6265-4e9e-9500-edb50c289152/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-appliance-energy-efficiency-vs-actual-consumption-b2b-guide/',
       imageAlt: 'Appliance energy consumption measurement with a laboratory power meter',
       title: {
         en: 'Appliance Energy Efficiency Ratings vs Actual Consumption: Technical Analysis',
@@ -119,7 +119,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'solar-storage-efficiency-optimization-guide',
-      image: 'https://images.houseplus-ch.com/media/ab54c494-e09b-4e89-9b9e-afbd1c932c16/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-storage-efficiency-optimization-guide-b2b-guide/',
       imageAlt: 'Engineer reviewing industrial solar storage efficiency equipment',
       title: {
         en: 'Solar Storage Efficiency Optimization: Technical Guide for Industrial Systems',
@@ -139,7 +139,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: '2026-solar-market-update',
-    image: 'https://images.houseplus-ch.com/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3/',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-solar-market-update-b2b-guide/',
     imageAlt: 'Modern solar microgrid and battery energy storage equipment',
     title: {
     en: 'Solar Energy Innovations in 2026: HousePlus Leading the Industry',
@@ -159,7 +159,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
   },
   {
     slug: '2026-appliances-market-update',
-    image: 'https://images.houseplus-ch.com/media/8df3552b-495a-4f26-9292-197f1b592597/',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-appliances-market-update-b2b-guide/',
     imageAlt: 'Energy-efficient smart home appliances in a modern kitchen',
     title: {
     en: 'Smart Home Appliances 2026: Energy-Efficient Designs for Global Markets',
@@ -179,7 +179,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
   },
   {
     slug: '2026-electronics-market-update',
-    image: 'https://images.houseplus-ch.com/media/56493de4-d16d-4b6e-935a-9daa1bbb5f07/',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/',
     imageAlt: '2026 3C electronics collection of audio, storage and charging products',
     title: {
     en: '3C Electronics Trends 2026: HousePlus Wholesale Innovation',
@@ -200,7 +200,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
 
     {
       slug: '2026-smart-home-appliances-market-guide',
-      image: 'https://images.houseplus-ch.com/media/5ec6c2d5-bed3-4f1d-a04d-2a2a56a8c54f/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-smart-home-appliances-market-guide-b2b-guide/',
       imageAlt: 'Connected smart home appliances and energy monitoring products',
       title: {
         en: '2026 Global Smart Home Appliance Market Trends & B2B Procurement Guide',
@@ -220,7 +220,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'solar-energy-storage-industrial-manufacturing',
-      image: 'https://images.houseplus-ch.com/media/18406370-f61f-4c38-99d6-b6ba4ca5e659/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-energy-storage-industrial-manufacturing-b2b-guide/',
       imageAlt: 'Industrial lithium battery racks and solar energy storage infrastructure',
       title: {
         en: 'Solar Energy Storage Systems in Industrial Manufacturing: A Sustainable Approach',
@@ -240,7 +240,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'oem-odm-manufacturing-guide',
-      image: 'https://images.houseplus-ch.com/media/99546983-391c-4c1d-8843-863643d0bf18/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-oem-odm-manufacturing-guide-b2b-guide/',
       imageAlt: 'OEM and ODM product development with appliance prototypes and packaging samples',
       title: {
         en: 'OEM & ODM Manufacturing: How HousePlus Helps Brands Build Custom Products',
@@ -260,7 +260,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'energy-efficiency-standards-appliances',
-      image: 'https://images.houseplus-ch.com/media/1a43d798-709d-41fa-be2c-b978573f6a49/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-energy-efficiency-standards-appliances-b2b-guide/',
       imageAlt: 'Home appliance compliance testing in an energy efficiency laboratory',
       title: {
         en: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
@@ -280,7 +280,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'global-wholesale-guide-home-appliances',
-      image: 'https://images.houseplus-ch.com/media/3ff31e44-5a92-4d95-ac80-597a8e391816/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-global-wholesale-guide-home-appliances-b2b-guide/',
       imageAlt: 'Global wholesale logistics for export-ready home appliances',
       title: {
         en: 'The Complete Guide to Wholesale Home Appliances: How HousePlus Supports Global Buyers',
@@ -300,7 +300,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'advanced-manufacturing-home-appliances',
-      image: 'https://images.houseplus-ch.com/media/f0a4515c-e1f7-4037-a943-4d7381c90a34/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-advanced-manufacturing-home-appliances-b2b-guide/',
       imageAlt: 'Advanced robotic manufacturing line for home appliances',
       title: {
         en: 'Advanced Manufacturing in Home Appliances: HousePlus Quality',
@@ -320,7 +320,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
     {
       slug: 'the-future-of-smart-home-appliances',
-      image: 'https://images.houseplus-ch.com/media/f58941f1-cba4-4bd3-bb11-b73cf4f63664/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-the-future-of-smart-home-appliances-b2b-guide/',
       imageAlt: 'Future-ready connected home appliances in a refined contemporary interior',
       title: {
         en: 'The Future of Smart Home Appliances: HousePlus Innovations',

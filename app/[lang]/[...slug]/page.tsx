@@ -8,14 +8,14 @@ import { getR2MediaDetails, r2ImageDimensions } from '@/lib/r2-media-details';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const PAGE_IMAGE_BY_TYPE: Record<string, string> = {
-  products: 'https://images.houseplus-ch.com/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/',
-  news: 'https://images.houseplus-ch.com/media/7f712b0f-2530-48e8-866b-d70eb0b3bd75/',
-  'about-us': 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/',
-  factory: 'https://images.houseplus-ch.com/media/d3642fb5-d016-4cec-aa3a-e9ab2326050a/',
-  team: 'https://images.houseplus-ch.com/media/2946709f-9053-4d33-991a-28e37dfd3f27/',
-  service: 'https://images.houseplus-ch.com/media/b7dbffd2-f52e-42bc-b0c2-43329ca68682/',
+  products: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
+  news: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/',
+  'about-us': 'https://images.houseplus-ch.com/media/houseplus-factory-production-line/',
+  factory: 'https://images.houseplus-ch.com/media/houseplus-articles-service-factory-assembly-workers-b2b-guide/',
+  team: 'https://images.houseplus-ch.com/media/houseplus-team-team-manufacturing-collaboration/',
+  service: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/',
 };
-const DEFAULT_PAGE_IMAGE = 'https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7/';
+const DEFAULT_PAGE_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-group-logo/';
 
 export const dynamic = 'force-static';
 export const dynamicParams = true;
@@ -337,12 +337,12 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {subStories.map((s: any, idx: number) => {
               const images = [
-                'https://images.houseplus-ch.com/media/e0245a6c-9df0-40ed-997e-d29c73309ac3/',
-                'https://images.houseplus-ch.com/media/ecf442ab-f6c0-405c-b6f8-f84ad418e606/',
-                'https://images.houseplus-ch.com/media/5cd0f0a7-b597-47f4-a2bd-52c783eb7025/',
-                'https://images.houseplus-ch.com/media/498a7ad8-81cf-403f-bdee-77c08dc04c3e/',
-                'https://images.houseplus-ch.com/media/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/',
-                'https://images.houseplus-ch.com/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/',
+                'https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-energy-storage-battery-bank-b2b-guide/',
+                'https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-panel-installation-rooftop-b2b-guide/',
+                'https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-panel-sunset-industrial-b2b-guide/',
+                'https://images.houseplus-ch.com/media/houseplus-home-energy-storage-5000w-wholesale/',
+                'https://images.houseplus-ch.com/media/houseplus-factory-assembly-line/',
+                'https://images.houseplus-ch.com/media/houseplus-solar-panel-100w-wholesale/',
               ];
               const productImg = localizeImageUrl(s.content?.image?.filename) || images[idx % images.length];
               const mediaDetails = getR2MediaDetails(productImg);

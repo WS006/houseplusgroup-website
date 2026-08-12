@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:
-    'https://images.houseplus-ch.com/media/328d6bbc-d1b1-487c-9604-eb7a66ba3d93/',
+    'https://images.houseplus-ch.com/media/houseplus-articles-covers-mppt-vs-pwm-charge-controller-b2b-guide/',
   heroImageAlt:
     'MPPT and PWM solar charge controllers on an engineering workbench',
   sections: [
@@ -137,21 +137,21 @@ const article: BlogPost = {
       name: '60A MPPT Solar Charge Controller',
       desc: '99% tracking efficiency, LCD display, supports 12V/24V/36V/48V systems',
       image:
-        'https://images.houseplus-ch.com/media/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/',
+        'https://images.houseplus-ch.com/media/houseplus-charge-controller-60a-wholesale/',
     },
     {
       slug: 'mppt-charge-controller-30a',
       name: '30A MPPT Solar Charge Controller',
       desc: 'Compact MPPT controller for small to medium off-grid systems',
       image:
-        'https://images.houseplus-ch.com/media/7029a48a-1aed-4de9-9545-e4ebe710a7e5/',
+        'https://images.houseplus-ch.com/media/houseplus-mppt-controller-40a-wholesale/',
     },
     {
       slug: 'pwm-charge-controller-20a',
       name: '20A PWM Solar Charge Controller',
       desc: 'Affordable PWM controller for small solar projects under 200W',
       image:
-        'https://images.houseplus-ch.com/media/7029a48a-1aed-4de9-9545-e4ebe710a7e5/',
+        'https://images.houseplus-ch.com/media/houseplus-mppt-controller-40a-wholesale/',
     },
   ],
 };
