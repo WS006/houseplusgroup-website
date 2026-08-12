@@ -12,12 +12,15 @@ type TriggeredBy = 'manual' | 'auto' | 'scheduled';
 interface GoogleServiceAccount {
   client_email: string;
   private_key: string;
+  project_id?: string;
   [key: string]: unknown;
 }
 
 interface GoogleSitemapStatus {
   configured: boolean;
   available: boolean;
+  serviceAccountEmail?: string;
+  googleCloudProjectId?: string;
   message: string;
   sitemap?: {
     path?: string;
@@ -191,13 +194,14 @@ async function submitGoogleSitemap(): Promise<{ success: boolean; statusCode?: n
 export async function getGoogleSearchConsoleStatus(): Promise<GoogleSitemapStatus> {
   const serviceAccount = getGoogleServiceAccount();
   if (!serviceAccount) return { configured: false, available: false, message: 'Google Search Console service account is not configured' };
+  const identity = { serviceAccountEmail: serviceAccount.client_email, googleCloudProjectId: serviceAccount.project_id };
   const accessToken = await getGoogleAccessToken(serviceAccount);
-  if (!accessToken) return { configured: true, available: false, message: 'Google Search Console access token could not be created' };
+  if (!accessToken) return { configured: true, available: false, ...identity, message: 'Google Search Console access token could not be created' };
 
   const response = await fetch(googleSitemapEndpoint(), { headers: { Authorization: `Bearer ${accessToken}` }, cache: 'no-store' });
-  if (!response.ok) return { configured: true, available: false, message: formatResponseMessage(response, await response.text()) };
+  if (!response.ok) return { configured: true, available: false, ...identity, message: formatResponseMessage(response, await response.text()) };
   const sitemap = await response.json() as GoogleSitemapStatus['sitemap'];
-  return { configured: true, available: true, message: 'Google Search Console sitemap connection is available', sitemap };
+  return { configured: true, available: true, ...identity, message: 'Google Search Console sitemap connection is available', sitemap };
 }
 
 export async function sendWebhookNotification(result: SubmitResult, webhooks: WebhookConfig[]): Promise<void> {
