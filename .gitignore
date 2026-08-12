@@ -32,3 +32,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated media migration artifacts and Worker deployment payloads
+/audit/r2-static-media-import.jsonl
+/audit/r2-optimized-media/
+/cloudflare/media-control-plane/*_request.json

@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { Check, ChevronRight, FileImage, Filter, FolderOpen, ImagePlus, Loader2, RefreshCw, Search, ShieldCheck, Sparkles, Tags, Upload, X } from 'lucide-react';
 
 type AssetStatus = 'draft' | 'needs_review' | 'approved' | 'deprecated' | 'archived';
@@ -48,6 +48,9 @@ function assetUrl(assetId: string) {
 export default function MediaLibraryPage() {
   const [assets, setAssets] = useState<Asset[]>([]);
   const [status, setStatus] = useState<AssetStatus>('needs_review');
+  const [page, setPage] = useState(1);
+  const [totalAssets, setTotalAssets] = useState(0);
+  const [hasMore, setHasMore] = useState(false);
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState<Asset | null>(null);
   const [loading, setLoading] = useState(true);
@@ -57,14 +60,16 @@ export default function MediaLibraryPage() {
   const [showUpload, setShowUpload] = useState(false);
   const [uploadTopic, setUploadTopic] = useState('products');
 
-  async function loadAssets(nextStatus = status) {
+  async function loadAssets(nextStatus = status, nextPage = page, nextQuery = query) {
     setLoading(true);
     setNotice(null);
     try {
-      const response = await fetch(`/api/media-library/v1/assets?status=${nextStatus}&limit=100`, { cache: 'no-store' });
+      const response = await fetch(`/api/media-library/v1/assets?status=${nextStatus}&page=${nextPage}&limit=100&q=${encodeURIComponent(nextQuery.trim())}`, { cache: 'no-store' });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Unable to load media assets');
       setAssets(data.assets || []);
+      setTotalAssets(Number(data.total || 0));
+      setHasMore(Boolean(data.has_more));
       setSelected((current) => data.assets?.find((asset: Asset) => asset.asset_id === current?.asset_id) || null);
     } catch (error) {
       setNotice(error instanceof Error ? error.message : 'Unable to load media assets');
@@ -75,11 +80,7 @@ export default function MediaLibraryPage() {
 
   useEffect(() => { loadAssets(); }, []);
 
-  const filtered = useMemo(() => {
-    const term = query.trim().toLowerCase();
-    if (!term) return assets;
-    return assets.filter((asset) => [asset.original_filename, asset.r2_key, asset.topic, asset.alt_text, asset.title].filter(Boolean).join(' ').toLowerCase().includes(term));
-  }, [assets, query]);
+  const filtered = assets;
 
   async function saveAsset(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -109,7 +110,7 @@ export default function MediaLibraryPage() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Unable to update asset');
       setNotice(`Saved ${selected.original_filename}.`);
-      await loadAssets(status);
+      await loadAssets(status, page);
     } catch (error) {
       setNotice(error instanceof Error ? error.message : 'Unable to update asset');
     } finally {
@@ -132,8 +133,9 @@ export default function MediaLibraryPage() {
       if (!response.ok) throw new Error(data.error || 'Unable to upload image');
       setNotice(`${file.name} uploaded as a draft asset.`);
       setShowUpload(false);
-      await loadAssets('draft');
       setStatus('draft');
+      setPage(1);
+      await loadAssets('draft', 1);
     } catch (error) {
       setNotice(error instanceof Error ? error.message : 'Unable to upload image');
     } finally {
@@ -143,6 +145,8 @@ export default function MediaLibraryPage() {
   }
 
   const reviewed = assets.filter((asset) => asset.status === 'approved').length;
+  const pageStart = totalAssets ? (page - 1) * 100 + 1 : 0;
+  const pageEnd = Math.min((page - 1) * 100 + assets.length, totalAssets);
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
@@ -163,7 +167,7 @@ export default function MediaLibraryPage() {
             </div>
           </div>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Metric label="Loaded assets" value={assets.length} icon={<FileImage size={17} />} />
+              <Metric label="Assets in workflow" value={totalAssets} icon={<FileImage size={17} />} />
             <Metric label="Visible in filter" value={filtered.length} icon={<Filter size={17} />} />
             <Metric label="Approved here" value={reviewed} icon={<Check size={17} />} />
             <Metric label="Publication rule" value="Alt + approval" icon={<ShieldCheck size={17} />} compact />
@@ -174,8 +178,8 @@ export default function MediaLibraryPage() {
       <div className="mx-auto grid max-w-[1500px] gap-6 px-5 py-6 md:px-8 xl:grid-cols-[minmax(0,1fr)_420px]">
         <section className="min-w-0">
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="relative max-w-xl flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search filename, key, topic, title, or alt text" className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-4 text-sm outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100" /></div>
-            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600"><Filter size={16} /><select value={status} onChange={(event) => { const next = event.target.value as AssetStatus; setStatus(next); loadAssets(next); }} className="rounded-xl border border-slate-200 bg-white px-3 py-3 outline-none focus:border-orange-400"><option value="needs_review">Needs review</option><option value="draft">Draft</option><option value="approved">Approved</option><option value="deprecated">Deprecated</option><option value="archived">Archived</option></select></div>
+            <form onSubmit={(event) => { event.preventDefault(); setPage(1); loadAssets(status, 1, query); }} className="relative max-w-xl flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search filename, key, topic, title, or alt text" className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-24 text-sm outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100" /><button type="submit" className="absolute right-1.5 top-1.5 rounded-lg bg-slate-950 px-3 py-1.5 text-xs font-bold text-white hover:bg-slate-800">Search</button></form>
+            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600"><Filter size={16} /><select value={status} onChange={(event) => { const next = event.target.value as AssetStatus; setStatus(next); setPage(1); loadAssets(next, 1); }} className="rounded-xl border border-slate-200 bg-white px-3 py-3 outline-none focus:border-orange-400"><option value="needs_review">Needs review</option><option value="draft">Draft</option><option value="approved">Approved</option><option value="deprecated">Deprecated</option><option value="archived">Archived</option></select></div>
           </div>
 
           {notice && <div className="mb-5 flex items-start justify-between gap-3 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm font-medium text-orange-900"><span>{notice}</span><button onClick={() => setNotice(null)} aria-label="Dismiss message"><X size={17} /></button></div>}
@@ -186,6 +190,7 @@ export default function MediaLibraryPage() {
               <div className="p-3"><p className="truncate text-sm font-bold text-slate-800">{asset.original_filename}</p><p className="mt-1 truncate text-xs text-slate-500">{asset.topic || 'Uncategorized'} · {formatBytes(asset.byte_size)}</p><p className="mt-2 line-clamp-2 min-h-8 text-xs leading-4 text-slate-500">{asset.alt_text || 'Alt text required before approval'}</p></div>
             </button>)}
           </div>}
+          {!loading && assets.length > 0 && <div className="mt-6 flex flex-col gap-3 border-t border-slate-200 pt-5 text-sm sm:flex-row sm:items-center sm:justify-between"><p className="font-medium text-slate-500">Showing {pageStart}–{pageEnd} of {totalAssets} assets</p><div className="flex gap-2"><button disabled={page === 1} onClick={() => { const previous = page - 1; setPage(previous); loadAssets(status, previous); }} className="rounded-xl border border-slate-200 bg-white px-3 py-2 font-bold text-slate-700 disabled:cursor-not-allowed disabled:opacity-40">Previous</button><button disabled={!hasMore} onClick={() => { const next = page + 1; setPage(next); loadAssets(status, next); }} className="inline-flex items-center gap-1 rounded-xl border border-slate-200 bg-white px-3 py-2 font-bold text-slate-700 disabled:cursor-not-allowed disabled:opacity-40">Next <ChevronRight size={16} /></button></div></div>}
         </section>
 
         <aside className="xl:sticky xl:top-5 xl:h-fit">

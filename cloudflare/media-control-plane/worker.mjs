@@ -42,7 +42,12 @@ async function getAsset(env, assetId) {
 async function listAssets(env, filters, isAdmin) {
   const status = isAdmin && filters.status && ALLOWED_STATUSES.has(filters.status) ? filters.status : 'approved';
   const topic = filters.topic || null;
+  const search = (filters.q || '').trim().toLowerCase();
   const limit = Math.min(Math.max(Number(filters.limit || 60), 1), 100);
+  const page = Math.max(Math.floor(Number(filters.page || 1)), 1);
+  const offset = (page - 1) * limit;
+  const searchClause = search ? "AND (LOWER(a.original_filename) LIKE ? OR LOWER(a.r2_key) LIKE ? OR LOWER(COALESCE(a.topic, '')) LIKE ? OR LOWER(COALESCE(t.alt_text, '')) LIKE ? OR LOWER(COALESCE(t.title, '')) LIKE ?)" : '';
+  const where = `WHERE a.status = ? ${topic ? 'AND a.topic = ?' : ''} ${searchClause}`;
   const base = `
     SELECT a.asset_id, a.r2_key, a.public_url, a.original_filename, a.content_type, a.byte_size,
            a.width, a.height, a.asset_type, a.topic, a.status, a.focal_x, a.focal_y,
@@ -50,14 +55,15 @@ async function listAssets(env, filters, isAdmin) {
            t.alt_text, t.title, t.caption, t.description
     FROM assets a
     LEFT JOIN asset_translations t ON t.asset_id = a.asset_id AND t.locale = 'en'
-    WHERE a.status = ? ${topic ? 'AND a.topic = ?' : ''}
+    ${where}
     ORDER BY a.updated_at DESC
-    LIMIT ?`;
-  const statement = topic
-    ? env.MEDIA_DB.prepare(base).bind(status, topic, limit)
-    : env.MEDIA_DB.prepare(base).bind(status, limit);
-  const result = await statement.all();
-  return result.results || [];
+    LIMIT ? OFFSET ?`;
+  const queryParams = [status, ...(topic ? [topic] : []), ...(search ? Array(5).fill(`%${search}%`) : [])];
+  const statement = env.MEDIA_DB.prepare(base).bind(...queryParams, limit, offset);
+  const countStatement = env.MEDIA_DB.prepare(`SELECT COUNT(*) AS total FROM assets a LEFT JOIN asset_translations t ON t.asset_id = a.asset_id AND t.locale = 'en' ${where}`).bind(...queryParams);
+  const [result, count] = await Promise.all([statement.all(), countStatement.first()]);
+  const total = Number(count?.total || 0);
+  return { assets: result.results || [], total, page, limit, has_more: offset + limit < total };
 }
 
 async function upsertTranslation(env, assetId, locale, values) {
@@ -144,7 +150,7 @@ export default {
     }
 
     if (request.method === 'GET' && url.pathname === '/v1/assets') {
-      return json({ assets: await listAssets(env, Object.fromEntries(url.searchParams), isAdmin) }, 200, cors);
+      return json(await listAssets(env, Object.fromEntries(url.searchParams), isAdmin), 200, cors);
     }
 
     const assetMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)$/);
