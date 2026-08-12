@@ -25,6 +25,14 @@ interface GoogleSearchPerformanceRow {
   position: number;
 }
 
+interface GoogleSearchQueryRow {
+  query: string;
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
+}
+
 export interface GoogleSearchConsoleBaseline {
   configured: boolean;
   available: boolean;
@@ -33,6 +41,7 @@ export interface GoogleSearchConsoleBaseline {
   period?: { startDate: string; endDate: string };
   totals?: { clicks: number; impressions: number; ctr: number; position: number };
   topPages?: GoogleSearchPerformanceRow[];
+  topQueries?: GoogleSearchQueryRow[];
   message: string;
 }
 
@@ -193,14 +202,17 @@ export async function getGoogleSearchConsoleBaseline(): Promise<GoogleSearchCons
     body: JSON.stringify(body),
   });
   const query = { startDate: toDate(start), endDate: toDate(end), dataState: 'final' };
-  const [totalsResponse, pagesResponse] = await Promise.all([
+  const [totalsResponse, pagesResponse, queriesResponse] = await Promise.all([
     request(query),
     request({ ...query, dimensions: ['page'], rowLimit: 25 }),
+    request({ ...query, dimensions: ['query'], rowLimit: 25 }),
   ]);
   if (!totalsResponse.ok) return { configured: true, available: false, ...identity, period: query, message: formatResponseMessage(totalsResponse, await totalsResponse.text()) };
   if (!pagesResponse.ok) return { configured: true, available: false, ...identity, period: query, message: formatResponseMessage(pagesResponse, await pagesResponse.text()) };
+  if (!queriesResponse.ok) return { configured: true, available: false, ...identity, period: query, message: formatResponseMessage(queriesResponse, await queriesResponse.text()) };
   const totalsPayload = await totalsResponse.json() as { rows?: Array<{ clicks?: number; impressions?: number; ctr?: number; position?: number }> };
   const pagesPayload = await pagesResponse.json() as { rows?: Array<{ keys?: string[]; clicks?: number; impressions?: number; ctr?: number; position?: number }> };
+  const queriesPayload = await queriesResponse.json() as { rows?: Array<{ keys?: string[]; clicks?: number; impressions?: number; ctr?: number; position?: number }> };
   const totals = totalsPayload.rows?.[0] || {};
   return {
     configured: true,
@@ -209,6 +221,7 @@ export async function getGoogleSearchConsoleBaseline(): Promise<GoogleSearchCons
     period: query,
     totals: { clicks: totals.clicks || 0, impressions: totals.impressions || 0, ctr: totals.ctr || 0, position: totals.position || 0 },
     topPages: (pagesPayload.rows || []).map((row) => ({ page: row.keys?.[0] || '', clicks: row.clicks || 0, impressions: row.impressions || 0, ctr: row.ctr || 0, position: row.position || 0 })),
+    topQueries: (queriesPayload.rows || []).map((row) => ({ query: row.keys?.[0] || '', clicks: row.clicks || 0, impressions: row.impressions || 0, ctr: row.ctr || 0, position: row.position || 0 })),
     message: 'Google Search Console search-performance baseline is available',
   };
 }
