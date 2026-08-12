@@ -352,16 +352,6 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     },
     url,
     category,
-    offers: {
-      '@type': 'Offer',
-      '@id': `${url}#offer`,
-      url,
-      availability: `https://schema.org/${availability}`,
-      itemCondition: 'https://schema.org/NewCondition',
-      businessFunction: 'https://purl.org/goodrelations/v1#Sell',
-      seller: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group', url: BASE_URL },
-      ...(b2bInfo?.moq && { eligibleQuantity: { '@type': 'QuantitativeValue', minValue: Number(b2bInfo.moq.replace(/\D/g, '')) || undefined, unitCode: 'H87' } }),
-    },
     manufacturer: {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
@@ -378,6 +368,13 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     isRelatedTo: { '@id': `${BASE_URL}/#organization` },
+    potentialAction: {
+      '@type': 'ContactAction',
+      name: 'Request a wholesale quotation',
+      target: `${BASE_URL}/en/contact`,
+      description: 'Contact HousePlus Group to request a product specification, MOQ confirmation and wholesale quotation.',
+      provider: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    },
     ...(additionalProperty.length > 0 && { additionalProperty }),
   };
 }

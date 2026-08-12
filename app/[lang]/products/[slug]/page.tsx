@@ -62,11 +62,11 @@ export async function generateMetadata({
   };
 
   const descTemplates: Record<string, string> = {
-    en: `Buy ${name} wholesale from HousePlus. CE/RoHS certified, OEM/ODM available, MOQ 100 pcs. Trusted manufacturer since 2010, serving 53+ countries.`,
-    es: `Compre ${name} al por mayor con HousePlus. Certificación CE/RoHS, OEM/ODM disponibles, MOQ 100 unidades. Fabricante de confianza desde 2010 en 53+ países.`,
-    de: `${name} Großhandel bei HousePlus. CE/RoHS-zertifiziert, OEM/ODM verfügbar, MOQ 100 Stück. Zuverlässiger Hersteller seit 2010, beliefert 53+ Länder.`,
-    fr: `Achetez ${name} en gros chez HousePlus. Certification CE/RoHS, OEM/ODM disponibles, MOQ 100 pièces. Fabricant de confiance depuis 2010, présent dans 53+ pays.`,
-    ar: `اشترِ ${name} بالجملة من هاوس بلس. شهادة CE/RoHS مع توفر خدمات OEM/ODM والحد الأدنى للطلب ١٠٠ قطعة. مصنع موثوق منذ ٢٠١٠ يخدم أكثر من ٥٣ دولة.`,
+    en: `Request a wholesale quotation for ${name} from HousePlus. CE/RoHS certified and OEM/ODM available; MOQ is confirmed in your quotation. Trusted manufacturer for global B2B buyers.`,
+    es: `Solicite una cotización mayorista para ${name} con HousePlus. Certificación CE/RoHS y OEM/ODM disponibles; el MOQ se confirma en su cotización.`,
+    de: `Fordern Sie ein Großhandelsangebot für ${name} bei HousePlus an. CE/RoHS-zertifiziert und OEM/ODM verfügbar; die Mindestbestellmenge wird im Angebot bestätigt.`,
+    fr: `Demandez un devis de gros pour ${name} auprès de HousePlus. Certification CE/RoHS et OEM/ODM disponibles ; le MOQ est confirmé dans votre devis.`,
+    ar: `اطلب عرض سعر بالجملة لـ ${name} من هاوس بلس. تتوفر شهادة CE/RoHS وخدمات OEM/ODM، ويتم تأكيد الحد الأدنى للطلب ضمن عرض السعر.`,
   };
 
   const title = titleTemplates[lang] || titleTemplates['en'];
@@ -304,9 +304,9 @@ export default async function ProductDetailPage({
             {/* Wholesale Info */}
             <div className="grid grid-cols-3 gap-3 pt-2">
               {[
-                { label: 'Min. Order', value: '100 pcs' },
-                { label: 'Lead Time', value: '20–35 days' },
-                { label: 'Warranty', value: '12 months' },
+                { label: 'Min. Order', value: product.b2bInfo?.moq || 'Confirm by quote' },
+                { label: 'Lead Time', value: product.b2bInfo?.leadTime || 'Confirm by quote' },
+                { label: 'Warranty', value: product.b2bInfo?.warranty || 'Confirm by quote' },
               ].map((item) => (
                 <div key={item.label} className="text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
