@@ -37,7 +37,7 @@ function localPathFor(sourcePath) {
 }
 
 const entries = await readJsonLines(publicationJournal);
-const pathToR2 = Object.fromEntries(entries.map((entry) => [localPathFor(entry.source_path), `${PUBLIC_MEDIA_ORIGIN}/media/${entry.asset_id}`]));
+const pathToR2 = Object.fromEntries(entries.map((entry) => [localPathFor(entry.source_path), `${PUBLIC_MEDIA_ORIGIN}/media/${entry.asset_id}/`]));
 const sourceFiles = (await Promise.all(sourceRoots.map(collectSourceFiles))).flat();
 const sourceReferences = new Map();
 const localReferencePattern = /['"]((?:\/images\/[^'"]+?\.(?:jpe?g|png|webp|gif|svg))|(?:\/(?:logo|favicon|apple-touch-icon|android-chrome-(?:192x192|512x512))\.png))['"]/g;

@@ -134,7 +134,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.houseplus-ch.com/media/d3642fb5-d016-4cec-aa3a-e9ab2326050a"
+                  src="https://images.houseplus-ch.com/media/d3642fb5-d016-4cec-aa3a-e9ab2326050a/"
                   alt="HousePlus main production line"
                   title="HousePlus main production line"
                   className="object-cover"
@@ -170,9 +170,9 @@ export default async function FactoryPage({ params }: { params: { lang: string }
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { src: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8', alt: 'Home appliance production line — precision manufacturing' },
-                { src: 'https://images.houseplus-ch.com/media/fa65d41c-2e23-4880-a19f-774c3bacdaa1', alt: 'Solar energy equipment assembly line' },
-                { src: 'https://images.houseplus-ch.com/media/951527a9-22ef-4ef3-9dfb-29c78bd9e99e', alt: 'Automated home appliance production equipment' },
+                { src: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/', alt: 'Home appliance production line — precision manufacturing' },
+                { src: 'https://images.houseplus-ch.com/media/fa65d41c-2e23-4880-a19f-774c3bacdaa1/', alt: 'Solar energy equipment assembly line' },
+                { src: 'https://images.houseplus-ch.com/media/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/', alt: 'Automated home appliance production equipment' },
               ].map((img) => (
                 <div key={img.src} className="relative h-60 rounded-2xl overflow-hidden shadow-md border border-slate-100">
                   <img
@@ -232,7 +232,7 @@ export default async function FactoryPage({ params }: { params: { lang: string }
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <img
-                  src="https://images.houseplus-ch.com/media/93c9172f-bc50-400b-b347-4c212f7b2137"
+                  src="https://images.houseplus-ch.com/media/93c9172f-bc50-400b-b347-4c212f7b2137/"
                   alt="HousePlus home appliance quality assurance laboratory"
                   title="HousePlus appliance quality assurance laboratory"
                   className="w-full h-full object-cover"

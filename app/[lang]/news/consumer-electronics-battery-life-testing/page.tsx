@@ -53,7 +53,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-07-12',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4',
+    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/',
     heroImageAlt: 'Battery cycle life testing equipment performing 1C charge-discharge cycles at 25°C standard conditions for consumer electronics',
         sections: [
       {
@@ -104,7 +104,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-06-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4',
+    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/',
     heroImageAlt: 'Equipo de prueba de ciclos de vida de baterías 1C carga-descarga a 25°C para electrónica de consumo',
         sections: [
       {
@@ -155,7 +155,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-06-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4',
+    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/',
     heroImageAlt: 'Batterie-Zyklenlebensdauer-Prüfgerät mit 1C Lade-Entlade bei 25°C Standardbedingungen für Unterhaltungselektronik',
         sections: [
       {
@@ -206,7 +206,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-06-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4',
+    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/',
     heroImageAlt: 'Équipement test cycles de vie batterie 1C charge-décharge à 25°C pour électronique grand public',
         sections: [
       {
@@ -257,7 +257,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-06-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4',
+    heroImage: 'https://images.houseplus-ch.com/media/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/',
     heroImageAlt: 'معدات اختبار دورة حياة البطارية 1C شحن-تفريغ عند 25 درجة مئوية للإلكترونيات الاستهلاكية',
         sections: [
       {

@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '11 min read',
   category: 'Home Appliances',
   heroImage:
-    'https://images.houseplus-ch.com/media/fdbcee0d-563f-4b3b-9e60-5abd6f39aae7',
+    'https://images.houseplus-ch.com/media/fdbcee0d-563f-4b3b-9e60-5abd6f39aae7/',
   heroImageAlt:
     'Engineers reviewing home appliance OEM production on a modern assembly line',
   sections: [
@@ -144,20 +144,20 @@ const article: BlogPost = {
       slug: 'air-fryer-6l-digital',
       name: '6L Digital Air Fryer OEM',
       desc: '1700W, 8 presets, rapid air technology, FDA/CE/RoHS certified, MOQ 500 pcs',
-      image: 'https://images.houseplus-ch.com/media/793ae24c-c7ee-453e-ab2c-038d0a20e818',
+      image: 'https://images.houseplus-ch.com/media/793ae24c-c7ee-453e-ab2c-038d0a20e818/',
     },
     {
       slug: 'electric-kettle-1.7l-stainless',
       name: '1.7L Stainless Steel Electric Kettle',
       desc: '2200W, fast boil, auto shut-off, STRIX controller, CE/ETL certified',
       image:
-        'https://images.houseplus-ch.com/media/7c1147cf-92c3-45b1-b683-1e7070703c89',
+        'https://images.houseplus-ch.com/media/7c1147cf-92c3-45b1-b683-1e7070703c89/',
     },
     {
       slug: 'rice-cooker-5l-smart',
       name: '5L Smart Rice Cooker',
       desc: 'IH heating, 12 cooking modes, LED display, PFC non-stick inner pot',
-      image: 'https://images.houseplus-ch.com/media/3393939f-fdff-454a-a31b-a21b44262856',
+      image: 'https://images.houseplus-ch.com/media/3393939f-fdff-454a-a31b-a21b44262856/',
     },
   ],
 };

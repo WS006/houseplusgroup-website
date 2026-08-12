@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Technical Comparison',
   heroImage:
-    'https://images.houseplus-ch.com/media/8f842a06-7161-4941-a88b-1bc165c2bb6d',
+    'https://images.houseplus-ch.com/media/8f842a06-7161-4941-a88b-1bc165c2bb6d/',
   heroImageAlt:
     'Distinct solar panel cell technologies in a technical comparison display',
   sections: [
@@ -143,19 +143,19 @@ const article: BlogPost = {
       slug: 'monocrystalline-solar-panel-550w',
       name: '550W PERC Monocrystalline Solar Panel',
       desc: 'Latest PERC technology, 21.8% efficiency, ideal for large-scale projects',
-      image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+      image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
     },
     {
       slug: 'monocrystalline-solar-panel-400w',
       name: '400W Monocrystalline Solar Panel',
       desc: 'Versatile high-efficiency panel for residential and commercial use',
-      image: 'https://images.houseplus-ch.com/media/a01ff960-1aac-4a09-8fe7-caa1116be031',
+      image: 'https://images.houseplus-ch.com/media/a01ff960-1aac-4a09-8fe7-caa1116be031/',
     },
     {
       slug: 'polycrystalline-solar-panel-300w',
       name: '300W Polycrystalline Solar Panel',
       desc: 'Cost-effective solution for budget-conscious projects with ample space',
-      image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+      image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',
     },
   ],
 };

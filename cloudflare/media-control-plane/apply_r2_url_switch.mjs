@@ -32,6 +32,7 @@ const sourceFiles = (await Promise.all(sourceRoots.map(collectSourceFiles))).fla
   .filter((filePath) => !filePath.endsWith(`${sep}r2-media-map.ts`));
 const localImagePattern = /(['"`])((?:\/images\/[^'"`$]+?\.(?:jpe?g|png|webp|gif|svg))|(?:\/(?:logo|favicon|apple-touch-icon|android-chrome-(?:192x192|512x512))\.png))\1/g;
 const workerMediaPattern = /(['"`])https:\/\/houseplus-media-api\.jack006hu\.workers\.dev(\/media\/[0-9a-f-]{16,})\1/gi;
+const customMediaPattern = /(['"`])https:\/\/images\.houseplus-ch\.com\/media\/([0-9a-f-]{16,})(?!\/)\1/gi;
 const changes = [];
 const unmapped = new Set();
 
@@ -48,8 +49,13 @@ for (const filePath of sourceFiles) {
     return `${quote}${r2Url}${quote}`;
   });
   updated = updated.replace(workerMediaPattern, (full, quote, mediaPath) => {
-    const r2Url = `${PUBLIC_MEDIA_ORIGIN}${mediaPath}`;
+    const r2Url = `${PUBLIC_MEDIA_ORIGIN}${mediaPath}/`;
     replacements.push({ old_url: `${DEFAULT_WORKER_MEDIA_ORIGIN}${mediaPath}`, r2_url: r2Url });
+    return `${quote}${r2Url}${quote}`;
+  });
+  updated = updated.replace(customMediaPattern, (full, quote, assetId) => {
+    const r2Url = `${PUBLIC_MEDIA_ORIGIN}/media/${assetId}/`;
+    replacements.push({ old_url: `${PUBLIC_MEDIA_ORIGIN}/media/${assetId}`, r2_url: r2Url });
     return `${quote}${r2Url}${quote}`;
   });
   if (updated !== original) {

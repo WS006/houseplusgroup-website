@@ -57,7 +57,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Anodised aluminium alloy frame — corrosion-resistant and lightweight',
       'IP68-rated junction box with bypass diodes for shading protection',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',    imageAlt: '500W monocrystalline solar panel HP-SP500 for commercial solar installations',
+    coverImage: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/',    imageAlt: '500W monocrystalline solar panel HP-SP500 for commercial solar installations',
     imageTitle: '500W Solar Panel HP-SP500 | HousePlus Solar Wholesale',
 
   },
@@ -78,7 +78,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'LCD display with real-time monitoring of voltage, current and power',
       'Multi-protection: over-voltage, over-current, short-circuit, thermal',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/270d35e2-b004-4941-95e7-1a0674a5b4b9',    imageAlt: '3kW pure sine wave solar inverter HP-INV3000 with built-in MPPT for off-grid systems',
+    coverImage: 'https://images.houseplus-ch.com/media/270d35e2-b004-4941-95e7-1a0674a5b4b9/',    imageAlt: '3kW pure sine wave solar inverter HP-INV3000 with built-in MPPT for off-grid systems',
     imageTitle: '3kW Solar Inverter HP-INV3000 | HousePlus Solar Wholesale',
 
   },
@@ -99,7 +99,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Wide operating temperature range: -20°C to +60°C',
       'Stackable design — expandable to 30kWh with parallel connection',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',    imageAlt: '5kWh LiFePO4 lithium battery HP-LFP5K for home solar energy storage systems',
+    coverImage: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1/',    imageAlt: '5kWh LiFePO4 lithium battery HP-LFP5K for home solar energy storage systems',
     imageTitle: '5kWh Lithium Battery HP-LFP5K | HousePlus Solar Wholesale',
 
   },
@@ -119,7 +119,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Deep discharge recovery capability for extended service life',
       'Vibration-resistant construction for mobile and marine use',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/2556637e-92ab-43d4-8940-2bb1c8ad319b',    imageAlt: '100Ah deep cycle lead-acid battery HP-LA100 for solar power storage backup',
+    coverImage: 'https://images.houseplus-ch.com/media/2556637e-92ab-43d4-8940-2bb1c8ad319b/',    imageAlt: '100Ah deep cycle lead-acid battery HP-LA100 for solar power storage backup',
     imageTitle: '100Ah Lead-Acid Battery HP-LA100 | HousePlus Solar Wholesale',
 
   },
@@ -139,7 +139,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Backlit LCD display showing PV voltage, battery voltage and charge current',
       'Comprehensive protection: overcharge, over-discharge, short-circuit, reverse polarity',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091',    imageAlt: 'MPPT solar charge controller 60A HP-MPPT60 for large solar panel arrays',
+    coverImage: 'https://images.houseplus-ch.com/media/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/',    imageAlt: 'MPPT solar charge controller 60A HP-MPPT60 for large solar panel arrays',
     imageTitle: 'MPPT Controller 60A HP-MPPT60 | HousePlus Solar Wholesale',
 
   },
@@ -159,7 +159,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'PIR motion sensor with adjustable sensitivity and delay time',
       'Remote control for brightness adjustment and scheduling',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/e54388d7-02ef-41eb-bf0f-d578d9e9138f',    imageAlt: '200W all-in-one solar street light HP-SSL200 with motion sensor for outdoor lighting',
+    coverImage: 'https://images.houseplus-ch.com/media/e54388d7-02ef-41eb-bf0f-d578d9e9138f/',    imageAlt: '200W all-in-one solar street light HP-SSL200 with motion sensor for outdoor lighting',
     imageTitle: '200W Solar Street Light HP-SSL200 | HousePlus Solar Wholesale',
 
   },
@@ -179,7 +179,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Direct solar panel connection — no battery required in daylight',
       'Corrosion-resistant ABS housing for outdoor and humid environments',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/e21466e5-27da-4c27-a6e8-06fc1baaa6f0',    imageAlt: '20W DC solar fan HP-SF20 brushless motor for greenhouse and off-grid ventilation',
+    coverImage: 'https://images.houseplus-ch.com/media/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/',    imageAlt: '20W DC solar fan HP-SF20 brushless motor for greenhouse and off-grid ventilation',
     imageTitle: '20W Solar Fan HP-SF20 | HousePlus Solar Wholesale',
 
   },
@@ -199,7 +199,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Built-in solar panel for emergency top-up in outdoor environments',
       'IPX4 waterproof and dustproof construction',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2',    imageAlt: '20000mAh solar power bank HP-SPB20K with dual USB and 18W PD fast charging',
+    coverImage: 'https://images.houseplus-ch.com/media/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/',    imageAlt: '20000mAh solar power bank HP-SPB20K with dual USB and 18W PD fast charging',
     imageTitle: '20000mAh Solar Power Bank HP-SPB20K | HousePlus Electronics Wholesale',
 
   },
@@ -220,7 +220,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Digital touch screen with 8 one-touch preset programmes',
       '360° rapid air circulation for even, crispy results',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/793ae24c-c7ee-453e-ab2c-038d0a20e818',    imageAlt: '5.8L digital air fryer HP-AF58 with touch panel for oil-free healthy cooking',
+    coverImage: 'https://images.houseplus-ch.com/media/793ae24c-c7ee-453e-ab2c-038d0a20e818/',    imageAlt: '5.8L digital air fryer HP-AF58 with touch panel for oil-free healthy cooking',
     imageTitle: '5.8L Air Fryer HP-AF58 | HousePlus Appliance Wholesale',
 
   },
@@ -240,7 +240,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Automatic pan detection — powers off when no cookware is detected',
       'Child lock and 3-hour auto shut-off for safety',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/daf64118-fa8e-4bf1-bbf3-05795dc72c3d',    imageAlt: '2000W induction cooktop HP-IC2000 with ceramic glass for modern kitchen cooking',
+    coverImage: 'https://images.houseplus-ch.com/media/daf64118-fa8e-4bf1-bbf3-05795dc72c3d/',    imageAlt: '2000W induction cooktop HP-IC2000 with ceramic glass for modern kitchen cooking',
     imageTitle: '2000W Induction Cooktop HP-IC2000 | HousePlus Appliance Wholesale',
 
   },
@@ -260,7 +260,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '1500W rapid boil — 1.5L in under 3 minutes',
       '360° cordless base with auto shut-off and boil-dry protection',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/7c1147cf-92c3-45b1-b683-1e7070703c89',    imageAlt: '1.5L stainless steel electric kettle HP-EK15 with auto shut-off for home use',
+    coverImage: 'https://images.houseplus-ch.com/media/7c1147cf-92c3-45b1-b683-1e7070703c89/',    imageAlt: '1.5L stainless steel electric kettle HP-EK15 with auto shut-off for home use',
     imageTitle: '1.5L Electric Kettle HP-EK15 | HousePlus Appliance Wholesale',
 
   },
@@ -280,7 +280,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Extra-wide slots accommodate thick-cut bread and bagels',
       'Removable crumb tray for easy cleaning',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0',    imageAlt: '2-slice stainless steel toaster HP-TS2 with 7 browning settings for breakfast',
+    coverImage: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0/',    imageAlt: '2-slice stainless steel toaster HP-TS2 with 7 browning settings for breakfast',
     imageTitle: '2-Slice Toaster HP-TS2 | HousePlus Appliance Wholesale',
 
   },
@@ -301,7 +301,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Omnidirectional built-in microphone for clear voice communication',
       'Foldable design with padded headband for comfortable extended wear',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/6b234004-d413-4690-8a78-4a3fbbf299f4',    imageAlt: 'Over-ear headphone HP-HE01 with 40mm drivers and built-in microphone for calls',
+    coverImage: 'https://images.houseplus-ch.com/media/6b234004-d413-4690-8a78-4a3fbbf299f4/',    imageAlt: 'Over-ear headphone HP-HE01 with 40mm drivers and built-in microphone for calls',
     imageTitle: 'Over-Ear Headphone HP-HE01 | HousePlus Electronics Wholesale',
 
   },
@@ -322,7 +322,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Active noise cancellation (ANC) with transparency mode',
       'IPX5 sweat and water resistance for sports use',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/3a511818-4b8e-4023-9631-106691f27e4d',    imageAlt: 'True wireless Bluetooth earphones HP-TWS01 with ANC and 30-hour playtime',
+    coverImage: 'https://images.houseplus-ch.com/media/3a511818-4b8e-4023-9631-106691f27e4d/',    imageAlt: 'True wireless Bluetooth earphones HP-TWS01 with ANC and 30-hour playtime',
     imageTitle: 'TWS Earphones HP-TWS01 | HousePlus Electronics Wholesale',
 
   },
@@ -342,7 +342,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       '20+ sport modes with automatic activity recognition',
       'IP68 waterproof — safe for swimming and showering',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/06ead54a-13e5-4cc1-8935-189c80ff5881',    imageAlt: 'Smart watch HP-SW01 with heart rate SpO2 monitor and 20 sport modes for fitness',
+    coverImage: 'https://images.houseplus-ch.com/media/06ead54a-13e5-4cc1-8935-189c80ff5881/',    imageAlt: 'Smart watch HP-SW01 with heart rate SpO2 monitor and 20 sport modes for fitness',
     imageTitle: 'Smart Watch HP-SW01 | HousePlus Electronics Wholesale',
 
   },
@@ -362,7 +362,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Shock-resistant aluminium alloy casing — drop-tested to 2m',
       'Compact pocket-sized form factor — 50g lightweight',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/78648eac-89d5-4571-a9c2-2aad26b4d6c6',    imageAlt: '1TB USB-C portable SSD HP-SSD1T with 1050MB/s read speed for data storage',
+    coverImage: 'https://images.houseplus-ch.com/media/78648eac-89d5-4571-a9c2-2aad26b4d6c6/',    imageAlt: '1TB USB-C portable SSD HP-SSD1T with 1050MB/s read speed for data storage',
     imageTitle: '1TB Portable SSD HP-SSD1T | HousePlus Electronics Wholesale',
 
   },
@@ -382,7 +382,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Waterproof, temperature-proof and X-ray-proof construction',
       'Includes full-size SD adapter for camera and laptop compatibility',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/e54f96f5-92ee-491d-8cd9-94aa7f1b58de',    imageAlt: '128GB micro SD card HP-SD128 UHS-I U3 A2 for cameras drones and smartphones',
+    coverImage: 'https://images.houseplus-ch.com/media/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/',    imageAlt: '128GB micro SD card HP-SD128 UHS-I U3 A2 for cameras drones and smartphones',
     imageTitle: '128GB Micro SD HP-SD128 | HousePlus Electronics Wholesale',
 
   },
@@ -402,7 +402,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       'Supports PD 3.0 and QC 4.0 fast charging protocols',
       'Braided nylon jacket with aluminium connectors — 10,000+ bend cycles',
     ],
-    coverImage: 'https://images.houseplus-ch.com/media/850363dd-6ab1-471f-a289-931f0c6387bc',    imageAlt: 'Fast charging USB-C cable 2m HP-CC2M supporting 100W PD for laptops and phones',
+    coverImage: 'https://images.houseplus-ch.com/media/850363dd-6ab1-471f-a289-931f0c6387bc/',    imageAlt: 'Fast charging USB-C cable 2m HP-CC2M supporting 100W PD for laptops and phones',
     imageTitle: 'USB-C Cable 2m HP-CC2M | HousePlus Electronics Wholesale',
 
   },
@@ -452,7 +452,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c',    imageAlt: '100W monocrystalline solar panel HP-SOL-100W for RV marine and off-grid cabins',
+    coverImage: 'https://images.houseplus-ch.com/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/',    imageAlt: '100W monocrystalline solar panel HP-SOL-100W for RV marine and off-grid cabins',
     imageTitle: '100W Solar Panel HP-SOL-100W | HousePlus Solar Wholesale',
 
   },
@@ -500,7 +500,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/374739a1-d933-4820-8817-56b657c0e371',    imageAlt: '3000W portable power station HP-SOL-3000 with LiFePO4 battery for outdoor backup',
+    coverImage: 'https://images.houseplus-ch.com/media/374739a1-d933-4820-8817-56b657c0e371/',    imageAlt: '3000W portable power station HP-SOL-3000 with LiFePO4 battery for outdoor backup',
     imageTitle: '3000W Power Station HP-SOL-3000 | HousePlus Solar Wholesale',
 
   },
@@ -548,7 +548,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/524e182e-6794-475d-b75f-563d55031eec',    imageAlt: '200W foldable solar panel HP-SOL-200F with ETFE surface for camping and RV use',
+    coverImage: 'https://images.houseplus-ch.com/media/524e182e-6794-475d-b75f-563d55031eec/',    imageAlt: '200W foldable solar panel HP-SOL-200F with ETFE surface for camping and RV use',
     imageTitle: '200W Foldable Solar Panel HP-SOL-200F | HousePlus Solar Wholesale',
 
   },
@@ -596,7 +596,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/498a7ad8-81cf-403f-bdee-77c08dc04c3e',    imageAlt: '5000W home energy storage system HP-SOL-5000H with modular LiFePO4 for grid-tie',
+    coverImage: 'https://images.houseplus-ch.com/media/498a7ad8-81cf-403f-bdee-77c08dc04c3e/',    imageAlt: '5000W home energy storage system HP-SOL-5000H with modular LiFePO4 for grid-tie',
     imageTitle: '5000W Home Storage HP-SOL-5000H | HousePlus Solar Wholesale',
 
   },
@@ -644,7 +644,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/8d271900-f7f0-4415-82fe-e0fdaa9875c6',    imageAlt: '60W PD fast charging power bank HP-3C-60W 20000mAh for laptop and phone charging',
+    coverImage: 'https://images.houseplus-ch.com/media/8d271900-f7f0-4415-82fe-e0fdaa9875c6/',    imageAlt: '60W PD fast charging power bank HP-3C-60W 20000mAh for laptop and phone charging',
     imageTitle: '60W Power Bank HP-3C-60W | HousePlus Electronics Wholesale',
 
   },
@@ -692,7 +692,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b',    imageAlt: '12V 100Ah LiFePO4 battery HP-SOL-12V100 with BMS for RV and marine applications',
+    coverImage: 'https://images.houseplus-ch.com/media/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/',    imageAlt: '12V 100Ah LiFePO4 battery HP-SOL-12V100 with BMS for RV and marine applications',
     imageTitle: '12V 100Ah LiFePO4 Battery HP-SOL-12V100 | HousePlus Solar Wholesale',
 
   },
@@ -740,7 +740,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/6b9e1e60-56d8-4cb0-804e-224851863cb6',    imageAlt: '600W outdoor power station HP-SOL-600O with pure sine wave for camping power',
+    coverImage: 'https://images.houseplus-ch.com/media/6b9e1e60-56d8-4cb0-804e-224851863cb6/',    imageAlt: '600W outdoor power station HP-SOL-600O with pure sine wave for camping power',
     imageTitle: '600W Power Station HP-SOL-600O | HousePlus Solar Wholesale',
 
   },
@@ -787,7 +787,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/7029a48a-1aed-4de9-9545-e4ebe710a7e5',    imageAlt: 'MPPT 40A solar charge controller HP-SOL-MPPT40 with 98% efficiency for solar systems',
+    coverImage: 'https://images.houseplus-ch.com/media/7029a48a-1aed-4de9-9545-e4ebe710a7e5/',    imageAlt: 'MPPT 40A solar charge controller HP-SOL-MPPT40 with 98% efficiency for solar systems',
     imageTitle: 'MPPT 40A Controller HP-SOL-MPPT40 | HousePlus Solar Wholesale',
 
   },
@@ -835,7 +835,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011',    imageAlt: '10000mAh magnetic wireless power bank HP-3C-MAG10K with 15W MagSafe for iPhone',
+    coverImage: 'https://images.houseplus-ch.com/media/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/',    imageAlt: '10000mAh magnetic wireless power bank HP-3C-MAG10K with 15W MagSafe for iPhone',
     imageTitle: '10000mAh Magnetic Power Bank HP-3C-MAG10K | HousePlus Electronics Wholesale',
 
   },
@@ -883,7 +883,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/8f7da832-0947-4d91-ab42-fb64fce87b8d',    imageAlt: '2000W pure sine wave inverter HP-SOL-INV2K with 4000W surge for off-grid power',
+    coverImage: 'https://images.houseplus-ch.com/media/8f7da832-0947-4d91-ab42-fb64fce87b8d/',    imageAlt: '2000W pure sine wave inverter HP-SOL-INV2K with 4000W surge for off-grid power',
     imageTitle: '2000W Sine Wave Inverter HP-SOL-INV2K | HousePlus Solar Wholesale',
 
   },
@@ -931,7 +931,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/a01ff960-1aac-4a09-8fe7-caa1116be031',    imageAlt: '400W semi-flexible solar panel HP-SOL-400F with ETFE for RV curved roofs and marine',
+    coverImage: 'https://images.houseplus-ch.com/media/a01ff960-1aac-4a09-8fe7-caa1116be031/',    imageAlt: '400W semi-flexible solar panel HP-SOL-400F with ETFE for RV curved roofs and marine',
     imageTitle: '400W Flexible Solar Panel HP-SOL-400F | HousePlus Solar Wholesale',
 
   },
@@ -979,7 +979,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/61c253cd-37e3-4079-949c-81e5b5ad2c9a',    imageAlt: '300W portable solar generator kit HP-SOL-KIT300 with panel and power station for camping',
+    coverImage: 'https://images.houseplus-ch.com/media/61c253cd-37e3-4079-949c-81e5b5ad2c9a/',    imageAlt: '300W portable solar generator kit HP-SOL-KIT300 with panel and power station for camping',
     imageTitle: '300W Solar Generator Kit HP-SOL-KIT300 | HousePlus Solar Wholesale',
 
   },
@@ -1027,7 +1027,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/24e8b932-f7d0-4511-9e03-8a98cbb987f5',    imageAlt: 'Smart WiFi plug HP-HA-WIFI10 with energy meter and Alexa support for home automation',
+    coverImage: 'https://images.houseplus-ch.com/media/24e8b932-f7d0-4511-9e03-8a98cbb987f5/',    imageAlt: 'Smart WiFi plug HP-HA-WIFI10 with energy meter and Alexa support for home automation',
     imageTitle: 'Smart WiFi Plug HP-HA-WIFI10 | HousePlus Appliance Wholesale',
 
   },
@@ -1075,7 +1075,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/c183162c-9a62-4617-9be9-003d487f9644',    imageAlt: 'Type-C 100W fast charging cable HP-3C-TC100W 5A nylon braided for MacBook charging',
+    coverImage: 'https://images.houseplus-ch.com/media/c183162c-9a62-4617-9be9-003d487f9644/',    imageAlt: 'Type-C 100W fast charging cable HP-3C-TC100W 5A nylon braided for MacBook charging',
     imageTitle: '100W USB-C Cable HP-3C-TC100W | HousePlus Electronics Wholesale',
 
   },
@@ -1123,7 +1123,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/b15c481b-032b-419d-9a0d-65aae514a8b5',
+    coverImage: 'https://images.houseplus-ch.com/media/b15c481b-032b-419d-9a0d-65aae514a8b5/',
     imageAlt: '1500W professional electric blender HP-BL15 with 2L glass jar and 6-blade stainless steel assembly for smoothies',
     imageTitle: '1500W Electric Blender HP-BL15 | HousePlus Appliance Wholesale',
 
@@ -1172,7 +1172,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/bbe76ab7-5027-4c3b-b738-860d9dbf7841',
+    coverImage: 'https://images.houseplus-ch.com/media/bbe76ab7-5027-4c3b-b738-860d9dbf7841/',
     imageAlt: '8L digital air fryer HP-AF80 with dual cooking zones and 12 preset programmes for oil-free cooking',
     imageTitle: '8L Digital Air Fryer HP-AF80 | HousePlus Appliance Wholesale',
 
@@ -1221,7 +1221,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/cc93e128-6181-4854-928f-c6deaf8fe983',
+    coverImage: 'https://images.houseplus-ch.com/media/cc93e128-6181-4854-928f-c6deaf8fe983/',
     imageAlt: '4-burner built-in gas hob HP-GS4 with stainless steel surface and cast iron grates for home kitchens',
     imageTitle: '4-Burner Gas Hob HP-GS4 | HousePlus Appliance Wholesale',
 
@@ -1270,7 +1270,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/f61e16f4-1527-4680-8302-cf75a689cbc0',
+    coverImage: 'https://images.houseplus-ch.com/media/f61e16f4-1527-4680-8302-cf75a689cbc0/',
     imageAlt: '65L built-in electric oven HP-OV65 with 8 cooking functions and triple-glazed door for professional baking',
     imageTitle: '65L Built-in Oven HP-OV65 | HousePlus Appliance Wholesale',
 
@@ -1318,7 +1318,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/7fc48e49-d6e0-4e28-beaf-4ec1764492ae',
+    coverImage: 'https://images.houseplus-ch.com/media/7fc48e49-d6e0-4e28-beaf-4ec1764492ae/',
     imageAlt: '25L digital microwave oven HP-MW25 with grill function and 10 power levels for home kitchens',
     imageTitle: '25L Microwave Oven HP-MW25 | HousePlus Appliance Wholesale',
 
@@ -1367,7 +1367,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/b668322c-a0df-4bba-be3a-dbc8f1636c38',
+    coverImage: 'https://images.houseplus-ch.com/media/b668322c-a0df-4bba-be3a-dbc8f1636c38/',
     imageAlt: '12L/min tankless gas water heater HP-GWH12 with LED display and multiple safety protections for home bathrooms',
     imageTitle: '12L Gas Water Heater HP-GWH12 | HousePlus Appliance Wholesale',
 
@@ -1416,7 +1416,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/8cb972ad-ec3b-42b9-8e85-a4a2af146841',
+    coverImage: 'https://images.houseplus-ch.com/media/8cb972ad-ec3b-42b9-8e85-a4a2af146841/',
     imageAlt: '900mm wall mount range hood HP-RH90 with stainless steel body and 1200 m3/h extraction for kitchen ventilation',
     imageTitle: '900mm Range Hood HP-RH90 | HousePlus Appliance Wholesale',
 
@@ -1465,7 +1465,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d',
+    coverImage: 'https://images.houseplus-ch.com/media/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/',
     imageAlt: '4-burner gas and electric hybrid cooktop HP-GH4 with 3 gas burners and 1 electric plate on tempered glass surface',
     imageTitle: 'Gas & Electric Hybrid Cooktop HP-GH4 | HousePlus Appliance Wholesale',
 
@@ -1514,7 +1514,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/ac664de3-5b8c-46cb-9afd-c392e80c6130',
+    coverImage: 'https://images.houseplus-ch.com/media/ac664de3-5b8c-46cb-9afd-c392e80c6130/',
     imageAlt: 'Built-in 2-zone induction cooktop HP-ID2 with Schott Ceran glass surface and touch sensor controls for modern kitchens',
     imageTitle: 'Built-in Induction Cooktop HP-ID2 | HousePlus Appliance Wholesale',
 
@@ -1562,7 +1562,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/5f55fac9-2fc5-4a4e-b907-50058cb51e72',
+    coverImage: 'https://images.houseplus-ch.com/media/5f55fac9-2fc5-4a4e-b907-50058cb51e72/',
     imageAlt: 'Double zone ceramic hob HP-CH2 with radiant heating and touch controls, compatible with all cookware types',
     imageTitle: 'Double Zone Ceramic Hob HP-CH2 | HousePlus Appliance Wholesale',
 
@@ -1610,7 +1610,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/cacd6cd2-a0a8-425d-b922-7dacb07bd53f',
+    coverImage: 'https://images.houseplus-ch.com/media/cacd6cd2-a0a8-425d-b922-7dacb07bd53f/',
     imageAlt: '2-burner portable tabletop gas stove HP-GS2 with stainless steel body and cast iron grates for small kitchens',
     imageTitle: '2-Burner Portable Gas Stove HP-GS2 | HousePlus Appliance Wholesale',
 
@@ -1658,7 +1658,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/062de3c9-36e6-4b10-a584-463e89581bf2',
+    coverImage: 'https://images.houseplus-ch.com/media/062de3c9-36e6-4b10-a584-463e89581bf2/',
     imageAlt: '3-burner built-in gas hob HP-GS3 with triple-ring wok burner and stainless steel surface for home kitchens',
     imageTitle: '3-Burner Gas Hob HP-GS3 | HousePlus Appliance Wholesale',
 
@@ -1707,7 +1707,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/d4e5da12-8183-40a8-a335-2fae5f277395',
+    coverImage: 'https://images.houseplus-ch.com/media/d4e5da12-8183-40a8-a335-2fae5f277395/',
     imageAlt: '5-burner built-in gas hob HP-GS5 with double wok burners and black tempered glass surface for premium kitchens',
     imageTitle: '5-Burner Gas Hob HP-GS5 | HousePlus Appliance Wholesale',
 
@@ -1756,7 +1756,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/9819887f-5fc5-429b-a91c-64734dc84449',
+    coverImage: 'https://images.houseplus-ch.com/media/9819887f-5fc5-429b-a91c-64734dc84449/',
     imageAlt: 'Freestanding gas cooker HP-GSO70 with 4-burner hob and 70L gas oven with rotisserie and convection fan',
     imageTitle: 'Freestanding Gas Cooker HP-GSO70 | HousePlus Appliance Wholesale',
 
@@ -1804,7 +1804,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/071603fb-ef14-4247-bb85-7f8da9997ca9',
+    coverImage: 'https://images.houseplus-ch.com/media/071603fb-ef14-4247-bb85-7f8da9997ca9/',
     imageAlt: '600mm compact wall mount range hood HP-RH60 with stainless steel body and 850 m3/h extraction for small kitchens',
     imageTitle: '600mm Range Hood HP-RH60 | HousePlus Appliance Wholesale',
 
@@ -1853,7 +1853,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/11d0360b-af72-446e-a9f3-3cb438d1a388',
+    coverImage: 'https://images.houseplus-ch.com/media/11d0360b-af72-446e-a9f3-3cb438d1a388/',
     imageAlt: '750mm inclined glass range hood HP-RH75I with side extraction design and black tempered glass panel for modern kitchens',
     imageTitle: '750mm Inclined Range Hood HP-RH75I | HousePlus Appliance Wholesale',
 
@@ -1902,7 +1902,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/9e5befe4-ccd9-4354-a66c-0c3a4706adc0',
+    coverImage: 'https://images.houseplus-ch.com/media/9e5befe4-ccd9-4354-a66c-0c3a4706adc0/',
     imageAlt: '900mm ceiling-suspended island range hood HP-RI90 with dual motor 1400 m3/h extraction and LED perimeter lighting',
     imageTitle: 'Island Range Hood HP-RI90 | HousePlus Appliance Wholesale',
 
@@ -1951,7 +1951,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/677858d4-b888-4d1e-a53c-7e069b35795a',
+    coverImage: 'https://images.houseplus-ch.com/media/677858d4-b888-4d1e-a53c-7e069b35795a/',
     imageAlt: '900mm curved glass canopy range hood HP-RHC90 with 1200 m3/h extraction and elegant wall mount design for home kitchens',
     imageTitle: 'Curved Glass Range Hood HP-RHC90 | HousePlus Appliance Wholesale',
 
@@ -1999,7 +1999,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/efe98e55-70bc-460b-aa5e-7ec2f120398e',
+    coverImage: 'https://images.houseplus-ch.com/media/efe98e55-70bc-460b-aa5e-7ec2f120398e/',
     imageAlt: '4.5L oil-free air fryer HP-AF45 with transparent visual window and 7 preset programmes for healthy cooking',
     imageTitle: '4.5L Visual Window Air Fryer HP-AF45 | HousePlus Appliance Wholesale',
 
@@ -2048,7 +2048,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/c2dbf35c-a0a1-4743-be72-7268fa5db61e',
+    coverImage: 'https://images.houseplus-ch.com/media/c2dbf35c-a0a1-4743-be72-7268fa5db61e/',
     imageAlt: '12L multi-function air fryer oven HP-AF120 with rotisserie and 16 preset programmes for large family cooking',
     imageTitle: '12L Air Fryer Oven HP-AF120 | HousePlus Appliance Wholesale',
 
@@ -2096,7 +2096,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8',
+    coverImage: 'https://images.houseplus-ch.com/media/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/',
     imageAlt: '60L built-in gas oven HP-GOV60 with convection fan, grill burner and flame failure safety device for home baking',
     imageTitle: '60L Built-in Gas Oven HP-GOV60 | HousePlus Appliance Wholesale',
 
@@ -2145,7 +2145,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/711b5854-ae37-4eea-b73e-c65b018a98d0',
+    coverImage: 'https://images.houseplus-ch.com/media/711b5854-ae37-4eea-b73e-c65b018a98d0/',
     imageAlt: '30L built-in steam oven HP-ST30 with 3 cooking modes — pure steam, convection and combi steam for healthy gourmet cooking',
     imageTitle: '30L Steam Oven HP-ST30 | HousePlus Appliance Wholesale',
 
@@ -2193,7 +2193,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/2fd9cc95-2d2a-4309-a730-eed1f7e56e55',
+    coverImage: 'https://images.houseplus-ch.com/media/2fd9cc95-2d2a-4309-a730-eed1f7e56e55/',
     imageAlt: '8L/min compact tankless gas water heater HP-GWH08 with LED display for single-point kitchen and shower use',
     imageTitle: '8L Gas Water Heater HP-GWH08 | HousePlus Appliance Wholesale',
 
@@ -2241,7 +2241,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3',
+    coverImage: 'https://images.houseplus-ch.com/media/e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3/',
     imageAlt: '10L/min tankless gas water heater HP-GWH10 with balanced flue and CO protection for safe indoor installation',
     imageTitle: '10L Gas Water Heater HP-GWH10 | HousePlus Appliance Wholesale',
 
@@ -2289,7 +2289,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/15e34719-75ce-4403-833b-cd8715a50c42',
+    coverImage: 'https://images.houseplus-ch.com/media/15e34719-75ce-4403-833b-cd8715a50c42/',
     imageAlt: '50L electric storage water heater HP-EWH50 with enamel tank and digital display for reliable home hot water supply',
     imageTitle: '50L Electric Water Heater HP-EWH50 | HousePlus Appliance Wholesale',
 
@@ -2338,7 +2338,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/ac8011c3-e195-40e5-9259-1314af4c699a',
+    coverImage: 'https://images.houseplus-ch.com/media/ac8011c3-e195-40e5-9259-1314af4c699a/',
     imageAlt: '2000W portable induction cooker HP-PIC20 with crystal glass surface and touch control for flexible tabletop cooking',
     imageTitle: 'Portable Induction Cooker HP-PIC20 | HousePlus Appliance Wholesale',
 
@@ -2387,7 +2387,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/a6a318fa-4b78-4907-af53-f77a113ff183',
+    coverImage: 'https://images.houseplus-ch.com/media/a6a318fa-4b78-4907-af53-f77a113ff183/',
     imageAlt: '4-zone built-in induction hob HP-ID4 with flex bridge function and 7200W power on Schott Ceran glass surface',
     imageTitle: '4-Zone Induction Hob HP-ID4 | HousePlus Appliance Wholesale',
 
@@ -2435,7 +2435,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/66608ca2-0849-4fc7-8d55-f15563719d87',
+    coverImage: 'https://images.houseplus-ch.com/media/66608ca2-0849-4fc7-8d55-f15563719d87/',
     imageAlt: '4-zone built-in ceramic hob HP-CH4 with 6000W radiant heating on black ceramic glass, compatible with all cookware',
     imageTitle: '4-Zone Ceramic Hob HP-CH4 | HousePlus Appliance Wholesale',
 
@@ -2484,7 +2484,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/5e2f09d5-57bd-459f-af91-fe2ea3102ed0',
+    coverImage: 'https://images.houseplus-ch.com/media/5e2f09d5-57bd-459f-af91-fe2ea3102ed0/',
     imageAlt: '3-zone built-in induction hob HP-ID3 with central flex zone and 5400W power on Schott Ceran glass for modern kitchens',
     imageTitle: '3-Zone Induction Hob HP-ID3 | HousePlus Appliance Wholesale',
 
@@ -2533,7 +2533,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/b03e71c6-1ec9-4c4e-aabe-93a692944a74',
+    coverImage: 'https://images.houseplus-ch.com/media/b03e71c6-1ec9-4c4e-aabe-93a692944a74/',
     imageAlt: 'Portable butane cassette gas stove HP-CS1 with 2.5kW burner, foldable design and carry case for outdoor cooking and hot pot',
     imageTitle: 'Portable Cassette Gas Stove HP-CS1 | HousePlus Appliance Wholesale',
 
@@ -2582,7 +2582,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
       exportCountries: 53,
       wholesaleClients: 441,
     },
-    coverImage: 'https://images.houseplus-ch.com/media/e2185887-f46e-4f60-8c6c-5c0ba9061fa8',
+    coverImage: 'https://images.houseplus-ch.com/media/e2185887-f46e-4f60-8c6c-5c0ba9061fa8/',
     imageAlt: 'Double burner butane cassette gas stove HP-CS2 with 2 x 2.5kW burners, wind shields and carry case for outdoor camping cooking',
     imageTitle: 'Double Burner Cassette Gas Stove HP-CS2 | HousePlus Appliance Wholesale',
 

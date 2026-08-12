@@ -120,7 +120,7 @@ async function imageSitemap(request, env) {
     grouped.set(row.canonical_url, page);
   }
   const urls = [...grouped.entries()].map(([pageUrl, assets]) => {
-    const images = assets.map((asset) => `\n    <image:image><image:loc>${escapeXml(`${PUBLIC_MEDIA_ORIGIN}/media/${asset.asset_id}`)}</image:loc>${asset.title ? `<image:title>${escapeXml(asset.title)}</image:title>` : ''}</image:image>`).join('');
+    const images = assets.map((asset) => `\n    <image:image><image:loc>${escapeXml(`${PUBLIC_MEDIA_ORIGIN}/media/${asset.asset_id}/`)}</image:loc>${asset.title ? `<image:title>${escapeXml(asset.title)}</image:title>` : ''}</image:image>`).join('');
     return `\n  <url><loc>${escapeXml(pageUrl)}</loc>${images}\n  </url>`;
   }).join('');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${urls}\n</urlset>`;
