@@ -340,23 +340,68 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
   ];
 
+  const categoryFor = (slug: string) => {
+    if (/(solar|battery|lifepo|mppt|pwm|energy-storage)/.test(slug)) return 'Solar & Storage';
+    if (/(ssd|earphone|electronics|3c|consumer-electronics)/.test(slug)) return '3C Electronics';
+    if (/(oem|manufacturing|wholesale|appliance|air-fryer|kitchen)/.test(slug)) return 'Home Appliances';
+    return 'Industry Insights';
+  };
+  const featuredArticle = articles[0];
+  const articleGrid = articles.slice(1);
+
   return (
     <main className="min-h-screen bg-white">
-      <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <div className="relative max-w-4xl mx-auto text-center z-10">
+      <div className="relative overflow-hidden bg-slate-900 px-4 py-20 text-white md:py-32">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <Breadcrumb lang={lang} slug="news" />
-          <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
+          <p className="mt-6 text-xs font-black uppercase tracking-[0.22em] text-blue-300">Global B2B intelligence</p>
+          <h1 className="mb-4 mt-3 text-3xl font-black leading-tight md:text-5xl">
             {titles[lang] || titles.en}
           </h1>
-          <p className="text-slate-300 text-lg md:text-xl mb-6">
+          <p className="text-lg text-slate-300 md:text-xl">
             {descriptions[lang] || descriptions.en}
           </p>
         </div>
       </div>
 
-      <section className="max-w-6xl mx-auto py-16 md:py-20 px-4" aria-label="Latest HousePlus insights">
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20" aria-label="Latest HousePlus insights">
+        {featuredArticle && (
+          <Link
+            href={`/${lang}/news/${featuredArticle.slug}`}
+            className="group mb-10 grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_48px_rgba(15,23,42,0.10)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_28px_56px_rgba(37,99,235,0.16)] md:mb-14 lg:grid-cols-[1.15fr_0.85fr]"
+          >
+            <figure className="relative min-h-[17rem] overflow-hidden bg-slate-100 md:min-h-[25rem]">
+              <img
+                src={featuredArticle.image}
+                alt={featuredArticle.imageAlt}
+                title={featuredArticle.title[lang as keyof typeof featuredArticle.title] || featuredArticle.title.en}
+                className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                loading="eager"
+                decoding="async"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/55 to-transparent" aria-hidden="true" />
+              <figcaption className="absolute bottom-5 left-5 rounded-full border border-white/35 bg-slate-950/80 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-md">
+                Featured insight
+              </figcaption>
+            </figure>
+            <div className="flex flex-col justify-center bg-gradient-to-br from-white via-white to-blue-50/70 px-7 py-8 md:px-10 md:py-12">
+              <p className="mb-3 text-[11px] font-black uppercase tracking-[0.18em] text-blue-700">{categoryFor(featuredArticle.slug)}</p>
+              <time className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-500" dateTime={featuredArticle.date}>{featuredArticle.date}</time>
+              <h2 className="mb-5 text-3xl font-black leading-[1.08] tracking-tight text-slate-950 transition-colors group-hover:text-blue-700 md:text-4xl">
+                {featuredArticle.title[lang as keyof typeof featuredArticle.title] || featuredArticle.title.en}
+              </h2>
+              <p className="mb-7 text-base leading-7 text-slate-600 md:text-lg">
+                {featuredArticle.description[lang as keyof typeof featuredArticle.description] || featuredArticle.description.en}
+              </p>
+              <div className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-blue-700">
+                Read featured insight <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </div>
+            </div>
+          </Link>
+        )}
+
         <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-          {articles.map((article) => (
+          {articleGrid.map((article) => (
             <Link
               key={article.slug}
               href={`/${lang}/news/${article.slug}`}
@@ -373,7 +418,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-950/45 to-transparent" aria-hidden="true" />
                 <figcaption className="absolute bottom-4 left-4">
-                  <span className="rounded-full border border-white/35 bg-slate-950/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em] text-white backdrop-blur-md">News &amp; Insights</span>
+                  <span className="rounded-full border border-white/35 bg-slate-950/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em] text-white backdrop-blur-md">{categoryFor(article.slug)}</span>
                 </figcaption>
               </figure>
               <div className="flex flex-grow flex-col px-6 pb-6 pt-5 md:px-7 md:pb-7 md:pt-6">
