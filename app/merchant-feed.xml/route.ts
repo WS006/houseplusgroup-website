@@ -5,6 +5,7 @@ export const dynamic = 'force-static';
 
 export async function GET() {
   const BASE_URL = 'https://www.houseplus-ch.com';
+  const absoluteUrl = (value: string) => value.startsWith('http') ? value : `${BASE_URL}${value}`;
 
   const items = Object.entries(PRODUCT_DATA).map(([slug, product]) => {
     const modelSpec = product.specs.find((s) => s.key === 'Model' || s.key === 'SKU');
@@ -22,8 +23,7 @@ export async function GET() {
       <g:title><![CDATA[${product.name} | HousePlus Wholesale]]></g:title>
       <g:description><![CDATA[${product.geoDescription || product.description}]]></g:description>
       <g:link>${BASE_URL}/en/products/${slug}</g:link>
-      <g:image_link>${BASE_URL}${product.coverImage}</g:image_link>
-      <g:additional_image_link>${BASE_URL}${product.coverImage}</g:additional_image_link>
+      <g:image_link>${absoluteUrl(product.coverImage)}</g:image_link>
       <g:availability>${availability}</g:availability>
       <g:price>${price}.00 USD</g:price>
       <g:brand>HousePlus</g:brand>

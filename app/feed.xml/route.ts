@@ -14,6 +14,7 @@ function escapeXml(str: string): string {
 
 export async function GET() {
   const baseUrl = 'https://www.houseplus-ch.com';
+  const absoluteUrl = (value: string) => value.startsWith('http') ? value : `${baseUrl}${value}`;
 
   const items = sortedBlogPosts
     .map((post) => {
@@ -42,7 +43,7 @@ export async function GET() {
       <pubDate>${pubDate}</pubDate>
       <description>${description}</description>
       <content:encoded><![CDATA[
-        <img src="${baseUrl}${post.heroImage}" alt="${escapeXml(post.heroImageAlt)}" style="max-width:100%;height:auto;" />
+        <img src="${absoluteUrl(post.heroImage)}" alt="${escapeXml(post.heroImageAlt)}" title="${escapeXml(post.title)}" style="max-width:100%;height:auto;" />
         ${contentHtml}
       ]]></content:encoded>
       <category>${category}</category>

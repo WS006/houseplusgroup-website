@@ -105,8 +105,8 @@ async function serveMedia(request, env, assetId, allowUnapproved = false) {
 
 async function imageSitemap(request, env) {
   const rows = await env.MEDIA_DB.prepare(`
-    SELECT a.asset_id, a.r2_key, a.updated_at, t.alt_text, t.title,
-           r.canonical_url
+    SELECT a.asset_id, a.r2_key, a.updated_at, a.license_scope, a.copyright_owner,
+           t.alt_text, t.title, t.caption, t.description, r.canonical_url
     FROM assets a
     JOIN asset_relations r ON r.asset_id = a.asset_id
     LEFT JOIN asset_translations t ON t.asset_id = a.asset_id AND t.locale = 'en'
@@ -120,8 +120,13 @@ async function imageSitemap(request, env) {
     grouped.set(row.canonical_url, page);
   }
   const urls = [...grouped.entries()].map(([pageUrl, assets]) => {
-    const images = assets.map((asset) => `\n    <image:image><image:loc>${escapeXml(`${PUBLIC_MEDIA_ORIGIN}/media/${asset.asset_id}/`)}</image:loc>${asset.title ? `<image:title>${escapeXml(asset.title)}</image:title>` : ''}</image:image>`).join('');
-    return `\n  <url><loc>${escapeXml(pageUrl)}</loc>${images}\n  </url>`;
+    const lastmod = assets.reduce((latest, asset) => !latest || String(asset.updated_at) > latest ? String(asset.updated_at) : latest, '');
+    const images = assets.map((asset) => {
+      const title = asset.title || asset.alt_text || asset.r2_key;
+      const caption = asset.caption || asset.description || asset.alt_text || title;
+      return `\n    <image:image><image:loc>${escapeXml(`${PUBLIC_MEDIA_ORIGIN}/media/${asset.asset_id}/`)}</image:loc><image:title>${escapeXml(title)}</image:title><image:caption>${escapeXml(caption)}</image:caption><image:license>${escapeXml('https://www.houseplus-ch.com/terms')}</image:license></image:image>`;
+    }).join('');
+    return `\n  <url><loc>${escapeXml(pageUrl)}</loc>${lastmod ? `<lastmod>${escapeXml(lastmod.slice(0, 10))}</lastmod>` : ''}${images}\n  </url>`;
   }).join('');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${urls}\n</urlset>`;
   return new Response(xml, { headers: { 'content-type': 'application/xml; charset=utf-8', 'cache-control': 'public, max-age=300' } });

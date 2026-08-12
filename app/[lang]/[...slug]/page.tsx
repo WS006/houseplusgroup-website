@@ -2,8 +2,20 @@ import { Metadata } from 'next';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
 import { localizeImageUrl } from '@/lib/image-utils';
+import SEOHead from '@/components/SEOHead';
+import { generateImageObjectSchema } from '@/lib/schema-generator';
+import { getR2MediaDetails, r2ImageDimensions } from '@/lib/r2-media-details';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const PAGE_IMAGE_BY_TYPE: Record<string, string> = {
+  products: 'https://images.houseplus-ch.com/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/',
+  news: 'https://images.houseplus-ch.com/media/7f712b0f-2530-48e8-866b-d70eb0b3bd75/',
+  'about-us': 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/',
+  factory: 'https://images.houseplus-ch.com/media/d3642fb5-d016-4cec-aa3a-e9ab2326050a/',
+  team: 'https://images.houseplus-ch.com/media/2946709f-9053-4d33-991a-28e37dfd3f27/',
+  service: 'https://images.houseplus-ch.com/media/b7dbffd2-f52e-42bc-b0c2-43329ca68682/',
+};
+const DEFAULT_PAGE_IMAGE = 'https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7/';
 
 export const dynamic = 'force-static';
 export const dynamicParams = true;
@@ -221,6 +233,10 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
   }
   langAlternates['x-default'] = pathSlug ? `${BASE_URL}/en/${pathSlug}` : `${BASE_URL}/en`;
 
+  const primaryImage = PAGE_IMAGE_BY_TYPE[pageType] || DEFAULT_PAGE_IMAGE;
+  const imageDimensions = r2ImageDimensions(primaryImage, { width: 1200, height: 675 });
+  const imageDetails = getR2MediaDetails(primaryImage);
+
   return {
     title,
     description,
@@ -231,8 +247,18 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
     openGraph: {
       title,
       description,
+      url: pathSlug ? `${BASE_URL}/${lang}/${pathSlug}` : `${BASE_URL}/${lang}`,
+      siteName: 'HousePlus',
       type: 'website',
+      images: [{ url: primaryImage, width: imageDimensions.width, height: imageDimensions.height, alt: imageDetails?.alt || title }],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [{ url: primaryImage, alt: imageDetails?.alt || title }],
+    },
+    robots: 'index, follow, max-image-preview:large',
   };
 }
 
@@ -275,8 +301,18 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
     notFound();
   }
 
+  const fallbackImage = PAGE_IMAGE_BY_TYPE[fullSlug.split('/')[0]] || DEFAULT_PAGE_IMAGE;
+  const pageImage = localizeImageUrl(story?.content?.image?.filename) || fallbackImage;
+  const pageImageDetails = getR2MediaDetails(pageImage);
+  const pageImageSchema = generateImageObjectSchema({
+    url: pageImage,
+    caption: pageImageDetails?.title || story?.content?.title || story?.name || 'HousePlus visual evidence',
+    description: pageImageDetails?.description || story?.content?.description || 'HousePlus B2B manufacturing, product or service visual evidence.',
+  });
+
   return (
     <main className="min-h-screen bg-white">
+      <SEOHead schemas={[pageImageSchema]}/>
       {/* Hero */}
       <div className="bg-slate-50 py-24 px-4 border-b border-slate-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -309,11 +345,15 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
                 'https://images.houseplus-ch.com/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/',
               ];
               const productImg = localizeImageUrl(s.content?.image?.filename) || images[idx % images.length];
+              const mediaDetails = getR2MediaDetails(productImg);
+              const imageDimensions = r2ImageDimensions(productImg, { width: 900, height: 675 });
+              const imageAlt = mediaDetails?.alt || s.content?.image?.alt || s.content?.title || s.name;
+              const imageTitle = mediaDetails?.title || s.content?.title || s.name;
 
               return (
                 <a key={s.uuid} href={`/${lang}/${s.full_slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
                   <div className="aspect-[4/3] overflow-hidden relative">
-                    <img src={productImg} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"  title={s.name} decoding="async" />
+                    <img src={productImg} alt={imageAlt} title={imageTitle} width={imageDimensions.width} height={imageDimensions.height} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" decoding="async" />
                     <div className="absolute top-6 left-6">
                       <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-full">HousePlus Certified</span>
                     </div>

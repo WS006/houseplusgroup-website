@@ -4,6 +4,7 @@ import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { r2ImageDimensions } from '@/lib/r2-media-details';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -70,6 +71,7 @@ export async function generateMetadata({
 
   const title = titleTemplates[lang] || titleTemplates['en'];
   const description = descTemplates[lang] || descTemplates['en'];
+  const imageDimensions = r2ImageDimensions(product?.coverImage, { width: 900, height: 675 });
 
   return {
     title,
@@ -83,7 +85,13 @@ export async function generateMetadata({
       description,
       url: `${BASE_URL}/${lang}/products/${slug}`,
       siteName: 'HousePlus',
-      images: product?.coverImage ? [{ url: product.coverImage, width: 900, height: 675, alt: name }] : [],
+      images: product?.coverImage ? [{
+        url: product.coverImage,
+        width: imageDimensions.width,
+        height: imageDimensions.height,
+        alt: product.imageAlt || name,
+        type: product.coverImage.endsWith('.png/') ? 'image/png' : 'image/jpeg',
+      }] : [],
       type: 'website',
     },
   };
@@ -118,6 +126,9 @@ export default async function ProductDetailPage({
   const productUrl = `${BASE_URL}/${lang}/products/${slug}`;
   const modelSpec = product.specs.find((s) => s.key === 'Model');
   const sku = modelSpec?.value || slug.toUpperCase();
+  const imageDimensions = r2ImageDimensions(product.coverImage, { width: 900, height: 675 });
+  const productImageAlt = product.imageAlt || getDetailAlt(product, modelSpec?.value || slug.toUpperCase());
+  const productImageTitle = product.imageTitle || getDetailTitle(product, modelSpec?.value || slug.toUpperCase());
 
   // Generate structured data schemas
   const productSchema = generateProductSchema({
@@ -132,8 +143,10 @@ export default async function ProductDetailPage({
       : product.category === 'appliances'
       ? 'Home Appliances'
       : '3C Electronics',
-    imageCaption: `HousePlus ${product.name} - Professional wholesale product`,
-    imageDescription: `High-quality ${product.name} from HousePlus, CE/RoHS certified, OEM/ODM available`,
+    imageCaption: productImageTitle,
+    imageDescription: product.geoDescription || productImageAlt,
+    imageWidth: imageDimensions.width,
+    imageHeight: imageDimensions.height,
     b2bInfo: product.b2bInfo,
   });
 
@@ -154,8 +167,10 @@ export default async function ProductDetailPage({
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50">
               <img
                 src={product.coverImage}
-                alt={getDetailAlt(product, modelSpec?.value || slug.toUpperCase())}
-                title={getDetailTitle(product, modelSpec?.value || slug.toUpperCase())}
+                alt={productImageAlt}
+                title={productImageTitle}
+                width={imageDimensions.width}
+                height={imageDimensions.height}
                 className="absolute inset-0 w-full h-full object-cover"
                decoding="async" />
               {/* Hidden SEO-rich context for search engines */}

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Locale } from './i18n-config';
+import { getR2MediaDetails, r2ImageDimensions } from './r2-media-details';
 
 export interface SEOConfig {
   title: string;
@@ -14,6 +15,10 @@ export interface SEOConfig {
   dateModified?: string;
   geoRegion?: string;
   geoPlacename?: string;
+  imageAlt?: string;
+  imageTitle?: string;
+  imageCaption?: string;
+  imageDescription?: string;
 }
 
 export const siteConfig = {
@@ -42,6 +47,10 @@ function toAbsoluteImageUrl(image?: string): string {
 export function generateMetadata(config: SEOConfig): Metadata {
   const canonicalUrl = `${siteConfig.url}${config.url}`;
   const imageUrl = toAbsoluteImageUrl(config.image);
+  const imageDetails = getR2MediaDetails(imageUrl);
+  const imageDimensions = r2ImageDimensions(imageUrl);
+  const imageAlt = config.imageAlt || imageDetails?.alt || config.title;
+  const imageType = imageDetails?.contentType || (imageUrl.endsWith('.png') ? 'image/png' : imageUrl.endsWith('.webp') ? 'image/webp' : 'image/jpeg');
 
   // Strip the /{lang} prefix from config.url to build clean hreflang URLs
   // e.g. config.url = '/en/about-us' → path = '/about-us'
@@ -65,11 +74,11 @@ export function generateMetadata(config: SEOConfig): Metadata {
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 675,
-          alt: config.title,
+          width: imageDimensions.width,
+          height: imageDimensions.height,
+          alt: imageAlt,
           secureUrl: imageUrl,
-          type: 'image/jpeg',
+          type: imageType,
         },
       ],
       type: config.type === 'article' ? 'article' : 'website',
@@ -85,9 +94,9 @@ export function generateMetadata(config: SEOConfig): Metadata {
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 675,
-          alt: config.title,
+          width: imageDimensions.width,
+          height: imageDimensions.height,
+          alt: imageAlt,
         }
       ],
     },

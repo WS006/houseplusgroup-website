@@ -1,4 +1,8 @@
+import { getR2MediaDetails, r2ImageDimensions } from './r2-media-details';
+import { r2MediaUrl } from './r2-media-map';
+
 const BASE_URL = 'https://www.houseplus-ch.com';
+const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/';
 
 interface SchemaOptions {
   title: string;
@@ -21,11 +25,14 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     url: BASE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${BASE_URL}/logo.png`,
+      url: r2MediaUrl('/logo.png'),
+      contentUrl: r2MediaUrl('/logo.png'),
       width: 512,
       height: 512,
+      license: `${BASE_URL}/terms`,
+      copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     },
-    image: `${BASE_URL}/og-image.png`,
+    image: DEFAULT_SOCIAL_IMAGE,
     foundingDate: '2010',
     foundingLocation: {
       '@type': 'Place',
@@ -153,14 +160,25 @@ export interface ImageObjectOptions {
 }
 
 export function generateImageObjectSchema(options: ImageObjectOptions) {
+  const details = getR2MediaDetails(options.url);
+  const dimensions = r2ImageDimensions(options.url, { width: options.width || 1200, height: options.height || 675 });
+  const caption = options.caption || details?.title;
+  const description = options.description || details?.description || details?.alt;
   return {
     '@context': 'https://schema.org',
     '@type': 'ImageObject',
+    '@id': `${options.url}#image`,
+    url: options.url,
     contentUrl: options.url,
-    caption: options.caption,
-    description: options.description,
-    ...(options.width && { width: options.width }),
-    ...(options.height && { height: options.height }),
+    name: caption || details?.alt,
+    caption,
+    description,
+    width: dimensions.width,
+    height: dimensions.height,
+    license: `${BASE_URL}/terms`,
+    acquireLicensePage: `${BASE_URL}/terms`,
+    copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     contentLocation: {
       '@type': 'Place',
       name: 'Zhongshan, Guangdong, China',
@@ -237,6 +255,10 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     b2bInfo,
   } = options;
 
+  const mediaDetails = getR2MediaDetails(image);
+  const imageDimensions = r2ImageDimensions(image, { width: imageWidth, height: imageHeight });
+  const resolvedImageCaption = imageCaption || mediaDetails?.title || name;
+  const resolvedImageDescription = imageDescription || mediaDetails?.description || mediaDetails?.alt || description;
   const additionalProperty = [];
   if (b2bInfo?.moq) {
     additionalProperty.push({
@@ -310,12 +332,19 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     image: image,
     imageObject: {
       '@type': 'ImageObject',
+      '@id': `${image}#image`,
       url: image,
-      width: imageWidth,
-      height: imageHeight,
-      caption: imageCaption || name,
-      description: imageDescription || description,
-      name: imageCaption || name,
+      contentUrl: image,
+      width: imageDimensions.width,
+      height: imageDimensions.height,
+      caption: resolvedImageCaption,
+      description: resolvedImageDescription,
+      name: resolvedImageCaption,
+      representativeOfPage: true,
+      license: `${BASE_URL}/terms`,
+      acquireLicensePage: `${BASE_URL}/terms`,
+      copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+      creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
       contentLocation: {
         '@type': 'Place',
         name: 'Zhongshan, Guangdong, China',
@@ -440,8 +469,8 @@ export function generateLocalBusinessSchema(options: SchemaOptions) {
     alternateName: 'HousePlus',
     description,
     url,
-    logo: `${BASE_URL}/logo.png`,
-    image: `${BASE_URL}/og-image.jpg`,
+    logo: r2MediaUrl('/logo.png'),
+    image: DEFAULT_SOCIAL_IMAGE,
     telephone: '+86-155-7811-9543',
     email: 'jack@houseplus-ch.com',
     priceRange: '$$$',
@@ -541,14 +570,26 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     '@id': url,
     headline,
     description,
-    image: image || `${BASE_URL}/og-image.png`,
-    imageObject: {
+    image: image || DEFAULT_SOCIAL_IMAGE,
+    imageObject: (() => {
+      const articleImage = image || DEFAULT_SOCIAL_IMAGE;
+      const details = getR2MediaDetails(articleImage);
+      const dimensions = r2ImageDimensions(articleImage, { width: 1200, height: 630 });
+      return {
       '@type': 'ImageObject',
-      url: image || `${BASE_URL}/og-image.png`,
-      width: 1200,
-      height: 630,
-      caption: headline,
-      description: description,
+      '@id': `${articleImage}#image`,
+      url: articleImage,
+      contentUrl: articleImage,
+      width: dimensions.width,
+      height: dimensions.height,
+      caption: details?.title || headline,
+      description: details?.description || details?.alt || description,
+      name: details?.title || headline,
+      representativeOfPage: true,
+      license: `${BASE_URL}/terms`,
+      acquireLicensePage: `${BASE_URL}/terms`,
+      copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+      creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
       contentLocation: {
         '@type': 'Place',
         name: 'Zhongshan, Guangdong, China',
@@ -559,7 +600,8 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
           addressCountry: 'CN',
         },
       },
-    },
+      };
+    })(),
     datePublished: datePublished || new Date().toISOString(),
     dateModified: dateModified || new Date().toISOString(),
     author: {
@@ -583,9 +625,11 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
       name: 'HousePlus Group',
       logo: {
         '@type': 'ImageObject',
-        url: `${BASE_URL}/icon.png`,
+        url: r2MediaUrl('/logo.png'),
+        contentUrl: r2MediaUrl('/logo.png'),
         width: 512,
         height: 512,
+        license: `${BASE_URL}/terms`,
       },
     },
     mainEntityOfPage: {

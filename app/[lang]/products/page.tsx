@@ -4,6 +4,7 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { PRODUCT_DATA } from '@/lib/product-data';
+import { r2ImageDimensions } from '@/lib/r2-media-details';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
@@ -89,6 +90,10 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
   const title = isValidCategory ? categoryTitles[category][lang] || categoryTitles[category].en : baseTitles[lang] || baseTitles.en;
   const description = isValidCategory ? categoryDescriptions[category][lang] || categoryDescriptions[category].en : baseDescriptions[lang] || baseDescriptions.en;
 
+  const categoryToProductType: Record<string, string> = { solar: 'solar', 'home-appliances': 'appliances', '3c-electronics': 'electronics' };
+  const featuredProduct = Object.values(PRODUCT_DATA).find((product) => !category || product.category === categoryToProductType[category]) || Object.values(PRODUCT_DATA)[0];
+  const imageDimensions = r2ImageDimensions(featuredProduct?.coverImage, { width: 900, height: 675 });
+
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
     langAlternates[locale] = isValidCategory ? `${BASE_URL}/${locale}/products?category=${category}` : `${BASE_URL}/${locale}/products`;
@@ -102,6 +107,25 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
       canonical: isValidCategory ? `${BASE_URL}/${lang}/products?category=${category}` : `${BASE_URL}/${lang}/products`,
       languages: langAlternates,
     },
+    openGraph: featuredProduct ? {
+      title,
+      description,
+      url: isValidCategory ? `${BASE_URL}/${lang}/products?category=${category}` : `${BASE_URL}/${lang}/products`,
+      siteName: 'HousePlus',
+      images: [{
+        url: featuredProduct.coverImage,
+        width: imageDimensions.width,
+        height: imageDimensions.height,
+        alt: featuredProduct.imageAlt || featuredProduct.name,
+      }],
+      type: 'website',
+    } : undefined,
+    twitter: featuredProduct ? {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [{ url: featuredProduct.coverImage, alt: featuredProduct.imageAlt || featuredProduct.name }],
+    } : undefined,
   };
 }
 
@@ -141,6 +165,9 @@ const products = Object.entries(PRODUCT_DATA).map(([slug, data]) => {
     coverImage: data.coverImage,
     description: data.description,
     badge: data.badge || '',
+    imageAlt: data.imageAlt || data.name,
+    imageTitle: data.imageTitle || data.name,
+    imageDimensions: r2ImageDimensions(data.coverImage, { width: 900, height: 675 }),
   };
 });
 
@@ -252,14 +279,16 @@ export default async function ProductsPage({ params }: { params: { lang: string 
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
                     <img
                       src={product.coverImage}
-                      alt={getImageAlt(product)}
-                      title={getImageTitle(product)}
+                      alt={product.imageAlt || getImageAlt(product)}
+                      title={product.imageTitle || getImageTitle(product)}
+                      width={product.imageDimensions.width}
+                      height={product.imageDimensions.height}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                      decoding="async" />
                     {/* Hidden SEO-rich context for search engines */}
-                    <span className="sr-only" data-seo-alt={PRODUCT_DATA[product.slug]?.imageAlt || ''} data-seo-title={PRODUCT_DATA[product.slug]?.imageTitle || ''}>
-                      {PRODUCT_DATA[product.slug]?.imageAlt || ''}
+                    <span className="sr-only" data-seo-alt={product.imageAlt} data-seo-title={product.imageTitle}>
+                      {product.imageAlt}
                     </span>
                     {product.badge && (
                       <span className="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-full">
