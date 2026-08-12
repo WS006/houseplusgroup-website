@@ -5,8 +5,8 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const defaultLocale = 'en';
 
 // Admin protection config
-const ADMIN_PATH = '/admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'HousePlus2026!';
+const ADMIN_PATHS = ['/admin', '/api/media-library'];
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 export function middleware(request: NextRequest) {
   const { pathname, protocol, host } = request.nextUrl;
@@ -28,25 +28,28 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  // Admin path protection
-  if (pathname.startsWith(ADMIN_PATH)) {
+  // Protect operational pages and the server-side media proxy with Basic Auth.
+  // Deployment must supply ADMIN_PASSWORD; no insecure default credential is allowed.
+  if (ADMIN_PATHS.some((adminPath) => pathname.startsWith(adminPath))) {
+    if (!ADMIN_PASSWORD) {
+      return new NextResponse('Admin access is not configured', { status: 503 });
+    }
+
     const authHeader = request.headers.get('authorization');
     const basicAuth = authHeader?.split(' ')[1];
-
     if (!basicAuth) {
       return new NextResponse('Authentication required', {
         status: 401,
-        headers: { 'WWW-Authenticate': 'Basic realm="Admin Panel"' },
+        headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
       });
     }
 
     const decoded = Buffer.from(basicAuth, 'base64').toString('utf-8');
-    const [user, pass] = decoded.split(':');
-
+    const [, pass] = decoded.split(':');
     if (pass !== ADMIN_PASSWORD) {
       return new NextResponse('Invalid credentials', {
         status: 401,
-        headers: { 'WWW-Authenticate': 'Basic realm="Admin Panel"' },
+        headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
       });
     }
   }
