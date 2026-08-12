@@ -188,8 +188,19 @@ export default function Footer({ lang }: { lang: string }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
-          <div>
-            <h3 className="text-white font-black text-2xl mb-6">HousePlus</h3>
+          <div className={isRTL ? 'text-right' : ''}>
+            <Link href={`/${lang}`} aria-label="HousePlus home" className={`mb-6 inline-flex rounded-xl bg-white p-2.5 shadow-lg shadow-black/20 transition-transform duration-300 hover:scale-[1.02] ${isRTL ? 'ml-0 mr-auto' : ''}`}>
+              <img
+                src="https://images.houseplus-ch.com/media/houseplus-horizontal-logo/"
+                alt="HousePlus Group horizontal logo"
+                title="HousePlus Group official logo"
+                width={611}
+                height={246}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-48 sm:w-52"
+              />
+            </Link>
             <p className="text-sm leading-relaxed mb-6">
               Professional HousePlus manufacturer of solar systems, home appliances, and 3C electronics for global wholesale buyers.
             </p>
