@@ -94,7 +94,7 @@ export default async function CareersPage({ params }: { params: { lang: string }
         <section className="relative py-24 px-4 bg-slate-900 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-40">
             <img 
-              src="/images/site/careers-growth-workshop.jpg" 
+              src="https://houseplus-media-api.jack006hu.workers.dev/media/7d3e4426-84de-441e-b9ce-86b385f4c0ff"
               alt="HousePlus Careers" 
               className="object-cover"
             loading="lazy"
@@ -134,7 +134,7 @@ export default async function CareersPage({ params }: { params: { lang: string }
               </div>
               <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/site/office-meeting-boardroom.jpg" 
+                  src="https://houseplus-media-api.jack006hu.workers.dev/media/d51397fe-cf8d-4660-a3e1-22dc5374710b"
                   alt="HousePlus Team Collaboration" 
                   className="object-cover"
                 loading="lazy"

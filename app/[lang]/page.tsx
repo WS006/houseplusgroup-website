@@ -4,6 +4,7 @@ import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getDictionary } from '@/lib/i18n-config';
+import { r2MediaUrl } from '@/lib/r2-media-map';
 import { Metadata } from 'next';
 import dynamicImport from 'next/dynamic';
 import Link from 'next/link';
@@ -45,7 +46,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
     image: {
-      filename: `/images/carousel/${['houseplus-solar-hero.jpg', 'houseplus-home-appliances-hero.jpg', 'houseplus-3c-electronics-hero.jpg'][index]}`,
+      filename: r2MediaUrl(`/images/carousel/${['houseplus-solar-hero.jpg', 'houseplus-home-appliances-hero.jpg', 'houseplus-3c-electronics-hero.jpg'][index]}`),
       alt: item.imageAlt
     },
     title: item.title,
@@ -81,7 +82,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
           <div className="max-w-5xl mx-auto">
             <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-blue-100/80 ring-1 ring-blue-100">
               <img
-                src="/logo.png"
+                src="https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7"
                 alt="HousePlus logo"
                 title="HousePlus global wholesale manufacturer logo"
                 className="h-16 w-auto object-contain md:h-20"
@@ -149,7 +150,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
               key={index}
               title={industry.title}
               description={industry.description}
-              image={{ filename: ['/images/products/solar-panel-1.jpg', '/images/home/home-appliances-collection-b.jpg', '/images/products/headphone-over-ear.jpg'][index], alt: industry.title }}
+              image={{ filename: ['https://houseplus-media-api.jack006hu.workers.dev/media/8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d', 'https://houseplus-media-api.jack006hu.workers.dev/media/5735b9be-6402-4007-bc79-fc2ee8581f7b', 'https://houseplus-media-api.jack006hu.workers.dev/media/6b234004-d413-4690-8a78-4a3fbbf299f4'][index], alt: industry.title }}
               industry_type={['solar', 'appliances', 'electronics'][index] as 'solar' | 'appliances' | 'electronics'}
               button_link={`/${lang}/products?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
               button_text={industry.buttonText}

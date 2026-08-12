@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '8 min read',
   category: 'Certification Guide',
   heroImage:
-    '/images/articles/covers/ce-certification-solar-panels-guide.jpg',
+    'https://houseplus-media-api.jack006hu.workers.dev/media/9547b8fb-b6d7-488c-95c3-a156e7c1a937',
   heroImageAlt:
     'Solar panel compliance testing in a professional certification laboratory',
   sections: [
@@ -120,21 +120,21 @@ const article: BlogPost = {
       name: '450W CE-Certified Monocrystalline Solar Panel',
       desc: 'IEC 61215 & IEC 61730 certified, CE marked, RoHS compliant',
       image:
-        '/images/products/solar-panel-500w.jpg',
+        'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
     },
     {
       slug: 'monocrystalline-solar-panel-550w',
       name: '550W CE-Certified PERC Solar Panel',
       desc: 'Full CE documentation, UL and IEC certified for global markets',
       image:
-        '/images/products/solar-panel-500w.jpg',
+        'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
     },
     {
       slug: 'solar-panel-200w-flexible',
       name: '200W Flexible CE-Certified Solar Panel',
       desc: 'Lightweight flexible panel with CE and RoHS certification',
       image:
-        '/images/products/foldable-solar-panel-200w.jpg',
+        'https://houseplus-media-api.jack006hu.workers.dev/media/524e182e-6794-475d-b75f-563d55031eec',
     },
   ],
 };

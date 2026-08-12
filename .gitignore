@@ -37,3 +37,5 @@ next-env.d.ts
 /audit/r2-static-media-import.jsonl
 /audit/r2-optimized-media/
 /cloudflare/media-control-plane/*_request.json
+/audit/r2-switch/
+/cloudflare/media-control-plane/diagnose_publish_asset.mjs

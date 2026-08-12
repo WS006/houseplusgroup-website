@@ -209,6 +209,10 @@ export default {
       if (!asset) return json({ error: 'Asset not found' }, 404, cors);
       const body = await request.json();
       if (!ALLOWED_ENTITY_TYPES.has(body.entity_type) || !ALLOWED_ROLES.has(body.role) || !body.entity_id) return json({ error: 'Invalid entity relation' }, 400, cors);
+      if (body.role === 'article_hero' || body.role === 'product_primary') {
+        await env.MEDIA_DB.prepare('DELETE FROM asset_relations WHERE entity_type = ? AND entity_id = ? AND role = ? AND asset_id != ?')
+          .bind(body.entity_type, body.entity_id, body.role, asset.asset_id).run();
+      }
       await env.MEDIA_DB.prepare(`
         INSERT INTO asset_relations (relation_id, asset_id, entity_type, entity_id, role, canonical_url)
         VALUES (?, ?, ?, ?, ?, ?)

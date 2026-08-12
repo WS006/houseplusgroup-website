@@ -20,23 +20,23 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/x-icon',
       },
       {
-        src: '/favicon.png',
+        src: 'https://houseplus-media-api.jack006hu.workers.dev/media/44b1ac39-b07d-49b8-bb55-f9e7266893a3',
         sizes: '32x32',
         type: 'image/png',
       },
       {
-        src: '/apple-touch-icon.png',
+        src: 'https://houseplus-media-api.jack006hu.workers.dev/media/b159a3a6-85d6-490f-8bbb-a753cf220c8c',
         sizes: '180x180',
         type: 'image/png',
       },
       {
-        src: '/android-chrome-192x192.png',
+        src: 'https://houseplus-media-api.jack006hu.workers.dev/media/c0f1967e-254f-4779-8127-5aa0d4f9a1e1',
         sizes: '192x192',
         type: 'image/png',
         purpose: 'maskable',
       },
       {
-        src: '/android-chrome-512x512.png',
+        src: 'https://houseplus-media-api.jack006hu.workers.dev/media/4c25ace1-b0fb-48c9-ae3e-3ac3381f78c8',
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',

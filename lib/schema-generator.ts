@@ -531,7 +531,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     dateModified,
     authorName = 'Jack Hu',
     authorUrl = `${BASE_URL}/en/author/jack-hu`,
-    authorImage = '/logo.png',
+    authorImage = 'https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7',
     url = BASE_URL,
   } = options;
 

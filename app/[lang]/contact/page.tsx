@@ -68,7 +68,7 @@ export default async function ContactPage({ params }: { params: { lang: string }
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100">
               <img
-                src="/logo.png"
+                src="https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7"
                 alt="HousePlus logo"
                 title="HousePlus global wholesale manufacturer logo"
                 className="h-14 w-auto object-contain md:h-[4.5rem]"

@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Price Guide',
   heroImage:
-    '/images/articles/covers/solar-panel-wholesale-price-guide.jpg',
+    'https://houseplus-media-api.jack006hu.workers.dev/media/7580d6b8-f9d3-43b7-9d1f-1ad415061320',
   heroImageAlt:
     'Solar panels prepared for wholesale distribution in a logistics warehouse',
   sections: [
@@ -144,21 +144,21 @@ const article: BlogPost = {
       name: '550W Monocrystalline Solar Panel (Wholesale)',
       desc: 'Best value per watt at volume, $0.18/W at 500+ pcs',
       image:
-        '/images/products/solar-panel-500w.jpg',
+        'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
     },
     {
       slug: 'monocrystalline-solar-panel-450w',
       name: '450W Monocrystalline Solar Panel (Bulk)',
       desc: 'Popular commercial grade, tiered pricing from 100 pcs',
       image:
-        '/images/products/solar-panel-500w.jpg',
+        'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
     },
     {
       slug: 'solar-panel-100w-portable',
       name: '100W Portable Solar Panel (Wholesale)',
       desc: 'Compact panels for retail distribution, low MOQ of 100 pcs',
       image:
-        '/images/products/solar-panel-100w.jpg',
+        'https://houseplus-media-api.jack006hu.workers.dev/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c',
     },
   ],
 };

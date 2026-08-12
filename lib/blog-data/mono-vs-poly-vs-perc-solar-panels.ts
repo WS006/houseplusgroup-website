@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Technical Comparison',
   heroImage:
-    '/images/articles/covers/mono-vs-poly-vs-perc-solar-panels.jpg',
+    'https://houseplus-media-api.jack006hu.workers.dev/media/8f842a06-7161-4941-a88b-1bc165c2bb6d',
   heroImageAlt:
     'Distinct solar panel cell technologies in a technical comparison display',
   sections: [
@@ -143,19 +143,19 @@ const article: BlogPost = {
       slug: 'monocrystalline-solar-panel-550w',
       name: '550W PERC Monocrystalline Solar Panel',
       desc: 'Latest PERC technology, 21.8% efficiency, ideal for large-scale projects',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
     },
     {
       slug: 'monocrystalline-solar-panel-400w',
       name: '400W Monocrystalline Solar Panel',
       desc: 'Versatile high-efficiency panel for residential and commercial use',
-      image: '/images/products/flexible-solar-panel-400w.jpg',
+      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/a01ff960-1aac-4a09-8fe7-caa1116be031',
     },
     {
       slug: 'polycrystalline-solar-panel-300w',
       name: '300W Polycrystalline Solar Panel',
       desc: 'Cost-effective solution for budget-conscious projects with ample space',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
     },
   ],
 };

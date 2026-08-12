@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '10 min read',
   category: 'Home Appliances',
   heroImage:
-    '/images/articles/covers/air-fryer-sourcing-guide-china.jpg',
+    'https://houseplus-media-api.jack006hu.workers.dev/media/5d38e1b0-b17a-4434-887c-5afe172afe81',
   heroImageAlt:
     'Procurement specialist inspecting an air fryer at a Chinese supplier showroom',
   sections: [
@@ -134,19 +134,19 @@ const article: BlogPost = {
       slug: 'air-fryer-6l-digital',
       name: '6L Digital Air Fryer',
       desc: '1700W, 8 presets, rapid air technology, PFOA-free basket, CE/RoHS certified',
-      image: '/images/products/air-fryer-5-8l.jpg',
+      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/793ae24c-c7ee-453e-ab2c-038d0a20e818',
     },
     {
       slug: 'air-fryer-8l-touchscreen',
       name: '8L Touchscreen Air Fryer',
       desc: '1800W, large family size, 10 presets, dehydrate function, ETL certified',
-      image: '/images/products/air-fryer-5-8l.jpg',
+      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/793ae24c-c7ee-453e-ab2c-038d0a20e818',
     },
     {
       slug: 'air-fryer-35l-compact',
       name: '3.5L Compact Air Fryer',
       desc: '1200W, space-saving design, ideal for small households, 6 presets',
-      image: '/images/products/air-fryer-5-8l.jpg',
+      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/793ae24c-c7ee-453e-ab2c-038d0a20e818',
     },
   ],
 };
