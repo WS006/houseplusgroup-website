@@ -106,8 +106,8 @@ export async function GET(request: NextRequest) {
         example: {
           single: 'POST {"url": "https://www.houseplus-ch.com/en"}',
           multiple: 'POST {"urls": ["https://www.houseplus-ch.com/en", "https://www.houseplus-ch.com/en/about-us"]}',
-          withEngines: 'POST {"urls": [...], "engines": ["bing", "google"]}',
-          withNotify: 'POST {"urls": [...], "notify": true}',
+          recommended: 'POST {"urls": [...], "engines": ["indexnow"]}',
+          withNotify: 'POST {"urls": [...], "engines": ["indexnow"], "notify": true}',
         },
       },
       { status: 200 }
