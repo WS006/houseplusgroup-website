@@ -301,12 +301,12 @@ export default async function CatchAllPage({ params }: { params: { lang: string;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {subStories.map((s: any, idx: number) => {
               const images = [
-                'https://houseplus-media-api.jack006hu.workers.dev/media/e0245a6c-9df0-40ed-997e-d29c73309ac3',
-                'https://houseplus-media-api.jack006hu.workers.dev/media/ecf442ab-f6c0-405c-b6f8-f84ad418e606',
-                'https://houseplus-media-api.jack006hu.workers.dev/media/5cd0f0a7-b597-47f4-a2bd-52c783eb7025',
-                'https://houseplus-media-api.jack006hu.workers.dev/media/498a7ad8-81cf-403f-bdee-77c08dc04c3e',
-                'https://houseplus-media-api.jack006hu.workers.dev/media/951527a9-22ef-4ef3-9dfb-29c78bd9e99e',
-                'https://houseplus-media-api.jack006hu.workers.dev/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c',
+                'https://images.houseplus-ch.com/media/e0245a6c-9df0-40ed-997e-d29c73309ac3',
+                'https://images.houseplus-ch.com/media/ecf442ab-f6c0-405c-b6f8-f84ad418e606',
+                'https://images.houseplus-ch.com/media/5cd0f0a7-b597-47f4-a2bd-52c783eb7025',
+                'https://images.houseplus-ch.com/media/498a7ad8-81cf-403f-bdee-77c08dc04c3e',
+                'https://images.houseplus-ch.com/media/951527a9-22ef-4ef3-9dfb-29c78bd9e99e',
+                'https://images.houseplus-ch.com/media/71cebd48-d1c1-4bf9-af8e-77961ba1b58c',
               ];
               const productImg = localizeImageUrl(s.content?.image?.filename) || images[idx % images.length];
 

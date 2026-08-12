@@ -7,6 +7,8 @@ const auditDirectory = resolve(repositoryRoot, 'audit/r2-switch');
 const sourceRoots = ['app', 'components', 'lib', 'data'];
 const sourceExtensions = new Set(['.ts', '.tsx', '.js', '.jsx']);
 const dryRun = process.env.R2_URL_SWITCH_DRY_RUN === '1';
+const DEFAULT_WORKER_MEDIA_ORIGIN = 'https://houseplus-media-api.jack006hu.workers.dev';
+const PUBLIC_MEDIA_ORIGIN = 'https://images.houseplus-ch.com';
 
 async function collectSourceFiles(directory) {
   const absoluteDirectory = resolve(repositoryRoot, directory);
@@ -29,19 +31,25 @@ const mapping = JSON.parse(await readFile(mapPath, 'utf8')).mappings;
 const sourceFiles = (await Promise.all(sourceRoots.map(collectSourceFiles))).flat()
   .filter((filePath) => !filePath.endsWith(`${sep}r2-media-map.ts`));
 const localImagePattern = /(['"`])((?:\/images\/[^'"`$]+?\.(?:jpe?g|png|webp|gif|svg))|(?:\/(?:logo|favicon|apple-touch-icon|android-chrome-(?:192x192|512x512))\.png))\1/g;
+const workerMediaPattern = /(['"`])https:\/\/houseplus-media-api\.jack006hu\.workers\.dev(\/media\/[0-9a-f-]{16,})\1/gi;
 const changes = [];
 const unmapped = new Set();
 
 for (const filePath of sourceFiles) {
   const original = await readFile(filePath, 'utf8');
   let replacements = [];
-  const updated = original.replace(localImagePattern, (full, quote, localPath) => {
+  let updated = original.replace(localImagePattern, (full, quote, localPath) => {
     const r2Url = mapping[localPath];
     if (!r2Url) {
       unmapped.add(localPath);
       return full;
     }
     replacements.push({ local_path: localPath, r2_url: r2Url });
+    return `${quote}${r2Url}${quote}`;
+  });
+  updated = updated.replace(workerMediaPattern, (full, quote, mediaPath) => {
+    const r2Url = `${PUBLIC_MEDIA_ORIGIN}${mediaPath}`;
+    replacements.push({ old_url: `${DEFAULT_WORKER_MEDIA_ORIGIN}${mediaPath}`, r2_url: r2Url });
     return `${quote}${r2Url}${quote}`;
   });
   if (updated !== original) {

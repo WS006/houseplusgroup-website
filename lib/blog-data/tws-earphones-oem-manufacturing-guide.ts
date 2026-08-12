@@ -15,7 +15,7 @@ const article: BlogPost = {
   readingTime: '12 min read',
   category: '3C Electronics',
   heroImage:
-    'https://houseplus-media-api.jack006hu.workers.dev/media/412f5266-8f26-429b-b3ce-ea16afe4a74d',
+    'https://images.houseplus-ch.com/media/412f5266-8f26-429b-b3ce-ea16afe4a74d',
   heroImageAlt:
     'TWS earbuds and charging cases in an OEM quality inspection setting',
   sections: [
@@ -140,21 +140,21 @@ const article: BlogPost = {
       name: 'TWS Earphones Bluetooth 5.3 with ENC',
       desc: '13mm dynamic driver, 30h playtime with case, IPX5 rated, CE/FCC/RoHS certified',
       image:
-        'https://houseplus-media-api.jack006hu.workers.dev/media/3a511818-4b8e-4023-9631-106691f27e4d',
+        'https://images.houseplus-ch.com/media/3a511818-4b8e-4023-9631-106691f27e4d',
     },
     {
       slug: 'tws-earphones-anc-noise-cancelling',
       name: 'ANC Noise Cancelling TWS Earphones',
       desc: 'Active noise cancellation up to 35dB, aptX HD, wireless charging case',
       image:
-        'https://houseplus-media-api.jack006hu.workers.dev/media/3a511818-4b8e-4023-9631-106691f27e4d',
+        'https://images.houseplus-ch.com/media/3a511818-4b8e-4023-9631-106691f27e4d',
     },
     {
       slug: 'tws-earphones-gaming-low-latency',
       name: 'Gaming TWS Earphones Low Latency',
       desc: '45ms ultra-low latency, Bluetooth 5.3, RGB lighting, dual-mode gaming/music',
       image:
-        'https://houseplus-media-api.jack006hu.workers.dev/media/3a511818-4b8e-4023-9631-106691f27e4d',
+        'https://images.houseplus-ch.com/media/3a511818-4b8e-4023-9631-106691f27e4d',
     },
   ],
 };

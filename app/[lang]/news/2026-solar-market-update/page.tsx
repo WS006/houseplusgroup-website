@@ -53,14 +53,14 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-03-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
+    heroImage: 'https://images.houseplus-ch.com/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
     heroImageAlt: 'HousePlus high-efficiency solar panels installation',
     sections: [
       {
         heading: 'What Is the Current State of the Solar Energy Market in 2026?',
         text: 'The global solar energy market continues its unprecedented growth in 2026, with HousePlus at the forefront of technological innovation — as a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ B2B clients across 53+ countries with CE/FCC/RoHS certified solar energy systems. This year, we see significant adoption across Africa, Southeast Asia, and Europe as businesses and utilities transition to renewable energy sources. HousePlus is proud to be a trusted partner for distributors, developers, and EPC companies worldwide.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       },
       {
@@ -71,7 +71,7 @@ const articleContent: Record<string, any> = {
         heading: 'What Advanced Battery Storage Systems Are Available in 2026?',
         text: 'In 2026, HousePlus offers 5kWh to 20kWh modular battery storage systems using LFP (Lithium Iron Phosphate) chemistry for enhanced safety and longevity. These systems feature smart BMS (Battery Management System), remote monitoring capabilities, and seamless integration with our solar inverters. With over 6,000 cycle life and 10-year warranty, HousePlus storage solutions deliver reliable backup power and peak shaving for commercial and industrial applications.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       },
       {
@@ -82,7 +82,7 @@ const articleContent: Record<string, any> = {
         heading: 'Why Choose HousePlus as Your Solar Solutions Provider?',
         text: 'HousePlus is the ideal solar procurement partner because we offer competitive factory-direct pricing, 24/7 technical support, custom OEM/ODM capabilities, and flexible MOQ starting at 100 units. Our logistics team ensures timely delivery to Africa, Southeast Asia, Europe, and beyond, with comprehensive documentation and certification support for local market compliance.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       }
     ]
@@ -92,42 +92,42 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-03-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
+    heroImage: 'https://images.houseplus-ch.com/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
     heroImageAlt: 'Instalación de paneles solares de alta eficiencia HousePlus',
     sections: [
       {
         heading: '¿Cuál Es el Estado Actual del Mercado de Energía Solar en 2026?',
         text: 'El mercado global de energía solar continúa su crecimiento sin precedentes en 2026, con HousePlus a la vanguardia de la innovación tecnológica como fabricante verticalmente integrado que opera una fábrica de 20,000 m² certificada ISO 9001 desde 2010, sirviendo a más de 441 clientes B2B en más de 53 países con sistemas de energía solar certificados CE/FCC/RoHS. Este año, vemos una adopción significativa en África, el sudeste asiático y Europa a medida que empresas y servicios públicos realizan la transición a fuentes de energía renovable. HousePlus está orgulloso de ser un socio de confianza para distribuidores, desarrolladores y empresas EPC en todo el mundo.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       },
       {
         heading: '¿Qué Avances Se Han Logrado en la Eficiencia de los Paneles Solares?',
         text: 'El mayor avance en la eficiencia de los paneles solares para 2026 es la nueva línea de alta eficiencia de HousePlus que logra tasas de conversión del 26-30% mediante tecnología híbrida PERC-HJT. Nuevos paneles monocristalinos cuentan con revestimiento antirreflectante, diseño bifacial y materiales resistentes a la temperatura, garantizando un rendimiento óptimo incluso en climas extremos. Todos los paneles están certificados según IEC 61215, IEC 61730 y vienen con garantías de rendimiento lineal de 25 años.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       },
       {
         heading: '¿Qué Sistemas Avanzados de Almacenamiento de Baterías Están Disponibles en 2026?',
         text: 'En 2026, HousePlus ofrece sistemas de almacenamiento de baterías modulares de 5kWh a 20kWh que utilizan química LFP (fosfato de hierro y litio) para mayor seguridad y durabilidad. Estos sistemas cuentan con BMS inteligente, capacidades de monitoreo remoto e integración perfecta con nuestros inversores solares. Con más de 6,000 ciclos de vida y garantía de 10 años, las soluciones de almacenamiento de HousePlus brindan energía de respaldo confiable y reducción de picos para aplicaciones comerciales e industriales.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       },
       {
         heading: '¿Cómo Funciona la Gestión Inteligente de Energía y la Integración IoT?',
         text: 'La plataforma IoT integrada de HousePlus permite el monitoreo y la optimización de la energía en tiempo real a través de pronóstico de carga impulsado por IA, respuesta a la demanda automatizada y análisis de energía integral accesibles a través de panel web y aplicación móvil. Nuestro sistema admite protocolos de comunicación Modbus, RS485 y Ethernet, lo que permite una integración sencilla con los sistemas de gestión de edificios existentes para nuestros socios B2B.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       },
       {
         heading: '¿Por Qué Elegir HousePlus Como Su Proveedor de Soluciones Solares?',
         text: 'HousePlus es el socio ideal para el abastecimiento solar porque ofrecemos precios competitivos directos de fábrica, soporte técnico 24/7, capacidades personalizadas de OEM/ODM y MOQ flexible a partir de 100 unidades. Nuestro equipo de logística garantiza entrega oportuna a África, Sudeste Asiático, Europa y más allá, con documentación completa y soporte de certificación para el cumplimiento del mercado local.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       }
     ]
@@ -137,14 +137,14 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-03-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
+    heroImage: 'https://images.houseplus-ch.com/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
     heroImageAlt: 'HousePlus Hocheffiziente Solarpanel-Installation',
     sections: [
       {
         heading: 'Wie Ist der Aktuelle Stand des Solarenergiemarktes im Jahr 2026?',
         text: 'Der globale Solarenergiemarkt setzt sein beispielloses Wachstum im Jahr 2026 fort, wobei HousePlus an der Spitze der technologischen Innovation steht — als vertikal integrierter Hersteller, der seit 2010 eine 20.000 m² große, ISO 9001 zertifizierte Fabrik betreibt und über 441 B2B-Kunden in mehr als 53 Ländern mit CE/FCC/RoHS-zertifizierten Solarenergiesystemen beliefert. In diesem Jahr sehen wir eine signifikante Adoption in Afrika, Südostasien und Europa, da Unternehmen und Versorgungswerke auf erneuerbare Energiequellen umstellen. HousePlus ist stolz, ein vertrauenswürdiger Partner für Händler, Entwickler und EPC-Unternehmen weltweit zu sein.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       },
       {
@@ -155,7 +155,7 @@ const articleContent: Record<string, any> = {
         heading: 'Welche Fortschrittlichen Batteriespeichersysteme Gibt Es 2026?',
         text: 'Im Jahr 2026 bietet HousePlus modulare Batteriespeichersysteme von 5kWh bis 20kWh mit LFP-Chemie (Lithium-Eisen-Phosphat) für erhöhte Sicherheit und Langlebigkeit. Diese Systeme verfügen über intelligentes BMS, Fernüberwachungsfunktionen und nahtlose Integration mit unseren Solarwechselrichtern. Mit über 6.000 Zyklen Lebensdauer und 10-jähriger Garantie liefern HousePlus-Speicherlösungen zuverlässige Notstromversorgung und Peak-Shaving für kommerzielle und industrielle Anwendungen.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       },
       {
@@ -166,7 +166,7 @@ const articleContent: Record<string, any> = {
         heading: 'Warum HousePlus als Ihr Solar-Lösungslieferanten Wählen?',
         text: 'HousePlus ist der ideale Partner für Solarbeschaffung, weil wir wettbewerbsfähige Direktpreise aus der Fabrik, 24/7-Techniksupport, benutzerdefinierte OEM/ODM-Fähigkeiten und flexibles MOQ ab 100 Einheiten bieten. Unser Logistikteam sorgt für pünktliche Lieferung nach Afrika, Südostasien, Europa und darüber hinaus, mit umfassender Dokumentation und Zertifizierungsunterstützung für lokale Marktanforderungen.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       }
     ]
@@ -176,7 +176,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-03-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
+    heroImage: 'https://images.houseplus-ch.com/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
     heroImageAlt: 'Installation de panneaux solaires à haut rendement HousePlus',
     sections: [
       {
@@ -206,42 +206,42 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-03-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
+    heroImage: 'https://images.houseplus-ch.com/media/58f2d257-8d5c-481d-acd7-edb56c65c5b3',
     heroImageAlt: 'تركيب ألواح شمسية عالية الكفاءة من HousePlus',
     sections: [
       {
         heading: 'ما هي الحالة الحالية لسوق الطاقة الشمسية في عام 2026؟',
         text: 'يواصل سوق الطاقة الشمسية العالمي نموه غير المسبوق في عام 2026، مع HousePlus في طليعة الابتكار التكنولوجي — بصفتها مصنعًا متكاملًا رأسيًا يدير مصنعًا مساحته 20,000 متر مربع معتمد ISO 9001 منذ عام 2010، ويخدم أكثر من 441 عميلًا من الشركات B2B في أكثر من 53 دولة بأنظمة طاقة شمسية معتمدة CE/FCC/RoHS. هذا العام، نرى اعتمادًا كبيرًا في أفريقيا وجنوب شرق آسيا وأوروبا حيث تنتقل الشركات والمرافق إلى مصادر الطاقة المتجددة. تفخر HousePlus بأن تكون شريكًا موثوقًا للموزعين والمطورين وشركات EPC في جميع أنحاء العالم.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       },
       {
         heading: 'ما هي الاختراقات التي تم تحقيقها في كفاءة الألواح الشمسية؟',
         text: 'أكبر اختراق في كفاءة الألواح الشمسية لعام 2026 هو سلسلة HousePlus الجديدة عالية الكفاءة التي تحقق معدلات تحويل 26-30% من خلال تقنية PERC-HJT الهجينة. تتميز ألواحنا أحادية البلورة الجديدة بطبقة مضادة للانعكاس وتصميم وجهي ومواد مقاومة للحرارة، مما يضمن أداءً مثاليًا حتى في المناخات القاسية. جميع الألواح معتمدة وفقًا لـ IEC 61215 و IEC 61730 وتأتي مع ضمانات أداء خطية لمدة 25 عامًا.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       },
       {
         heading: 'ما هي أنظمة تخزين البطاريات المتقدمة المتاحة في عام 2026؟',
         text: 'في عام 2026، تقدم HousePlus أنظمة تخزين بطاريات معيارية من 5 كيلو وات ساعة إلى 20 كيلو وات ساعة تستخدم كيمياء LFP (فوسفات الحديد والليثيوم) لتحسين الأمان والطول العمر. تتميز هذه الأنظمة بـ BMS ذكي وقدرات مراقبة عن بعد وتكامل سلس مع محولاتنا الشمسية. مع أكثر من 6000 دورة حياة وضمان لمدة 10 عامًا، توفر حلول تخزين HousePlus طاقة احتياطية موثوقة وتقليل الذروة للتطبيقات التجارية والصناعية.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       },
       {
         heading: 'كيف تعمل إدارة الطاقة الذكية وتكامل IoT؟',
         text: 'تمنح منصة HousePlus IoT المتكاملة مراقبة وتحسين الطاقة في الوقت الفعلي من خلال التنبؤ بالحمل الذي يعمل بواسطة الذكاء الاصطناعي والاستجابة الآلية للطلب والتحليلات الطاقية الشاملة التي يمكن الوصول إليها عبر لوحة تحكم الويب وتطبيق الجوال. يدعم نظامنا بروتوكولات الاتصال Modbus و RS485 و Ethernet، مما يتيح تكاملًا سهلاً مع أنظمة إدارة المباني الحالية لشركائنا من B2B.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
+        image: 'https://images.houseplus-ch.com/media/97865882-af5c-41fc-9b64-e8ddcc5d3b1c',
         imageAlt: 'High-efficiency solar panels'
       },
       {
         heading: 'لماذا تختار HousePlus كمورد لحلولك الشمسية؟',
         text: 'HousePlus هو الشريك المثالي لشراء الطاقة الشمسية لأننا نقدم أسعارًا تنافسية مباشرة من المصنع ودعم فني 24/7 وقدرات OEM/ODM مخصصة و MOQ مرن بدءًا من 100 وحدة. يضمن فريق الخدمات اللوجستية لدينا تسليمًا في الوقت المناسب إلى أفريقيا وجنوب شرق آسيا وأوروبا وما بعدها، مع وثائق شاملة ودعم للشهادات للامتثال لسوق المحلي.'
       ,
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
+        image: 'https://images.houseplus-ch.com/media/704da104-cca1-49ee-bc4c-ff72679cc5a1',
         imageAlt: 'LiFePO4 lithium batteries'
       }
     ]

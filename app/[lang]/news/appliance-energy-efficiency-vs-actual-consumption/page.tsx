@@ -53,7 +53,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-07-08',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/a01d9b03-6265-4e9e-9500-edb50c289152',
+    heroImage: 'https://images.houseplus-ch.com/media/a01d9b03-6265-4e9e-9500-edb50c289152',
     heroImageAlt: 'Comparison chart showing 15-30% variance between rated and actual home appliance energy consumption',
             sections: [
       {
@@ -104,7 +104,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-02-21',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/a01d9b03-6265-4e9e-9500-edb50c289152',
+    heroImage: 'https://images.houseplus-ch.com/media/a01d9b03-6265-4e9e-9500-edb50c289152',
     heroImageAlt: 'Gráfico comparativo que muestra la variación del 15-30% entre el consumo nominal y real de electrodomésticos',
             sections: [
       {
@@ -155,7 +155,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-02-21',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/a01d9b03-6265-4e9e-9500-edb50c289152',
+    heroImage: 'https://images.houseplus-ch.com/media/a01d9b03-6265-4e9e-9500-edb50c289152',
     heroImageAlt: 'Vergleichsdiagramm mit 15-30% Abweichung zwischen Nenn- und tatsächlichem Haushaltsgeräteverbrauch',
             sections: [
       {
@@ -206,7 +206,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-02-21',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/a01d9b03-6265-4e9e-9500-edb50c289152',
+    heroImage: 'https://images.houseplus-ch.com/media/a01d9b03-6265-4e9e-9500-edb50c289152',
     heroImageAlt: 'Graphique comparatif montrant écart 15-30% entre consommation nominale et réelle des appareils ménagers',
             sections: [
       {
@@ -257,7 +257,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-02-21',
     dateModified: '2026-07-18',
-    heroImage: 'https://houseplus-media-api.jack006hu.workers.dev/media/a01d9b03-6265-4e9e-9500-edb50c289152',
+    heroImage: 'https://images.houseplus-ch.com/media/a01d9b03-6265-4e9e-9500-edb50c289152',
     heroImageAlt: 'مخطط مقارنة يُظهر تباين 15-30% بين الاستهلاك المُقَنن والفعلي للأجهزة المنزلية',
             sections: [
       {

@@ -52,7 +52,7 @@ export default function ArticleMeta({
   const t = labels[lang] || labels.en;
   const isRTL = lang === 'ar';
   const isModified = datePublished !== dateModified;
-  const avatar = authorImage || 'https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7';
+  const avatar = authorImage || 'https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7';
 
   return (
     <div className={`flex flex-wrap items-center gap-4 ${className} ${isRTL ? 'rtl' : 'ltr'}`}>

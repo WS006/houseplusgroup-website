@@ -109,38 +109,38 @@ const corePageImages: PageImages[] = [
   {
     pageUrl: '/en',
     images: [
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7'), title: 'HousePlus Group logo', caption: 'HousePlus global wholesale manufacturer logo based in Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135'), title: 'HousePlus solar energy solutions', caption: 'Solar panels, inverters and energy storage solutions for global wholesale buyers.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/b7dbffd2-f52e-42bc-b0c2-43329ca68682'), title: 'HousePlus home appliances', caption: 'Energy-efficient home appliances with OEM and ODM support from Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/7f712b0f-2530-48e8-866b-d70eb0b3bd75'), title: 'HousePlus 3C electronics', caption: '3C electronics and accessories for international B2B distribution.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7'), title: 'HousePlus Group logo', caption: 'HousePlus global wholesale manufacturer logo based in Zhongshan, Guangdong, China.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135'), title: 'HousePlus solar energy solutions', caption: 'Solar panels, inverters and energy storage solutions for global wholesale buyers.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/b7dbffd2-f52e-42bc-b0c2-43329ca68682'), title: 'HousePlus home appliances', caption: 'Energy-efficient home appliances with OEM and ODM support from Zhongshan, Guangdong, China.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/7f712b0f-2530-48e8-866b-d70eb0b3bd75'), title: 'HousePlus 3C electronics', caption: '3C electronics and accessories for international B2B distribution.' },
     ],
   },
   {
     pageUrl: '/en/brand',
     images: [
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7'), title: 'HousePlus Group brand logo', caption: 'HousePlus Group global wholesale manufacturer brand identity.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8'), title: 'HousePlus production line', caption: 'Home appliance manufacturing production line in Zhongshan, Guangdong, China.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7'), title: 'HousePlus Group brand logo', caption: 'HousePlus Group global wholesale manufacturer brand identity.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8'), title: 'HousePlus production line', caption: 'Home appliance manufacturing production line in Zhongshan, Guangdong, China.' },
     ],
   },
   {
     pageUrl: '/en/contact',
-    images: [{ loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7'), title: 'Contact HousePlus', caption: 'HousePlus wholesale manufacturer contact page for global B2B buyers.' }],
+    images: [{ loc: absolute('https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7'), title: 'Contact HousePlus', caption: 'HousePlus wholesale manufacturer contact page for global B2B buyers.' }],
   },
   {
     pageUrl: '/en/factory',
     images: [
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/d3642fb5-d016-4cec-aa3a-e9ab2326050a'), title: 'HousePlus factory operations', caption: 'HousePlus manufacturing operations in Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8'), title: 'Home appliance production line', caption: 'Precision manufacturing line for home appliances.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/fa65d41c-2e23-4880-a19f-774c3bacdaa1'), title: 'Solar energy assembly line', caption: 'Solar energy equipment assembly line at HousePlus.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/93c9172f-bc50-400b-b347-4c212f7b2137'), title: 'HousePlus appliance quality laboratory', caption: 'Home appliance quality assurance laboratory in Zhongshan, Guangdong, China.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/d3642fb5-d016-4cec-aa3a-e9ab2326050a'), title: 'HousePlus factory operations', caption: 'HousePlus manufacturing operations in Zhongshan, Guangdong, China.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8'), title: 'Home appliance production line', caption: 'Precision manufacturing line for home appliances.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/fa65d41c-2e23-4880-a19f-774c3bacdaa1'), title: 'Solar energy assembly line', caption: 'Solar energy equipment assembly line at HousePlus.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/93c9172f-bc50-400b-b347-4c212f7b2137'), title: 'HousePlus appliance quality laboratory', caption: 'Home appliance quality assurance laboratory in Zhongshan, Guangdong, China.' },
     ],
   },
   {
     pageUrl: '/en/team',
     images: [
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/2946709f-9053-4d33-991a-28e37dfd3f27'), title: 'HousePlus manufacturing collaboration team', caption: 'Manufacturing operations team collaborating in Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/93e131d6-97cb-4ef4-a371-909061a46afc'), title: 'HousePlus quality engineering team', caption: 'Quality engineers conducting product testing for international compliance.' },
-      { loc: absolute('https://houseplus-media-api.jack006hu.workers.dev/media/886e83cd-9f61-4f90-a1e7-5d8e2c290394'), title: 'HousePlus innovation and R&D culture', caption: 'Research and development team collaborating on product innovation.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/2946709f-9053-4d33-991a-28e37dfd3f27'), title: 'HousePlus manufacturing collaboration team', caption: 'Manufacturing operations team collaborating in Zhongshan, Guangdong, China.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/93e131d6-97cb-4ef4-a371-909061a46afc'), title: 'HousePlus quality engineering team', caption: 'Quality engineers conducting product testing for international compliance.' },
+      { loc: absolute('https://images.houseplus-ch.com/media/886e83cd-9f61-4f90-a1e7-5d8e2c290394'), title: 'HousePlus innovation and R&D culture', caption: 'Research and development team collaborating on product innovation.' },
     ],
   },
 ];

@@ -256,7 +256,7 @@ export default async function CaseStudiesPage({ params }: { params: { lang: stri
               </div>
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <img
-                  src="https://houseplus-media-api.jack006hu.workers.dev/media/1a65d956-2f3f-4ceb-8dbd-6667d9df5983"
+                  src="https://images.houseplus-ch.com/media/1a65d956-2f3f-4ceb-8dbd-6667d9df5983"
                   alt="HousePlus global wholesale partnerships"
                   className="object-cover"
                 loading="lazy"

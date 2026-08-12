@@ -34,7 +34,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   const getDefaultItems = (): CarouselItem[] => [
     {
       _uid: 'default-1',
-      image: { filename: 'https://houseplus-media-api.jack006hu.workers.dev/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135', alt: 'HousePlus Solar Energy Solutions — Solar Panels, Inverters and Battery Storage for Wholesale' },
+      image: { filename: 'https://images.houseplus-ch.com/media/e0fd1e30-2241-4255-bc5f-cf5e8dc55135', alt: 'HousePlus Solar Energy Solutions — Solar Panels, Inverters and Battery Storage for Wholesale' },
       title: 'High-Efficiency Solar Solutions',
       subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
       button_text: 'Explore Solar Products',
@@ -42,7 +42,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     },
     {
       _uid: 'default-2',
-      image: { filename: 'https://houseplus-media-api.jack006hu.workers.dev/media/b7dbffd2-f52e-42bc-b0c2-43329ca68682', alt: 'HousePlus Smart Home Appliances — Induction Cooktops, Air Fryers and Electric Kettles for OEM ODM' },
+      image: { filename: 'https://images.houseplus-ch.com/media/b7dbffd2-f52e-42bc-b0c2-43329ca68682', alt: 'HousePlus Smart Home Appliances — Induction Cooktops, Air Fryers and Electric Kettles for OEM ODM' },
       title: 'Smart Home Appliances',
       subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
       button_text: 'View Appliances',
@@ -50,7 +50,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     },
     {
       _uid: 'default-3',
-      image: { filename: 'https://houseplus-media-api.jack006hu.workers.dev/media/7f712b0f-2530-48e8-866b-d70eb0b3bd75', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
+      image: { filename: 'https://images.houseplus-ch.com/media/7f712b0f-2530-48e8-866b-d70eb0b3bd75', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
       title: '3C Electronics & Accessories',
       subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
       button_text: 'View Electronics',

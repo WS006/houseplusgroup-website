@@ -6,6 +6,7 @@ const publicationJournal = resolve(repositoryRoot, 'audit/r2-media-publication.j
 const outputDirectory = resolve(repositoryRoot, 'audit/r2-switch');
 const sourceRoots = ['app', 'components', 'lib', 'data'];
 const sourceExtensions = new Set(['.ts', '.tsx', '.js', '.jsx']);
+const PUBLIC_MEDIA_ORIGIN = 'https://images.houseplus-ch.com';
 
 async function readJsonLines(filePath) {
   const content = await readFile(filePath, 'utf8');
@@ -36,7 +37,7 @@ function localPathFor(sourcePath) {
 }
 
 const entries = await readJsonLines(publicationJournal);
-const pathToR2 = Object.fromEntries(entries.map((entry) => [localPathFor(entry.source_path), entry.public_url]));
+const pathToR2 = Object.fromEntries(entries.map((entry) => [localPathFor(entry.source_path), `${PUBLIC_MEDIA_ORIGIN}/media/${entry.asset_id}`]));
 const sourceFiles = (await Promise.all(sourceRoots.map(collectSourceFiles))).flat();
 const sourceReferences = new Map();
 const localReferencePattern = /['"]((?:\/images\/[^'"]+?\.(?:jpe?g|png|webp|gif|svg))|(?:\/(?:logo|favicon|apple-touch-icon|android-chrome-(?:192x192|512x512))\.png))['"]/g;
@@ -61,7 +62,7 @@ const mappedReferences = references.filter((entry) => entry.r2_url);
 const unmappedAssets = Object.keys(pathToR2).filter((path) => !sourceReferences.has(path)).sort();
 const output = {
   generated_at: new Date().toISOString(),
-  media_origin: 'https://houseplus-media-api.jack006hu.workers.dev',
+  media_origin: PUBLIC_MEDIA_ORIGIN,
   published_assets: entries.length,
   source_references: references.length,
   mapped_source_references: mappedReferences.length,

@@ -79,7 +79,7 @@ export default async function RegionsPage({ params }: { params: { lang: string }
           <div className="max-w-6xl mx-auto">
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://houseplus-media-api.jack006hu.workers.dev/media/94c9de7e-f180-43fa-80a3-7d7b335c9ffd"
+                src="https://images.houseplus-ch.com/media/94c9de7e-f180-43fa-80a3-7d7b335c9ffd"
                 alt="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 title="HousePlus global wholesale markets - Africa, Southeast Asia, and Europe"
                 className="object-cover"

@@ -181,7 +181,7 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
               <div>
                 <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-blue-100/80 ring-1 ring-blue-100">
                   <img
-                    src="https://houseplus-media-api.jack006hu.workers.dev/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7"
+                    src="https://images.houseplus-ch.com/media/d52528a6-ba27-4a75-9dea-a7c36c2780e7"
                     alt="HousePlus Group logo"
                     title="HousePlus Group global wholesale manufacturer logo"
                     className="h-14 w-auto object-contain md:h-[4.5rem]"
@@ -207,7 +207,7 @@ export default function BrandPage({ params }: { params: { lang: string } }) {
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                 <img
-                  src="https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8"
+                  src="https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8"
                   alt="HousePlus Group manufacturing facility in Guangdong, China"
                   className="object-cover"
                  title="HousePlus Group manufacturing facility in Guangdong, China" decoding="async" />

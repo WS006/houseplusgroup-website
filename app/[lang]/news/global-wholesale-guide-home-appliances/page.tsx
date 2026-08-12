@@ -44,19 +44,19 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-01-20',
       dateModified: '2026-07-18',
-      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
+      image: 'https://images.houseplus-ch.com/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
       imageAlt: 'Global wholesale distribution of home appliances - HousePlus international trade',
                               sections: [
       {
         heading: 'Why Do Wholesale Home Appliances Represent a Massive Opportunity?',
         text: 'Wholesale home appliances represent a massive opportunity because the global market is projected to exceed $1.2 trillion by 2030, driven by rapid urbanization, rising middle-class incomes, and increasing demand for energy-efficient products, creating extraordinary potential for wholesale buyers and distributors to build profitable product portfolios. HousePlus is a vertically integrated manufacturer operating a 20,000 m² ISO 9001 certified factory since 2010, serving 441+ wholesale clients across 53+ countries with CE/FCC/RoHS certified home appliances. Our products span refrigerators, washing machines, air conditioners, kitchen appliances, and a wide range of small household devices — all manufactured to the highest international standards.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
+        image: 'https://images.houseplus-ch.com/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
         imageAlt: 'Modern home appliances showroom with refrigerators and washing machines',
       },
       {
         heading: 'How Do MOQ and Flexible Order Structures Work at HousePlus?',
         text: 'MOQ and flexible order structures at HousePlus work with standard minimum order quantities starting at 100 units per product line, with flexible arrangements for new partners entering specific regional markets, preferential pricing tiers for large-volume orders over 1,000 units, and mixed-container orders combining multiple product categories in a single shipment. One of the most common questions from first-time wholesale buyers is about minimum order quantities. At HousePlus, we understand that different markets have different needs. This flexibility is particularly valuable for distributors serving diverse retail channels across Africa, Southeast Asia, and the Middle East.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
+        image: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
         imageAlt: 'Warehouse with organized home appliance inventory for wholesale distribution',
       },
       {
@@ -66,7 +66,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       {
         heading: 'How Can OEM and ODM Services Help Build Your Own Brand?',
         text: 'OEM and ODM services help build your own brand by letting you place your brand name and logo on proven existing product designs through OEM, or develop completely custom products from concept to production through ODM, with HousePlus R&D working closely on unique specifications, packaging, and feature sets tailored to specific market demands. Many of our most successful wholesale partners have leveraged our OEM and ODM capabilities to build their own branded product lines. With a production capacity exceeding 100,000 units per month and lead times of 20-35 days for standard orders, we can support both small-batch launches and large-scale seasonal campaigns.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
+        image: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
         imageAlt: 'HousePlus OEM production line with custom branded home appliances',
       },
       {
@@ -80,19 +80,19 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-01-20',
       dateModified: '2026-07-18',
-      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
+      image: 'https://images.houseplus-ch.com/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
       imageAlt: 'Distribución mayorista global de electrodomésticos - comercio internacional HousePlus',
                               sections: [
       {
         heading: '¿Por Qué los Electrodomésticos al por Mayor Representan una Oportunidad Masiva?',
         text: 'Los electrodomésticos al por mayor representan una oportunidad masiva porque se proyecta que el mercado global supere los 1,2 billones de dólares para 2030, impulsado por la rápida urbanización, el aumento de los ingresos de la clase media y la creciente demanda de productos energéticamente eficientes, creando un potencial extraordinario para que los compradores mayoristas y distribuidores construyan carteras de productos rentables. Se proyecta que el mercado global de electrodomésticos supere los 1,2 billones de dólares para 2030. HousePlus ha estado a la vanguardia de este mercado durante más de una década, suministrando electrodomésticos premium a más de 441 clientes mayoristas en más de 53 países.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
+        image: 'https://images.houseplus-ch.com/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
         imageAlt: 'Sala de exposición de electrodomésticos modernos con refrigeradores y lavadoras',
       },
       {
         heading: '¿Cómo Funcionan el MOQ y las Estructuras de Pedidos Flexibles en HousePlus?',
         text: 'El MOQ y las estructuras de pedidos flexibles en HousePlus funcionan con cantidades mínimas de pedido estándar que comienzan en 100 unidades por línea de productos, con acuerdos flexibles para nuevos socios que ingresan a mercados regionales específicos, niveles de precios preferenciales para pedidos de gran volumen de más de 1,000 unidades y pedidos de contenedores mixtos que combinan múltiples categorías de productos en un solo envío. Una de las preguntas más comunes de los compradores mayoristas por primera vez es sobre las cantidades mínimas de pedido.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
+        image: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
         imageAlt: 'Almacén con inventario organizado de electrodomésticos para distribución mayorista',
       },
       {
@@ -102,7 +102,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       {
         heading: '¿Cómo Pueden los Servicios OEM y ODM Ayudar a Construir Su Propia Marca?',
         text: 'Los servicios OEM y ODM ayudan a construir su propia marca al permitirle colocar el nombre y el logotipo de su marca en diseños de productos existentes y probados a través de OEM, o desarrollar productos completamente personalizados desde el concepto hasta la producción a través de ODM, con el equipo de I+D de HousePlus trabajando de cerca en especificaciones únicas, empaques y conjuntos de funciones adaptados a demandas de mercado específicas. Muchos de nuestros socios mayoristas más exitosos han aprovechado nuestras capacidades OEM y ODM para construir sus propias líneas de productos de marca.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
+        image: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
         imageAlt: 'Línea de producción OEM de HousePlus con electrodomésticos de marca personalizada',
       },
       {
@@ -116,19 +116,19 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-01-20',
       dateModified: '2026-07-18',
-      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
+      image: 'https://images.houseplus-ch.com/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
       imageAlt: 'Globaler Großhandelsvertrieb von Haushaltsgeräten - HousePlus internationaler Handel',
                               sections: [
       {
         heading: 'Warum Stellen Haushaltsgeräte im Großhandel eine Enorme Chance Dar?',
         text: 'Haushaltsgeräte im Großhandel stellen eine enorme Chance dar, weil der globale Markt bis 2030 voraussichtlich 1,2 Billionen Dollar übersteigt, angetrieben durch schnelle Urbanisierung, steigende Einkommen der Mittelklasse und zunehmende Nachfrage nach energieeffizienten Produkten, was außergewöhnliches Potenzial für Großhandelskäufer und Distributoren schafft, profitable Produktportfolios aufzubauen. HousePlus ist ein vertikal integrierter Hersteller mit einer 20.000 m² großen ISO 9001-zertifizierten Fabrik seit 2010 und beliefert mehr als 441 Großhandelskunden in über 53 Ländern mit CE/FCC/RoHS-zertifizierten Haushaltsgeräten.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
+        image: 'https://images.houseplus-ch.com/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
         imageAlt: 'Modernes Haushaltsgeräte-Showroom mit Kühlschränken und Waschmaschinen',
       },
       {
         heading: 'Wie Funktionieren MOQ und Flexible Bestellstrukturen bei HousePlus?',
         text: 'MOQ und flexible Bestellstrukturen bei HousePlus funktionieren mit Standard-Mindestbestellmengen ab 100 Einheiten pro Produktlinie, mit flexiblen Vereinbarungen für neue Partner, die in bestimmte regionale Märkte eintreten, Vorzugspreisstufen für Großbestellungen über 1.000 Einheiten und Mischcontainerbestellungen, die mehrere Produktkategorien in einer einzigen Sendung kombinieren. Eine der häufigsten Fragen von Erstgroßhandelskäufern betrifft Mindestbestellmengen.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
+        image: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
         imageAlt: 'Lager mit organisiertem Haushaltsgerätebestand für Großvertrieb',
       },
       {
@@ -138,7 +138,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       {
         heading: 'Wie Können OEM- und ODM-Dienstleistungen beim Aufbau Ihrer Eigenen Marke Helfen?',
         text: 'OEM- und ODM-Dienstleistungen helfen beim Aufbau Ihrer eigenen Marke, indem Sie Ihren Markennamen und Ihr Logo auf bewährten bestehenden Produktdesigns durch OEM platzieren können oder vollständig kundenspezifische Produkte von der Konzeption bis zur Produktion durch ODM entwickeln können, wobei das HousePlus F&E-Team eng an einzigartigen Spezifikationen, Verpackungen und Funktionssätzen arbeitet, die auf spezifische Marktanforderungen zugeschnitten sind. Viele unserer erfolgreichsten Großhandelspartner haben unsere OEM- und ODM-Fähigkeiten genutzt, um ihre eigenen Markenproduktlinien aufzubauen.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
+        image: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
         imageAlt: 'HousePlus OEM-Produktionslinie mit kundenspezifischen Haushaltsgeräten',
       },
       {
@@ -152,19 +152,19 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-01-20',
       dateModified: '2026-07-18',
-      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
+      image: 'https://images.houseplus-ch.com/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
       imageAlt: 'Distribution mondiale en gros d\'appareils électroménagers - commerce international HousePlus',
                               sections: [
       {
         heading: 'Pourquoi les Appareils Électroménagers en Gros Représentent-Ils une Opportunité Massive ?',
         text: 'Les appareils électroménagers en gros représentent une opportunité massive parce que le marché mondial devrait dépasser 1,2 billion de dollars d\'ici 2030, tiré par l\'urbanisation rapide, la hausse des revenus de la classe moyenne et la demande croissante de produits économes en énergie, créant un potentiel extraordinaire pour les acheteurs en gros et les distributeurs de construire des portefeuilles de produits rentables. HousePlus est un fabricant à intégration verticale exploitant une usine certifiée ISO 9001 de 20 000 m² depuis 2010, servant plus de 441 clients en gros dans plus de 53 pays avec des appareils certifiés CE/FCC/RoHS.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
+        image: 'https://images.houseplus-ch.com/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
         imageAlt: 'Showroom d\'appareils électroménagers modernes avec réfrigérateurs et lave-linge',
       },
       {
         heading: 'Comment Fonctionnent le MOQ et les Structures de Commande Flexibles chez HousePlus ?',
         text: 'Le MOQ et les structures de commande flexibles chez HousePlus fonctionnent avec des quantités minimales de commande standard à partir de 100 unités par ligne de produits, avec des arrangements flexibles pour les nouveaux partenaires entrant sur des marchés régionaux spécifiques, des tarifs préférentiels pour les commandes de grand volume de plus de 1 000 unités et des commandes de conteneurs mixtes combinant plusieurs catégories de produits dans un seul envoi. L\'une des questions les plus fréquentes des premiers acheteurs en gros concerne les quantités minimales de commande.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
+        image: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
         imageAlt: 'Entrepôt avec inventaire organisé d\'appareils électroménagers pour la distribution en gros',
       },
       {
@@ -174,7 +174,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       {
         heading: 'Comment les Services OEM et ODM Peuvent-Ils Aider à Construire Votre Propre Marque ?',
         text: 'Les services OEM et ODM aident à construire votre propre marque en vous permettant de placer votre nom de marque et votre logo sur des conceptions de produits existantes et éprouvées via OEM, ou de développer des produits complètement personnalisés du concept à la production via ODM, avec l\'équipe R&D de HousePlus travaillant en étroite collaboration sur des spécifications uniques, des emballages et des ensembles de fonctionnalités adaptés aux demandes du marché spécifiques. Beaucoup de nos partenaires de gros les plus réussis ont tiré parti de nos capacités OEM et ODM pour construire leurs propres lignes de produits de marque.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
+        image: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
         imageAlt: 'Ligne de production OEM HousePlus avec appareils électroménagers de marque personnalisée',
       },
       {
@@ -188,19 +188,19 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-01-20',
       dateModified: '2026-07-18',
-      image: 'https://houseplus-media-api.jack006hu.workers.dev/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
+      image: 'https://images.houseplus-ch.com/media/3ff31e44-5a92-4d95-ac80-597a8e391816',
       imageAlt: 'توزيع الأجهزة المنزلية بالجملة عالميًا - التجارة الدولية لـ HousePlus',
                               sections: [
       {
         heading: 'لماذا تمثل أجهزة المنزل بالجملة فرصة هائلة؟',
         text: 'تمثل أجهزة المنزل بالجملة فرصة هائلة لأن السوق العالمي من المتوقع أن يتجاوز 1.2 تريليون دولار بحلول عام 2030، مدفوعًا بالتحضر السريع وارتفاع دخل الطبقة الوسطى والطلب المتزايد على المنتجات الموفرة للطاقة، مما يخلق إمكانات غير عادية للمشترين بالجملة والموزعين لبناء محافظ منتجات مربحة. HousePlus هي شركة مصنعة متكاملة عموديًا تشغل مصنعًا معتمدًا من ISO 9001 بمساحة 20,000 متر مربع منذ عام 2010، وتخدم أكثر من 441 عميلًا بالجملة في أكثر من 53 دولة بأجهزة منزلية معتمدة من CE/FCC/RoHS.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
+        image: 'https://images.houseplus-ch.com/media/e27fc0bc-0448-4691-9d3e-fd1e64454ebf',
         imageAlt: 'صالة عرض أجهزة منزلية حديثة مع ثلاجات وغسالات',
       },
       {
         heading: 'كيف تعمل الحد الأدنى لكميات الطلب وهياكل الطلب المرنة في HousePlus؟',
         text: 'تعمل الحد الأدنى لكميات الطلب (MOQ) وهياكل الطلب المرنة في HousePlus بكميات طلب دنيا قياسية تبدأ من 100 وحدة لكل خط إنتاج، مع ترتيبات مرنة للشركاء الجدد الذين يدخلون أسواقًا إقليمية محددة، ومستويات أسعار تفضيلية للطلبات الكبيرة التي تزيد عن 1000 وحدة، وطلبات حاويات مختلطة تجمع بين فئات منتجات متعددة في شحنة واحدة. واحدة من أكثر الأسئلة شيوعًا من المشترين بالجملة لأول مرة تتعلق بالحد الأدنى لكميات الطلب.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
+        image: 'https://images.houseplus-ch.com/media/2280d26e-4918-4d57-9047-2cb7213e06b0',
         imageAlt: 'مستودع مع مخزون منظم من الأجهزة المنزلية للتوزيع بالجملة',
       },
       {
@@ -210,7 +210,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       {
         heading: 'كيف يمكن لخدمات OEM وODM المساعدة في بناء علامتك التجارية الخاصة؟',
         text: 'تساعد خدمات OEM وODM في بناء علامتك التجارية الخاصة من خلال السماح لك بوضع اسم علامتك التجارية وشعارها على تصميمات منتجات موجودة ومثبتة من خلال OEM، أو تطوير منتجات مخصصة تمامًا من المفهوم إلى الإنتاج من خلال ODM، مع عمل فريق البحث والتطوير في HousePlus بشكل وثيق على المواصفات الفريدة والتعبئة ومجموعات الميزات المصممة خصيصًا لمتطلبات السوق المحددة. لقد استفاد العديد من شركائنا الأكثر نجاحًا في الجملة من قدراتنا على OEM وODM لبناء خطوط منتجاتهم الخاصة بالعلامة التجارية.',
-        image: 'https://houseplus-media-api.jack006hu.workers.dev/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
+        image: 'https://images.houseplus-ch.com/media/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8',
         imageAlt: 'خط إنتاج OEM من HousePlus مع أجهزة منزلية بعلامة تجارية مخصصة',
       },
       {
@@ -225,7 +225,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
 
   const articleSchema = generateArticleSchema({
     headline: data.title,
-    image: `https://houseplus-media-api.jack006hu.workers.dev/media/eb6de44f-80ca-463e-bad4-94cc57c8951a`,
+    image: `https://images.houseplus-ch.com/media/eb6de44f-80ca-463e-bad4-94cc57c8951a`,
     datePublished: data.datePublished,
     dateModified: data.dateModified,
     authorName: data.authorName,

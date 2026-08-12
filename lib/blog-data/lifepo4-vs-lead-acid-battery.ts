@@ -14,7 +14,7 @@ const article: BlogPost = {
   readingTime: '9 min read',
   category: 'Technical Comparison',
   heroImage:
-    'https://houseplus-media-api.jack006hu.workers.dev/media/1e310ff8-8186-4803-ac0d-867ca08c9710',
+    'https://images.houseplus-ch.com/media/1e310ff8-8186-4803-ac0d-867ca08c9710',
   heroImageAlt:
     'LiFePO4 and lead-acid batteries prepared for solar storage comparison',
   sections: [
@@ -133,21 +133,21 @@ const article: BlogPost = {
       name: '12V 200Ah LiFePO4 Battery',
       desc: '6000+ cycles, built-in BMS, 80% DoD, 10-year lifespan',
       image:
-        'https://houseplus-media-api.jack006hu.workers.dev/media/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b',
+        'https://images.houseplus-ch.com/media/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b',
     },
     {
       slug: 'lifepo4-battery-100ah',
       name: '12V 100Ah LiFePO4 Battery',
       desc: 'Compact design, 4000+ cycles, perfect for off-grid solar systems',
       image:
-        'https://houseplus-media-api.jack006hu.workers.dev/media/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b',
+        'https://images.houseplus-ch.com/media/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b',
     },
     {
       slug: 'deep-cycle-gel-battery-150ah',
       name: '12V 150Ah Deep Cycle Gel Battery',
       desc: 'Maintenance-free gel battery, budget-friendly solar storage option',
       image:
-        'https://houseplus-media-api.jack006hu.workers.dev/media/2556637e-92ab-43d4-8940-2bb1c8ad319b',
+        'https://images.houseplus-ch.com/media/2556637e-92ab-43d4-8940-2bb1c8ad319b',
     },
   ],
 };

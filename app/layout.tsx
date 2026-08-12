@@ -76,9 +76,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#1d4ed8" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="https://houseplus-media-api.jack006hu.workers.dev/media/44b1ac39-b07d-49b8-bb55-f9e7266893a3" type="image/png" sizes="32x32" />
+        <link rel="icon" href="https://images.houseplus-ch.com/media/44b1ac39-b07d-49b8-bb55-f9e7266893a3" type="image/png" sizes="32x32" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="https://houseplus-media-api.jack006hu.workers.dev/media/b159a3a6-85d6-490f-8bbb-a753cf220c8c" />
+        <link rel="apple-touch-icon" href="https://images.houseplus-ch.com/media/b159a3a6-85d6-490f-8bbb-a753cf220c8c" />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
