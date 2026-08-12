@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -60,7 +61,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       authorName: 'Jack Hu',
       datePublished: '2024-06-30',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/the-future-of-smart-home-appliances.jpg',
       imageAlt: 'Modern smart home appliances from HousePlus',
       sections: [
         {
@@ -96,7 +97,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       authorName: 'Jack Hu',
       datePublished: '2024-06-30',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/the-future-of-smart-home-appliances.jpg',
       imageAlt: 'Electrodomésticos inteligentes modernos de HousePlus',
       sections: [
         {
@@ -132,7 +133,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       authorName: 'Jack Hu',
       datePublished: '2024-06-30',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/the-future-of-smart-home-appliances.jpg',
       imageAlt: 'Moderne smarte Haushaltsgeräte von HousePlus',
       sections: [
         {
@@ -168,7 +169,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       authorName: 'Jack Hu',
       datePublished: '2024-06-30',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/the-future-of-smart-home-appliances.jpg',
       imageAlt: 'Appareils électroménagers intelligents modernes de HousePlus',
       sections: [
         {
@@ -204,7 +205,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
       authorName: 'Jack Hu',
       datePublished: '2024-06-30',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/the-future-of-smart-home-appliances.jpg',
       imageAlt: 'أجهزة منزلية ذكية حديثة من HousePlus',
       sections: [
         {
@@ -266,14 +267,11 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
           <div className="text-center text-gray-600 mb-8">
             By {data.authorName} | {new Date(data.datePublished).toLocaleDateString(lang)}
           </div>
-
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
 
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-10">

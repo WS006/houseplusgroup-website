@@ -354,40 +354,46 @@ export default async function NewsPage({ params }: { params: { lang: string } })
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto py-20 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <section className="max-w-6xl mx-auto py-16 md:py-20 px-4" aria-label="Latest HousePlus insights">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Link
               key={article.slug}
               href={`/${lang}/news/${article.slug}`}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
+              className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-slate-200/90 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_22px_45px_rgba(37,99,235,0.16)]"
             >
-              <div className="relative aspect-video overflow-hidden bg-slate-100">
+              <figure className="relative aspect-[16/10] overflow-hidden bg-slate-100 md:aspect-video">
                 <img
                   src={article.image}
                   alt={article.imageAlt}
                   title={article.title[lang as keyof typeof article.title] || article.title.en}
-                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                   loading="lazy"
-                 decoding="async" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" aria-hidden="true" />
-                <div className="absolute left-4 top-4">
-                  <span className="rounded-full border border-white/30 bg-slate-950/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-white backdrop-blur-md">News & Insights</span>
-                </div>
-              </div>
-              <div className="flex flex-grow flex-col p-6 md:p-8">
-                <h2 className="mb-3 line-clamp-3 text-xl font-black leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-blue-700 md:text-2xl">
+                  decoding="async"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-950/45 to-transparent" aria-hidden="true" />
+                <figcaption className="absolute bottom-4 left-4">
+                  <span className="rounded-full border border-white/35 bg-slate-950/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em] text-white backdrop-blur-md">News &amp; Insights</span>
+                </figcaption>
+              </figure>
+              <div className="flex flex-grow flex-col px-6 pb-6 pt-5 md:px-7 md:pb-7 md:pt-6">
+                <time className="mb-3 text-[11px] font-bold uppercase tracking-[0.16em] text-blue-700" dateTime={article.date}>
+                  {article.date}
+                </time>
+                <h2 className="mb-3 line-clamp-2 text-xl font-black leading-[1.2] tracking-tight text-slate-900 transition-colors group-hover:text-blue-700 md:text-[1.35rem]">
                   {article.title[lang as keyof typeof article.title] || article.title.en}
                 </h2>
-                <p className="mb-7 line-clamp-3 flex-grow text-sm leading-6 text-slate-600 md:text-base">
+                <p className="mb-6 line-clamp-3 flex-grow text-sm leading-6 text-slate-600">
                   {article.description[lang as keyof typeof article.description] || article.description.en}
                 </p>
-                <div className="flex items-center text-xs font-black uppercase tracking-widest text-blue-700">Read More <span className="ml-2 text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span></div>
+                <div className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-blue-700">
+                  Explore article <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </div>
               </div>
             </Link>
           ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }

@@ -85,26 +85,20 @@ export default async function BlogPostPage({
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={schemas} />
 
-      {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-slate-950 px-4 py-24 text-white md:py-32">
-        <img
-          src={post.heroImage}
-          alt={post.heroImageAlt}
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-45"
-         title={post.heroImageAlt} decoding="async" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/95 via-slate-900/80 to-blue-950/70" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
+      {/* Article introduction */}
+      <header className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-4 pb-20 pt-20 text-white md:pb-28 md:pt-28">
+        <div className="mx-auto max-w-4xl text-center">
           <Breadcrumb lang={lang} slug={`news/${slug}`} customLabel={post.title} />
-          <span className="inline-block px-4 py-1.5 bg-blue-600/20 backdrop-blur-sm text-blue-300 text-xs font-black uppercase tracking-widest rounded-full mb-6">
+          <span className="mb-6 inline-block rounded-full border border-blue-300/30 bg-blue-400/10 px-4 py-1.5 text-xs font-black uppercase tracking-widest text-blue-200">
             {post.category}
           </span>
-          <h1 className="text-3xl md:text-5xl font-black mt-2 mb-4 leading-tight">
+          <h1 className="mb-5 text-3xl font-black leading-tight md:text-5xl">
             {post.title}
           </h1>
-          <p className="text-slate-300 text-lg md:text-xl mb-6 max-w-3xl mx-auto">
+          <p className="mx-auto mb-7 max-w-3xl text-lg text-slate-200 md:text-xl">
             {post.description}
           </p>
-          <div className="max-w-3xl mx-auto px-4">
+          <div className="mx-auto max-w-3xl px-4">
             <ArticleMeta
               lang={lang}
               authorName={post.author}
@@ -113,7 +107,18 @@ export default async function BlogPostPage({
             />
           </div>
         </div>
-      </div>
+      </header>
+
+      {/* Standalone feature image: preserves the visual subject without compromising text contrast. */}
+      <figure className="relative z-10 mx-auto -mt-10 max-w-6xl overflow-hidden rounded-[2rem] border-4 border-white bg-slate-100 shadow-[0_22px_55px_rgba(15,23,42,0.24)] md:-mt-14 md:rounded-[2.5rem]">
+        <img
+          src={post.heroImage}
+          alt={post.heroImageAlt}
+          title={post.heroImageAlt}
+          className="aspect-[16/10] w-full object-cover object-center md:aspect-[16/9]"
+          decoding="async"
+        />
+      </figure>
 
       {/* Article Body + Sidebar */}
       <div className="max-w-6xl mx-auto py-16 px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">

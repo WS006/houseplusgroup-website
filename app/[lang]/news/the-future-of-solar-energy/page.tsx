@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -60,7 +61,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
       authorName: 'Jack Hu',
       datePublished: '2023-03-15',
       dateModified: '2026-07-18',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: '/images/articles/covers/legacy-future-solar-energy.jpg',
       imageAlt: 'Large-scale solar farm with HousePlus solar panels',
       sections: [
         {
@@ -98,7 +99,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
       authorName: 'Jack Hu',
       datePublished: '2023-03-15',
       dateModified: '2026-07-18',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: '/images/articles/covers/legacy-future-solar-energy.jpg',
       imageAlt: 'Granja solar a gran escala con paneles solares HousePlus',
       sections: [
         {
@@ -136,7 +137,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
       authorName: 'Jack Hu',
       datePublished: '2023-03-15',
       dateModified: '2026-07-18',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: '/images/articles/covers/legacy-future-solar-energy.jpg',
       imageAlt: 'Große Solaranlage mit HousePlus Solarmodulen',
       sections: [
         {
@@ -174,7 +175,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
       authorName: 'Jack Hu',
       datePublished: '2023-03-15',
       dateModified: '2026-07-18',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: '/images/articles/covers/legacy-future-solar-energy.jpg',
       imageAlt: 'Grande ferme solaire avec panneaux solaires HousePlus',
       sections: [
         {
@@ -212,7 +213,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
       authorName: 'Jack Hu',
       datePublished: '2023-03-15',
       dateModified: '2026-07-18',
-      image: '/images/products/solar-panel-500w.jpg',
+      image: '/images/articles/covers/legacy-future-solar-energy.jpg',
       imageAlt: 'مزرعة شمسية واسعة النطاق بألواح HousePlus الشمسية',
       sections: [
         {
@@ -274,14 +275,11 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
               dateModified={data.dateModified}
             />
           </div>
-
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
 
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-10">

@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -43,7 +44,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-09-17',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/oem-odm-manufacturing-guide.jpg',
       imageAlt: 'OEM ODM manufacturing process at HousePlus factory - custom product development',
                       sections: [
       {
@@ -79,7 +80,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-09-17',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/oem-odm-manufacturing-guide.jpg',
       imageAlt: 'Proceso de fabricación OEM ODM en la fábrica HousePlus - desarrollo de productos personalizados',
                       sections: [
       {
@@ -115,7 +116,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-09-17',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/oem-odm-manufacturing-guide.jpg',
       imageAlt: 'OEM-ODM-Fertigungsprozess im HousePlus-Werk - individuelle Produktentwicklung',
                       sections: [
       {
@@ -151,7 +152,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-09-17',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/oem-odm-manufacturing-guide.jpg',
       imageAlt: 'Processus de fabrication OEM ODM à l\'usine HousePlus - développement de produits personnalisés',
                       sections: [
       {
@@ -187,7 +188,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-09-17',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/oem-odm-manufacturing-guide.jpg',
       imageAlt: 'عملية تصنيع OEM وODM في مصنع HousePlus - تطوير المنتجات المخصصة',
                       sections: [
       {
@@ -248,13 +249,11 @@ export default async function ArticlePage({ params }: { params: { lang: string }
           <div className="text-center text-gray-600 mb-8">
             By <span className="font-semibold text-blue-600">{data.author}</span> | {new Date(data.datePublished).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
           </div>
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-slate-800">{section.heading}</h2>

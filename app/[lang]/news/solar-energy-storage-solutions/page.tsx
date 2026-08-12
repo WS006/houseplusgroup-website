@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -60,7 +61,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: '/images/articles/covers/legacy-solar-energy-storage-solutions.jpg',
       imageAlt: 'HousePlus portable power station and battery storage system',
       sections: [
         {
@@ -98,7 +99,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: '/images/articles/covers/legacy-solar-energy-storage-solutions.jpg',
       imageAlt: 'Estación de energía portátil HousePlus y sistema de almacenamiento de baterías',
       sections: [
         {
@@ -136,7 +137,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: '/images/articles/covers/legacy-solar-energy-storage-solutions.jpg',
       imageAlt: 'HousePlus tragbares Kraftwerk und Batteriespeichersystem',
       sections: [
         {
@@ -174,7 +175,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: '/images/articles/covers/legacy-solar-energy-storage-solutions.jpg',
       imageAlt: 'Centrale électrique portable HousePlus et système de stockage de batterie',
       sections: [
         {
@@ -212,7 +213,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
       authorName: 'Jack Hu',
       datePublished: '2024-02-19',
       dateModified: '2026-07-18',
-      image: '/images/products/home-energy-storage-5000w.jpg',
+      image: '/images/articles/covers/legacy-solar-energy-storage-solutions.jpg',
       imageAlt: 'محطة طاقة محمولة HousePlus ونظام تخزين البطارية',
       sections: [
         {
@@ -273,14 +274,11 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
               dateModified={data.dateModified}
             />
           </div>
-
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
 
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-10">

@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -43,7 +44,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/energy-efficiency-standards-appliances.jpg',
       imageAlt: 'Energy efficient home appliances with CE and RoHS certification labels',
                                   sections: [
       {
@@ -79,7 +80,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/energy-efficiency-standards-appliances.jpg',
       imageAlt: 'Electrodomésticos eficientes energéticamente con etiquetas de certificación CE y RoHS',
                                   sections: [
       {
@@ -115,7 +116,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/energy-efficiency-standards-appliances.jpg',
       imageAlt: 'Energieeffiziente Haushaltsgeräte mit CE- und RoHS-Zertifizierungsetiketten',
                                   sections: [
       {
@@ -151,7 +152,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/energy-efficiency-standards-appliances.jpg',
       imageAlt: 'Appareils électroménagers économes en énergie avec étiquettes de certification CE et RoHS',
                                   sections: [
       {
@@ -187,7 +188,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
       authorName: 'Jack Hu',
       datePublished: '2025-05-08',
       dateModified: '2026-07-18',
-      image: '/images/products/induction-cooktop-2000w.jpg',
+      image: '/images/articles/covers/energy-efficiency-standards-appliances.jpg',
       imageAlt: 'أجهزة منزلية موفرة للطاقة مع ملصقات شهادات CE وRoHS',
                                   sections: [
       {
@@ -248,13 +249,11 @@ export default async function ArticlePage({ params }: { params: { lang: string }
           <div className="text-center text-gray-600 mb-8">
             By <span className="font-semibold text-blue-600">{data.author}</span> | {new Date(data.datePublished).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US')}
           </div>
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-slate-800">{section.heading}</h2>

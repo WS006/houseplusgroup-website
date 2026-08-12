@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -51,7 +52,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-energy-storage-industrial-manufacturing.jpg',
     heroImageAlt: 'Large industrial facility with solar panels on the roof and energy storage units, symbolizing sustainable manufacturing',
     sections: [
       {
@@ -103,7 +104,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-energy-storage-industrial-manufacturing.jpg',
     heroImageAlt: 'Instalación industrial grande con paneles solares en el techo y unidades de almacenamiento de energía, simbolizando la fabricación sostenible',
     sections: [
       {
@@ -155,7 +156,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-energy-storage-industrial-manufacturing.jpg',
     heroImageAlt: 'Große Industrieanlage mit Solarmodulen auf dem Dach und Energiespeichereinheiten, die nachhaltige Fertigung symbolisieren',
     sections: [
       {
@@ -207,7 +208,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-energy-storage-industrial-manufacturing.jpg',
     heroImageAlt: 'Grande installation industrielle avec des panneaux solaires sur le toit et des unités de stockage d\'énergie, symbolisant la fabrication durable',
     sections: [
       {
@@ -241,7 +242,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-05-15',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-energy-storage-industrial-manufacturing.jpg',
     heroImageAlt: 'منشأة صناعية كبيرة مزودة بألواح شمسية على السطح ووحدات تخزين الطاقة، ترمز إلى التصنيع المستدام',
     sections: [
       {
@@ -314,12 +315,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
   return (
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={[articleSchema]} />
-      <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <img
-          src={content.heroImage}
-          alt={content.heroImageAlt}
-          className="object-cover opacity-30"
-         title={content.heroImageAlt} decoding="async" />
+      <header className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-4 pb-20 pt-20 text-white md:pb-28 md:pt-28">
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
           <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
@@ -337,7 +333,9 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             />
           </div>
         </div>
-      </div>
+      </header>
+
+      <ArticleFeatureImage src={content.heroImage} alt={content.heroImageAlt} priority />
 
       <article className="max-w-4xl mx-auto py-16 px-4 prose prose-lg prose-slate prose-headings:font-black prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-li:text-slate-700 prose-strong:text-slate-900">
         {content.sections.map((section: any, index: number) => (

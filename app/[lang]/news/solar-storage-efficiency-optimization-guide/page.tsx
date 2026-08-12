@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema, generateImageObjectSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -52,7 +53,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-07-03',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-storage-efficiency-optimization-guide.jpg',
     heroImageAlt: 'LiFePO4 battery bank for industrial solar storage achieving 95% round-trip efficiency and 6000 cycle life',
     sections: [
       {
@@ -127,7 +128,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-12',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-storage-efficiency-optimization-guide.jpg',
     heroImageAlt: 'Sistema de almacenamiento de energía solar con bancos de baterías y equipo de monitoreo',
     sections: [
       {
@@ -202,7 +203,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-12',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-storage-efficiency-optimization-guide.jpg',
     heroImageAlt: 'LiFePO4-Batteriebank für industrielle Solarspeicherung mit 95% Round-Trip-Effizienz und 6000 Zyklen',
     sections: [
       {
@@ -277,7 +278,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-12',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-storage-efficiency-optimization-guide.jpg',
     heroImageAlt: 'Banque de batteries LiFePO4 pour stockage solaire industriel avec 95% rendement aller-retour et 6000 cycles',
     sections: [
       {
@@ -337,7 +338,7 @@ const articleContent: Record<string, any> = {
     authorName: 'Jack Hu',
     datePublished: '2026-04-12',
     dateModified: '2026-07-18',
-    heroImage: '/images/articles/solar/solar-energy-storage-battery-bank.jpg',
+    heroImage: '/images/articles/covers/solar-storage-efficiency-optimization-guide.jpg',
     heroImageAlt: 'بنك بطاريات LiFePO4 لتخزين الطاقة الشمسية الصناعية بكفاءة ذهاب وإياب 95% و6000 دورة',
     sections: [
       {
@@ -440,12 +441,7 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
   return (
     <main className="min-h-screen bg-white">
       <SchemaRenderer schemas={[articleSchema, imageObjectSchema]} />
-      <div className="relative bg-slate-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        <img
-          src={content.heroImage}
-          alt={content.heroImageAlt}
-          className="object-cover opacity-30"
-         title={content.heroImageAlt} decoding="async" />
+      <header className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-4 pb-20 pt-20 text-white md:pb-28 md:pt-28">
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <Breadcrumb lang={lang} customLabel={content.title} />
           <h1 className="text-3xl md:text-5xl font-black mt-6 mb-4 leading-tight">
@@ -463,7 +459,9 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
             />
           </div>
         </div>
-      </div>
+      </header>
+
+      <ArticleFeatureImage src={content.heroImage} alt={content.heroImageAlt} priority />
 
       <article className="max-w-4xl mx-auto py-16 px-4 prose prose-lg prose-slate prose-headings:font-black prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-li:text-slate-700 prose-strong:text-slate-900">
         {content.sections.map((section: any, index: number) => (

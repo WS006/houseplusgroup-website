@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -60,7 +61,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
       authorName: 'Jack Hu',
       datePublished: '2023-11-08',
       dateModified: '2026-07-18',
-      image: '/images/products/power-bank-60w-pd.jpg',
+      image: '/images/articles/covers/legacy-evolution-3c-electronics.jpg',
       imageAlt: 'Modern 3C electronics devices including wireless chargers and smart gadgets',
           sections: [
       {
@@ -92,7 +93,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
       authorName: 'Jack Hu',
       datePublished: '2023-11-08',
       dateModified: '2026-07-18',
-      image: '/images/products/power-bank-60w-pd.jpg',
+      image: '/images/articles/covers/legacy-evolution-3c-electronics.jpg',
       imageAlt: 'Dispositivos electrónicos 3C modernos que incluyen cargadores inalámbricos y gadgets inteligentes',
       sections: [
         {
@@ -124,7 +125,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
       authorName: 'Jack Hu',
       datePublished: '2023-11-08',
       dateModified: '2026-07-18',
-      image: '/images/products/power-bank-60w-pd.jpg',
+      image: '/images/articles/covers/legacy-evolution-3c-electronics.jpg',
       imageAlt: 'Moderne 3C-Elektronikgeräte, einschließlich kabelloser Ladegeräte und Smart Gadgets',
       sections: [
         {
@@ -156,7 +157,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
       authorName: 'Jack Hu',
       datePublished: '2023-11-08',
       dateModified: '2026-07-18',
-      image: '/images/products/power-bank-60w-pd.jpg',
+      image: '/images/articles/covers/legacy-evolution-3c-electronics.jpg',
       imageAlt: 'Appareils électroniques 3C modernes, y compris les chargeurs sans fil et les gadgets intelligents',
                   sections: [
       {
@@ -188,7 +189,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
       authorName: 'Jack Hu',
       datePublished: '2023-11-08',
       dateModified: '2026-07-18',
-      image: '/images/products/power-bank-60w-pd.jpg',
+      image: '/images/articles/covers/legacy-evolution-3c-electronics.jpg',
       imageAlt: 'أجهزة إلكترونيات 3C حديثة بما في ذلك الشواحن اللاسلكية والأدوات الذكية',
                   sections: [
       {
@@ -247,14 +248,11 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
           <div className="text-center text-gray-600 mb-8">
             By {data.authorName} | {new Date(data.datePublished).toLocaleDateString(lang)}
           </div>
-
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
 
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-10">

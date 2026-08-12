@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
+import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -60,7 +61,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       authorName: 'Jack Hu',
       datePublished: '2024-10-14',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/advanced-manufacturing-home-appliances.jpg',
       imageAlt: 'HousePlus advanced home appliance manufacturing facility',
                           sections: [
       {
@@ -98,7 +99,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       authorName: 'Jack Hu',
       datePublished: '2024-10-14',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/advanced-manufacturing-home-appliances.jpg',
       imageAlt: 'Instalación de fabricación avanzada de electrodomésticos HousePlus',
                           sections: [
       {
@@ -136,7 +137,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       authorName: 'Jack Hu',
       datePublished: '2024-10-14',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/advanced-manufacturing-home-appliances.jpg',
       imageAlt: 'HousePlus fortschrittliche Fertigungsanlage für Haushaltsgeräte',
                           sections: [
       {
@@ -174,7 +175,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       authorName: 'Jack Hu',
       datePublished: '2024-10-14',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/advanced-manufacturing-home-appliances.jpg',
       imageAlt: 'Installation de fabrication avancée d\'appareils électroménagers HousePlus',
                           sections: [
       {
@@ -212,7 +213,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
       authorName: 'Jack Hu',
       datePublished: '2024-10-14',
       dateModified: '2026-07-18',
-      image: '/images/factory/production-line.jpg',
+      image: '/images/articles/covers/advanced-manufacturing-home-appliances.jpg',
       imageAlt: 'منشأة تصنيع الأجهزة المنزلية المتقدمة من HousePlus',
                           sections: [
       {
@@ -276,14 +277,11 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
           <div className="text-center text-gray-600 mb-8">
             By {data.authorName} | {new Date(data.datePublished).toLocaleDateString(lang)}
           </div>
-
-          <div className="relative w-full h-96 mb-10 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={data.image}
-              alt={data.imageAlt}
-              className="object-cover"
-             title={data.imageAlt} decoding="async" />
-          </div>
+          <ArticleFeatureImage
+            src={data.image}
+            alt={data.imageAlt}
+            priority
+          />
 
           {data.sections.map((section: any, index: number) => (
             <section key={index} className="mb-10">
