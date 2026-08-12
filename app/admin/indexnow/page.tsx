@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { baseUrl, generateAllUrls, generateMainPageUrls, staticPageSlugs, productSlugs, newsSlugs } from '@/lib/urls';
 import { searchEngines } from '@/lib/search-engines';
 
-const defaultEngines = ['bing', 'indexnow'];
+const defaultEngines = ['indexnow'];
 
 interface HistoryRecord {
   id: string;
@@ -84,8 +84,10 @@ export default function IndexNowPage() {
   };
 
   const handleEngineToggle = (engineId: string) => {
-    setSelectedEngines(prev => 
-      prev.includes(engineId) 
+    const engine = searchEngines.find((item) => item.id === engineId);
+    if (!engine?.available) return;
+    setSelectedEngines(prev =>
+      prev.includes(engineId)
         ? prev.filter(id => id !== engineId)
         : [...prev, engineId]
     );
@@ -98,7 +100,7 @@ export default function IndexNowPage() {
     setProgress(0);
     setShowPreview('none');
 
-    const batchSize = 100;
+    const batchSize = 10000; // IndexNow accepts up to 10,000 URLs in one JSON submission.
     const batches: string[][] = [];
     
     for (let i = 0; i < urlsToSubmit.length; i += batchSize) {
@@ -131,7 +133,7 @@ export default function IndexNowPage() {
         setResults(prev => [...prev, { batch: index + 1, total: batches.length, urls: batches[index], result: data }]);
         setProgress(Math.round(((index + 1) / batches.length) * 100));
         
-        setTimeout(() => submitBatch(index + 1), 2000);
+        submitBatch(index + 1);
       } catch (err) {
         setError((err as Error).message);
         setLoading(false);
@@ -149,8 +151,17 @@ export default function IndexNowPage() {
     submitUrls(mainUrls);
   };
 
-  const submitAll = () => {
-    submitUrls(allUrls);
+  const submitAll = async () => {
+    setError(null);
+    try {
+      const response = await fetch('/sitemap.xml', { headers: { Accept: 'application/xml,text/xml,*/*' } });
+      if (!response.ok) throw new Error(`Could not read the live sitemap (${response.status})`);
+      const liveUrls = parseSitemapXml(await response.text());
+      if (!liveUrls.length) throw new Error('The live sitemap did not contain valid HousePlus URLs');
+      submitUrls(liveUrls);
+    } catch (error) {
+      setError((error as Error).message);
+    }
   };
 
   const parseSitemapXml = (xmlText: string): string[] => {
@@ -263,26 +274,33 @@ export default function IndexNowPage() {
                   {searchEngines.map(engine => (
                     <label 
                       key={engine.id}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-lg border cursor-pointer transition-colors ${
-                        selectedEngines.includes(engine.id)
-                          ? 'bg-blue-100 border-blue-500 text-blue-700'
-                          : 'bg-white border-gray-300 hover:border-gray-400'
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
+                        !engine.available
+                          ? 'bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed'
+                          : selectedEngines.includes(engine.id)
+                            ? 'bg-blue-100 border-blue-500 text-blue-700 cursor-pointer'
+                            : 'bg-white border-gray-300 hover:border-gray-400 cursor-pointer'
                       }`}
                     >
                       <input
                         type="checkbox"
                         checked={selectedEngines.includes(engine.id)}
                         onChange={() => handleEngineToggle(engine.id)}
-                        className="w-4 h-4 text-blue-600 rounded"
+                        disabled={!engine.available}
+                        className="w-4 h-4 text-blue-600 rounded disabled:cursor-not-allowed"
                       />
                       <span className="text-sm font-medium">{engine.name}</span>
-                      {engine.requiresAuth && (
-                        <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">Requires API Key</span>
+                      {engine.recommended && (
+                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">Recommended</span>
+                      )}
+                      {!engine.available && (
+                        <span className="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded">Not used</span>
                       )}
                     </label>
                   ))}
                 </div>
               </div>
+              <p className="mt-3 text-sm text-slate-600">Use the single recommended IndexNow Network endpoint. A successful response confirms receipt by the protocol, not guaranteed search index inclusion.</p>
 
               {/* Notification Option */}
               <div className="mb-8">
@@ -351,7 +369,7 @@ export default function IndexNowPage() {
                   disabled={loading}
                   className="px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 disabled:bg-gray-400 transition-colors"
                 >
-                  Submit All Pages ({allUrls.length} URLs)
+                  Submit Live Sitemap URLs
                 </button>
                 <button
                   onClick={() => setShowPreview(showPreview === 'all' ? 'none' : 'all')}
@@ -364,7 +382,7 @@ export default function IndexNowPage() {
               
               {showPreview === 'all' && (
                 <div className="mb-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                  <h4 className="font-medium text-gray-800 mb-2">All Pages to Submit:</h4>
+                  <h4 className="font-medium text-gray-800 mb-2">Maintained URL Inventory Preview:</h4>
                   <div className="max-h-60 overflow-y-auto text-sm text-gray-600">
                     {allUrls.map((u, i) => <div key={i}>{u}</div>)}
                   </div>
@@ -442,10 +460,10 @@ export default function IndexNowPage() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="font-medium text-blue-800 mb-2">📝 How to Add New Pages</h4>
                     <ol className="list-decimal list-inside text-blue-700 text-sm space-y-1">
-                      <li>Edit <code className="bg-blue-100 px-1.5 py-0.5 rounded">lib/urls.ts</code></li>
-                      <li>Add new slug to <code>staticPageSlugs</code>, <code>productSlugs</code>, or <code>newsSlugs</code></li>
-                      <li>Commit and deploy</li>
-                      <li>Click "Submit All Pages" to notify search engines</li>
+                      <li>Add the new route to the canonical Sitemap source before deployment</li>
+                      <li>Commit and deploy the page</li>
+                      <li>Use “Submit Live Sitemap URLs” to submit the URLs currently published in the production Sitemap</li>
+                      <li>Check History &amp; Stats for receipt status; submission receipt is not a ranking or indexing guarantee</li>
                     </ol>
                   </div>
 
@@ -459,10 +477,9 @@ export default function IndexNowPage() {
                   <div>
                     <h4 className="font-medium text-gray-800 mb-2">Supported Search Engines</h4>
                     <ul className="space-y-2 text-gray-600 text-sm">
-                      <li>• <strong>Bing</strong>: Microsoft Bing Search Engine (no auth required)</li>
-                      <li>• <strong>IndexNow</strong>: IndexNow Protocol (Bing, Yandex, etc.)</li>
-                      <li>• <strong>Yandex</strong>: Yandex Search Engine (no auth required)</li>
-                      <li>• <strong>Google</strong>: Google Search Console (requires API key)</li>
+                      <li>• <strong>IndexNow Network</strong>: the recommended single endpoint for participating search engines.</li>
+                      <li>• <strong>Bing and Yandex direct endpoints</strong>: intentionally not used to prevent duplicate notifications.</li>
+                      <li>• <strong>Google Indexing API</strong>: intentionally disabled for ordinary pages; use sitemap discovery and Search Console for normal site content.</li>
                     </ul>
                   </div>
                 </div>

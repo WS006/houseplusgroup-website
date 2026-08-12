@@ -15,11 +15,6 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ['business', 'shopping', 'productivity'],
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-      {
         src: 'https://images.houseplus-ch.com/media/houseplus-group-brand-icon/',
         sizes: '32x32',
         type: 'image/png',

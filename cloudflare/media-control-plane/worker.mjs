@@ -68,6 +68,63 @@ function assetMetadata(asset) {
   }
 }
 
+function parseJson(value, fallback) {
+  try {
+    return value ? JSON.parse(value) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function indexNowRecord(row) {
+  const results = parseJson(row.results_json, []);
+  const successCount = results.filter((result) => result.success).length;
+  const failureCount = results.filter((result) => !result.success).length;
+  return {
+    id: row.submission_id,
+    timestamp: row.submitted_at,
+    totalUrls: Number(row.total_urls || 0),
+    engines: parseJson(row.engines_json, []),
+    results,
+    successCount,
+    failureCount,
+    triggeredBy: row.triggered_by || 'manual',
+  };
+}
+
+async function getIndexNowHistory(env, limit = 50) {
+  const boundedLimit = Math.min(Math.max(Number(limit) || 50, 1), 1000);
+  const result = await env.MEDIA_DB.prepare(
+    'SELECT submission_id, submitted_at, total_urls, engines_json, results_json, triggered_by FROM indexnow_submissions ORDER BY submitted_at DESC LIMIT ?'
+  ).bind(boundedLimit).all();
+  return (result.results || []).map(indexNowRecord);
+}
+
+async function getIndexNowStats(env) {
+  const records = await getIndexNowHistory(env, 1000);
+  const engineStats = { bing: { success: 0, failed: 0 }, indexnow: { success: 0, failed: 0 }, yandex: { success: 0, failed: 0 }, google: { success: 0, failed: 0 } };
+  for (const record of records) {
+    for (const result of record.results) {
+      const engine = String(result.engine || '').toLowerCase();
+      if (!engineStats[engine]) engineStats[engine] = { success: 0, failed: 0 };
+      engineStats[engine][result.success ? 'success' : 'failed'] += 1;
+    }
+  }
+  const completed = records.filter((record) => record.successCount > 0 && record.failureCount === 0).length;
+  const partial = records.filter((record) => record.successCount > 0 && record.failureCount > 0).length;
+  const failed = records.filter((record) => record.successCount === 0 && record.failureCount > 0).length;
+  return {
+    totalSubmissions: records.length,
+    totalUrls: records.reduce((sum, record) => sum + record.totalUrls, 0),
+    successfulSubmissions: completed,
+    partialSubmissions: partial,
+    failedSubmissions: failed,
+    successRate: records.length ? ((completed / records.length) * 100).toFixed(1) : '0.0',
+    engineStats,
+    recentActivity: records.slice(0, 10),
+  };
+}
+
 function webpVariantKey(asset) {
   return assetMetadata(asset)?.variants?.webp_1920?.key || null;
 }
@@ -209,6 +266,48 @@ export default {
     }
 
     if (!isAdmin) return json({ error: 'Admin authorization required' }, 401, cors);
+
+    if (request.method === 'GET' && url.pathname === '/v1/indexnow/submissions') {
+      if (url.searchParams.get('action') === 'stats') return json(await getIndexNowStats(env), 200, cors);
+      return json({ success: true, data: await getIndexNowHistory(env, url.searchParams.get('limit') || 50) }, 200, cors);
+    }
+
+    if (request.method === 'POST' && url.pathname === '/v1/indexnow/dedupe') {
+      const body = await request.json();
+      const urls = [...new Set(Array.isArray(body.urls) ? body.urls.filter((item) => typeof item === 'string' && item.startsWith('https://www.houseplus-ch.com/')) : [])];
+      if (!urls.length) return json({ recentlySubmitted: [] }, 200, cors);
+      const windowMinutes = Math.min(Math.max(Number(body.window_minutes || 60), 1), 1440);
+      const cutoff = new Date(Date.now() - windowMinutes * 60 * 1000).toISOString();
+      const placeholders = urls.map(() => '?').join(',');
+      const recent = await env.MEDIA_DB.prepare(`SELECT url FROM indexnow_url_submissions WHERE last_submitted_at >= ? AND url IN (${placeholders})`).bind(cutoff, ...urls).all();
+      return json({ recentlySubmitted: (recent.results || []).map((row) => row.url) }, 200, cors);
+    }
+
+    if (request.method === 'POST' && url.pathname === '/v1/indexnow/submissions') {
+      const body = await request.json();
+      const urls = [...new Set(Array.isArray(body.urls) ? body.urls.filter((item) => typeof item === 'string' && item.startsWith('https://www.houseplus-ch.com/')) : [])];
+      const results = Array.isArray(body.results) ? body.results : [];
+      if (!urls.length) return json({ error: 'At least one valid HousePlus URL is required' }, 422, cors);
+      const submissionId = crypto.randomUUID();
+      const submittedAt = new Date().toISOString();
+      const engines = Array.isArray(body.engines) ? body.engines.filter((item) => typeof item === 'string') : [];
+      const triggeredBy = ['manual', 'auto', 'scheduled'].includes(body.triggeredBy) ? body.triggeredBy : 'manual';
+      const statements = [
+        env.MEDIA_DB.prepare('INSERT INTO indexnow_submissions (submission_id, submitted_at, total_urls, engines_json, results_json, triggered_by) VALUES (?, ?, ?, ?, ?, ?)').bind(submissionId, submittedAt, urls.length, JSON.stringify(engines), JSON.stringify(results), triggeredBy),
+        ...urls.map((submittedUrl) => env.MEDIA_DB.prepare('INSERT INTO indexnow_url_submissions (url, last_submitted_at, submission_id) VALUES (?, ?, ?) ON CONFLICT(url) DO UPDATE SET last_submitted_at = excluded.last_submitted_at, submission_id = excluded.submission_id').bind(submittedUrl, submittedAt, submissionId)),
+      ];
+      await env.MEDIA_DB.batch(statements);
+      await audit(env, null, 'indexnow_submission_recorded', { submission_id: submissionId, total_urls: urls.length, engines, triggeredBy });
+      return json({ success: true, id: submissionId, timestamp: submittedAt }, 201, cors);
+    }
+
+    if (request.method === 'DELETE' && url.pathname === '/v1/indexnow/submissions') {
+      await env.MEDIA_DB.batch([
+        env.MEDIA_DB.prepare('DELETE FROM indexnow_url_submissions'),
+        env.MEDIA_DB.prepare('DELETE FROM indexnow_submissions'),
+      ]);
+      return json({ success: true }, 200, cors);
+    }
 
     if (request.method === 'POST' && webpVariantMatch) {
       const asset = await getAsset(env, webpVariantMatch[1]);

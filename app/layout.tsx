@@ -30,17 +30,17 @@ export const metadata = {
     url: 'https://www.houseplus-ch.com',
     siteName: 'HousePlus',
     images: [{
-      url: '/og-image.jpg',
+      url: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
       width: 1200,
       height: 675,
-      alt: 'HousePlus global wholesale solar systems, home appliances and 3C electronics',
+      alt: 'HousePlus solar energy systems for global wholesale partners',
     }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@houseplusglobal',
     creator: '@houseplusglobal',
-    images: ['/og-image.jpg'],
+    images: ['https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/'],
   },
   other: {
     'geo.region': 'CN-GD',
@@ -75,9 +75,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1d4ed8" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="https://images.houseplus-ch.com/media/houseplus-group-brand-icon/" type="image/png" sizes="32x32" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="https://images.houseplus-ch.com/media/houseplus-group-brand-icon/" type="image/png" />
         <link rel="apple-touch-icon" href="https://images.houseplus-ch.com/media/houseplus-apple-touch-icon/" />
         <link
           rel="preconnect"

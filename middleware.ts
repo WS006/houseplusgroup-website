@@ -5,7 +5,7 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const defaultLocale = 'en';
 
 // Admin protection config
-const ADMIN_PATHS = ['/admin', '/api/media-library'];
+const ADMIN_PATHS = ['/admin', '/api/media-library', '/api/indexnow', '/api/submission-history', '/api/url-changes'];
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 export function middleware(request: NextRequest) {

@@ -50,7 +50,7 @@ export default function StatusDashboard() {
     { url: 'https://www.houseplus-ch.com', name: 'Homepage', method: 'GET' },
     { url: 'https://www.houseplus-ch.com/sitemap.xml', name: 'Sitemap', method: 'GET' },
     { url: 'https://www.houseplus-ch.com/robots.txt', name: 'Robots.txt', method: 'GET' },
-    { url: 'https://www.houseplus-ch.com/api/indexnow', name: 'IndexNow API', method: 'POST' },
+    { url: 'https://www.houseplus-ch.com/api/indexnow', name: 'IndexNow API', method: 'GET' },
     { url: 'https://www.houseplus-ch.com/api/submission-history?action=stats', name: 'History API', method: 'GET' },
     { url: 'https://www.houseplus-ch.com/api/url-changes?action=stats', name: 'URL Changes API', method: 'GET' },
   ]);
@@ -67,11 +67,6 @@ export default function StatusDashboard() {
         method: endpoint.method,
         headers: { 'Content-Type': 'application/json' },
       };
-
-      // 对于 POST 请求，添加空 body
-      if (endpoint.method === 'POST') {
-        options.body = JSON.stringify({ test: true });
-      }
 
       const response = await fetch(endpoint.url, {
         ...options,
@@ -168,7 +163,7 @@ export default function StatusDashboard() {
           submissionSuccess: stats.successfulSubmissions || 0,
           submissionFailed: stats.failedSubmissions || 0,
           lastSubmission: stats.recentActivity?.[0]?.timestamp,
-          indexedUrls: stats.totalUrls || 0,
+          indexedUrls: stats.totalUrls || 0, // Represents URLs submitted to IndexNow, not confirmed search-index inclusion.
         }));
       }
     } catch (error) {

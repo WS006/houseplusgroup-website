@@ -3,37 +3,44 @@ export interface SearchEngine {
   name: string;
   endpoint: string;
   requiresAuth: boolean;
+  available: boolean;
+  recommended?: boolean;
   description: string;
 }
 
 export const searchEngines: SearchEngine[] = [
   {
-    id: 'bing',
-    name: 'Bing',
-    endpoint: 'https://www.bing.com/indexnow',
-    requiresAuth: false,
-    description: 'Microsoft Bing Search Engine',
-  },
-  {
     id: 'indexnow',
-    name: 'IndexNow',
+    name: 'IndexNow Network',
     endpoint: 'https://api.indexnow.org/indexnow',
     requiresAuth: false,
-    description: 'IndexNow Protocol (Bing, Yandex, etc.)',
+    available: true,
+    recommended: true,
+    description: 'Recommended single submission endpoint for participating IndexNow search engines.',
+  },
+  {
+    id: 'bing',
+    name: 'Bing direct endpoint',
+    endpoint: 'https://www.bing.com/indexnow',
+    requiresAuth: false,
+    available: false,
+    description: 'Not needed when IndexNow Network is selected; kept only as a documented fallback.',
   },
   {
     id: 'yandex',
-    name: 'Yandex',
+    name: 'Yandex direct endpoint',
     endpoint: 'https://yandex.com/indexnow',
     requiresAuth: false,
-    description: 'Yandex Search Engine',
+    available: false,
+    description: 'Not needed when IndexNow Network is selected; kept only as a documented fallback.',
   },
   {
     id: 'google',
-    name: 'Google',
+    name: 'Google Indexing API',
     endpoint: 'https://indexing.googleapis.com/v3/urlNotifications:publish',
     requiresAuth: true,
-    description: 'Google Search Console',
+    available: false,
+    description: 'Disabled for ordinary pages. Google limits this API to supported JobPosting and livestream event pages.',
   },
 ];
 

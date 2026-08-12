@@ -3,7 +3,7 @@ import { baseUrl } from './urls';
 import jwt from 'jsonwebtoken';
 import { addSubmissionHistory, isRecentlySubmitted } from './submission-history';
 
-const INDEXNOW_KEY = '084fadfd7e4a435b942858f905846430';
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '084fadfd7e4a435b942858f905846430';
 
 // Google Service Account shape
 interface GoogleServiceAccount {
@@ -36,9 +36,22 @@ export async function submitToSearchEngines(
     };
   }
 
-  const enginesToSubmit = engineIds
-    ? searchEngines.filter(e => engineIds.includes(e.id))
-    : searchEngines.filter(e => !e.requiresAuth);
+  const requestedEngineIds = engineIds?.length ? engineIds : ['indexnow'];
+  const enginesToSubmit = searchEngines.filter((engine) => engine.available && requestedEngineIds.includes(engine.id));
+  if (!enginesToSubmit.length) {
+    return {
+      success: false,
+      totalUrls: urlsToSubmit.length,
+      results: [{
+        engineId: 'indexnow',
+        engineName: 'IndexNow Network',
+        success: false,
+        message: 'No supported indexing endpoint was selected',
+        timestamp: new Date(),
+      }],
+      timestamp: new Date(),
+    };
+  }
 
   // Submit to all engines in parallel
   const results = await Promise.all(
@@ -103,6 +116,10 @@ async function submitToIndexNow(
   urls: string[],
   endpoint: string
 ): Promise<{ success: boolean; statusCode?: number; message?: string }> {
+  if (!INDEXNOW_KEY || !/^[A-Za-z0-9-]{8,128}$/.test(INDEXNOW_KEY)) {
+    return { success: false, message: 'IndexNow key is not configured or invalid' };
+  }
+
   const payload = {
     host: 'www.houseplus-ch.com',
     key: INDEXNOW_KEY,

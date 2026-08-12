@@ -3,6 +3,22 @@ import { searchEngines, WebhookConfig } from '@/lib/search-engines';
 import { submitToSearchEngines, sendWebhookNotification } from '@/lib/submission-service';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
+const MAX_URLS_PER_REQUEST = 10000;
+
+function isHousePlusUrl(value: unknown): value is string {
+  if (typeof value !== 'string') return false;
+  try {
+    const parsed = new URL(value);
+    return parsed.origin === BASE_URL && parsed.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+function normalizeUrls(value: unknown): string[] {
+  const input = Array.isArray(value) ? value : value ? [value] : [];
+  return Array.from(new Set(input.filter(isHousePlusUrl)));
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,19 +32,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const urlsToSubmit = urls || [url];
-
-    // Validate URLs
-    for (const u of urlsToSubmit) {
-      if (!u.startsWith(BASE_URL)) {
-        return NextResponse.json(
-          { error: `URL must start with ${BASE_URL}` },
-          { status: 400 }
-        );
-      }
+    const rawUrls = urls || [url];
+    const urlsToSubmit = normalizeUrls(rawUrls);
+    if (!urlsToSubmit.length || urlsToSubmit.length !== rawUrls.length) {
+      return NextResponse.json(
+        { error: `Each URL must be an absolute HTTPS URL on ${BASE_URL}` },
+        { status: 400 }
+      );
+    }
+    if (urlsToSubmit.length > MAX_URLS_PER_REQUEST) {
+      return NextResponse.json(
+        { error: `A maximum of ${MAX_URLS_PER_REQUEST} URLs can be submitted at once` },
+        { status: 413 }
+      );
     }
 
-    // Submit to search engines
+    // Submit to the selected supported IndexNow endpoint.
     const result = await submitToSearchEngines(urlsToSubmit, engines);
 
     // Send notifications if requested
@@ -95,9 +114,9 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  if (!url.startsWith(BASE_URL)) {
+  if (!isHousePlusUrl(url)) {
     return NextResponse.json(
-      { error: `URL must start with ${BASE_URL}` },
+      { error: `URL must be an absolute HTTPS URL on ${BASE_URL}` },
       { status: 400 }
     );
   }

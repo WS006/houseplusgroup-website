@@ -1,65 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getSubmissionHistory, getSubmissionStats, clearSubmissionHistory, addSubmissionHistory, SubmissionHistory } from '@/lib/submission-history';
+import { clearSubmissionHistory, getSubmissionHistory, getSubmissionStats } from '@/lib/submission-history';
 
-// GET - 获取提交历史和统计
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const action = searchParams.get('action') || 'history';
-  const limit = parseInt(searchParams.get('limit') || '50', 10);
+  const limit = Math.min(Math.max(parseInt(searchParams.get('limit') || '50', 10) || 50, 1), 1000);
 
   try {
-    if (action === 'stats') {
-      const stats = await getSubmissionStats();
-      return NextResponse.json(stats);
-    }
+    if (action === 'stats') return NextResponse.json(await getSubmissionStats());
+    if (action !== 'history') return NextResponse.json({ success: false, error: 'Unsupported history action' }, { status: 400 });
 
-    if (action === 'clear') {
-      await clearSubmissionHistory();
-      return NextResponse.json({ success: true, message: 'History cleared' });
-    }
-
-    // 默认返回历史记录
     const history = await getSubmissionHistory(limit);
-    return NextResponse.json({
-      success: true,
-      data: history,
-      total: history.length,
-    });
+    return NextResponse.json({ success: true, data: history, total: history.length });
   } catch (error) {
-    console.error('Error fetching submission history:', error);
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch history' },
-      { status: 500 }
-    );
+    console.error('Error fetching persistent IndexNow history:', error);
+    return NextResponse.json({ success: false, error: 'Failed to fetch history' }, { status: 500 });
   }
 }
 
-// POST - 添加新提交记录（由提交服务自动调用）
-export async function POST(request: NextRequest) {
+export async function DELETE() {
   try {
-    const body = await request.json();
-    const { addRecord, ...recordData } = body;
-
-    if (addRecord) {
-      // 添加新记录
-      const record = await addSubmissionHistory(
-        recordData.urls,
-        recordData.engines,
-        recordData.results,
-        recordData.triggeredBy
-      );
-      return NextResponse.json({ success: true, record });
-    }
-
-    return NextResponse.json(
-      { success: false, error: 'Invalid request' },
-      { status: 400 }
-    );
+    await clearSubmissionHistory();
+    return NextResponse.json({ success: true, message: 'Persistent history cleared' });
   } catch (error) {
-    console.error('Error saving submission record:', error);
-    return NextResponse.json(
-      { success: false, error: 'Failed to save record' },
-      { status: 500 }
-    );
+    console.error('Error clearing persistent IndexNow history:', error);
+    return NextResponse.json({ success: false, error: 'Failed to clear history' }, { status: 500 });
   }
 }
