@@ -76,13 +76,14 @@ function parseJson(value, fallback) {
   }
 }
 
-function indexNowRecord(row) {
+function indexNowRecord(row, urls = []) {
   const results = parseJson(row.results_json, []);
   const successCount = results.filter((result) => result.success).length;
   const failureCount = results.filter((result) => !result.success).length;
   return {
     id: row.submission_id,
     timestamp: row.submitted_at,
+    urls,
     totalUrls: Number(row.total_urls || 0),
     engines: parseJson(row.engines_json, []),
     results,
@@ -97,12 +98,17 @@ async function getIndexNowHistory(env, limit = 50) {
   const result = await env.MEDIA_DB.prepare(
     'SELECT submission_id, submitted_at, total_urls, engines_json, results_json, triggered_by FROM indexnow_submissions ORDER BY submitted_at DESC LIMIT ?'
   ).bind(boundedLimit).all();
-  return (result.results || []).map(indexNowRecord);
+  const rows = result.results || [];
+  if (!rows.length) return [];
+  const urlResults = await env.MEDIA_DB.batch(rows.map((row) =>
+    env.MEDIA_DB.prepare('SELECT url FROM indexnow_url_submissions WHERE submission_id = ? ORDER BY url').bind(row.submission_id)
+  ));
+  return rows.map((row, index) => indexNowRecord(row, (urlResults[index]?.results || []).map((item) => item.url)));
 }
 
 async function getIndexNowStats(env) {
   const records = await getIndexNowHistory(env, 1000);
-  const engineStats = { bing: { success: 0, failed: 0 }, indexnow: { success: 0, failed: 0 }, yandex: { success: 0, failed: 0 }, google: { success: 0, failed: 0 } };
+  const engineStats = { bing: { success: 0, failed: 0 }, indexnow: { success: 0, failed: 0 }, yandex: { success: 0, failed: 0 }, google_search_console: { success: 0, failed: 0 } };
   for (const record of records) {
     for (const result of record.results) {
       const engine = String(result.engine || '').toLowerCase();

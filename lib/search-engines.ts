@@ -1,3 +1,5 @@
+export type SearchPlatformMode = 'url_submission' | 'sitemap_submission';
+
 export interface SearchEngine {
   id: string;
   name: string;
@@ -5,6 +7,7 @@ export interface SearchEngine {
   requiresAuth: boolean;
   available: boolean;
   recommended?: boolean;
+  mode: SearchPlatformMode;
   description: string;
 }
 
@@ -16,31 +19,35 @@ export const searchEngines: SearchEngine[] = [
     requiresAuth: false,
     available: true,
     recommended: true,
-    description: 'Recommended single submission endpoint for participating IndexNow search engines.',
+    mode: 'url_submission',
+    description: 'Recommended single protocol submission to participating IndexNow search engines.',
   },
   {
     id: 'bing',
-    name: 'Bing direct endpoint',
+    name: 'Bing',
     endpoint: 'https://www.bing.com/indexnow',
     requiresAuth: false,
-    available: false,
-    description: 'Not needed when IndexNow Network is selected; kept only as a documented fallback.',
+    available: true,
+    mode: 'url_submission',
+    description: 'Direct Bing IndexNow endpoint. Use only when you specifically need a Bing-only submission.',
   },
   {
     id: 'yandex',
-    name: 'Yandex direct endpoint',
+    name: 'Yandex',
     endpoint: 'https://yandex.com/indexnow',
     requiresAuth: false,
-    available: false,
-    description: 'Not needed when IndexNow Network is selected; kept only as a documented fallback.',
+    available: true,
+    mode: 'url_submission',
+    description: 'Direct Yandex IndexNow endpoint. Use only when you specifically need a Yandex-only submission.',
   },
   {
-    id: 'google',
-    name: 'Google Indexing API',
-    endpoint: 'https://indexing.googleapis.com/v3/urlNotifications:publish',
+    id: 'google_search_console',
+    name: 'Google Search Console',
+    endpoint: 'https://www.googleapis.com/webmasters/v3/sites',
     requiresAuth: true,
-    available: false,
-    description: 'Disabled for ordinary pages. Google limits this API to supported JobPosting and livestream event pages.',
+    available: true,
+    mode: 'sitemap_submission',
+    description: 'Submits and checks the canonical sitemap for ordinary product and article pages; it does not force individual-URL indexing.',
   },
 ];
 

@@ -9,11 +9,20 @@ const defaultEngines = ['indexnow'];
 interface HistoryRecord {
   id: string;
   timestamp: string;
+  urls: string[];
   totalUrls: number;
   successCount: number;
   failureCount: number;
   engines: string[];
+  results: { engine: string; engineName?: string; success: boolean; statusCode?: number; message?: string }[];
   triggeredBy: 'manual' | 'auto' | 'scheduled';
+}
+
+interface GoogleSearchConsoleStatus {
+  configured: boolean;
+  available: boolean;
+  message: string;
+  sitemap?: { path?: string; lastSubmitted?: string; lastDownloaded?: string; isPending?: boolean; warnings?: number; errors?: number };
 }
 
 interface Stats {
@@ -34,6 +43,9 @@ export default function IndexNowPage() {
   const [showPreview, setShowPreview] = useState<'none' | 'main' | 'all'>('none');
   const [selectedEngines, setSelectedEngines] = useState<string[]>(defaultEngines);
   const [sendNotification, setSendNotification] = useState(false);
+  const [forceResubmit, setForceResubmit] = useState(false);
+  const [liveSitemapUrls, setLiveSitemapUrls] = useState<string[]>([]);
+  const [googleStatus, setGoogleStatus] = useState<GoogleSearchConsoleStatus | null>(null);
   const [activeTab, setActiveTab] = useState<'submit' | 'history' | 'import'>('submit');
   
   // History state
@@ -47,6 +59,8 @@ export default function IndexNowPage() {
 
   const allUrls = generateAllUrls();
   const mainUrls = generateMainPageUrls();
+  const productUrls = allUrls.filter((item) => /\/products\//.test(item));
+  const articleUrls = allUrls.filter((item) => /\/news\//.test(item));
   
   const staticPagesCount = staticPageSlugs.length;
   const productsCount = productSlugs.length;
@@ -58,6 +72,15 @@ export default function IndexNowPage() {
       fetchHistory();
     }
   }, [activeTab]);
+
+  const fetchGoogleStatus = async () => {
+    try {
+      const response = await fetch('/api/indexnow?action=google-status', { cache: 'no-store' });
+      if (response.ok) setGoogleStatus(await response.json());
+    } catch (err) {
+      console.error('Failed to fetch Google Search Console status:', err);
+    }
+  };
 
   const fetchHistory = async () => {
     setHistoryLoading(true);
@@ -76,6 +99,7 @@ export default function IndexNowPage() {
       if (statsData.totalSubmissions !== undefined) {
         setStats(statsData);
       }
+      await fetchGoogleStatus();
     } catch (err) {
       console.error('Failed to fetch history:', err);
     } finally {
@@ -93,7 +117,7 @@ export default function IndexNowPage() {
     );
   };
 
-  const submitUrls = async (urlsToSubmit: string[]) => {
+  const submitUrls = async (urlsToSubmit: string[], force = forceResubmit, engines = selectedEngines) => {
     setLoading(true);
     setError(null);
     setResults([]);
@@ -115,9 +139,9 @@ export default function IndexNowPage() {
       }
 
       try {
-        const payload: Record<string, any> = { urls: batches[index] };
-        if (selectedEngines.length > 0) {
-          payload.engines = selectedEngines;
+        const payload: Record<string, any> = { urls: batches[index], force };
+        if (engines.length > 0) {
+          payload.engines = engines;
         }
         if (sendNotification) {
           payload.notify = true;
@@ -147,18 +171,46 @@ export default function IndexNowPage() {
     submitUrls([url]);
   };
 
+  const retrySubmission = async (record: HistoryRecord) => {
+    if (!record.urls?.length) {
+      setError('This legacy history record does not contain URL details and cannot be retried automatically.');
+      return;
+    }
+    const retryEngines = record.engines.filter((id) => searchEngines.some((engine) => engine.id === id && engine.available));
+    const selectedRetryEngines = retryEngines.length ? retryEngines : ['indexnow'];
+    setSelectedEngines(selectedRetryEngines);
+    setActiveTab('submit');
+    await submitUrls(record.urls, true, selectedRetryEngines);
+  };
+
   const submitMainPages = () => {
     submitUrls(mainUrls);
+  };
+
+  const loadLiveSitemap = async (): Promise<string[]> => {
+    const response = await fetch('/sitemap.xml', { headers: { Accept: 'application/xml,text/xml,*/*' }, cache: 'no-store' });
+    if (!response.ok) throw new Error(`Could not read the live sitemap (${response.status})`);
+    const urls = parseSitemapXml(await response.text());
+    if (!urls.length) throw new Error('The live sitemap did not contain valid HousePlus URLs');
+    setLiveSitemapUrls(urls);
+    return urls;
   };
 
   const submitAll = async () => {
     setError(null);
     try {
-      const response = await fetch('/sitemap.xml', { headers: { Accept: 'application/xml,text/xml,*/*' } });
-      if (!response.ok) throw new Error(`Could not read the live sitemap (${response.status})`);
-      const liveUrls = parseSitemapXml(await response.text());
-      if (!liveUrls.length) throw new Error('The live sitemap did not contain valid HousePlus URLs');
+      const liveUrls = await loadLiveSitemap();
       submitUrls(liveUrls);
+    } catch (error) {
+      setError((error as Error).message);
+    }
+  };
+
+  const previewLiveSitemap = async () => {
+    setError(null);
+    try {
+      await loadLiveSitemap();
+      setShowPreview('all');
     } catch (error) {
       setError((error as Error).message);
     }
@@ -300,7 +352,17 @@ export default function IndexNowPage() {
                   ))}
                 </div>
               </div>
-              <p className="mt-3 text-sm text-slate-600">Use the single recommended IndexNow Network endpoint. A successful response confirms receipt by the protocol, not guaranteed search index inclusion.</p>
+              <p className="mt-3 text-sm text-slate-600">IndexNow Network is the default. Bing and Yandex direct routes are available for targeted campaigns. Google Search Console submits the canonical Sitemap rather than forcing individual product or article URLs into Google.</p>
+              <div className="mt-4 grid gap-3 md:grid-cols-2">
+                <label className="flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 p-3 cursor-pointer">
+                  <input type="checkbox" checked={forceResubmit} onChange={(event) => setForceResubmit(event.target.checked)} className="mt-1 h-4 w-4 rounded text-amber-600" />
+                  <span className="text-sm text-amber-900"><strong>Force resubmit</strong><br />Bypass the 60-minute duplicate protection only after a material correction or failed delivery.</span>
+                </label>
+                <div className={`rounded-lg border p-3 text-sm ${googleStatus?.available ? 'border-green-200 bg-green-50 text-green-900' : 'border-slate-200 bg-slate-50 text-slate-700'}`}>
+                  <strong>Google Search Console:</strong> {googleStatus ? googleStatus.message : 'Status loads from History & Stats.'}
+                  {googleStatus?.sitemap?.lastDownloaded && <div className="mt-1 text-xs">Last downloaded: {formatDate(googleStatus.sitemap.lastDownloaded)}</div>}
+                </div>
+              </div>
 
               {/* Notification Option */}
               <div className="mb-8">
@@ -372,7 +434,7 @@ export default function IndexNowPage() {
                   Submit Live Sitemap URLs
                 </button>
                 <button
-                  onClick={() => setShowPreview(showPreview === 'all' ? 'none' : 'all')}
+                  onClick={() => showPreview === 'all' ? setShowPreview('none') : previewLiveSitemap()}
                   disabled={loading}
                   className="px-4 py-3 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 disabled:bg-gray-100 transition-colors"
                 >
@@ -382,12 +444,24 @@ export default function IndexNowPage() {
               
               {showPreview === 'all' && (
                 <div className="mb-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                  <h4 className="font-medium text-gray-800 mb-2">Maintained URL Inventory Preview:</h4>
+                  <h4 className="font-medium text-gray-800 mb-2">Live Sitemap Preview ({liveSitemapUrls.length || allUrls.length} URLs):</h4>
                   <div className="max-h-60 overflow-y-auto text-sm text-gray-600">
-                    {allUrls.map((u, i) => <div key={i}>{u}</div>)}
+                    {(liveSitemapUrls.length ? liveSitemapUrls : allUrls).map((u, i) => <div key={i}>{u}</div>)}
                   </div>
                 </div>
               )}
+
+              <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-3">
+                <button onClick={() => submitUrls(productUrls)} disabled={loading} className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-left hover:bg-blue-100 disabled:opacity-60">
+                  <span className="block text-sm font-bold text-blue-900">Submit product detail pages</span><span className="text-xs text-blue-700">{productUrls.length} URLs · price/specification updates</span>
+                </button>
+                <button onClick={() => submitUrls(articleUrls)} disabled={loading} className="rounded-xl border border-violet-200 bg-violet-50 p-4 text-left hover:bg-violet-100 disabled:opacity-60">
+                  <span className="block text-sm font-bold text-violet-900">Submit news & insights</span><span className="text-xs text-violet-700">{articleUrls.length} URLs · new or revised articles</span>
+                </button>
+                <button onClick={() => submitUrls(mainUrls)} disabled={loading} className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-left hover:bg-emerald-100 disabled:opacity-60">
+                  <span className="block text-sm font-bold text-emerald-900">Submit core pages</span><span className="text-xs text-emerald-700">{mainUrls.length} URLs · brand and service updates</span>
+                </button>
+              </div>
 
               {/* Progress */}
               {loading && (
@@ -477,9 +551,9 @@ export default function IndexNowPage() {
                   <div>
                     <h4 className="font-medium text-gray-800 mb-2">Supported Search Engines</h4>
                     <ul className="space-y-2 text-gray-600 text-sm">
-                      <li>• <strong>IndexNow Network</strong>: the recommended single endpoint for participating search engines.</li>
-                      <li>• <strong>Bing and Yandex direct endpoints</strong>: intentionally not used to prevent duplicate notifications.</li>
-                      <li>• <strong>Google Indexing API</strong>: intentionally disabled for ordinary pages; use sitemap discovery and Search Console for normal site content.</li>
+                      <li>• <strong>IndexNow Network</strong>: recommended shared protocol path for participating search engines.</li>
+                      <li>• <strong>Bing / Yandex direct</strong>: selectable targeted routes for operators who need platform-specific notification.</li>
+                      <li>• <strong>Google Search Console</strong>: submits the canonical Sitemap and reports sitemap processing state; it does not force individual ordinary pages into Google.</li>
                     </ul>
                   </div>
                 </div>
@@ -551,12 +625,13 @@ export default function IndexNowPage() {
                             <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">Engines</th>
                             <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">Status</th>
                             <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">Trigger</th>
+                            <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">Action</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-200">
                           {history.length === 0 ? (
                             <tr>
-                              <td colSpan={5} className="px-4 py-8 text-center text-gray-500">
+                              <td colSpan={6} className="px-4 py-8 text-center text-gray-500">
                                 No submission history yet. Start by submitting some URLs!
                               </td>
                             </tr>
@@ -567,7 +642,10 @@ export default function IndexNowPage() {
                                   {formatDate(record.timestamp)}
                                 </td>
                                 <td className="px-4 py-3 text-sm text-gray-600">
-                                  {record.totalUrls}
+                                  <details>
+                                    <summary className="cursor-pointer text-blue-700">{record.totalUrls} URL{record.totalUrls === 1 ? '' : 's'}</summary>
+                                    <div className="mt-2 max-h-28 w-64 overflow-auto rounded bg-slate-50 p-2 font-mono text-[10px] text-slate-600">{record.urls?.length ? record.urls.map((item) => <div key={item}>{item}</div>) : 'Legacy record: URL details unavailable'}</div>
+                                  </details>
                                 </td>
                                 <td className="px-4 py-3 text-sm text-gray-600">
                                   <div className="flex flex-wrap gap-1">
@@ -579,19 +657,16 @@ export default function IndexNowPage() {
                                   </div>
                                 </td>
                                 <td className="px-4 py-3 text-sm">
-                                  <span className={`px-2 py-1 rounded text-xs ${
-                                    record.failureCount === 0 
-                                      ? 'bg-green-100 text-green-700' 
-                                      : record.successCount === 0 
-                                        ? 'bg-red-100 text-red-700' 
-                                        : 'bg-yellow-100 text-yellow-700'
-                                  }`}>
-                                    {record.successCount}/{record.failureCount > 0 ? '❌' : '✅'}
+                                  <span className={`px-2 py-1 rounded text-xs ${record.failureCount === 0 ? 'bg-green-100 text-green-700' : record.successCount === 0 ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'}`}>
+                                    {record.failureCount === 0 ? 'Delivered' : record.successCount === 0 ? 'Failed' : 'Partial'}
                                   </span>
+                                  <div className="mt-1 space-y-0.5 text-[10px] text-slate-500">{record.results?.map((item, index) => <div key={`${item.engine}-${index}`}>{item.engineName || item.engine}: {item.success ? '✓' : '✕'} {item.statusCode || ''}</div>)}</div>
                                 </td>
                                 <td className="px-4 py-3 text-sm text-gray-600 capitalize">
-                                  {record.triggeredBy === 'manual' ? '👆 Manual' : 
-                                   record.triggeredBy === 'auto' ? '🔄 Auto' : '⏰ Scheduled'}
+                                  {record.triggeredBy === 'manual' ? '👆 Manual' : record.triggeredBy === 'auto' ? '🔄 Auto' : '⏰ Scheduled'}
+                                </td>
+                                <td className="px-4 py-3 text-sm">
+                                  {record.failureCount > 0 && <button onClick={() => retrySubmission(record)} disabled={loading} className="rounded bg-amber-100 px-2 py-1 text-xs font-semibold text-amber-800 hover:bg-amber-200 disabled:opacity-50">Force retry</button>}
                                 </td>
                               </tr>
                             ))
