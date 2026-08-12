@@ -17,6 +17,25 @@ interface GoogleServiceAccount {
   [key: string]: unknown;
 }
 
+interface GoogleSearchPerformanceRow {
+  page: string;
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
+}
+
+export interface GoogleSearchConsoleBaseline {
+  configured: boolean;
+  available: boolean;
+  serviceAccountEmail?: string;
+  searchConsoleProperty?: string;
+  period?: { startDate: string; endDate: string };
+  totals?: { clicks: number; impressions: number; ctr: number; position: number };
+  topPages?: GoogleSearchPerformanceRow[];
+  message: string;
+}
+
 interface GoogleSitemapStatus {
   configured: boolean;
   available: boolean;
@@ -153,6 +172,45 @@ async function getGoogleAccessToken(serviceAccount: GoogleServiceAccount, scope 
     console.error('Failed to create Google Search Console access token:', error);
     return null;
   }
+}
+
+export async function getGoogleSearchConsoleBaseline(): Promise<GoogleSearchConsoleBaseline> {
+  const serviceAccount = getGoogleServiceAccount();
+  if (!serviceAccount) return { configured: false, available: false, message: 'Google Search Console service account is not configured' };
+  const identity = { serviceAccountEmail: serviceAccount.client_email, searchConsoleProperty: GOOGLE_SITE_URL };
+  const accessToken = await getGoogleAccessToken(serviceAccount);
+  if (!accessToken) return { configured: true, available: false, ...identity, message: 'Google Search Console access token could not be created' };
+
+  const end = new Date();
+  end.setUTCDate(end.getUTCDate() - 3);
+  const start = new Date(end);
+  start.setUTCDate(start.getUTCDate() - 27);
+  const toDate = (value: Date) => value.toISOString().slice(0, 10);
+  const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GOOGLE_SITE_URL)}/searchAnalytics/query`;
+  const request = async (body: Record<string, unknown>) => fetch(endpoint, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  const query = { startDate: toDate(start), endDate: toDate(end), dataState: 'final' };
+  const [totalsResponse, pagesResponse] = await Promise.all([
+    request(query),
+    request({ ...query, dimensions: ['page'], rowLimit: 25 }),
+  ]);
+  if (!totalsResponse.ok) return { configured: true, available: false, ...identity, period: query, message: formatResponseMessage(totalsResponse, await totalsResponse.text()) };
+  if (!pagesResponse.ok) return { configured: true, available: false, ...identity, period: query, message: formatResponseMessage(pagesResponse, await pagesResponse.text()) };
+  const totalsPayload = await totalsResponse.json() as { rows?: Array<{ clicks?: number; impressions?: number; ctr?: number; position?: number }> };
+  const pagesPayload = await pagesResponse.json() as { rows?: Array<{ keys?: string[]; clicks?: number; impressions?: number; ctr?: number; position?: number }> };
+  const totals = totalsPayload.rows?.[0] || {};
+  return {
+    configured: true,
+    available: true,
+    ...identity,
+    period: query,
+    totals: { clicks: totals.clicks || 0, impressions: totals.impressions || 0, ctr: totals.ctr || 0, position: totals.position || 0 },
+    topPages: (pagesPayload.rows || []).map((row) => ({ page: row.keys?.[0] || '', clicks: row.clicks || 0, impressions: row.impressions || 0, ctr: row.ctr || 0, position: row.position || 0 })),
+    message: 'Google Search Console search-performance baseline is available',
+  };
 }
 
 export async function enableGoogleSearchConsoleApi(): Promise<{ configured: boolean; enabled: boolean; message: string; statusCode?: number }> {

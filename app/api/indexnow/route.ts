@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { searchEngines, WebhookConfig } from '@/lib/search-engines';
-import { enableGoogleSearchConsoleApi, getGoogleSearchConsoleStatus, submitToSearchEngines, sendWebhookNotification } from '@/lib/submission-service';
+import { enableGoogleSearchConsoleApi, getGoogleSearchConsoleBaseline, getGoogleSearchConsoleStatus, submitToSearchEngines, sendWebhookNotification } from '@/lib/submission-service';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 const MAX_URLS_PER_REQUEST = 10000;
@@ -101,6 +101,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(await getGoogleSearchConsoleStatus(), { headers: { 'cache-control': 'no-store' } });
   }
 
+  if (action === 'google-baseline') {
+    return NextResponse.json(await getGoogleSearchConsoleBaseline(), { headers: { 'cache-control': 'no-store' } });
+  }
+
   if (!url) {
     return NextResponse.json({
       message: 'Search Platform Submission API',
@@ -118,6 +122,7 @@ export async function GET(request: NextRequest) {
         multiPlatform: 'POST {"urls": [...], "engines": ["indexnow", "bing", "yandex", "google_search_console"]}',
         forceRetry: 'POST {"urls": [...], "engines": ["indexnow"], "force": true}',
         googleStatus: 'GET /api/indexnow?action=google-status',
+        googleBaseline: 'GET /api/indexnow?action=google-baseline',
         enableGoogleSearchConsoleApi: 'POST {"action": "enable-google-search-console-api"} (administrator-confirmed configuration action only)',
       },
     });
