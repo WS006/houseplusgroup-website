@@ -128,11 +128,11 @@ function getGoogleServiceAccount(): GoogleServiceAccount | null {
   }
 }
 
-async function getGoogleAccessToken(serviceAccount: GoogleServiceAccount): Promise<string | null> {
+async function getGoogleAccessToken(serviceAccount: GoogleServiceAccount, scope = 'https://www.googleapis.com/auth/webmasters'): Promise<string | null> {
   try {
     const assertion = jwt.sign({
       iss: serviceAccount.client_email,
-      scope: 'https://www.googleapis.com/auth/webmasters',
+      scope,
       aud: 'https://oauth2.googleapis.com/token',
       exp: Math.floor(Date.now() / 1000) + 3600,
       iat: Math.floor(Date.now() / 1000),
@@ -148,6 +148,26 @@ async function getGoogleAccessToken(serviceAccount: GoogleServiceAccount): Promi
     console.error('Failed to create Google Search Console access token:', error);
     return null;
   }
+}
+
+export async function enableGoogleSearchConsoleApi(): Promise<{ configured: boolean; enabled: boolean; message: string; statusCode?: number }> {
+  const serviceAccount = getGoogleServiceAccount();
+  if (!serviceAccount) return { configured: false, enabled: false, message: 'Google Search Console service account is not configured' };
+  const accessToken = await getGoogleAccessToken(serviceAccount, 'https://www.googleapis.com/auth/cloud-platform');
+  if (!accessToken) return { configured: true, enabled: false, message: 'Google Cloud access token could not be created' };
+
+  const response = await fetch('https://serviceusage.googleapis.com/v1/projects/389088181986/services/searchconsole.googleapis.com:enable', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+    body: '{}',
+  });
+  const body = await response.text();
+  return {
+    configured: true,
+    enabled: response.ok,
+    statusCode: response.status,
+    message: response.ok ? 'Google Search Console API enable request accepted; Google may take a short time to activate the service.' : formatResponseMessage(response, body),
+  };
 }
 
 function googleSitemapEndpoint() {
