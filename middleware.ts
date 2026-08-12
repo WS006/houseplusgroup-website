@@ -58,20 +58,27 @@ export function middleware(request: NextRequest) {
   if (pathname === '/') {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}`;
-    return NextResponse.redirect(url, 302);
+    return NextResponse.redirect(url, 308);
   }
 
-  // Handle /home or /[lang]/home -> redirect to /[lang]
+  // Permanently consolidate historical home aliases to the language root.
   if (firstSegment === 'home') {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}`;
-    return NextResponse.redirect(url, 302);
+    return NextResponse.redirect(url, 308);
   }
 
   if (validLangs.includes(firstSegment) && segments[2] === 'home') {
     const url = request.nextUrl.clone();
     url.pathname = `/${firstSegment}`;
-    return NextResponse.redirect(url, 302);
+    return NextResponse.redirect(url, 308);
+  }
+
+  // A historical /about alias was crawlable beside the canonical /about-us route.
+  if (validLangs.includes(firstSegment) && segments[2] === 'about') {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${firstSegment}/about-us`;
+    return NextResponse.redirect(url, 308);
   }
 
   // If first segment exists but is not a valid language code, rewrite to 404

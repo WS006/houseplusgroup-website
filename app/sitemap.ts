@@ -40,7 +40,7 @@ const lastModDates: Record<string, string> = {
 const staticPages = staticPageSlugs.map(slug => {
   let priority: number;
   let changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly';
-  
+
   if (slug === '') {
     priority = 1.0;
     changefreq = 'daily';
@@ -60,7 +60,7 @@ const staticPages = staticPageSlugs.map(slug => {
     priority = 0.3;
     changefreq = 'yearly';
   }
-  
+
   return { slug, priority, changefreq };
 });
 
@@ -76,12 +76,12 @@ function buildHreflangs(slug: string) {
   return languages;
 }
 
-function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq) {
+function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, targetLocales: readonly string[] = locales) {
   // Use specific lastmod date if available, otherwise use a recent date
   const lastmod = lastModDates[slug] || '2026-05-01';
   const entries = [];
 
-  for (const lang of locales) {
+  for (const lang of targetLocales) {
     const url = slug ? `${baseUrl}/${lang}/${slug}` : `${baseUrl}/${lang}`;
     entries.push({
       url,
@@ -108,19 +108,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Product detail pages
   for (const productSlug of productSlugs) {
-    const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly');
+    // Product records are currently authored in English; non-English routes remain user-facing fallbacks and are noindex until translated content exists.
+    const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly', ['en']);
     allEntries.push(...entries);
   }
 
   // Region pages
   for (const regionSlug of regionSlugs) {
-    const entries = buildUrlEntry(`regions/${regionSlug}`, 0.7, 'monthly');
+    // Region detail copy is currently English source content.
+    const entries = buildUrlEntry(`regions/${regionSlug}`, 0.7, 'monthly', ['en']);
     allEntries.push(...entries);
   }
 
   // News pages
   for (const newsSlug of newsSlugs) {
-    const entries = buildUrlEntry(`news/${newsSlug}`, 0.8, 'weekly');
+    // News articles are currently English source content.
+    const entries = buildUrlEntry(`news/${newsSlug}`, 0.8, 'weekly', ['en']);
     allEntries.push(...entries);
   }
 

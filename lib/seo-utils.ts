@@ -19,6 +19,12 @@ export interface SEOConfig {
   imageTitle?: string;
   imageCaption?: string;
   imageDescription?: string;
+  /** Use false when a locale route currently reuses untranslated source content. */
+  indexable?: boolean;
+  /** Absolute canonical URL when the page should consolidate signals to another locale. */
+  canonicalOverride?: string;
+  /** Emit hreflang alternates only when all alternate pages contain equivalent localized content. */
+  includeLanguageAlternates?: boolean;
 }
 
 export const siteConfig = {
@@ -45,7 +51,10 @@ function toAbsoluteImageUrl(image?: string): string {
 }
 
 export function generateMetadata(config: SEOConfig): Metadata {
-  const canonicalUrl = `${siteConfig.url}${config.url}`;
+  const pageUrl = `${siteConfig.url}${config.url}`;
+  const canonicalUrl = config.canonicalOverride || pageUrl;
+  const shouldIndex = config.indexable !== false;
+  const includeLanguageAlternates = config.includeLanguageAlternates !== false && shouldIndex;
   const imageUrl = toAbsoluteImageUrl(config.image);
   const imageDetails = getR2MediaDetails(imageUrl);
   const imageDimensions = r2ImageDimensions(imageUrl);
@@ -100,18 +109,22 @@ export function generateMetadata(config: SEOConfig): Metadata {
         }
       ],
     },
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': `${siteConfig.url}/en${pathWithoutLang}`,
-        'es': `${siteConfig.url}/es${pathWithoutLang}`,
-        'de': `${siteConfig.url}/de${pathWithoutLang}`,
-        'fr': `${siteConfig.url}/fr${pathWithoutLang}`,
-        'ar': `${siteConfig.url}/ar${pathWithoutLang}`,
-        'x-default': `${siteConfig.url}/en${pathWithoutLang}`,
-      },
-    },
+    robots: shouldIndex
+      ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+      : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    alternates: includeLanguageAlternates
+      ? {
+          canonical: canonicalUrl,
+          languages: {
+            'en': `${siteConfig.url}/en${pathWithoutLang}`,
+            'es': `${siteConfig.url}/es${pathWithoutLang}`,
+            'de': `${siteConfig.url}/de${pathWithoutLang}`,
+            'fr': `${siteConfig.url}/fr${pathWithoutLang}`,
+            'ar': `${siteConfig.url}/ar${pathWithoutLang}`,
+            'x-default': `${siteConfig.url}/en${pathWithoutLang}`,
+          },
+        }
+      : { canonical: canonicalUrl },
     other: {
       'geo.region': config.geoRegion || 'CN-GD',
       'geo.placename': config.geoPlacename || 'Zhongshan, Guangdong, China',

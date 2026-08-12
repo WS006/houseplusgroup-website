@@ -71,19 +71,22 @@ export async function generateMetadata({
 
   const title = titleTemplates[lang] || titleTemplates['en'];
   const description = descTemplates[lang] || descTemplates['en'];
+  const englishCanonical = `${BASE_URL}/en/products/${slug}`;
+  const shouldIndexLocale = lang === 'en';
+  const canonicalUrl = shouldIndexLocale ? `${BASE_URL}/${lang}/products/${slug}` : englishCanonical;
   const imageDimensions = r2ImageDimensions(product?.coverImage, { width: 900, height: 675 });
 
   return {
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/${lang}/products/${slug}`,
-      languages: langAlternates,
+      canonical: canonicalUrl,
+      ...(shouldIndexLocale ? { languages: langAlternates } : {}),
     },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/${lang}/products/${slug}`,
+      url: canonicalUrl,
       siteName: 'HousePlus',
       images: product?.coverImage ? [{
         url: product.coverImage,
@@ -94,6 +97,9 @@ export async function generateMetadata({
       }] : [],
       type: 'website',
     },
+    robots: shouldIndexLocale
+      ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+      : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   };
 }
 

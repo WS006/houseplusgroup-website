@@ -29,6 +29,9 @@ export async function generateMetadata({
   const post = blogPosts[slug];
   if (!post) return {};
 
+  const shouldIndexLocale = lang === 'en';
+  const englishCanonical = `https://www.houseplus-ch.com/en/news/${slug}`;
+
   return generateSEOMetadata({
     title: post.title,
     description: post.description,
@@ -40,6 +43,9 @@ export async function generateMetadata({
     author: post.author,
     datePublished: post.datePublished,
     dateModified: post.dateModified,
+    indexable: shouldIndexLocale,
+    canonicalOverride: shouldIndexLocale ? undefined : englishCanonical,
+    includeLanguageAlternates: shouldIndexLocale,
   });
 }
 
