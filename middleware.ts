@@ -81,6 +81,7 @@ export function middleware(request: NextRequest) {
     !validLangs.includes(firstSegment) &&
     !pathname.includes('.') &&
     !pathname.startsWith('/api/') &&
+    !pathname.startsWith('/admin') &&
     !pathname.startsWith('/_next/') &&
     !pathname.startsWith('/merchant-feed.xml') &&
     !pathname.startsWith('/feed.xml') &&
