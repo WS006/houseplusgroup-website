@@ -154,6 +154,7 @@ export default {
     }
 
     const assetMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)$/);
+    const relationMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)\/relations\/?$/);
     if (request.method === 'GET' && assetMatch) {
       const asset = await getAsset(env, assetMatch[1]);
       if (!asset || (!isAdmin && asset.status !== 'approved')) return json({ error: 'Asset not found' }, 404, cors);
@@ -203,8 +204,8 @@ export default {
       return json({ asset_id: asset.asset_id, status, seo_indexable: seoIndexable }, 200, cors);
     }
 
-    if (request.method === 'POST' && assetMatch && url.pathname.endsWith('/relations')) {
-      const asset = await getAsset(env, assetMatch[1]);
+    if (request.method === 'POST' && relationMatch) {
+      const asset = await getAsset(env, relationMatch[1]);
       if (!asset) return json({ error: 'Asset not found' }, 404, cors);
       const body = await request.json();
       if (!ALLOWED_ENTITY_TYPES.has(body.entity_type) || !ALLOWED_ROLES.has(body.role) || !body.entity_id) return json({ error: 'Invalid entity relation' }, 400, cors);
