@@ -11,11 +11,11 @@ const SUGGESTIONS = [
 ];
 
 const QUICK_REPLIES: Record<string, string> = {
-  'What is your MOQ?': 'Our standard MOQ is 100 pieces per model. For customized products, MOQ starts from 500 pieces. Contact us for details.',
-  'How long is the lead time?': 'Standard lead time is 20–35 days. Stock items can be shipped within 5–10 days. OEM/ODM orders typically take 30–45 days.',
-  'Do you support OEM/ODM?': 'Yes, we offer full OEM/ODM services including custom branding, packaging, Pantone colours, and mould development. MOQ from 100 pcs.',
-  'What certifications do you have?': 'We hold CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications. All products ship with complete compliance documentation.',
-  'default': 'Thanks for reaching out! Our team is online Monday–Friday, 9:00–18:00 CST. Leave your message and we will reply within 24 hours. You can also reach us via WhatsApp +86 155 7811 9543.',
+  'What is your MOQ?': 'MOQ is confirmed after product selection, specifications, customization scope and order configuration. Please request a quotation for the applicable requirement.',
+  'How long is the lead time?': 'Lead time, shipping method and export documentation are confirmed in your quotation after the product and order requirements are reviewed.',
+  'Do you support OEM/ODM?': 'Discuss OEM/ODM availability, branding, packaging and product-modification requirements with our team. The available scope and order conditions are confirmed in your quotation.',
+  'What certifications do you have?': 'Certification and compliance documentation vary by product and destination. Request the relevant product documentation before purchase or project approval.',
+  'default': 'Thanks for reaching out. Share your product requirements and our team will review them. You can also reach HousePlus via WhatsApp +86 155 7811 9543.',
 };
 
 interface Message {

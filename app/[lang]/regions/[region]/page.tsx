@@ -29,6 +29,14 @@ interface RegionConfig {
   vatInfo?: string;
 }
 
+const regionNames: Record<string, Record<string, string>> = {
+  en: { AF: 'Africa', SEA: 'Southeast Asia', EU: 'Europe', NG: 'Nigeria' },
+  es: { AF: 'África', SEA: 'Sudeste Asiático', EU: 'Europa', NG: 'Nigeria' },
+  de: { AF: 'Afrika', SEA: 'Südostasien', EU: 'Europa', NG: 'Nigeria' },
+  fr: { AF: 'Afrique', SEA: 'Asie du Sud-Est', EU: 'Europe', NG: 'Nigéria' },
+  ar: { AF: 'أفريقيا', SEA: 'جنوب شرق آسيا', EU: 'أوروبا', NG: 'نيجيريا' },
+};
+
 const regionConfigs: Record<string, RegionConfig> = {
   africa: {
     code: 'AF',
@@ -94,6 +102,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, region } = params;
   const config = regionConfigs[region] || regionConfigs.africa;
+  const regionName = regionNames[lang]?.[config.code] || config.name;
 
   const titles: Record<string, Record<string, string>> = {
     en: {
@@ -133,50 +142,20 @@ export async function generateMetadata({
     },
   };
 
-  const descriptions: Record<string, Record<string, string>> = {
-    en: {
-      africa: `HousePlus official distributor for Africa. Solar panels, home appliances & 3C electronics. ${config.shippingInfo}. Contact ${config.phoneDisplay}.`,
-      southeast_asia: `HousePlus official distributor for Southeast Asia. Solar panels, home appliances & 3C electronics. ${config.shippingInfo}.`,
-      europe: `HousePlus Europe - Professional wholesale supplier. CE/RoHS certified solar systems, home appliances & electronics. ${config.shippingInfo}.`,
-      ng: `HousePlus official ${config.name} distributor. Solar panels, home appliances & 3C electronics. ${config.shippingInfo}. Contact ${config.phoneDisplay}.`,
-      eu: `HousePlus Europe - Professional wholesale supplier. CE/RoHS certified solar systems, home appliances & electronics. ${config.shippingInfo}.`,
-    },
-    es: {
-      africa: `Distribuidor oficial de HousePlus para África. Paneles solares, electrodomésticos y electrónica 3C. ${config.shippingInfo}. Contacto ${config.phoneDisplay}.`,
-      southeast_asia: `Distribuidor oficial de HousePlus para Sudeste Asiático. Paneles solares, electrodomésticos y electrónica 3C. ${config.shippingInfo}.`,
-      europe: `HousePlus Europa - Proveedor mayorista profesional. Sistemas solares certificados CE/RoHS, electrodomésticos y electrónica. ${config.shippingInfo}.`,
-      ng: `Distribuidor oficial de HousePlus para ${config.name}. Paneles solares, electrodomésticos y electrónica 3C. ${config.shippingInfo}. Contacto ${config.phoneDisplay}.`,
-      eu: `HousePlus Europa - Proveedor mayorista profesional. Sistemas solares certificados CE/RoHS, electrodomésticos y electrónica. ${config.shippingInfo}.`,
-    },
-    de: {
-      africa: `HousePlus offizieller Händler für Afrika. Solarmodule, Haushaltsgeräte & 3C-Elektronik. ${config.shippingInfo}. Kontakt ${config.phoneDisplay}.`,
-      southeast_asia: `HousePlus offizieller Händler für Südostasien. Solarmodule, Haushaltsgeräte & 3C-Elektronik. ${config.shippingInfo}.`,
-      europe: `HousePlus Europa - Professioneller Großhandelslieferant. CE/RoHS-zertifizierte Solarsysteme, Haushaltsgeräte & Elektronik. ${config.shippingInfo}.`,
-      ng: `HousePlus offizieller Händler für ${config.name}. Solarmodule, Haushaltsgeräte & 3C-Elektronik. ${config.shippingInfo}. Kontakt ${config.phoneDisplay}.`,
-      eu: `HousePlus Europa - Professioneller Großhandelslieferant. CE/RoHS-zertifizierte Solarsysteme, Haushaltsgeräte & Elektronik. ${config.shippingInfo}.`,
-    },
-    fr: {
-      africa: `Distributeur officiel HousePlus pour l'Afrique. Panneaux solaires, électroménagers et électronique 3C. ${config.shippingInfo}. Contact ${config.phoneDisplay}.`,
-      southeast_asia: `Distributeur officiel HousePlus pour l'Asie du Sud-Est. Panneaux solaires, électroménagers et électronique 3C. ${config.shippingInfo}.`,
-      europe: `HousePlus Europe - Fournisseur grossiste professionnel. Systèmes solaires certifiés CE/RoHS, électroménagers et électronique. ${config.shippingInfo}.`,
-      ng: `Distributeur officiel HousePlus pour ${config.name}. Panneaux solaires, électroménagers et électronique 3C. ${config.shippingInfo}. Contact ${config.phoneDisplay}.`,
-      eu: `HousePlus Europe - Fournisseur grossiste professionnel. Systèmes solaires certifiés CE/RoHS, électroménagers et électronique. ${config.shippingInfo}.`,
-    },
-    ar: {
-      africa: `الموزع الرسمي لـ HousePlus لأفريقيا. الألواح الشمسية، الأجهزة المنزلية والإلكترونيات 3C. ${config.shippingInfo}. اتصل ${config.phoneDisplay}.`,
-      southeast_asia: `الموزع الرسمي لـ HousePlus لجنوب شرق آسيا. الألواح الشمسية، الأجهزة المنزلية والإلكترونيات 3C. ${config.shippingInfo}.`,
-      europe: `HousePlus أوروبا - مورد الجملة المحترف. أنظمة شمسية موثقة CE/RoHS، أجهزة منزلية وإلكترونيات. ${config.shippingInfo}.`,
-      ng: `الموزع الرسمي لـ HousePlus لـ ${config.name}. الألواح الشمسية، الأجهزة المنزلية والإلكترونيات 3C. ${config.shippingInfo}. اتصل ${config.phoneDisplay}.`,
-      eu: `HousePlus أوروبا - مورد الجملة المحترف. أنظمة شمسية موثقة CE/RoHS، أجهزة منزلية وإلكترونيات. ${config.shippingInfo}.`,
-    },
+  const descriptions: Record<string, string> = {
+    en: `HousePlus supports B2B buyers in ${regionName} with solar systems, home appliances and 3C electronics. Discuss specifications, documentation, OEM/ODM scope and quotation terms with our export team.`,
+    es: `HousePlus apoya a compradores B2B en ${regionName} con sistemas solares, electrodomésticos y electrónica 3C. Consulte las especificaciones, la documentación, el alcance de OEM/ODM y las condiciones de cotización con nuestro equipo de exportación.`,
+    de: `HousePlus unterstützt B2B-Käufer in ${regionName} mit Solarsystemen, Haushaltsgeräten und 3C-Elektronik. Besprechen Sie Spezifikationen, Dokumentation, OEM/ODM-Umfang und Angebotsbedingungen mit unserem Exportteam.`,
+    fr: `HousePlus accompagne les acheteurs B2B en ${regionName} pour les systèmes solaires, les appareils électroménagers et l’électronique 3C. Discutez des spécifications, de la documentation, du périmètre OEM/ODM et des conditions du devis avec notre équipe export.`,
+    ar: `تدعم HousePlus المشترين من الشركات في ${regionName} بأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. ناقش المواصفات والوثائق ونطاق OEM/ODM وشروط عرض الأسعار مع فريق التصدير لدينا.`,
   };
 
   return generateSEOMetadata({
     title: (titles[lang] || titles.en)[region] || (titles.en as any)[region],
-    description: (descriptions[lang] || descriptions.en)[region] || (descriptions.en as any)[region],
+    description: descriptions[lang] || descriptions.en,
     keywords: [
       'wholesale',
-      config.name.toLowerCase(),
+      regionName.toLowerCase(),
       'solar panels',
       'home appliances',
       'OEM',
@@ -197,12 +176,13 @@ export default async function RegionPage({
 }) {
   const { lang, region } = params;
   const config = regionConfigs[region] || regionConfigs.africa;
+  const regionName = regionNames[lang]?.[config.code] || config.name;
   const copy = getRegionCopy(lang);
-  const t = (key: string) => translateRegionTemplate(copy[key] || key, config.name);
+  const t = (key: string) => translateRegionTemplate(copy[key] || key, regionName);
 
   const organizationSchema = generateOrganizationSchema({
-    title: `HousePlus ${config.name}`,
-    description: `Professional wholesale supplier of solar systems, home appliances and 3C electronics for ${config.name} market.`,
+    title: `HousePlus ${regionName}`,
+    description: `B2B sourcing support for solar systems, home appliances and 3C electronics in ${regionName}.`,
     url: `https://www.houseplus-ch.com/${lang}/regions/${region}`,
     lang,
     type: 'Organization',

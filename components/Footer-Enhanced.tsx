@@ -34,7 +34,6 @@ const footerContent: Record<string, FooterContent> = {
     contact: [
       { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'Chinese WhatsApp', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
-      { label: 'Nigerian WhatsApp', value: '+2349078080738', href: 'https://wa.me/2349078080738' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
     copyright: '© 2024 HousePlus Group. All rights reserved.',
@@ -62,7 +61,6 @@ const footerContent: Record<string, FooterContent> = {
     contact: [
       { label: 'Correo', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'WhatsApp Chino', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
-      { label: 'WhatsApp Nigeriano', value: '+2349078080738', href: 'https://wa.me/2349078080738' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
     copyright: '© 2024 HousePlus Group. Todos los derechos reservados.',
@@ -90,7 +88,6 @@ const footerContent: Record<string, FooterContent> = {
     contact: [
       { label: 'E-Mail', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'Chinesisches WhatsApp', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
-      { label: 'Nigerianisches WhatsApp', value: '+2349078080738', href: 'https://wa.me/2349078080738' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
     copyright: '© 2024 HousePlus Group. Alle Rechte vorbehalten.',
@@ -118,7 +115,6 @@ const footerContent: Record<string, FooterContent> = {
     contact: [
       { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'WhatsApp Chinois', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
-      { label: 'WhatsApp Nigérian', value: '+2349078080738', href: 'https://wa.me/2349078080738' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
     copyright: '© 2024 HousePlus Group. Tous droits réservés.',
@@ -146,7 +142,6 @@ const footerContent: Record<string, FooterContent> = {
     contact: [
       { label: 'البريد الإلكتروني', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
       { label: 'واتس آب صيني', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
-      { label: 'واتس آب نيجيري', value: '+2349078080738', href: 'https://wa.me/2349078080738' },
       { label: 'ويتشات', value: 'JackHousePlus' },
     ],
     copyright: '© 2024 مجموعة HousePlus. جميع الحقوق محفوظة.',

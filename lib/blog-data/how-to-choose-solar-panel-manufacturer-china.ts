@@ -92,8 +92,8 @@ const article: BlogPost = {
     {
       heading: 'Conclusion: Your Path to a Reliable Solar Panel Manufacturing Partner',
       paragraphs: [
-        'Choosing a solar panel manufacturer in China is not a one-time transaction but the beginning of a long-term supply partnership. By systematically evaluating factory scale, cell technology, certifications, OEM capability, pricing transparency, warranty execution, and export logistics, you transform an opaque market into a manageable, auditable process. The eight-step framework in this guide is the same checklist we use at HousePlus when onboarding new product lines, and it has consistently separated suppliers that deliver from those that disappoint.',
-        'If you are ready to source wholesale or OEM solar panels from a manufacturer that combines IEC-certified quality with flexible MOQ and genuine customization, HousePlus is here to help. Our 20,000 m2 facility in Zhongshan, Guangdong produces monocrystalline panels from 100W to 550W, all backed by CE, FCC, RoHS, ISO 9001:2015, and IEC certifications. Contact me directly at jack@houseplus-ch.com or call +86-155-7811-9543 to request samples, flash-test reports, or a tailored quotation for your next project.',
+        'Choosing a solar panel manufacturer in China is not a one-time transaction but the beginning of a long-term supply partnership. By systematically evaluating factory scale, cell technology, certifications, OEM capability, pricing transparency, warranty execution, and export logistics, you transform an opaque market into a manageable, auditable process. Use the eight-step framework in this guide as a checklist when assessing any supplier on your shortlist.',
+        'For a HousePlus solar-panel inquiry, provide the target model, destination market, product configuration and branding requirements. Our team can review available samples, product-specific documentation, OEM/ODM scope and quotation terms for the proposed order. Contact Jack at jack@houseplus-ch.com or +86-155-7811-9543 to begin the review.',
       ],
     },
   ],
@@ -102,7 +102,7 @@ const article: BlogPost = {
       question:
         'What is the minimum order quantity (MOQ) for solar panels from China manufacturers?',
       answer:
-        'MOQ varies by manufacturer and customization level. For standard catalog panels from a mid-size factory, the typical MOQ is 50 to 100 pieces. For OEM orders with custom logo printing or packaging, expect an MOQ of 100 to 500 pieces. Full ODM projects requiring new tooling or custom dimensions usually need 500 to 1,000 pieces minimum. At HousePlus, we offer flexible MOQ starting from 50 panels for standard monocrystalline models, and we accommodate smaller trial orders for new buyers who want to test quality before committing to volume. Always confirm MOQ and the corresponding price tier in writing before placing an order.',
+        'MOQ varies by manufacturer, product configuration and customization level. For a HousePlus inquiry, request the applicable MOQ, price tier and included customization scope in writing after the product and destination requirements have been reviewed.',
     },
     {
       question:

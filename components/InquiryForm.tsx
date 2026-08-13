@@ -18,10 +18,10 @@ const translations: Record<string, Record<string, string>> = {
     message: 'Message *',
     submit: 'Send HousePlus Inquiry',
     sending: 'Sending...',
-    success: 'Thank you! HousePlus team will reply within 24 hours.',
+    success: 'Thank you. The HousePlus team will review your inquiry.',
     error: 'Submission failed. Please try again later.',
     placeholder_product: 'e.g., HousePlus Solar Panel 500W',
-    placeholder_quantity: 'e.g., 500 pcs',
+    placeholder_quantity: 'e.g., your estimated quantity',
   },
 };
 

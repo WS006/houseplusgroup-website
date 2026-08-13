@@ -13,7 +13,7 @@ export default function ServiceWidget({
   whatsapp = '+8615578119543', 
   wechat = 'JackHousePlus', 
   email = 'jack@houseplus-ch.com', 
-  phone = '+2349078080738' 
+  phone = '+8615578119543'
 }: ServiceWidgetProps) {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -85,20 +85,20 @@ export default function IndustrySection({
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus MOQ</p>
-                <p className="text-lg font-black text-slate-900">100-500 pcs</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Order configuration</p>
+                <p className="text-lg font-black text-slate-900">Confirmed by quote</p>
               </div>
               <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Lead Time</p>
-                <p className="text-lg font-black text-slate-900">20-35 days</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Shipping terms</p>
+                <p className="text-lg font-black text-slate-900">Confirmed by quote</p>
               </div>
               <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Support</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Sourcing support</p>
                 <p className="text-lg font-black text-slate-900">OEM/ODM</p>
               </div>
               <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">HousePlus Warranty</p>
-                <p className="text-lg font-black text-slate-900">12 Months</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Product documentation</p>
+                <p className="text-lg font-black text-slate-900">Available on request</p>
               </div>
             </div>
 
