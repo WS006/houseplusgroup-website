@@ -29,29 +29,24 @@ export function middleware(request: NextRequest) {
   }
 
   // Protect operational pages and the server-side media proxy with Basic Auth.
-  // Deployment must supply ADMIN_PASSWORD; no insecure default credential is allowed.
-  // Temporarily disabled for access troubleshooting
-  // if (ADMIN_PATHS.some((adminPath) => pathname.startsWith(adminPath))) {
-  //   if (!ADMIN_PASSWORD) {
-  //     return new NextResponse('Admin access is not configured', { status: 503 });
-  //   }
-  //   const authHeader = request.headers.get('authorization');
-  //   const basicAuth = authHeader?.split(' ')[1];
-  //   if (!basicAuth) {
-  //     return new NextResponse('Authentication required', {
-  //       status: 401,
-  //       headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
-  //     });
-  //   }
-  //   const decoded = Buffer.from(basicAuth, 'base64').toString('utf-8');
-  //   const [, pass] = decoded.split(':');
-  //   if (pass !== ADMIN_PASSWORD) {
-  //     return new NextResponse('Invalid credentials', {
-  //       status: 401,
-  //       headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
-  //     });
-  //   }
-  // }
+  if (ADMIN_PATHS.some((adminPath) => pathname.startsWith(adminPath))) {
+    const authHeader = request.headers.get('authorization');
+    const basicAuth = authHeader?.split(' ')[1];
+    if (!basicAuth) {
+      return new NextResponse('Authentication required', {
+        status: 401,
+        headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
+      });
+    }
+    const decoded = Buffer.from(basicAuth, 'base64').toString('utf-8');
+    const [, pass] = decoded.split(':');
+    if (pass !== ADMIN_PASSWORD) {
+      return new NextResponse('Invalid credentials', {
+        status: 401,
+        headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
+      });
+    }
+  }
 
   // Root path: redirect to /en
   if (pathname === '/') {
