@@ -6,7 +6,7 @@ const defaultLocale = 'en';
 
 // Admin protection config
 const ADMIN_PATHS = ['/admin', '/api/media-library', '/api/indexnow', '/api/submission-history', '/api/url-changes'];
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'HousePlus2026!';
 
 export function middleware(request: NextRequest) {
   const { pathname, protocol, host } = request.nextUrl;
