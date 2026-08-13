@@ -8,8 +8,72 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateArticleSchema, generateFAQSchema } from '@/lib/schema-generator';
 import { blogPosts, blogSlugs } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data/types';
+import { getLocalizedArticle } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+
+const articleUi: Record<string, Record<string, string>> = {
+  en: {
+    quoteTitle: 'Request a Wholesale Quote from HousePlus',
+    quoteDescription: 'Contact our team to discuss product requirements, OEM/ODM capabilities, applicable documentation and quotation terms.',
+    contactHousePlus: 'Contact HousePlus',
+    faqHeading: 'Frequently Asked Questions',
+    shareHeading: 'Share This Article',
+    relatedHeading: 'Related Articles',
+    customQuoteTitle: 'Need a Custom Quote?',
+    customQuoteDescription: 'Discuss factory-direct sourcing for solar systems, home appliances and 3C electronics, including OEM/ODM requirements.',
+    contactUs: 'Contact Us',
+    backToNews: 'Back to all News & Insights',
+  },
+  es: {
+    quoteTitle: 'Solicite una cotización mayorista a HousePlus',
+    quoteDescription: 'Contacte a nuestro equipo para analizar requisitos de producto, capacidades OEM/ODM, documentación aplicable y condiciones de cotización.',
+    contactHousePlus: 'Contactar a HousePlus',
+    faqHeading: 'Preguntas frecuentes',
+    shareHeading: 'Compartir este artículo',
+    relatedHeading: 'Artículos relacionados',
+    customQuoteTitle: '¿Necesita una cotización personalizada?',
+    customQuoteDescription: 'Analice el abastecimiento directo de fábrica de sistemas solares, electrodomésticos y electrónica 3C, incluidos los requisitos OEM/ODM.',
+    contactUs: 'Contáctenos',
+    backToNews: 'Volver a Noticias e información',
+  },
+  de: {
+    quoteTitle: 'Fordern Sie ein Großhandelsangebot von HousePlus an',
+    quoteDescription: 'Kontaktieren Sie unser Team, um Produktanforderungen, OEM/ODM-Möglichkeiten, relevante Dokumentation und Angebotsbedingungen zu besprechen.',
+    contactHousePlus: 'HousePlus kontaktieren',
+    faqHeading: 'Häufig gestellte Fragen',
+    shareHeading: 'Diesen Artikel teilen',
+    relatedHeading: 'Ähnliche Artikel',
+    customQuoteTitle: 'Benötigen Sie ein individuelles Angebot?',
+    customQuoteDescription: 'Besprechen Sie die direkte Fabrikbeschaffung von Solarsystemen, Haushaltsgeräten und 3C-Elektronik einschließlich OEM/ODM-Anforderungen.',
+    contactUs: 'Kontaktieren Sie uns',
+    backToNews: 'Zurück zu allen News & Insights',
+  },
+  fr: {
+    quoteTitle: 'Demandez un devis de gros à HousePlus',
+    quoteDescription: 'Contactez notre équipe pour discuter des exigences produit, des capacités OEM/ODM, de la documentation applicable et des conditions du devis.',
+    contactHousePlus: 'Contacter HousePlus',
+    faqHeading: 'Questions fréquentes',
+    shareHeading: 'Partager cet article',
+    relatedHeading: 'Articles connexes',
+    customQuoteTitle: 'Besoin d’un devis personnalisé ?',
+    customQuoteDescription: 'Discutez de l’approvisionnement direct usine en systèmes solaires, appareils électroménagers et électronique 3C, y compris les exigences OEM/ODM.',
+    contactUs: 'Nous contacter',
+    backToNews: 'Retour à toutes les actualités et analyses',
+  },
+  ar: {
+    quoteTitle: 'اطلب عرض أسعار بالجملة من HousePlus',
+    quoteDescription: 'تواصل مع فريقنا لمناقشة متطلبات المنتج وقدرات OEM/ODM والوثائق المطلوبة وشروط عرض الأسعار.',
+    contactHousePlus: 'تواصل مع HousePlus',
+    faqHeading: 'الأسئلة الشائعة',
+    shareHeading: 'شارك هذه المقالة',
+    relatedHeading: 'مقالات ذات صلة',
+    customQuoteTitle: 'هل تحتاج إلى عرض أسعار مخصص؟',
+    customQuoteDescription: 'ناقش التوريد المباشر من المصنع لأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C، بما في ذلك متطلبات OEM/ODM.',
+    contactUs: 'اتصل بنا',
+    backToNews: 'العودة إلى جميع الأخبار والرؤى',
+  },
+};
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -26,11 +90,12 @@ export async function generateMetadata({
   params: { lang: string; slug: string };
 }): Promise<Metadata> {
   const { lang, slug } = params;
-  const post = blogPosts[slug];
-  if (!post) return {};
+  const basePost = blogPosts[slug];
+  if (!basePost) return {};
+  const post = getLocalizedArticle(slug, lang, basePost);
 
-  const shouldIndexLocale = lang === 'en';
-  const englishCanonical = `https://www.houseplus-ch.com/en/news/${slug}`;
+  const shouldIndexLocale = validLangs.includes(lang);
+  const canonicalUrl = `https://www.houseplus-ch.com/${lang}/news/${slug}`;
 
   return generateSEOMetadata({
     title: post.title,
@@ -44,8 +109,8 @@ export async function generateMetadata({
     datePublished: post.datePublished,
     dateModified: post.dateModified,
     indexable: shouldIndexLocale,
-    canonicalOverride: shouldIndexLocale ? undefined : englishCanonical,
-    includeLanguageAlternates: shouldIndexLocale,
+    canonicalOverride: canonicalUrl,
+    includeLanguageAlternates: true,
   });
 }
 
@@ -55,12 +120,14 @@ export default async function BlogPostPage({
   params: { lang: string; slug: string };
 }) {
   const { lang, slug } = params;
-  const post: BlogPost | undefined = blogPosts[slug];
+  const basePost: BlogPost | undefined = blogPosts[slug];
 
-  if (!post) {
+  if (!basePost) {
     notFound();
   }
 
+  const post = getLocalizedArticle(slug, lang, basePost);
+  const ui = articleUi[lang] || articleUi.en;
   const articleUrl = `https://www.houseplus-ch.com/${lang}/news/${slug}`;
 
   const articleSchema = generateArticleSchema({
@@ -143,18 +210,16 @@ export default async function BlogPostPage({
           <div className="not-prose my-10">
             <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold text-blue-800 mb-3">
-                Request a Wholesale Quote from HousePlus
+                {ui.quoteTitle}
               </h3>
               <p className="text-blue-700 mb-6">
-                Contact our team for competitive pricing, OEM/ODM capabilities,
-                and full certification support. MOQ from 100 pcs, 20-35 day lead
-                time.
+                {ui.quoteDescription}
               </p>
               <Link
                 href={`/${lang}/contact`}
                 className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
               >
-                Contact HousePlus
+                {ui.contactHousePlus}
               </Link>
             </div>
           </div>
@@ -163,7 +228,7 @@ export default async function BlogPostPage({
           {post.faqs && post.faqs.length > 0 && (
             <div className="not-prose mt-12">
               <h2 className="text-3xl font-black text-slate-900 mb-8">
-                Frequently Asked Questions
+                {ui.faqHeading}
               </h2>
               <div className="space-y-4">
                 {post.faqs.map((faq, index) => (
@@ -202,7 +267,7 @@ export default async function BlogPostPage({
             {/* Share Buttons */}
             <div className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
               <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-4">
-                Share This Article
+                {ui.shareHeading}
               </h3>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -254,7 +319,7 @@ export default async function BlogPostPage({
             {post.relatedArticles && post.relatedArticles.length > 0 && (
               <div className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
                 <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-4">
-                  Related Articles
+                  {ui.relatedHeading}
                 </h3>
                 <ul className="space-y-5">
                   {post.relatedArticles.map((article, index) => (
@@ -281,16 +346,15 @@ export default async function BlogPostPage({
 
             {/* Sidebar CTA */}
             <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 text-white shadow-sm">
-              <h3 className="text-lg font-bold mb-2">Need a Custom Quote?</h3>
+              <h3 className="text-lg font-bold mb-2">{ui.customQuoteTitle}</h3>
               <p className="text-sm text-blue-100 mb-4">
-                Get factory-direct pricing on solar panels, batteries, and
-                appliances. OEM/ODM available.
+                {ui.customQuoteDescription}
               </p>
               <Link
                 href={`/${lang}/contact`}
                 className="inline-block w-full text-center px-6 py-2.5 bg-white text-blue-700 rounded-lg font-semibold hover:bg-blue-50 transition"
               >
-                Contact Us
+                {ui.contactUs}
               </Link>
             </div>
           </div>
@@ -303,7 +367,7 @@ export default async function BlogPostPage({
           href={`/${lang}/news`}
           className="text-blue-600 hover:text-blue-800 font-medium"
         >
-          &larr; Back to all News &amp; Insights
+          &larr; {ui.backToNews}
         </Link>
       </div>
     </main>

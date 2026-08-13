@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema } from '@/lib/schema-generator';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
+import { getLocalizedProduct } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -38,13 +39,22 @@ function getDetailTitle(product: ProductData, model: string) {
 }
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
+const productUi: Record<string, Record<string, string>> = {
+  en: { notFound: 'Product Not Found', notFoundDescription: "The product you are looking for does not exist.", backProducts: 'Back to Products', documentation: 'Documentation available on request', technicalSpecifications: 'Technical Specifications', keyFeatures: 'Key Features', applications: 'Applications', requestQuote: 'Request a Quote', minOrder: 'Min. Order', leadTime: 'Lead Time', warranty: 'Warranty', confirmByQuote: 'Confirm by quote', faqHeading: 'Frequently Asked Questions', oemTitle: 'HousePlus OEM/ODM Services', oemDescription: 'Discuss custom branding, private-label packaging and product modifications with our team; requirements are confirmed in your quotation.', contactSales: 'Contact HousePlus Sales Team' },
+  es: { notFound: 'Producto no encontrado', notFoundDescription: 'El producto que busca no existe.', backProducts: 'Volver a productos', documentation: 'Documentación disponible bajo solicitud', technicalSpecifications: 'Especificaciones técnicas', keyFeatures: 'Características principales', applications: 'Aplicaciones', requestQuote: 'Solicitar una cotización', minOrder: 'Pedido mínimo', leadTime: 'Plazo de entrega', warranty: 'Garantía', confirmByQuote: 'Confirmar en la cotización', faqHeading: 'Preguntas frecuentes', oemTitle: 'Servicios OEM/ODM de HousePlus', oemDescription: 'Analice con nuestro equipo la marca personalizada, el embalaje de marca privada y las modificaciones del producto; los requisitos se confirman en su cotización.', contactSales: 'Contactar al equipo comercial de HousePlus' },
+  de: { notFound: 'Produkt nicht gefunden', notFoundDescription: 'Das gesuchte Produkt existiert nicht.', backProducts: 'Zurück zu Produkten', documentation: 'Dokumentation auf Anfrage verfügbar', technicalSpecifications: 'Technische Spezifikationen', keyFeatures: 'Hauptmerkmale', applications: 'Anwendungen', requestQuote: 'Angebot anfordern', minOrder: 'Mindestbestellung', leadTime: 'Lieferzeit', warranty: 'Garantie', confirmByQuote: 'Im Angebot bestätigen', faqHeading: 'Häufig gestellte Fragen', oemTitle: 'HousePlus OEM/ODM-Services', oemDescription: 'Besprechen Sie kundenspezifisches Branding, Private-Label-Verpackungen und Produktanpassungen mit unserem Team; die Anforderungen werden in Ihrem Angebot bestätigt.', contactSales: 'HousePlus-Vertrieb kontaktieren' },
+  fr: { notFound: 'Produit introuvable', notFoundDescription: 'Le produit que vous recherchez n’existe pas.', backProducts: 'Retour aux produits', documentation: 'Documentation disponible sur demande', technicalSpecifications: 'Spécifications techniques', keyFeatures: 'Caractéristiques principales', applications: 'Applications', requestQuote: 'Demander un devis', minOrder: 'Commande minimale', leadTime: 'Délai de livraison', warranty: 'Garantie', confirmByQuote: 'À confirmer dans le devis', faqHeading: 'Questions fréquentes', oemTitle: 'Services OEM/ODM de HousePlus', oemDescription: 'Discutez de la personnalisation de la marque, de l’emballage sous marque privée et des modifications produit avec notre équipe ; les exigences sont confirmées dans votre devis.', contactSales: 'Contacter l’équipe commerciale HousePlus' },
+  ar: { notFound: 'المنتج غير موجود', notFoundDescription: 'المنتج الذي تبحث عنه غير موجود.', backProducts: 'العودة إلى المنتجات', documentation: 'الوثائق متاحة عند الطلب', technicalSpecifications: 'المواصفات الفنية', keyFeatures: 'الميزات الرئيسية', applications: 'التطبيقات', requestQuote: 'طلب عرض أسعار', minOrder: 'الحد الأدنى للطلب', leadTime: 'المهلة الزمنية', warranty: 'الضمان', confirmByQuote: 'يُؤكد في عرض الأسعار', faqHeading: 'الأسئلة الشائعة', oemTitle: 'خدمات HousePlus OEM/ODM', oemDescription: 'ناقش العلامات التجارية المخصصة والتغليف الخاص وتعديلات المنتج مع فريقنا؛ ويتم تأكيد المتطلبات في عرض الأسعار الخاص بك.', contactSales: 'تواصل مع فريق مبيعات HousePlus' },
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: { lang: string; slug: string };
 }): Promise<Metadata> {
   const { lang, slug } = params;
-  const product = PRODUCT_DATA[slug];
+  const baseProduct = PRODUCT_DATA[slug];
+  const product = baseProduct ? getLocalizedProduct(slug, lang, baseProduct) : undefined;
   const name = product?.name || slug;
 
   const langAlternates: Record<string, string> = {};
@@ -71,9 +81,8 @@ export async function generateMetadata({
 
   const title = titleTemplates[lang] || titleTemplates['en'];
   const description = descTemplates[lang] || descTemplates['en'];
-  const englishCanonical = `${BASE_URL}/en/products/${slug}`;
-  const shouldIndexLocale = lang === 'en';
-  const canonicalUrl = shouldIndexLocale ? `${BASE_URL}/${lang}/products/${slug}` : englishCanonical;
+  const shouldIndexLocale = LOCALES.includes(lang);
+  const canonicalUrl = `${BASE_URL}/${lang}/products/${slug}`;
   const imageDimensions = r2ImageDimensions(product?.coverImage, { width: 900, height: 675 });
 
   return {
@@ -109,19 +118,21 @@ export default async function ProductDetailPage({
   params: { lang: string; slug: string };
 }) {
   const { lang, slug } = params;
-  const product = PRODUCT_DATA[slug];
+  const baseProduct = PRODUCT_DATA[slug];
+  const product = baseProduct ? getLocalizedProduct(slug, lang, baseProduct) : undefined;
+  const ui = productUi[lang] || productUi.en;
 
   if (!product) {
     return (
       <main className="min-h-screen bg-white">
         <div className="max-w-6xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-3xl font-black text-slate-900 mb-4">Product Not Found</h1>
-          <p className="text-slate-600 mb-8">The product you're looking for doesn't exist.</p>
+          <h1 className="text-3xl font-black text-slate-900 mb-4">{ui.notFound}</h1>
+          <p className="text-slate-600 mb-8">{ui.notFoundDescription}</p>
           <Link
             href={`/${lang}/products`}
             className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all"
           >
-            ← Back to Products
+            ← {ui.backProducts}
           </Link>
         </div>
       </main>
@@ -186,7 +197,7 @@ export default async function ProductDetailPage({
             </div>
             {/* Certifications */}
             <div className="mt-4 flex flex-wrap gap-2">
-              {['✓ CE Certified', '✓ RoHS Compliant', '✓ ISO 9001', '✓ OEM/ODM Available'].map((cert) => (
+              {[ui.documentation, 'OEM/ODM'].map((cert) => (
                 <span key={cert} className="px-3 py-1 bg-green-50 text-green-700 border border-green-200 text-xs font-semibold rounded-full">
                   {cert}
                 </span>
@@ -238,7 +249,7 @@ export default async function ProductDetailPage({
               <div>
                 <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                   <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
-                  HousePlus Technical Specifications
+                  {ui.technicalSpecifications}
                 </h2>
                 <div className="rounded-xl overflow-hidden border border-slate-200">
                   <table className="w-full text-sm">
@@ -267,7 +278,7 @@ export default async function ProductDetailPage({
               <div>
                 <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                   <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
-                  Key Features
+                  {ui.keyFeatures}
                 </h2>
                 <ul className="space-y-2.5">
                   {product.features.map((feat, i) => (
@@ -285,7 +296,7 @@ export default async function ProductDetailPage({
               <div>
                 <h2 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
                   <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
-                  HousePlus Applications
+                  {ui.applications}
                 </h2>
                 <p className="text-slate-600 text-sm leading-relaxed">{product.applications}</p>
               </div>
@@ -297,22 +308,22 @@ export default async function ProductDetailPage({
                 href={`/${lang}/contact`}
                 className="flex-1 text-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5"
               >
-                Request a Quote
+                {ui.requestQuote}
               </Link>
               <Link
                 href={`/${lang}/products`}
                 className="flex-1 text-center px-6 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5"
               >
-                ← Back to Products
+                ← {ui.backProducts}
               </Link>
             </div>
 
             {/* Wholesale Info */}
             <div className="grid grid-cols-3 gap-3 pt-2">
               {[
-                { label: 'Min. Order', value: product.b2bInfo?.moq || 'Confirm by quote' },
-                { label: 'Lead Time', value: product.b2bInfo?.leadTime || 'Confirm by quote' },
-                { label: 'Warranty', value: product.b2bInfo?.warranty || 'Confirm by quote' },
+                { label: ui.minOrder, value: product.b2bInfo?.moq || ui.confirmByQuote },
+                { label: ui.leadTime, value: product.b2bInfo?.leadTime || ui.confirmByQuote },
+                { label: ui.warranty, value: product.b2bInfo?.warranty || ui.confirmByQuote },
               ].map((item) => (
                 <div key={item.label} className="text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
@@ -326,7 +337,7 @@ export default async function ProductDetailPage({
               <div className="mt-8">
                 <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                   <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
-                  Frequently Asked Questions
+                  {ui.faqHeading}
                 </h2>
                 <div className="space-y-3">
                   {product.faq.map((faqItem, i) => (
@@ -342,13 +353,13 @@ export default async function ProductDetailPage({
             {/* HousePlus CTA */}
             <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-200">
               <p className="text-sm text-slate-700 mb-3">
-                <strong>🏭 HousePlus OEM/ODM Services:</strong> Custom branding, private-label packaging, and product modifications available from MOQ 100 units.
+                <strong>🏭 {ui.oemTitle}:</strong> {ui.oemDescription}
               </p>
               <Link
                 href={`/${lang}/contact`}
                 className="inline-block text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
-                Contact HousePlus Sales Team →
+                {ui.contactSales} →
               </Link>
             </div>
           </div>

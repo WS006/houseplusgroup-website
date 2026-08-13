@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { getRegionCopy, translateRegionTemplate } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -34,11 +35,11 @@ const regionConfigs: Record<string, RegionConfig> = {
     name: 'Africa',
     currency: 'USD',
     currencySymbol: '$',
-    phonePrefix: '+234',
-    phoneDisplay: '+234 800 123 4567',
-    shippingInfo: 'Lagos warehouse: 3-5 business days',
-    certifications: ['SONCAP', 'CE', 'RoHS'],
-    warehouseInfo: 'Lagos Distribution Center - Stock available for immediate dispatch',
+    phonePrefix: '+86',
+    phoneDisplay: '+86 155 7811 9543',
+    shippingInfo: 'International shipping terms confirmed by quotation',
+    certifications: ['Product-specific documentation available on request'],
+    warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
   },
   southeast_asia: {
     code: 'SEA',
@@ -47,44 +48,42 @@ const regionConfigs: Record<string, RegionConfig> = {
     currencySymbol: '$',
     phonePrefix: '+86',
     phoneDisplay: '+86 155 7811 9543',
-    shippingInfo: '15-25 days lead time to SEA',
-    certifications: ['CE', 'RoHS', 'FCC'],
-    warehouseInfo: 'Shenzhen Distribution Hub - Direct shipping to SEA',
+    shippingInfo: 'International shipping terms confirmed by quotation',
+    certifications: ['Product-specific documentation available on request'],
+    warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
   },
   europe: {
     code: 'EU',
     name: 'Europe',
     currency: 'EUR',
     currencySymbol: '€',
-    phonePrefix: '+49',
-    phoneDisplay: '+49 30 12345678',
-    shippingInfo: 'EU customs pre-cleared, 7-14 business days',
-    certifications: ['CE', 'RoHS', 'REACH', 'WEEE'],
-    warehouseInfo: 'EU Distribution Hub - Rotterdam port entry',
-    vatInfo: 'EU VAT registered - VAT invoice available on request',
+    phonePrefix: '+86',
+    phoneDisplay: '+86 155 7811 9543',
+    shippingInfo: 'International shipping terms confirmed by quotation',
+    certifications: ['Product-specific documentation available on request'],
+    warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
   },
   ng: {
     code: 'NG',
     name: 'Nigeria',
     currency: 'NGN',
     currencySymbol: '₦',
-    phonePrefix: '+234',
-    phoneDisplay: '+234 800 123 4567',
-    shippingInfo: 'Lagos warehouse: 3-5 business days',
-    certifications: ['SONCAP', 'CE', 'RoHS'],
-    warehouseInfo: 'Lagos Distribution Center - Stock available for immediate dispatch',
+    phonePrefix: '+86',
+    phoneDisplay: '+86 155 7811 9543',
+    shippingInfo: 'International shipping terms confirmed by quotation',
+    certifications: ['Product-specific documentation available on request'],
+    warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
   },
   eu: {
     code: 'EU',
     name: 'Europe',
     currency: 'EUR',
     currencySymbol: '€',
-    phonePrefix: '+49',
-    phoneDisplay: '+49 30 12345678',
-    shippingInfo: 'EU customs pre-cleared, 7-14 business days',
-    certifications: ['CE', 'RoHS', 'REACH', 'WEEE'],
-    warehouseInfo: 'EU Distribution Hub - Rotterdam port entry',
-    vatInfo: 'EU VAT registered - VAT invoice available on request',
+    phonePrefix: '+86',
+    phoneDisplay: '+86 155 7811 9543',
+    shippingInfo: 'International shipping terms confirmed by quotation',
+    certifications: ['Product-specific documentation available on request'],
+    warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
   },
 };
 
@@ -198,6 +197,8 @@ export default async function RegionPage({
 }) {
   const { lang, region } = params;
   const config = regionConfigs[region] || regionConfigs.africa;
+  const copy = getRegionCopy(lang);
+  const t = (key: string) => translateRegionTemplate(copy[key] || key, config.name);
 
   const organizationSchema = generateOrganizationSchema({
     title: `HousePlus ${config.name}`,
@@ -210,23 +211,23 @@ export default async function RegionPage({
   const features = [
     {
       icon: '🚚',
-      title: 'Fast Local Shipping',
-      desc: config.shippingInfo,
+      title: t('featureLogisticsTitle'),
+      desc: t('featureLogisticsDescription'),
     },
     {
       icon: '✅',
-      title: 'Certified Products',
-      desc: `All products certified: ${config.certifications.join(', ')}`,
+      title: t('featureCertificationTitle'),
+      desc: t('featureCertificationDescription'),
     },
     {
       icon: '🏭',
-      title: 'Local Support',
-      desc: config.warehouseInfo,
+      title: t('featureTechnicalTitle'),
+      desc: t('featureTechnicalDescription'),
     },
     {
       icon: '💰',
-      title: 'Competitive Pricing',
-      desc: `Wholesale pricing in ${config.currencySymbol} (${config.currency}). MOQ from 100 units.`,
+      title: t('featureQuoteTitle'),
+      desc: t('featureQuoteDescription'),
     },
   ];
 
@@ -238,24 +239,23 @@ export default async function RegionPage({
         <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5">
-              🌍 {config.name} Regional Office
+              🌍 {t('heroKicker')}
             </span>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-5 tracking-tight">
-              HousePlus {config.name}
+              {t('heroTitle')}
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed mb-8">
-              Your trusted wholesale partner for solar energy systems, home appliances and 3C electronics. 
-              Serving {config.name} with local support and competitive pricing.
+              {t('heroDescription')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href={`/${lang}/products`}
                 className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg"
               >
-                Browse Products
+                {t('browseProducts')}
               </Link>
               <a
-                href={`https://wa.me/${config.phonePrefix.replace('+', '')}8001234567`}
+                href={`https://wa.me/${config.phoneDisplay.replace(/\D/g, '')}`}
                 className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-all border border-blue-500"
               >
                 WhatsApp: {config.phoneDisplay}
@@ -269,10 +269,10 @@ export default async function RegionPage({
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-                Why Choose HousePlus {config.name}
+                {t('whyChooseTitle')}
               </h2>
               <p className="text-slate-600 max-w-xl mx-auto">
-                Dedicated support and services tailored for the {config.name} market
+                {t('whyChooseDescription')}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -295,21 +295,21 @@ export default async function RegionPage({
           <div className="max-w-4xl mx-auto">
             <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
               <h2 className="text-3xl font-black text-slate-900 mb-8 text-center">
-                Contact HousePlus {config.name}
+                {t('contactTitle')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
-                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">WhatsApp / Phone</p>
+                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">{t('phoneLabel')}</p>
                     <a
-                      href={`https://wa.me/${config.phonePrefix.replace('+', '')}8001234567`}
+                      href={`https://wa.me/${config.phoneDisplay.replace(/\D/g, '')}`}
                       className="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
                     >
                       {config.phoneDisplay}
                     </a>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Email</p>
+                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">{t('emailLabel')}</p>
                     <a
                       href="mailto:jack@houseplus-ch.com"
                       className="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
@@ -318,15 +318,15 @@ export default async function RegionPage({
                     </a>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Business Hours</p>
-                    <p className="text-slate-700">Mon - Fri: 9:00 - 18:00 (GMT+8)</p>
-                    <p className="text-slate-700">Sat: 10:00 - 16:00 (GMT+8)</p>
+                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">{t('businessHoursLabel')}</p>
+                    <p className="text-slate-700">{t('weekdayHours')}</p>
+                    <p className="text-slate-700">{t('saturdayHours')}</p>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Warehouse</p>
-                    <p className="text-slate-700">{config.warehouseInfo}</p>
+                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">{t('featureTechnicalTitle')}</p>
+                    <p className="text-slate-700">{t('featureTechnicalDescription')}</p>
                   </div>
                   {config.vatInfo && (
                     <div>
@@ -335,10 +335,8 @@ export default async function RegionPage({
                     </div>
                   )}
                   <div>
-                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Currency</p>
-                    <p className="text-slate-700">
-                      Pricing available in {config.currencySymbol} ({config.currency})
-                    </p>
+                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">{t('currencyLabel')}</p>
+                    <p className="text-slate-700">{t('currencyDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -347,7 +345,7 @@ export default async function RegionPage({
                   href={`/${lang}/contact`}
                   className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg"
                 >
-                  Request a Quote
+                  {t('requestQuote')}
                 </Link>
               </div>
             </div>
@@ -359,27 +357,27 @@ export default async function RegionPage({
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-                Popular Products in {config.name}
+                {t('popularProductsTitle')}
               </h2>
               <p className="text-slate-600 max-w-xl mx-auto">
-                Browse our best-selling products for the {config.name} market
+                {t('popularProductsDescription')}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  title: 'Solar Energy Systems',
-                  desc: 'Solar panels, inverters, batteries and complete off-grid solutions',
+                  title: t('solarTitle'),
+                  desc: t('solarDescription'),
                   link: `/${lang}/products`,
                 },
                 {
-                  title: 'Home Appliances',
-                  desc: 'Air fryers, induction cooktops, electric kettles and more',
+                  title: t('applianceTitle'),
+                  desc: t('applianceDescription'),
                   link: `/${lang}/products`,
                 },
                 {
-                  title: '3C Electronics',
-                  desc: 'Headphones, power banks, smart watches and accessories',
+                  title: t('electronicsTitle'),
+                  desc: t('electronicsDescription'),
                   link: `/${lang}/products`,
                 },
               ].map((cat) => (
@@ -390,7 +388,7 @@ export default async function RegionPage({
                 >
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{cat.title}</h3>
                   <p className="text-slate-600 mb-4">{cat.desc}</p>
-                  <span className="text-blue-600 font-semibold">View Products →</span>
+                  <span className="text-blue-600 font-semibold">{t('viewProducts')} →</span>
                 </Link>
               ))}
             </div>

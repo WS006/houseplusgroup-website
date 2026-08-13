@@ -52,18 +52,18 @@ function toAbsoluteImageUrl(image?: string): string {
 
 export function generateMetadata(config: SEOConfig): Metadata {
   const pageUrl = `${siteConfig.url}${config.url}`;
-  const canonicalUrl = config.canonicalOverride || pageUrl;
-  const shouldIndex = config.indexable !== false;
+  const pathWithoutLang = config.url.replace(/^\/(en|es|de|fr|ar)(\/|$)/, '/');
+  // Localized pages now carry translated body content and can publish as independent
+  // language URLs. Callers may still opt a route out when a future page is untranslated.
+  const shouldIndex = config.indexable ?? true;
+  const englishCanonical = `${siteConfig.url}/en${pathWithoutLang}`;
+  const canonicalUrl = config.canonicalOverride || (shouldIndex ? pageUrl : englishCanonical);
   const includeLanguageAlternates = config.includeLanguageAlternates !== false && shouldIndex;
   const imageUrl = toAbsoluteImageUrl(config.image);
   const imageDetails = getR2MediaDetails(imageUrl);
   const imageDimensions = r2ImageDimensions(imageUrl);
   const imageAlt = config.imageAlt || imageDetails?.alt || config.title;
   const imageType = imageDetails?.contentType || (imageUrl.endsWith('.png') ? 'image/png' : imageUrl.endsWith('.webp') ? 'image/webp' : 'image/jpeg');
-
-  // Strip the /{lang} prefix from config.url to build clean hreflang URLs
-  // e.g. config.url = '/en/about-us' → path = '/about-us'
-  const pathWithoutLang = config.url.replace(/^\/(en|es|de|fr|ar)(\/|$)/, '/');
 
   const defaultKeywords = ['solar systems', 'home appliances', '3C electronics', 'wholesale', 'OEM', 'ODM', 'Made in China'];
   const keywords = config.keywords && config.keywords.length > 0 ? config.keywords : defaultKeywords;

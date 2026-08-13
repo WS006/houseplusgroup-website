@@ -77,8 +77,9 @@ function buildHreflangs(slug: string) {
 }
 
 function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, targetLocales: readonly string[] = locales) {
-  // Use specific lastmod date if available, otherwise use a recent date
-  const lastmod = lastModDates[slug] || '2026-05-01';
+  // Use the page-specific date when maintained; new localized detail pages were
+  // updated with the current multilingual release.
+  const lastmod = lastModDates[slug] || '2026-08-13';
   const entries = [];
 
   for (const lang of targetLocales) {
@@ -100,30 +101,29 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
 export default function sitemap(): MetadataRoute.Sitemap {
   const allEntries: MetadataRoute.Sitemap = [];
 
-  // Static pages
+  // Static page bodies currently share one English source. Locale routes remain
+  // user-facing fallbacks and will be re-added after verified native translation.
   for (const page of staticPages) {
-    const entries = buildUrlEntry(page.slug, page.priority, page.changefreq);
+    const entries = buildUrlEntry(page.slug, page.priority, page.changefreq, ['en']);
     allEntries.push(...entries);
   }
 
-  // Product detail pages
+  // Product detail pages carry verified ES/DE/FR/AR translations and are published
+  // as five independent language URLs with reciprocal hreflang annotations.
   for (const productSlug of productSlugs) {
-    // Product records are currently authored in English; non-English routes remain user-facing fallbacks and are noindex until translated content exists.
-    const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly', ['en']);
+    const entries = buildUrlEntry(`products/${productSlug}`, 0.7, 'weekly');
     allEntries.push(...entries);
   }
 
-  // Region pages
+  // Region pages carry localized procurement and contact information for every locale.
   for (const regionSlug of regionSlugs) {
-    // Region detail copy is currently English source content.
-    const entries = buildUrlEntry(`regions/${regionSlug}`, 0.7, 'monthly', ['en']);
+    const entries = buildUrlEntry(`regions/${regionSlug}`, 0.7, 'monthly');
     allEntries.push(...entries);
   }
 
-  // News pages
+  // Dynamic news articles carry verified ES/DE/FR/AR translations.
   for (const newsSlug of newsSlugs) {
-    // News articles are currently English source content.
-    const entries = buildUrlEntry(`news/${newsSlug}`, 0.8, 'weekly', ['en']);
+    const entries = buildUrlEntry(`news/${newsSlug}`, 0.8, 'weekly');
     allEntries.push(...entries);
   }
 
