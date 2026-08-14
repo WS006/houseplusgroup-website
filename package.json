@@ -9,6 +9,7 @@
                     "lint":  "next lint",
                     "test":  "node --test tests/*.test.mjs",
                     "audit:localization": "node scripts/audit-production-localization.mjs",
+                    "audit:product-seo": "node scripts/audit-production-product-seo-schema.mjs",
                     "mc:status":  "node scripts/merchant-center-manager.js status",
                     "mc:refetch":  "node scripts/merchant-center-manager.js refetch",
                     "mc:fix":  "node scripts/merchant-center-manager.js fix",
