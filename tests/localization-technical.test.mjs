@@ -304,3 +304,20 @@ test('visual sitemap page derives product and article links from the canonical r
   assert.match(sitemapPage, /t\.sections\.news/);
   assert.doesNotMatch(sitemapPage, /Product slugs from Storyblok/);
 });
+
+test('primary-page localization audit prevents generic foundation content from replacing dedicated routes', () => {
+  const audit = read('scripts/audit-primary-page-localization.mjs');
+  const packageJson = read('package.json');
+  assert.match(audit, /genericTemplateSignatures/);
+  assert.match(audit, /expectedPageText/);
+  assert.match(audit, /slug: 'faq'/);
+  assert.match(packageJson, /"audit:primary-pages"/);
+});
+
+test('primary-page language parity audit detects English main-content fallback behind localized navigation', () => {
+  const audit = read('scripts/audit-primary-page-language-parity.mjs');
+  const packageJson = read('package.json');
+  assert.match(audit, /matchingEnglishPhraseCount/);
+  assert.match(audit, /mainText/);
+  assert.match(packageJson, /"audit:primary-language-parity"/);
+});
