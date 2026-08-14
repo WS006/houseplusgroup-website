@@ -17,7 +17,7 @@
         },
         {
           "key": "Type de cellule",
-          "value": "Monocrystalline PERC"
+          "value": "Monocristallin PERC"
         },
         {
           "key": "Rendement",
@@ -51,7 +51,7 @@
         },
         {
           "key": "Zellentyp",
-          "value": "Monocrystalline PERC"
+          "value": "Monokristallin PERC"
         },
         {
           "key": "Wirkungsgrad",
@@ -85,7 +85,7 @@
         },
         {
           "key": "نوع الخلايا",
-          "value": "Monocrystalline PERC"
+          "value": "أحادي البلور PERC"
         },
         {
           "key": "الكفاءة",
@@ -119,7 +119,7 @@
         },
         {
           "key": "Tipo de célula",
-          "value": "Monocrystalline PERC"
+          "value": "Monocristalino PERC"
         },
         {
           "key": "Eficiencia",
@@ -132,7 +132,7 @@
         "Caja de conexiones con clasificación IP68 y diodos de derivación para protección contra sombreado"
       ],
       "imageAlt": "Panel solar monocristalino 500W HP-SP500 para instalaciones solares comerciales",
-      "imageTitle": "Panel solar 500W HP-SP500 | HousePlus Solar Wholesale",
+      "imageTitle": "Panel solar 500W HP-SP500 | HousePlus Solar Venta al por mayor",
       "badge": "Más vendido",
       "faq": []
     }
@@ -155,7 +155,7 @@
         },
         {
           "key": "Ausgangswellenform",
-          "value": "Pure Sine Wave"
+          "value": "Reine Sinuswelle"
         },
         {
           "key": "MPPT-Wirkungsgrad",
@@ -189,7 +189,7 @@
         },
         {
           "key": "Forma de onda de salida",
-          "value": "Pure Sine Wave"
+          "value": "Onda sinusoidal pura"
         },
         {
           "key": "Eficiencia MPPT",
@@ -223,7 +223,7 @@
         },
         {
           "key": "Forme d'onde de sortie",
-          "value": "Pure Sine Wave"
+          "value": "Onde sinusoïdale pure"
         },
         {
           "key": "Efficacité MPPT",
@@ -257,7 +257,7 @@
         },
         {
           "key": "شكل الموجة الخارجة",
-          "value": "Pure Sine Wave"
+          "value": "موجة جيبية نقية"
         },
         {
           "key": "كفاءة MPPT",
@@ -297,7 +297,7 @@
         },
         {
           "key": "Zyklenlebensdauer",
-          "value": "6000+ cycles"
+          "value": "6000+ Zyklen"
         }
       ],
       "features": [
@@ -365,7 +365,7 @@
         },
         {
           "key": "Ciclo de vida",
-          "value": "6000+ cycles"
+          "value": "6000+ ciclos"
         }
       ],
       "features": [
@@ -374,7 +374,7 @@
         "Diseño apilable — ampliable a 30kWh mediante conexión en paralelo"
       ],
       "imageAlt": "Batería de litio LiFePO4 5kWh HP-LFP5K para sistemas de almacenamiento solar doméstico",
-      "imageTitle": "Batería de litio 5kWh HP-LFP5K | HousePlus Solar Wholesale",
+      "imageTitle": "Batería de litio 5kWh HP-LFP5K | HousePlus Solar Venta al por mayor",
       "badge": "Nuevo",
       "faq": []
     },
@@ -399,7 +399,7 @@
         },
         {
           "key": "عمر الدورة",
-          "value": "6000+ cycles"
+          "value": "6000+ دورات"
         }
       ],
       "features": [
@@ -573,7 +573,7 @@
         },
         {
           "key": "Systemspannung",
-          "value": "12V/24V/48V Auto"
+          "value": "12V/24V/48V Automatisch"
         }
       ],
       "features": [
@@ -607,7 +607,7 @@
         },
         {
           "key": "Tension système",
-          "value": "12V/24V/48V Auto"
+          "value": "12V/24V/48V Automatique"
         }
       ],
       "features": [
@@ -641,7 +641,7 @@
         },
         {
           "key": "Voltaje del sistema",
-          "value": "12V/24V/48V Auto"
+          "value": "12V/24V/48V Automático"
         }
       ],
       "features": [
@@ -650,7 +650,7 @@
         "Protecciones completas: sobrecarga, sobredescarga, cortocircuito, polaridad inversa"
       ],
       "imageAlt": "Controlador de carga solar MPPT 60A HP-MPPT60 para grandes arreglos de paneles solares",
-      "imageTitle": "Controlador MPPT 60A HP-MPPT60 | HousePlus Solar Wholesale",
+      "imageTitle": "Controlador MPPT 60A HP-MPPT60 | HousePlus Solar Venta al por mayor",
       "badge": "",
       "faq": []
     },
@@ -675,7 +675,7 @@
         },
         {
           "key": "جهد النظام",
-          "value": "12V/24V/48V Auto"
+          "value": "12V/24V/48V تلقائي"
         }
       ],
       "features": [
@@ -684,7 +684,7 @@
         "حماية شاملة: ضد الشحن الزائد، التفريغ الزائد، القصر الكهربائي، عكس القطبية"
       ],
       "imageAlt": "منظم شحن شمسي MPPT بتيار 60A HP-MPPT60 لمصفوفات الألواح الشمسية الكبيرة",
-      "imageTitle": "منظم MPPT 60A HP-MPPT60 | HousePlus Solar Wholesale",
+      "imageTitle": "منظم MPPT 60A HP-MPPT60 | HousePlus Solar بيع بالجملة",
       "badge": "",
       "faq": []
     }
@@ -720,7 +720,7 @@
         "Control remoto para ajuste de brillo y programación"
       ],
       "imageAlt": "Luminaria solar para calle todo en uno 200W HP-SSL200 con sensor de movimiento para iluminación exterior",
-      "imageTitle": "Luminaria solar para calle 200W HP-SSL200 | HousePlus Solar Wholesale",
+      "imageTitle": "Luminaria solar para calle 200W HP-SSL200 | HousePlus Solar Venta al por mayor",
       "badge": "",
       "faq": []
     },
@@ -754,7 +754,7 @@
         "Télécommande pour le réglage de la luminosité et la programmation"
       ],
       "imageAlt": "Lampadaire solaire tout-en-un 200W HP-SSL200 avec capteur de mouvement pour éclairage extérieur",
-      "imageTitle": "Lampadaire solaire 200W HP-SSL200 | HousePlus Solar Wholesale",
+      "imageTitle": "Lampadaire solaire 200W HP-SSL200 | HousePlus Solar Vente en gros",
       "badge": "",
       "faq": []
     },
@@ -788,7 +788,7 @@
         "Fernbedienung zur Helligkeitsregelung und Zeitplanung"
       ],
       "imageAlt": "200W All-in-One Solar-Straßenleuchte HP-SSL200 mit Bewegungsmelder für Außenbeleuchtung",
-      "imageTitle": "200W Solar-Straßenleuchte HP-SSL200 | HousePlus Solar Wholesale",
+      "imageTitle": "200W Solar-Straßenleuchte HP-SSL200 | HousePlus Solar Großhandel",
       "badge": "",
       "faq": []
     },
@@ -996,7 +996,7 @@
         "Construcción IPX4 resistente al agua y al polvo"
       ],
       "imageAlt": "Power bank solar 20000mAh HP-SPB20K con USB dual y carga rápida 18W PD",
-      "imageTitle": "Power bank solar 20000mAh HP-SPB20K | HousePlus Electronics Venta al por mayor",
+      "imageTitle": "Batería externa solar 20000mAh HP-SPB20K | HousePlus Electronics Venta al por mayor",
       "badge": "",
       "faq": []
     },
@@ -1064,7 +1064,7 @@
         "IPX4-wasserdichte und staubdichte Konstruktion"
       ],
       "imageAlt": "20000mAh Solar-Powerbank HP-SPB20K mit dualem USB und 18W PD-Schnellladung",
-      "imageTitle": "20000mAh Solar-Powerbank HP-SPB20K | HousePlus Electronics Wholesale",
+      "imageTitle": "20000mAh Solar-Powerbank HP-SPB20K | HousePlus Electronics Großhandel",
       "badge": "",
       "faq": []
     },
@@ -1085,11 +1085,11 @@
         },
         {
           "key": "المخرجات",
-          "value": "USB-A ×2 + USB-C"
+          "value": "منافذ USB-A ×2 + USB-C"
         },
         {
           "key": "الشحن السريع",
-          "value": "18W PD"
+          "value": "PD بقوة 18W"
         }
       ],
       "features": [
@@ -1263,7 +1263,7 @@
         },
         {
           "key": "Superficie",
-          "value": "Schott Ceran Glass"
+          "value": "Vidrio Schott Ceran"
         }
       ],
       "features": [
@@ -1297,7 +1297,7 @@
         },
         {
           "key": "السطح",
-          "value": "Schott Ceran Glass"
+          "value": "زجاج Schott Ceran"
         }
       ],
       "features": [
@@ -1331,7 +1331,7 @@
         },
         {
           "key": "Surface",
-          "value": "Schott Ceran Glass"
+          "value": "Verre Schott Ceran"
         }
       ],
       "features": [
@@ -1365,7 +1365,7 @@
         },
         {
           "key": "Oberfläche",
-          "value": "Schott Ceran Glass"
+          "value": "Schott Ceran-Glas"
         }
       ],
       "features": [
@@ -1401,7 +1401,7 @@
         },
         {
           "key": "Matériau",
-          "value": "BPA-free Stainless Steel"
+          "value": "Acier inoxydable sans BPA"
         }
       ],
       "features": [
@@ -1435,7 +1435,7 @@
         },
         {
           "key": "المادة",
-          "value": "BPA-free Stainless Steel"
+          "value": "فولاذ مقاوم للصدأ خالٍ من BPA"
         }
       ],
       "features": [
@@ -1469,7 +1469,7 @@
         },
         {
           "key": "Material",
-          "value": "BPA-free Stainless Steel"
+          "value": "Acero inoxidable libre de BPA"
         }
       ],
       "features": [
@@ -1503,7 +1503,7 @@
         },
         {
           "key": "Material",
-          "value": "BPA-free Stainless Steel"
+          "value": "BPA-freier Edelstahl"
         }
       ],
       "features": [
@@ -1531,7 +1531,7 @@
         },
         {
           "key": "Ranuras",
-          "value": "2 Wide Slots"
+          "value": "2 ranuras anchas"
         },
         {
           "key": "Potencia",
@@ -1539,7 +1539,7 @@
         },
         {
           "key": "Ajustes",
-          "value": "7 Browning Levels"
+          "value": "7 niveles de dorado"
         }
       ],
       "features": [
@@ -1565,7 +1565,7 @@
         },
         {
           "key": "Schlitze",
-          "value": "2 Wide Slots"
+          "value": "2 breite Schlitze"
         },
         {
           "key": "Leistung",
@@ -1573,7 +1573,7 @@
         },
         {
           "key": "Einstellungen",
-          "value": "7 Browning Levels"
+          "value": "7 Bräunungsstufen"
         }
       ],
       "features": [
@@ -1599,7 +1599,7 @@
         },
         {
           "key": "Fentes",
-          "value": "2 Wide Slots"
+          "value": "2 fentes larges"
         },
         {
           "key": "Puissance",
@@ -1607,7 +1607,7 @@
         },
         {
           "key": "Réglages",
-          "value": "7 Browning Levels"
+          "value": "7 niveaux de dorure"
         }
       ],
       "features": [
@@ -1633,7 +1633,7 @@
         },
         {
           "key": "عدد الفتحات",
-          "value": "2 Wide Slots"
+          "value": "2 فتحات واسعة"
         },
         {
           "key": "القدرة",
@@ -1641,7 +1641,7 @@
         },
         {
           "key": "الإعدادات",
-          "value": "7 Browning Levels"
+          "value": "7 مستويات التحميص"
         }
       ],
       "features": [
@@ -1677,7 +1677,7 @@
         },
         {
           "key": "Conector",
-          "value": "3.5mm Universal Jack"
+          "value": "Jack universal de 3.5mm"
         }
       ],
       "features": [
@@ -1686,7 +1686,7 @@
         "Diseño plegable con diadema acolchada para comodidad en uso prolongado"
       ],
       "imageAlt": "Auriculares circumaurales HP-HE01 con transductores de 40mm y micrófono integrado para llamadas",
-      "imageTitle": "Auriculares circumaurales HP-HE01 | HousePlus Electronics Wholesale",
+      "imageTitle": "Auriculares circumaurales HP-HE01 | HousePlus Electronics Venta al por mayor",
       "badge": "Popular",
       "faq": []
     },
@@ -1711,7 +1711,7 @@
         },
         {
           "key": "Anschluss",
-          "value": "3.5mm Universal Jack"
+          "value": "3.5mm universeller Klinkenanschluss"
         }
       ],
       "features": [
@@ -1745,7 +1745,7 @@
         },
         {
           "key": "Connecteur",
-          "value": "3.5mm Universal Jack"
+          "value": "Jack universel 3.5mm"
         }
       ],
       "features": [
@@ -1779,7 +1779,7 @@
         },
         {
           "key": "الموصل",
-          "value": "3.5mm Universal Jack"
+          "value": "جاك 3.5mm عالمي"
         }
       ],
       "features": [
@@ -1807,11 +1807,11 @@
         },
         {
           "key": "Anzeige",
-          "value": "1.7\" TFT Colour Touch"
+          "value": "1.7\" TFT Farb-Touch"
         },
         {
           "key": "Batterielaufzeit",
-          "value": "7 days"
+          "value": "7 Tage"
         },
         {
           "key": "Wasserdichtigkeit",
@@ -1841,11 +1841,11 @@
         },
         {
           "key": "Pantalla",
-          "value": "1.7\" TFT Colour Touch"
+          "value": "1.7\" TFT táctil a color"
         },
         {
           "key": "Autonomía de batería",
-          "value": "7 days"
+          "value": "7 días"
         },
         {
           "key": "Resistencia al agua",
@@ -1875,11 +1875,11 @@
         },
         {
           "key": "الشاشة",
-          "value": "1.7\" TFT Colour Touch"
+          "value": "1.7\" شاشة TFT ملونة تعمل باللمس"
         },
         {
           "key": "عمر البطارية",
-          "value": "7 days"
+          "value": "7 أيام"
         },
         {
           "key": "مقاومة الماء",
@@ -1909,11 +1909,11 @@
         },
         {
           "key": "Écran",
-          "value": "1.7\" TFT Colour Touch"
+          "value": "1.7\\\" TFT Couleur Tactile"
         },
         {
           "key": "Autonomie",
-          "value": "7 days"
+          "value": "7 jours"
         },
         {
           "key": "Étanchéité",
@@ -2055,7 +2055,7 @@
         },
         {
           "key": "الواجهة",
-          "value": "USB 3.2 Gen 2 (USB-C)"
+          "value": "USB 3.2 الجيل 2 (USB-C)"
         }
       ],
       "features": [
@@ -2091,7 +2091,7 @@
         },
         {
           "key": "Bewertung",
-          "value": "UHS-I U3 A2 Class 10"
+          "value": "UHS-I U3 A2 Klasse 10"
         }
       ],
       "features": [
@@ -2100,7 +2100,7 @@
         "Enthält SD-Adapter in Standardgröße für Kompatibilität mit Kameras und Laptops"
       ],
       "imageAlt": "128GB microSD-Karte HP-SD128 UHS-I U3 A2 für Kameras, Drohnen und Smartphones",
-      "imageTitle": "128GB Micro SD HP-SD128 | HousePlus Elektronik-Großhandel",
+      "imageTitle": "128GB Micro-SD HP-SD128 | HousePlus Elektronik-Großhandel",
       "badge": "",
       "faq": []
     },
@@ -2125,7 +2125,7 @@
         },
         {
           "key": "Notation",
-          "value": "UHS-I U3 A2 Class 10"
+          "value": "UHS-I U3 A2 Classe 10"
         }
       ],
       "features": [
@@ -2159,7 +2159,7 @@
         },
         {
           "key": "Clasificación",
-          "value": "UHS-I U3 A2 Class 10"
+          "value": "UHS-I U3 A2 Clase 10"
         }
       ],
       "features": [
@@ -2168,7 +2168,7 @@
         "Incluye adaptador SD de tamaño completo para compatibilidad con cámaras y portátiles"
       ],
       "imageAlt": "Tarjeta micro SD 128GB HP-SD128 UHS-I U3 A2 para cámaras, drones y smartphones",
-      "imageTitle": "Micro SD 128GB HP-SD128 | HousePlus Electronics Wholesale",
+      "imageTitle": "Micro SD 128GB HP-SD128 | HousePlus Electronics Venta al por mayor",
       "badge": "",
       "faq": []
     },
@@ -2193,7 +2193,7 @@
         },
         {
           "key": "التصنيف",
-          "value": "UHS-I U3 A2 Class 10"
+          "value": "UHS-I U3 A2 فئة 10"
         }
       ],
       "features": [
@@ -2225,7 +2225,7 @@
         },
         {
           "key": "Wiedergabezeit",
-          "value": "6h + 24h (case)"
+          "value": "6h + 24h (Ladeetui)"
         },
         {
           "key": "Wasserbeständigkeit",
@@ -2259,7 +2259,7 @@
         },
         {
           "key": "Autonomie",
-          "value": "6h + 24h (case)"
+          "value": "6h + 24h (boîtier)"
         },
         {
           "key": "Résistance à l'eau",
@@ -2293,7 +2293,7 @@
         },
         {
           "key": "Autonomía",
-          "value": "6h + 24h (case)"
+          "value": "6h + 24h (estuche)"
         },
         {
           "key": "Resistencia al agua",
@@ -2327,7 +2327,7 @@
         },
         {
           "key": "وقت التشغيل",
-          "value": "6h + 24h (case)"
+          "value": "6h + 24h (الحافظة)"
         },
         {
           "key": "مقاومة الماء",
@@ -2501,7 +2501,7 @@
         },
         {
           "key": "Type de cellule",
-          "value": "Monocrystalline"
+          "value": "Monocristallin"
         },
         {
           "key": "Rendement",
@@ -2517,7 +2517,7 @@
         },
         {
           "key": "Température de fonctionnement",
-          "value": "-40C to +85C"
+          "value": "-40C à +85C"
         },
         {
           "key": "Indice de protection (IP)",
@@ -2552,7 +2552,7 @@
         },
         {
           "key": "Zelltyp",
-          "value": "Monocrystalline"
+          "value": "Monokristallin"
         },
         {
           "key": "Wirkungsgrad",
@@ -2568,7 +2568,7 @@
         },
         {
           "key": "Betriebstemperatur",
-          "value": "-40C to +85C"
+          "value": "-40C bis +85C"
         },
         {
           "key": "IP-Schutzklasse",
@@ -2603,7 +2603,7 @@
         },
         {
           "key": "نوع الخلايا",
-          "value": "Monocrystalline"
+          "value": "أحادي البلورة"
         },
         {
           "key": "الكفاءة",
@@ -2619,7 +2619,7 @@
         },
         {
           "key": "درجة حرارة التشغيل",
-          "value": "-40C to +85C"
+          "value": "-40C إلى +85C"
         },
         {
           "key": "تصنيف IP",
@@ -2654,7 +2654,7 @@
         },
         {
           "key": "Tipo de célula",
-          "value": "Monocrystalline"
+          "value": "Monocristalino"
         },
         {
           "key": "Eficiencia",
@@ -2670,7 +2670,7 @@
         },
         {
           "key": "Temperatura de funcionamiento",
-          "value": "-40C to +85C"
+          "value": "de -40C a +85C"
         },
         {
           "key": "Clasificación IP",
@@ -2719,7 +2719,7 @@
         },
         {
           "key": "Zyklenlebensdauer",
-          "value": ">=3000 cycles"
+          "value": ">=3000 Zyklen"
         },
         {
           "key": "Gewicht",
@@ -2727,7 +2727,7 @@
         },
         {
           "key": "Lademethoden",
-          "value": "Solar / AC / Car"
+          "value": "Solar / AC / Auto"
         }
       ],
       "features": [
@@ -2770,7 +2770,7 @@
         },
         {
           "key": "عمر الدورات",
-          "value": ">=3000 cycles"
+          "value": ">=3000 دورات"
         },
         {
           "key": "الوزن",
@@ -2778,7 +2778,7 @@
         },
         {
           "key": "طرق الشحن",
-          "value": "Solar / AC / Car"
+          "value": "شمسي / AC / سيارة"
         }
       ],
       "features": [
@@ -2821,7 +2821,7 @@
         },
         {
           "key": "Vida en ciclos",
-          "value": ">=3000 cycles"
+          "value": ">=3000 ciclos"
         },
         {
           "key": "Peso",
@@ -2829,7 +2829,7 @@
         },
         {
           "key": "Métodos de carga",
-          "value": "Solar / AC / Car"
+          "value": "Solar / CA / Coche"
         }
       ],
       "features": [
@@ -2880,7 +2880,7 @@
         },
         {
           "key": "Modes de charge",
-          "value": "Solar / AC / Car"
+          "value": "Solaire / CA / Voiture"
         }
       ],
       "features": [
@@ -2890,7 +2890,7 @@
         "Design avec chariot et roues pour un transport facile à 28 kg"
       ],
       "imageAlt": "Station d'alimentation portable 3000W HP-SOL-3000 avec batterie LiFePO4 pour secours extérieur",
-      "imageTitle": "Station d'alimentation 3000W HP-SOL-3000 | HousePlus Solar Wholesale",
+      "imageTitle": "Station d'alimentation 3000W HP-SOL-3000 | HousePlus Solar Vente en gros",
       "badge": "Meilleure vente",
       "faq": []
     }
@@ -2913,7 +2913,7 @@
         },
         {
           "key": "Tipo de célula",
-          "value": "Monocrystalline ETFE"
+          "value": "Monocristalino ETFE"
         },
         {
           "key": "Tamaño plegado",
@@ -2964,7 +2964,7 @@
         },
         {
           "key": "Type de cellule",
-          "value": "Monocrystalline ETFE"
+          "value": "Monocristallin ETFE"
         },
         {
           "key": "Dimensions pliées",
@@ -3015,7 +3015,7 @@
         },
         {
           "key": "Zelltyp",
-          "value": "Monocrystalline ETFE"
+          "value": "Monokristallin ETFE"
         },
         {
           "key": "Gefaltete Größe",
@@ -3066,7 +3066,7 @@
         },
         {
           "key": "نوع الخلايا",
-          "value": "Monocrystalline ETFE"
+          "value": "أحادي البلورة ETFE"
         },
         {
           "key": "المقاس مطوي",
@@ -3115,7 +3115,7 @@
         },
         {
           "key": "Capacité",
-          "value": "5000Wh modular"
+          "value": "5000Wh modulaire"
         },
         {
           "key": "Type de batterie",
@@ -3135,11 +3135,11 @@
         },
         {
           "key": "Modes réseau",
-          "value": "Grid-tie / Off-grid"
+          "value": "Raccordé au réseau / Hors réseau"
         },
         {
           "key": "Extensible",
-          "value": "Up to 30kWh"
+          "value": "Jusqu'à 30kWh"
         }
       ],
       "features": [
@@ -3182,15 +3182,15 @@
         },
         {
           "key": "Zyklenlebensdauer",
-          "value": ">=6000 cycles"
+          "value": ">=6000 Zyklen"
         },
         {
           "key": "Netzmodi",
-          "value": "Grid-tie / Off-grid"
+          "value": "Netzgekoppelt / Inselbetrieb"
         },
         {
           "key": "Erweiterbar",
-          "value": "Up to 30kWh"
+          "value": "Bis zu 30kWh"
         }
       ],
       "features": [
@@ -3200,7 +3200,7 @@
         "Intelligentes BMS mit Zellenausgleich, Temperaturregelung und Überstromschutz"
       ],
       "imageAlt": "5000W Heimspeichersystem HP-SOL-5000H mit modularen LiFePO4-Zellen für Netzparallelbetrieb",
-      "imageTitle": "5000W Heimspeicher HP-SOL-5000H | HousePlus Solar Wholesale",
+      "imageTitle": "5000W Heimspeicher HP-SOL-5000H | HousePlus Solar Großhandel",
       "badge": "Neu",
       "faq": []
     },
@@ -3233,15 +3233,15 @@
         },
         {
           "key": "Ciclo de vida",
-          "value": ">=6000 cycles"
+          "value": ">=6000 ciclos"
         },
         {
           "key": "Modos de red",
-          "value": "Grid-tie / Off-grid"
+          "value": "Conectado a la red / Fuera de la red"
         },
         {
           "key": "Ampliable",
-          "value": "Up to 30kWh"
+          "value": "Hasta 30kWh"
         }
       ],
       "features": [
@@ -3268,7 +3268,7 @@
         },
         {
           "key": "السعة",
-          "value": "5000Wh modular"
+          "value": "5000Wh مُكوّن من وحدات"
         },
         {
           "key": "نوع البطارية",
@@ -3284,15 +3284,15 @@
         },
         {
           "key": "عمر الدورات",
-          "value": ">=6000 cycles"
+          "value": ">=6000 دورات"
         },
         {
           "key": "أوضاع الشبكة",
-          "value": "Grid-tie / Off-grid"
+          "value": "متصل بالشبكة / مستقل عن الشبكة"
         },
         {
           "key": "قابلية التوسيع",
-          "value": "Up to 30kWh"
+          "value": "حتى 30kWh"
         }
       ],
       "features": [
@@ -3341,7 +3341,7 @@
         },
         {
           "key": "Material",
-          "value": "Aluminium Alloy"
+          "value": "Aleación de aluminio"
         },
         {
           "key": "Entrada",
@@ -3355,7 +3355,7 @@
         "Carga simultánea de 3 dispositivos con asignación inteligente de energía"
       ],
       "imageAlt": "Power bank de carga rápida PD 60W HP-3C-60W 20000mAh para carga de portátil y teléfono",
-      "imageTitle": "Power Bank de 60W HP-3C-60W | HousePlus Electronics Venta al por mayor",
+      "imageTitle": "Banco de energía de 60W HP-3C-60W | HousePlus Electronics Venta al por mayor",
       "badge": "Popular",
       "faq": []
     },
@@ -3392,7 +3392,7 @@
         },
         {
           "key": "Material",
-          "value": "Aluminium Alloy"
+          "value": "Aluminiumlegierung"
         },
         {
           "key": "Eingang",
@@ -3406,7 +3406,7 @@
         "Gleichzeitiges Laden von 3 Geräten mit intelligenter Leistungszuweisung"
       ],
       "imageAlt": "60W PD Schnelllade-Powerbank HP-3C-60W 20000mAh zum Laden von Laptop und Smartphone",
-      "imageTitle": "60W Power Bank HP-3C-60W | HousePlus Electronics Großhandel",
+      "imageTitle": "60W Powerbank HP-3C-60W | HousePlus Electronics Großhandel",
       "badge": "Beliebt",
       "faq": []
     },
@@ -3443,7 +3443,7 @@
         },
         {
           "key": "Matériau",
-          "value": "Aluminium Alloy"
+          "value": "Alliage d'aluminium"
         },
         {
           "key": "Entrée",
@@ -3494,7 +3494,7 @@
         },
         {
           "key": "المادة",
-          "value": "Aluminium Alloy"
+          "value": "سبيكة الألمنيوم"
         },
         {
           "key": "المدخل",
@@ -3535,7 +3535,7 @@
         },
         {
           "key": "Zyklenlebensdauer",
-          "value": ">=3000 cycles"
+          "value": ">=3000 Zyklen"
         },
         {
           "key": "Abmessungen",
@@ -3547,11 +3547,11 @@
         },
         {
           "key": "Betriebstemperatur",
-          "value": "-20C to +60C"
+          "value": "-20C bis +60C"
         },
         {
           "key": "BMS",
-          "value": "Integrated 100A"
+          "value": "Integriert 100A"
         }
       ],
       "features": [
@@ -3586,7 +3586,7 @@
         },
         {
           "key": "Vida útil (ciclos)",
-          "value": ">=3000 cycles"
+          "value": ">=3000 ciclos"
         },
         {
           "key": "Dimensiones",
@@ -3598,11 +3598,11 @@
         },
         {
           "key": "Temperatura de funcionamiento",
-          "value": "-20C to +60C"
+          "value": "-20C a +60C"
         },
         {
           "key": "BMS",
-          "value": "Integrated 100A"
+          "value": "Integrado de 100A"
         }
       ],
       "features": [
@@ -3612,7 +3612,7 @@
         "Amplio rango de funcionamiento: -20C to +60C para fiabilidad en climas extremos"
       ],
       "imageAlt": "Batería LiFePO4 12V 100Ah HP-SOL-12V100 con BMS para aplicaciones en vehículos recreativos y marinas",
-      "imageTitle": "Batería LiFePO4 12V 100Ah HP-SOL-12V100 | HousePlus Solar Wholesale",
+      "imageTitle": "Batería LiFePO4 12V 100Ah HP-SOL-12V100 | HousePlus Solar Mayorista",
       "badge": "Más vendido",
       "faq": []
     },
@@ -3649,11 +3649,11 @@
         },
         {
           "key": "Température de fonctionnement",
-          "value": "-20C to +60C"
+          "value": "-20C à +60C"
         },
         {
           "key": "BMS",
-          "value": "Integrated 100A"
+          "value": "Intégré 100A"
         }
       ],
       "features": [
@@ -3688,7 +3688,7 @@
         },
         {
           "key": "عمر الدورة",
-          "value": ">=3000 cycles"
+          "value": ">=3000 دورة"
         },
         {
           "key": "الأبعاد",
@@ -3700,11 +3700,11 @@
         },
         {
           "key": "درجة حرارة التشغيل",
-          "value": "-20C to +60C"
+          "value": "-20C إلى +60C"
         },
         {
           "key": "نظام إدارة البطارية (BMS)",
-          "value": "Integrated 100A"
+          "value": "مدمج 100A"
         }
       ],
       "features": [
@@ -3753,7 +3753,7 @@
         },
         {
           "key": "Entrada solar",
-          "value": "120W max"
+          "value": "120W máx."
         },
         {
           "key": "Distorsión armónica total (THD)",
@@ -3906,7 +3906,7 @@
         },
         {
           "key": "دخل الطاقة الشمسية",
-          "value": "120W max"
+          "value": "120W كحد أقصى"
         },
         {
           "key": "THD (التشويه التوافقي الكلي)",
@@ -3951,7 +3951,7 @@
         },
         {
           "key": "Batterietypen",
-          "value": "Lead-acid / Gel / LiFePO4"
+          "value": "Blei-Säure / Gel / LiFePO4"
         },
         {
           "key": "Display",
@@ -3959,7 +3959,7 @@
         },
         {
           "key": "Schutz",
-          "value": "Overcharge / Over-discharge / Short / Reverse"
+          "value": "Überladung / Tiefentladung / Kurzschluss / Verpolung"
         },
         {
           "key": "Schaltfrequenz",
@@ -3973,7 +3973,7 @@
         "Umfassender Schutz: overcharge, over-discharge, short-circuit, reverse polarity"
       ],
       "imageAlt": "MPPT 40A Solarladeregler HP-SOL-MPPT40 mit 98% Effizienz für Solarsysteme",
-      "imageTitle": "MPPT 40A Regler HP-SOL-MPPT40 | HousePlus Solar Wholesale",
+      "imageTitle": "MPPT 40A-Regler HP-SOL-MPPT40 | HousePlus Solar Großhandel",
       "badge": "",
       "faq": []
     },
@@ -4002,19 +4002,19 @@
         },
         {
           "key": "أنواع البطاريات",
-          "value": "Lead-acid / Gel / LiFePO4"
+          "value": "حمض الرصاص / جل / LiFePO4"
         },
         {
           "key": "الشاشة",
-          "value": "LCD"
+          "value": "شاشة LCD"
         },
         {
           "key": "الحماية",
-          "value": "Overcharge / Over-discharge / Short / Reverse"
+          "value": "الشحن الزائد / التفريغ الزائد / قصر الدائرة / عكس القطبية"
         },
         {
           "key": "نوع التبديل",
-          "value": "150kHz MOSFET"
+          "value": "MOSFET بتردد 150kHz"
         }
       ],
       "features": [
@@ -4053,19 +4053,19 @@
         },
         {
           "key": "Tipo(s) de batería",
-          "value": "Lead-acid / Gel / LiFePO4"
+          "value": "Plomo-ácido / Gel / LiFePO4"
         },
         {
           "key": "Pantalla",
-          "value": "LCD"
+          "value": "Pantalla LCD"
         },
         {
           "key": "Protección",
-          "value": "Overcharge / Over-discharge / Short / Reverse"
+          "value": "Sobrecarga / Sobredescarga / Cortocircuito / Polaridad inversa"
         },
         {
           "key": "Conmutación",
-          "value": "150kHz MOSFET"
+          "value": "MOSFET de 150kHz"
         }
       ],
       "features": [
@@ -4104,15 +4104,15 @@
         },
         {
           "key": "Types de batterie",
-          "value": "Lead-acid / Gel / LiFePO4"
+          "value": "Plomb-acide / Gel / LiFePO4"
         },
         {
           "key": "Affichage",
-          "value": "LCD"
+          "value": "Écran LCD"
         },
         {
           "key": "Protection",
-          "value": "Overcharge / Over-discharge / Short / Reverse"
+          "value": "Surcharge / Décharge excessive / Court-circuit / Inversion de polarité"
         },
         {
           "key": "Commutation",
@@ -4165,11 +4165,11 @@
         },
         {
           "key": "Material",
-          "value": "PC+ABS Fire-resistant"
+          "value": "PC+ABS ignífugo"
         },
         {
           "key": "Compatibilidad",
-          "value": "iPhone 12/13/14/15 series"
+          "value": "serie iPhone 12/13/14/15"
         }
       ],
       "features": [
@@ -4200,11 +4200,11 @@
         },
         {
           "key": "الإخراج اللاسلكي",
-          "value": "15W MagSafe"
+          "value": "MagSafe بقدرة 15W"
         },
         {
           "key": "الإخراج السلكي",
-          "value": "20W PD USB-C"
+          "value": "PD USB-C بقدرة 20W"
         },
         {
           "key": "الأبعاد",
@@ -4216,11 +4216,11 @@
         },
         {
           "key": "المادة",
-          "value": "PC+ABS Fire-resistant"
+          "value": "PC+ABS مقاوم للحريق"
         },
         {
           "key": "التوافق",
-          "value": "iPhone 12/13/14/15 series"
+          "value": "سلسلة iPhone 12/13/14/15"
         }
       ],
       "features": [
@@ -4267,11 +4267,11 @@
         },
         {
           "key": "Material",
-          "value": "PC+ABS Fire-resistant"
+          "value": "PC+ABS flammhemmend"
         },
         {
           "key": "Kompatibilität",
-          "value": "iPhone 12/13/14/15 series"
+          "value": "iPhone 12/13/14/15-Serie"
         }
       ],
       "features": [
@@ -4318,11 +4318,11 @@
         },
         {
           "key": "Matériau",
-          "value": "PC+ABS Fire-resistant"
+          "value": "PC+ABS ignifuge"
         },
         {
           "key": "Compatibilité",
-          "value": "iPhone 12/13/14/15 series"
+          "value": "Séries iPhone 12/13/14/15"
         }
       ],
       "features": [
@@ -4375,7 +4375,7 @@
         },
         {
           "key": "Protección",
-          "value": "8-layer (overload/overtemp/short/low voltage/reverse)"
+          "value": "8 capas (sobrecarga/sobretemperatura/cortocircuito/bajo voltaje/inversión de polaridad)"
         }
       ],
       "features": [
@@ -4426,7 +4426,7 @@
         },
         {
           "key": "Schutz",
-          "value": "8-layer (overload/overtemp/short/low voltage/reverse)"
+          "value": "8-lagig (Überlast/Übertemperatur/Kurzschluss/Niederspannung/Verpolung)"
         }
       ],
       "features": [
@@ -4477,7 +4477,7 @@
         },
         {
           "key": "نظام الحماية",
-          "value": "8-layer (overload/overtemp/short/low voltage/reverse)"
+          "value": "8 طبقات (حماية من التحميل الزائد/ارتفاع درجة الحرارة/القصر/انخفاض الجهد/عكس القطبية)"
         }
       ],
       "features": [
@@ -4528,7 +4528,7 @@
         },
         {
           "key": "Protection",
-          "value": "8-layer (overload/overtemp/short/low voltage/reverse)"
+          "value": "8 couches (surcharge/surchauffe/court-circuit/basse tension/inversion de polarité)"
         }
       ],
       "features": [
@@ -4538,7 +4538,7 @@
         "Entrée sélectionnable (12V/24V/48V) et sortie sélectionnable (110V/220V) pour compatibilité mondiale"
       ],
       "imageAlt": "Onduleur sinusoïdal pur 2000W HP-SOL-INV2K avec crête de 4000W pour alimentation hors réseau",
-      "imageTitle": "Onduleur sinusoïdal 2000W HP-SOL-INV2K | HousePlus Solar Wholesale",
+      "imageTitle": "Onduleur sinusoïdal 2000W HP-SOL-INV2K | HousePlus Solar Vente en gros",
       "badge": "Certifié CE",
       "faq": []
     }
@@ -4561,11 +4561,11 @@
         },
         {
           "key": "Tipo de celda",
-          "value": "Monocrystalline ETFE"
+          "value": "Monocristalino ETFE"
         },
         {
           "key": "Radio de flexión",
-          "value": "Up to 30 degrees"
+          "value": "Hasta 30 grados"
         },
         {
           "key": "Peso",
@@ -4577,7 +4577,7 @@
         },
         {
           "key": "Montaje",
-          "value": "3M adhesive / Screw holes"
+          "value": "Adhesivo 3M / Orificios para tornillos"
         },
         {
           "key": "Eficiencia",
@@ -4612,11 +4612,11 @@
         },
         {
           "key": "Zelltyp",
-          "value": "Monocrystalline ETFE"
+          "value": "Monokristallin ETFE"
         },
         {
           "key": "Biegeradius",
-          "value": "Up to 30 degrees"
+          "value": "Bis zu 30 Grad"
         },
         {
           "key": "Gewicht",
@@ -4628,7 +4628,7 @@
         },
         {
           "key": "Befestigung",
-          "value": "3M adhesive / Screw holes"
+          "value": "3M Klebstoff / Schraubenlöcher"
         },
         {
           "key": "Wirkungsgrad",
@@ -4663,11 +4663,11 @@
         },
         {
           "key": "Type de cellule",
-          "value": "Monocrystalline ETFE"
+          "value": "Monocristallin ETFE"
         },
         {
           "key": "Rayon de courbure",
-          "value": "Up to 30 degrees"
+          "value": "Jusqu'à 30 degrés"
         },
         {
           "key": "Poids",
@@ -4679,7 +4679,7 @@
         },
         {
           "key": "Fixation",
-          "value": "3M adhesive / Screw holes"
+          "value": "Adhésif 3M / Trous de vis"
         },
         {
           "key": "Efficacité",
@@ -4714,11 +4714,11 @@
         },
         {
           "key": "نوع الخلايا",
-          "value": "Monocrystalline ETFE"
+          "value": "أحادي البلورة ETFE"
         },
         {
           "key": "نصف قطر الانحناء",
-          "value": "Up to 30 degrees"
+          "value": "حتى 30 درجة"
         },
         {
           "key": "الوزن",
@@ -4730,7 +4730,7 @@
         },
         {
           "key": "التركيب",
-          "value": "3M adhesive / Screw holes"
+          "value": "لاصق 3M / ثقوب للبراغي"
         },
         {
           "key": "الكفاءة",
@@ -4744,7 +4744,7 @@
         "تركيب مزدوج: بطانة لاصقة 3M VHB أو فتحات مسامير مثقوبة مسبقاً"
       ],
       "imageAlt": "لوحة شمسية شبه مرنة 400W HP-SOL-400F بسطح ETFE لأسطح RV المنحنية والاستخدام البحري",
-      "imageTitle": "لوحة شمسية مرنة 400W HP-SOL-400F | HousePlus Solar Wholesale",
+      "imageTitle": "لوحة شمسية مرنة 400W HP-SOL-400F | HousePlus Solar للبيع بالجملة",
       "badge": "جديد",
       "faq": []
     }
@@ -4771,11 +4771,11 @@
         },
         {
           "key": "Salida del inversor",
-          "value": "300W pure sine wave"
+          "value": "300W onda sinusoidal pura"
         },
         {
           "key": "Tiempo de carga solar",
-          "value": "6-8 hours"
+          "value": "6-8 horas"
         },
         {
           "key": "Peso del kit",
@@ -4783,11 +4783,11 @@
         },
         {
           "key": "Ciclos de vida",
-          "value": ">=2000 cycles"
+          "value": ">=2000 ciclos"
         },
         {
           "key": "Incluye",
-          "value": "Panel + Station + Cables + Bag"
+          "value": "Panel + Estación + Cables + Bolsa"
         }
       ],
       "features": [
@@ -4822,11 +4822,11 @@
         },
         {
           "key": "Sortie onduleur",
-          "value": "300W pure sine wave"
+          "value": "300W onde sinusoïdale pure"
         },
         {
           "key": "Temps de charge solaire",
-          "value": "6-8 hours"
+          "value": "6-8 heures"
         },
         {
           "key": "Poids du kit",
@@ -4838,7 +4838,7 @@
         },
         {
           "key": "Inclus",
-          "value": "Panel + Station + Cables + Bag"
+          "value": "Panneau + Station + Câbles + Sac"
         }
       ],
       "features": [
@@ -4873,11 +4873,11 @@
         },
         {
           "key": "مخرج العاكس",
-          "value": "300W pure sine wave"
+          "value": "300W موجة جيبية نقية"
         },
         {
           "key": "زمن الشحن الشمسي",
-          "value": "6-8 hours"
+          "value": "6-8 ساعات"
         },
         {
           "key": "وزن الطقم",
@@ -4885,11 +4885,11 @@
         },
         {
           "key": "عمر الدورة",
-          "value": ">=2000 cycles"
+          "value": ">=2000 دورات"
         },
         {
           "key": "المحتويات",
-          "value": "Panel + Station + Cables + Bag"
+          "value": "لوح شمسي + محطة + كابلات + حقيبة"
         }
       ],
       "features": [
@@ -4899,7 +4899,7 @@
         "شحن شمسي خلال 6-8 hours -- حل طاقة مستقل للعمل خارج الشبكة"
       ],
       "imageAlt": "طقم مولد شمسي محمول 300W HP-SOL-KIT300 مع اللوح ومحطة الطاقة للتخييم",
-      "imageTitle": "طقم المولد الشمسي 300W HP-SOL-KIT300 | HousePlus Solar Wholesale",
+      "imageTitle": "طقم المولد الشمسي 300W HP-SOL-KIT300 | HousePlus Solar للبيع بالجملة",
       "badge": "شائع",
       "faq": []
     },
@@ -4924,11 +4924,11 @@
         },
         {
           "key": "Inverter Output",
-          "value": "300W pure sine wave"
+          "value": "300W reiner Sinus"
         },
         {
           "key": "Solar Charge Time",
-          "value": "6-8 hours"
+          "value": "6-8 Stunden"
         },
         {
           "key": "Kit Weight",
@@ -4936,11 +4936,11 @@
         },
         {
           "key": "Cycle Life",
-          "value": ">=2000 cycles"
+          "value": ">=2000 Zyklen"
         },
         {
           "key": "Included",
-          "value": "Panel + Station + Cables + Bag"
+          "value": "Solarmodul + Station + Kabel + Tasche"
         }
       ],
       "features": [
@@ -4985,7 +4985,7 @@
         },
         {
           "key": "Monitorización",
-          "value": "Real-time kWh & power"
+          "value": "kWh y potencia en tiempo real"
         },
         {
           "key": "Voltaje",
@@ -5036,7 +5036,7 @@
         },
         {
           "key": "Surveillance",
-          "value": "Real-time kWh & power"
+          "value": "kWh et puissance en temps réel"
         },
         {
           "key": "Tension",
@@ -5087,7 +5087,7 @@
         },
         {
           "key": "Überwachung",
-          "value": "Real-time kWh & power"
+          "value": "Echtzeit-kWh & Leistung"
         },
         {
           "key": "Spannung",
@@ -5130,7 +5130,7 @@
         },
         {
           "key": "التوافق",
-          "value": "Alexa / Google Home / SmartLife"
+          "value": "أليكسا / جوجل هوم / سمارت لايف"
         },
         {
           "key": "الأبعاد",
@@ -5138,7 +5138,7 @@
         },
         {
           "key": "المراقبة",
-          "value": "Real-time kWh & power"
+          "value": "قراءات kWh والقدرة في الوقت الحقيقي"
         },
         {
           "key": "الجهد",
@@ -5146,7 +5146,7 @@
         },
         {
           "key": "التطبيق",
-          "value": "SmartLife / Tuya"
+          "value": "سمارت لايف / تويا"
         }
       ],
       "features": [
@@ -5175,7 +5175,7 @@
         },
         {
           "key": "Potencia máxima",
-          "value": "100W PD"
+          "value": "PD de 100W"
         },
         {
           "key": "Corriente",
@@ -5187,7 +5187,7 @@
         },
         {
           "key": "Material",
-          "value": "Nylon braided + Aluminium"
+          "value": "Trenzado de nylon + Aluminio"
         },
         {
           "key": "Ciclos de flexión",
@@ -5199,7 +5199,7 @@
         },
         {
           "key": "Compatibilidad",
-          "value": "USB-C devices"
+          "value": "Dispositivos USB-C"
         }
       ],
       "features": [
@@ -5209,7 +5209,7 @@
         "Transferencia de datos 480Mbps -- sincroniza archivos mientras cargas simultáneamente"
       ],
       "imageAlt": "Cable de carga rápida Type-C 100W HP-3C-TC100W 5A trenzado en nylon para carga de MacBook",
-      "imageTitle": "Cable USB-C 100W HP-3C-TC100W | HousePlus Electronics Wholesale",
+      "imageTitle": "Cable USB-C 100W HP-3C-TC100W | HousePlus Electronics Venta al por mayor",
       "badge": "Más vendido",
       "faq": []
     },
@@ -5238,7 +5238,7 @@
         },
         {
           "key": "Matériau",
-          "value": "Nylon braided + Aluminium"
+          "value": "Nylon tressé + Aluminium"
         },
         {
           "key": "Cycles de pliage",
@@ -5250,7 +5250,7 @@
         },
         {
           "key": "Compatibilité",
-          "value": "USB-C devices"
+          "value": "Appareils USB-C"
         }
       ],
       "features": [
@@ -5289,7 +5289,7 @@
         },
         {
           "key": "Material",
-          "value": "Nylon braided + Aluminium"
+          "value": "Nylon geflochten + Aluminium"
         },
         {
           "key": "Biegezyklen",
@@ -5301,7 +5301,7 @@
         },
         {
           "key": "Kompatibilität",
-          "value": "USB-C devices"
+          "value": "USB-C-Geräte"
         }
       ],
       "features": [
@@ -5340,7 +5340,7 @@
         },
         {
           "key": "المواد",
-          "value": "Nylon braided + Aluminium"
+          "value": "نايلون مضفّر + ألومنيوم"
         },
         {
           "key": "عدد دورات الانحناء",
@@ -5352,7 +5352,7 @@
         },
         {
           "key": "التوافق",
-          "value": "USB-C devices"
+          "value": "أجهزة USB-C"
         }
       ],
       "features": [
@@ -5385,15 +5385,15 @@
         },
         {
           "key": "Capacidad",
-          "value": "2L Borosilicate Glass"
+          "value": "2L Vidrio de borosilicato"
         },
         {
           "key": "Ajustes de velocidad",
-          "value": "6 Speeds + Pulse"
+          "value": "6 Velocidades + Pulso"
         },
         {
           "key": "Cuchillas",
-          "value": "6-Blade Stainless Steel"
+          "value": "6 cuchillas de acero inoxidable"
         },
         {
           "key": "Tensión nominal",
@@ -5401,11 +5401,11 @@
         },
         {
           "key": "Seguridad",
-          "value": "Overheat Protection + Safety Lock"
+          "value": "Protección contra sobrecalentamiento + bloqueo de seguridad"
         },
         {
           "key": "Material",
-          "value": "BPA-free Glass + Stainless Steel"
+          "value": "Vidrio libre de BPA + acero inoxidable"
         }
       ],
       "features": [
@@ -5415,7 +5415,7 @@
         "Base antideslizante con ventosas y bloqueo de seguridad — evita la operación accidental"
       ],
       "imageAlt": "Licuadora eléctrica profesional 1500W HP-BL15 con 2L glass jar y conjunto 6-Blade Stainless Steel para batidos",
-      "imageTitle": "Licuadora Eléctrica 1500W HP-BL15 | HousePlus Appliance Wholesale",
+      "imageTitle": "Licuadora eléctrica 1500W HP-BL15 | HousePlus Appliance Venta al por mayor",
       "badge": "Nuevo",
       "faq": []
     },
@@ -5436,15 +5436,15 @@
         },
         {
           "key": "Kapazität",
-          "value": "2L Borosilicate Glass"
+          "value": "2L Borosilikatglas"
         },
         {
           "key": "Geschwindigkeitsstufen",
-          "value": "6 Speeds + Pulse"
+          "value": "6 Geschwindigkeiten + Pulsfunktion"
         },
         {
           "key": "Klingen",
-          "value": "6-Blade Stainless Steel"
+          "value": "6-Klingen aus Edelstahl"
         },
         {
           "key": "Nennspannung",
@@ -5452,11 +5452,11 @@
         },
         {
           "key": "Sicherheit",
-          "value": "Overheat Protection + Safety Lock"
+          "value": "Überhitzungsschutz + Sicherheitsverriegelung"
         },
         {
           "key": "Material",
-          "value": "BPA-free Glass + Stainless Steel"
+          "value": "BPA-freies Glas + Edelstahl"
         }
       ],
       "features": [
@@ -5487,15 +5487,15 @@
         },
         {
           "key": "السعة",
-          "value": "2L Borosilicate Glass"
+          "value": "زجاج بوروسيليكات بسعة 2L"
         },
         {
           "key": "إعدادات السرعة",
-          "value": "6 Speeds + Pulse"
+          "value": "6 سرعات + وضع النبض"
         },
         {
           "key": "الشفرات",
-          "value": "6-Blade Stainless Steel"
+          "value": "6 شفرات من الفولاذ المقاوم للصدأ"
         },
         {
           "key": "الجهد المقنن",
@@ -5503,11 +5503,11 @@
         },
         {
           "key": "السلامة",
-          "value": "Overheat Protection + Safety Lock"
+          "value": "حماية من ارتفاع الحرارة + قفل أمان"
         },
         {
           "key": "المواد",
-          "value": "BPA-free Glass + Stainless Steel"
+          "value": "زجاج خالٍ من مادة BPA + فولاذ مقاوم للصدأ"
         }
       ],
       "features": [
@@ -5538,15 +5538,15 @@
         },
         {
           "key": "Capacité",
-          "value": "2L Borosilicate Glass"
+          "value": "Verre borosilicaté 2L"
         },
         {
           "key": "Réglages de vitesse",
-          "value": "6 Speeds + Pulse"
+          "value": "6 vitesses + impulsion"
         },
         {
           "key": "Lames",
-          "value": "6-Blade Stainless Steel"
+          "value": "6 lames en acier inoxydable"
         },
         {
           "key": "Tension nominale",
@@ -5554,11 +5554,11 @@
         },
         {
           "key": "Sécurité",
-          "value": "Overheat Protection + Safety Lock"
+          "value": "Protection contre la surchauffe + verrou de sécurité"
         },
         {
           "key": "Matériau",
-          "value": "BPA-free Glass + Stainless Steel"
+          "value": "Verre sans BPA + acier inoxydable"
         }
       ],
       "features": [
@@ -5587,7 +5587,7 @@
         },
         {
           "key": "Capacidad",
-          "value": "8L (Dual 4L Zones)"
+          "value": "8L (Zonas duales de 4L)"
         },
         {
           "key": "Potencia",
@@ -5599,15 +5599,15 @@
         },
         {
           "key": "Programas preestablecidos",
-          "value": "12 One-Touch Programmes"
+          "value": "12 programas de un solo toque"
         },
         {
           "key": "Pantalla",
-          "value": "Digital Touch Screen"
+          "value": "Pantalla táctil digital"
         },
         {
           "key": "Temporizador",
-          "value": "60 min with Auto Shut-off"
+          "value": "60 min con apagado automático"
         },
         {
           "key": "Certificaciones",
@@ -5638,7 +5638,7 @@
         },
         {
           "key": "Kapazität",
-          "value": "8L (Dual 4L Zones)"
+          "value": "8L (Duale 4L-Zonen)"
         },
         {
           "key": "Leistung",
@@ -5650,15 +5650,15 @@
         },
         {
           "key": "Voreinstellungen",
-          "value": "12 One-Touch Programmes"
+          "value": "12 One-Touch-Programme"
         },
         {
           "key": "Display",
-          "value": "Digital Touch Screen"
+          "value": "Digitaler Touchscreen"
         },
         {
           "key": "Timer",
-          "value": "60 min with Auto Shut-off"
+          "value": "60 min mit automatischer Abschaltung"
         },
         {
           "key": "Zertifizierungen",
@@ -5689,7 +5689,7 @@
         },
         {
           "key": "Capacité",
-          "value": "8L (Dual 4L Zones)"
+          "value": "8L (zones doubles de 4L)"
         },
         {
           "key": "Puissance",
@@ -5701,15 +5701,15 @@
         },
         {
           "key": "Programmes prédéfinis",
-          "value": "12 One-Touch Programmes"
+          "value": "12 programmes à touche unique"
         },
         {
           "key": "Affichage",
-          "value": "Digital Touch Screen"
+          "value": "Écran tactile numérique"
         },
         {
           "key": "Minuterie",
-          "value": "60 min with Auto Shut-off"
+          "value": "60 min avec arrêt automatique"
         },
         {
           "key": "Certifications",
@@ -5740,7 +5740,7 @@
         },
         {
           "key": "السعة",
-          "value": "8L (Dual 4L Zones)"
+          "value": "8L (منطقتان كل منهما 4L)"
         },
         {
           "key": "القدرة",
@@ -5752,15 +5752,15 @@
         },
         {
           "key": "البرامج المسبقة",
-          "value": "12 One-Touch Programmes"
+          "value": "12 برامج بلمسة واحدة"
         },
         {
           "key": "شاشة العرض",
-          "value": "Digital Touch Screen"
+          "value": "شاشة لمس رقمية"
         },
         {
           "key": "المؤقت",
-          "value": "60 min with Auto Shut-off"
+          "value": "60 min مع الإيقاف التلقائي"
         },
         {
           "key": "الشهادات",
@@ -5797,23 +5797,23 @@
         },
         {
           "key": "Material de la superficie",
-          "value": "304 Stainless Steel"
+          "value": "Acero inoxidable 304"
         },
         {
           "key": "Rejillas",
-          "value": "Cast Iron — Removable"
+          "value": "Hierro fundido — desmontable"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "Uso dual LPG / NG"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Pulse Ignition"
+          "value": "Ignición por pulso automática"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure Device (FFD)"
+          "value": "Dispositivo de seguridad por fallo de llama (FFD)"
         },
         {
           "key": "Dimensiones",
@@ -5848,23 +5848,23 @@
         },
         {
           "key": "Matériau de surface",
-          "value": "304 Stainless Steel"
+          "value": "Acier inoxydable 304"
         },
         {
           "key": "Grilles",
-          "value": "Cast Iron — Removable"
+          "value": "Fonte — amovible"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "Double usage GPL / GN"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Pulse Ignition"
+          "value": "Allumage automatique par impulsion"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure Device (FFD)"
+          "value": "Dispositif de coupure en cas d'extinction de la flamme (FFD)"
         },
         {
           "key": "Dimensions",
@@ -5899,23 +5899,23 @@
         },
         {
           "key": "مادة السطح",
-          "value": "304 Stainless Steel"
+          "value": "فولاذ مقاوم للصدأ 304"
         },
         {
           "key": "حاملات القدور (الشبكات)",
-          "value": "Cast Iron — Removable"
+          "value": "حديد زهر — قابل للإزالة"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG ثنائي الاستخدام"
         },
         {
           "key": "الإشعال",
-          "value": "Automatic Pulse Ignition"
+          "value": "إشعال نبضي تلقائي"
         },
         {
           "key": "الأمان",
-          "value": "Flame Failure Device (FFD)"
+          "value": "جهاز فشل اللهب (FFD)"
         },
         {
           "key": "الأبعاد",
@@ -5929,7 +5929,7 @@
         "جهاز Flame failure safety device — يقطع الغاز تلقائيًا عند انطفاء الشعلة"
       ],
       "imageAlt": "موقد غاز مدمج بأربع شعلات HP-GS4 بسطح من الفولاذ المقاوم للصدأ وحاملات من الحديد الزهر للمطابخ المنزلية",
-      "imageTitle": "موقد غاز بأربع شعلات HP-GS4 | HousePlus Appliance Wholesale",
+      "imageTitle": "موقد غاز بأربع شعلات HP-GS4 | HousePlus لبيع الأجهزة بالجملة",
       "badge": "الأكثر مبيعًا",
       "faq": []
     },
@@ -5946,27 +5946,27 @@
         },
         {
           "key": "Brenner",
-          "value": "4 (1x3.5kW + 2x2.0kW + 1x1.0kW)"
+          "value": "4 Brenner (1x3.5kW + 2x2.0kW + 1x1.0kW)"
         },
         {
           "key": "Oberflächenmaterial",
-          "value": "304 Stainless Steel"
+          "value": "304 Edelstahl"
         },
         {
           "key": "Roste",
-          "value": "Cast Iron — Removable"
+          "value": "Gusseisen — abnehmbar"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualverwendung"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Pulse Ignition"
+          "value": "Automatische Impulszündung"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure Device (FFD)"
+          "value": "Flammenausfallsicherung (FFD)"
         },
         {
           "key": "Abmessungen",
@@ -5980,7 +5980,7 @@
         "Flame failure safety device — trennt die Gaszufuhr automatisch, wenn die Flamme erlischt"
       ],
       "imageAlt": "4-Brenner Einbau-Gaskochfeld HP-GS4 mit Edelstahl-Oberfläche und Gusseisenrosten für Haushaltsküchen",
-      "imageTitle": "4-Brenner Gaskochfeld HP-GS4 | HousePlus Appliance Wholesale",
+      "imageTitle": "4-Brenner Gaskochfeld HP-GS4 | HousePlus Haushaltsgeräte-Großhandel",
       "badge": "Bestseller",
       "faq": []
     }
@@ -6007,7 +6007,7 @@
         },
         {
           "key": "Funciones",
-          "value": "8 (Bake, Grill, Convection, Rotisserie, Defrost, etc.)"
+          "value": "8 (Hornear, Parrilla, Convección, Asador giratorio, Descongelar, etc.)"
         },
         {
           "key": "Rango de temperatura",
@@ -6015,11 +6015,11 @@
         },
         {
           "key": "Puerta",
-          "value": "Triple-Glazed Cool-Touch"
+          "value": "Triple acristalamiento, superficie fría al tacto"
         },
         {
           "key": "Temporizador",
-          "value": "Digital — 120 min with Auto Shut-off"
+          "value": "Digital — 120 min con apagado automático"
         },
         {
           "key": "Clase energética",
@@ -6058,7 +6058,7 @@
         },
         {
           "key": "Funktionen",
-          "value": "8 (Bake, Grill, Convection, Rotisserie, Defrost, etc.)"
+          "value": "8 (Backen, Grill, Umluft, Drehspieß, Auftauen, usw.)"
         },
         {
           "key": "Temperaturbereich",
@@ -6066,11 +6066,11 @@
         },
         {
           "key": "Tür",
-          "value": "Triple-Glazed Cool-Touch"
+          "value": "Dreifachverglast, Cool-Touch"
         },
         {
           "key": "Timer",
-          "value": "Digital — 120 min with Auto Shut-off"
+          "value": "Digital — 120 min mit automatischer Abschaltung"
         },
         {
           "key": "Energieeffizienzklasse",
@@ -6109,7 +6109,7 @@
         },
         {
           "key": "Fonctions",
-          "value": "8 (Bake, Grill, Convection, Rotisserie, Defrost, etc.)"
+          "value": "8 (Cuisson, Gril, Convection, Rôtisserie, Décongélation, etc.)"
         },
         {
           "key": "Plage de température",
@@ -6117,11 +6117,11 @@
         },
         {
           "key": "Porte",
-          "value": "Triple-Glazed Cool-Touch"
+          "value": "Triple vitrage à surface froide"
         },
         {
           "key": "Minuterie",
-          "value": "Digital — 120 min with Auto Shut-off"
+          "value": "Numérique — 120 min avec arrêt automatique"
         },
         {
           "key": "Classe énergétique",
@@ -6160,7 +6160,7 @@
         },
         {
           "key": "الوظائف",
-          "value": "8 (Bake, Grill, Convection, Rotisserie, Defrost, etc.)"
+          "value": "8 (خبز، شواء، حمل حراري، روتيسيري (شواية دوارة)، إذابة الثلج، إلخ.)"
         },
         {
           "key": "نطاق الحرارة",
@@ -6168,11 +6168,11 @@
         },
         {
           "key": "الباب",
-          "value": "Triple-Glazed Cool-Touch"
+          "value": "زجاج ثلاثي الطبقات مع سطح بارد عند اللمس"
         },
         {
           "key": "المؤقت",
-          "value": "Digital — 120 min with Auto Shut-off"
+          "value": "رقمي — 120 min مع إيقاف تلقائي"
         },
         {
           "key": "تصنيف الطاقة",
@@ -6209,7 +6209,7 @@
         },
         {
           "key": "Puissance micro-ondes",
-          "value": "900W (10 Levels)"
+          "value": "900W (10 niveaux)"
         },
         {
           "key": "Puissance gril",
@@ -6217,19 +6217,19 @@
         },
         {
           "key": "Programmes préréglés",
-          "value": "6 Preset Programmes"
+          "value": "6 programmes préréglés"
         },
         {
           "key": "Cavité",
-          "value": "Stainless Steel"
+          "value": "Acier inoxydable"
         },
         {
           "key": "Affichage",
-          "value": "Digital LED with Clock"
+          "value": "Affichage LED numérique avec horloge"
         },
         {
           "key": "Sécurité",
-          "value": "Child Lock + Auto Shut-off"
+          "value": "Verrouillage enfant + arrêt automatique"
         }
       ],
       "features": [
@@ -6260,7 +6260,7 @@
         },
         {
           "key": "Potencia de microondas",
-          "value": "900W (10 Levels)"
+          "value": "900W (10 niveles)"
         },
         {
           "key": "Potencia del grill",
@@ -6268,19 +6268,19 @@
         },
         {
           "key": "Menús automáticos",
-          "value": "6 Preset Programmes"
+          "value": "6 programas preestablecidos"
         },
         {
           "key": "Cavidad",
-          "value": "Stainless Steel"
+          "value": "Acero inoxidable"
         },
         {
           "key": "Pantalla",
-          "value": "Digital LED with Clock"
+          "value": "LED digital con reloj"
         },
         {
           "key": "Seguridad",
-          "value": "Child Lock + Auto Shut-off"
+          "value": "Bloqueo infantil + apagado automático"
         }
       ],
       "features": [
@@ -6311,7 +6311,7 @@
         },
         {
           "key": "قدرة الميكروويف",
-          "value": "900W (10 Levels)"
+          "value": "900W (10 مستويات)"
         },
         {
           "key": "قدرة الشواية",
@@ -6319,19 +6319,19 @@
         },
         {
           "key": "قوائم الطهي الآلي",
-          "value": "6 Preset Programmes"
+          "value": "6 برامج مسبقة الضبط"
         },
         {
           "key": "التجويف",
-          "value": "Stainless Steel"
+          "value": "فولاذ مقاوم للصدأ"
         },
         {
           "key": "الشاشة",
-          "value": "Digital LED with Clock"
+          "value": "شاشة LED رقمية مع ساعة"
         },
         {
           "key": "السلامة",
-          "value": "Child Lock + Auto Shut-off"
+          "value": "قفل أمان للأطفال + إيقاف تلقائي"
         }
       ],
       "features": [
@@ -6341,7 +6341,7 @@
         "قفل أمان للأطفال وميزة الإيقاف التلقائي لراحة البال"
       ],
       "imageAlt": "ميكروويف رقمي 25L HP-MW25 مع وظيفة الشواية و10 مستويات طاقة لمطابخ المنازل",
-      "imageTitle": "ميكروويف 25L HP-MW25 | HousePlus Appliance Wholesale",
+      "imageTitle": "ميكروويف 25L HP-MW25 | HousePlus توزيع الأجهزة بالجملة",
       "badge": "",
       "faq": []
     },
@@ -6362,7 +6362,7 @@
         },
         {
           "key": "Mikrowellenleistung",
-          "value": "900W (10 Levels)"
+          "value": "900W (10 Stufen)"
         },
         {
           "key": "Grillleistung",
@@ -6370,19 +6370,19 @@
         },
         {
           "key": "Auto-Kochprogramme",
-          "value": "6 Preset Programmes"
+          "value": "6 voreingestellte Programme"
         },
         {
           "key": "Innenraum",
-          "value": "Stainless Steel"
+          "value": "Edelstahl"
         },
         {
           "key": "Anzeige",
-          "value": "Digital LED with Clock"
+          "value": "Digitales LED-Display mit Uhr"
         },
         {
           "key": "Sicherheit",
-          "value": "Child Lock + Auto Shut-off"
+          "value": "Kindersicherung + automatische Abschaltung"
         }
       ],
       "features": [
@@ -6419,23 +6419,23 @@
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Temperaturbereich",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (einstellbar)"
         },
         {
           "key": "Anzeige",
-          "value": "LED Digital Temperature"
+          "value": "LED digitale Temperaturanzeige"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Electric"
+          "value": "Elektrisch, automatisch"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "Flammenausfall + Überdruck + Trockenbrennschutz + Frostschutz"
         }
       ],
       "features": [
@@ -6445,7 +6445,7 @@
         "LPG/NG-Doppelbetrieb — inkl. Umrüstsatz für einfachen Brennstoffwechsel"
       ],
       "imageAlt": "12L/min tankloser Gas-Durchlauferhitzer HP-GWH12 mit LED-Anzeige und mehreren Sicherheitsschutzfunktionen für private Badezimmer",
-      "imageTitle": "12L Gas Water Heater HP-GWH12 | HousePlus Großhandel für Haushaltsgeräte",
+      "imageTitle": "12L Gas-Wassererhitzer HP-GWH12 | HousePlus Großhandel für Haushaltsgeräte",
       "badge": "Bestseller",
       "faq": []
     },
@@ -6470,23 +6470,23 @@
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Double usage"
         },
         {
           "key": "Plage de température",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (réglable)"
         },
         {
           "key": "Affichage",
-          "value": "LED Digital Temperature"
+          "value": "Affichage numérique de la température LED"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Electric"
+          "value": "Automatique électrique"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "Défaillance de la flamme + Surpression + Combustion à sec + Antigel"
         }
       ],
       "features": [
@@ -6521,23 +6521,23 @@
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "نطاق درجات الحرارة",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (قابل للتعديل)"
         },
         {
           "key": "الشاشة",
-          "value": "LED Digital Temperature"
+          "value": "عرض درجة حرارة رقمي LED"
         },
         {
           "key": "الإشعال",
-          "value": "Automatic Electric"
+          "value": "كهربائي أوتوماتيكي"
         },
         {
           "key": "السلامة",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "فشل اللهب + زيادة الضغط + الاحتراق الجاف + مضاد للتجمد"
         }
       ],
       "features": [
@@ -6572,23 +6572,23 @@
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG de uso dual"
         },
         {
           "key": "Rango de temperatura",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (Ajustable)"
         },
         {
           "key": "Pantalla",
-          "value": "LED Digital Temperature"
+          "value": "Temperatura digital LED"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Electric"
+          "value": "Eléctrico automático"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "Fallo de llama + Sobrepresión + Combustión en seco + Antihielo"
         }
       ],
       "features": [
@@ -6625,23 +6625,23 @@
         },
         {
           "key": "Nivel de ruido",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (Velocidad máxima)"
         },
         {
           "key": "Motor",
-          "value": "3-Speed Turbo"
+          "value": "Turbo de 3 velocidades"
         },
         {
           "key": "Filtro",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "Deflector de acero inoxidable — Apto para lavavajillas"
         },
         {
           "key": "Iluminación",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W cada uno)"
         },
         {
           "key": "Material",
-          "value": "430 Stainless Steel"
+          "value": "Acero inoxidable 430"
         }
       ],
       "features": [
@@ -6676,23 +6676,23 @@
         },
         {
           "key": "Geräuschpegel",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (Maximale Geschwindigkeit)"
         },
         {
           "key": "Motor",
-          "value": "3-Speed Turbo"
+          "value": "3-Stufen-Turbo"
         },
         {
           "key": "Filter",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "Edelstahl-Baffle — Spülmaschinenfest"
         },
         {
           "key": "Beleuchtung",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (je 3W)"
         },
         {
           "key": "Material",
-          "value": "430 Stainless Steel"
+          "value": "430 Edelstahl"
         }
       ],
       "features": [
@@ -6727,23 +6727,23 @@
         },
         {
           "key": "Niveau sonore",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (Vitesse maximale)"
         },
         {
           "key": "Moteur",
-          "value": "3-Speed Turbo"
+          "value": "Turbo 3 vitesses"
         },
         {
           "key": "Filtre",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "Baffle en acier inoxydable — Compatible lave-vaisselle"
         },
         {
           "key": "Éclairage",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W chacune)"
         },
         {
           "key": "Matériau",
-          "value": "430 Stainless Steel"
+          "value": "Acier inoxydable 430"
         }
       ],
       "features": [
@@ -6778,23 +6778,23 @@
         },
         {
           "key": "مستوى الضوضاء",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (أقصى سرعة)"
         },
         {
           "key": "المحرك",
-          "value": "3-Speed Turbo"
+          "value": "توربو 3 سرعات"
         },
         {
           "key": "الفلتر",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "حاجز من الفولاذ المقاوم للصدأ — قابل للغسل في غسالة الأطباق"
         },
         {
           "key": "الإضاءة",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W لكل واحدة)"
         },
         {
           "key": "المادة",
-          "value": "430 Stainless Steel"
+          "value": "فولاذ مقاوم للصدأ 430"
         }
       ],
       "features": [
@@ -6823,7 +6823,7 @@
         },
         {
           "key": "Configuración",
-          "value": "3 Gas Burners + 1 Electric Plate"
+          "value": "3 quemadores de gas + 1 placa eléctrica"
         },
         {
           "key": "Quemadores de gas",
@@ -6831,23 +6831,23 @@
         },
         {
           "key": "Placa eléctrica",
-          "value": "1500W Radiant"
+          "value": "1500W radiante"
         },
         {
           "key": "Superficie",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "Cristal templado negro (8mm)"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG de uso dual"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Pulse (Gas)"
+          "value": "Pulso automático (gas)"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure Device + Overheat Protection + Thermal Fuse"
+          "value": "Dispositivo de corte por ausencia de llama + protección contra sobrecalentamiento + fusible térmico"
         }
       ],
       "features": [
@@ -6874,7 +6874,7 @@
         },
         {
           "key": "Configuration",
-          "value": "3 Gas Burners + 1 Electric Plate"
+          "value": "3 brûleurs à gaz + 1 plaque électrique"
         },
         {
           "key": "Brûleurs à gaz",
@@ -6882,23 +6882,23 @@
         },
         {
           "key": "Plaque électrique",
-          "value": "1500W Radiant"
+          "value": "1500W radiant"
         },
         {
           "key": "Surface",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "Verre trempé noir (8mm)"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "Usage double GPL / GN"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Pulse (Gas)"
+          "value": "Allumage par impulsion automatique (gaz)"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure Device + Overheat Protection + Thermal Fuse"
+          "value": "Dispositif de coupure de flamme + Protection contre la surchauffe + Fusible thermique"
         }
       ],
       "features": [
@@ -6925,7 +6925,7 @@
         },
         {
           "key": "Konfiguration",
-          "value": "3 Gas Burners + 1 Electric Plate"
+          "value": "3 Gasbrenner + 1 Elektroplatte"
         },
         {
           "key": "Gasbrenner",
@@ -6933,23 +6933,23 @@
         },
         {
           "key": "Elektrische Platte",
-          "value": "1500W Radiant"
+          "value": "1500W Strahlheizelement"
         },
         {
           "key": "Oberfläche",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "Schwarzes gehärtetes Glas (8mm)"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Pulse (Gas)"
+          "value": "Automatische Impulszündung (Gas)"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure Device + Overheat Protection + Thermal Fuse"
+          "value": "Flammenausfallsicherung + Überhitzungsschutz + Thermosicherung"
         }
       ],
       "features": [
@@ -6976,7 +6976,7 @@
         },
         {
           "key": "التكوين",
-          "value": "3 Gas Burners + 1 Electric Plate"
+          "value": "3 شعلات غاز + 1 صفيحة كهربائية"
         },
         {
           "key": "شعلات الغاز",
@@ -6984,23 +6984,23 @@
         },
         {
           "key": "اللوحة الكهربائية",
-          "value": "1500W Radiant"
+          "value": "1500W إشعاعي"
         },
         {
           "key": "السطح",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "زجاج مقوى أسود (8mm)"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "نظام الاشتعال",
-          "value": "Automatic Pulse (Gas)"
+          "value": "نبضة تلقائية (غاز)"
         },
         {
           "key": "السلامة",
-          "value": "Flame Failure Device + Overheat Protection + Thermal Fuse"
+          "value": "جهاز فصل الغاز عند انطفاء اللهب + حماية من ارتفاع الحرارة + مصهر حراري"
         }
       ],
       "features": [
@@ -7029,7 +7029,7 @@
         },
         {
           "key": "Zonas",
-          "value": "2 Induction Zones"
+          "value": "2 zonas de inducción"
         },
         {
           "key": "Potencia Total",
@@ -7037,19 +7037,19 @@
         },
         {
           "key": "Niveles de Calentamiento",
-          "value": "9 Levels per Zone"
+          "value": "9 niveles por zona"
         },
         {
           "key": "Superficie",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Cristal cerámico Schott Ceran"
         },
         {
           "key": "Control",
-          "value": "Touch Sensor + Slide Control"
+          "value": "Sensor táctil + control deslizante"
         },
         {
           "key": "Seguridad",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat Indicator + Auto Shut-off"
+          "value": "Detección automática de sartén + bloqueo infantil + indicador de calor residual + apagado automático"
         },
         {
           "key": "Dimensiones",
@@ -7080,7 +7080,7 @@
         },
         {
           "key": "Zonen",
-          "value": "2 Induction Zones"
+          "value": "2 Induktionszonen"
         },
         {
           "key": "Gesamtleistung",
@@ -7088,19 +7088,19 @@
         },
         {
           "key": "Heizstufen",
-          "value": "9 Levels per Zone"
+          "value": "9 Stufen pro Zone"
         },
         {
           "key": "Oberfläche",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Schott Ceran Keramikglas"
         },
         {
           "key": "Bedienung",
-          "value": "Touch Sensor + Slide Control"
+          "value": "Touch-Sensor + Schieberegler"
         },
         {
           "key": "Sicherheit",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat Indicator + Auto Shut-off"
+          "value": "Automatische Topferkennung + Kindersicherung + Restwärmeanzeige + Automatische Abschaltung"
         },
         {
           "key": "Abmessungen",
@@ -7131,7 +7131,7 @@
         },
         {
           "key": "Zones",
-          "value": "2 Induction Zones"
+          "value": "2 zones à induction"
         },
         {
           "key": "Puissance Totale",
@@ -7139,19 +7139,19 @@
         },
         {
           "key": "Niveaux de Chauffe",
-          "value": "9 Levels per Zone"
+          "value": "9 niveaux par zone"
         },
         {
           "key": "Surface",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Verre céramique Schott Ceran"
         },
         {
           "key": "Commande",
-          "value": "Touch Sensor + Slide Control"
+          "value": "Capteur tactile + commande par curseur"
         },
         {
           "key": "Sécurité",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat Indicator + Auto Shut-off"
+          "value": "Détection automatique de la casserole + verrouillage enfant + indicateur de chaleur résiduelle + arrêt automatique"
         },
         {
           "key": "Dimensions",
@@ -7182,7 +7182,7 @@
         },
         {
           "key": "المناطق",
-          "value": "2 Induction Zones"
+          "value": "2 مناطق للحث"
         },
         {
           "key": "الطاقة الإجمالية",
@@ -7190,19 +7190,19 @@
         },
         {
           "key": "مستويات التسخين",
-          "value": "9 Levels per Zone"
+          "value": "9 مستويات لكل منطقة"
         },
         {
           "key": "السطح",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "زجاج سيراميك Schott Ceran"
         },
         {
           "key": "التحكم",
-          "value": "Touch Sensor + Slide Control"
+          "value": "مستشعر باللمس + تحكم منزلق"
         },
         {
           "key": "السلامة",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat Indicator + Auto Shut-off"
+          "value": "كشف الأواني تلقائيًا + قفل الطفل + مؤشر الحرارة المتبقية + الإيقاف التلقائي"
         },
         {
           "key": "الأبعاد",
@@ -7235,7 +7235,7 @@
         },
         {
           "key": "Zonas",
-          "value": "2 Radiant Heating Zones"
+          "value": "2 zonas de calentamiento radiante"
         },
         {
           "key": "Potencia total",
@@ -7243,23 +7243,23 @@
         },
         {
           "key": "Niveles de calentamiento",
-          "value": "9 Levels"
+          "value": "9 niveles"
         },
         {
           "key": "Superficie",
-          "value": "Black Ceramic Glass"
+          "value": "Vidrio cerámico negro"
         },
         {
           "key": "Control",
-          "value": "Touch Sensor"
+          "value": "Sensor táctil"
         },
         {
           "key": "Utensilios de cocina",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "Compatible con todo tipo de recipientes — No requiere que sean magnéticos"
         },
         {
           "key": "Seguridad",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off"
+          "value": "Indicador de calor residual + Bloqueo infantil + Apagado automático"
         }
       ],
       "features": [
@@ -7286,31 +7286,31 @@
         },
         {
           "key": "Zonen",
-          "value": "2 Radiant Heating Zones"
+          "value": "2 Strahlungsheizzonen"
         },
         {
           "key": "Gesamtleistung",
-          "value": "3000W (1800W + 1200W)"
+          "value": "3000 W (1800 W + 1200 W)"
         },
         {
           "key": "Heizstufen",
-          "value": "9 Levels"
+          "value": "9 Stufen"
         },
         {
           "key": "Oberfläche",
-          "value": "Black Ceramic Glass"
+          "value": "Schwarzes Keramikglas"
         },
         {
           "key": "Steuerung",
-          "value": "Touch Sensor"
+          "value": "Touch-Sensor"
         },
         {
           "key": "Kochgeschirr",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "Alle Topfarten — keine magnetische Voraussetzung"
         },
         {
           "key": "Sicherheit",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off"
+          "value": "Restwärmeanzeige + Kindersicherung + automatische Abschaltung"
         }
       ],
       "features": [
@@ -7337,7 +7337,7 @@
         },
         {
           "key": "Zones",
-          "value": "2 Radiant Heating Zones"
+          "value": "2 zones de chauffage rayonnant"
         },
         {
           "key": "Puissance totale",
@@ -7345,23 +7345,23 @@
         },
         {
           "key": "Niveaux de chauffage",
-          "value": "9 Levels"
+          "value": "9 niveaux"
         },
         {
           "key": "Surface",
-          "value": "Black Ceramic Glass"
+          "value": "Verre céramique noir"
         },
         {
           "key": "Commande",
-          "value": "Touch Sensor"
+          "value": "Capteur tactile"
         },
         {
           "key": "Ustensiles",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "Tous types — Aucune exigence magnétique"
         },
         {
           "key": "Sécurité",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off"
+          "value": "Indicateur de chaleur résiduelle + Verrouillage enfant + Arrêt automatique"
         }
       ],
       "features": [
@@ -7388,7 +7388,7 @@
         },
         {
           "key": "المناطق",
-          "value": "2 Radiant Heating Zones"
+          "value": "2 مناطق تسخين إشعاعية"
         },
         {
           "key": "القوة الإجمالية",
@@ -7396,23 +7396,23 @@
         },
         {
           "key": "مستويات التسخين",
-          "value": "9 Levels"
+          "value": "9 مستويات"
         },
         {
           "key": "السطح",
-          "value": "Black Ceramic Glass"
+          "value": "زجاج سيراميكي أسود"
         },
         {
           "key": "التحكم",
-          "value": "Touch Sensor"
+          "value": "حساس باللمس"
         },
         {
           "key": "أدوات الطهي",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "جميع الأنواع — لا يتطلب استخدام أواني مغناطيسية"
         },
         {
           "key": "السلامة",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off"
+          "value": "مؤشر الحرارة المتبقية + قفل أمان للأطفال + الإيقاف التلقائي"
         }
       ],
       "features": [
@@ -7445,23 +7445,23 @@
         },
         {
           "key": "Tipo",
-          "value": "Tabletop / Portable"
+          "value": "De sobremesa / portátil"
         },
         {
           "key": "Superficie",
-          "value": "430 Stainless Steel"
+          "value": "Acero inoxidable 430"
         },
         {
           "key": "Rejillas",
-          "value": "Cast Iron — Removable"
+          "value": "Hierro fundido — desmontable"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG de uso dual"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Pulse"
+          "value": "Encendido automático por pulso"
         },
         {
           "key": "Dimensiones",
@@ -7496,23 +7496,23 @@
         },
         {
           "key": "Type",
-          "value": "Tabletop / Portable"
+          "value": "À poser / Portable"
         },
         {
           "key": "Surface",
-          "value": "430 Stainless Steel"
+          "value": "Acier inoxydable 430"
         },
         {
           "key": "Grilles",
-          "value": "Cast Iron — Removable"
+          "value": "Fonte — Amovible"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG à double usage"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Pulse"
+          "value": "Impulsion automatique"
         },
         {
           "key": "Dimensions",
@@ -7547,23 +7547,23 @@
         },
         {
           "key": "Typ",
-          "value": "Tabletop / Portable"
+          "value": "Tischgerät / Tragbar"
         },
         {
           "key": "Oberfläche",
-          "value": "430 Stainless Steel"
+          "value": "430 Edelstahl"
         },
         {
           "key": "Roste",
-          "value": "Cast Iron — Removable"
+          "value": "Gusseisen — Abnehmbar"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Pulse"
+          "value": "Automatische Zündung"
         },
         {
           "key": "Abmessungen",
@@ -7598,23 +7598,23 @@
         },
         {
           "key": "النوع",
-          "value": "Tabletop / Portable"
+          "value": "سطح الطاولة / محمول"
         },
         {
           "key": "السطح",
-          "value": "430 Stainless Steel"
+          "value": "430 فولاذ مقاوم للصدأ"
         },
         {
           "key": "الشوايات",
-          "value": "Cast Iron — Removable"
+          "value": "حديد زهر — قابل للإزالة"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "نظام الإشعال",
-          "value": "Automatic Pulse"
+          "value": "اشتعال نبضي تلقائي"
         },
         {
           "key": "الأبعاد",
@@ -7651,23 +7651,23 @@
         },
         {
           "key": "Oberfläche",
-          "value": "304 Stainless Steel"
+          "value": "304 Edelstahl"
         },
         {
           "key": "Roste",
-          "value": "Cast Iron — Removable"
+          "value": "Gusseisen — abnehmbar"
         },
         {
           "key": "Gastyp",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Pulse"
+          "value": "Automatischer Impuls"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure Device (FFD)"
+          "value": "Flammenausfallsicherung (FFD)"
         },
         {
           "key": "Abmessungen",
@@ -7702,23 +7702,23 @@
         },
         {
           "key": "Surface",
-          "value": "304 Stainless Steel"
+          "value": "Acier inoxydable 304"
         },
         {
           "key": "Grilles",
-          "value": "Cast Iron — Removable"
+          "value": "Fonte — amovible"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG à double usage"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Pulse"
+          "value": "Allumage par impulsion automatique"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure Device (FFD)"
+          "value": "Dispositif de coupure de flamme (FFD)"
         },
         {
           "key": "Dimensions",
@@ -7753,23 +7753,23 @@
         },
         {
           "key": "Superficie",
-          "value": "304 Stainless Steel"
+          "value": "Acero inoxidable 304"
         },
         {
           "key": "Parrillas",
-          "value": "Cast Iron — Removable"
+          "value": "Hierro fundido — desmontable"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG de uso dual"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Pulse"
+          "value": "Pulso automático"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure Device (FFD)"
+          "value": "Dispositivo de fallo de llama (FFD)"
         },
         {
           "key": "Dimensiones",
@@ -7800,27 +7800,27 @@
         },
         {
           "key": "الشعلات",
-          "value": "3 (1x3.5kW Wok + 1x2.0kW + 1x1.0kW)"
+          "value": "3 (1x3.5kW ووك + 1x2.0kW + 1x1.0kW)"
         },
         {
           "key": "سطح",
-          "value": "304 Stainless Steel"
+          "value": "304 فولاذ مقاوم للصدأ"
         },
         {
           "key": "شبكات",
-          "value": "Cast Iron — Removable"
+          "value": "حديد زهر — قابل للإزالة"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "اشتعال",
-          "value": "Automatic Pulse"
+          "value": "نبض أوتوماتيكي"
         },
         {
           "key": "أمان",
-          "value": "Flame Failure Device (FFD)"
+          "value": "جهاز فشل اللهب (FFD)"
         },
         {
           "key": "أبعاد",
@@ -7857,23 +7857,23 @@
         },
         {
           "key": "Superficie",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "Vidrio templado negro (8mm)"
         },
         {
           "key": "Rejillas",
-          "value": "Cast Iron — Matte Enamel"
+          "value": "Hierro fundido — Esmalte mate"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "Uso dual LPG / NG"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Pulse"
+          "value": "Pulso automático"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure Device (FFD) on All Burners"
+          "value": "Dispositivo de fallo de llama (FFD) en todos los quemadores"
         },
         {
           "key": "Dimensiones",
@@ -7887,7 +7887,7 @@
         "Dispositivo de seguridad por fallo de llama en los 5 quemadores + diseño de mandos seguro para niños"
       ],
       "imageAlt": "Encimera empotrable de gas de 5 quemadores HP-GS5 con quemadores wok dobles y superficie de vidrio templado negro para cocinas premium",
-      "imageTitle": "Encimera de gas de 5 quemadores HP-GS5 | HousePlus Appliance Wholesale",
+      "imageTitle": "Encimera de gas de 5 quemadores HP-GS5 | HousePlus Appliance Venta al por mayor",
       "badge": "Premium",
       "faq": []
     },
@@ -7908,23 +7908,23 @@
         },
         {
           "key": "Oberfläche",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "Schwarzes gehärtetes Glas (8mm)"
         },
         {
           "key": "Roste",
-          "value": "Cast Iron — Matte Enamel"
+          "value": "Gusseisen — matte Emaille"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Zündsystem",
-          "value": "Automatic Pulse"
+          "value": "Automatischer Impuls"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure Device (FFD) on All Burners"
+          "value": "Flammensicherheitsvorrichtung (FFD) an allen Brennern"
         },
         {
           "key": "Abmessungen",
@@ -7959,23 +7959,23 @@
         },
         {
           "key": "Surface",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "Verre trempé noir (8mm)"
         },
         {
           "key": "Grilles",
-          "value": "Cast Iron — Matte Enamel"
+          "value": "Fonte — émail mat"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "Usage double GPL / GN"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Pulse"
+          "value": "Allumage automatique par impulsion"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure Device (FFD) on All Burners"
+          "value": "Dispositif de coupure en cas d'extinction de la flamme (FFD) sur tous les brûleurs"
         },
         {
           "key": "Dimensions",
@@ -8006,27 +8006,27 @@
         },
         {
           "key": "الشعلات",
-          "value": "5 (2x3.5kW Wok + 2x2.0kW + 1x1.0kW)"
+          "value": "5 (2x3.5kW ووك + 2x2.0kW + 1x1.0kW)"
         },
         {
           "key": "سطح",
-          "value": "Black Tempered Glass (8mm)"
+          "value": "زجاج مقسى أسود (8mm)"
         },
         {
           "key": "شبكات",
-          "value": "Cast Iron — Matte Enamel"
+          "value": "حديد زهر — طلاء مينا مطفي"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "اشتعال",
-          "value": "Automatic Pulse"
+          "value": "نبضة أوتوماتيكية"
         },
         {
           "key": "أمان",
-          "value": "Flame Failure Device (FFD) on All Burners"
+          "value": "جهاز انطفاء اللهب (FFD) على جميع الشعلات"
         },
         {
           "key": "أبعاد",
@@ -8067,7 +8067,7 @@
         },
         {
           "key": "Tipo de horno",
-          "value": "Gas — Convection Fan + Rotisserie + Grill"
+          "value": "Gas — Ventilador de convección + Asador giratorio + Parrilla"
         },
         {
           "key": "Temperatura del horno",
@@ -8075,11 +8075,11 @@
         },
         {
           "key": "Superficie",
-          "value": "Stainless Steel + Enamel Top"
+          "value": "Acero inoxidable + Tapa esmaltada"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "Uso dual LPG / NG"
         },
         {
           "key": "Dimensiones",
@@ -8118,7 +8118,7 @@
         },
         {
           "key": "Backofentyp",
-          "value": "Gas — Convection Fan + Rotisserie + Grill"
+          "value": "Gas — Umluftgebläse + Drehspieß + Grill"
         },
         {
           "key": "Backofentemperatur",
@@ -8126,11 +8126,11 @@
         },
         {
           "key": "Oberfläche",
-          "value": "Stainless Steel + Enamel Top"
+          "value": "Edelstahl + emaillierte Oberfläche"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dual-Betrieb"
         },
         {
           "key": "Abmessungen",
@@ -8169,7 +8169,7 @@
         },
         {
           "key": "Type de four",
-          "value": "Gas — Convection Fan + Rotisserie + Grill"
+          "value": "Gaz — Ventilateur de convection + Rôtissoire + Grill"
         },
         {
           "key": "Température du four",
@@ -8177,11 +8177,11 @@
         },
         {
           "key": "Surface",
-          "value": "Stainless Steel + Enamel Top"
+          "value": "Acier inoxydable + dessus émaillé"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "GPL / GN Double usage"
         },
         {
           "key": "Dimensions",
@@ -8220,7 +8220,7 @@
         },
         {
           "key": "نوع الفرن",
-          "value": "Gas — Convection Fan + Rotisserie + Grill"
+          "value": "غاز — مروحة تداول الهواء + روستيري + شواية"
         },
         {
           "key": "درجة حرارة الفرن",
@@ -8228,11 +8228,11 @@
         },
         {
           "key": "سطح",
-          "value": "Stainless Steel + Enamel Top"
+          "value": "فولاذ مقاوم للصدأ + سطح مينا"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "أبعاد",
@@ -8273,23 +8273,23 @@
         },
         {
           "key": "Nivel de ruido",
-          "value": "≤54 dB (Max Speed)"
+          "value": "≤54 dB (Velocidad máxima)"
         },
         {
           "key": "Motor",
-          "value": "3-Speed"
+          "value": "3 velocidades"
         },
         {
           "key": "Filtrar",
-          "value": "Aluminium Mesh — Dishwasher Safe"
+          "value": "Malla de aluminio — Apta para lavavajillas"
         },
         {
           "key": "Iluminación",
-          "value": "2x LED (2W each)"
+          "value": "2x LED (2W cada una)"
         },
         {
           "key": "Material",
-          "value": "430 Stainless Steel"
+          "value": "Acero inoxidable 430"
         }
       ],
       "features": [
@@ -8324,23 +8324,23 @@
         },
         {
           "key": "Geräuschpegel",
-          "value": "≤54 dB (Max Speed)"
+          "value": "≤54 dB (Maximale Geschwindigkeit)"
         },
         {
           "key": "Motor",
-          "value": "3-Speed"
+          "value": "3 Stufen"
         },
         {
           "key": "Filter",
-          "value": "Aluminium Mesh — Dishwasher Safe"
+          "value": "Aluminium-Mesh — Spülmaschinengeeignet"
         },
         {
           "key": "Beleuchtung",
-          "value": "2x LED (2W each)"
+          "value": "2x LED (2W jeweils)"
         },
         {
           "key": "Material",
-          "value": "430 Stainless Steel"
+          "value": "430 Edelstahl"
         }
       ],
       "features": [
@@ -8375,23 +8375,23 @@
         },
         {
           "key": "Niveau de bruit",
-          "value": "≤54 dB (Max Speed)"
+          "value": "≤54 dB (Vitesse maximale)"
         },
         {
           "key": "Moteur",
-          "value": "3-Speed"
+          "value": "3 vitesses"
         },
         {
           "key": "Filtre",
-          "value": "Aluminium Mesh — Dishwasher Safe"
+          "value": "Filtre en aluminium — Lavable au lave-vaisselle"
         },
         {
           "key": "Éclairage",
-          "value": "2x LED (2W each)"
+          "value": "2x LED (2W chacune)"
         },
         {
           "key": "Matériel",
-          "value": "430 Stainless Steel"
+          "value": "Acier inoxydable 430"
         }
       ],
       "features": [
@@ -8426,23 +8426,23 @@
         },
         {
           "key": "مستوى الضوضاء",
-          "value": "≤54 dB (Max Speed)"
+          "value": "≤54 dB (السرعة القصوى)"
         },
         {
           "key": "محرك",
-          "value": "3-Speed"
+          "value": "3-سرعات"
         },
         {
           "key": "فلتر",
-          "value": "Aluminium Mesh — Dishwasher Safe"
+          "value": "شبك ألومنيوم — قابل للغسل في غسالة الصحون"
         },
         {
           "key": "إضاءة",
-          "value": "2x LED (2W each)"
+          "value": "2x LED (2W لكل وحدة)"
         },
         {
           "key": "مادة",
-          "value": "430 Stainless Steel"
+          "value": "430 فولاذ مقاوم للصدأ"
         }
       ],
       "features": [
@@ -8479,23 +8479,23 @@
         },
         {
           "key": "Nivel de ruido",
-          "value": "≤55 dB (Max Speed)"
+          "value": "≤55 dB (Velocidad máxima)"
         },
         {
           "key": "Diseño",
-          "value": "Inclined Glass — Side Extraction"
+          "value": "Cristal inclinado — extracción lateral"
         },
         {
           "key": "Control",
-          "value": "3-Speed Touch Sensor"
+          "value": "Sensor táctil de 3 velocidades"
         },
         {
           "key": "Filtrar",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "Deflector de acero inoxidable — apto para lavavajillas"
         },
         {
           "key": "Material",
-          "value": "Black Tempered Glass + Stainless Steel"
+          "value": "Cristal templado negro + acero inoxidable"
         }
       ],
       "features": [
@@ -8530,23 +8530,23 @@
         },
         {
           "key": "Geräuschpegel",
-          "value": "≤55 dB (Max Speed)"
+          "value": "≤55 dB (bei höchster Stufe)"
         },
         {
           "key": "Design",
-          "value": "Inclined Glass — Side Extraction"
+          "value": "Geneigtes Glas — seitliche Abluft"
         },
         {
           "key": "Kontrolle",
-          "value": "3-Speed Touch Sensor"
+          "value": "3-stufiger Touch-Sensor"
         },
         {
           "key": "Filter",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "Edelstahl-Baffle — spülmaschinenfest"
         },
         {
           "key": "Material",
-          "value": "Black Tempered Glass + Stainless Steel"
+          "value": "Schwarzes gehärtetes Glas + Edelstahl"
         }
       ],
       "features": [
@@ -8581,23 +8581,23 @@
         },
         {
           "key": "Niveau de bruit",
-          "value": "≤55 dB (Max Speed)"
+          "value": "≤55 dB (vitesse maximale)"
         },
         {
           "key": "Conception",
-          "value": "Inclined Glass — Side Extraction"
+          "value": "Verre incliné — Extraction latérale"
         },
         {
           "key": "Contrôle",
-          "value": "3-Speed Touch Sensor"
+          "value": "Capteur tactile 3 vitesses"
         },
         {
           "key": "Filtre",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "Chicane en acier inoxydable — Compatible lave-vaisselle"
         },
         {
           "key": "Matériel",
-          "value": "Black Tempered Glass + Stainless Steel"
+          "value": "Verre trempé noir + acier inoxydable"
         }
       ],
       "features": [
@@ -8632,23 +8632,23 @@
         },
         {
           "key": "مستوى الضوضاء",
-          "value": "≤55 dB (Max Speed)"
+          "value": "≤55 dB (السرعة القصوى)"
         },
         {
           "key": "تصميم",
-          "value": "Inclined Glass — Side Extraction"
+          "value": "زجاج مائل — استخراج جانبي"
         },
         {
           "key": "يتحكم",
-          "value": "3-Speed Touch Sensor"
+          "value": "مستشعر لمسي 3-سرعات"
         },
         {
           "key": "فلتر",
-          "value": "Stainless Steel Baffle — Dishwasher Safe"
+          "value": "حاجز من الفولاذ المقاوم للصدأ — آمن لغسالة الصحون"
         },
         {
           "key": "مادة",
-          "value": "Black Tempered Glass + Stainless Steel"
+          "value": "زجاج مقسى أسود + فولاذ مقاوم للصدأ"
         }
       ],
       "features": [
@@ -8681,27 +8681,27 @@
         },
         {
           "key": "Poder de extracción",
-          "value": "1400 m3/h (Dual Motor)"
+          "value": "1400 m3/h (Motor dual)"
         },
         {
           "key": "Nivel de ruido",
-          "value": "≤58 dB (Max Speed)"
+          "value": "≤58 dB (Velocidad máxima)"
         },
         {
           "key": "Diseño",
-          "value": "T-Shape Ceiling Suspended"
+          "value": "Suspendida del techo en forma de T"
         },
         {
           "key": "Control",
-          "value": "4-Speed Touch + Remote"
+          "value": "Control táctil de 4 velocidades + mando a distancia"
         },
         {
           "key": "Filtrar",
-          "value": "Stainless Steel Baffle (x4) — Dishwasher Safe"
+          "value": "Deflectores de acero inoxidable (x4) — Aptos para lavavajillas"
         },
         {
           "key": "Iluminación",
-          "value": "LED Perimeter Strip (12W)"
+          "value": "Tira perimetral LED (12W)"
         }
       ],
       "features": [
@@ -8732,27 +8732,27 @@
         },
         {
           "key": "Extraktionsleistung",
-          "value": "1400 m3/h (Dual Motor)"
+          "value": "1400 m3/h (Doppelmotor)"
         },
         {
           "key": "Geräuschpegel",
-          "value": "≤58 dB (Max Speed)"
+          "value": "≤58 dB (Maximale Geschwindigkeit)"
         },
         {
           "key": "Design",
-          "value": "T-Shape Ceiling Suspended"
+          "value": "T-förmige Deckenaufhängung"
         },
         {
           "key": "Kontrolle",
-          "value": "4-Speed Touch + Remote"
+          "value": "4-Stufen Touch + Fernbedienung"
         },
         {
           "key": "Filter",
-          "value": "Stainless Steel Baffle (x4) — Dishwasher Safe"
+          "value": "Edelstahl-Baffle (x4) — Spülmaschinenfest"
         },
         {
           "key": "Beleuchtung",
-          "value": "LED Perimeter Strip (12W)"
+          "value": "LED-Perimeterstreifen (12W)"
         }
       ],
       "features": [
@@ -8783,27 +8783,27 @@
         },
         {
           "key": "Puissance d'extraction",
-          "value": "1400 m3/h (Dual Motor)"
+          "value": "1400 m3/h (Double moteur)"
         },
         {
           "key": "Niveau de bruit",
-          "value": "≤58 dB (Max Speed)"
+          "value": "≤58 dB (Vitesse maximale)"
         },
         {
           "key": "Conception",
-          "value": "T-Shape Ceiling Suspended"
+          "value": "Suspension au plafond en T"
         },
         {
           "key": "Contrôle",
-          "value": "4-Speed Touch + Remote"
+          "value": "4 vitesses tactile + télécommande"
         },
         {
           "key": "Filtre",
-          "value": "Stainless Steel Baffle (x4) — Dishwasher Safe"
+          "value": "Filtres à chicane en acier inoxydable (x4) — Compatible lave-vaisselle"
         },
         {
           "key": "Éclairage",
-          "value": "LED Perimeter Strip (12W)"
+          "value": "Bande LED périphérique (12W)"
         }
       ],
       "features": [
@@ -8834,27 +8834,27 @@
         },
         {
           "key": "قوة الاستخراج",
-          "value": "1400 m3/h (Dual Motor)"
+          "value": "1400 m3/h (محرك مزدوج)"
         },
         {
           "key": "مستوى الضوضاء",
-          "value": "≤58 dB (Max Speed)"
+          "value": "≤58 dB (أقصى سرعة)"
         },
         {
           "key": "تصميم",
-          "value": "T-Shape Ceiling Suspended"
+          "value": "معلق سقفي على شكل T"
         },
         {
           "key": "يتحكم",
-          "value": "4-Speed Touch + Remote"
+          "value": "تحكم باللمس 4 سرعات + جهاز تحكم عن بعد"
         },
         {
           "key": "فلتر",
-          "value": "Stainless Steel Baffle (x4) — Dishwasher Safe"
+          "value": "حاجز من الفولاذ المقاوم للصدأ (x4) — آمن لغسالة الصحون"
         },
         {
           "key": "إضاءة",
-          "value": "LED Perimeter Strip (12W)"
+          "value": "شريط LED محيطي (12W)"
         }
       ],
       "features": [
@@ -8891,23 +8891,23 @@
         },
         {
           "key": "Nivel de ruido",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (Velocidad máxima)"
         },
         {
           "key": "Diseño",
-          "value": "Curved Glass Canopy — Wall Mount"
+          "value": "Campana de vidrio curvo — Montaje en pared"
         },
         {
           "key": "Control",
-          "value": "3-Speed Push Button"
+          "value": "Botón pulsador de 3 velocidades"
         },
         {
           "key": "Filtrar",
-          "value": "Stainless Steel Baffle (x2) — Dishwasher Safe"
+          "value": "Filtros baffle de acero inoxidable (x2) — Apto para lavavajillas"
         },
         {
           "key": "Iluminación",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W cada uno)"
         }
       ],
       "features": [
@@ -8942,23 +8942,23 @@
         },
         {
           "key": "Geräuschpegel",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (Maximale Geschwindigkeit)"
         },
         {
           "key": "Design",
-          "value": "Curved Glass Canopy — Wall Mount"
+          "value": "Gebogene Glasblende — Wandmontage"
         },
         {
           "key": "Kontrolle",
-          "value": "3-Speed Push Button"
+          "value": "3-stufige Drucktasten"
         },
         {
           "key": "Filter",
-          "value": "Stainless Steel Baffle (x2) — Dishwasher Safe"
+          "value": "Edelstahl-Fettfilter (x2) — Spülmaschinengeeignet"
         },
         {
           "key": "Beleuchtung",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W jeweils)"
         }
       ],
       "features": [
@@ -8993,23 +8993,23 @@
         },
         {
           "key": "Niveau de bruit",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (vitesse maximale)"
         },
         {
           "key": "Conception",
-          "value": "Curved Glass Canopy — Wall Mount"
+          "value": "Auvent en verre incurvé — Montage mural"
         },
         {
           "key": "Contrôle",
-          "value": "3-Speed Push Button"
+          "value": "Commande à boutons-poussoirs 3 vitesses"
         },
         {
           "key": "Filtre",
-          "value": "Stainless Steel Baffle (x2) — Dishwasher Safe"
+          "value": "Filtre chicane en acier inoxydable (x2) — Compatible lave-vaisselle"
         },
         {
           "key": "Éclairage",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W chacune)"
         }
       ],
       "features": [
@@ -9044,23 +9044,23 @@
         },
         {
           "key": "مستوى الضوضاء",
-          "value": "≤56 dB (Max Speed)"
+          "value": "≤56 dB (أقصى سرعة)"
         },
         {
           "key": "تصميم",
-          "value": "Curved Glass Canopy — Wall Mount"
+          "value": "غطاء زجاجي منحني — تركيب على الحائط"
         },
         {
           "key": "يتحكم",
-          "value": "3-Speed Push Button"
+          "value": "زر دفع 3 سرعات"
         },
         {
           "key": "فلتر",
-          "value": "Stainless Steel Baffle (x2) — Dishwasher Safe"
+          "value": "بافل من الفولاذ المقاوم للصدأ (x2) — مناسب لغسالة الأطباق"
         },
         {
           "key": "إضاءة",
-          "value": "2x LED (3W each)"
+          "value": "2x LED (3W لكل منها)"
         }
       ],
       "features": [
@@ -9101,19 +9101,19 @@
         },
         {
           "key": "Preajustes",
-          "value": "7 One-Touch Programmes"
+          "value": "7 programas con un solo toque"
         },
         {
           "key": "Mostrar",
-          "value": "LED Touch Screen"
+          "value": "Pantalla táctil LED"
         },
         {
           "key": "Ventana",
-          "value": "Transparent Visual Cooking Window"
+          "value": "Ventana visual transparente de cocción"
         },
         {
           "key": "Cesta",
-          "value": "Non-stick, PFOA-free, Dishwasher Safe"
+          "value": "Antiadherente, libre de PFOA, apto para lavavajillas"
         }
       ],
       "features": [
@@ -9152,19 +9152,19 @@
         },
         {
           "key": "Voreinstellungen",
-          "value": "7 One-Touch Programmes"
+          "value": "7 One-Touch-Programme"
         },
         {
           "key": "Anzeige",
-          "value": "LED Touch Screen"
+          "value": "LED-Touchscreen"
         },
         {
           "key": "Fenster",
-          "value": "Transparent Visual Cooking Window"
+          "value": "Transparentes Sichtfenster zum Beobachten des Garvorgangs"
         },
         {
           "key": "Korb",
-          "value": "Non-stick, PFOA-free, Dishwasher Safe"
+          "value": "Antihaftbeschichtet, PFOA-frei, spülmaschinenfest"
         }
       ],
       "features": [
@@ -9203,19 +9203,19 @@
         },
         {
           "key": "Préréglages",
-          "value": "7 One-Touch Programmes"
+          "value": "7 programmes à une touche"
         },
         {
           "key": "Afficher",
-          "value": "LED Touch Screen"
+          "value": "Écran tactile LED"
         },
         {
           "key": "Fenêtre",
-          "value": "Transparent Visual Cooking Window"
+          "value": "Fenêtre de cuisson transparente"
         },
         {
           "key": "Panier",
-          "value": "Non-stick, PFOA-free, Dishwasher Safe"
+          "value": "Antiadhésif, sans PFOA, compatible lave-vaisselle"
         }
       ],
       "features": [
@@ -9254,19 +9254,19 @@
         },
         {
           "key": "الإعدادات المسبقة",
-          "value": "7 One-Touch Programmes"
+          "value": "7 برامج بلمسة واحدة"
         },
         {
           "key": "عرض",
-          "value": "LED Touch Screen"
+          "value": "شاشة لمس LED"
         },
         {
           "key": "نافذة",
-          "value": "Transparent Visual Cooking Window"
+          "value": "نافذة طبخ مرئية وشفافة"
         },
         {
           "key": "سلة",
-          "value": "Non-stick, PFOA-free, Dishwasher Safe"
+          "value": "غير لاصقة، خالية من PFOA، آمنة للغسل في غسالة الصحون"
         }
       ],
       "features": [
@@ -9307,19 +9307,19 @@
         },
         {
           "key": "Preajustes",
-          "value": "16 One-Touch Programmes"
+          "value": "16 programas de un toque"
         },
         {
           "key": "Mostrar",
-          "value": "Digital Touch Screen"
+          "value": "Pantalla táctil digital"
         },
         {
           "key": "Funciones",
-          "value": "Air Fry, Bake, Roast, Rotisserie, Dehydrate, Reheat, Toast, Grill"
+          "value": "Freír con aire, Hornear, Asar, Asador giratorio, Deshidratar, Recalentar, Tostar, Parrilla"
         },
         {
           "key": "Accesorios",
-          "value": "Rotisserie Fork + 3 Mesh Baskets + Drip Tray + Skewer Rack"
+          "value": "Tenedor para asador giratorio + 3 cestas de malla + bandeja de goteo + rejilla para brochetas"
         }
       ],
       "features": [
@@ -9358,19 +9358,19 @@
         },
         {
           "key": "Voreinstellungen",
-          "value": "16 One-Touch Programmes"
+          "value": "16 Ein-Tasten-Programme"
         },
         {
           "key": "Anzeige",
-          "value": "Digital Touch Screen"
+          "value": "Digitaler Touchscreen"
         },
         {
           "key": "Funktionen",
-          "value": "Air Fry, Bake, Roast, Rotisserie, Dehydrate, Reheat, Toast, Grill"
+          "value": "Heißluftfrittieren, Backen, Braten, Drehspieß, Dörren, Aufwärmen, Toasten, Grillen"
         },
         {
           "key": "Zubehör",
-          "value": "Rotisserie Fork + 3 Mesh Baskets + Drip Tray + Skewer Rack"
+          "value": "Drehspießgabel + 3 Gitterkörbe + Auffangschale + Spießgestell"
         }
       ],
       "features": [
@@ -9409,19 +9409,19 @@
         },
         {
           "key": "Préréglages",
-          "value": "16 One-Touch Programmes"
+          "value": "16 programmes à une touche"
         },
         {
           "key": "Afficher",
-          "value": "Digital Touch Screen"
+          "value": "Écran tactile numérique"
         },
         {
           "key": "Fonctions",
-          "value": "Air Fry, Bake, Roast, Rotisserie, Dehydrate, Reheat, Toast, Grill"
+          "value": "Friteuse à air, Cuisson au four, Rôtir, Rôtisserie, Déshydrater, Réchauffer, Griller (toast), Gril"
         },
         {
           "key": "Accessoires",
-          "value": "Rotisserie Fork + 3 Mesh Baskets + Drip Tray + Skewer Rack"
+          "value": "Fourchette de rôtisserie + 3 paniers en maille + Bac d'égouttement + Grille à brochettes"
         }
       ],
       "features": [
@@ -9460,19 +9460,19 @@
         },
         {
           "key": "الإعدادات المسبقة",
-          "value": "16 One-Touch Programmes"
+          "value": "16 برامج بلمسة واحدة"
         },
         {
           "key": "عرض",
-          "value": "Digital Touch Screen"
+          "value": "شاشة لمس رقمية"
         },
         {
           "key": "وظائف",
-          "value": "Air Fry, Bake, Roast, Rotisserie, Dehydrate, Reheat, Toast, Grill"
+          "value": "القلي بالهواء، خبز، تحميص، شواية دوارة، تجفيف، إعادة التسخين، تحميص الخبز، شواء"
         },
         {
           "key": "مُكَمِّلات",
-          "value": "Rotisserie Fork + 3 Mesh Baskets + Drip Tray + Skewer Rack"
+          "value": "شوكة الشواية الدوارة + 3 سلال شبكية + صينية تنقيط + حامل أسياخ"
         }
       ],
       "features": [
@@ -9505,11 +9505,11 @@
         },
         {
           "key": "Tipo de horno",
-          "value": "Gas — Convection Fan + Grill Burner"
+          "value": "Gas — Ventilador de convección + Quemador grill"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "GLP / GN de doble uso"
         },
         {
           "key": "Temperatura",
@@ -9517,15 +9517,15 @@
         },
         {
           "key": "Control",
-          "value": "Mechanical Knobs"
+          "value": "Mandos mecánicos"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure Device + Overheat Protection"
+          "value": "Dispositivo de fallo de llama + Protección contra sobrecalentamiento"
         },
         {
           "key": "Interior",
-          "value": "Enamel — Easy Clean"
+          "value": "Esmalte — Limpieza fácil"
         }
       ],
       "features": [
@@ -9556,11 +9556,11 @@
         },
         {
           "key": "Ofentyp",
-          "value": "Gas — Convection Fan + Grill Burner"
+          "value": "Gas — Konvektionslüfter + Grillbrenner"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Temperatur",
@@ -9568,15 +9568,15 @@
         },
         {
           "key": "Kontrolle",
-          "value": "Mechanical Knobs"
+          "value": "Mechanische Drehknöpfe"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure Device + Overheat Protection"
+          "value": "Flammensicherung + Überhitzungsschutz"
         },
         {
           "key": "Innere",
-          "value": "Enamel — Easy Clean"
+          "value": "Emaille — Einfach zu reinigen"
         }
       ],
       "features": [
@@ -9607,11 +9607,11 @@
         },
         {
           "key": "Type de four",
-          "value": "Gas — Convection Fan + Grill Burner"
+          "value": "Gaz — Ventilateur de convection + brûleur du gril"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "Double usage LPG / NG"
         },
         {
           "key": "Température",
@@ -9619,15 +9619,15 @@
         },
         {
           "key": "Contrôle",
-          "value": "Mechanical Knobs"
+          "value": "Boutons mécaniques"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure Device + Overheat Protection"
+          "value": "Dispositif d'arrêt de flamme + protection contre la surchauffe"
         },
         {
           "key": "Intérieur",
-          "value": "Enamel — Easy Clean"
+          "value": "Émail — Nettoyage facile"
         }
       ],
       "features": [
@@ -9658,11 +9658,11 @@
         },
         {
           "key": "نوع الفرن",
-          "value": "Gas — Convection Fan + Grill Burner"
+          "value": "غاز — مروحة حرارية + موقد شواية"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "غاز البترول المسال / الغاز الطبيعي ثنائي الاستخدام"
         },
         {
           "key": "درجة حرارة",
@@ -9670,15 +9670,15 @@
         },
         {
           "key": "يتحكم",
-          "value": "Mechanical Knobs"
+          "value": "مقابض ميكانيكية"
         },
         {
           "key": "أمان",
-          "value": "Flame Failure Device + Overheat Protection"
+          "value": "جهاز أمان عند فشل اللهب + حماية من ارتفاع الحرارة"
         },
         {
           "key": "الداخلية",
-          "value": "Enamel — Easy Clean"
+          "value": "مينا — سهلة التنظيف"
         }
       ],
       "features": [
@@ -9715,11 +9715,11 @@
         },
         {
           "key": "Modos",
-          "value": "3 (Pure Steam / Convection / Combi Steam)"
+          "value": "3 (Vapor Puro / Convección / Vapor Combinado)"
         },
         {
           "key": "Temperatura del vapor",
-          "value": "100°C (Pure Steam)"
+          "value": "100°C (Vapor Puro)"
         },
         {
           "key": "Rango de convección",
@@ -9727,11 +9727,11 @@
         },
         {
           "key": "Tanque de agua",
-          "value": "1.2L Removable"
+          "value": "1.2L Extraíble"
         },
         {
           "key": "Cavidad",
-          "value": "Enamel — Easy Clean"
+          "value": "Esmalte — Fácil limpieza"
         }
       ],
       "features": [
@@ -9766,11 +9766,11 @@
         },
         {
           "key": "Modi",
-          "value": "3 (Pure Steam / Convection / Combi Steam)"
+          "value": "3 (Reiner Dampf / Heißluft / Kombi-Dampf)"
         },
         {
           "key": "Dampftemperatur",
-          "value": "100°C (Pure Steam)"
+          "value": "100°C (Reiner Dampf)"
         },
         {
           "key": "Konvektionsbereich",
@@ -9778,11 +9778,11 @@
         },
         {
           "key": "Wassertank",
-          "value": "1.2L Removable"
+          "value": "1.2L herausnehmbar"
         },
         {
           "key": "Hohlraum",
-          "value": "Enamel — Easy Clean"
+          "value": "Emaille — leicht zu reinigen"
         }
       ],
       "features": [
@@ -9817,11 +9817,11 @@
         },
         {
           "key": "Modes",
-          "value": "3 (Pure Steam / Convection / Combi Steam)"
+          "value": "3 (Vapeur pure / Convection / Vapeur combinée)"
         },
         {
           "key": "Température de la vapeur",
-          "value": "100°C (Pure Steam)"
+          "value": "100°C (Vapeur pure)"
         },
         {
           "key": "Cuisinière à convection",
@@ -9829,11 +9829,11 @@
         },
         {
           "key": "Réservoir d'eau",
-          "value": "1.2L Removable"
+          "value": "1.2L Amovible"
         },
         {
           "key": "Cavité",
-          "value": "Enamel — Easy Clean"
+          "value": "Émail — Nettoyage facile"
         }
       ],
       "features": [
@@ -9868,11 +9868,11 @@
         },
         {
           "key": "وسائط",
-          "value": "3 (Pure Steam / Convection / Combi Steam)"
+          "value": "3 (بخار نقي / الطهي بالحمل الحراري / بخار مركب)"
         },
         {
           "key": "درجة حرارة البخار",
-          "value": "100°C (Pure Steam)"
+          "value": "100°C (بخار نقي)"
         },
         {
           "key": "نطاق الحمل الحراري",
@@ -9880,11 +9880,11 @@
         },
         {
           "key": "خزان المياه",
-          "value": "1.2L Removable"
+          "value": "1.2L قابل للإزالة"
         },
         {
           "key": "تجويف",
-          "value": "Enamel — Easy Clean"
+          "value": "مينا — سهل التنظيف"
         }
       ],
       "features": [
@@ -9921,23 +9921,23 @@
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG de uso dual"
         },
         {
           "key": "Rango de temperatura",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (ajustable)"
         },
         {
           "key": "Mostrar",
-          "value": "LED Digital"
+          "value": "LED digital"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Electric"
+          "value": "Eléctrico automático"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "Fallo de llama + Sobrepresión + Combustión en seco + Anticongelante"
         }
       ],
       "features": [
@@ -9972,23 +9972,23 @@
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Temperaturbereich",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (einstellbar)"
         },
         {
           "key": "Anzeige",
-          "value": "LED Digital"
+          "value": "LED digital"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Electric"
+          "value": "Elektrische Automatik"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "Flammenausfall + Überdruck + Schutz vor Trockenbrennen + Frostschutz"
         }
       ],
       "features": [
@@ -10023,23 +10023,23 @@
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "Double usage LPG / NG"
         },
         {
           "key": "Plage de température",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (réglable)"
         },
         {
           "key": "Afficher",
-          "value": "LED Digital"
+          "value": "Affichage LED numérique"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Electric"
+          "value": "Électrique automatique"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "Défaillance de la flamme + Surpression + Combustion à sec + Antigel"
         }
       ],
       "features": [
@@ -10074,23 +10074,23 @@
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "للاستخدام المزدوج LPG / NG"
         },
         {
           "key": "نطاق درجة الحرارة",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (قابل للتعديل)"
         },
         {
           "key": "عرض",
-          "value": "LED Digital"
+          "value": "LED رقمي"
         },
         {
           "key": "اشتعال",
-          "value": "Automatic Electric"
+          "value": "كهربائي تلقائي"
         },
         {
           "key": "أمان",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze"
+          "value": "انطفاء اللهب + زيادة الضغط + احتراق جاف + مضاد للتجمد"
         }
       ],
       "features": [
@@ -10127,23 +10127,23 @@
         },
         {
           "key": "Tipo de chimenea",
-          "value": "Balanced (Room-Sealed)"
+          "value": "Balanceado (estanco)"
         },
         {
           "key": "Tipo de gas",
-          "value": "LPG / NG Dual-Use"
+          "value": "Uso dual GLP / GN"
         },
         {
           "key": "Rango de temperatura",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (ajustable)"
         },
         {
           "key": "Mostrar",
-          "value": "LED Digital"
+          "value": "LED digital"
         },
         {
           "key": "Seguridad",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze + CO Protection"
+          "value": "Corte por ausencia de llama + protección por sobrepresión + protección contra funcionamiento en seco + protección anticongelante + protección contra monóxido de carbono"
         }
       ],
       "features": [
@@ -10178,23 +10178,23 @@
         },
         {
           "key": "Rauchabzugstyp",
-          "value": "Balanced (Room-Sealed)"
+          "value": "Ausgeglichen (raumluftunabhängig)"
         },
         {
           "key": "Gasart",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG Dualbetrieb"
         },
         {
           "key": "Temperaturbereich",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (einstellbar)"
         },
         {
           "key": "Anzeige",
-          "value": "LED Digital"
+          "value": "LED digital"
         },
         {
           "key": "Sicherheit",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze + CO Protection"
+          "value": "Flammenausfall + Überdruck + Trockene Verbrennung + Frostschutz + CO-Schutz"
         }
       ],
       "features": [
@@ -10229,23 +10229,23 @@
         },
         {
           "key": "Type de conduit",
-          "value": "Balanced (Room-Sealed)"
+          "value": "Équilibré (étanche au local)"
         },
         {
           "key": "Type de gaz",
-          "value": "LPG / NG Dual-Use"
+          "value": "GPL / GN à double usage"
         },
         {
           "key": "Plage de température",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (réglable)"
         },
         {
           "key": "Afficher",
-          "value": "LED Digital"
+          "value": "LED numérique"
         },
         {
           "key": "Sécurité",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze + CO Protection"
+          "value": "Défaut de flamme + Surpression + Protection contre la combustion à sec + Antigel + Protection CO"
         }
       ],
       "features": [
@@ -10280,23 +10280,23 @@
         },
         {
           "key": "نوع المداخن",
-          "value": "Balanced (Room-Sealed)"
+          "value": "متوازن (مغلق الغرفة)"
         },
         {
           "key": "نوع الغاز",
-          "value": "LPG / NG Dual-Use"
+          "value": "LPG / NG للاستخدام المزدوج"
         },
         {
           "key": "نطاق درجة الحرارة",
-          "value": "35–65°C (Adjustable)"
+          "value": "35–65°C (قابل للتعديل)"
         },
         {
           "key": "عرض",
-          "value": "LED Digital"
+          "value": "LED رقمي"
         },
         {
           "key": "أمان",
-          "value": "Flame Failure + Over-Pressure + Dry Combustion + Anti-Freeze + CO Protection"
+          "value": "انطفاء اللهب + زيادة الضغط + حماية من الاحتراق الجاف + حماية من التجمد + حماية من CO"
         }
       ],
       "features": [
@@ -10333,23 +10333,23 @@
         },
         {
           "key": "Material del tanque",
-          "value": "Enamel-Lined Steel (2mm)"
+          "value": "Acero revestido de esmalte (2mm)"
         },
         {
           "key": "Rango de temperatura",
-          "value": "30–75°C (Adjustable)"
+          "value": "30–75°C (Ajustable)"
         },
         {
           "key": "Control",
-          "value": "Digital Touch Display"
+          "value": "Pantalla táctil digital"
         },
         {
           "key": "Ánodo",
-          "value": "Magnesium — Replaceable"
+          "value": "Magnesio — Reemplazable"
         },
         {
           "key": "Seguridad",
-          "value": "Over-Temperature + Over-Pressure + Anti-Scald + Dry Fire Protection"
+          "value": "Protección contra sobretemperatura + sobrepresión + anti-quemaduras + protección contra funcionamiento en seco"
         }
       ],
       "features": [
@@ -10384,23 +10384,23 @@
         },
         {
           "key": "Tankmaterial",
-          "value": "Enamel-Lined Steel (2mm)"
+          "value": "Emaillierter Stahl (2mm)"
         },
         {
           "key": "Temperaturbereich",
-          "value": "30–75°C (Adjustable)"
+          "value": "30–75°C (einstellbar)"
         },
         {
           "key": "Kontrolle",
-          "value": "Digital Touch Display"
+          "value": "Digitales Touch-Display"
         },
         {
           "key": "Anode",
-          "value": "Magnesium — Replaceable"
+          "value": "Magnesium — austauschbar"
         },
         {
           "key": "Sicherheit",
-          "value": "Over-Temperature + Over-Pressure + Anti-Scald + Dry Fire Protection"
+          "value": "Übertemperatur + Überdruck + Verbrühschutz + Trockenlaufschutz"
         }
       ],
       "features": [
@@ -10435,23 +10435,23 @@
         },
         {
           "key": "Matériau du réservoir",
-          "value": "Enamel-Lined Steel (2mm)"
+          "value": "Acier revêtu d'émail (2mm)"
         },
         {
           "key": "Plage de température",
-          "value": "30–75°C (Adjustable)"
+          "value": "30–75°C (Réglable)"
         },
         {
           "key": "Contrôle",
-          "value": "Digital Touch Display"
+          "value": "Écran tactile numérique"
         },
         {
           "key": "Anode",
-          "value": "Magnesium — Replaceable"
+          "value": "Magnésium — Remplaçable"
         },
         {
           "key": "Sécurité",
-          "value": "Over-Temperature + Over-Pressure + Anti-Scald + Dry Fire Protection"
+          "value": "Surchauffe + Surpression + Anti-brûlure + Protection contre la chauffe à sec"
         }
       ],
       "features": [
@@ -10486,23 +10486,23 @@
         },
         {
           "key": "مادة الخزان",
-          "value": "Enamel-Lined Steel (2mm)"
+          "value": "فولاذ مبطن بالمينا (2mm)"
         },
         {
           "key": "نطاق درجة الحرارة",
-          "value": "30–75°C (Adjustable)"
+          "value": "30–75°C (قابل للتعديل)"
         },
         {
           "key": "يتحكم",
-          "value": "Digital Touch Display"
+          "value": "شاشة لمس رقمية"
         },
         {
           "key": "الأنود",
-          "value": "Magnesium — Replaceable"
+          "value": "مغنيسيوم — قابل للاستبدال"
         },
         {
           "key": "أمان",
-          "value": "Over-Temperature + Over-Pressure + Anti-Scald + Dry Fire Protection"
+          "value": "حماية من الحرارة الزائدة + حماية من الضغط الزائد + حماية من الحروق + حماية من التشغيل الجاف"
         }
       ],
       "features": [
@@ -10535,15 +10535,15 @@
         },
         {
           "key": "Superficie",
-          "value": "Black Crystal Glass"
+          "value": "Cristal negro"
         },
         {
           "key": "Control",
-          "value": "Touch Sensor + Knob"
+          "value": "Sensor táctil + perilla"
         },
         {
           "key": "Niveles de potencia",
-          "value": "10 Levels (100-2000W)"
+          "value": "10 niveles (100-2000W)"
         },
         {
           "key": "Temperatura",
@@ -10551,11 +10551,11 @@
         },
         {
           "key": "Minutero",
-          "value": "0-180 min with Auto Shut-off"
+          "value": "0-180 min con apagado automático"
         },
         {
           "key": "Seguridad",
-          "value": "Auto Pan Detection + Overheat + Child Lock + Low Voltage Protection"
+          "value": "Detección automática de sartén + protección contra sobrecalentamiento + bloqueo para niños + protección contra baja tensión"
         }
       ],
       "features": [
@@ -10586,15 +10586,15 @@
         },
         {
           "key": "Oberfläche",
-          "value": "Black Crystal Glass"
+          "value": "Schwarzes Kristallglas"
         },
         {
           "key": "Kontrolle",
-          "value": "Touch Sensor + Knob"
+          "value": "Berührungssensor + Drehregler"
         },
         {
           "key": "Leistungsstufen",
-          "value": "10 Levels (100-2000W)"
+          "value": "10 Stufen (100-2000W)"
         },
         {
           "key": "Temperatur",
@@ -10602,11 +10602,11 @@
         },
         {
           "key": "Timer",
-          "value": "0-180 min with Auto Shut-off"
+          "value": "0-180 min mit automatischer Abschaltung"
         },
         {
           "key": "Sicherheit",
-          "value": "Auto Pan Detection + Overheat + Child Lock + Low Voltage Protection"
+          "value": "Automatische Pfannenerkennung + Überhitzungsschutz + Kindersicherung + Unterspannungsschutz"
         }
       ],
       "features": [
@@ -10637,15 +10637,15 @@
         },
         {
           "key": "Surface",
-          "value": "Black Crystal Glass"
+          "value": "Verre cristal noir"
         },
         {
           "key": "Contrôle",
-          "value": "Touch Sensor + Knob"
+          "value": "Capteur tactile + molette"
         },
         {
           "key": "Niveaux de puissance",
-          "value": "10 Levels (100-2000W)"
+          "value": "10 niveaux (100-2000W)"
         },
         {
           "key": "Température",
@@ -10653,11 +10653,11 @@
         },
         {
           "key": "Minuteur",
-          "value": "0-180 min with Auto Shut-off"
+          "value": "0-180 min avec arrêt automatique"
         },
         {
           "key": "Sécurité",
-          "value": "Auto Pan Detection + Overheat + Child Lock + Low Voltage Protection"
+          "value": "Détection automatique du récipient + protection contre la surchauffe + verrouillage enfant + protection contre la basse tension"
         }
       ],
       "features": [
@@ -10688,15 +10688,15 @@
         },
         {
           "key": "سطح",
-          "value": "Black Crystal Glass"
+          "value": "زجاج بلوري أسود"
         },
         {
           "key": "يتحكم",
-          "value": "Touch Sensor + Knob"
+          "value": "مستشعر للمس + مقبض"
         },
         {
           "key": "مستويات الطاقة",
-          "value": "10 Levels (100-2000W)"
+          "value": "10 مستويات (100-2000W)"
         },
         {
           "key": "درجة حرارة",
@@ -10704,11 +10704,11 @@
         },
         {
           "key": "الموقت",
-          "value": "0-180 min with Auto Shut-off"
+          "value": "0-180 دقيقة مع الإيقاف التلقائي"
         },
         {
           "key": "أمان",
-          "value": "Auto Pan Detection + Overheat + Child Lock + Low Voltage Protection"
+          "value": "كشف المقلاة التلقائي + حماية من السخونة الزائدة + قفل أمان للأطفال + حماية من انخفاض الجهد"
         }
       ],
       "features": [
@@ -10737,7 +10737,7 @@
         },
         {
           "key": "Zonas",
-          "value": "4 (2 Flex Bridge + 2 Standard)"
+          "value": "4 (2 Flex Bridge + 2 estándar)"
         },
         {
           "key": "potencia total",
@@ -10745,23 +10745,23 @@
         },
         {
           "key": "Refuerzo",
-          "value": "Yes — up to 3000W per zone (10 min)"
+          "value": "Sí — hasta 3000W por zona (10 min)"
         },
         {
           "key": "Superficie",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Cristal cerámico Schott Ceran"
         },
         {
           "key": "Control",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "Control táctil deslizante — independiente por zona"
         },
         {
           "key": "Niveles de potencia",
-          "value": "9 per Zone + Booster"
+          "value": "9 por zona + Booster"
         },
         {
           "key": "Seguridad",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off + Overheat Protection"
+          "value": "Detección automática de sartenes + Bloqueo infantil + Calor residual + Apagado automático + Protección contra sobrecalentamiento"
         }
       ],
       "features": [
@@ -10796,23 +10796,23 @@
         },
         {
           "key": "Booster",
-          "value": "Yes — up to 3000W per zone (10 min)"
+          "value": "Ja — bis zu 3000W pro Zone (10 min)"
         },
         {
           "key": "Oberfläche",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Schott Ceran Keramikglas"
         },
         {
           "key": "Kontrolle",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "Touch-Slider — unabhängig pro Zone"
         },
         {
           "key": "Leistungsstufen",
-          "value": "9 per Zone + Booster"
+          "value": "9 pro Zone + Booster"
         },
         {
           "key": "Sicherheit",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off + Overheat Protection"
+          "value": "Automatische Topferkennung + Kindersicherung + Restwärme + Automatische Abschaltung + Überhitzungsschutz"
         }
       ],
       "features": [
@@ -10847,23 +10847,23 @@
         },
         {
           "key": "Amplificateur",
-          "value": "Yes — up to 3000W per zone (10 min)"
+          "value": "Oui — jusqu'à 3000W par zone (10 min)"
         },
         {
           "key": "Surface",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Verre céramique Schott Ceran"
         },
         {
           "key": "Contrôle",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "Curseur tactile — indépendant par zone"
         },
         {
           "key": "Niveaux de puissance",
-          "value": "9 per Zone + Booster"
+          "value": "9 par zone + Booster"
         },
         {
           "key": "Sécurité",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off + Overheat Protection"
+          "value": "Détection automatique de casserole + Verrouillage enfant + Chaleur résiduelle + Arrêt automatique + Protection contre la surchauffe"
         }
       ],
       "features": [
@@ -10890,7 +10890,7 @@
         },
         {
           "key": "المناطق",
-          "value": "4 (2 Flex Bridge + 2 Standard)"
+          "value": "4 (2 جسر مرن + 2 قياسي)"
         },
         {
           "key": "إجمالي الطاقة",
@@ -10898,23 +10898,23 @@
         },
         {
           "key": "الداعم",
-          "value": "Yes — up to 3000W per zone (10 min)"
+          "value": "نعم — حتى 3000W لكل منطقة (10 min)"
         },
         {
           "key": "سطح",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "زجاج سيراميكي Schott Ceran"
         },
         {
           "key": "يتحكم",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "منزلق لمسي — مستقل لكل منطقة"
         },
         {
           "key": "مستويات الطاقة",
-          "value": "9 per Zone + Booster"
+          "value": "9 لكل منطقة + تعزيز"
         },
         {
           "key": "أمان",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off + Overheat Protection"
+          "value": "كشف الأواني التلقائي + قفل الأمان للأطفال + حرارة متبقية + الإيقاف التلقائي + حماية من السخونة الزائدة"
         }
       ],
       "features": [
@@ -10943,7 +10943,7 @@
         },
         {
           "key": "Zonas",
-          "value": "4 Radiant Heating Zones"
+          "value": "4 zonas de calentamiento radiante"
         },
         {
           "key": "potencia total",
@@ -10951,23 +10951,23 @@
         },
         {
           "key": "Niveles de calefacción",
-          "value": "9 per Zone"
+          "value": "9 por zona"
         },
         {
           "key": "Superficie",
-          "value": "Black Ceramic Glass"
+          "value": "Cristal cerámico negro"
         },
         {
           "key": "Control",
-          "value": "Touch Sensor — Independent per Zone"
+          "value": "Sensor táctil — independiente por zona"
         },
         {
           "key": "utensilios de cocina",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "Todos los tipos — sin requisito magnético"
         },
         {
           "key": "Seguridad",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off + Overheat Protection"
+          "value": "Indicador de calor residual + bloqueo infantil + apagado automático + protección contra sobrecalentamiento"
         }
       ],
       "features": [
@@ -10994,7 +10994,7 @@
         },
         {
           "key": "Zonen",
-          "value": "4 Radiant Heating Zones"
+          "value": "4 Strahlungsheizzonen"
         },
         {
           "key": "Gesamtleistung",
@@ -11002,23 +11002,23 @@
         },
         {
           "key": "Heizstufen",
-          "value": "9 per Zone"
+          "value": "9 pro Zone"
         },
         {
           "key": "Oberfläche",
-          "value": "Black Ceramic Glass"
+          "value": "Schwarzes Keramikglas"
         },
         {
           "key": "Kontrolle",
-          "value": "Touch Sensor — Independent per Zone"
+          "value": "Berührungssensor — unabhängig pro Zone"
         },
         {
           "key": "Kochgeschirr",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "Alle Typen — keine magnetische Anforderung"
         },
         {
           "key": "Sicherheit",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off + Overheat Protection"
+          "value": "Restwärmeanzeige + Kindersicherung + automatische Abschaltung + Überhitzungsschutz"
         }
       ],
       "features": [
@@ -11045,7 +11045,7 @@
         },
         {
           "key": "Zones",
-          "value": "4 Radiant Heating Zones"
+          "value": "4 zones de chauffage rayonnant"
         },
         {
           "key": "Puissance totale",
@@ -11053,23 +11053,23 @@
         },
         {
           "key": "Niveaux de chauffage",
-          "value": "9 per Zone"
+          "value": "9 par zone"
         },
         {
           "key": "Surface",
-          "value": "Black Ceramic Glass"
+          "value": "Verre céramique noir"
         },
         {
           "key": "Contrôle",
-          "value": "Touch Sensor — Independent per Zone"
+          "value": "Capteur tactile — indépendant par zone"
         },
         {
           "key": "Batterie de cuisine",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "Tous types — aucune exigence magnétique"
         },
         {
           "key": "Sécurité",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off + Overheat Protection"
+          "value": "Indicateur de chaleur résiduelle + Verrouillage enfant + Arrêt automatique + Protection anti-surchauffe"
         }
       ],
       "features": [
@@ -11096,7 +11096,7 @@
         },
         {
           "key": "المناطق",
-          "value": "4 Radiant Heating Zones"
+          "value": "4 مناطق تسخين إشعاعي"
         },
         {
           "key": "إجمالي الطاقة",
@@ -11104,23 +11104,23 @@
         },
         {
           "key": "مستويات التدفئة",
-          "value": "9 per Zone"
+          "value": "9 لكل منطقة"
         },
         {
           "key": "سطح",
-          "value": "Black Ceramic Glass"
+          "value": "زجاج سيراميكي أسود"
         },
         {
           "key": "يتحكم",
-          "value": "Touch Sensor — Independent per Zone"
+          "value": "مستشعر باللمس — مستقل لكل منطقة"
         },
         {
           "key": "تجهيزات المطابخ",
-          "value": "All Types — No Magnetic Requirement"
+          "value": "متوافق مع جميع الأنواع — لا يتطلب خواص مغناطيسية"
         },
         {
           "key": "أمان",
-          "value": "Residual Heat Indicator + Child Lock + Auto Shut-off + Overheat Protection"
+          "value": "مؤشر الحرارة المتبقية + قفل الأطفال + إيقاف تشغيل تلقائي + حماية من السخونة الزائدة"
         }
       ],
       "features": [
@@ -11149,7 +11149,7 @@
         },
         {
           "key": "Zonas",
-          "value": "3 (2 Standard + 1 Central Flex)"
+          "value": "3 (2 estándar + 1 Central Flex)"
         },
         {
           "key": "potencia total",
@@ -11157,23 +11157,23 @@
         },
         {
           "key": "Refuerzo",
-          "value": "Yes — up to 2600W (10 min)"
+          "value": "Sí — hasta 2600W (10 min)"
         },
         {
           "key": "Superficie",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Vidrio cerámico Schott Ceran"
         },
         {
           "key": "Control",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "Control deslizante táctil — Independiente por zona"
         },
         {
           "key": "Temporizadores",
-          "value": "Independent per Zone — 0-99 min"
+          "value": "Independiente por zona — 0-99 min"
         },
         {
           "key": "Seguridad",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off"
+          "value": "Detección automática de sartén + Bloqueo infantil + Calor residual + Apagado automático"
         }
       ],
       "features": [
@@ -11200,7 +11200,7 @@
         },
         {
           "key": "Zonen",
-          "value": "3 (2 Standard + 1 Central Flex)"
+          "value": "3 (2 Standard + 1 zentrale Flex-Zone)"
         },
         {
           "key": "Gesamtleistung",
@@ -11208,23 +11208,23 @@
         },
         {
           "key": "Booster",
-          "value": "Yes — up to 2600W (10 min)"
+          "value": "Ja — bis zu 2600W (10 min)"
         },
         {
           "key": "Oberfläche",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Schott Ceran Keramikglas"
         },
         {
           "key": "Kontrolle",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "Touch-Slider — unabhängig pro Zone"
         },
         {
           "key": "Timer",
-          "value": "Independent per Zone — 0-99 min"
+          "value": "Unabhängig pro Zone — 0-99 min"
         },
         {
           "key": "Sicherheit",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off"
+          "value": "Automatische Topferkennung + Kindersicherung + Restwärme + automatische Abschaltung"
         }
       ],
       "features": [
@@ -11251,7 +11251,7 @@
         },
         {
           "key": "Zones",
-          "value": "3 (2 Standard + 1 Central Flex)"
+          "value": "3 (2 standard + 1 flex central)"
         },
         {
           "key": "Puissance totale",
@@ -11259,23 +11259,23 @@
         },
         {
           "key": "Amplificateur",
-          "value": "Yes — up to 2600W (10 min)"
+          "value": "Oui — jusqu'à 2600W (10 min)"
         },
         {
           "key": "Surface",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "Verre céramique Schott Ceran"
         },
         {
           "key": "Contrôle",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "Curseur tactile — indépendant par zone"
         },
         {
           "key": "Minuteries",
-          "value": "Independent per Zone — 0-99 min"
+          "value": "Indépendant par zone — 0-99 min"
         },
         {
           "key": "Sécurité",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off"
+          "value": "Détection automatique du récipient + verrouillage enfant + chaleur résiduelle + arrêt automatique"
         }
       ],
       "features": [
@@ -11302,7 +11302,7 @@
         },
         {
           "key": "المناطق",
-          "value": "3 (2 Standard + 1 Central Flex)"
+          "value": "3 (2 قياسية + 1 مرنة مركزية)"
         },
         {
           "key": "إجمالي الطاقة",
@@ -11310,23 +11310,23 @@
         },
         {
           "key": "الداعم",
-          "value": "Yes — up to 2600W (10 min)"
+          "value": "نعم — حتى 2600W (10 min)"
         },
         {
           "key": "سطح",
-          "value": "Schott Ceran Ceramic Glass"
+          "value": "زجاج سيراميكي Schott Ceran"
         },
         {
           "key": "يتحكم",
-          "value": "Touch Slider — Independent per Zone"
+          "value": "منزلق باللمس — مستقل لكل منطقة"
         },
         {
           "key": "الموقتات",
-          "value": "Independent per Zone — 0-99 min"
+          "value": "مستقل لكل منطقة — 0-99 min"
         },
         {
           "key": "أمان",
-          "value": "Auto Pan Detection + Child Lock + Residual Heat + Auto Shut-off"
+          "value": "اكتشاف تلقائي للمقلاة + قفل للأطفال + حرارة متبقية + إيقاف تلقائي"
         }
       ],
       "features": [
@@ -11355,31 +11355,31 @@
         },
         {
           "key": "Quemador",
-          "value": "Single — 2.5kW"
+          "value": "Individual — 2.5kW"
         },
         {
           "key": "Cartucho de gas",
-          "value": "Standard CP250 Butane Canister"
+          "value": "Cartucho de butano estándar CP250"
         },
         {
           "key": "Encendido",
-          "value": "Automatic Piezo"
+          "value": "Piezoeléctrico automático"
         },
         {
           "key": "Diseño",
-          "value": "Foldable with Carry Case"
+          "value": "Plegable con estuche de transporte"
         },
         {
           "key": "Material",
-          "value": "Stainless Steel + Die-cast Aluminium Burner"
+          "value": "Quemador de acero inoxidable + aluminio fundido a presión"
         },
         {
           "key": "Seguridad",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure Device"
+          "value": "Válvula de alivio de presión + corte por sobrecalentamiento + dispositivo de corte por ausencia de llama"
         },
         {
           "key": "Dimensiones",
-          "value": "340 x 280 x 110 mm (Folded)"
+          "value": "340 x 280 x 110 mm (plegado)"
         }
       ],
       "features": [
@@ -11406,31 +11406,31 @@
         },
         {
           "key": "Brenner",
-          "value": "Single — 2.5kW"
+          "value": "Einflammig — 2.5kW"
         },
         {
           "key": "Gaskartusche",
-          "value": "Standard CP250 Butane Canister"
+          "value": "Standard CP250 Butan-Kartusche"
         },
         {
           "key": "Zündung",
-          "value": "Automatic Piezo"
+          "value": "Automatischer Piezozünder"
         },
         {
           "key": "Design",
-          "value": "Foldable with Carry Case"
+          "value": "Klappbar mit Tragetasche"
         },
         {
           "key": "Material",
-          "value": "Stainless Steel + Die-cast Aluminium Burner"
+          "value": "Brenner aus Edelstahl + Druckguss-Aluminium"
         },
         {
           "key": "Sicherheit",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure Device"
+          "value": "Druckentlastungsventil + Überhitzungsabschaltung + Flammenausfallsicherung"
         },
         {
           "key": "Abmessungen",
-          "value": "340 x 280 x 110 mm (Folded)"
+          "value": "340 x 280 x 110 mm (gefaltet)"
         }
       ],
       "features": [
@@ -11457,31 +11457,31 @@
         },
         {
           "key": "Brûleur",
-          "value": "Single — 2.5kW"
+          "value": "Simple — 2.5kW"
         },
         {
           "key": "Cartouche de gaz",
-          "value": "Standard CP250 Butane Canister"
+          "value": "Cartouche de butane Standard CP250"
         },
         {
           "key": "Allumage",
-          "value": "Automatic Piezo"
+          "value": "Piézo automatique"
         },
         {
           "key": "Conception",
-          "value": "Foldable with Carry Case"
+          "value": "Pliable avec housse de transport"
         },
         {
           "key": "Matériel",
-          "value": "Stainless Steel + Die-cast Aluminium Burner"
+          "value": "Brûleur en acier inoxydable + aluminium moulé sous pression"
         },
         {
           "key": "Sécurité",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure Device"
+          "value": "Soupape de décharge de pression + coupure en cas de surchauffe + dispositif de coupure en cas d'extinction de la flamme"
         },
         {
           "key": "Dimensions",
-          "value": "340 x 280 x 110 mm (Folded)"
+          "value": "340 x 280 x 110 mm (replié)"
         }
       ],
       "features": [
@@ -11508,31 +11508,31 @@
         },
         {
           "key": "الموقد",
-          "value": "Single — 2.5kW"
+          "value": "موقد واحد — 2.5kW"
         },
         {
           "key": "خرطوشة غاز",
-          "value": "Standard CP250 Butane Canister"
+          "value": "عبوة بوتان CP250 قياسية"
         },
         {
           "key": "اشتعال",
-          "value": "Automatic Piezo"
+          "value": "إشعال بيزو تلقائي"
         },
         {
           "key": "تصميم",
-          "value": "Foldable with Carry Case"
+          "value": "قابل للطي مع حقيبة حمل"
         },
         {
           "key": "مادة",
-          "value": "Stainless Steel + Die-cast Aluminium Burner"
+          "value": "شعلة من الفولاذ المقاوم للصدأ + ألمنيوم مصبوب"
         },
         {
           "key": "أمان",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure Device"
+          "value": "صمام تخفيف الضغط + قاطع عند فرط الحرارة + جهاز كشف فشل اللهب"
         },
         {
           "key": "أبعاد",
-          "value": "340 x 280 x 110 mm (Folded)"
+          "value": "340 x 280 x 110 mm (مطوي)"
         }
       ],
       "features": [
@@ -11561,31 +11561,31 @@
         },
         {
           "key": "Quemadores",
-          "value": "2 Independent — 2 x 2.5kW"
+          "value": "2 Independientes — 2 x 2.5kW"
         },
         {
           "key": "Cartucho de gas",
-          "value": "2 x Standard CP250 Butane Canister"
+          "value": "2 x cartucho de butano estándar CP250"
         },
         {
           "key": "Encendido",
-          "value": "Dual Automatic Piezo"
+          "value": "Piezo automático doble"
         },
         {
           "key": "Diseño",
-          "value": "Foldable with Wind Shields + Carry Case"
+          "value": "Plegable con paravientos + estuche de transporte"
         },
         {
           "key": "Material",
-          "value": "Stainless Steel + Die-cast Aluminium"
+          "value": "Acero inoxidable + aluminio fundido a presión"
         },
         {
           "key": "Seguridad",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure (Both Burners)"
+          "value": "Válvula de alivio de presión + corte por sobrecalentamiento + fallo de llama (ambos quemadores)"
         },
         {
           "key": "Dimensiones",
-          "value": "580 x 280 x 110 mm (Folded)"
+          "value": "580 x 280 x 110 mm (Plegado)"
         }
       ],
       "features": [
@@ -11612,31 +11612,31 @@
         },
         {
           "key": "Brenner",
-          "value": "2 Independent — 2 x 2.5kW"
+          "value": "2 unabhängig — 2 x 2.5kW"
         },
         {
           "key": "Gaskartusche",
-          "value": "2 x Standard CP250 Butane Canister"
+          "value": "2 x Standard CP250 Butangas-Kartusche"
         },
         {
           "key": "Zündung",
-          "value": "Dual Automatic Piezo"
+          "value": "Duale automatische Piezozündung"
         },
         {
           "key": "Design",
-          "value": "Foldable with Wind Shields + Carry Case"
+          "value": "Klappbar mit Windschutz + Tragetasche"
         },
         {
           "key": "Material",
-          "value": "Stainless Steel + Die-cast Aluminium"
+          "value": "Edelstahl + Druckgussaluminium"
         },
         {
           "key": "Sicherheit",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure (Both Burners)"
+          "value": "Überdruckventil + Überhitzungsabschaltung + Flammenausfallsicherung (beide Brenner)"
         },
         {
           "key": "Abmessungen",
-          "value": "580 x 280 x 110 mm (Folded)"
+          "value": "580 x 280 x 110 mm (gefaltet)"
         }
       ],
       "features": [
@@ -11663,31 +11663,31 @@
         },
         {
           "key": "Brûleurs",
-          "value": "2 Independent — 2 x 2.5kW"
+          "value": "2 indépendants — 2 x 2.5kW"
         },
         {
           "key": "Cartouche de gaz",
-          "value": "2 x Standard CP250 Butane Canister"
+          "value": "2 x Standard CP250 cartouche de butane"
         },
         {
           "key": "Allumage",
-          "value": "Dual Automatic Piezo"
+          "value": "Double piezo automatique"
         },
         {
           "key": "Conception",
-          "value": "Foldable with Wind Shields + Carry Case"
+          "value": "Pliable avec pare-vents + housse de transport"
         },
         {
           "key": "Matériel",
-          "value": "Stainless Steel + Die-cast Aluminium"
+          "value": "Acier inoxydable + aluminium moulé sous pression"
         },
         {
           "key": "Sécurité",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure (Both Burners)"
+          "value": "Soupape de décharge de pression + coupure en cas de surchauffe + protection contre l'extinction de la flamme (les deux brûleurs)"
         },
         {
           "key": "Dimensions",
-          "value": "580 x 280 x 110 mm (Folded)"
+          "value": "580 x 280 x 110 mm (plié)"
         }
       ],
       "features": [
@@ -11714,31 +11714,31 @@
         },
         {
           "key": "الشعلات",
-          "value": "2 Independent — 2 x 2.5kW"
+          "value": "2 مستقلان — 2 x 2.5kW"
         },
         {
           "key": "خرطوشة غاز",
-          "value": "2 x Standard CP250 Butane Canister"
+          "value": "2 x عبوة بوتان قياسية CP250"
         },
         {
           "key": "اشتعال",
-          "value": "Dual Automatic Piezo"
+          "value": "نظام إشعال بيزو أوتوماتيكي مزدوج"
         },
         {
           "key": "تصميم",
-          "value": "Foldable with Wind Shields + Carry Case"
+          "value": "قابل للطي مع دروع مقاومة للرياح + حقيبة حمل"
         },
         {
           "key": "مادة",
-          "value": "Stainless Steel + Die-cast Aluminium"
+          "value": "فولاذ مقاوم للصدأ + ألومنيوم مصبوب"
         },
         {
           "key": "أمان",
-          "value": "Pressure Relief Valve + Overheat Cut-off + Flame Failure (Both Burners)"
+          "value": "صمام تخفيف الضغط + قاطع حماية من ارتفاع الحرارة + انطفاء اللهب (كلا الشعيلتين)"
         },
         {
           "key": "أبعاد",
-          "value": "580 x 280 x 110 mm (Folded)"
+          "value": "580 x 280 x 110 مم (مطوي)"
         }
       ],
       "features": [
