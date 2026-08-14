@@ -43,7 +43,9 @@
 - [x] 修复产品页 SEO 或结构化数据确认问题并完成生产复测与报告归档。
 - [x] 逐页审计非产品页面的五语言标题、描述、canonical、hreflang、Open Graph、Twitter 与 JSON-LD。
 - [x] 修复非产品页面确认的 SEO 或结构化数据问题并完成生产复测与报告归档。
-- [ ] 检查 545 个页面的移动端响应式布局与代表性 Core Web Vitals 技术指标，修复确认问题。
-- [ ] 核验 Google、Bing 等搜索引擎对五语言 sitemap 的抓取、收录和站点地图状态，区分平台处理延迟与技术阻塞。
+- [x] 检查 545 个页面的移动端响应式布局与代表性 Core Web Vitals 技术指标，修复确认问题。
+- [x] 核验 Google、Bing 等搜索引擎对五语言 sitemap 的抓取、收录和站点地图状态，区分平台处理延迟与技术阻塞。
 - [ ] 优化首页和产品页移动端主图的响应式尺寸、现代图片格式和首屏加载优先级，降低 LCP 与无效图片字节。
-- [ ] 修复德语长标签触发的在线服务浮层移动端横向溢出，并对全部 545 个页面复测。
+- [x] 修复德语长标签触发的在线服务浮层移动端横向溢出，并对全部 545 个页面复测。
+- [ ] 在 Google Search Console 中移除拼写错误、退役及非 www 的历史 sitemap 提交项，仅保留当前规范 sitemap、图片 sitemap 与 feed。
+- [ ] 在 Bing Webmaster Tools 轮换曾暴露的 API Key，并将新密钥仅更新至 Cloudflare Worker Secret。
