@@ -19,9 +19,23 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const { lang } = params;
+  const titles: Record<string, string> = {
+    en: 'OEM and ODM Manufacturing for Home Appliances: B2B Guide | HousePlus',
+    es: 'Fabricación OEM y ODM de electrodomésticos: guía B2B | HousePlus',
+    de: 'OEM- und ODM-Fertigung für Haushaltsgeräte: B2B-Leitfaden | HousePlus',
+    fr: 'Fabrication OEM et ODM d’électroménager : guide B2B | HousePlus',
+    ar: 'تصنيع OEM وODM للأجهزة المنزلية: دليل B2B | HousePlus',
+  };
+  const descriptions: Record<string, string> = {
+    en: 'How B2B buyers can scope custom home-appliance projects, including specifications, samples, branding, documentation and quotation-led confirmation.',
+    es: 'Cómo los compradores B2B pueden definir proyectos personalizados de electrodomésticos, con especificaciones, muestras, marca, documentación y confirmación por cotización.',
+    de: 'Wie B2B-Einkäufer kundenspezifische Geräteprojekte mit Spezifikationen, Mustern, Branding, Dokumentation und Angebotsbestätigung planen können.',
+    fr: 'Comment les acheteurs B2B peuvent cadrer des projets d’électroménager sur mesure avec spécifications, échantillons, marque, documentation et devis.',
+    ar: 'كيف يحدد مشترو B2B نطاق مشاريع الأجهزة المنزلية المخصصة، بما في ذلك المواصفات والعينات والعلامة التجارية والوثائق وتأكيد عرض الأسعار.',
+  };
   return generateSEOMetadata({
-    title: 'OEM & ODM Manufacturing: How HousePlus Helps Brands Build Custom Products',
-    description: 'Read the OEM/ODM manufacturing guide from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Flexible MOQ from 100 pcs. CE/FCC/RoHS certified. OEM/ODM available.',
+    title: titles[lang] || titles.en,
+    description: descriptions[lang] || descriptions.en,
     keywords: ['OEM manufacturing', 'ODM products', 'custom home appliances', 'private label appliances', 'HousePlus OEM'],
     url: `/${lang}/news/oem-odm-manufacturing-guide`,
     lang: lang as any,

@@ -19,9 +19,23 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const { lang } = params;
+  const titles: Record<string, string> = {
+    en: 'Wholesale Home Appliances: Global B2B Sourcing Guide | HousePlus',
+    es: 'Electrodomésticos al por mayor: guía global de compra B2B | HousePlus',
+    de: 'Haushaltsgeräte im Großhandel: globaler B2B-Einkaufsleitfaden | HousePlus',
+    fr: 'Électroménager en gros : guide mondial d’approvisionnement B2B | HousePlus',
+    ar: 'الأجهزة المنزلية بالجملة: دليل التوريد العالمي B2B | HousePlus',
+  };
+  const descriptions: Record<string, string> = {
+    en: 'A practical sourcing guide for international buyers comparing home-appliance specifications, documentation, OEM/ODM scope and quotation requirements.',
+    es: 'Guía práctica de compra para compradores internacionales que compara especificaciones, documentación, alcance OEM/ODM y requisitos de cotización.',
+    de: 'Praxisleitfaden für internationale Einkäufer zu Gerätespezifikationen, Dokumentation, OEM/ODM-Umfang und Angebotsanforderungen.',
+    fr: 'Guide pratique pour acheteurs internationaux comparant les spécifications, la documentation, le périmètre OEM/ODM et les exigences de devis.',
+    ar: 'دليل عملي للمشترين الدوليين لمقارنة مواصفات الأجهزة والوثائق ونطاق OEM/ODM ومتطلبات عرض الأسعار.',
+  };
   return generateSEOMetadata({
-    title: 'The Complete Guide to Wholesale Home Appliances: How HousePlus Supports Global Buyers',
-    description: 'Get the global wholesale guide for home appliances from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ clients in 53+ countries. MOQ 100 pcs, 20–35 day lead time. CE/FCC/RoHS certified.',
+    title: titles[lang] || titles.en,
+    description: descriptions[lang] || descriptions.en,
     keywords: ['wholesale home appliances', 'HousePlus wholesale', 'OEM appliances', 'bulk home appliances', 'global distributor'],
     url: `/${lang}/news/global-wholesale-guide-home-appliances`,
     lang: lang as any,

@@ -19,9 +19,23 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const { lang } = params;
+  const titles: Record<string, string> = {
+    en: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
+    es: 'Normas de eficiencia energética para electrodomésticos: guía B2B | HousePlus',
+    de: 'Energieeffizienzstandards für Haushaltsgeräte: B2B-Leitfaden | HousePlus',
+    fr: 'Normes d’efficacité énergétique des appareils : guide B2B | HousePlus',
+    ar: 'معايير كفاءة الطاقة للأجهزة المنزلية: دليل B2B | HousePlus',
+  };
+  const descriptions: Record<string, string> = {
+    en: 'A B2B guide to appliance energy-efficiency standards, documentation requirements and product-specific compliance confirmation.',
+    es: 'Guía B2B sobre normas de eficiencia energética para electrodomésticos, requisitos de documentación y confirmación de conformidad por producto.',
+    de: 'B2B-Leitfaden zu Energieeffizienzstandards für Haushaltsgeräte, Dokumentationsanforderungen und produktbezogener Konformitätsbestätigung.',
+    fr: 'Guide B2B sur les normes d’efficacité énergétique des appareils, les exigences documentaires et la confirmation de conformité par produit.',
+    ar: 'دليل B2B لمعايير كفاءة الطاقة للأجهزة المنزلية ومتطلبات المستندات وتأكيد المطابقة حسب المنتج.',
+  };
   return generateSEOMetadata({
-    title: 'Energy Efficiency Standards in Modern Appliances: HousePlus CE & RoHS Compliance',
-    description: 'Learn about energy efficiency standards for appliances from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. EU Ecodesign, US DOE, China GB. CE/FCC/RoHS certified.',
+    title: titles[lang] || titles.en,
+    description: descriptions[lang] || descriptions.en,
     keywords: ['energy efficiency appliances', 'CE certification', 'RoHS compliance', 'HousePlus certifications', 'ISO 9001 appliances'],
     url: `/${lang}/news/energy-efficiency-standards-appliances`,
     lang: lang as any,

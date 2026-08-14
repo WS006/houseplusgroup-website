@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     en: '2026 3C electronics market update from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. TWS, smart wearables, power banks. CE/FCC/RoHS. OEM/ODM available.',
     es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
     de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
-    fr: 'Tendances du marché mondial des appareils électroménagers intelligents 2026 et guide d\'approvisionnement B2B',
+    fr: 'Tendances du marché de l’électronique 3C en 2026 : guide B2B | HousePlus',
     ar: 'ابق في المقدمة في 2026 مع أحدث إلكترونيات 3C من HousePlus - أجهزة صوتية عالية الجودة، وأجهزة قابلة للارتداء الذكية، وحلول طاقة مبتكرة لموزعي B2B.',
   };
 
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
     en: 'Stay ahead in 2026 with HousePlus\'s latest 3C electronics - premium audio devices, smart wearables, and innovative power solutions for B2B distributors.',
     es: 'Mantente a la vanguardia en 2026 con los últimos productos de electrónica 3C de HousePlus: dispositivos de audio premium, wearables inteligentes y soluciones de energía innovadoras para distribuidores B2B.',
     de: 'Bleib im 2026 voraus mit den neuesten 3C-Elektronikprodukten von HousePlus – Premium-Audiogeräte, intelligente Wearables und innovative Stromlösungen für B2B-Distributoren.',
-    fr: 'Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents en 2026, y compris l\'intégration de l\'IA, l\'efficacité énergétique et la fabrication durable. Un guide complet pour les acheteurs B2B de HousePlus.',
+    fr: 'Découvrez les tendances 2026 de l’électronique 3C, notamment l’audio, les objets connectés et les solutions d’alimentation, pour les distributeurs B2B.',
     ar: 'ابق في المقدمة في 2026 مع أحدث إلكترونيات 3C من HousePlus - أجهزة صوتية عالية الجودة، وأجهزة قابلة للارتداء الذكية، وحلول طاقة مبتكرة لموزعي B2B.',
   };
 

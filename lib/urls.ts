@@ -36,7 +36,6 @@ export const regionSlugs = [
   'southeast_asia',
   'europe',
   'ng',
-  'eu',
 ];
 
 // Product slugs

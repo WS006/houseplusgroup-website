@@ -1,18 +1,20 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { permanentRedirect } from 'next/navigation';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { getRegionCopy, translateRegionTemplate } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const legacyRegionAliases: Record<string, string> = { eu: 'europe' };
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return validLangs.flatMap((lang) =>
-    Object.keys(regionConfigs).map((region) => ({ lang, region }))
+    [...Object.keys(regionConfigs), ...Object.keys(legacyRegionAliases)].map((region) => ({ lang, region }))
   );
 }
 
@@ -82,17 +84,6 @@ const regionConfigs: Record<string, RegionConfig> = {
     certifications: ['Product-specific documentation available on request'],
     warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
   },
-  eu: {
-    code: 'EU',
-    name: 'Europe',
-    currency: 'EUR',
-    currencySymbol: '€',
-    phonePrefix: '+86',
-    phoneDisplay: '+86 155 7811 9543',
-    shippingInfo: 'International shipping terms confirmed by quotation',
-    certifications: ['Product-specific documentation available on request'],
-    warehouseInfo: 'HousePlus export coordination from Zhongshan, Guangdong, China',
-  },
 };
 
 export async function generateMetadata({
@@ -101,6 +92,12 @@ export async function generateMetadata({
   params: { lang: string; region: string };
 }): Promise<Metadata> {
   const { lang, region } = params;
+  if (legacyRegionAliases[region]) {
+    return {
+      robots: { index: false, follow: true },
+      alternates: { canonical: `https://www.houseplus-ch.com/${lang}/regions/${legacyRegionAliases[region]}` },
+    };
+  }
   const config = regionConfigs[region] || regionConfigs.africa;
   const regionName = regionNames[lang]?.[config.code] || config.name;
 
@@ -110,35 +107,30 @@ export async function generateMetadata({
       southeast_asia: 'HousePlus Southeast Asia - Solar & Home Appliances Wholesale',
       europe: 'HousePlus Europe - Solar & Home Appliances Wholesale',
       ng: 'HousePlus Nigeria - Solar & Home Appliances Wholesale',
-      eu: 'HousePlus Europe - Solar & Home Appliances Wholesale',
     },
     es: {
       africa: 'HousePlus África - Mayorista de Energía Solar y Electrodomésticos',
       southeast_asia: 'HousePlus Sudeste Asiático - Mayorista de Energía Solar y Electrodomésticos',
       europe: 'HousePlus Europa - Mayorista de Energía Solar y Electrodomésticos',
       ng: 'HousePlus Nigeria - Mayorista de Energía Solar y Electrodomésticos',
-      eu: 'HousePlus Europa - Mayorista de Energía Solar y Electrodomésticos',
     },
     de: {
       africa: 'HousePlus Afrika - Großhandel für Solar & Haushaltsgeräte',
       southeast_asia: 'HousePlus Südostasien - Großhandel für Solar & Haushaltsgeräte',
       europe: 'HousePlus Europa - Großhandel für Solar & Haushaltsgeräte',
       ng: 'HousePlus Nigeria - Großhandel für Solar & Haushaltsgeräte',
-      eu: 'HousePlus Europa - Großhandel für Solar & Haushaltsgeräte',
     },
     fr: {
       africa: 'HousePlus Afrique - Gros Énergie Solaire et Électroménagers',
       southeast_asia: 'HousePlus Asie du Sud-Est - Gros Énergie Solaire et Électroménagers',
       europe: 'HousePlus Europe - Gros Énergie Solaire et Électroménagers',
       ng: 'HousePlus Nigeria - Gros Énergie Solaire et Électroménagers',
-      eu: 'HousePlus Europe - Gros Énergie Solaire et Électroménagers',
     },
     ar: {
       africa: 'HousePlus أفريقيا - الجملة للطاقة الشمسية والأجهزة المنزلية',
       southeast_asia: 'HousePlus جنوب شرق آسيا - الجملة للطاقة الشمسية والأجهزة المنزلية',
       europe: 'HousePlus أوروبا - الجملة للطاقة الشمسية والأجهزة المنزلية',
       ng: 'HousePlus نيجيريا - الجملة للطاقة الشمسية والأجهزة المنزلية',
-      eu: 'HousePlus أوروبا - الجملة للطاقة الشمسية والأجهزة المنزلية',
     },
   };
 
@@ -175,6 +167,9 @@ export default async function RegionPage({
   params: { lang: string; region: string };
 }) {
   const { lang, region } = params;
+  if (legacyRegionAliases[region]) {
+    permanentRedirect(`/${lang}/regions/${legacyRegionAliases[region]}`);
+  }
   const config = regionConfigs[region] || regionConfigs.africa;
   const regionName = regionNames[lang]?.[config.code] || config.name;
   const copy = getRegionCopy(lang);
