@@ -87,3 +87,21 @@ test('product metadata and JSON-LD preserve locale-specific SEO and contact acti
   assert.match(schemaGenerator, /contactActionName/);
   assert.match(schemaGenerator, /generateItemListSchema\([\s\S]*lang: string = 'en'/);
 });
+
+test('static news articles provide locale-aware URLs to Article JSON-LD', () => {
+  const slugs = [
+    'advanced-manufacturing-home-appliances',
+    'energy-efficiency-standards-appliances',
+    'global-wholesale-guide-home-appliances',
+    'oem-odm-manufacturing-guide',
+    'smart-home-appliances',
+    'solar-energy-storage-solutions',
+    'the-evolution-of-3c-electronics',
+    'the-future-of-smart-home-appliances',
+    'the-future-of-solar-energy',
+  ];
+  for (const slug of slugs) {
+    const source = read(`app/[lang]/news/${slug}/page.tsx`);
+    assert.ok(source.includes(`url: \`https://www.houseplus-ch.com/\${lang}/news/${slug}\``));
+  }
+});

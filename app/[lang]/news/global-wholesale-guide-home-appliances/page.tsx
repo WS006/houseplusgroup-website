@@ -237,6 +237,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
   const data = articleContent[lang] || articleContent.en;
 
   const articleSchema = generateArticleSchema({
+    url: `https://www.houseplus-ch.com/${lang}/news/global-wholesale-guide-home-appliances`,
     headline: data.title,
     image: `https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-wholesale-warehouse-b2b-guide/`,
     datePublished: data.datePublished,

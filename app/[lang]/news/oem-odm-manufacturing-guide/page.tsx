@@ -237,6 +237,7 @@ export default async function ArticlePage({ params }: { params: { lang: string }
   const data = articleContent[lang] || articleContent.en;
 
   const articleSchema = generateArticleSchema({
+    url: `https://www.houseplus-ch.com/${lang}/news/oem-odm-manufacturing-guide`,
     headline: data.title,
     image: `https://images.houseplus-ch.com/media/houseplus-factory-production-line/`,
     datePublished: data.datePublished,

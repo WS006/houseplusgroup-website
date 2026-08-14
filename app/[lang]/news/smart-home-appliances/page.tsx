@@ -250,6 +250,7 @@ export default async function SmartHomeAppliancesArticle({ params }: { params: {
   const data = articleContent[lang] || articleContent.en;
 
   const articleSchema = generateArticleSchema({
+    url: `https://www.houseplus-ch.com/${lang}/news/smart-home-appliances`,
     headline: data.title,
     image: `https://www.houseplus-ch.com${data.image}`,
     datePublished: data.datePublished,

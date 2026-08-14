@@ -256,6 +256,7 @@ export default async function AdvancedManufacturingArticle({ params }: { params:
     dateModified: data.dateModified,
     authorName: data.authorName,
     description: generateSEOMetadata({ lang: lang as any, type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/advanced-manufacturing-home-appliances` }).description as string,
+    url: `https://www.houseplus-ch.com/${lang}/news/advanced-manufacturing-home-appliances`,
   });
 
   return (

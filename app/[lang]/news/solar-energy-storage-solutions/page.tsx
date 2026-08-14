@@ -250,6 +250,7 @@ export default async function SolarEnergyStorageArticle({ params }: { params: { 
   const data = articleContent[lang] || articleContent.en;
 
   const articleSchema = generateArticleSchema({
+    url: `https://www.houseplus-ch.com/${lang}/news/solar-energy-storage-solutions`,
     headline: data.title,
     image: `https://www.houseplus-ch.com${data.image}`,
     datePublished: data.datePublished,

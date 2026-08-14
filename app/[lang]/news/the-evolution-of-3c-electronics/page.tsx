@@ -220,6 +220,7 @@ export default async function ThreeCElectronicsArticle({ params }: { params: { l
   const data = articleContent[lang] || articleContent.en;
 
   const articleSchema = generateArticleSchema({
+    url: `https://www.houseplus-ch.com/${lang}/news/the-evolution-of-3c-electronics`,
     headline: data.title,
     image: `https://www.houseplus-ch.com${data.image}`,
     datePublished: data.datePublished,

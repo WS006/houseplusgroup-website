@@ -250,6 +250,7 @@ export default async function SolarEnergyArticle({ params }: { params: { lang: s
   const data = articleContent[lang] || articleContent.en;
 
   const articleSchema = generateArticleSchema({
+    url: `https://www.houseplus-ch.com/${lang}/news/the-future-of-solar-energy`,
     headline: data.title,
     image: `https://www.houseplus-ch.com${data.image}`,
     datePublished: data.datePublished,
