@@ -101,7 +101,7 @@ export function middleware(request: NextRequest) {
     const foundationSlug = segments.slice(2).filter(Boolean).join('/');
     if (localizedFoundationSlugs.has(foundationSlug)) {
       const url = request.nextUrl.clone();
-      url.pathname = `/${firstSegment}/__localized-foundation${foundationSlug ? `/${foundationSlug}` : ''}`;
+      url.pathname = `/${firstSegment}/localized-foundation${foundationSlug ? `/${foundationSlug}` : ''}`;
       const response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
       addSecurityHeaders(response);
       return response;
