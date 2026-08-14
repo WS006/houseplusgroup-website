@@ -7,7 +7,6 @@ import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema-gene
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {

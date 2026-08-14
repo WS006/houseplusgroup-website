@@ -17,7 +17,6 @@ const PAGE_IMAGE_BY_TYPE: Record<string, string> = {
 };
 const DEFAULT_PAGE_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-group-logo/';
 
-export const dynamic = 'force-static';
 export const dynamicParams = true;
 
 export function generateStaticParams() {

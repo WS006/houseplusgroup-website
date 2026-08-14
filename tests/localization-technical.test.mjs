@@ -18,6 +18,11 @@ test('root layout renders localized lang and direction attributes', () => {
   assert.match(layout, /<html lang=\{locale\} dir=\{getLocaleDirection\(locale\)\}>/);
 });
 
+test('localized product routes do not force static rendering ahead of server language attributes', () => {
+  const source = read('app/[lang]/products/[slug]/page.tsx');
+  assert.doesNotMatch(source, /force-static/);
+});
+
 test('client-side locale navigation keeps Arabic document direction in sync', () => {
   const layout = read('app/[lang]/layout.tsx');
   assert.match(layout, /document\.documentElement\.lang=/);

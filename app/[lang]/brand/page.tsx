@@ -5,7 +5,6 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 
-export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];

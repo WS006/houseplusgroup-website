@@ -9,7 +9,6 @@ import { getLocalizedProduct } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 const BASE_URL = 'https://www.houseplus-ch.com';

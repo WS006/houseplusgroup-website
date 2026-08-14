@@ -9,7 +9,6 @@ import { getRegionCopy, translateRegionTemplate } from '@/lib/localized-content'
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const legacyRegionAliases: Record<string, string> = { eu: 'europe' };
 
-export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {

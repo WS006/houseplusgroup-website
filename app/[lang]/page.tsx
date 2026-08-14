@@ -14,7 +14,6 @@ const Counter = dynamicImport(() => import('@/components/Counter'), { ssr: false
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
-export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
