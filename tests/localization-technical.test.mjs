@@ -296,3 +296,13 @@ test('all static news routes are included in the RSS source without replaying un
   }
   assert.doesNotMatch(staticFeed, /flexible MOQ|ISO 9001|CE\/FCC\/RoHS/);
 });
+
+test('visual sitemap page derives product and article links from the canonical registries', () => {
+  const sitemapPage = read('app/[lang]/sitemap-page/page.tsx');
+  assert.match(sitemapPage, /productSlugs as canonicalProductSlugs, newsSlugs/);
+  assert.match(sitemapPage, /getLocalizedProduct/);
+  assert.match(sitemapPage, /getLocalizedArticle/);
+  assert.match(sitemapPage, /staticNewsFeedEntries/);
+  assert.match(sitemapPage, /t\.sections\.news/);
+  assert.doesNotMatch(sitemapPage, /Product slugs from Storyblok/);
+});

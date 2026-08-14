@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { getStoryblokApi } from '@storyblok/react/rsc';
+import { productSlugs as canonicalProductSlugs, newsSlugs } from '@/lib/urls';
+import { PRODUCT_DATA } from '@/lib/product-data';
+import { blogPosts } from '@/lib/blog-data';
+import { staticNewsFeedEntries } from '@/lib/static-news-feed';
+import { getLocalizedArticle, getLocalizedProduct } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -59,6 +64,7 @@ const labels: Record<string, {
     main: string;
     company: string;
     products: string;
+    news: string;
     support: string;
     legal: string;
   };
@@ -70,6 +76,7 @@ const labels: Record<string, {
       main: 'Main Pages',
       company: 'Company',
       products: 'Products',
+      news: 'News & Insights',
       support: 'Support & Resources',
       legal: 'Legal',
     },
@@ -81,6 +88,7 @@ const labels: Record<string, {
       main: 'Páginas Principales',
       company: 'Empresa',
       products: 'Productos',
+      news: 'Noticias e Ideas',
       support: 'Soporte y Recursos',
       legal: 'Legal',
     },
@@ -92,6 +100,7 @@ const labels: Record<string, {
       main: 'Hauptseiten',
       company: 'Unternehmen',
       products: 'Produkte',
+      news: 'News & Einblicke',
       support: 'Support & Ressourcen',
       legal: 'Rechtliches',
     },
@@ -103,6 +112,7 @@ const labels: Record<string, {
       main: 'Pages Principales',
       company: 'Entreprise',
       products: 'Produits',
+      news: 'Actualités et Analyses',
       support: 'Support et Ressources',
       legal: 'Mentions Légales',
     },
@@ -114,6 +124,7 @@ const labels: Record<string, {
       main: 'الصفحات الرئيسية',
       company: 'الشركة',
       products: 'المنتجات',
+      news: 'الأخبار والرؤى',
       support: 'الدعم والموارد',
       legal: 'القانونية',
     },
@@ -149,43 +160,6 @@ const legalPages = [
 
 const legalSlugs = ['privacy', 'terms'];
 
-// Product slugs from Storyblok (published)
-const productSlugs = [
-  'headphone-over-ear',
-  'smart-watch',
-  'usb-c-cable-2m',
-  'solar-power-bank-20000mah',
-  'bluetooth-earphone-tws',
-  'portable-ssd-1tb',
-  'micro-sd-128gb',
-  'induction-cooktop-2000w',
-  'electric-kettle-1-5l',
-  'toaster-2-slice',
-  'air-fryer-5-8l',
-  'solar-fan-20w',
-  'solar-street-light-200w',
-  'charge-controller-60a',
-  'lead-acid-battery-100ah',
-  'lithium-battery-5kwh',
-  'solar-inverter-3kw',
-  'solar-panel-500w',
-  // P0 GEO-optimized products (added 2026-06-26)
-  'solar-panel-100w',
-  'portable-power-station-3000w',
-  'foldable-solar-panel-200w',
-  'home-energy-storage-5000w',
-  'power-bank-60w-pd',
-  'lifepo4-battery-12v100ah',
-  'outdoor-power-station-600w',
-  'mppt-controller-40a',
-  'magnetic-power-bank-10000mah',
-  'pure-sine-inverter-2000w',
-  'flexible-solar-panel-400w',
-  'solar-generator-kit-300w',
-  'smart-wifi-plug-meter',
-  'usb-c-cable-100w-5a',
-];
-
 function getLabel(labelMap: Record<string, string>, lang: string): string {
   return labelMap[lang] ?? labelMap['en'] ?? '';
 }
@@ -215,6 +189,19 @@ export default function SitemapPage({ params }: SitemapPageProps) {
   const { lang } = params;
   const t = labels[lang] ?? labels.en;
   const isRTL = lang === 'ar';
+  const products = canonicalProductSlugs.map((slug) => ({
+    slug,
+    name: getLocalizedProduct(slug, lang, PRODUCT_DATA[slug]).name,
+  }));
+  const staticNewsBySlug = new Map(staticNewsFeedEntries.map((entry) => [entry.slug, entry]));
+  const news = newsSlugs.map((slug) => {
+    const dynamicArticle = blogPosts[slug];
+    if (dynamicArticle) {
+      return { slug, title: getLocalizedArticle(slug, lang, dynamicArticle).title };
+    }
+    const staticArticle = staticNewsBySlug.get(slug);
+    return { slug, title: staticArticle?.title ?? slug.replace(/-/g, ' ') };
+  });
 
   return (
     <div className={`min-h-screen bg-slate-50 ${isRTL ? 'rtl' : 'ltr'}`}>
@@ -285,16 +272,41 @@ export default function SitemapPage({ params }: SitemapPageProps) {
                 {lang === 'es' ? 'Todos los Productos' : lang === 'de' ? 'Alle Produkte' : lang === 'fr' ? 'Tous les Produits' : lang === 'ar' ? 'جميع المنتجات' : 'All Products'}
               </Link>
             </li>
-            {productSlugs.map((slug) => (
-              <li key={slug}>
+            {products.map((product) => (
+              <li key={product.slug}>
                 <Link
-                  href={`/${lang}/products/${slug}`}
+                  href={`/${lang}/products/${product.slug}`}
                   className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 hover:underline transition-colors"
                 >
                   <svg className="w-3 h-3 text-slate-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
-                  {slug.replace(/-/g, ' ')}
+                  {product.name}
+                </Link>
+              </li>
+            ))}
+          </SitemapSection>
+
+          {/* News */}
+          <SitemapSection title={t.sections.news} icon="📰">
+            <li>
+              <Link href={`/${lang}/news`} className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+                <svg className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+                {lang === 'es' ? 'Todas las Noticias' : lang === 'de' ? 'Alle News' : lang === 'fr' ? 'Toutes les Actualités' : lang === 'ar' ? 'كل الأخبار' : 'All News'}
+              </Link>
+            </li>
+            {news.map((article) => (
+              <li key={article.slug}>
+                <Link
+                  href={`/${lang}/news/${article.slug}`}
+                  className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 hover:underline transition-colors"
+                >
+                  <svg className="w-3 h-3 text-slate-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                  {article.title}
                 </Link>
               </li>
             ))}
