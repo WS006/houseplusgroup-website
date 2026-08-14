@@ -31,7 +31,7 @@ export default async function LangLayout({
       <main className="min-h-screen">{children}</main>
       <Footer lang={lang} />
       <ServiceWidget lang={lang} />
-      <ChatBot />
+      <ChatBot lang={lang} />
       <BackToTop />
     </>
   );

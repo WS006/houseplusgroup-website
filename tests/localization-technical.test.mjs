@@ -60,3 +60,16 @@ test('related-product cards localize product data and the details action in ever
   assert.match(relatedProducts, /ar: 'عرض التفاصيل ←'/);
   assert.doesNotMatch(relatedProducts, /lang === 'ar' \? '← عرض التفاصيل' : 'View Details →'/);
 });
+
+test('floating chat receives the active locale, supplies five language copy sets, and clears mobile title space', () => {
+  const langLayout = read('app/[lang]/layout.tsx');
+  const chat = read('components/ChatBot.tsx');
+  assert.match(langLayout, /<ChatBot lang=\{lang\} \/>/);
+  for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
+    assert.match(chat, new RegExp(`${locale}: \\{`));
+  }
+  assert.match(chat, /fixed bottom-2 right-2/);
+  assert.match(chat, /md:bottom-6 md:right-6/);
+  assert.match(chat, /dir=\{lang === 'ar' \? 'rtl' : 'ltr'\}/);
+  assert.doesNotMatch(chat, /What is your MOQ\?/);
+});
