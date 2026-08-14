@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { sortedBlogPosts } from '@/lib/blog-data';
+import { staticNewsFeedDescription, staticNewsFeedEntries } from '@/lib/static-news-feed';
 
 export const dynamic = 'force-static';
 
@@ -16,7 +17,7 @@ export async function GET() {
   const baseUrl = 'https://www.houseplus-ch.com';
   const absoluteUrl = (value: string) => value.startsWith('http') ? value : `${baseUrl}${value}`;
 
-  const items = sortedBlogPosts
+  const dynamicItems = sortedBlogPosts
     .map((post) => {
       const url = `${baseUrl}/en/news/${post.slug}`;
       const pubDate = new Date(post.datePublished).toUTCString();
@@ -51,6 +52,28 @@ export async function GET() {
     </item>`;
     })
     .join('\n');
+
+  const staticItems = staticNewsFeedEntries
+    .map((post) => {
+      const url = `${baseUrl}/en/news/${post.slug}`;
+      const description = escapeXml(staticNewsFeedDescription(post));
+      const title = escapeXml(post.title);
+      const category = escapeXml(post.category);
+      return `    <item>
+      <title>${title}</title>
+      <link>${url}</link>
+      <guid>${url}</guid>
+      <pubDate>${new Date(post.datePublished).toUTCString()}</pubDate>
+      <description>${description}</description>
+      <content:encoded><![CDATA[
+        <img src="${absoluteUrl(post.image)}" alt="${title}" title="${title}" style="max-width:100%;height:auto;" />
+        <p>${description}</p>
+      ]]></content:encoded>
+      <category>${category}</category>
+    </item>`;
+    })
+    .join('\n');
+  const items = [dynamicItems, staticItems].filter(Boolean).join('\n');
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">

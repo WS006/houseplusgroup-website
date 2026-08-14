@@ -15,7 +15,7 @@ interface PageImages {
   images: ImageEntry[];
 }
 
-const ARTICLE_COVERS: Record<string, { title: string; caption: string }> = {
+const ARTICLE_COVERS: Record<string, { title: string; caption: string; image?: string }> = {
   'consumer-electronics-battery-life-testing': {
     title: 'Consumer electronics battery cycle life testing',
     caption: 'Battery cycle life testing in a controlled consumer electronics laboratory in Zhongshan, Guangdong, China.',
@@ -68,6 +68,26 @@ const ARTICLE_COVERS: Record<string, { title: string; caption: string }> = {
     title: 'Future-ready smart home appliances',
     caption: 'Connected energy-efficient appliances in a refined contemporary smart-home environment.',
   },
+  'smart-home-appliances': {
+    title: 'Smart home appliances and connected living',
+    caption: 'Connected smart home appliances and energy-efficient product concepts for global B2B sourcing.',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-smart-home-appliances-connected-living-b2b-guide/',
+  },
+  'solar-energy-storage-solutions': {
+    title: 'Solar energy storage solutions',
+    caption: 'Solar battery systems and portable power equipment for global energy storage procurement.',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-solar-energy-storage-solutions-b2b-guide/',
+  },
+  'the-evolution-of-3c-electronics': {
+    title: 'Evolution of 3C electronics',
+    caption: '3C electronics and accessories for product sourcing and international distribution.',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-evolution-3c-electronics-b2b-guide/',
+  },
+  'the-future-of-solar-energy': {
+    title: 'Future solar energy technology',
+    caption: 'Solar panels and portable energy equipment for global procurement discussions.',
+    image: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-future-solar-energy-b2b-guide/',
+  },
 };
 
 function absolute(path: string): string {
@@ -90,7 +110,7 @@ const dynamicArticleImages: PageImages[] = Object.values(blogPosts).map((post) =
 const staticArticleImages: PageImages[] = Object.entries(ARTICLE_COVERS).map(([slug, image]) => ({
   pageUrl: `/en/news/${slug}`,
   images: [{
-    loc: absolute(coverPath(slug)),
+    loc: absolute(image.image || coverPath(slug)),
     title: image.title,
     caption: image.caption,
   }],

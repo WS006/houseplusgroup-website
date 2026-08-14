@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore smart home appliances manufacturing with HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ wholesale clients in 53+ countries. AI integration, energy efficiency. CE/FCC/RoHS. OEM/ODM available.',
+    en: 'Explore smart home appliance trends, energy-efficiency considerations and OEM/ODM discussion for global product sourcing.',
     es: 'Descubra cómo HousePlus está redefiniendo la vida moderna con electrodomésticos inteligentes y energéticamente eficientes. Explore nuestra gama de productos innovadores diseñados para mercados mayoristas globales.',
     de: 'Entdecken Sie, wie HousePlus das moderne Leben mit intelligenten, energieeffizienten Haushaltsgeräten neu definiert. Entdecken Sie unser Sortiment an innovativen Produkten, die für globale Großhandelsmärkte entwickelt wurden.',
     fr: 'Découvrez comment HousePlus redéfinit la vie moderne avec des appareils électroménagers intelligents et économes en énergie. Explorez notre gamme de produits innovants conçus pour les marchés de gros mondiaux.',

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Discover solar energy storage solutions from HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Lithium-ion, solid-state, flow batteries. CE/FCC/RoHS. OEM/ODM available.',
+    en: 'Explore technical considerations for solar energy storage, including battery systems and portable power stations for global procurement.',
     es: 'Explore las soluciones avanzadas de almacenamiento de energía solar de HousePlus, incluidos los sistemas de baterías y las estaciones de energía portátiles, diseñadas para la eficiencia y la fiabilidad en los mercados mayoristas globales.',
     de: 'Entdecken Sie die fortschrittlichen Solarenergiespeicherlösungen von HousePlus, einschließlich Batteriesystemen und tragbaren Kraftwerken, die für Effizienz und Zuverlässigkeit auf globalen Großhandelsmärkten entwickelt wurden.',
     fr: 'Découvrez les solutions avancées de stockage d\'énergie solaire de HousePlus, y compris les systèmes de batteries et les centrales électriques portables, conçues pour l\'efficacité et la fiabilité sur les marchés de gros mondiaux.',

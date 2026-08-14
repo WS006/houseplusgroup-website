@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Trace the evolution of 3C electronics with HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. AI-powered smart devices, TWS, wearables. CE/FCC/RoHS. OEM/ODM available.',
+    en: 'Explore 3C electronics trends, smart devices and product sourcing considerations for global B2B buyers.',
     es: 'Explore los rápidos avances en electrónica 3C, desde dispositivos inteligentes hasta iluminación LED. Descubra cómo HousePlus ofrece soluciones de vanguardia y confiables para los mercados mayoristas globales.',
     de: 'Entdecken Sie die rasanten Fortschritte in der 3C-Elektronik, von Smart Devices bis zur LED-Beleuchtung. Erfahren Sie, wie HousePlus modernste, zuverlässige Lösungen für globale Großhandelsmärkte liefert.',
     fr: 'Explorez les avancées rapides de l\'électronique 3C, des appareils intelligents à l\'éclairage LED. Découvrez comment HousePlus fournit des solutions de pointe et fiables pour les marchés de gros mondiaux.',

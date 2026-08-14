@@ -140,6 +140,9 @@ export const newsSlugs = [
   'home-appliance-oem-manufacturer-guide-china',
   'air-fryer-sourcing-guide-china',
   'kitchen-appliances-wholesale-guide',
+  'appliance-energy-efficiency-vs-actual-consumption',
+  'consumer-electronics-battery-life-testing',
+  'solar-storage-efficiency-optimization-guide',
 ];
 
 // Generate ALL URLs from the single source of truth

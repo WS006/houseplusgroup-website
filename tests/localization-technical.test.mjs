@@ -213,6 +213,19 @@ test('static news articles provide locale-aware URLs to Article JSON-LD', () => 
   }
 });
 
+test('recent static news articles are included in the canonical URL and sitemap registries', () => {
+  const urls = read('lib/urls.ts');
+  const sitemap = read('app/sitemap.ts');
+  for (const slug of [
+    'appliance-energy-efficiency-vs-actual-consumption',
+    'consumer-electronics-battery-life-testing',
+    'solar-storage-efficiency-optimization-guide',
+  ]) {
+    assert.match(urls, new RegExp(`'${slug}'`));
+    assert.match(sitemap, new RegExp(`news/${slug}`));
+  }
+});
+
 test('non-English foundation pages render verified local copy and are published in the sitemap', () => {
   const middleware = read('middleware.ts');
   const foundationRoute = read('app/[lang]/localized-foundation/[[...slug]]/page.tsx');
@@ -228,4 +241,58 @@ test('non-English foundation pages render verified local copy and are published 
   assert.match(home, /const copy = localizedHomeCopy/);
   assert.doesNotMatch(home, /Counter end="16\+"/);
   assert.doesNotMatch(home, /CE\/FCC\/RoHS certified products to 441\+ clients/);
+});
+
+test('change-impact audit continuously checks product, article, localization, RSS and image-sitemap linkages', () => {
+  const audit = read('scripts/audit-change-impact.mjs');
+  const packageJson = read('package.json');
+  assert.match(audit, /sitemapUrlsWithoutDynamicArticleRegistry/);
+  assert.match(audit, /staticRoutesMissingFromUrls/);
+  assert.match(audit, /newsUrlsWithoutStaticOrDynamicRoute/);
+  assert.match(audit, /staticRoutesMissingFromNewsListing/);
+  assert.match(audit, /staticRoutesMissingFromImageSitemap/);
+  assert.match(audit, /rssMissingStaticArticles/);
+  assert.match(audit, /missingLocalizedRecords/);
+  assert.match(audit, /rssUsesBlogRegistry/);
+  assert.match(packageJson, /"audit:change-impact"/);
+});
+
+test('news commercial-claim audit protects search assets from unverified article assertions', () => {
+  const audit = read('scripts/audit-news-commercial-claims.mjs');
+  const packageJson = read('package.json');
+  assert.match(audit, /unverified-certification/);
+  assert.match(audit, /unverified-commercial-term/);
+  assert.match(audit, /unverified-scale-or-performance/);
+  assert.match(packageJson, /"audit:news-claims"/);
+});
+
+test('all static news routes remain represented in the news listing and image sitemap', () => {
+  const newsPage = read('app/[lang]/news/page.tsx');
+  const imageSitemap = read('app/image-sitemap.xml/route.ts');
+  for (const slug of [
+    'smart-home-appliances',
+    'solar-energy-storage-solutions',
+    'the-evolution-of-3c-electronics',
+    'the-future-of-solar-energy',
+  ]) {
+    assert.match(newsPage, new RegExp(`slug: '${slug}'`));
+    assert.match(imageSitemap, new RegExp(`'${slug}'`));
+  }
+  assert.match(imageSitemap, /image\.image \|\| coverPath\(slug\)/);
+});
+
+test('all static news routes are included in the RSS source without replaying unverified commercial claims', () => {
+  const feed = read('app/feed.xml/route.ts');
+  const staticFeed = read('lib/static-news-feed.ts');
+  assert.match(feed, /staticNewsFeedEntries/);
+  assert.match(feed, /staticNewsFeedDescription/);
+  for (const slug of [
+    'smart-home-appliances',
+    'solar-energy-storage-solutions',
+    'the-evolution-of-3c-electronics',
+    'the-future-of-solar-energy',
+  ]) {
+    assert.match(staticFeed, new RegExp(`slug: '${slug}'`));
+  }
+  assert.doesNotMatch(staticFeed, /flexible MOQ|ISO 9001|CE\/FCC\/RoHS/);
 });

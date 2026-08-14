@@ -34,6 +34,9 @@ const lastModDates: Record<string, string> = {
   'news/home-appliance-oem-manufacturer-guide-china': '2026-08-10',
   'news/air-fryer-sourcing-guide-china': '2026-08-10',
   'news/kitchen-appliances-wholesale-guide': '2026-08-10',
+  'news/appliance-energy-efficiency-vs-actual-consumption': '2026-07-18',
+  'news/consumer-electronics-battery-life-testing': '2026-07-18',
+  'news/solar-storage-efficiency-optimization-guide': '2026-07-18',
 };
 
 // All static page slugs from single source of truth

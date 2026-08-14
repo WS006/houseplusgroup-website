@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   };
 
   const descriptions: Record<string, string> = {
-    en: 'Explore 2026 solar energy trends with HousePlus, a vertically integrated manufacturer since 2010. 20,000 m² ISO 9001 factory. 441+ B2B clients across 53+ countries. Perovskite cells, bifacial panels, AI energy management. CE/FCC/RoHS. OEM/ODM available.',
+    en: 'Explore solar energy technology trends, including solar panels, portable power stations and system considerations for global procurement.',
     es: 'Explore las últimas innovaciones en tecnología de energía solar y cómo HousePlus lidera el camino con paneles solares de alta eficiencia, estaciones de energía portátiles y soluciones sostenibles para mercados mayoristas globales.',
     de: 'Entdecken Sie die neuesten Innovationen in der Solarenergietechnologie und wie HousePlus mit hocheffizienten Solarmodulen, tragbaren Kraftwerken und nachhaltigen Lösungen für globale Großhandelsmärkte führend ist.',
     fr: 'Découvrez les dernières innovations en matière de technologie de l\'énergie solaire et comment HousePlus ouvre la voie avec des panneaux solaires à haut rendement, des centrales électriques portables et des solutions durables pour les marchés de gros mondiaux.',
