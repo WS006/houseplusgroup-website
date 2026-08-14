@@ -34,3 +34,13 @@ test('product pages use localized quotation guidance instead of unverified GEO o
   assert.match(productPage, /ui\.questionPrefix/);
   assert.match(productPage, /ui\.answerPrefix/);
 });
+
+test('online support widget receives the active locale and provides all five language label sets', () => {
+  const langLayout = read('app/[lang]/layout.tsx');
+  const widget = read('components/ServiceWidget.tsx');
+  assert.match(langLayout, /<ServiceWidget lang=\{lang\} \/>/);
+  for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
+    assert.match(widget, new RegExp(`${locale}: \\{ service:`));
+  }
+  assert.doesNotMatch(widget, />Service<\/span>/);
+});

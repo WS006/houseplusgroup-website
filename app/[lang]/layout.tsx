@@ -30,7 +30,7 @@ export default async function LangLayout({
       <Header lang={lang} />
       <main className="min-h-screen">{children}</main>
       <Footer lang={lang} />
-      <ServiceWidget />
+      <ServiceWidget lang={lang} />
       <ChatBot />
       <BackToTop />
     </>
