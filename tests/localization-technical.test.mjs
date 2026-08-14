@@ -73,6 +73,26 @@ test('localized contact pages retain the inquiry form and product CTAs preserve 
   assert.match(inquiryForm, /role="alert"/);
 });
 
+test('confirmed missing-data products publish warranty and category certifications without fixed MOQ or lead time', () => {
+  const productData = read('lib/product-data.ts');
+  const targets = {
+    solar: ['solar-panel-500w', 'solar-inverter-3kw', 'lithium-battery-5kwh', 'lead-acid-battery-100ah', 'charge-controller-60a', 'solar-street-light-200w', 'solar-fan-20w', 'solar-power-bank-20000mah'],
+    appliances: ['air-fryer-5-8l', 'induction-cooktop-2000w', 'electric-kettle-1-5l', 'toaster-2-slice'],
+    electronics: ['headphone-over-ear', 'bluetooth-earphone-tws', 'smart-watch', 'portable-ssd-1tb', 'micro-sd-128gb', 'usb-c-cable-2m'],
+  };
+  for (const slug of Object.values(targets).flat()) {
+    const start = productData.indexOf(`  '${slug}': {`);
+    const end = productData.indexOf("\n  '", start + 1);
+    const block = productData.slice(start, end);
+    assert.match(block, /warranty: '12 months'/);
+    assert.match(block, /certifications: \[/);
+    assert.doesNotMatch(block, /moq:/);
+    assert.doesNotMatch(block, /leadTime:/);
+  }
+  assert.match(productData, /warranty\?: string/);
+  assert.match(productData, /leadTime\?: string/);
+});
+
 test('online support widget receives the active locale and provides all five language label sets', () => {
   const langLayout = read('app/[lang]/layout.tsx');
   const widget = read('components/ServiceWidget.tsx');

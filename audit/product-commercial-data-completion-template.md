@@ -6,24 +6,7 @@
 
 | 分类 | 产品 | 路由 slug | 标准 MOQ | 标准交期 | 标准保修 | 适用认证 | 资料来源/负责人 |
 |---|---|---|---|---|---|---|---|
-| solar | 500W Monocrystalline Solar Panel | solar-panel-500w |  |  |  |  |  |
-| solar | 3kW Pure Sine Wave Solar Inverter | solar-inverter-3kw |  |  |  |  |  |
-| solar | 5kWh LiFePO4 Lithium Battery | lithium-battery-5kwh |  |  |  |  |  |
-| solar | 100Ah Deep Cycle Lead-Acid Battery | lead-acid-battery-100ah |  |  |  |  |  |
-| solar | MPPT Solar Charge Controller 60A | charge-controller-60a |  |  |  |  |  |
-| solar | 200W All-in-One Solar Street Light | solar-street-light-200w |  |  |  |  |  |
-| solar | DC Solar Fan 20W | solar-fan-20w |  |  |  |  |  |
-| solar | 20000mAh Solar Power Bank | solar-power-bank-20000mah |  |  |  |  |  |
-| appliances | 5.8L Digital Air Fryer | air-fryer-5-8l |  |  |  |  |  |
-| appliances | 2000W Induction Cooktop | induction-cooktop-2000w |  |  |  |  |  |
-| appliances | 1.5L Stainless Steel Electric Kettle | electric-kettle-1-5l |  |  |  |  |  |
-| appliances | 2-Slice Stainless Steel Toaster | toaster-2-slice |  |  |  |  |  |
-| electronics | Over-Ear Headphone with Microphone | headphone-over-ear |  |  |  |  |  |
-| electronics | True Wireless Bluetooth Earphones (TWS) | bluetooth-earphone-tws |  |  |  |  |  |
-| electronics | Smart Watch with Heart Rate Monitor | smart-watch |  |  |  |  |  |
-| electronics | 1TB USB-C Portable SSD | portable-ssd-1tb |  |  |  |  |  |
-| electronics | 128GB Micro SD Card (Class 10 / A2) | micro-sd-128gb |  |  |  |  |  |
-| electronics | Fast Charging USB-C Cable 2m | usb-c-cable-2m |  |  |  |  |  |
+
 
 ## 填写规则
 
