@@ -1,7 +1,9 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import { headers } from 'next/headers';
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
+import { defaultLocale, getLocaleDirection, isValidLocale } from '@/lib/i18n-config';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN || '',
@@ -55,21 +57,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const requestedLocale = headers().get('x-houseplus-locale') || defaultLocale;
+  const locale = isValidLocale(requestedLocale) ? requestedLocale : defaultLocale;
   const orgSchema = generateOrganizationSchema({
     title: 'HousePlus',
     description: 'Professional OEM/ODM manufacturer specializing in solar products, home appliances, and 3C electronics for global wholesale partners.',
     url: 'https://www.houseplus-ch.com',
-    lang: 'en',
+    lang: locale,
     type: 'Organization',
   });
-  const siteSchema = generateWebSiteSchema('en');
+  const siteSchema = generateWebSiteSchema(locale);
   const graphSchema = {
     '@context': 'https://schema.org',
     '@graph': [orgSchema, siteSchema],
   };
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={getLocaleDirection(locale)}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

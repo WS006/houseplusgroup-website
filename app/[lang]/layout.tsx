@@ -23,7 +23,9 @@ export default async function LangLayout({
   return (
     <>
       <script
-        dangerouslySetInnerHTML={{ __html: `document.documentElement.lang=${JSON.stringify(lang)}` }}
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang=${JSON.stringify(lang)};document.documentElement.dir=${JSON.stringify(lang === 'ar' ? 'rtl' : 'ltr')}`,
+        }}
       />
       <Header lang={lang} />
       <main className="min-h-screen">{children}</main>

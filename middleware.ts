@@ -15,6 +15,10 @@ export function middleware(request: NextRequest) {
   const { pathname, protocol, host } = request.nextUrl;
   const segments = pathname.split('/');
   const firstSegment = segments[1];
+  const requestHeaders = new Headers(request.headers);
+  if (validLangs.includes(firstSegment)) {
+    requestHeaders.set('x-houseplus-locale', firstSegment);
+  }
 
   // Force HTTPS: redirect any HTTP request to HTTPS (301 permanent)
   // Works behind Vercel/Cloudflare proxies that set x-forwarded-proto
@@ -107,7 +111,7 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  const response = NextResponse.next();
+  const response = NextResponse.next({ request: { headers: requestHeaders } });
   addSecurityHeaders(response);
   return response;
 }
