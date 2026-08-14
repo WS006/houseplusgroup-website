@@ -8,6 +8,6 @@ The production sitemap contained 481 canonical, indexable URLs: 109 English page
 
 The Arabic `air-fryer-12l-rotisserie` product page renders with Arabic navigation, RTL layout after hydration, localized support-widget labels, translated technical terms, quotation-confirmed commercial fields, and no visible legacy GEO fact block or fixed MOQ, lead-time, or warranty promise.
 
-## Remaining technical issue
+## Final production verification
 
-Raw HTML fetched for representative EN, ES, DE, FR, and AR product URLs still reported `<html lang="en" dir="ltr">`. The client-side language layout corrects the DOM after hydration, but the server-rendered document attributes remain incorrect for non-English locales. This must be resolved before the multilingual technical audit can be closed.
+The final raw-HTML verification passed for a representative product page in all five locales. EN, ES, DE, FR, and AR each output the matching `html lang` value; Arabic outputs `dir="rtl"` and all other locales output `dir="ltr"`. The legacy `GEO Fact:` block and fixed commercial promises were absent in every locale. Arabic technical values were fully translated in the sampled table; Spanish and German pages also rendered localized product terminology, including locale-specific forms such as `16 programas preestablecidos` and `16 voreingestellten Programmen`.
