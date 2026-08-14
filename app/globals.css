@@ -20,6 +20,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Prevent long localized compound terms from creating horizontal scroll on narrow screens. */
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
+
 /* Animation delay utilities */
 .delay-200 {
   animation-delay: 200ms;
