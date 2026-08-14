@@ -49,3 +49,10 @@
 - [x] 修复德语长标签触发的在线服务浮层移动端横向溢出，并对全部 545 个页面复测。
 - [ ] 在 Google Search Console 中移除拼写错误、退役及非 www 的历史 sitemap 提交项，仅保留当前规范 sitemap、图片 sitemap 与 feed。
 - [ ] 在 Bing Webmaster Tools 轮换曾暴露的 API Key，并将新密钥仅更新至 Cloudflare Worker Secret。
+- [ ] 恢复仍在使用的 merchant-feed.xml，并在获得真实零售数据后核验其价格、库存、购买链接、配送与退货字段。
+- [ ] 建立零售直接购买与 B2B 询盘/OEM 并行的产品商业数据模型，确保价格、库存、物流、退货和 B2B 条款各有唯一真实来源。
+- [x] 将首页、品牌页、产品页和结构化数据调整为零售购买与 B2B/OEM 并行模式，避免未核实的固定商业承诺。
+- [ ] 优化首页品牌 Logo 的响应式尺寸和格式交付，降低移动端图片无效字节并复测 LCP。
+- [ ] 对英文首页和品牌页实施基于真实 GSC 数据的品牌搜索 CTR 呈现优化，并在后续采集周期复测。
+- [ ] 更新独立搜索监测器的 sitemap 判定逻辑，识别仍在使用的 merchant feed，并区分历史无效端点。
+- [x] 修复 RegionSwitcher 在生产类型检查中可能读取空 searchParams 的错误，恢复完整生产构建。

@@ -227,7 +227,14 @@ export interface ProductSchemaOptions {
   sku: string;
   brand?: string;
   url: string;
-  availability?: 'InStock' | 'PreOrder' | 'OutOfStock';
+  retailOffer?: {
+    price: string;
+    currency: string;
+    availability: 'InStock' | 'OutOfStock' | 'PreOrder' | 'BackOrder';
+    purchaseUrl: string;
+    shippingPolicyUrl?: string;
+    returnPolicyUrl?: string;
+  };
   category?: string;
   imageCaption?: string;
   imageDescription?: string;
@@ -249,7 +256,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     sku,
     brand = 'HousePlus',
     url,
-    availability = 'InStock',
+    retailOffer,
     category,
     imageCaption,
     imageDescription,
@@ -388,7 +395,29 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url, inLanguage: lang },
     isRelatedTo: { '@id': `${BASE_URL}/#organization` },
-    potentialAction: {
+    ...(retailOffer && {
+      offers: {
+        '@type': 'Offer',
+        url: retailOffer.purchaseUrl,
+        price: retailOffer.price,
+        priceCurrency: retailOffer.currency,
+        availability: `https://schema.org/${retailOffer.availability}`,
+        itemCondition: 'https://schema.org/NewCondition',
+        ...(retailOffer.returnPolicyUrl && {
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            '@id': retailOffer.returnPolicyUrl,
+            url: retailOffer.returnPolicyUrl,
+          },
+        }),
+      },
+    }),
+    potentialAction: retailOffer ? {
+      '@type': 'BuyAction',
+      name: 'Buy now',
+      target: retailOffer.purchaseUrl,
+      provider: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    } : {
       '@type': 'ContactAction',
       name: contactActionName,
       target: contactUrl,

@@ -23,6 +23,19 @@ export interface B2BInfo {
   wholesaleClients?: number;
 }
 
+/**
+ * Retail information must be sourced from the live retail system. Do not add an
+ * offer until its price, availability and checkout URL are verified there.
+ */
+export interface RetailOffer {
+  price: string;
+  currency: string;
+  availability: 'InStock' | 'OutOfStock' | 'PreOrder' | 'BackOrder';
+  purchaseUrl: string;
+  shippingPolicyUrl?: string;
+  returnPolicyUrl?: string;
+}
+
 export interface ProductData {
   name: string;
   category: 'solar' | 'appliances' | 'electronics';
@@ -37,6 +50,7 @@ export interface ProductData {
   badge?: string;
   faq?: ProductFAQ[];
   b2bInfo?: B2BInfo;
+  retailOffer?: RetailOffer;
 }
 
 export const PRODUCT_DATA: Record<string, ProductData> = {

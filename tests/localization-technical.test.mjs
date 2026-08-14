@@ -43,6 +43,58 @@ test('product pages show confirmed fixed terms when present and retain quotation
   assert.match(productPage, /ui\.answerPrefix/);
 });
 
+test('retail offers are opt-in, source-backed fields while B2B/OEM inquiry remains available', () => {
+  const productData = read('lib/product-data.ts');
+  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const schemaGenerator = read('lib/schema-generator.ts');
+  assert.match(productData, /export interface RetailOffer/);
+  assert.match(productData, /retailOffer\?: RetailOffer/);
+  assert.match(productData, /purchaseUrl: string/);
+  assert.match(productPage, /const retailOffer = product\.retailOffer/);
+  assert.match(productPage, /\{retailOffer && \(/);
+  assert.match(productPage, /ui\.buyNow/);
+  assert.match(schemaGenerator, /retailOffer\?: \{/);
+  assert.match(schemaGenerator, /\(retailOffer && \{/);
+  assert.doesNotMatch(schemaGenerator, /availability = 'InStock'/);
+});
+
+test('homepage logo uses a responsive Next Image and brand page distinguishes retail from B2B/OEM', () => {
+  const home = read('app/[lang]/page.tsx');
+  const brand = read('app/[lang]/brand/page.tsx');
+  assert.match(home, /import Image from 'next\/image'/);
+  assert.match(home, /width=\{709\}/);
+  assert.match(home, /sizes="\(max-width: 767px\) 64px, 80px"/);
+  assert.match(brand, /Retail Products and B2B\/OEM Supply/);
+  assert.match(brand, /Direct Retail Purchase/);
+  assert.doesNotMatch(brand, /1\.2M\+\+?\s*Units/);
+  assert.doesNotMatch(brand, /MOQ from 100 units/);
+  assert.doesNotMatch(brand, /Over 8% of annual revenue/);
+});
+
+test('fallback error routes have a valid Pages Router Document context for production builds', () => {
+  const document = read('pages/_document.tsx');
+  assert.match(document, /from 'next\/document'/);
+  assert.match(document, /<Html lang="en">/);
+  assert.match(document, /<Main \/>/);
+  assert.match(document, /<NextScript \/>/);
+});
+
+test('static Pages Router fallbacks do not depend on Document components', () => {
+  const notFound = read('pages/404.tsx');
+  const error = read('pages/500.tsx');
+  assert.doesNotMatch(notFound, /next\/document/);
+  assert.doesNotMatch(error, /next\/document/);
+  assert.match(notFound, /href="\/en"/);
+  assert.match(error, /href="\/en\/contact"/);
+});
+
+test('region switcher safely handles nullable navigation hooks during production rendering', () => {
+  const switcher = read('components/RegionSwitcher.tsx');
+  assert.match(switcher, /searchParams\?\.get\('region'\)/);
+  assert.match(switcher, /searchParams\?\.toString\(\) \|\| ''/);
+  assert.match(switcher, /const safePathname = pathname \|\| `\/\$\{lang\}`/);
+});
+
 test('homepage and localized foundation pages publish the confirmed company facts in all five languages', () => {
   const homePage = read('app/[lang]/page.tsx');
   const foundationPage = read('components/LocalizedFoundationPage.tsx');

@@ -24,20 +24,21 @@ export default function RegionSwitcher({ lang }: RegionSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const currentRegion = searchParams.get('region') || 'global';
+  const currentRegion = searchParams?.get('region') || 'global';
 
   const currentRegionData = regions.find((r) => r.code === currentRegion) || regions[0];
 
   // Build URL with region parameter
   const buildRegionUrl = (regionCode: string) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || '');
     if (regionCode === 'global') {
       params.delete('region');
     } else {
       params.set('region', regionCode);
     }
     const queryString = params.toString();
-    return queryString ? `${pathname}?${queryString}` : pathname;
+    const safePathname = pathname || `/${lang}`;
+    return queryString ? `${safePathname}?${queryString}` : safePathname;
   };
 
   return (
