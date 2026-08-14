@@ -49,3 +49,14 @@ test('online support widget receives the active locale and provides all five lan
   }
   assert.doesNotMatch(widget, />Service<\/span>/);
 });
+
+test('related-product cards localize product data and the details action in every language', () => {
+  const relatedProducts = read('components/RelatedProducts.tsx');
+  assert.match(relatedProducts, /getLocalizedProduct\(slug, lang, PRODUCT_DATA\[slug\]\)/);
+  assert.match(relatedProducts, /en: 'View Details →'/);
+  assert.match(relatedProducts, /es: 'Ver detalles →'/);
+  assert.match(relatedProducts, /de: 'Details ansehen →'/);
+  assert.match(relatedProducts, /fr: 'Voir les détails →'/);
+  assert.match(relatedProducts, /ar: 'عرض التفاصيل ←'/);
+  assert.doesNotMatch(relatedProducts, /lang === 'ar' \? '← عرض التفاصيل' : 'View Details →'/);
+});

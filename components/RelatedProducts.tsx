@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PRODUCT_DATA } from '@/lib/product-data';
+import { getLocalizedProduct } from '@/lib/localized-content';
 
 interface RelatedProductsProps {
   lang: string;
@@ -30,6 +31,14 @@ const viewAll: Record<string, string> = {
   ar: 'عرض كتالوج المنتجات الكامل ←',
 };
 
+const viewDetails: Record<string, string> = {
+  en: 'View Details →',
+  es: 'Ver detalles →',
+  de: 'Details ansehen →',
+  fr: 'Voir les détails →',
+  ar: 'عرض التفاصيل ←',
+};
+
 /**
  * RelatedProducts renders a SEO-friendly internal link block at the end of
  * blog articles. Each entry is a natural anchor-text link pointing to a
@@ -53,7 +62,7 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
 
       <ul className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ${isRTL ? 'rtl' : 'ltr'}`}>
         {validSlugs.map((slug) => {
-          const product = PRODUCT_DATA[slug];
+          const product = getLocalizedProduct(slug, lang, PRODUCT_DATA[slug]);
           return (
             <li key={slug}>
               <Link
@@ -74,7 +83,7 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
                     {product.name}
                   </p>
                   <p className="text-xs text-blue-600 font-semibold mt-1">
-                    {lang === 'ar' ? '← عرض التفاصيل' : 'View Details →'}
+                    {viewDetails[lang] || viewDetails.en}
                   </p>
                 </div>
               </Link>
