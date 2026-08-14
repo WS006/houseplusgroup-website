@@ -5,6 +5,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getDictionary } from '@/lib/i18n-config';
 import { r2MediaUrl } from '@/lib/r2-media-map';
+import { getCompanyFacts } from '@/lib/company-facts';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -124,6 +125,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
   }
   const dict = await getDictionary(lang);
   const copy = localizedHomeCopy[lang as keyof typeof localizedHomeCopy] || localizedHomeCopy.en;
+  const facts = getCompanyFacts(lang);
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
     image: {
@@ -186,6 +188,17 @@ export default async function LangHome({ params }: { params: { lang: string } })
                 {copy.requestQuote}
               </Link>
             </div>
+          </div>
+        </section>
+
+        <section className="border-y border-blue-100 bg-white px-4 py-10">
+          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 md:grid-cols-4">
+            {[facts.factoryArea, facts.manufacturingSince, facts.wholesaleClients, facts.markets].map((value, index) => (
+              <div key={facts.labels[index]} className="rounded-2xl border border-blue-100 bg-blue-50/60 p-5 text-center">
+                <p className="text-2xl font-black text-blue-700 md:text-3xl">{value}</p>
+                <p className="mt-1 text-xs font-semibold leading-relaxed text-slate-600">{facts.labels[index]}</p>
+              </div>
+            ))}
           </div>
         </section>
 

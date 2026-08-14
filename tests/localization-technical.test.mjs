@@ -30,14 +30,31 @@ test('client-side locale navigation keeps Arabic document direction in sync', ()
   assert.match(layout, /lang === 'ar' \? 'rtl' : 'ltr'/);
 });
 
-test('product pages use localized quotation guidance instead of unverified GEO or fixed commercial claims', () => {
+test('product pages show confirmed fixed terms when present and retain quotation guidance for other conditions', () => {
   const productPage = read('app/[lang]/products/[slug]/page.tsx');
   assert.doesNotMatch(productPage, /GEO Fact:/);
   assert.match(productPage, /const quotationFaq = \[\{ question: ui\.quoteQuestion, answer: ui\.quoteAnswer \}\]/);
-  assert.match(productPage, /b2bInfo: undefined/);
-  assert.match(productPage, /value: ui\.confirmByQuote/);
+  assert.match(productPage, /b2bInfo: commercialInfo/);
+  assert.match(productPage, /commercialInfo\?\.moq \|\| ui\.confirmByQuote/);
+  assert.match(productPage, /commercialInfo\?\.leadTime \|\| ui\.confirmByQuote/);
+  assert.match(productPage, /commercialInfo\?\.warranty \|\| ui\.confirmByQuote/);
+  assert.match(productPage, /commercialInfo\?\.certifications/);
   assert.match(productPage, /ui\.questionPrefix/);
   assert.match(productPage, /ui\.answerPrefix/);
+});
+
+test('homepage and localized foundation pages publish the confirmed company facts in all five languages', () => {
+  const homePage = read('app/[lang]/page.tsx');
+  const foundationPage = read('components/LocalizedFoundationPage.tsx');
+  const facts = read('lib/company-facts.ts');
+  const schema = read('lib/schema-generator.ts');
+  assert.match(homePage, /getCompanyFacts\(lang\)/);
+  assert.match(foundationPage, /getCompanyFacts\(lang\)/);
+  assert.match(facts, /factoryArea: '20,000 m²'/);
+  assert.match(facts, /manufacturingSince: 'Since 2010'/);
+  assert.match(facts, /wholesaleClients: '441\+'/);
+  assert.match(facts, /markets: '53\+'/);
+  assert.match(schema, /foundingDate: '2010'/);
 });
 
 test('online support widget receives the active locale and provides all five language label sets', () => {

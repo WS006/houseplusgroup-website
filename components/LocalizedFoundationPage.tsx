@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { FoundationLocale, FoundationPageSlug, foundationPageCopy } from '@/lib/foundation-page-copy';
+import { getCompanyFacts } from '@/lib/company-facts';
 
 type Props = { slug: FoundationPageSlug; lang: FoundationLocale };
 
@@ -14,6 +15,7 @@ const actions: Record<FoundationLocale, { products: string; contact: string; not
 export default function LocalizedFoundationPage({ slug, lang }: Props) {
   const [title, heading, body] = foundationPageCopy[slug][lang];
   const action = actions[lang];
+  const facts = getCompanyFacts(lang);
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/40">
       <Breadcrumb lang={lang} slug={slug} />
@@ -27,6 +29,16 @@ export default function LocalizedFoundationPage({ slug, lang }: Props) {
             <Link href={`/${lang}/contact`} className="rounded-xl border-2 border-slate-200 bg-white px-7 py-3.5 font-bold text-slate-800 transition hover:border-blue-400 hover:text-blue-700">{action.contact}</Link>
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-slate-500">{action.note}</p>
+        </div>
+      </section>
+      <section className="border-y border-blue-100 bg-white px-4 py-10">
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-4">
+          {[facts.factoryArea, facts.manufacturingSince, facts.wholesaleClients, facts.markets].map((value, index) => (
+            <div key={facts.labels[index]} className="rounded-2xl border border-blue-100 bg-blue-50/60 p-5 text-center">
+              <p className="text-2xl font-black text-blue-700">{value}</p>
+              <p className="mt-1 text-xs font-semibold leading-relaxed text-slate-600">{facts.labels[index]}</p>
+            </div>
+          ))}
         </div>
       </section>
       <section className="border-y border-blue-100 bg-white px-4 py-12">

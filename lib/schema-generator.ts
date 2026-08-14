@@ -46,6 +46,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     alternateName: 'HousePlus Group',
     description,
     url: BASE_URL,
+    foundingDate: '2010',
     logo: {
       '@type': 'ImageObject',
       '@id': `${OFFICIAL_HORIZONTAL_LOGO}#logo`,
