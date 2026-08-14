@@ -40,7 +40,7 @@ export default function ServiceWidget({
       </button>
 
       {/* Pop-up Window */}
-      <div className={`bg-white shadow-2xl rounded-l-xl border border-gray-100 transition-all duration-300 overflow-hidden max-h-[70vh] ${isOpen ? 'w-72 opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}>
+      <div className={`min-w-0 flex-none bg-white shadow-2xl rounded-l-xl border border-gray-100 transition-all duration-300 overflow-hidden max-h-[70vh] ${isOpen ? 'w-72 opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}>
         <div className="overflow-y-auto max-h-[70vh] p-5 md:p-6">
           <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
