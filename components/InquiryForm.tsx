@@ -1,123 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-interface InquiryFormProps {
-  lang: string;
-}
+interface InquiryFormProps { lang: string; initialProduct?: string; }
+type FormData = { name: string; email: string; company: string; whatsapp: string; product: string; quantity: string; message: string; };
 
 const translations: Record<string, Record<string, string>> = {
-  en: {
-    title: 'HousePlus Inquiry',
-    name: 'Full Name *',
-    email: 'Business Email *',
-    company: 'Company Name',
-    whatsapp: 'WhatsApp (Optional)',
-    product: 'HousePlus Product of Interest',
-    quantity: 'Estimated Quantity',
-    message: 'Message *',
-    submit: 'Send HousePlus Inquiry',
-    sending: 'Sending...',
-    success: 'Thank you. The HousePlus team will review your inquiry.',
-    error: 'Submission failed. Please try again later.',
-    placeholder_product: 'e.g., HousePlus Solar Panel 500W',
-    placeholder_quantity: 'e.g., your estimated quantity',
-  },
+  en: { title: 'Request a Wholesale Quote', intro: 'Fields marked with * are required. Product context is prefilled when you arrive from a product page.', name: 'Full Name *', email: 'Business Email *', company: 'Company Name', whatsapp: 'WhatsApp (optional)', product: 'Product of Interest', quantity: 'Estimated Quantity', message: 'Message *', submit: 'Send Quote Request', sending: 'Sending…', success: 'Thank you. Your inquiry has been received. Our sales team will review the product context and contact you by email.', error: 'We could not submit your request. Please try again or use the direct contact options on this page.', limited: 'Too many requests. Please try again later.', placeholder_product: 'e.g., HousePlus Solar Panel 500W', placeholder_quantity: 'e.g., 200 pcs', placeholder_message: 'Tell us the destination, application, requested configuration or other requirements.' },
+  es: { title: 'Solicitar una cotización mayorista', intro: 'Los campos con * son obligatorios. El producto se completa al llegar desde una página de producto.', name: 'Nombre completo *', email: 'Correo comercial *', company: 'Empresa', whatsapp: 'WhatsApp (opcional)', product: 'Producto de interés', quantity: 'Cantidad estimada', message: 'Mensaje *', submit: 'Enviar solicitud de cotización', sending: 'Enviando…', success: 'Gracias. Hemos recibido su consulta. Nuestro equipo revisará el producto y le contactará por correo.', error: 'No pudimos enviar su solicitud. Inténtelo de nuevo o use las opciones de contacto directo.', limited: 'Demasiadas solicitudes. Inténtelo de nuevo más tarde.', placeholder_product: 'p. ej., panel solar HousePlus 500W', placeholder_quantity: 'p. ej., 200 unidades', placeholder_message: 'Indique destino, aplicación, configuración solicitada u otros requisitos.' },
+  de: { title: 'Großhandelsangebot anfordern', intro: 'Mit * markierte Felder sind erforderlich. Das Produkt wird beim Aufruf von einer Produktseite vorausgefüllt.', name: 'Vollständiger Name *', email: 'Geschäftliche E-Mail *', company: 'Unternehmen', whatsapp: 'WhatsApp (optional)', product: 'Produktinteresse', quantity: 'Geschätzte Menge', message: 'Nachricht *', submit: 'Angebotsanfrage senden', sending: 'Wird gesendet…', success: 'Vielen Dank. Ihre Anfrage ist eingegangen. Unser Vertrieb prüft den Produktkontext und meldet sich per E-Mail.', error: 'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder nutzen Sie den direkten Kontakt.', limited: 'Zu viele Anfragen. Bitte versuchen Sie es später erneut.', placeholder_product: 'z. B. HousePlus Solarpanel 500W', placeholder_quantity: 'z. B. 200 Stück', placeholder_message: 'Nennen Sie Zielort, Anwendung, gewünschte Konfiguration oder weitere Anforderungen.' },
+  fr: { title: 'Demander un devis grossiste', intro: 'Les champs marqués d’un * sont obligatoires. Le produit est prérempli depuis une page produit.', name: 'Nom complet *', email: 'E-mail professionnel *', company: 'Entreprise', whatsapp: 'WhatsApp (facultatif)', product: 'Produit recherché', quantity: 'Quantité estimée', message: 'Message *', submit: 'Envoyer la demande de devis', sending: 'Envoi en cours…', success: 'Merci. Votre demande a été reçue. Notre équipe commerciale examinera le contexte produit et vous contactera par e-mail.', error: 'Nous n’avons pas pu envoyer votre demande. Réessayez ou utilisez les options de contact direct.', limited: 'Trop de demandes. Réessayez plus tard.', placeholder_product: 'ex. panneau solaire HousePlus 500W', placeholder_quantity: 'ex. 200 pièces', placeholder_message: 'Indiquez la destination, l’application, la configuration souhaitée ou d’autres exigences.' },
+  ar: { title: 'اطلب عرض أسعار للجملة', intro: 'الحقول المعلّمة بـ * مطلوبة. يُملأ سياق المنتج عند الوصول من صفحة المنتج.', name: 'الاسم الكامل *', email: 'البريد الإلكتروني التجاري *', company: 'اسم الشركة', whatsapp: 'واتساب (اختياري)', product: 'المنتج المطلوب', quantity: 'الكمية التقديرية', message: 'الرسالة *', submit: 'إرسال طلب عرض السعر', sending: 'جارٍ الإرسال…', success: 'شكرًا لك. تم استلام طلبك. سيراجع فريق المبيعات سياق المنتج ويتواصل معك عبر البريد الإلكتروني.', error: 'تعذر إرسال طلبك. يرجى المحاولة مرة أخرى أو استخدام خيارات الاتصال المباشر.', limited: 'عدد الطلبات كبير جدًا. يرجى المحاولة لاحقًا.', placeholder_product: 'مثال: لوح شمسي HousePlus بقدرة 500 واط', placeholder_quantity: 'مثال: 200 قطعة', placeholder_message: 'اذكر الوجهة أو الاستخدام أو التهيئة المطلوبة أو أي متطلبات أخرى.' },
 };
 
-export default function InquiryForm({ lang = 'en' }: InquiryFormProps) {
+export default function InquiryForm({ lang = 'en', initialProduct = '' }: InquiryFormProps) {
   const t = translations[lang] || translations.en;
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    whatsapp: '',
-    product: '',
-    quantity: '',
-    message: '',
-  });
+  const emptyForm = (): FormData => ({ name: '', email: '', company: '', whatsapp: '', product: initialProduct, quantity: '', message: '' });
+  const [formData, setFormData] = useState<FormData>(emptyForm);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
-    setErrorMsg('');
-
-    try {
-      const res = await fetch('/api/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error('Submission failed');
-
-      setStatus('success');
-      setFormData({ name: '', email: '', company: '', whatsapp: '', product: '', quantity: '', message: '' });
-    } catch (err: any) {
-      setStatus('error');
-      setErrorMsg(err.message);
-    }
-  };
-
-  return (
-    <div className="w-full">
-      <h2 className="text-3xl font-black mb-8 text-slate-900">{t.title}</h2>
-      {status === 'success' && (
-        <div className="mb-8 p-6 bg-green-50 text-green-700 rounded-2xl border border-green-100 font-bold">
-          {t.success}
-        </div>
-      )}
-      {status === 'error' && (
-        <div className="mb-8 p-6 bg-red-50 text-red-700 rounded-2xl border border-red-100 font-bold">
-          {errorMsg || t.error}
-        </div>
-      )}
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.name}</label>
-            <input type="text" name="name" required value={formData.name} onChange={handleChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all" />
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.email}</label>
-            <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all" />
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.company}</label>
-            <input type="text" name="company" value={formData.company} onChange={handleChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all" />
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.whatsapp}</label>
-            <input type="text" name="whatsapp" value={formData.whatsapp} onChange={handleChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all" />
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.product}</label>
-            <input type="text" name="product" value={formData.product} onChange={handleChange} placeholder={t.placeholder_product} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all" />
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.quantity}</label>
-            <input type="text" name="quantity" value={formData.quantity} onChange={handleChange} placeholder={t.placeholder_quantity} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all" />
-          </div>
-        </div>
-        <div className="space-y-2">
-          <label className="text-sm font-black text-slate-700 uppercase tracking-widest">{t.message}</label>
-          <textarea name="message" required rows={4} value={formData.message} onChange={handleChange} className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl p-4 focus:border-blue-500 outline-none transition-all"></textarea>
-        </div>
-        <button type="submit" disabled={status === 'loading'} className="w-full bg-blue-600 text-white py-5 rounded-2xl hover:bg-blue-700 disabled:bg-slate-400 font-black text-xl shadow-xl shadow-blue-200 transition-all hover:-translate-y-1">
-          {status === 'loading' ? t.sending : t.submit}
-        </button>
-      </form>
-    </div>
-  );
+  const [errorKey, setErrorKey] = useState<'error' | 'limited'>('error');
+  useEffect(() => { setFormData((current) => ({ ...current, product: current.product || initialProduct })); }, [initialProduct]);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData({ ...formData, [event.target.name]: event.target.value });
+  const handleSubmit = async (event: React.FormEvent) => { event.preventDefault(); setStatus('loading'); try { const response = await fetch('/api/inquiry', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) }); if (!response.ok) { setErrorKey(response.status === 429 ? 'limited' : 'error'); throw new Error('submission_failed'); } setStatus('success'); setFormData(emptyForm()); } catch { setStatus('error'); } };
+  const inputClass = 'w-full rounded-2xl border-2 border-slate-100 bg-slate-50 p-4 outline-none transition-all focus:border-blue-500';
+  return <div className="w-full"><h2 className="text-3xl font-black text-slate-900">{t.title}</h2><p className="mt-3 text-sm leading-relaxed text-slate-600">{t.intro}</p>{status === 'success' && <div role="status" aria-live="polite" className="mt-6 rounded-2xl border border-green-100 bg-green-50 p-5 font-semibold text-green-700">{t.success}</div>}{status === 'error' && <div role="alert" className="mt-6 rounded-2xl border border-red-100 bg-red-50 p-5 font-semibold text-red-700">{t[errorKey]}</div>}<form onSubmit={handleSubmit} className="mt-8 space-y-5"><div className="grid grid-cols-1 gap-5 md:grid-cols-2"><Field label={t.name}><input aria-label={t.name} className={inputClass} type="text" name="name" autoComplete="name" required value={formData.name} onChange={handleChange} /></Field><Field label={t.email}><input aria-label={t.email} className={inputClass} type="email" name="email" autoComplete="email" required value={formData.email} onChange={handleChange} /></Field></div><div className="grid grid-cols-1 gap-5 md:grid-cols-2"><Field label={t.company}><input aria-label={t.company} className={inputClass} type="text" name="company" autoComplete="organization" value={formData.company} onChange={handleChange} /></Field><Field label={t.whatsapp}><input aria-label={t.whatsapp} className={inputClass} type="tel" name="whatsapp" autoComplete="tel" value={formData.whatsapp} onChange={handleChange} /></Field></div><div className="grid grid-cols-1 gap-5 md:grid-cols-2"><Field label={t.product}><input aria-label={t.product} className={inputClass} type="text" name="product" value={formData.product} onChange={handleChange} placeholder={t.placeholder_product} /></Field><Field label={t.quantity}><input aria-label={t.quantity} className={inputClass} type="text" name="quantity" value={formData.quantity} onChange={handleChange} placeholder={t.placeholder_quantity} /></Field></div><Field label={t.message}><textarea aria-label={t.message} className={inputClass} name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder={t.placeholder_message} /></Field><button type="submit" disabled={status === 'loading'} className="w-full rounded-2xl bg-blue-600 py-4 text-lg font-black text-white shadow-xl shadow-blue-200 transition-all hover:-translate-y-0.5 hover:bg-blue-700 disabled:bg-slate-400">{status === 'loading' ? t.sending : t.submit}</button></form></div>;
 }
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) { return <label className="block space-y-2"><span className="text-sm font-black uppercase tracking-widest text-slate-700">{label}</span>{children}</label>; }

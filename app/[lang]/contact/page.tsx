@@ -3,173 +3,36 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { getCompanyFacts } from '@/lib/company-facts';
 import { Metadata } from 'next';
 
-const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'] as const;
+type Locale = typeof validLangs[number];
+
+const copy: Record<Locale, Record<string, string>> = {
+  en: { title: 'Contact HousePlus | Wholesale Quote', intro: 'Share your product, quantity and destination. Our sales team will review the request and confirm the applicable quotation details.', why: 'Why work with HousePlus', factory: '20,000 m² production base', factoryDetail: 'Zhongshan, Guangdong · Established 2010', sales: 'Direct wholesale support', salesDetail: 'Product information and quotation guidance', markets: '441+ clients in 53+ markets', marketsDetail: 'Solar, home appliances and 3C electronics', terms: 'Product-specific commercial terms', termsDetail: 'MOQ, lead time, warranty and certificates vary by model', direct: 'Direct Contact', phone: 'WhatsApp / Phone', email: 'Email', wechat: 'WeChat ID', hours: 'Business Hours', weekday: 'Monday – Friday', saturday: 'Saturday', sunday: 'Sunday', closed: 'Closed', timezone: 'All times are GMT+8 (China Standard Time).', meta: 'Contact HousePlus for solar, home appliance and 3C electronics wholesale inquiries. Share the product, quantity and destination to request a product-specific quotation.' },
+  es: { title: 'Contactar a HousePlus | Cotización mayorista', intro: 'Indique el producto, la cantidad y el destino. Nuestro equipo comercial revisará la solicitud y confirmará los detalles aplicables de la cotización.', why: 'Por qué trabajar con HousePlus', factory: 'Base de producción de 20.000 m²', factoryDetail: 'Zhongshan, Guangdong · Desde 2010', sales: 'Soporte mayorista directo', salesDetail: 'Información de producto y orientación para cotizaciones', markets: '441+ clientes en 53+ mercados', marketsDetail: 'Solar, electrodomésticos y electrónica 3C', terms: 'Condiciones comerciales por producto', termsDetail: 'MOQ, plazo, garantía y certificados varían según el modelo', direct: 'Contacto directo', phone: 'WhatsApp / Teléfono', email: 'Correo electrónico', wechat: 'ID de WeChat', hours: 'Horario comercial', weekday: 'Lunes – viernes', saturday: 'Sábado', sunday: 'Domingo', closed: 'Cerrado', timezone: 'Todos los horarios están en GMT+8 (hora estándar de China).', meta: 'Contacte a HousePlus para consultas mayoristas de productos solares, electrodomésticos y electrónica 3C. Indique producto, cantidad y destino para solicitar una cotización específica.' },
+  de: { title: 'HousePlus kontaktieren | Großhandelsangebot', intro: 'Teilen Sie Produkt, Menge und Zielort mit. Unser Vertrieb prüft Ihre Anfrage und bestätigt die zutreffenden Angebotsdetails.', why: 'Warum HousePlus', factory: 'Produktionsbasis mit 20.000 m²', factoryDetail: 'Zhongshan, Guangdong · Seit 2010', sales: 'Direkter Großhandels-Support', salesDetail: 'Produktinformationen und Angebotsberatung', markets: '441+ Kunden in 53+ Märkten', marketsDetail: 'Solar, Haushaltsgeräte und 3C-Elektronik', terms: 'Produktspezifische Handelsbedingungen', termsDetail: 'MOQ, Lieferzeit, Garantie und Zertifikate variieren je nach Modell', direct: 'Direkter Kontakt', phone: 'WhatsApp / Telefon', email: 'E-Mail', wechat: 'WeChat-ID', hours: 'Geschäftszeiten', weekday: 'Montag – Freitag', saturday: 'Samstag', sunday: 'Sonntag', closed: 'Geschlossen', timezone: 'Alle Zeiten sind GMT+8 (China Standard Time).', meta: 'Kontaktieren Sie HousePlus für Großhandelsanfragen zu Solarprodukten, Haushaltsgeräten und 3C-Elektronik. Teilen Sie Produkt, Menge und Zielort für ein produktspezifisches Angebot mit.' },
+  fr: { title: 'Contacter HousePlus | Devis grossiste', intro: 'Indiquez le produit, la quantité et la destination. Notre équipe commerciale examinera votre demande et confirmera les détails applicables du devis.', why: 'Pourquoi travailler avec HousePlus', factory: 'Base de production de 20 000 m²', factoryDetail: 'Zhongshan, Guangdong · Depuis 2010', sales: 'Support grossiste direct', salesDetail: 'Informations produit et accompagnement au devis', markets: '441+ clients sur 53+ marchés', marketsDetail: 'Solaire, électroménager et électronique 3C', terms: 'Conditions commerciales par produit', termsDetail: 'MOQ, délai, garantie et certificats varient selon le modèle', direct: 'Contact direct', phone: 'WhatsApp / Téléphone', email: 'E-mail', wechat: 'ID WeChat', hours: 'Heures d’ouverture', weekday: 'Lundi – vendredi', saturday: 'Samedi', sunday: 'Dimanche', closed: 'Fermé', timezone: 'Tous les horaires sont en GMT+8 (heure normale de Chine).', meta: 'Contactez HousePlus pour des demandes grossistes de produits solaires, électroménagers et électroniques 3C. Indiquez le produit, la quantité et la destination pour un devis spécifique.' },
+  ar: { title: 'اتصل بـ HousePlus | عرض أسعار للجملة', intro: 'شارك المنتج والكمية والوجهة. سيراجع فريق المبيعات طلبك ويؤكد تفاصيل عرض الأسعار المناسبة.', why: 'لماذا تتعامل مع HousePlus', factory: 'قاعدة إنتاج بمساحة 20,000 م²', factoryDetail: 'تشونغشان، غوانغدونغ · منذ 2010', sales: 'دعم مباشر للجملة', salesDetail: 'معلومات المنتج وإرشاد عروض الأسعار', markets: '+441 عميلاً في +53 سوقاً', marketsDetail: 'الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C', terms: 'شروط تجارية خاصة بالمنتج', termsDetail: 'الحد الأدنى والمهلة والضمان والشهادات تختلف حسب الطراز', direct: 'اتصال مباشر', phone: 'واتساب / هاتف', email: 'البريد الإلكتروني', wechat: 'معرّف WeChat', hours: 'ساعات العمل', weekday: 'الاثنين – الجمعة', saturday: 'السبت', sunday: 'الأحد', closed: 'مغلق', timezone: 'جميع الأوقات بتوقيت GMT+8 (توقيت الصين القياسي).', meta: 'اتصل بـ HousePlus لطلبات الجملة الخاصة بالطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. شارك المنتج والكمية والوجهة لطلب عرض أسعار خاص بالمنتج.' },
+};
 
 export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return validLangs.map((lang) => ({ lang }));
-}
+export function generateStaticParams() { return validLangs.map((lang) => ({ lang })); }
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const { lang } = params;
-  
-  const titles: Record<string, string> = {
-    en: 'Contact HousePlus - Global Wholesale Support',
-    es: 'Contactar a HousePlus - Soporte Mayorista Global',
-    de: 'Kontaktieren Sie HousePlus - Globaler Großhandels-Support',
-    fr: 'Contactez HousePlus - Support Grossiste Mondial',
-    ar: 'اتصل بـ HousePlus - دعم الجملة العالمي',
-  };
-
-  const descriptions: Record<string, string> = {
-    en: 'Contact HousePlus wholesale team for solar, appliance and 3C electronics inquiries. 24-hour response. WhatsApp +86 155 7811 9543. 16 years manufacturing experience. 20,000 m² ISO 9001 factory. MOQ 100 pcs, 20–35 day lead time. 441+ clients across 53+ countries.',
-    es: 'Contacte al equipo mayorista de HousePlus para consultas de energía solar, electrodomésticos y electrónica 3C. Respuesta en 24 horas. WhatsApp +86 155 7811 9543. 16 años de experiencia. Fábrica ISO 9001 de 20.000 m². MOQ 100 pcs, entrega 20–35 días. 441+ clientes en 53+ países.',
-    de: 'Kontaktieren Sie das HousePlus-Großhandelsteam für Anfragen zu Solar, Haushaltsgeräten und 3C-Elektronik. Antwort in 24 Stunden. WhatsApp +86 155 7811 9543. 16 Jahre Erfahrung. ISO 9001 Fabrik mit 20.000 m². MOQ 100 Stk., Lieferzeit 20–35 Tage. 441+ Kunden in 53+ Ländern.',
-    fr: 'Contactez l\'équipe de vente en gros HousePlus pour les demandes de solaire, d\'électroménager et d\'électronique 3C. Réponse en 24 heures. WhatsApp +86 155 7811 9543. 16 ans d\'expérience. Usine ISO 9001 de 20 000 m². MOQ 100 pcs, délai 20–35 jours. 441+ clients dans 53+ pays.',
-    ar: 'اتصل بفريق الجملة في HousePlus لاستفسارات الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. رد خلال 24 ساعة. واتساب +86 155 7811 9543. 16 سنة خبرة. مصنع ISO 9001 بمساحة 20,000 م². الحد الأدنى 100 قطعة، تسليم 20–35 يوم. 441+ عميل في 53+ دولة.',
-  };
-
-  return generateSEOMetadata({
-    title: titles[lang] || titles.en,
-    description: descriptions[lang] || descriptions.en,
-    keywords: ['contact', 'inquiry', 'wholesale', 'sales', 'HousePlus', 'OEM', 'ODM'],
-    url: `/${lang}/contact`,
-    lang: lang as any,
-    type: 'website',
-  });
+  const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
+  return generateSEOMetadata({ title: copy[lang].title, description: copy[lang].meta, keywords: ['contact', 'inquiry', 'wholesale', 'sales', 'HousePlus', 'OEM', 'ODM'], url: `/${lang}/contact`, lang, type: 'website' });
 }
 
-export default async function ContactPage({ params }: { params: { lang: string } }) {
-  const { lang } = params;
+export default function ContactPage({ params, searchParams }: { params: { lang: string }; searchParams?: { product?: string } }) {
+  const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
+  const t = copy[lang];
+  const productContext = typeof searchParams?.product === 'string' ? searchParams.product.slice(0, 200) : '';
+  const facts = getCompanyFacts(lang);
+  const organizationSchema = generateOrganizationSchema({ title: 'HousePlus', description: t.meta, url: `https://www.houseplus-ch.com/${lang}/contact`, lang, type: 'Organization' });
+  const breadcrumbSchema = generateBreadcrumbSchema([{ name: 'Home', url: `https://www.houseplus-ch.com/${lang}` }, { name: t.title, url: `https://www.houseplus-ch.com/${lang}/contact` }]);
+  const cards = [[t.factory, t.factoryDetail], [t.sales, t.salesDetail], [t.markets, t.marketsDetail], [t.terms, t.termsDetail]];
 
-  const organizationSchema = generateOrganizationSchema({
-    title: 'HousePlus',
-    description: 'Professional manufacturer of solar systems, home appliances, and 3C electronics',
-    url: `https://www.houseplus-ch.com/${lang}/contact`,
-    lang,
-    type: 'Organization',
-  });
-
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
-    { name: 'Contact', url: `https://www.houseplus-ch.com/${lang}/contact` },
-  ]);
-
-  return (
-    <>
-      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
-      <main className="min-h-screen py-20 px-4 bg-slate-50">
-        <Breadcrumb lang={lang} slug="contact" />
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center mb-8 rounded-3xl bg-white px-8 py-5 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100">
-              <img
-                src="https://images.houseplus-ch.com/media/houseplus-group-logo/"
-                alt="HousePlus logo"
-                title="HousePlus global wholesale manufacturer logo"
-                className="h-14 w-auto object-contain md:h-[4.5rem]"
-               decoding="async" />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
-              Contact HousePlus
-            </h1>
-            <p className="text-slate-600 max-w-2xl mx-auto text-xl leading-relaxed">
-              Fill out the form and we'll get back to you within 24 hours with a quote.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-200 border border-slate-100">
-              <InquiryForm lang={lang} />
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-blue-600 text-white p-8 rounded-3xl shadow-xl shadow-blue-200">
-                <h2 className="text-2xl font-bold mb-6">Why Choose HousePlus</h2>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">🏭</span>
-                    <div>
-                      <p className="font-bold text-sm">20,000 m² ISO 9001 Factory</p>
-                      <p className="text-blue-100 text-xs">Guangdong, China — Founded 2010</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">📞</span>
-                    <div>
-                      <p className="font-bold text-sm">WhatsApp +86 155 7811 9543</p>
-                      <p className="text-blue-100 text-xs">24-hour response guaranteed</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">📧</span>
-                    <div>
-                      <p className="font-bold text-sm">jack@houseplus-ch.com</p>
-                      <p className="text-blue-100 text-xs">Direct sales inquiry</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">🌍</span>
-                    <div>
-                      <p className="font-bold text-sm">441+ Clients in 53+ Countries</p>
-                      <p className="text-blue-100 text-xs">16 years of manufacturing trust</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">✓</span>
-                    <div>
-                      <p className="font-bold text-sm">MOQ 100 pcs · 20–35 Day Lead Time</p>
-                      <p className="text-blue-100 text-xs">12-month warranty · CE FCC RoHS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl shadow-slate-200">
-                <h2 className="text-2xl font-bold mb-6">Direct Contact</h2>
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-slate-400 text-sm uppercase font-bold tracking-widest mb-1">WhatsApp/Phone</p>
-                    <a href="https://wa.me/8615578119543" className="text-xl font-bold hover:text-blue-400 transition-colors">+86 155 7811 9543</a>
-                  </div>
-                  <div>
-                    <p className="text-slate-400 text-sm uppercase font-bold tracking-widest mb-1">Email</p>
-                    <a href="mailto:jack@houseplus-ch.com" className="text-xl font-bold hover:text-blue-400 transition-colors">jack@houseplus-ch.com</a>
-                  </div>
-                  <div>
-                    <p className="text-slate-400 text-sm uppercase font-bold tracking-widest mb-1">WeChat ID</p>
-                    <p className="text-xl font-bold">JackHousePlus</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200 border border-slate-100">
-                <h2 className="text-2xl font-bold mb-6 text-slate-900">Business Hours</h2>
-                <div className="space-y-4 text-slate-600">
-                  <div className="flex justify-between">
-                    <span className="font-medium">Mon - Fri</span>
-                    <span>9:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Saturday</span>
-                    <span>10:00 - 16:00</span>
-                  </div>
-                  <div className="flex justify-between text-slate-400">
-                    <span className="font-medium">Sunday</span>
-                    <span>Closed</span>
-                  </div>
-                  <p className="text-xs mt-6 pt-6 border-t border-slate-100 text-slate-400">
-                    * All times are GMT+8 (China Standard Time).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
-  );
+  return <><SEOHead schemas={[organizationSchema, breadcrumbSchema]} /><main className="min-h-screen bg-slate-50 px-4 py-16 md:py-20"><Breadcrumb lang={lang} slug="contact" /><div className="mx-auto max-w-5xl"><div className="mb-10 text-center md:mb-16"><div className="mb-6 inline-flex items-center justify-center rounded-3xl bg-white px-8 py-5 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100"><img src="https://images.houseplus-ch.com/media/houseplus-group-logo/" alt="HousePlus logo" title="HousePlus global wholesale manufacturer logo" className="h-14 w-auto object-contain md:h-[4.5rem]" decoding="async" /></div><h1 className="text-4xl font-black text-slate-900 md:text-6xl">{t.title}</h1><p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">{t.intro}</p></div><div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12"><div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-200 md:p-10 lg:col-span-2"><InquiryForm lang={lang} initialProduct={productContext} /></div><aside className="space-y-6"><div className="rounded-3xl bg-blue-600 p-7 text-white shadow-xl shadow-blue-200"><h2 className="mb-5 text-2xl font-bold">{t.why}</h2><div className="space-y-4">{cards.map(([title, detail]) => <div key={title} className="rounded-2xl bg-blue-500/35 p-4"><p className="text-sm font-bold">{title}</p><p className="mt-1 text-xs leading-relaxed text-blue-100">{detail}</p></div>)}</div></div><div className="rounded-3xl bg-slate-900 p-7 text-white shadow-xl shadow-slate-200"><h2 className="mb-5 text-2xl font-bold">{t.direct}</h2><div className="space-y-5 text-sm"><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.phone}</p><a href="https://wa.me/8615578119543" className="font-bold hover:text-blue-400">+86 155 7811 9543</a></div><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.email}</p><a href="mailto:jack@houseplus-ch.com" className="font-bold hover:text-blue-400">jack@houseplus-ch.com</a></div><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.wechat}</p><p className="font-bold">JackHousePlus</p></div></div></div><div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-xl shadow-slate-200"><h2 className="mb-4 text-2xl font-bold text-slate-900">{t.hours}</h2><div className="space-y-3 text-sm text-slate-600"><div className="flex justify-between gap-4"><span>{t.weekday}</span><span>9:00 – 18:00</span></div><div className="flex justify-between gap-4"><span>{t.saturday}</span><span>10:00 – 16:00</span></div><div className="flex justify-between gap-4 text-slate-400"><span>{t.sunday}</span><span>{t.closed}</span></div><p className="border-t border-slate-100 pt-4 text-xs text-slate-400">{t.timezone}</p></div></div></aside></div></div></main></>;
 }

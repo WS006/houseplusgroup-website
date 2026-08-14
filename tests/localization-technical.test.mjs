@@ -57,6 +57,22 @@ test('homepage and localized foundation pages publish the confirmed company fact
   assert.match(schema, /foundingDate: '2010'/);
 });
 
+test('localized contact pages retain the inquiry form and product CTAs preserve product context', () => {
+  const middleware = read('middleware.ts');
+  const contactPage = read('app/[lang]/contact/page.tsx');
+  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const inquiryForm = read('components/InquiryForm.tsx');
+  assert.doesNotMatch(middleware, /'certifications', 'contact'/);
+  assert.match(contactPage, /<InquiryForm lang=\{lang\} initialProduct=\{productContext\}/);
+  assert.match(productPage, /contact\?product=\$\{encodeURIComponent/);
+  assert.match(inquiryForm, /initialProduct\?: string/);
+  for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
+    assert.match(inquiryForm, new RegExp(`${locale}: \{ title:`));
+  }
+  assert.match(inquiryForm, /role="status"/);
+  assert.match(inquiryForm, /role="alert"/);
+});
+
 test('online support widget receives the active locale and provides all five language label sets', () => {
   const langLayout = read('app/[lang]/layout.tsx');
   const widget = read('components/ServiceWidget.tsx');

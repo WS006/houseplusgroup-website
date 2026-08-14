@@ -326,7 +326,7 @@ export default async function ProductDetailPage({
             {/* CTA Buttons */}
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <Link
-                href={`/${lang}/contact`}
+                href={`/${lang}/contact?product=${encodeURIComponent(`${product.name} (SKU: ${slug})`)}`}
                 className="flex-1 text-center px-6 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5"
               >
                 {ui.requestQuote}
@@ -377,7 +377,7 @@ export default async function ProductDetailPage({
                 <strong>🏭 {ui.oemTitle}:</strong> {ui.oemDescription}
               </p>
               <Link
-                href={`/${lang}/contact`}
+                href={`/${lang}/contact?product=${encodeURIComponent(`${product.name} (SKU: ${slug})`)}`}
                 className="inline-block text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
                 {ui.contactSales} →

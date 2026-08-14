@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const defaultLocale = 'en';
 const localizedFoundationSlugs = new Set([
-  'about-us', 'brand', 'careers', 'case-studies', 'certifications', 'contact',
+  'about-us', 'brand', 'careers', 'case-studies', 'certifications',
   'factory', 'faq', 'news', 'oem-odm', 'products', 'regions', 'service', 'support', 'team',
 ]);
 
