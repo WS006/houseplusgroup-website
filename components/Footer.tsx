@@ -214,8 +214,12 @@ export default function Footer({ lang }: { lang: string }) {
           height: 246,
           caption: 'Official HousePlus Group horizontal logo',
           representativeOfPage: true,
-          copyrightHolder: { '@id': `${BASE_URL}/#organization` },
           license: `${BASE_URL}/terms`,
+          acquireLicensePage: `${BASE_URL}/en/contact`,
+          creditText: 'HousePlus Group',
+          copyrightNotice: '© HousePlus Group. All rights reserved.',
+          copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+          creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
         },
         contactPoint: {
           '@type': 'ContactPoint',

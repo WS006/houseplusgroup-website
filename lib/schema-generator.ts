@@ -5,6 +5,28 @@ const BASE_URL = 'https://www.houseplus-ch.com';
 const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
 const OFFICIAL_HORIZONTAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
 
+// These declarations apply only to approved HousePlus-owned or HousePlus-licensed
+// R2 assets published through this website. Third-party assets must carry their
+// verified per-asset creator, credit, copyright, and license information instead.
+const HOUSEPLUS_IMAGE_RIGHTS = {
+  license: `${BASE_URL}/terms`,
+  acquireLicensePage: `${BASE_URL}/en/contact`,
+  creditText: 'HousePlus Group',
+  copyrightNotice: '© HousePlus Group. All rights reserved.',
+  copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+  creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+};
+
+function houseplusImageReference(image: string) {
+  return {
+    '@type': 'ImageObject',
+    '@id': `${image}#image`,
+    url: image,
+    contentUrl: image,
+    ...HOUSEPLUS_IMAGE_RIGHTS,
+  };
+}
+
 interface SchemaOptions {
   title: string;
   description: string;
@@ -33,8 +55,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
       height: 246,
       caption: 'Official HousePlus Group horizontal logo',
       representativeOfPage: true,
-      license: `${BASE_URL}/terms`,
-      copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+      ...HOUSEPLUS_IMAGE_RIGHTS,
     },
     image: DEFAULT_SOCIAL_IMAGE,
     foundingLocation: {
@@ -171,10 +192,7 @@ export function generateImageObjectSchema(options: ImageObjectOptions) {
     description,
     width: dimensions.width,
     height: dimensions.height,
-    license: `${BASE_URL}/terms`,
-    acquireLicensePage: `${BASE_URL}/terms`,
-    copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
-    creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    ...HOUSEPLUS_IMAGE_RIGHTS,
     contentLocation: {
       '@type': 'Place',
       name: 'Zhongshan, Guangdong, China',
@@ -324,10 +342,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       description: resolvedImageDescription,
       name: resolvedImageCaption,
       representativeOfPage: true,
-      license: `${BASE_URL}/terms`,
-      acquireLicensePage: `${BASE_URL}/terms`,
-      copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
-      creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+      ...HOUSEPLUS_IMAGE_RIGHTS,
       contentLocation: {
         '@type': 'Place',
         name: 'Zhongshan, Guangdong, China',
@@ -428,8 +443,8 @@ export function generateLocalBusinessSchema(options: SchemaOptions) {
     alternateName: 'HousePlus',
     description,
     url,
-    logo: OFFICIAL_HORIZONTAL_LOGO,
-    image: DEFAULT_SOCIAL_IMAGE,
+    logo: houseplusImageReference(OFFICIAL_HORIZONTAL_LOGO),
+    image: houseplusImageReference(DEFAULT_SOCIAL_IMAGE),
     telephone: '+86-155-7811-9543',
     email: 'jack@houseplus-ch.com',
     address: {
@@ -506,7 +521,7 @@ export function generateCollectionPageSchema(options: CollectionPageSchemaOption
     isPartOf: { '@id': `${BASE_URL}/#website` },
     publisher: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     mainEntity: { '@id': itemListId },
-    primaryImageOfPage: { '@type': 'ImageObject', '@id': `${image}#image`, url: image, contentUrl: image },
+    primaryImageOfPage: houseplusImageReference(image),
     ...(categories.length > 0 && { about: categories.map((category) => ({ '@type': 'Thing', name: category })) }),
   };
 }
@@ -533,7 +548,7 @@ export function generateWebPageSchema(options: WebPageSchemaOptions) {
     inLanguage: lang,
     isPartOf: { '@id': `${BASE_URL}/#website` },
     publisher: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
-    primaryImageOfPage: { '@type': 'ImageObject', '@id': `${image}#image`, url: image, contentUrl: image },
+    primaryImageOfPage: houseplusImageReference(image),
     ...(about.length > 0 && { about: about.map((topic) => ({ '@type': 'Thing', name: topic })) }),
   };
 }
@@ -589,10 +604,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
       description: details?.description || details?.alt || description,
       name: details?.title || headline,
       representativeOfPage: true,
-      license: `${BASE_URL}/terms`,
-      acquireLicensePage: `${BASE_URL}/terms`,
-      copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
-      creator: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+      ...HOUSEPLUS_IMAGE_RIGHTS,
       contentLocation: {
         '@type': 'Place',
         name: 'Zhongshan, Guangdong, China',
@@ -637,7 +649,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
         width: 611,
         height: 246,
         caption: 'Official HousePlus Group horizontal logo',
-        license: `${BASE_URL}/terms`,
+        ...HOUSEPLUS_IMAGE_RIGHTS,
       },
     },
     mainEntityOfPage: {
