@@ -41,3 +41,5 @@
 - [x] 为 18 个缺资料产品发布用户确认的保修和适用认证；MOQ 与交期继续显示为以报价确认。
 - [x] 逐页审计 63 个产品的 EN、ES、DE、FR、AR 共 315 个产品页面的 SEO 元标签、hreflang、Open Graph、Twitter 与 Product/FAQ/Image JSON-LD。
 - [x] 修复产品页 SEO 或结构化数据确认问题并完成生产复测与报告归档。
+- [x] 逐页审计非产品页面的五语言标题、描述、canonical、hreflang、Open Graph、Twitter 与 JSON-LD。
+- [x] 修复非产品页面确认的 SEO 或结构化数据问题并完成生产复测与报告归档。
