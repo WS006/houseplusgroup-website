@@ -5,11 +5,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
+import { getOGLocale } from '@/lib/seo-utils';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const ogLocales: Record<string, string> = { en: 'en_US', es: 'es_ES', de: 'de_DE', fr: 'fr_FR', ar: 'ar_SA' };
 
 export const dynamicParams = false;
 
@@ -47,25 +49,25 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
 
   const categoryDescriptions: Record<string, Record<string, string>> = {
     solar: {
-      en: 'HousePlus solar energy systems: high-efficiency solar panels, MPPT charge controllers, pure sine wave inverters, lithium batteries and portable power stations. CE/IEC/RoHS certified for global wholesale buyers.',
-      es: 'Sistemas de energía solar de HousePlus: paneles solares de alta eficiencia, controladores de carga MPPT, inversores de onda senoidal pura, baterías de litio y estaciones de energía portátiles. Certificados CE/IEC/RoHS para compradores mayoristas globales.',
-      de: 'HousePlus Solarenergiesysteme: Hocheffiziente Solarmodule, MPPT-Laderegler, Sinus-Wechselrichter, Lithium-Batterien und tragbare Kraftwerke. CE/IEC/RoHS-zertifiziert für globale Großhandelskäufer.',
-      fr: 'Systèmes solaires HousePlus : panneaux solaires haute efficacité, contrôleurs de charge MPPT, onduleurs à onde sinusoïdale pure, batteries lithium et stations électriques portables. Certifiés CE/IEC/RoHS pour acheteurs en gros mondiaux.',
-      ar: 'أنظمة الطاقة الشمسية من هاوس بلس: ألواح شمسية عالية الكفاءة، ومتحكمات شحن MPPT، ومحولات موجات جيبية نقية، وبطاريات ليثيوم ومحطات طاقة محمولة. مع شهادات CE/IEC/RoHS لمشتري الجملة العالميين.',
+      en: 'Explore HousePlus solar panels, MPPT charge controllers, inverters, lithium batteries and portable power stations. Request product documentation and a tailored wholesale quotation for your market.',
+      es: 'Explore paneles solares, controladores MPPT, inversores, baterías de litio y estaciones de energía portátiles de HousePlus. Solicite documentación del producto y una cotización mayorista adaptada a su mercado.',
+      de: 'Entdecken Sie Solarmodule, MPPT-Laderegler, Wechselrichter, Lithium-Batterien und tragbare Kraftwerke von HousePlus. Fordern Sie Produktunterlagen und ein passendes Großhandelsangebot für Ihren Markt an.',
+      fr: 'Découvrez les panneaux solaires, contrôleurs MPPT, onduleurs, batteries lithium et stations électriques portables HousePlus. Demandez la documentation produit et un devis de gros adapté à votre marché.',
+      ar: 'استكشف الألواح الشمسية ووحدات تحكم MPPT والمحولات وبطاريات الليثيوم ومحطات الطاقة المحمولة من هاوس بلس. اطلب وثائق المنتج وعرض أسعار بالجملة مناسبًا لسوقك.',
     },
     'home-appliances': {
-      en: 'HousePlus home appliances: energy-efficient kitchen appliances including air fryers, electric kettles, induction cooktops and toasters. CE/FCC/RoHS certified wholesale appliances for global distributors.',
-      es: 'Electrodomésticos de HousePlus: electrodomésticos de cocina eficientes energéticamente que incluyen freidoras de aire, hervidoras eléctricas, vitrocerámicas y tostadoras. Electrodomésticos mayoristas certificados CE/FCC/RoHS para distribuidores globales.',
-      de: 'HousePlus Haushaltsgeräte: Energieeffiziente Küchengeräte wie Heißluftfritteusen, Wasserkocher, Induktionskochfelder und Toaster. CE/FCC/RoHS-zertifizierte Großhandelsgeräte für globale Distributoren.',
-      fr: 'Appareils électroménagers HousePlus : appareils de cuisine éconergétiques incluant frites à air chaud, bouilloires électriques, plaques à induction et grille-pains. Appareils en gros certifiés CE/FCC/RoHS pour distributeurs mondiaux.',
-      ar: 'أجهزة منزلية هاوس بلس: أجهزة مطبخ موفرة للطاقة تشمل مقلاة الهواء، والغلايات الكهربائية، والأغطية الحثية، والتوستات. أجهزة منزلية بالجملة مع شهادات CE/FCC/RoHS لموزعين عالميين.',
+      en: 'Explore HousePlus kitchen and household appliances, including air fryers, electric kettles, induction cooktops and toasters. Request product documentation and a wholesale quotation for your requirements.',
+      es: 'Explore los electrodomésticos de cocina y hogar de HousePlus, incluidas freidoras de aire, hervidores eléctricos, placas de inducción y tostadoras. Solicite documentación del producto y una cotización mayorista según sus requisitos.',
+      de: 'Entdecken Sie Küchen- und Haushaltsgeräte von HousePlus, darunter Heißluftfritteusen, Wasserkocher, Induktionskochfelder und Toaster. Fordern Sie Produktunterlagen und ein Großhandelsangebot für Ihre Anforderungen an.',
+      fr: 'Découvrez les appareils de cuisine et du foyer HousePlus, notamment les friteuses à air, bouilloires électriques, plaques à induction et grille-pains. Demandez la documentation produit et un devis de gros selon vos besoins.',
+      ar: 'استكشف أجهزة المطبخ والمنزل من هاوس بلس، بما في ذلك مقالي الهواء والغلايات الكهربائية ومواقد الحث والمحمصات. اطلب وثائق المنتج وعرض أسعار بالجملة وفقًا لمتطلباتك.',
     },
     '3c-electronics': {
-      en: 'HousePlus 3C electronics: Bluetooth earphones, smart watches, power banks, portable SSDs and USB cables. Premium quality consumer electronics with CE/FCC/RoHS certifications for wholesale buyers worldwide.',
-      es: 'Electrónica 3C de HousePlus: auriculares Bluetooth, relojes inteligentes, power banks, SSD portátiles y cables USB. Electrónica de consumo de calidad premium con certificaciones CE/FCC/RoHS para compradores mayoristas en todo el mundo.',
-      de: 'HousePlus 3C-Elektronik: Bluetooth-Kopfhörer, Smartwatches, Powerbanks, tragbare SSDs und USB-Kabel. Premium-Qualitäts-Konsumelektronik mit CE/FCC/RoHS-Zertifizierungen für Großhandelskäufer weltweit.',
-      fr: 'Électronique 3C HousePlus : écouteurs Bluetooth, montres intelligentes, powerbanks, SSD portables et câbles USB. Électronique grand public de qualité premium avec certifications CE/FCC/RoHS pour acheteurs en gros du monde entier.',
-      ar: 'إلكترونيات 3C هاوس بلس: سماعات بلوتوث، وساعات ذكية، وبنوك الطاقة، و SSD المحمولة، وكابلات USB. إلكترونيات استهلاكية ذات جودة عالية مع شهادات CE/FCC/RoHS لمشتري الجملة في جميع أنحاء العالم.',
+      en: 'Explore HousePlus 3C electronics, including Bluetooth earphones, smart watches, power banks, portable SSDs and USB cables. Request product documentation and a wholesale quotation for your requirements.',
+      es: 'Explore la electrónica 3C de HousePlus, incluidos auriculares Bluetooth, relojes inteligentes, baterías externas, SSD portátiles y cables USB. Solicite documentación del producto y una cotización mayorista según sus requisitos.',
+      de: 'Entdecken Sie 3C-Elektronik von HousePlus, darunter Bluetooth-Kopfhörer, Smartwatches, Powerbanks, tragbare SSDs und USB-Kabel. Fordern Sie Produktunterlagen und ein Großhandelsangebot für Ihre Anforderungen an.',
+      fr: 'Découvrez l’électronique 3C HousePlus, notamment les écouteurs Bluetooth, montres intelligentes, batteries externes, SSD portables et câbles USB. Demandez la documentation produit et un devis de gros selon vos besoins.',
+      ar: 'استكشف إلكترونيات 3C من هاوس بلس، بما في ذلك سماعات بلوتوث والساعات الذكية وبنوك الطاقة ووحدات SSD المحمولة وكابلات USB. اطلب وثائق المنتج وعرض أسعار بالجملة وفقًا لمتطلباتك.',
     },
   };
 
@@ -78,11 +80,11 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
   };
 
   const baseDescriptions: Record<string, string> = {
-    en: 'Browse the full HousePlus product catalogue: solar panels, inverters, batteries, home appliances and 3C electronics. Wholesale pricing, OEM/ODM available. MOQ 100 pcs.',
-    es: 'Explore el catálogo completo de HousePlus: paneles solares, inversores, baterías, electrodomésticos y electrónica 3C. Precios al por mayor, OEM/ODM disponibles desde 100 unidades.',
-    de: 'Durchstöbern Sie das vollständige HousePlus-Produktprogramm: Solarmodule, Wechselrichter, Batterien, Haushaltsgeräte und 3C-Elektronik. Großhandelspreise, OEM/ODM ab 100 Stück.',
-    fr: 'Parcourez le catalogue complet HousePlus : panneaux solaires, onduleurs, batteries, électroménager et électronique 3C. Prix de gros, OEM/ODM disponibles dès 100 pièces.',
-    ar: 'تصفح كتالوج هاوس بلس الكامل: ألواح شمسية ومحولات وبطاريات وأجهزة منزلية وإلكترونيات 3C. أسعار الجملة مع توفر خدمات OEM/ODM ابتداءً من ١٠٠ قطعة.',
+    en: 'Browse the HousePlus catalogue of solar systems, home appliances and 3C electronics. Request product documentation, OEM/ODM scope and a wholesale quotation for your requirements.',
+    es: 'Explore el catálogo HousePlus de sistemas solares, electrodomésticos y electrónica 3C. Solicite documentación del producto, el alcance OEM/ODM y una cotización mayorista según sus requisitos.',
+    de: 'Durchsuchen Sie den HousePlus-Katalog für Solarsysteme, Haushaltsgeräte und 3C-Elektronik. Fordern Sie Produktunterlagen, den OEM/ODM-Umfang und ein Großhandelsangebot für Ihre Anforderungen an.',
+    fr: 'Parcourez le catalogue HousePlus de systèmes solaires, appareils électroménagers et électronique 3C. Demandez la documentation produit, le périmètre OEM/ODM et un devis de gros selon vos besoins.',
+    ar: 'تصفح كتالوج هاوس بلس لأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. اطلب وثائق المنتج ونطاق OEM/ODM وعرض أسعار بالجملة وفقًا لمتطلباتك.',
   };
 
   const isValidCategory = category && Object.keys(categoryTitles).includes(category);
@@ -111,6 +113,8 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
       description,
       url: isValidCategory ? `${BASE_URL}/${lang}/products?category=${category}` : `${BASE_URL}/${lang}/products`,
       siteName: 'HousePlus',
+      locale: getOGLocale(lang),
+      alternateLocale: LOCALES.filter((locale) => locale !== lang).map((locale) => ogLocales[locale]),
       images: [{
         url: featuredProduct.coverImage,
         width: imageDimensions.width,
@@ -123,6 +127,8 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
       card: 'summary_large_image',
       title,
       description,
+      site: '@HousePlusGroup',
+      creator: '@HousePlusGroup',
       images: [{ url: featuredProduct.coverImage, alt: featuredProduct.imageAlt || featuredProduct.name }],
     } : undefined,
   };
@@ -214,7 +220,8 @@ export default async function ProductsPage({ params }: { params: { lang: string 
       url: `${BASE_URL}/${lang}/products/${p.slug}`,
       image: p.coverImage,
       description: p.description,
-    }))
+    })),
+    lang
   );
 
   const catalogSchema = generateCollectionPageSchema({

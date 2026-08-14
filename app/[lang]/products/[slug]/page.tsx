@@ -6,6 +6,7 @@ import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema } from '@/lib/schema-generator';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
 import { getLocalizedProduct } from '@/lib/localized-content';
+import { getOGLocale } from '@/lib/seo-utils';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -37,6 +38,14 @@ function getDetailTitle(product: ProductData, model: string) {
   return `${product.name} (${model}) | HousePlus ${cat} Export`;
 }
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
+
+const schemaActionCopy: Record<string, { name: string; description: string }> = {
+  en: { name: 'Request a wholesale quotation', description: 'Contact HousePlus Group to request product documentation and a wholesale quotation.' },
+  es: { name: 'Solicitar una cotización mayorista', description: 'Contacte con HousePlus Group para solicitar documentación del producto y una cotización mayorista.' },
+  de: { name: 'Großhandelsangebot anfordern', description: 'Kontaktieren Sie die HousePlus Group für Produktdokumentation und ein Großhandelsangebot.' },
+  fr: { name: 'Demander un devis de gros', description: 'Contactez HousePlus Group pour demander la documentation produit et un devis de gros.' },
+  ar: { name: 'طلب عرض أسعار بالجملة', description: 'تواصل مع HousePlus Group لطلب وثائق المنتج وعرض أسعار بالجملة.' },
+};
 
 const productUi: Record<string, Record<string, string>> = {
   en: { notFound: 'Product Not Found', notFoundDescription: "The product you are looking for does not exist.", backProducts: 'Back to Products', documentation: 'Documentation available on request', technicalSpecifications: 'Technical Specifications', keyFeatures: 'Key Features', applications: 'Applications', requestQuote: 'Request a Quote', minOrder: 'Min. Order', leadTime: 'Lead Time', warranty: 'Warranty', confirmByQuote: 'Confirm by quote', faqHeading: 'Frequently Asked Questions', oemTitle: 'HousePlus OEM/ODM Services', oemDescription: 'Discuss custom branding, private-label packaging and product modifications with our team; requirements are confirmed in your quotation.', contactSales: 'Contact HousePlus Sales Team', brandBadge: 'HousePlus B2B', quoteQuestion: 'Which commercial details are confirmed in a quotation?', quoteAnswer: 'MOQ, production schedule, shipping method, export documentation, warranty scope and available product certificates are confirmed after the product, destination and order requirements are reviewed.', questionPrefix: 'Q:', answerPrefix: 'A:' },
@@ -79,11 +88,11 @@ export async function generateMetadata({
   };
 
   const descTemplates: Record<string, string> = {
-    en: `Request a wholesale quotation for ${name} from HousePlus. CE/RoHS certified and OEM/ODM available; MOQ is confirmed in your quotation. Trusted manufacturer for global B2B buyers.`,
-    es: `Solicite una cotización mayorista para ${name} con HousePlus. Certificación CE/RoHS y OEM/ODM disponibles; el MOQ se confirma en su cotización.`,
-    de: `Fordern Sie ein Großhandelsangebot für ${name} bei HousePlus an. CE/RoHS-zertifiziert und OEM/ODM verfügbar; die Mindestbestellmenge wird im Angebot bestätigt.`,
-    fr: `Demandez un devis de gros pour ${name} auprès de HousePlus. Certification CE/RoHS et OEM/ODM disponibles ; le MOQ est confirmé dans votre devis.`,
-    ar: `اطلب عرض سعر بالجملة لـ ${name} من هاوس بلس. تتوفر شهادة CE/RoHS وخدمات OEM/ODM، ويتم تأكيد الحد الأدنى للطلب ضمن عرض السعر.`,
+    en: `Request a wholesale quotation for ${name} from HousePlus. Product documentation, applicable compliance materials, OEM/ODM scope and commercial terms are confirmed for your requirements.`,
+    es: `Solicite una cotización mayorista para ${name} con HousePlus. La documentación del producto, los materiales de cumplimiento aplicables, el alcance OEM/ODM y las condiciones comerciales se confirman según sus requisitos.`,
+    de: `Fordern Sie ein Großhandelsangebot für ${name} bei HousePlus an. Produktdokumentation, anwendbare Konformitätsunterlagen, OEM/ODM-Umfang und Geschäftsbedingungen werden für Ihre Anforderungen bestätigt.`,
+    fr: `Demandez un devis de gros pour ${name} auprès de HousePlus. La documentation produit, les éléments de conformité applicables, le périmètre OEM/ODM et les conditions commerciales sont confirmés selon vos besoins.`,
+    ar: `اطلب عرض سعر بالجملة لـ ${name} من هاوس بلس. يتم تأكيد وثائق المنتج ومواد الامتثال المناسبة ونطاق OEM/ODM والشروط التجارية وفقًا لمتطلباتك.`,
   };
 
   const title = titleTemplates[lang] || titleTemplates['en'];
@@ -104,6 +113,8 @@ export async function generateMetadata({
       description,
       url: canonicalUrl,
       siteName: 'HousePlus',
+      locale: getOGLocale(lang),
+      alternateLocale: LOCALES.filter((locale) => locale !== lang).map(getOGLocale),
       images: product?.coverImage ? [{
         url: product.coverImage,
         width: imageDimensions.width,
@@ -112,6 +123,14 @@ export async function generateMetadata({
         type: product.coverImage.endsWith('.png/') ? 'image/png' : 'image/jpeg',
       }] : [],
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      site: '@HousePlusGroup',
+      creator: '@HousePlusGroup',
+      images: product?.coverImage ? [{ url: product.coverImage, alt: product.imageAlt || name }] : [],
     },
     robots: shouldIndexLocale
       ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -174,9 +193,13 @@ export default async function ProductDetailPage({
     imageWidth: imageDimensions.width,
     imageHeight: imageDimensions.height,
     b2bInfo: undefined,
+    lang,
+    contactUrl: `${BASE_URL}/${lang}/contact`,
+    contactActionName: (schemaActionCopy[lang] || schemaActionCopy.en).name,
+    contactActionDescription: (schemaActionCopy[lang] || schemaActionCopy.en).description,
   });
 
-  const faqSchema = generateFAQSchema(quotationFaq);
+  const faqSchema = generateFAQSchema(quotationFaq, lang);
 
   return (
     <main className="min-h-screen bg-white">

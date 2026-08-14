@@ -135,10 +135,11 @@ export interface FAQItem {
   answer: string;
 }
 
-export function generateFAQSchema(faqItems: FAQItem[]) {
+export function generateFAQSchema(faqItems: FAQItem[], lang: string = 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: lang,
     mainEntity: faqItems.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -232,6 +233,10 @@ export interface ProductSchemaOptions {
   imageWidth?: number;
   imageHeight?: number;
   b2bInfo?: B2BSchemaInfo;
+  lang?: string;
+  contactUrl?: string;
+  contactActionName?: string;
+  contactActionDescription?: string;
 }
 
 
@@ -250,6 +255,10 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     imageWidth = 900,
     imageHeight = 675,
     b2bInfo,
+    lang = 'en',
+    contactUrl = `${BASE_URL}/en/contact`,
+    contactActionName = 'Request a wholesale quotation',
+    contactActionDescription = 'Contact HousePlus Group to request product documentation and a wholesale quotation.',
   } = options;
 
   const mediaDetails = getR2MediaDetails(image);
@@ -330,6 +339,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     '@id': `${url}#product`,
     name,
     description,
+    inLanguage: lang,
     image: image,
     imageObject: {
       '@type': 'ImageObject',
@@ -342,6 +352,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       description: resolvedImageDescription,
       name: resolvedImageCaption,
       representativeOfPage: true,
+      inLanguage: lang,
       ...HOUSEPLUS_IMAGE_RIGHTS,
       contentLocation: {
         '@type': 'Place',
@@ -374,13 +385,13 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         addressCountry: 'CN',
       },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url, inLanguage: lang },
     isRelatedTo: { '@id': `${BASE_URL}/#organization` },
     potentialAction: {
       '@type': 'ContactAction',
-      name: 'Request a wholesale quotation',
-      target: `${BASE_URL}/en/contact`,
-      description: 'Contact HousePlus Group to request a product specification, MOQ confirmation and wholesale quotation.',
+      name: contactActionName,
+      target: contactUrl,
+      description: contactActionDescription,
       provider: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     },
     ...(additionalProperty.length > 0 && { additionalProperty }),
@@ -477,7 +488,8 @@ export function generateItemListSchema(
   name: string,
   description: string,
   url: string,
-  items: ItemListSchemaItem[]
+  items: ItemListSchemaItem[],
+  lang: string = 'en'
 ) {
   return {
     '@context': 'https://schema.org',
@@ -485,6 +497,7 @@ export function generateItemListSchema(
     '@id': `${url}#itemlist`,
     name,
     description,
+    inLanguage: lang,
     url,
     numberOfItems: items.length,
     itemListElement: items.map((item) => ({
@@ -655,6 +668,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${url}#webpage`,
+      inLanguage: inferredLanguage,
     },
   };
 }

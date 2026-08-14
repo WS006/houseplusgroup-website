@@ -73,3 +73,17 @@ test('floating chat receives the active locale, supplies five language copy sets
   assert.match(chat, /dir=\{lang === 'ar' \? 'rtl' : 'ltr'\}/);
   assert.doesNotMatch(chat, /What is your MOQ\?/);
 });
+
+test('product metadata and JSON-LD preserve locale-specific SEO and contact actions', () => {
+  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const productsPage = read('app/[lang]/products/page.tsx');
+  const schemaGenerator = read('lib/schema-generator.ts');
+  assert.match(productPage, /locale: getOGLocale\(lang\)/);
+  assert.match(productPage, /contactUrl: `\$\{BASE_URL\}\/\$\{lang\}\/contact`/);
+  assert.match(productPage, /generateFAQSchema\(quotationFaq, lang\)/);
+  assert.match(productsPage, /locale: getOGLocale\(lang\)/);
+  assert.match(productsPage, /site: '@HousePlusGroup'/);
+  assert.match(schemaGenerator, /inLanguage: lang/);
+  assert.match(schemaGenerator, /contactActionName/);
+  assert.match(schemaGenerator, /generateItemListSchema\([\s\S]*lang: string = 'en'/);
+});

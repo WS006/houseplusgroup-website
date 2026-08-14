@@ -34,7 +34,7 @@ export const siteConfig = {
   defaultImage: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
 };
 
-function getOGLocale(lang: string): string {
+export function getOGLocale(lang: string): string {
   const localeMap: Record<string, string> = {
     en: 'en_US',
     es: 'es_ES',
