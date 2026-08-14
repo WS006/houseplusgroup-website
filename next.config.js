@@ -3,7 +3,6 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   images: {
-    unoptimized: true,
     remotePatterns: [
       { protocol: 'https', hostname: 'a.storyblok.com', pathname: '/f/**' },
       { protocol: 'https', hostname: '*.storyblok.com' },

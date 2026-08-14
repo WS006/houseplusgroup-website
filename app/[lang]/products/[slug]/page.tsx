@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
@@ -213,14 +214,16 @@ export default async function ProductDetailPage({
           {/* Product Image */}
           <div className="lg:sticky lg:top-24">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50">
-              <img
+              <Image
                 src={product.coverImage}
                 alt={productImageAlt}
                 title={productImageTitle}
                 width={imageDimensions.width}
                 height={imageDimensions.height}
-                className="absolute inset-0 w-full h-full object-cover"
-               decoding="async" />
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               {/* Hidden SEO-rich context for search engines */}
               <span className="sr-only" data-seo-alt={product.imageAlt || ''} data-seo-title={product.imageTitle || ''}>
                 {product.imageAlt || ''}

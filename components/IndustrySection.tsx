@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface IndustrySectionProps {
@@ -116,14 +117,16 @@ export default function IndustrySection({
           <div className="flex-1 relative">
             <div className="relative h-[350px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
               {!imgError && imgSrc && (
-                <img
+                <Image
                   src={imgSrc}
                   alt={image.alt || title}
                   title={title}
-                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
                   onError={handleImageError}
-                 decoding="async" />
+                />
               )}
               {imgError && (
                 <div className={`w-full h-full bg-gradient-to-br ${config.color} flex items-center justify-center`}>

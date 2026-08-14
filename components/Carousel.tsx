@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface CarouselItem {
@@ -123,11 +124,16 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             index === currentIndex ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 scale-105 pointer-events-none'
           }`}
         >
-          <img
+          <Image
             src={item.image.filename}
             alt={item.image.alt || item.title}
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.75]"
-           title={item.image.alt || item.title} decoding="async" />
+            title={item.image.alt || item.title}
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            loading={index === 0 ? undefined : 'lazy'}
+            className="object-cover brightness-[0.75]"
+          />
           {/* Left-aligned gradient overlay for business style */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/65 via-slate-800/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-start px-8 md:px-20">
