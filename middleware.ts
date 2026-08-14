@@ -6,7 +6,10 @@ const defaultLocale = 'en';
 
 // Admin protection config
 const ADMIN_PATHS = ['/admin', '/api/media-library', '/api/indexnow', '/api/submission-history', '/api/url-changes'];
-const ADMIN_PASSWORD = 'HOUSEPLUS2026!';
+// Prefer the dedicated key when it is configured. Keep the existing Vercel
+// production key as a temporary compatibility path so protected operations
+// remain available while credentials are rotated.
+const ADMIN_PASSWORD = process.env.HOUSEPLUS_ADMIN_PASSWORD || process.env.ADMIN_PASSWORD;
 
 export function middleware(request: NextRequest) {
   const { pathname, protocol, host } = request.nextUrl;
@@ -40,7 +43,7 @@ export function middleware(request: NextRequest) {
     }
     const decoded = Buffer.from(basicAuth, 'base64').toString('utf-8');
     const [, pass] = decoded.split(':');
-    if (pass !== ADMIN_PASSWORD) {
+    if (!ADMIN_PASSWORD || pass !== ADMIN_PASSWORD) {
       return new NextResponse('Invalid credentials', {
         status: 401,
         headers: { 'WWW-Authenticate': 'Basic realm="HousePlus Operations"' },
@@ -73,6 +76,14 @@ export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = `/${firstSegment}/about-us`;
     return NextResponse.redirect(url, 308);
+  }
+
+  // Consolidate the historical Europe alias before rendering so crawlers receive
+  // a standard permanent redirect rather than a second indexable region URL.
+  if (validLangs.includes(firstSegment) && segments[2] === 'regions' && segments[3] === 'eu') {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${firstSegment}/regions/europe`;
+    return NextResponse.redirect(url, 301);
   }
 
   // If first segment exists but is not a valid language code, rewrite to 404

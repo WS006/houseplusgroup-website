@@ -7,10 +7,20 @@ const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 test('legacy EU region URL permanently redirects and is excluded from the indexable region list', () => {
   const regionPage = read('app/[lang]/regions/[region]/page.tsx');
+  const middleware = read('middleware.ts');
   const urls = read('lib/urls.ts');
   assert.match(regionPage, /permanentRedirect\(`\/\$\{lang\}\/regions\/\$\{legacyRegionAliases\[region\]\}`\)/);
   assert.match(regionPage, /legacyRegionAliases: Record<string, string> = \{ eu: 'europe' \}/);
+  assert.match(middleware, /segments\[2\] === 'regions' && segments\[3\] === 'eu'/);
+  assert.match(middleware, /return NextResponse\.redirect\(url, 301\)/);
   assert.doesNotMatch(urls, /'eu'/);
+});
+
+test('middleware reads its administrator password only from the deployment environment', () => {
+  const middleware = read('middleware.ts');
+  assert.match(middleware, /const ADMIN_PASSWORD = process\.env\.HOUSEPLUS_ADMIN_PASSWORD \|\| process\.env\.ADMIN_PASSWORD/);
+  assert.match(middleware, /if \(!ADMIN_PASSWORD \|\| pass !== ADMIN_PASSWORD\)/);
+  assert.doesNotMatch(middleware, /const ADMIN_PASSWORD = ['"`]/);
 });
 
 test('formerly duplicated multilingual news metadata uses localized title and description maps', () => {
