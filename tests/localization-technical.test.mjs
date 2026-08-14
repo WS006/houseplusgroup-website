@@ -226,17 +226,15 @@ test('recent static news articles are included in the canonical URL and sitemap 
   }
 });
 
-test('non-English foundation pages render verified local copy and are published in the sitemap', () => {
+test('non-English primary pages render their dedicated localized route components rather than a generic foundation rewrite', () => {
   const middleware = read('middleware.ts');
-  const foundationRoute = read('app/[lang]/localized-foundation/[[...slug]]/page.tsx');
-  const foundationCopy = read('lib/foundation-page-copy.ts');
   const sitemap = read('app/sitemap.ts');
   const home = read('app/[lang]/page.tsx');
-  assert.match(middleware, /localizedFoundationSlugs/);
-  assert.match(middleware, /localized-foundation/);
-  assert.match(foundationRoute, /generateSEOMetadata/);
-  assert.match(foundationCopy, /'about-us'/);
-  for (const locale of ['es', 'de', 'fr', 'ar']) assert.ok(foundationCopy.includes(`${locale}: [`));
+  const faq = read('app/[lang]/faq/page.tsx');
+  assert.doesNotMatch(middleware, /localizedFoundationSlugs/);
+  assert.doesNotMatch(middleware, /localized-foundation/);
+  assert.match(faq, /const faqs: Record<string, any\[\]>/);
+  for (const locale of ['es', 'de', 'fr', 'ar']) assert.match(faq, new RegExp(`\\n    ${locale}: \\[`));
   assert.doesNotMatch(sitemap, /buildUrlEntry\(page\.slug, page\.priority, page\.changefreq, \['en'\]\)/);
   assert.match(home, /const copy = localizedHomeCopy/);
   assert.doesNotMatch(home, /Counter end="16\+"/);
