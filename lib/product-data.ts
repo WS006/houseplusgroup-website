@@ -60,13 +60,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',    imageAlt: '500W monocrystalline solar panel HP-SP500 for commercial solar installations',
     imageTitle: '500W Solar Panel HP-SP500 | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'solar-inverter-3kw': {
     name: '3kW Pure Sine Wave Solar Inverter',
     category: 'solar',
@@ -87,13 +86,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/',    imageAlt: '3kW pure sine wave solar inverter HP-INV3000 with built-in MPPT for off-grid systems',
     imageTitle: '3kW Solar Inverter HP-INV3000 | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'lithium-battery-5kwh': {
     name: '5kWh LiFePO4 Lithium Battery',
     category: 'solar',
@@ -114,13 +112,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-lithium-battery-5kwh-wholesale/',    imageAlt: '5kWh LiFePO4 lithium battery HP-LFP5K for home solar energy storage systems',
     imageTitle: '5kWh Lithium Battery HP-LFP5K | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'lead-acid-battery-100ah': {
     name: '100Ah Deep Cycle Lead-Acid Battery',
     category: 'solar',
@@ -140,13 +137,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-lead-acid-battery-100ah-wholesale/',    imageAlt: '100Ah deep cycle lead-acid battery HP-LA100 for solar power storage backup',
     imageTitle: '100Ah Lead-Acid Battery HP-LA100 | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'charge-controller-60a': {
     name: 'MPPT Solar Charge Controller 60A',
     category: 'solar',
@@ -166,13 +162,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-charge-controller-60a-wholesale/',    imageAlt: 'MPPT solar charge controller 60A HP-MPPT60 for large solar panel arrays',
     imageTitle: 'MPPT Controller 60A HP-MPPT60 | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'solar-street-light-200w': {
     name: '200W All-in-One Solar Street Light',
     category: 'solar',
@@ -192,13 +187,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-solar-street-light-200w-wholesale/',    imageAlt: '200W all-in-one solar street light HP-SSL200 with motion sensor for outdoor lighting',
     imageTitle: '200W Solar Street Light HP-SSL200 | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'solar-fan-20w': {
     name: 'DC Solar Fan 20W',
     category: 'solar',
@@ -218,13 +212,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-solar-fan-20w-wholesale/',    imageAlt: '20W DC solar fan HP-SF20 brushless motor for greenhouse and off-grid ventilation',
     imageTitle: '20W Solar Fan HP-SF20 | HousePlus Solar Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'solar-power-bank-20000mah': {
     name: '20000mAh Solar Power Bank',
     category: 'solar',
@@ -244,13 +237,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-solar-power-bank-20000mah-wholesale/',    imageAlt: '20000mAh solar power bank HP-SPB20K with dual USB and 18W PD fast charging',
     imageTitle: '20000mAh Solar Power Bank HP-SPB20K | HousePlus Electronics Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'air-fryer-5-8l': {
     name: '5.8L Digital Air Fryer',
     category: 'appliances',
@@ -271,13 +263,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-air-fryer-5-8l-wholesale/',    imageAlt: '5.8L digital air fryer HP-AF58 with touch panel for oil-free healthy cooking',
     imageTitle: '5.8L Air Fryer HP-AF58 | HousePlus Appliance Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'ISO 9001'],
     },
-,
+  },
   'induction-cooktop-2000w': {
     name: '2000W Induction Cooktop',
     category: 'appliances',
@@ -297,13 +288,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-induction-cooktop-2000w-wholesale/',    imageAlt: '2000W induction cooktop HP-IC2000 with ceramic glass for modern kitchen cooking',
     imageTitle: '2000W Induction Cooktop HP-IC2000 | HousePlus Appliance Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'ISO 9001'],
     },
-,
+  },
   'electric-kettle-1-5l': {
     name: '1.5L Stainless Steel Electric Kettle',
     category: 'appliances',
@@ -323,13 +313,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-electric-kettle-1-5l-wholesale/',    imageAlt: '1.5L stainless steel electric kettle HP-EK15 with auto shut-off for home use',
     imageTitle: '1.5L Electric Kettle HP-EK15 | HousePlus Appliance Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'ISO 9001'],
     },
-,
+  },
   'toaster-2-slice': {
     name: '2-Slice Stainless Steel Toaster',
     category: 'appliances',
@@ -349,13 +338,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-toaster-2-slice-wholesale/',    imageAlt: '2-slice stainless steel toaster HP-TS2 with 7 browning settings for breakfast',
     imageTitle: '2-Slice Toaster HP-TS2 | HousePlus Appliance Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'ISO 9001'],
     },
-,
+  },
   'headphone-over-ear': {
     name: 'Over-Ear Headphone with Microphone',
     category: 'electronics',
@@ -376,13 +364,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/',    imageAlt: 'Over-ear headphone HP-HE01 with 40mm drivers and built-in microphone for calls',
     imageTitle: 'Over-Ear Headphone HP-HE01 | HousePlus Electronics Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'FCC', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'bluetooth-earphone-tws': {
     name: 'True Wireless Bluetooth Earphones (TWS)',
     category: 'electronics',
@@ -403,13 +390,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-bluetooth-earphone-tws-wholesale/',    imageAlt: 'True wireless Bluetooth earphones HP-TWS01 with ANC and 30-hour playtime',
     imageTitle: 'TWS Earphones HP-TWS01 | HousePlus Electronics Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'FCC', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'smart-watch': {
     name: 'Smart Watch with Heart Rate Monitor',
     category: 'electronics',
@@ -429,13 +415,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-smart-watch-wholesale/',    imageAlt: 'Smart watch HP-SW01 with heart rate SpO2 monitor and 20 sport modes for fitness',
     imageTitle: 'Smart Watch HP-SW01 | HousePlus Electronics Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'FCC', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'portable-ssd-1tb': {
     name: '1TB USB-C Portable SSD',
     category: 'electronics',
@@ -455,13 +440,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-portable-ssd-1tb-wholesale/',    imageAlt: '1TB USB-C portable SSD HP-SSD1T with 1050MB/s read speed for data storage',
     imageTitle: '1TB Portable SSD HP-SSD1T | HousePlus Electronics Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'FCC', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'micro-sd-128gb': {
     name: '128GB Micro SD Card (Class 10 / A2)',
     category: 'electronics',
@@ -481,13 +465,12 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-micro-sd-128gb-wholesale/',    imageAlt: '128GB micro SD card HP-SD128 UHS-I U3 A2 for cameras drones and smartphones',
     imageTitle: '128GB Micro SD HP-SD128 | HousePlus Electronics Wholesale',
 
-  }
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'FCC', 'RoHS', 'ISO 9001'],
     },
-,
+  },
   'usb-c-cable-2m': {
     name: 'Fast Charging USB-C Cable 2m',
     category: 'electronics',
@@ -507,15 +490,14 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     coverImage: 'https://images.houseplus-ch.com/media/houseplus-usb-c-cable-2m-wholesale/',    imageAlt: 'Fast charging USB-C cable 2m HP-CC2M supporting 100W PD for laptops and phones',
     imageTitle: 'USB-C Cable 2m HP-CC2M | HousePlus Electronics Wholesale',
 
-  },
-
-  // ===== P0 GEO-Optimized Products (Added 2026-06-26) ====
     // User-confirmed category baseline. MOQ and lead time remain quote-confirmed.
     b2bInfo: {
       warranty: '12 months',
       certifications: ['CE', 'FCC', 'RoHS', 'ISO 9001'],
     },
-=
+  },
+
+  // ===== P0 GEO-Optimized Products (Added 2026-06-26) ====
   'solar-panel-100w': {
     name: '100W Monocrystalline Solar Panel',
     category: 'solar',
