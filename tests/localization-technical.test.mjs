@@ -48,6 +48,8 @@ test('online support widget receives the active locale and provides all five lan
     assert.match(widget, new RegExp(`${locale}: \\{ service:`));
   }
   assert.doesNotMatch(widget, />Service<\/span>/);
+  assert.match(widget, /bottom-20 right-0/);
+  assert.match(widget, /md:top-1\/2/);
 });
 
 test('related-product cards localize product data and the details action in every language', () => {

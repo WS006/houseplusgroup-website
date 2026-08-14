@@ -21,27 +21,27 @@ export default function ServiceWidget({
   const copy: Record<string, Record<string, string>> = {
     en: { service: 'Service', support: 'Online Support', wechat: 'WeChat ID', email: 'Email Us', call: 'Call Us' },
     es: { service: 'Servicio', support: 'Soporte en línea', wechat: 'ID de WeChat', email: 'Escríbanos', call: 'Llámenos' },
-    de: { service: 'Service', support: 'Online-Support', wechat: 'WeChat-ID', email: 'E-Mail senden', call: 'Anrufen' },
-    fr: { service: 'Service', support: 'Assistance en ligne', wechat: 'Identifiant WeChat', email: 'Nous écrire', call: 'Nous appeler' },
+    de: { service: 'Kundenservice', support: 'Online-Support', wechat: 'WeChat-ID', email: 'E-Mail senden', call: 'Anrufen' },
+    fr: { service: 'Assistance', support: 'Assistance en ligne', wechat: 'Identifiant WeChat', email: 'Nous écrire', call: 'Nous appeler' },
     ar: { service: 'الخدمة', support: 'الدعم عبر الإنترنت', wechat: 'معرّف WeChat', email: 'راسلنا', call: 'اتصل بنا' },
   };
   const ui = copy[lang] || copy.en;
 
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[100] flex items-center">
+    <div className="fixed bottom-20 right-0 z-[100] flex items-end md:top-1/2 md:bottom-auto md:-translate-y-1/2 md:items-center">
       {/* Toggle Button */}
       <button
         aria-label={ui.service}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-blue-600 text-white p-3 rounded-l-lg shadow-lg hover:bg-blue-700 transition-all flex flex-col items-center gap-1"
+        className="bg-blue-600 text-white p-2.5 md:p-3 rounded-l-lg shadow-lg hover:bg-blue-700 transition-all flex flex-col items-center gap-1"
       >
         {isOpen ? <X size={20} /> : <Mail size={20} />}
         <span className="text-[10px] font-bold uppercase tracking-wider [writing-mode:vertical-lr]">{ui.service}</span>
       </button>
 
       {/* Pop-up Window */}
-      <div className={`bg-white shadow-2xl rounded-l-xl border border-gray-100 transition-all duration-300 overflow-hidden ${isOpen ? 'w-72 opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}>
-        <div className="p-6">
+      <div className={`bg-white shadow-2xl rounded-l-xl border border-gray-100 transition-all duration-300 overflow-hidden max-h-[70vh] ${isOpen ? 'w-72 opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}>
+        <div className="overflow-y-auto max-h-[70vh] p-5 md:p-6">
           <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
             {ui.support}
