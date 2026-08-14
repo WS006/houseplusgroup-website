@@ -5,6 +5,8 @@ import { storyblokInit, apiPlugin } from '@storyblok/react';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { defaultLocale, getLocaleDirection, isValidLocale } from '@/lib/i18n-config';
 
+export const dynamic = 'force-dynamic';
+
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN || '',
   use: [apiPlugin],

@@ -40,11 +40,19 @@ function getDetailTitle(product: ProductData, model: string) {
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
 const productUi: Record<string, Record<string, string>> = {
-  en: { notFound: 'Product Not Found', notFoundDescription: "The product you are looking for does not exist.", backProducts: 'Back to Products', documentation: 'Documentation available on request', technicalSpecifications: 'Technical Specifications', keyFeatures: 'Key Features', applications: 'Applications', requestQuote: 'Request a Quote', minOrder: 'Min. Order', leadTime: 'Lead Time', warranty: 'Warranty', confirmByQuote: 'Confirm by quote', faqHeading: 'Frequently Asked Questions', oemTitle: 'HousePlus OEM/ODM Services', oemDescription: 'Discuss custom branding, private-label packaging and product modifications with our team; requirements are confirmed in your quotation.', contactSales: 'Contact HousePlus Sales Team' },
-  es: { notFound: 'Producto no encontrado', notFoundDescription: 'El producto que busca no existe.', backProducts: 'Volver a productos', documentation: 'Documentación disponible bajo solicitud', technicalSpecifications: 'Especificaciones técnicas', keyFeatures: 'Características principales', applications: 'Aplicaciones', requestQuote: 'Solicitar una cotización', minOrder: 'Pedido mínimo', leadTime: 'Plazo de entrega', warranty: 'Garantía', confirmByQuote: 'Confirmar en la cotización', faqHeading: 'Preguntas frecuentes', oemTitle: 'Servicios OEM/ODM de HousePlus', oemDescription: 'Analice con nuestro equipo la marca personalizada, el embalaje de marca privada y las modificaciones del producto; los requisitos se confirman en su cotización.', contactSales: 'Contactar al equipo comercial de HousePlus' },
-  de: { notFound: 'Produkt nicht gefunden', notFoundDescription: 'Das gesuchte Produkt existiert nicht.', backProducts: 'Zurück zu Produkten', documentation: 'Dokumentation auf Anfrage verfügbar', technicalSpecifications: 'Technische Spezifikationen', keyFeatures: 'Hauptmerkmale', applications: 'Anwendungen', requestQuote: 'Angebot anfordern', minOrder: 'Mindestbestellung', leadTime: 'Lieferzeit', warranty: 'Garantie', confirmByQuote: 'Im Angebot bestätigen', faqHeading: 'Häufig gestellte Fragen', oemTitle: 'HousePlus OEM/ODM-Services', oemDescription: 'Besprechen Sie kundenspezifisches Branding, Private-Label-Verpackungen und Produktanpassungen mit unserem Team; die Anforderungen werden in Ihrem Angebot bestätigt.', contactSales: 'HousePlus-Vertrieb kontaktieren' },
-  fr: { notFound: 'Produit introuvable', notFoundDescription: 'Le produit que vous recherchez n’existe pas.', backProducts: 'Retour aux produits', documentation: 'Documentation disponible sur demande', technicalSpecifications: 'Spécifications techniques', keyFeatures: 'Caractéristiques principales', applications: 'Applications', requestQuote: 'Demander un devis', minOrder: 'Commande minimale', leadTime: 'Délai de livraison', warranty: 'Garantie', confirmByQuote: 'À confirmer dans le devis', faqHeading: 'Questions fréquentes', oemTitle: 'Services OEM/ODM de HousePlus', oemDescription: 'Discutez de la personnalisation de la marque, de l’emballage sous marque privée et des modifications produit avec notre équipe ; les exigences sont confirmées dans votre devis.', contactSales: 'Contacter l’équipe commerciale HousePlus' },
-  ar: { notFound: 'المنتج غير موجود', notFoundDescription: 'المنتج الذي تبحث عنه غير موجود.', backProducts: 'العودة إلى المنتجات', documentation: 'الوثائق متاحة عند الطلب', technicalSpecifications: 'المواصفات الفنية', keyFeatures: 'الميزات الرئيسية', applications: 'التطبيقات', requestQuote: 'طلب عرض أسعار', minOrder: 'الحد الأدنى للطلب', leadTime: 'المهلة الزمنية', warranty: 'الضمان', confirmByQuote: 'يُؤكد في عرض الأسعار', faqHeading: 'الأسئلة الشائعة', oemTitle: 'خدمات HousePlus OEM/ODM', oemDescription: 'ناقش العلامات التجارية المخصصة والتغليف الخاص وتعديلات المنتج مع فريقنا؛ ويتم تأكيد المتطلبات في عرض الأسعار الخاص بك.', contactSales: 'تواصل مع فريق مبيعات HousePlus' },
+  en: { notFound: 'Product Not Found', notFoundDescription: "The product you are looking for does not exist.", backProducts: 'Back to Products', documentation: 'Documentation available on request', technicalSpecifications: 'Technical Specifications', keyFeatures: 'Key Features', applications: 'Applications', requestQuote: 'Request a Quote', minOrder: 'Min. Order', leadTime: 'Lead Time', warranty: 'Warranty', confirmByQuote: 'Confirm by quote', faqHeading: 'Frequently Asked Questions', oemTitle: 'HousePlus OEM/ODM Services', oemDescription: 'Discuss custom branding, private-label packaging and product modifications with our team; requirements are confirmed in your quotation.', contactSales: 'Contact HousePlus Sales Team', brandBadge: 'HousePlus B2B', quoteQuestion: 'Which commercial details are confirmed in a quotation?', quoteAnswer: 'MOQ, production schedule, shipping method, export documentation, warranty scope and available product certificates are confirmed after the product, destination and order requirements are reviewed.', questionPrefix: 'Q:', answerPrefix: 'A:' },
+  es: { notFound: 'Producto no encontrado', notFoundDescription: 'El producto que busca no existe.', backProducts: 'Volver a productos', documentation: 'Documentación disponible bajo solicitud', technicalSpecifications: 'Especificaciones técnicas', keyFeatures: 'Características principales', applications: 'Aplicaciones', requestQuote: 'Solicitar una cotización', minOrder: 'Pedido mínimo', leadTime: 'Plazo de entrega', warranty: 'Garantía', confirmByQuote: 'Confirmar en la cotización', faqHeading: 'Preguntas frecuentes', oemTitle: 'Servicios OEM/ODM de HousePlus', oemDescription: 'Analice con nuestro equipo la marca personalizada, el embalaje de marca privada y las modificaciones del producto; los requisitos se confirman en su cotización.', contactSales: 'Contactar al equipo comercial de HousePlus', brandBadge: 'HousePlus B2B', quoteQuestion: '¿Qué condiciones comerciales se confirman en la cotización?', quoteAnswer: 'El MOQ, el calendario de producción, el método de envío, la documentación de exportación, el alcance de la garantía y los certificados disponibles se confirman tras revisar el producto, el destino y el pedido.', questionPrefix: 'P:', answerPrefix: 'R:' },
+  de: { notFound: 'Produkt nicht gefunden', notFoundDescription: 'Das gesuchte Produkt existiert nicht.', backProducts: 'Zurück zu Produkten', documentation: 'Dokumentation auf Anfrage verfügbar', technicalSpecifications: 'Technische Spezifikationen', keyFeatures: 'Hauptmerkmale', applications: 'Anwendungen', requestQuote: 'Angebot anfordern', minOrder: 'Mindestbestellung', leadTime: 'Lieferzeit', warranty: 'Garantie', confirmByQuote: 'Im Angebot bestätigen', faqHeading: 'Häufig gestellte Fragen', oemTitle: 'HousePlus OEM/ODM-Services', oemDescription: 'Besprechen Sie kundenspezifisches Branding, Private-Label-Verpackungen und Produktanpassungen mit unserem Team; die Anforderungen werden in Ihrem Angebot bestätigt.', contactSales: 'HousePlus-Vertrieb kontaktieren', brandBadge: 'HousePlus B2B', quoteQuestion: 'Welche Handelsdetails werden im Angebot bestätigt?', quoteAnswer: 'Mindestbestellmenge, Produktionsplan, Versandart, Exportdokumentation, Garantieumfang und verfügbare Produktzertifikate werden nach Prüfung von Produkt, Zielort und Bestellanforderungen bestätigt.', questionPrefix: 'F:', answerPrefix: 'A:' },
+  fr: { notFound: 'Produit introuvable', notFoundDescription: 'Le produit que vous recherchez n’existe pas.', backProducts: 'Retour aux produits', documentation: 'Documentation disponible sur demande', technicalSpecifications: 'Spécifications techniques', keyFeatures: 'Caractéristiques principales', applications: 'Applications', requestQuote: 'Demander un devis', minOrder: 'Commande minimale', leadTime: 'Délai de livraison', warranty: 'Garantie', confirmByQuote: 'À confirmer dans le devis', faqHeading: 'Questions fréquentes', oemTitle: 'Services OEM/ODM de HousePlus', oemDescription: 'Discutez de la personnalisation de la marque, de l’emballage sous marque privée et des modifications produit avec notre équipe ; les exigences sont confirmées dans votre devis.', contactSales: 'Contacter l’équipe commerciale HousePlus', brandBadge: 'HousePlus B2B', quoteQuestion: 'Quelles conditions commerciales sont confirmées dans le devis ?', quoteAnswer: 'Le MOQ, le calendrier de production, le mode d’expédition, les documents d’exportation, le périmètre de garantie et les certificats disponibles sont confirmés après examen du produit, de la destination et de la commande.', questionPrefix: 'Q :', answerPrefix: 'R : ' },
+  ar: { notFound: 'المنتج غير موجود', notFoundDescription: 'المنتج الذي تبحث عنه غير موجود.', backProducts: 'العودة إلى المنتجات', documentation: 'الوثائق متاحة عند الطلب', technicalSpecifications: 'المواصفات الفنية', keyFeatures: 'الميزات الرئيسية', applications: 'التطبيقات', requestQuote: 'طلب عرض أسعار', minOrder: 'الحد الأدنى للطلب', leadTime: 'المهلة الزمنية', warranty: 'الضمان', confirmByQuote: 'يُؤكد في عرض الأسعار', faqHeading: 'الأسئلة الشائعة', oemTitle: 'خدمات HousePlus OEM/ODM', oemDescription: 'ناقش العلامات التجارية المخصصة والتغليف الخاص وتعديلات المنتج مع فريقنا؛ ويتم تأكيد المتطلبات في عرض الأسعار الخاص بك.', contactSales: 'تواصل مع فريق مبيعات HousePlus', brandBadge: 'HousePlus B2B', quoteQuestion: 'ما التفاصيل التجارية التي يؤكدها عرض الأسعار؟', quoteAnswer: 'يتم تأكيد الحد الأدنى للطلب وجدول الإنتاج وطريقة الشحن ووثائق التصدير ونطاق الضمان والشهادات المتاحة بعد مراجعة المنتج والوجهة ومتطلبات الطلب.', questionPrefix: 'س:', answerPrefix: 'ج:' },
+};
+
+const categoryLabels: Record<string, Record<string, string>> = {
+  en: { solar: 'Solar Energy Systems', appliances: 'Home Appliances', electronics: '3C Electronics' },
+  es: { solar: 'Sistemas de energía solar', appliances: 'Electrodomésticos', electronics: 'Electrónica 3C' },
+  de: { solar: 'Solarenergiesysteme', appliances: 'Haushaltsgeräte', electronics: '3C-Elektronik' },
+  fr: { solar: 'Systèmes d’énergie solaire', appliances: 'Appareils électroménagers', electronics: 'Électronique 3C' },
+  ar: { solar: 'أنظمة الطاقة الشمسية', appliances: 'الأجهزة المنزلية', electronics: 'إلكترونيات 3C' },
 };
 
 export async function generateMetadata({
@@ -140,6 +148,8 @@ export default async function ProductDetailPage({
   }
 
   const catConfig = CATEGORY_CONFIG[product.category];
+  const localizedCategory = categoryLabels[lang]?.[product.category] || categoryLabels.en[product.category] || catConfig.label;
+  const quotationFaq = [{ question: ui.quoteQuestion, answer: ui.quoteAnswer }];
   const productUrl = `${BASE_URL}/${lang}/products/${slug}`;
   const modelSpec = product.specs.find((s) => s.key === 'Model');
   const sku = modelSpec?.value || slug.toUpperCase();
@@ -164,12 +174,10 @@ export default async function ProductDetailPage({
     imageDescription: product.geoDescription || productImageAlt,
     imageWidth: imageDimensions.width,
     imageHeight: imageDimensions.height,
-    b2bInfo: product.b2bInfo,
+    b2bInfo: undefined,
   });
 
-  const faqSchema = product.faq && product.faq.length > 0
-    ? generateFAQSchema(product.faq)
-    : null;
+  const faqSchema = generateFAQSchema(quotationFaq);
 
   return (
     <main className="min-h-screen bg-white">
@@ -210,7 +218,7 @@ export default async function ProductDetailPage({
             {/* HousePlus Brand Badge */}
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full">
-                🏭 HousePlus Professional
+                🏭 {ui.brandBadge}
               </span>
               {product.badge && (
                 <span className="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-widest rounded-full">
@@ -221,7 +229,7 @@ export default async function ProductDetailPage({
 
             {/* Category Badge */}
             <span className={`inline-flex items-center px-4 py-1.5 rounded-full border text-xs font-bold ${catConfig.bg} ${catConfig.color}`}>
-              {catConfig.icon} {catConfig.label}
+              {catConfig.icon} {localizedCategory}
             </span>
 
             {/* Product Name */}
@@ -233,16 +241,6 @@ export default async function ProductDetailPage({
             <p className="text-slate-600 leading-relaxed text-base">
               {product.description}
             </p>
-
-            {/* GEO Description */}
-            {product.geoDescription && (
-              <div className="p-4 bg-amber-50 rounded-xl border border-amber-200">
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  <span className="font-bold text-amber-700">GEO Fact:</span>{' '}
-                  {product.geoDescription}
-                </p>
-              </div>
-            )}
 
             {/* Specifications Table */}
             {product.specs.length > 0 && (
@@ -321,9 +319,9 @@ export default async function ProductDetailPage({
             {/* Wholesale Info */}
             <div className="grid grid-cols-3 gap-3 pt-2">
               {[
-                { label: ui.minOrder, value: product.b2bInfo?.moq || ui.confirmByQuote },
-                { label: ui.leadTime, value: product.b2bInfo?.leadTime || ui.confirmByQuote },
-                { label: ui.warranty, value: product.b2bInfo?.warranty || ui.confirmByQuote },
+                { label: ui.minOrder, value: ui.confirmByQuote },
+                { label: ui.leadTime, value: ui.confirmByQuote },
+                { label: ui.warranty, value: ui.confirmByQuote },
               ].map((item) => (
                 <div key={item.label} className="text-center p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
@@ -333,17 +331,17 @@ export default async function ProductDetailPage({
             </div>
 
             {/* FAQ Section */}
-            {product.faq && product.faq.length > 0 && (
+            {quotationFaq.length > 0 && (
               <div className="mt-8">
                 <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                   <span className="w-1 h-5 bg-blue-600 rounded-full inline-block" />
                   {ui.faqHeading}
                 </h2>
                 <div className="space-y-3">
-                  {product.faq.map((faqItem, i) => (
+                  {quotationFaq.map((faqItem, i) => (
                     <div key={i} className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                      <p className="font-semibold text-slate-900 text-sm mb-1">Q: {faqItem.question}</p>
-                      <p className="text-slate-600 text-sm leading-relaxed">A: {faqItem.answer}</p>
+                      <p className="font-semibold text-slate-900 text-sm mb-1">{ui.questionPrefix} {faqItem.question}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{ui.answerPrefix} {faqItem.answer}</p>
                     </div>
                   ))}
                 </div>
