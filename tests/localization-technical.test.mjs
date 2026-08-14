@@ -105,3 +105,20 @@ test('static news articles provide locale-aware URLs to Article JSON-LD', () => 
     assert.ok(source.includes(`url: \`https://www.houseplus-ch.com/\${lang}/news/${slug}\``));
   }
 });
+
+test('non-English foundation pages render verified local copy and are published in the sitemap', () => {
+  const middleware = read('middleware.ts');
+  const foundationRoute = read('app/[lang]/__localized-foundation/[[...slug]]/page.tsx');
+  const foundationCopy = read('lib/foundation-page-copy.ts');
+  const sitemap = read('app/sitemap.ts');
+  const home = read('app/[lang]/page.tsx');
+  assert.match(middleware, /localizedFoundationSlugs/);
+  assert.match(middleware, /__localized-foundation/);
+  assert.match(foundationRoute, /generateSEOMetadata/);
+  assert.match(foundationCopy, /'about-us'/);
+  for (const locale of ['es', 'de', 'fr', 'ar']) assert.ok(foundationCopy.includes(`${locale}: [`));
+  assert.doesNotMatch(sitemap, /buildUrlEntry\(page\.slug, page\.priority, page\.changefreq, \['en'\]\)/);
+  assert.match(home, /const copy = localizedHomeCopy/);
+  assert.doesNotMatch(home, /Counter end="16\+"/);
+  assert.doesNotMatch(home, /CE\/FCC\/RoHS certified products to 441\+ clients/);
+});

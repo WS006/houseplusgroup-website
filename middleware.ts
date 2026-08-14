@@ -3,6 +3,10 @@ import type { NextRequest } from 'next/server';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const defaultLocale = 'en';
+const localizedFoundationSlugs = new Set([
+  'about-us', 'brand', 'careers', 'case-studies', 'certifications', 'contact',
+  'factory', 'faq', 'news', 'oem-odm', 'products', 'regions', 'service', 'support', 'team',
+]);
 
 // Admin protection config
 const ADMIN_PATHS = ['/admin', '/api/media-library', '/api/indexnow', '/api/submission-history', '/api/url-changes'];
@@ -88,6 +92,20 @@ export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = `/${firstSegment}/regions/europe`;
     return NextResponse.redirect(url, 301);
+  }
+
+  // Non-English foundational pages previously shared English source content and
+  // were intentionally omitted from the sitemap. Render verified localized copy
+  // internally while preserving the public canonical language URL.
+  if (validLangs.includes(firstSegment) && firstSegment !== 'en') {
+    const foundationSlug = segments.slice(2).filter(Boolean).join('/');
+    if (localizedFoundationSlugs.has(foundationSlug)) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/${firstSegment}/__localized-foundation${foundationSlug ? `/${foundationSlug}` : ''}`;
+      const response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+      addSecurityHeaders(response);
+      return response;
+    }
   }
 
   // If first segment exists but is not a valid language code, rewrite to 404

@@ -18,3 +18,7 @@
 - [x] 审计五语言全部规范 URL 的标题、描述、canonical、hreflang、Open Graph、Twitter Card 与 JSON-LD。
 - [x] 修复确认的多语言 SEO 元标签或结构化数据缺口，并完成生产重新验证。
 - [x] 修复产品与产品列表页缺失的 Open Graph locale、JSON-LD inLanguage 及语言化联系操作，并清理元描述中的未核实合规表述。
+- [x] 对比英文独有 sitemap URL 与四种语言版本，判断其是否为应补齐的公开内容页。
+- [x] 审计首页及 15 组基础页面的 ES、DE、FR、AR 正文和元数据，确认真实翻译完成前不将英文回退页加入 sitemap。
+- [x] 清理基础页面四语言元标签和正文中的英文回退及未经核实的规模、认证、MOQ、交期和保修承诺。
+- [ ] 完成通过审计的 16 组基础页面五语言 sitemap 纳入、hreflang 复查和生产验收。

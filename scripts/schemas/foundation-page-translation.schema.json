@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "es": {"type":"object","properties":{"title":{"type":"string"},"heading":{"type":"string"},"body":{"type":"string"}},"required":["title","heading","body"],"additionalProperties":false},
+    "de": {"type":"object","properties":{"title":{"type":"string"},"heading":{"type":"string"},"body":{"type":"string"}},"required":["title","heading","body"],"additionalProperties":false},
+    "fr": {"type":"object","properties":{"title":{"type":"string"},"heading":{"type":"string"},"body":{"type":"string"}},"required":["title","heading","body"],"additionalProperties":false},
+    "ar": {"type":"object","properties":{"title":{"type":"string"},"heading":{"type":"string"},"body":{"type":"string"}},"required":["title","heading","body"],"additionalProperties":false}
+  },
+  "required": ["es", "de", "fr", "ar"],
+  "additionalProperties": false
+}

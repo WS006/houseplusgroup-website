@@ -101,10 +101,9 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
 export default function sitemap(): MetadataRoute.Sitemap {
   const allEntries: MetadataRoute.Sitemap = [];
 
-  // Static page bodies currently share one English source. Locale routes remain
-  // user-facing fallbacks and will be re-added after verified native translation.
+  // Static pages now render verified native B2B copy for every published locale.
   for (const page of staticPages) {
-    const entries = buildUrlEntry(page.slug, page.priority, page.changefreq, ['en']);
+    const entries = buildUrlEntry(page.slug, page.priority, page.changefreq);
     allEntries.push(...entries);
   }
 
