@@ -25,6 +25,7 @@ test('all localized product pages emit a visible-content-aligned B2B sourcing Ho
   assert.match(schema, /export function generateProductHowToSchema/);
   assert.match(schema, /'@type': 'HowTo'/);
   assert.match(schema, /'@type': 'HowToStep'/);
+  assert.match(schema, /mainEntityOfPage: \{ '@type': 'WebPage', '@id': url, inLanguage: lang \}/);
   for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
     assert.match(page, new RegExp(`${locale}: \\{[\\s\\S]*?title:`));
   }

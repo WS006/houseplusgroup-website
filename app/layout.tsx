@@ -1,5 +1,6 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import AiReferralTracker from '@/components/AiReferralTracker';
 import { headers } from 'next/headers';
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
@@ -106,6 +107,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <AiReferralTracker />
         <Analytics />
       </body>
     </html>

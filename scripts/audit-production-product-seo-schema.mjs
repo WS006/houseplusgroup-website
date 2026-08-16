@@ -69,18 +69,22 @@ const audited = results.map((page) => {
   const schemas = parseSchemas(page.html);
   const product = schemas.find((schema) => schemaType(schema, 'Product'));
   const faq = schemas.find((schema) => schemaType(schema, 'FAQPage'));
+  const howTo = schemas.find((schema) => schemaType(schema, 'HowTo'));
   if (!product) issues.push('Missing Product JSON-LD');
   if (product) {
     if (product.inLanguage !== page.lang) issues.push('Product inLanguage mismatch');
     if (normalize(product.url || '') !== normalize(expectedUrl)) issues.push('Product URL mismatch');
     if (normalize(product.mainEntityOfPage?.['@id'] || '') !== normalize(expectedUrl)) issues.push('Product mainEntityOfPage mismatch');
-    const image = product.imageObject;
+    const image = Array.isArray(product.image) ? product.image[0] : (product.imageObject || product.image);
     if (!image || !schemaType(image, 'ImageObject')) issues.push('Missing Product ImageObject');
     if (image?.inLanguage !== page.lang) issues.push('ImageObject inLanguage mismatch');
     for (const property of ['creditText', 'copyrightNotice', 'creator', 'acquireLicensePage']) if (!image?.[property]) issues.push(`Missing ImageObject ${property}`);
   }
   if (!faq) issues.push('Missing FAQPage JSON-LD');
   if (faq?.inLanguage !== page.lang) issues.push('FAQPage inLanguage mismatch');
+  if (!howTo) issues.push('Missing B2B/OEM HowTo JSON-LD');
+  if (howTo?.inLanguage !== page.lang) issues.push('HowTo inLanguage mismatch');
+  if (!Array.isArray(howTo?.step) || howTo.step.length < 4) issues.push('Incomplete B2B/OEM HowTo steps');
   return { ...page, title, description, canonical, issues };
 });
 

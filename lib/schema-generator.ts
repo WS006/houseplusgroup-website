@@ -516,7 +516,7 @@ export function generateProductHowToSchema(options: ProductHowToSchemaOptions) {
     description,
     inLanguage: lang,
     image: productImage,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url, inLanguage: lang },
     step: steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: index + 1,

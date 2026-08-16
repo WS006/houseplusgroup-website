@@ -3,12 +3,12 @@ import { canonicalSiteUrl, locales, staticPageSlugs, productSlugs, newsSlugs, re
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
-  '': '2026-06-29',
-  'about-us': '2026-06-29',
-  'products': '2026-06-29',
+  '': '2026-08-16',
+  'about-us': '2026-08-16',
+  'products': '2026-08-16',
   'news': '2026-06-29',
-  'factory': '2026-06-29',
-  'service': '2026-06-29',
+  'factory': '2026-08-16',
+  'service': '2026-08-16',
   'faq': '2026-06-29',
   'contact': '2026-06-29',
   'team': '2026-06-29',
@@ -18,10 +18,10 @@ const lastModDates: Record<string, string> = {
   'terms': '2026-06-29',
   'cookie-policy': '2026-06-29',
   'sitemap-page': '2026-06-29',
-  'certifications': '2026-06-29',
-  'oem-odm': '2026-06-29',
+  'certifications': '2026-08-16',
+  'oem-odm': '2026-08-16',
   'case-studies': '2026-06-29',
-  'brand': '2026-07-23',
+  'brand': '2026-08-16',
   'news/how-to-choose-wholesale-solar-panels': '2026-08-10',
   'news/how-to-choose-solar-panel-manufacturer-china': '2026-08-10',
   'news/mono-vs-poly-vs-perc-solar-panels': '2026-08-10',
@@ -81,7 +81,9 @@ function buildHreflangs(slug: string) {
 function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, targetLocales: readonly string[] = locales) {
   // Use the page-specific date when maintained; new localized detail pages were
   // updated with the current multilingual release.
-  const lastmod = lastModDates[slug] || '2026-08-13';
+  const lastmod = slug.startsWith('products/')
+    ? '2026-08-16'
+    : (lastModDates[slug] || '2026-08-13');
   const entries = [];
 
   for (const lang of targetLocales) {

@@ -91,6 +91,20 @@ Allow: /image-sitemap.xml
 Disallow: /api/
 Disallow: /admin/
 
+# OpenAI search retrieval crawler. Kept separate from GPTBot so retrieval
+# access remains explicit even if model-training policies change.
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /news/
+Allow: /products/
+Allow: /service/
+Allow: /about-us/
+Allow: /brand/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
+Disallow: /api/
+Disallow: /admin/
+
 User-agent: CCBot
 Allow: /
 Allow: /news/
@@ -112,6 +126,42 @@ User-agent: Claude-Web
 Allow: /
 Allow: /news/
 Allow: /products/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /news/
+Allow: /products/
+Allow: /service/
+Allow: /about-us/
+Allow: /brand/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Claude-SearchBot
+Allow: /
+Allow: /news/
+Allow: /products/
+Allow: /service/
+Allow: /about-us/
+Allow: /brand/
+Allow: /llms.txt
+Allow: /image-sitemap.xml
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Claude-User
+Allow: /
+Allow: /news/
+Allow: /products/
+Allow: /service/
+Allow: /about-us/
+Allow: /brand/
 Allow: /llms.txt
 Allow: /image-sitemap.xml
 Disallow: /api/
