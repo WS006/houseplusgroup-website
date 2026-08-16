@@ -24,3 +24,8 @@
 - [x] 分类 Image Metadata、Breadcrumbs、Product snippets、Merchant listings 和 Merchant opportunities 的已出现与待触发条件
 - [x] 制定并实施 Core Web Vitals、HTTPS、索引覆盖与购物富媒体的可控参数优化
 - [x] 使用既有 Google Search Console 服务账号 API 采集站点地图、搜索表现与逐 URL 索引基线
+
+- [ ] 实施新闻列表页 CollectionPage、ItemList、BreadcrumbList 与 ImageObject 结构化数据注入
+- [ ] 强化 FAQ 页面与主要内容页的 Schema 完整性及尾斜杠规范 URL 映射
+- [ ] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境
+- [ ] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态

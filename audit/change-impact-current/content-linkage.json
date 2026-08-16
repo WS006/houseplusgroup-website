@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-08-16T15:12:24.775Z",
+  "sources": {
+    "productSlugs": 63,
+    "productDataSlugs": 63,
+    "newsSlugs": 29,
+    "blogSlugs": 12,
+    "staticNewsRoutes": 17,
+    "imageCoverSlugs": 17,
+    "rssUsesBlogRegistry": true
+  },
+  "product": {
+    "urlsWithoutProductData": [],
+    "productDataMissingFromUrls": [],
+    "missingLocalizedRecords": {
+      "es": [],
+      "de": [],
+      "fr": [],
+      "ar": []
+    }
+  },
+  "article": {
+    "sitemapUrlsWithoutDynamicArticleRegistry": [
+      "2026-solar-market-update",
+      "2026-appliances-market-update",
+      "2026-electronics-market-update",
+      "2026-smart-home-appliances-market-guide",
+      "advanced-manufacturing-home-appliances",
+      "energy-efficiency-standards-appliances",
+      "global-wholesale-guide-home-appliances",
+      "oem-odm-manufacturing-guide",
+      "smart-home-appliances",
+      "solar-energy-storage-industrial-manufacturing",
+      "solar-energy-storage-solutions",
+      "the-evolution-of-3c-electronics",
+      "the-future-of-smart-home-appliances",
+      "the-future-of-solar-energy",
+      "appliance-energy-efficiency-vs-actual-consumption",
+      "consumer-electronics-battery-life-testing",
+      "solar-storage-efficiency-optimization-guide"
+    ],
+    "dynamicArticleRegistryMissingFromSitemapUrls": [],
+    "staticRoutesMissingFromUrls": [],
+    "staticRoutesMissingFromDynamicArticleRegistry": [
+      "2026-appliances-market-update",
+      "2026-electronics-market-update",
+      "2026-smart-home-appliances-market-guide",
+      "2026-solar-market-update",
+      "advanced-manufacturing-home-appliances",
+      "appliance-energy-efficiency-vs-actual-consumption",
+      "consumer-electronics-battery-life-testing",
+      "energy-efficiency-standards-appliances",
+      "global-wholesale-guide-home-appliances",
+      "oem-odm-manufacturing-guide",
+      "smart-home-appliances",
+      "solar-energy-storage-industrial-manufacturing",
+      "solar-energy-storage-solutions",
+      "solar-storage-efficiency-optimization-guide",
+      "the-evolution-of-3c-electronics",
+      "the-future-of-smart-home-appliances",
+      "the-future-of-solar-energy"
+    ],
+    "newsUrlsWithoutStaticOrDynamicRoute": [],
+    "staticRoutesMissingFromNewsListing": [],
+    "staticRoutesMissingFromImageSitemap": [],
+    "rssMissingStaticArticles": [],
+    "missingLocalizedRecords": {
+      "es": [],
+      "de": [],
+      "fr": [],
+      "ar": []
+    },
+    "staticRouteModelNotes": 17
+  },
+  "summary": {
+    "blockingIssues": 0,
+    "syncWarnings": 0
+  }
+}
