@@ -31,3 +31,8 @@
 - [ ] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态
 - [x] 重构首页 Organization JSON-LD，补齐已验证的 sameAs、Brand、PostalAddress、ContactPoint 与制造商实体字段
 - [x] 为首页实体 JSON-LD 增加回归测试并完成生产 Schema 输出复验
+
+- [x] 按 HousePlus GEO/AEO 优化策略实战手册分解并执行品牌实体、AEO 问答与多语言 AI 检索增强
+- [x] 为五种语言品牌页注入 FAQPage 与 Breadcrumb Schema 并完成多语言同步优化
+
+- [x] 为全站核心产品页批量补充增强的 Product 与符合可见说明的 HowTo Schema

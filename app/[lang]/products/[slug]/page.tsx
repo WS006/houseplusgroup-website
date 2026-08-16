@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
-import { generateProductSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { generateProductSchema, generateFAQSchema, generateProductHowToSchema } from '@/lib/schema-generator';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
 import { getLocalizedProduct } from '@/lib/localized-content';
 import { getOGLocale } from '@/lib/seo-utils';
@@ -54,6 +54,63 @@ const productUi: Record<string, Record<string, string>> = {
   de: { notFound: 'Produkt nicht gefunden', notFoundDescription: 'Das gesuchte Produkt existiert nicht.', backProducts: 'Zurück zu Produkten', documentation: 'Dokumentation auf Anfrage verfügbar', technicalSpecifications: 'Technische Spezifikationen', keyFeatures: 'Hauptmerkmale', applications: 'Anwendungen', requestQuote: 'B2B/OEM-Angebot anfordern', buyNow: 'Jetzt kaufen', retailOffer: 'Einzelhandelsangebot', minOrder: 'Mindestbestellung', leadTime: 'Lieferzeit', warranty: 'Garantie', confirmByQuote: 'Im Angebot bestätigen', faqHeading: 'Häufig gestellte Fragen', oemTitle: 'HousePlus OEM/ODM-Services', oemDescription: 'Besprechen Sie kundenspezifisches Branding, Private-Label-Verpackungen und Produktanpassungen mit unserem Team; die Anforderungen werden in Ihrem Angebot bestätigt.', contactSales: 'HousePlus-Vertrieb kontaktieren', brandBadge: 'HousePlus Einzelhandel und B2B', quoteQuestion: 'Welche Handelsdetails werden im Angebot bestätigt?', quoteAnswer: 'Bei Einzelhandelsprodukten zeigt die Produktseite Preis und Verfügbarkeit. MOQ, Anpassung, Fracht, Exportdokumentation und endgültige B2B-Bedingungen werden im Angebot bestätigt.', questionPrefix: 'F:', answerPrefix: 'A:' },
   fr: { notFound: 'Produit introuvable', notFoundDescription: 'Le produit que vous recherchez n’existe pas.', backProducts: 'Retour aux produits', documentation: 'Documentation disponible sur demande', technicalSpecifications: 'Spécifications techniques', keyFeatures: 'Caractéristiques principales', applications: 'Applications', requestQuote: 'Demander un devis B2B/OEM', buyNow: 'Acheter', retailOffer: 'Offre retail', minOrder: 'Commande minimale', leadTime: 'Délai de livraison', warranty: 'Garantie', confirmByQuote: 'À confirmer dans le devis', faqHeading: 'Questions fréquentes', oemTitle: 'Services OEM/ODM de HousePlus', oemDescription: 'Discutez de la personnalisation de la marque, de l’emballage sous marque privée et des modifications produit avec notre équipe ; les exigences sont confirmées dans votre devis.', contactSales: 'Contacter l’équipe commerciale HousePlus', brandBadge: 'HousePlus Retail et B2B', quoteQuestion: 'Quelles conditions commerciales sont confirmées dans le devis ?', quoteAnswer: 'Pour les produits retail, la page affiche prix et disponibilité actuels. MOQ, personnalisation, fret, documents export et conditions B2B finales sont confirmés dans le devis.', questionPrefix: 'Q :', answerPrefix: 'R : ' },
   ar: { notFound: 'المنتج غير موجود', notFoundDescription: 'المنتج الذي تبحث عنه غير موجود.', backProducts: 'العودة إلى المنتجات', documentation: 'الوثائق متاحة عند الطلب', technicalSpecifications: 'المواصفات الفنية', keyFeatures: 'الميزات الرئيسية', applications: 'التطبيقات', requestQuote: 'طلب عرض B2B/OEM', buyNow: 'اشتر الآن', retailOffer: 'عرض التجزئة', minOrder: 'الحد الأدنى للطلب', leadTime: 'المهلة الزمنية', warranty: 'الضمان', confirmByQuote: 'يُؤكد في عرض الأسعار', faqHeading: 'الأسئلة الشائعة', oemTitle: 'خدمات HousePlus OEM/ODM', oemDescription: 'ناقش العلامات التجارية المخصصة والتغليف الخاص وتعديلات المنتج مع فريقنا؛ ويتم تأكيد المتطلبات في عرض الأسعار الخاص بك.', contactSales: 'تواصل مع فريق مبيعات HousePlus', brandBadge: 'هاوس بلس للتجزئة وB2B', quoteQuestion: 'ما التفاصيل التجارية التي يؤكدها عرض الأسعار؟', quoteAnswer: 'للمنتجات المتاحة بالتجزئة، تعرض صفحة المنتج السعر والتوفر الحاليين. ويتم تأكيد MOQ والتخصيص والشحن ووثائق التصدير وشروط B2B النهائية في عرض السعر.', questionPrefix: 'س:', answerPrefix: 'ج:' },
+};
+
+const productHowToCopy: Record<string, {
+  title: string;
+  description: string;
+  steps: Array<{ name: string; text: string }>;
+}> = {
+  en: {
+    title: 'How to Source This Product for B2B/OEM',
+    description: 'Follow this transparent route to define your sourcing requirement and request a documented HousePlus quotation.',
+    steps: [
+      { name: 'Review the product information', text: 'Review the listed specifications, features, images and available documentation before defining your requirement.' },
+      { name: 'Send a product inquiry', text: 'Request a quotation and state the intended application, required quantity and any branding or packaging scope.' },
+      { name: 'Confirm the commercial scope', text: 'HousePlus confirms the applicable product scope, customisation, freight, export documentation and delivery options in the quotation.' },
+      { name: 'Approve the documented order plan', text: 'Review the agreed quotation and supporting documentation before placing a B2B/OEM order.' },
+    ],
+  },
+  es: {
+    title: 'Cómo Abastecer Este Producto para B2B/OEM',
+    description: 'Siga esta ruta transparente para definir su necesidad de abastecimiento y solicitar una cotización documentada de HousePlus.',
+    steps: [
+      { name: 'Revise la información del producto', text: 'Revise las especificaciones, características, imágenes y documentación disponible antes de definir su requisito.' },
+      { name: 'Envíe una consulta de producto', text: 'Solicite una cotización e indique la aplicación prevista, la cantidad requerida y cualquier alcance de marca o embalaje.' },
+      { name: 'Confirme el alcance comercial', text: 'HousePlus confirma en la cotización el alcance aplicable, la personalización, el flete, la documentación de exportación y las opciones de entrega.' },
+      { name: 'Apruebe el plan de pedido documentado', text: 'Revise la cotización acordada y la documentación de respaldo antes de realizar un pedido B2B/OEM.' },
+    ],
+  },
+  de: {
+    title: 'So Beschaffen Sie Dieses Produkt für B2B/OEM',
+    description: 'Folgen Sie diesem transparenten Weg, um Ihren Beschaffungsbedarf zu definieren und ein dokumentiertes Angebot von HousePlus anzufordern.',
+    steps: [
+      { name: 'Produktinformationen prüfen', text: 'Prüfen Sie die aufgeführten Spezifikationen, Merkmale, Bilder und verfügbaren Unterlagen, bevor Sie Ihren Bedarf definieren.' },
+      { name: 'Produktanfrage senden', text: 'Fordern Sie ein Angebot an und nennen Sie Verwendungszweck, benötigte Menge sowie mögliche Marken- oder Verpackungsanforderungen.' },
+      { name: 'Den kaufmännischen Umfang bestätigen', text: 'HousePlus bestätigt den anwendbaren Umfang, Anpassungen, Fracht, Exportdokumentation und Lieferoptionen im Angebot.' },
+      { name: 'Den dokumentierten Bestellplan freigeben', text: 'Prüfen Sie das vereinbarte Angebot und die zugehörigen Unterlagen, bevor Sie eine B2B/OEM-Bestellung aufgeben.' },
+    ],
+  },
+  fr: {
+    title: 'Comment Sourcer Ce Produit en B2B/OEM',
+    description: 'Suivez ce parcours transparent pour définir votre besoin d’approvisionnement et demander un devis HousePlus documenté.',
+    steps: [
+      { name: 'Examinez les informations produit', text: 'Examinez les spécifications, caractéristiques, images et documents disponibles avant de définir votre besoin.' },
+      { name: 'Envoyez une demande produit', text: 'Demandez un devis en indiquant l’application prévue, la quantité requise et toute attente de marque ou d’emballage.' },
+      { name: 'Confirmez le périmètre commercial', text: 'HousePlus confirme dans le devis le périmètre applicable, la personnalisation, le fret, les documents export et les options de livraison.' },
+      { name: 'Validez le plan de commande documenté', text: 'Examinez le devis convenu et les documents associés avant de passer une commande B2B/OEM.' },
+    ],
+  },
+  ar: {
+    title: 'كيفية توريد هذا المنتج لـ B2B/OEM',
+    description: 'اتبع هذا المسار الواضح لتحديد احتياجات التوريد وطلب عرض أسعار موثق من HousePlus.',
+    steps: [
+      { name: 'راجع معلومات المنتج', text: 'راجع المواصفات والميزات والصور والوثائق المتاحة قبل تحديد متطلباتك.' },
+      { name: 'أرسل استفسارًا عن المنتج', text: 'اطلب عرض سعر وحدد التطبيق المقصود والكمية المطلوبة وأي متطلبات للعلامة التجارية أو التغليف.' },
+      { name: 'أكد النطاق التجاري', text: 'تؤكد HousePlus في عرض السعر النطاق المطبق والتخصيص والشحن ووثائق التصدير وخيارات التسليم.' },
+      { name: 'اعتمد خطة الطلب الموثقة', text: 'راجع عرض السعر المتفق عليه والوثائق الداعمة قبل تقديم طلب B2B/OEM.' },
+    ],
+  },
 };
 
 const categoryLabels: Record<string, Record<string, string>> = {
@@ -192,6 +249,7 @@ export default async function ProductDetailPage({
   const imageDimensions = r2ImageDimensions(product.coverImage, { width: 900, height: 675 });
   const productImageAlt = product.imageAlt || getDetailAlt(product, modelSpec?.value || slug.toUpperCase());
   const productImageTitle = product.imageTitle || getDetailTitle(product, modelSpec?.value || slug.toUpperCase());
+  const howToCopy = productHowToCopy[lang] || productHowToCopy.en;
 
   // Generate structured data schemas
   const productSchema = generateProductSchema({
@@ -215,13 +273,22 @@ export default async function ProductDetailPage({
     contactUrl: `${BASE_URL}/${lang}/contact/`,
     contactActionName: (schemaActionCopy[lang] || schemaActionCopy.en).name,
     contactActionDescription: (schemaActionCopy[lang] || schemaActionCopy.en).description,
+    specifications: product.specs.map((spec) => ({ name: spec.key, value: spec.value })),
   });
 
   const faqSchema = generateFAQSchema(quotationFaq, lang);
+  const productHowToSchema = generateProductHowToSchema({
+    name: `${howToCopy.title}: ${product.name}`,
+    description: howToCopy.description,
+    image: product.coverImage,
+    url: productUrl,
+    lang,
+    steps: howToCopy.steps,
+  });
 
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[productSchema, ...(faqSchema ? [faqSchema] : [])]} />
+      <SEOHead schemas={[productSchema, ...(faqSchema ? [faqSchema] : []), productHowToSchema]} />
       <Breadcrumb lang={lang} slug={`products/${slug}`} customLabel={product.name} />
 
       {/* Product Hero */}
@@ -404,6 +471,19 @@ export default async function ProductDetailPage({
                 </div>
               </div>
             )}
+
+            <section id="b2b-oem-sourcing-howto" className="mt-8 p-5 bg-blue-50 rounded-xl border border-blue-100" aria-labelledby="b2b-oem-sourcing-heading">
+              <h2 id="b2b-oem-sourcing-heading" className="text-lg font-bold text-slate-900 mb-2">{howToCopy.title}</h2>
+              <p className="text-sm text-slate-600 leading-relaxed mb-4">{howToCopy.description}</p>
+              <ol className="space-y-3">
+                {howToCopy.steps.map((step, index) => (
+                  <li key={step.name} className="flex gap-3 text-sm text-slate-700">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">{index + 1}</span>
+                    <span><strong className="text-slate-900">{step.name}.</strong> {step.text}</span>
+                  </li>
+                ))}
+              </ol>
+            </section>
 
             {/* HousePlus CTA */}
             <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-200">

@@ -285,6 +285,16 @@ export interface ProductSchemaOptions {
   contactUrl?: string;
   contactActionName?: string;
   contactActionDescription?: string;
+  specifications?: Array<{ name: string; value: string }>;
+}
+
+export interface ProductHowToSchemaOptions {
+  name: string;
+  description: string;
+  image: string;
+  url: string;
+  lang: string;
+  steps: Array<{ name: string; text: string }>;
 }
 
 
@@ -307,16 +317,23 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     contactUrl = `${BASE_URL}/en/contact`,
     contactActionName = 'Request a wholesale quotation',
     contactActionDescription = 'Contact HousePlus Group to request product documentation and a wholesale quotation.',
+    specifications = [],
   } = options;
 
   const mediaDetails = getR2MediaDetails(image);
   const imageDimensions = r2ImageDimensions(image, { width: imageWidth, height: imageHeight });
   const resolvedImageCaption = imageCaption || mediaDetails?.title || name;
   const resolvedImageDescription = imageDescription || mediaDetails?.description || mediaDetails?.alt || description;
-  // B2B commercial terms and compliance records are published only after a
-  // product- and destination-specific verification workflow is implemented.
+  // Technical specifications are published only when they are visibly shown
+  // on the product page. B2B commercial terms remain quote-confirmed.
   const publishB2BProperties = false;
-  const additionalProperty: Array<Record<string, string>> = [];
+  const additionalProperty: Array<Record<string, string>> = specifications
+    .filter((spec) => spec.name.trim().length > 0 && spec.value.trim().length > 0)
+    .map((spec) => ({
+      '@type': 'PropertyValue',
+      name: spec.name,
+      value: spec.value,
+    }));
   if (publishB2BProperties && b2bInfo?.moq) {
     additionalProperty.push({
       '@type': 'PropertyValue',
@@ -471,6 +488,47 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       provider: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
     },
     ...(additionalProperty.length > 0 && { additionalProperty }),
+  };
+}
+
+/**
+ * Generates a HowTo only for the visible B2B/OEM quotation workflow shown on
+ * product pages. It does not make unverified installation or operation claims.
+ */
+export function generateProductHowToSchema(options: ProductHowToSchemaOptions) {
+  const { name, description, image, url, lang, steps } = options;
+  const dimensions = r2ImageDimensions(image, { width: 900, height: 675 });
+  const productImage = {
+    '@type': 'ImageObject',
+    '@id': `${image}#image`,
+    url: image,
+    contentUrl: image,
+    width: dimensions.width,
+    height: dimensions.height,
+    ...HOUSEPLUS_IMAGE_RIGHTS,
+  };
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': `${url}#b2b-oem-sourcing-howto`,
+    name,
+    description,
+    inLanguage: lang,
+    image: productImage,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      url: `${url}#b2b-oem-sourcing-howto`,
+    })),
+    provider: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'HousePlus Group',
+    },
   };
 }
 
