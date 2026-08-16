@@ -29,3 +29,5 @@
 - [ ] 强化 FAQ 页面与主要内容页的 Schema 完整性及尾斜杠规范 URL 映射
 - [ ] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境
 - [ ] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态
+- [x] 重构首页 Organization JSON-LD，补齐已验证的 sameAs、Brand、PostalAddress、ContactPoint 与制造商实体字段
+- [x] 为首页实体 JSON-LD 增加回归测试并完成生产 Schema 输出复验

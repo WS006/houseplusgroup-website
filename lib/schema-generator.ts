@@ -4,6 +4,11 @@ import { r2MediaUrl } from './r2-media-map';
 const BASE_URL = 'https://www.houseplus-ch.com';
 const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
 const OFFICIAL_HORIZONTAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
+const VERIFIED_ORGANIZATION_PROFILES = [
+  'https://www.facebook.com/houseplusgroup',
+  'https://www.linkedin.com/company/houseplus-group',
+  'https://www.youtube.com/@houseplusgroup',
+];
 
 // These declarations apply only to approved HousePlus-owned or HousePlus-licensed
 // R2 assets published through this website. Third-party assets must carry their
@@ -36,7 +41,19 @@ interface SchemaOptions {
 }
 
 export function generateOrganizationSchema(options: SchemaOptions) {
-  const { title, description, url } = options;
+  const { title, description, lang } = options;
+  const logoImage = {
+    '@type': 'ImageObject',
+    '@id': `${OFFICIAL_HORIZONTAL_LOGO}#logo`,
+    url: OFFICIAL_HORIZONTAL_LOGO,
+    contentUrl: OFFICIAL_HORIZONTAL_LOGO,
+    width: 611,
+    height: 246,
+    caption: 'Official HousePlus Group horizontal logo',
+    representativeOfPage: true,
+    ...HOUSEPLUS_IMAGE_RIGHTS,
+  };
+  const primaryImage = houseplusImageReference(DEFAULT_SOCIAL_IMAGE);
 
   return {
     '@context': 'https://schema.org',
@@ -46,22 +63,27 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     alternateName: 'HousePlus Group',
     description,
     url: BASE_URL,
+    inLanguage: lang,
     foundingDate: '2010',
-    logo: {
-      '@type': 'ImageObject',
-      '@id': `${OFFICIAL_HORIZONTAL_LOGO}#logo`,
-      url: OFFICIAL_HORIZONTAL_LOGO,
-      contentUrl: OFFICIAL_HORIZONTAL_LOGO,
-      width: 611,
-      height: 246,
-      caption: 'Official HousePlus Group horizontal logo',
-      representativeOfPage: true,
-      ...HOUSEPLUS_IMAGE_RIGHTS,
+    logo: logoImage,
+    image: primaryImage,
+    brand: {
+      '@type': 'Brand',
+      '@id': `${BASE_URL}/#brand`,
+      name: 'HousePlus',
+      alternateName: 'HousePlus Group',
+      url: BASE_URL,
+      logo: { '@id': logoImage['@id'] },
     },
-    image: DEFAULT_SOCIAL_IMAGE,
     foundingLocation: {
       '@type': 'Place',
       name: 'Zhongshan, Guangdong, China',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zhongshan',
+        addressRegion: 'Guangdong',
+        addressCountry: 'CN',
+      },
     },
     address: {
       '@type': 'PostalAddress',
@@ -77,21 +99,30 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     contactPoint: [
       {
         '@type': 'ContactPoint',
+        '@id': `${BASE_URL}/#sales-contact`,
         telephone: '+86-155-7811-9543',
         email: 'jack@houseplus-ch.com',
         contactType: 'sales',
+        url: `${BASE_URL}/en/contact/`,
         availableLanguage: ['English', 'Chinese'],
         areaServed: ['Worldwide', 'NG', 'DE', 'FR', 'AE'],
+        hoursAvailable: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '09:00',
+            closes: '18:00',
+          },
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: 'Saturday',
+            opens: '10:00',
+            closes: '16:00',
+          },
+        ],
       },
     ],
-    sameAs: [
-      'https://www.facebook.com/houseplusgroup',
-      'https://www.linkedin.com/company/houseplus-group',
-      'https://www.youtube.com/@houseplusgroup',
-      'https://twitter.com/houseplusglobal',
-      'https://www.instagram.com/houseplusgroup',
-      `${BASE_URL}/en`,
-    ],
+    sameAs: VERIFIED_ORGANIZATION_PROFILES,
     areaServed: [
       { '@type': 'Country', name: 'Worldwide' },
       { '@type': 'Country', name: 'Nigeria' },
@@ -106,6 +137,15 @@ export function generateOrganizationSchema(options: SchemaOptions) {
       'OEM Manufacturing',
       'ODM Services',
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'HousePlus Manufacturing Catalog',
+      itemListElement: [
+        { '@type': 'OfferCatalog', name: 'Solar Energy Systems' },
+        { '@type': 'OfferCatalog', name: 'Home Appliances' },
+        { '@type': 'OfferCatalog', name: '3C Electronics' },
+      ],
+    },
   };
 }
 
