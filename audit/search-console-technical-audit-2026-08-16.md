@@ -35,3 +35,11 @@
 公开 PageSpeed Insights 接口返回配额耗尽（HTTP 429），因此本次未将实验室分数作为结论。浏览器在生产首页 `/en/` 的一次新加载中记录：HTML 首响应约 2,269 ms、DOM Content Loaded 约 4,310 ms、load 约 4,359 ms，LCP 候选为首张太阳能轮播图，约 4,340 ms。
 
 首屏三张轮播图均在初始加载：首图约 92.98 KB、第二张约 79.89 KB、第三张约 54.64 KB；首图为预加载资源。优化优先级是只预加载活动首张首屏图，并将其余两张轮播图延后加载，保持显式图像尺寸以避免 CLS。该值仅为单次浏览器测量，必须在部署后用 CrUX 或 Search Console Core Web Vitals 长期观察确认。
+
+## 部署后复验
+
+生产版本已发布至 GitHub `main` 的提交 `0b47aad`。生产 XML Sitemap 与图片 Sitemap 已验证：所有抽样页面 `<loc>` 和 hreflang URL 均带尾斜杠；产品详情 HTML 同时输出尾斜杠 canonical、`ImageObject` 和 `primaryImageOfPage`。
+
+服务账号已于 2026-08-16 14:51 UTC 重新提交 `sitemap.xml`、`image-sitemap.xml` 和 `feed.xml`。Search Console API 随后返回三个 Sitemap 均为 `processed`，且每个均为 0 warnings、0 errors。历史 `ja`、`da` 等非发布语言 URL 目前在生产环境返回 HTTP 404；报告中遗留的旧语言曝光和过往 canonical 选择将待 Google 重新抓取后自然出清。
+
+更新后在浏览器中重新加载首页时，LCP 仍为首张太阳能英雄图，但记录约为 2,444 ms；第二、第三张轮播图分别在约 5,754 ms 和 10,754 ms 才创建图片请求，不再与首屏 LCP 图同时竞争。该测量来自单次缓存条件下的浏览器采样，说明加载策略已生效，但不能替代 Search Console 的 28 天真实用户 Core Web Vitals 评估。
