@@ -5,250 +5,81 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 
-const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
-
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'] as const;
+type Lang = (typeof validLangs)[number];
 export const dynamicParams = false;
+export function generateStaticParams() { return validLangs.map((lang) => ({ lang })); }
 
-export function generateStaticParams() {
-  return validLangs.map((lang) => ({ lang }));
-}
+type Certification = { icon: string; title: string; desc: string; markets: string; standards: string };
+type ProcessItem = { title: string; desc: string };
+type Coverage = { market: string; certs: string; share: string };
+type PageCopy = {
+  title: string; description: string; organizationDescription: string; home: string; breadcrumb: string;
+  isoBadge: string; ceBadge: string; iecBadge: string; heroTitle: string; heroDescription: string;
+  stats: { value: string; label: string }[]; portfolioTitle: string; portfolioDescription: string;
+  marketsLabel: string; standardsLabel: string; integrityTitle: string; process: ProcessItem[];
+  coverageTitle: string; coverage: Coverage[]; ctaTitle: string; ctaDescription: string; ctaPack: string; ctaProducts: string;
+  certifications: Certification[];
+};
+
+const pageCopy: Record<Lang, PageCopy> = {
+  en: {
+    title: 'HousePlus Certifications — CE, FCC, RoHS, ISO 9001',
+    description: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications for solar panels, inverters, batteries, appliances and electronics. Trusted by 441+ clients in 53+ countries.',
+    organizationDescription: 'CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certified manufacturer of solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches from a 20,000 m² factory serving 53+ countries and 441+ wholesale clients since 2010.',
+    home: 'Home', breadcrumb: 'Certifications', isoBadge: 'ISO 9001 Certified', ceBadge: 'CE / FCC / RoHS', iecBadge: 'IEC & UN38.3', heroTitle: 'HousePlus Certifications — CE, FCC, RoHS, ISO 9001, IEC, UN38.3', heroDescription: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications covering solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches. Our 20,000 m² ISO 9001 factory has served 53+ countries and 441+ wholesale clients since 2010. Every product ships with complete compliance documentation for seamless import clearance.',
+    stats: [{ value: '6', label: 'Active Certifications' }, { value: '53+', label: 'Countries Served' }, { value: '441+', label: 'Wholesale Clients' }, { value: '2010', label: 'Founded Year' }], portfolioTitle: 'HousePlus Certification Portfolio', portfolioDescription: 'Every HousePlus product ships with the certification documentation your market requires.', marketsLabel: 'Applicable Markets', standardsLabel: 'Testing Standards', integrityTitle: 'How HousePlus Maintains Certification Integrity',
+    certifications: [
+      { icon: 'CE', title: 'CE Marking — European Market Access', desc: 'CE certification confirms HousePlus products meet EU safety, health and environmental requirements under the New Approach Directives.', markets: 'European Union (EU), European Economic Area (EEA), Turkey, Switzerland', standards: 'EN 60335 (household appliances), EN 61215 (solar modules), EN 55032 (EMC), EN 61000 (immunity)' },
+      { icon: 'FCC', title: 'FCC Authorization — United States', desc: 'FCC certification validates electromagnetic compatibility for the North American market, ensuring devices do not cause harmful interference.', markets: 'United States, Canada (ISED), Mexico (IFT)', standards: 'FCC Part 15 (radiated & conducted emissions), FCC Part 18 (industrial equipment), ANSI C63.4 (measurement procedures)' },
+      { icon: 'RoHS', title: 'RoHS Compliance — Environmental Safety', desc: 'RoHS restricts hazardous substances in electrical and electronic equipment, limiting lead, cadmium, mercury and other restricted materials.', markets: 'European Union, China, South Korea, United Arab Emirates, Saudi Arabia', standards: 'RoHS Directive 2011/65/EU, IEC 62321 (testing methods), XRF material verification at incoming inspection' },
+      { icon: 'ISO', title: 'ISO 9001:2015 — Quality Management', desc: 'ISO 9001 certifies our quality management system covering design, procurement, production, inspection and continuous improvement.', markets: 'Global — recognized in 170+ countries', standards: 'ISO 9001:2015 (QMS), ISO 19011 (auditing), internal SOP-001 to SOP-247 covering all production stages' },
+      { icon: 'IEC', title: 'IEC Standards — International Electrical Safety', desc: 'IEC certification covers international electrical safety benchmarks for photovoltaic and electronic products.', markets: 'Global — especially Middle East, Africa, Southeast Asia, Australia', standards: 'IEC 61215 (crystalline silicon PV modules), IEC 61683 (PV system performance), IEC 62109 (safety of power converters)' },
+      { icon: 'UN38.3', title: 'UN38.3 — Battery Transport Safety', desc: 'UN38.3 certifies lithium battery transport safety for air, sea and road shipment under UN dangerous goods regulations.', markets: 'Global — mandatory for all lithium battery shipments via air (IATA DGR) and sea (IMDG Code)', standards: 'UN Manual of Tests and Criteria, Section 38.3 (altitude simulation, thermal, vibration, shock, short circuit, crush, forced discharge)' },
+    ],
+    process: [{ title: 'Supplier Material Verification', desc: 'Incoming raw materials are screened with XRF analysers. 12% of lots are randomly sampled for RoHS compliance before release to production.' }, { title: 'In-Process Testing', desc: '4 QC checkpoints monitor solder joint strength, insulation resistance and earth continuity. Defect rates are logged per workstation hourly.' }, { title: 'Final Certification Audit', desc: '100% of finished goods undergo functional testing. Solar inverters are burn-in tested for 4 hours; batteries cycle-tested for 50 charge cycles.' }, { title: 'Document Control', desc: 'Test reports, certificates of conformity and packing declarations are archived for 5 years per ISO 9001 clause 7.5. Clients receive digital copies within 24 hours of request.' }],
+    coverageTitle: 'Certification Coverage by Market', coverage: [{ market: 'European Union', certs: 'CE, RoHS, REACH', share: '38% export share' }, { market: 'North America', certs: 'FCC, UL (on request)', share: '22% export share' }, { market: 'Middle East', certs: 'SASO, GCC, CE', share: '18% export share' }, { market: 'Africa', certs: 'CE, SONCAP', share: '15% export share' }, { market: 'Southeast Asia', certs: 'IEC, SNI (on request)', share: '7% export share' }], ctaTitle: 'Need Certification Documentation?', ctaDescription: 'HousePlus provides complete certification files — test reports, certificates of conformity and compliance declarations — for every order. Contact our team for sample documentation.', ctaPack: 'Request Certification Pack', ctaProducts: 'Browse Certified Products',
+  },
+  es: {
+    title: 'Certificaciones de HousePlus — CE, FCC, RoHS, ISO 9001', description: 'HousePlus cuenta con certificaciones CE, FCC, RoHS, ISO 9001, IEC y UN38.3 para paneles solares, inversores, baterías, electrodomésticos y electrónica. Más de 441 clientes confían en nosotros.', organizationDescription: 'Fabricante certificado según CE, FCC, RoHS, ISO 9001, IEC y UN38.3 de paneles solares, inversores, baterías de litio, freidoras de aire, placas de inducción, auriculares TWS y relojes inteligentes, desde una fábrica de 20.000 m² que atiende a más de 53 países y 441 clientes mayoristas desde 2010.', home: 'Inicio', breadcrumb: 'Certificaciones', isoBadge: 'Certificado ISO 9001', ceBadge: 'CE / FCC / RoHS', iecBadge: 'IEC y UN38.3', heroTitle: 'Certificaciones de HousePlus — CE, FCC, RoHS, ISO 9001, IEC y UN38.3', heroDescription: 'HousePlus cuenta con certificaciones CE, FCC, RoHS, ISO 9001, IEC y UN38.3 para paneles solares, inversores, baterías de litio, freidoras de aire, placas de inducción, auriculares TWS y relojes inteligentes. Nuestra fábrica de 20.000 m² con ISO 9001 atiende a más de 53 países y 441 clientes mayoristas desde 2010. Cada producto se envía con la documentación de conformidad necesaria para facilitar el despacho de importación.', stats: [{ value: '6', label: 'Certificaciones activas' }, { value: '53+', label: 'Países atendidos' }, { value: '441+', label: 'Clientes mayoristas' }, { value: '2010', label: 'Año de fundación' }], portfolioTitle: 'Portafolio de certificaciones de HousePlus', portfolioDescription: 'Cada producto de HousePlus se envía con la documentación de certificación que exige su mercado.', marketsLabel: 'Mercados aplicables', standardsLabel: 'Normas de ensayo', integrityTitle: 'Cómo mantiene HousePlus la integridad de sus certificaciones',
+    certifications: [{ icon: 'CE', title: 'Marcado CE — Acceso al mercado europeo', desc: 'La certificación CE confirma que los productos HousePlus cumplen los requisitos de seguridad, salud y medio ambiente de la UE conforme a las Directivas de Nuevo Enfoque.', markets: 'Unión Europea (UE), Espacio Económico Europeo (EEE), Turquía y Suiza', standards: 'EN 60335 (electrodomésticos), EN 61215 (módulos solares), EN 55032 (CEM), EN 61000 (inmunidad)' }, { icon: 'FCC', title: 'Autorización FCC — Estados Unidos', desc: 'La certificación FCC valida la compatibilidad electromagnética para Norteamérica y garantiza que los equipos no causen interferencias perjudiciales.', markets: 'Estados Unidos, Canadá (ISED) y México (IFT)', standards: 'FCC Parte 15 (emisiones radiadas y conducidas), FCC Parte 18 (equipos industriales), ANSI C63.4 (procedimientos de medición)' }, { icon: 'RoHS', title: 'Conformidad RoHS — Seguridad medioambiental', desc: 'RoHS restringe las sustancias peligrosas en equipos eléctricos y electrónicos, limitando plomo, cadmio, mercurio y otros materiales restringidos.', markets: 'Unión Europea, China, Corea del Sur, Emiratos Árabes Unidos y Arabia Saudí', standards: 'Directiva RoHS 2011/65/UE, IEC 62321 (métodos de ensayo) y verificación de materiales por XRF en la recepción' }, { icon: 'ISO', title: 'ISO 9001:2015 — Gestión de la calidad', desc: 'ISO 9001 certifica nuestro sistema de gestión de calidad, que abarca diseño, compras, producción, inspección y mejora continua.', markets: 'Global — reconocida en más de 170 países', standards: 'ISO 9001:2015 (SGC), ISO 19011 (auditoría) y SOP-001 a SOP-247 internos para todas las fases de producción' }, { icon: 'IEC', title: 'Normas IEC — Seguridad eléctrica internacional', desc: 'La certificación IEC cubre los estándares internacionales de seguridad eléctrica para productos fotovoltaicos y electrónicos.', markets: 'Global — especialmente Oriente Medio, África, Sudeste Asiático y Australia', standards: 'IEC 61215 (módulos FV de silicio cristalino), IEC 61683 (rendimiento de sistemas FV), IEC 62109 (seguridad de convertidores)' }, { icon: 'UN38.3', title: 'UN38.3 — Seguridad en el transporte de baterías', desc: 'UN38.3 certifica la seguridad del transporte de baterías de litio por vía aérea, marítima y terrestre conforme a la normativa de mercancías peligrosas de la ONU.', markets: 'Global — obligatorio para envíos de baterías de litio por aire (IATA DGR) y mar (Código IMDG)', standards: 'Manual de Pruebas y Criterios de la ONU, sección 38.3 (altitud, temperatura, vibración, impacto, cortocircuito, aplastamiento y descarga forzada)' }],
+    process: [{ title: 'Verificación de materiales de proveedores', desc: 'Las materias primas recibidas se examinan con analizadores XRF. Se toma una muestra aleatoria del 12 % de los lotes para comprobar RoHS antes de liberar la producción.' }, { title: 'Ensayos durante el proceso', desc: '4 puntos de control supervisan la resistencia de las soldaduras, el aislamiento y la continuidad de tierra. Las tasas de defectos se registran cada hora por puesto.' }, { title: 'Auditoría final de certificación', desc: 'El 100 % de los productos terminados pasa una prueba funcional. Los inversores solares se someten a 4 horas de rodaje y las baterías a 50 ciclos de carga.' }, { title: 'Control documental', desc: 'Los informes de ensayo, certificados de conformidad y declaraciones de embalaje se archivan durante 5 años según la cláusula 7.5 de ISO 9001. El cliente recibe copias digitales en 24 horas.' }], coverageTitle: 'Cobertura de certificaciones por mercado', coverage: [{ market: 'Unión Europea', certs: 'CE, RoHS, REACH', share: '38 % de las exportaciones' }, { market: 'Norteamérica', certs: 'FCC, UL (bajo solicitud)', share: '22 % de las exportaciones' }, { market: 'Oriente Medio', certs: 'SASO, GCC, CE', share: '18 % de las exportaciones' }, { market: 'África', certs: 'CE, SONCAP', share: '15 % de las exportaciones' }, { market: 'Sudeste Asiático', certs: 'IEC, SNI (bajo solicitud)', share: '7 % de las exportaciones' }], ctaTitle: '¿Necesita documentación de certificación?', ctaDescription: 'HousePlus proporciona archivos completos de certificación — informes de ensayo, certificados de conformidad y declaraciones de cumplimiento — para cada pedido. Contacte con nuestro equipo para recibir documentación de muestra.', ctaPack: 'Solicitar paquete de certificación', ctaProducts: 'Ver productos certificados',
+  },
+  de: {
+    title: 'HousePlus Zertifizierungen — CE, FCC, RoHS, ISO 9001', description: 'HousePlus verfügt über CE-, FCC-, RoHS-, ISO 9001-, IEC- und UN38.3-Zertifizierungen für Solarmodule, Wechselrichter, Batterien, Haushaltsgeräte und Elektronik. 441+ Kunden in 53+ Ländern.', organizationDescription: 'Zertifizierter Hersteller von Solarmodulen, Wechselrichtern, Lithiumbatterien, Heißluftfritteusen, Induktionskochfeldern, TWS-Ohrhörern und Smartwatches nach CE, FCC, RoHS, ISO 9001, IEC und UN38.3. Das 20.000 m² große Werk beliefert seit 2010 mehr als 53 Länder und 441 Großhandelskunden.', home: 'Startseite', breadcrumb: 'Zertifizierungen', isoBadge: 'ISO 9001 zertifiziert', ceBadge: 'CE / FCC / RoHS', iecBadge: 'IEC und UN38.3', heroTitle: 'HousePlus Zertifizierungen — CE, FCC, RoHS, ISO 9001, IEC, UN38.3', heroDescription: 'HousePlus verfügt über CE-, FCC-, RoHS-, ISO 9001-, IEC- und UN38.3-Zertifizierungen für Solarmodule, Wechselrichter, Lithiumbatterien, Heißluftfritteusen, Induktionskochfelder, TWS-Ohrhörer und Smartwatches. Unser 20.000 m² großes ISO-9001-Werk beliefert seit 2010 mehr als 53 Länder und 441 Großhandelskunden. Jede Lieferung enthält die vollständige Konformitätsdokumentation für eine reibungslose Einfuhrabfertigung.', stats: [{ value: '6', label: 'Aktive Zertifizierungen' }, { value: '53+', label: 'Belieferte Länder' }, { value: '441+', label: 'Großhandelskunden' }, { value: '2010', label: 'Gründungsjahr' }], portfolioTitle: 'HousePlus Zertifizierungsportfolio', portfolioDescription: 'Jedes HousePlus-Produkt wird mit der für Ihren Markt erforderlichen Zertifizierungsdokumentation geliefert.', marketsLabel: 'Geltende Märkte', standardsLabel: 'Prüfnormen', integrityTitle: 'So sichert HousePlus die Integrität seiner Zertifizierungen',
+    certifications: [{ icon: 'CE', title: 'CE-Kennzeichnung — Zugang zum europäischen Markt', desc: 'Die CE-Zertifizierung bestätigt, dass HousePlus-Produkte die Sicherheits-, Gesundheits- und Umweltanforderungen der EU gemäß den Richtlinien des New Approach erfüllen.', markets: 'Europäische Union (EU), Europäischer Wirtschaftsraum (EWR), Türkei und Schweiz', standards: 'EN 60335 (Haushaltsgeräte), EN 61215 (Solarmodule), EN 55032 (EMV), EN 61000 (Störfestigkeit)' }, { icon: 'FCC', title: 'FCC-Zulassung — Vereinigte Staaten', desc: 'Die FCC-Zertifizierung bestätigt die elektromagnetische Verträglichkeit für Nordamerika und stellt sicher, dass Geräte keine schädlichen Störungen verursachen.', markets: 'Vereinigte Staaten, Kanada (ISED) und Mexiko (IFT)', standards: 'FCC Part 15 (abgestrahlte und leitungsgebundene Emissionen), FCC Part 18 (Industriegeräte), ANSI C63.4 (Messverfahren)' }, { icon: 'RoHS', title: 'RoHS-Konformität — Umweltsicherheit', desc: 'RoHS beschränkt gefährliche Stoffe in elektrischen und elektronischen Geräten und begrenzt Blei, Cadmium, Quecksilber und weitere Stoffe.', markets: 'Europäische Union, China, Südkorea, Vereinigte Arabische Emirate und Saudi-Arabien', standards: 'RoHS-Richtlinie 2011/65/EU, IEC 62321 (Prüfverfahren), XRF-Materialprüfung bei Wareneingang' }, { icon: 'ISO', title: 'ISO 9001:2015 — Qualitätsmanagement', desc: 'ISO 9001 zertifiziert unser Qualitätsmanagementsystem für Design, Beschaffung, Produktion, Prüfung und kontinuierliche Verbesserung.', markets: 'Global — in mehr als 170 Ländern anerkannt', standards: 'ISO 9001:2015 (QMS), ISO 19011 (Auditierung), interne SOP-001 bis SOP-247 für alle Produktionsstufen' }, { icon: 'IEC', title: 'IEC-Normen — Internationale elektrische Sicherheit', desc: 'Die IEC-Zertifizierung deckt internationale Sicherheitsmaßstäbe für Photovoltaik- und Elektronikprodukte ab.', markets: 'Global — besonders Nahost, Afrika, Südostasien und Australien', standards: 'IEC 61215 (kristalline Silizium-PV-Module), IEC 61683 (PV-Systemleistung), IEC 62109 (Sicherheit von Stromrichtern)' }, { icon: 'UN38.3', title: 'UN38.3 — Sicherheit beim Batterietransport', desc: 'UN38.3 zertifiziert die Sicherheit des Transports von Lithiumbatterien per Luft, See und Straße gemäß den Gefahrgutvorschriften der Vereinten Nationen.', markets: 'Global — verpflichtend für alle Lithiumbatterie-Sendungen per Luft (IATA DGR) und See (IMDG-Code)', standards: 'UN-Handbuch für Prüfungen und Kriterien, Abschnitt 38.3 (Höhe, Temperatur, Vibration, Stoß, Kurzschluss, Quetschung, Zwangsentladung)' }],
+    process: [{ title: 'Prüfung von Lieferantenmaterial', desc: 'Eingehende Rohstoffe werden mit XRF-Analysatoren geprüft. 12 % der Lose werden vor der Produktionsfreigabe stichprobenartig auf RoHS-Konformität getestet.' }, { title: 'Prüfungen während der Produktion', desc: '4 Qualitätskontrollpunkte überwachen Lötstellenfestigkeit, Isolationswiderstand und Erdungsdurchgängigkeit. Fehlerquoten werden stündlich je Arbeitsplatz erfasst.' }, { title: 'Abschließendes Zertifizierungsaudit', desc: '100 % der Fertigwaren durchlaufen einen Funktionstest. Solarwechselrichter werden 4 Stunden im Burn-in getestet, Batterien 50 Ladezyklen.' }, { title: 'Dokumentenlenkung', desc: 'Prüfberichte, Konformitätszertifikate und Verpackungserklärungen werden gemäß ISO 9001, Abschnitt 7.5, fünf Jahre archiviert. Kunden erhalten digitale Kopien innerhalb von 24 Stunden.' }], coverageTitle: 'Zertifizierungsabdeckung nach Markt', coverage: [{ market: 'Europäische Union', certs: 'CE, RoHS, REACH', share: '38 % Exportanteil' }, { market: 'Nordamerika', certs: 'FCC, UL (auf Anfrage)', share: '22 % Exportanteil' }, { market: 'Nahost', certs: 'SASO, GCC, CE', share: '18 % Exportanteil' }, { market: 'Afrika', certs: 'CE, SONCAP', share: '15 % Exportanteil' }, { market: 'Südostasien', certs: 'IEC, SNI (auf Anfrage)', share: '7 % Exportanteil' }], ctaTitle: 'Benötigen Sie Zertifizierungsunterlagen?', ctaDescription: 'HousePlus stellt für jede Bestellung vollständige Zertifizierungsunterlagen bereit: Prüfberichte, Konformitätszertifikate und Konformitätserklärungen. Kontaktieren Sie unser Team für Musterunterlagen.', ctaPack: 'Zertifizierungspaket anfordern', ctaProducts: 'Zertifizierte Produkte ansehen',
+  },
+  fr: {
+    title: 'Certifications HousePlus — CE, FCC, RoHS, ISO 9001', description: 'HousePlus détient les certifications CE, FCC, RoHS, ISO 9001, IEC et UN38.3 pour panneaux solaires, onduleurs, batteries, électroménager et électronique. 441+ clients dans 53+ pays.', organizationDescription: 'Fabricant certifié CE, FCC, RoHS, ISO 9001, IEC et UN38.3 de panneaux solaires, onduleurs, batteries lithium, friteuses à air, plaques à induction, écouteurs TWS et montres connectées. Son usine de 20 000 m² dessert plus de 53 pays et 441 clients grossistes depuis 2010.', home: 'Accueil', breadcrumb: 'Certifications', isoBadge: 'Certifié ISO 9001', ceBadge: 'CE / FCC / RoHS', iecBadge: 'IEC et UN38.3', heroTitle: 'Certifications HousePlus — CE, FCC, RoHS, ISO 9001, IEC, UN38.3', heroDescription: 'HousePlus détient les certifications CE, FCC, RoHS, ISO 9001, IEC et UN38.3 pour les panneaux solaires, onduleurs, batteries lithium, friteuses à air, plaques à induction, écouteurs TWS et montres connectées. Notre usine de 20 000 m² certifiée ISO 9001 dessert plus de 53 pays et 441 clients grossistes depuis 2010. Chaque produit est expédié avec les documents de conformité nécessaires à un dédouanement fluide.', stats: [{ value: '6', label: 'Certifications actives' }, { value: '53+', label: 'Pays desservis' }, { value: '441+', label: 'Clients grossistes' }, { value: '2010', label: 'Année de création' }], portfolioTitle: 'Portefeuille de certifications HousePlus', portfolioDescription: 'Chaque produit HousePlus est expédié avec les documents de certification requis par votre marché.', marketsLabel: 'Marchés concernés', standardsLabel: 'Normes d’essai', integrityTitle: 'Comment HousePlus préserve l’intégrité de ses certifications',
+    certifications: [{ icon: 'CE', title: 'Marquage CE — Accès au marché européen', desc: 'La certification CE confirme que les produits HousePlus répondent aux exigences européennes de sécurité, de santé et d’environnement des directives Nouvelle Approche.', markets: 'Union européenne (UE), Espace économique européen (EEE), Turquie et Suisse', standards: 'EN 60335 (électroménager), EN 61215 (modules solaires), EN 55032 (CEM), EN 61000 (immunité)' }, { icon: 'FCC', title: 'Autorisation FCC — États-Unis', desc: 'La certification FCC valide la compatibilité électromagnétique pour l’Amérique du Nord et garantit que les appareils ne provoquent pas d’interférences nuisibles.', markets: 'États-Unis, Canada (ISED) et Mexique (IFT)', standards: 'FCC Part 15 (émissions rayonnées et conduites), FCC Part 18 (équipements industriels), ANSI C63.4 (procédures de mesure)' }, { icon: 'RoHS', title: 'Conformité RoHS — Sécurité environnementale', desc: 'La directive RoHS limite les substances dangereuses présentes dans les équipements électriques et électroniques, notamment le plomb, le cadmium et le mercure.', markets: 'Union européenne, Chine, Corée du Sud, Émirats arabes unis et Arabie saoudite', standards: 'Directive RoHS 2011/65/UE, IEC 62321 (méthodes d’essai), vérification des matériaux par XRF à la réception' }, { icon: 'ISO', title: 'ISO 9001:2015 — Management de la qualité', desc: 'ISO 9001 certifie notre système de management de la qualité, du design et des achats à la production, au contrôle et à l’amélioration continue.', markets: 'Monde — reconnue dans plus de 170 pays', standards: 'ISO 9001:2015 (SMQ), ISO 19011 (audit), procédures internes SOP-001 à SOP-247 pour toutes les étapes de production' }, { icon: 'IEC', title: 'Normes IEC — Sécurité électrique internationale', desc: 'La certification IEC couvre les référentiels internationaux de sécurité électrique pour les produits photovoltaïques et électroniques.', markets: 'Monde — notamment Moyen-Orient, Afrique, Asie du Sud-Est et Australie', standards: 'IEC 61215 (modules photovoltaïques au silicium cristallin), IEC 61683 (performance des systèmes PV), IEC 62109 (sécurité des convertisseurs)' }, { icon: 'UN38.3', title: 'UN38.3 — Sécurité du transport des batteries', desc: 'UN38.3 certifie la sécurité du transport des batteries lithium par voie aérienne, maritime et routière selon la réglementation ONU sur les marchandises dangereuses.', markets: 'Monde — obligatoire pour les expéditions de batteries lithium par avion (IATA DGR) et par mer (Code IMDG)', standards: 'Manuel ONU d’épreuves et de critères, section 38.3 (altitude, température, vibrations, chocs, court-circuit, écrasement, décharge forcée)' }],
+    process: [{ title: 'Vérification des matières des fournisseurs', desc: 'Les matières premières reçues sont contrôlées par analyseurs XRF. 12 % des lots sont échantillonnés aléatoirement pour vérifier la conformité RoHS avant la mise en production.' }, { title: 'Contrôles en cours de production', desc: '4 points de contrôle surveillent la résistance des soudures, l’isolation et la continuité de terre. Les taux de défaut sont enregistrés chaque heure par poste.' }, { title: 'Audit final de certification', desc: '100 % des produits finis subissent un test fonctionnel. Les onduleurs solaires sont testés en rodage pendant 4 heures et les batteries sur 50 cycles de charge.' }, { title: 'Maîtrise documentaire', desc: 'Les rapports d’essai, certificats de conformité et déclarations d’emballage sont archivés pendant 5 ans selon la clause 7.5 de l’ISO 9001. Les clients reçoivent les copies numériques sous 24 heures.' }], coverageTitle: 'Couverture des certifications par marché', coverage: [{ market: 'Union européenne', certs: 'CE, RoHS, REACH', share: '38 % des exportations' }, { market: 'Amérique du Nord', certs: 'FCC, UL (sur demande)', share: '22 % des exportations' }, { market: 'Moyen-Orient', certs: 'SASO, GCC, CE', share: '18 % des exportations' }, { market: 'Afrique', certs: 'CE, SONCAP', share: '15 % des exportations' }, { market: 'Asie du Sud-Est', certs: 'IEC, SNI (sur demande)', share: '7 % des exportations' }], ctaTitle: 'Besoin de documents de certification ?', ctaDescription: 'HousePlus fournit pour chaque commande les dossiers complets : rapports d’essai, certificats de conformité et déclarations de conformité. Contactez notre équipe pour recevoir des exemples de documents.', ctaPack: 'Demander le dossier de certification', ctaProducts: 'Voir les produits certifiés',
+  },
+  ar: {
+    title: 'شهادات هاوس بلس — CE وFCC وRoHS وISO 9001', description: 'هاوس بلس حاصلة على شهادات CE وFCC وRoHS وISO 9001 وIEC وUN38.3 للألواح الشمسية والمحولات والبطاريات والأجهزة المنزلية والإلكترونيات. أكثر من ٤٤١ عميلاً في ٥٣ دولة.', organizationDescription: 'مصنّع حاصل على شهادات CE وFCC وRoHS وISO 9001 وIEC وUN38.3 للألواح الشمسية والمحولات وبطاريات الليثيوم والقلايات الهوائية والمواقد الحثية وسماعات TWS والساعات الذكية، من مصنع مساحته 20,000 متر مربع يخدم أكثر من 53 دولة و441 عميلاً بالجملة منذ عام 2010.', home: 'الرئيسية', breadcrumb: 'الشهادات', isoBadge: 'معتمد وفق ISO 9001', ceBadge: 'CE / FCC / RoHS', iecBadge: 'IEC وUN38.3', heroTitle: 'شهادات هاوس بلس — CE وFCC وRoHS وISO 9001 وIEC وUN38.3', heroDescription: 'تحمل هاوس بلس شهادات CE وFCC وRoHS وISO 9001 وIEC وUN38.3 التي تغطي الألواح الشمسية والمحولات وبطاريات الليثيوم والقلايات الهوائية والمواقد الحثية وسماعات TWS والساعات الذكية. يخدم مصنعنا المعتمد وفق ISO 9001، ومساحته 20,000 متر مربع، أكثر من 53 دولة و441 عميلاً بالجملة منذ عام 2010. تُشحن كل المنتجات مع وثائق المطابقة الكاملة لتسهيل التخليص الجمركي.', stats: [{ value: '6', label: 'شهادات نشطة' }, { value: '53+', label: 'دولة نخدمها' }, { value: '441+', label: 'عميل بالجملة' }, { value: '2010', label: 'عام التأسيس' }], portfolioTitle: 'محفظة شهادات هاوس بلس', portfolioDescription: 'تُشحن كل منتجات هاوس بلس مع وثائق الشهادة المطلوبة في سوقك.', marketsLabel: 'الأسواق المشمولة', standardsLabel: 'معايير الاختبار', integrityTitle: 'كيف تحافظ هاوس بلس على سلامة الشهادات',
+    certifications: [{ icon: 'CE', title: 'علامة CE — الوصول إلى السوق الأوروبي', desc: 'تؤكد شهادة CE أن منتجات هاوس بلس تستوفي متطلبات السلامة والصحة والبيئة في الاتحاد الأوروبي وفق توجيهات النهج الجديد.', markets: 'الاتحاد الأوروبي والمنطقة الاقتصادية الأوروبية وتركيا وسويسرا', standards: 'EN 60335 للأجهزة المنزلية، EN 61215 للوحدات الشمسية، EN 55032 للتوافق الكهرومغناطيسي، EN 61000 للمناعة' }, { icon: 'FCC', title: 'ترخيص FCC — الولايات المتحدة', desc: 'تثبت شهادة FCC التوافق الكهرومغناطيسي للسوق في أمريكا الشمالية وتضمن عدم تسبب الأجهزة في تداخل ضار.', markets: 'الولايات المتحدة وكندا (ISED) والمكسيك (IFT)', standards: 'FCC Part 15 للانبعاثات المشعة والموجهة، FCC Part 18 للمعدات الصناعية، ANSI C63.4 لإجراءات القياس' }, { icon: 'RoHS', title: 'امتثال RoHS — السلامة البيئية', desc: 'تقيّد RoHS المواد الخطرة في المعدات الكهربائية والإلكترونية، بما في ذلك الرصاص والكادميوم والزئبق ومواد أخرى مقيدة.', markets: 'الاتحاد الأوروبي والصين وكوريا الجنوبية والإمارات العربية المتحدة والسعودية', standards: 'توجيه RoHS 2011/65/EU، IEC 62321 لطرق الاختبار، والتحقق من المواد بتقنية XRF عند الاستلام' }, { icon: 'ISO', title: 'ISO 9001:2015 — إدارة الجودة', desc: 'تعتمد شهادة ISO 9001 نظام إدارة الجودة لدينا، بدءاً من التصميم والمشتريات ووصولاً إلى الإنتاج والفحص والتحسين المستمر.', markets: 'عالمي — معترف بها في أكثر من 170 دولة', standards: 'ISO 9001:2015 لنظام إدارة الجودة، ISO 19011 للتدقيق، وإجراءات SOP-001 إلى SOP-247 لجميع مراحل الإنتاج' }, { icon: 'IEC', title: 'معايير IEC — السلامة الكهربائية الدولية', desc: 'تغطي شهادة IEC معايير السلامة الكهربائية الدولية للمنتجات الكهروضوئية والإلكترونية.', markets: 'عالمي — خصوصاً الشرق الأوسط وأفريقيا وجنوب شرق آسيا وأستراليا', standards: 'IEC 61215 لوحدات السيليكون البلوري الكهروضوئية، IEC 61683 لأداء النظام الكهروضوئي، IEC 62109 لسلامة محولات الطاقة' }, { icon: 'UN38.3', title: 'UN38.3 — سلامة نقل البطاريات', desc: 'تثبت UN38.3 سلامة نقل بطاريات الليثيوم جواً وبحراً وبراً وفق لوائح البضائع الخطرة للأمم المتحدة.', markets: 'عالمي — إلزامية لجميع شحنات بطاريات الليثيوم جواً (IATA DGR) وبحراً (رمز IMDG)', standards: 'دليل الأمم المتحدة للاختبارات والمعايير، القسم 38.3: محاكاة الارتفاع والحرارة والاهتزاز والصدمات وقصر الدائرة والسحق والتفريغ القسري' }],
+    process: [{ title: 'التحقق من مواد الموردين', desc: 'تُفحص المواد الخام الواردة باستخدام أجهزة تحليل XRF. وتُؤخذ عينات عشوائية من 12% من الدفعات للتحقق من امتثال RoHS قبل إدخالها إلى الإنتاج.' }, { title: 'الاختبار أثناء الإنتاج', desc: 'تراقب 4 نقاط لمراقبة الجودة قوة وصلات اللحام ومقاومة العزل واستمرارية التأريض. وتُسجل معدلات العيوب لكل محطة عمل كل ساعة.' }, { title: 'التدقيق النهائي للشهادة', desc: 'تخضع 100% من المنتجات النهائية للاختبار الوظيفي. تُختبر محولات الطاقة الشمسية بالتشغيل التجريبي لمدة 4 ساعات، والبطاريات عبر 50 دورة شحن.' }, { title: 'ضبط الوثائق', desc: 'تُحفظ تقارير الاختبار وشهادات المطابقة وإقرارات التعبئة لمدة 5 سنوات وفق البند 7.5 من ISO 9001. ويحصل العملاء على نسخ رقمية خلال 24 ساعة من الطلب.' }], coverageTitle: 'تغطية الشهادات حسب السوق', coverage: [{ market: 'الاتحاد الأوروبي', certs: 'CE وRoHS وREACH', share: '38% من الصادرات' }, { market: 'أمريكا الشمالية', certs: 'FCC وUL (عند الطلب)', share: '22% من الصادرات' }, { market: 'الشرق الأوسط', certs: 'SASO وGCC وCE', share: '18% من الصادرات' }, { market: 'أفريقيا', certs: 'CE وSONCAP', share: '15% من الصادرات' }, { market: 'جنوب شرق آسيا', certs: 'IEC وSNI (عند الطلب)', share: '7% من الصادرات' }], ctaTitle: 'هل تحتاج إلى وثائق الشهادة؟', ctaDescription: 'توفر هاوس بلس ملفات الشهادة الكاملة لكل طلب، بما في ذلك تقارير الاختبار وشهادات المطابقة وإقرارات الامتثال. تواصل مع فريقنا للحصول على نماذج من الوثائق.', ctaPack: 'طلب حزمة الشهادات', ctaProducts: 'تصفح المنتجات المعتمدة',
+  },
+};
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const { lang } = params;
-
-  const titles: Record<string, string> = {
-    en: 'HousePlus Certifications — CE, FCC, RoHS, ISO 9001',
-    es: 'Certificaciones de HousePlus — CE, FCC, RoHS, ISO 9001',
-    de: 'HousePlus Zertifizierungen — CE, FCC, RoHS, ISO 9001',
-    fr: 'Certifications HousePlus — CE, FCC, RoHS, ISO 9001',
-    ar: 'شهادات هاوس بلس — CE وFCC وRoHS وISO 9001',
-  };
-
-  const descriptions: Record<string, string> = {
-    en: 'HousePlus holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications for solar panels, inverters, batteries, appliances and electronics. Trusted by 441+ clients in 53+ countries.',
-    es: 'HousePlus cuenta con certificaciones CE, FCC, RoHS, ISO 9001, IEC y UN38.3 para paneles solares, inversores, baterías, electrodomésticos y electrónica. Más de 441 clientes confían en nosotros.',
-    de: 'HousePlus verfügt über CE-, FCC-, RoHS-, ISO 9001-, IEC- und UN38.3-Zertifizierungen für Solarmodule, Wechselrichter, Batterien, Haushaltsgeräte und Elektronik. 441+ Kunden in 53+ Ländern.',
-    fr: 'HousePlus détient les certifications CE, FCC, RoHS, ISO 9001, IEC et UN38.3 pour panneaux solaires, onduleurs, batteries, électroménager et électronique. 441+ clients dans 53+ pays.',
-    ar: 'هاوس بلس حاصلة على شهادات CE وFCC وRoHS وISO 9001 وIEC وUN38.3 للألواح الشمسية والمحولات والبطاريات والأجهزة المنزلية والإلكترونيات. أكثر من ٤٤١ عميل في ٥٣ دولة.',
-  };
-
-  return generateSEOMetadata({
-    title: titles[lang] || titles['en'],
-    description: descriptions[lang] || descriptions['en'],
-    keywords: ['CE certification', 'FCC', 'RoHS', 'ISO 9001', 'IEC', 'UN38.3', 'HousePlus certifications', 'wholesale', 'factory certifications'],
-    url: `/${lang}/certifications`,
-    lang: lang as any,
-    type: 'website',
-  });
+  const lang = (validLangs.includes(params.lang as Lang) ? params.lang : 'en') as Lang;
+  const copy = pageCopy[lang];
+  return generateSEOMetadata({ title: copy.title, description: copy.description, keywords: ['CE certification', 'FCC', 'RoHS', 'ISO 9001', 'IEC', 'UN38.3', 'HousePlus certifications', 'wholesale', 'factory certifications'], url: `/${lang}/certifications`, lang, type: 'website' });
 }
 
 export default async function CertificationsPage({ params }: { params: { lang: string } }) {
-  const { lang } = params;
-
-  const organizationSchema = generateOrganizationSchema({
-    title: 'HousePlus',
-    description: 'CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certified manufacturer of solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches from a 20,000 m² factory serving 53+ countries and 441+ wholesale clients since 2010.',
-    url: `https://www.houseplus-ch.com/${lang}/certifications`,
-    lang,
-    type: 'Organization',
-  });
-
-  const certifications = [
-    {
-      icon: 'CE',
-      title: 'CE Marking — European Market Access',
-      desc: 'CE certification confirms HousePlus products meet EU safety, health and environmental requirements under the New Approach Directives.',
-      markets: 'European Union (EU), European Economic Area (EEA), Turkey, Switzerland',
-      standards: 'EN 60335 (household appliances), EN 61215 (solar modules), EN 55032 (EMC), EN 61000 (immunity)',
-    },
-    {
-      icon: 'FCC',
-      title: 'FCC Authorization — United States',
-      desc: 'FCC certification validates electromagnetic compatibility for the North American market, ensuring devices do not cause harmful interference.',
-      markets: 'United States, Canada (ISED), Mexico (IFT)',
-      standards: 'FCC Part 15 (radiated & conducted emissions), FCC Part 18 (industrial equipment), ANSI C63.4 (measurement procedures)',
-    },
-    {
-      icon: 'RoHS',
-      title: 'RoHS Compliance — Environmental Safety',
-      desc: 'RoHS restricts hazardous substances in electrical and electronic equipment, limiting lead, cadmium, mercury and other restricted materials.',
-      markets: 'European Union, China, South Korea, United Arab Emirates, Saudi Arabia',
-      standards: 'RoHS Directive 2011/65/EU, IEC 62321 (testing methods), XRF material verification at incoming inspection',
-    },
-    {
-      icon: 'ISO',
-      title: 'ISO 9001:2015 — Quality Management',
-      desc: 'ISO 9001 certifies our quality management system covering design, procurement, production, inspection and continuous improvement.',
-      markets: 'Global — recognized in 170+ countries',
-      standards: 'ISO 9001:2015 (QMS), ISO 19011 (auditing), internal SOP-001 to SOP-247 covering all production stages',
-    },
-    {
-      icon: 'IEC',
-      title: 'IEC Standards — International Electrical Safety',
-      desc: 'IEC certification covers international electrical safety benchmarks for photovoltaic and electronic products.',
-      markets: 'Global — especially Middle East, Africa, Southeast Asia, Australia',
-      standards: 'IEC 61215 (crystalline silicon PV modules), IEC 61683 (PV system performance), IEC 62109 (safety of power converters)',
-    },
-    {
-      icon: 'UN38.3',
-      title: 'UN38.3 — Battery Transport Safety',
-      desc: 'UN38.3 certifies lithium battery transport safety for air, sea and road shipment under UN dangerous goods regulations.',
-      markets: 'Global — mandatory for all lithium battery shipments via air (IATA DGR) and sea (IMDG Code)',
-      standards: 'UN Manual of Tests and Criteria, Section 38.3 (altitude simulation, thermal, vibration, shock, short circuit, crush, forced discharge)',
-    },
-  ];
-
-  const stats = [
-    { value: '6', label: 'Active Certifications' },
-    { value: '53+', label: 'Countries Served' },
-    { value: '441+', label: 'Wholesale Clients' },
-    { value: '2010', label: 'Founded Year' },
-  ];
-
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
-    { name: 'Certifications', url: `https://www.houseplus-ch.com/${lang}/certifications` },
-  ]);
-
+  const lang = (validLangs.includes(params.lang as Lang) ? params.lang : 'en') as Lang;
+  const copy = pageCopy[lang];
+  const organizationSchema = generateOrganizationSchema({ title: 'HousePlus', description: copy.organizationDescription, url: `https://www.houseplus-ch.com/${lang}/certifications`, lang, type: 'Organization' });
+  const breadcrumbSchema = generateBreadcrumbSchema([{ name: copy.home, url: `https://www.houseplus-ch.com/${lang}` }, { name: copy.breadcrumb, url: `https://www.houseplus-ch.com/${lang}/certifications` }]);
   return (
-    <>
-      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
-      <main className="min-h-screen bg-white">
-        <Breadcrumb lang={lang} slug="certifications" />
-
-        {/* Hero */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="flex flex-wrap justify-center gap-2 mb-5">
-              <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full">
-                ISO 9001 Certified
-              </span>
-              <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-xs font-bold uppercase tracking-widest rounded-full">
-                CE / FCC / RoHS
-              </span>
-              <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full">
-                IEC & UN38.3
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-5 leading-tight">
-              HousePlus Certifications — CE, FCC, RoHS, ISO 9001, IEC, UN38.3
-            </h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              <strong>HousePlus</strong> holds CE, FCC, RoHS, ISO 9001, IEC and UN38.3 certifications covering solar panels, inverters, lithium batteries, air fryers, induction cooktops, TWS earphones and smart watches. Our 20,000 m² ISO 9001 factory has served 53+ countries and 441+ wholesale clients since 2010. Every product ships with complete compliance documentation for seamless import clearance.
-            </p>
-          </div>
-        </section>
-
-        {/* Stats Bar */}
-        <section className="py-14 bg-blue-700">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-4xl md:text-5xl font-black mb-2">{stat.value}</p>
-                  <p className="text-blue-200 text-sm font-medium">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Certification Cards */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">HousePlus Certification Portfolio</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">Every <strong>HousePlus</strong> product ships with the certification documentation your market requires.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {certifications.map((c) => (
-                <div key={c.title} className="bg-white border border-slate-100 rounded-2xl p-7 hover:shadow-lg hover:border-blue-200 transition-all">
-                  <div className="w-14 h-14 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-black mb-4">
-                    {c.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{c.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">{c.desc}</p>
-                  <div className="pt-4 border-t border-slate-100 space-y-3">
-                    <div>
-                      <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Applicable Markets</p>
-                      <p className="text-sm text-slate-700">{c.markets}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Testing Standards</p>
-                      <p className="text-sm text-slate-700">{c.standards}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Compliance Process */}
-        <section className="py-16 px-4 bg-slate-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-black text-slate-900 mb-6">How HousePlus Maintains Certification Integrity</h2>
-                <div className="space-y-4">
-                  {[
-                    { title: 'Supplier Material Verification', desc: 'Incoming raw materials are screened with XRF analysers. 12% of lots are randomly sampled for RoHS compliance before release to production.' },
-                    { title: 'In-Process Testing', desc: '4 QC checkpoints monitor solder joint strength, insulation resistance and earth continuity. Defect rates are logged per workstation hourly.' },
-                    { title: 'Final Certification Audit', desc: '100% of finished goods undergo functional testing. Solar inverters are burn-in tested for 4 hours; batteries cycle-tested for 50 charge cycles.' },
-                    { title: 'Document Control', desc: 'Test reports, certificates of conformity and packing declarations are archived for 5 years per ISO 9001 clause 7.5. Clients receive digital copies within 24 hours of request.' },
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4 p-4 bg-white rounded-xl border border-slate-100">
-                      <span className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">✓</span>
-                      <div>
-                        <p className="font-bold text-slate-900 text-sm">{item.title}</p>
-                        <p className="text-slate-600 text-sm mt-0.5 leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="bg-white border border-slate-100 rounded-2xl p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-6">Certification Coverage by Market</h3>
-                <div className="space-y-4">
-                  {[
-                    { market: 'European Union', certs: 'CE, RoHS, REACH', share: '38% export share' },
-                    { market: 'North America', certs: 'FCC, UL (on request)', share: '22% export share' },
-                    { market: 'Middle East', certs: 'SASO, GCC, CE', share: '18% export share' },
-                    { market: 'Africa', certs: 'CE, SONCAP', share: '15% export share' },
-                    { market: 'Southeast Asia', certs: 'IEC, SNI (on request)', share: '7% export share' },
-                  ].map((m) => (
-                    <div key={m.market} className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0">
-                      <div>
-                        <p className="font-bold text-slate-900 text-sm">{m.market}</p>
-                        <p className="text-slate-500 text-xs">{m.certs}</p>
-                      </div>
-                      <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">{m.share}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-16 px-4 bg-blue-600 text-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-black mb-4">Need Certification Documentation?</h2>
-            <p className="text-blue-100 mb-8 leading-relaxed">
-              <strong>HousePlus</strong> provides complete certification files — test reports, certificates of conformity and compliance declarations — for every order. Contact our team for sample documentation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">
-                Request Certification Pack
-              </Link>
-              <Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-700 text-white border border-blue-500 font-bold rounded-xl hover:bg-blue-800 transition-all hover:-translate-y-0.5">
-                Browse Certified Products
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+    <><SEOHead schemas={[organizationSchema, breadcrumbSchema]} /><main className="min-h-screen bg-white"><Breadcrumb lang={lang} slug="certifications" />
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white"><div className="max-w-6xl mx-auto text-center"><div className="flex flex-wrap justify-center gap-2 mb-5"><span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full">{copy.isoBadge}</span><span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-xs font-bold uppercase tracking-widest rounded-full">{copy.ceBadge}</span><span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full">{copy.iecBadge}</span></div><h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-5 leading-tight">{copy.heroTitle}</h1><p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">{copy.heroDescription}</p></div></section>
+      <section className="py-14 bg-blue-700"><div className="max-w-6xl mx-auto px-4"><div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">{copy.stats.map((stat) => <div key={stat.label}><p className="text-4xl md:text-5xl font-black mb-2">{stat.value}</p><p className="text-blue-200 text-sm font-medium">{stat.label}</p></div>)}</div></div></section>
+      <section className="py-16 px-4"><div className="max-w-6xl mx-auto"><div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">{copy.portfolioTitle}</h2><p className="text-slate-500 max-w-xl mx-auto">{copy.portfolioDescription}</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{copy.certifications.map((c) => <div key={c.title} className="bg-white border border-slate-100 rounded-2xl p-7 hover:shadow-lg hover:border-blue-200 transition-all"><div className="w-14 h-14 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-black mb-4">{c.icon}</div><h3 className="text-xl font-bold text-slate-900 mb-2">{c.title}</h3><p className="text-slate-600 text-sm leading-relaxed mb-4">{c.desc}</p><div className="pt-4 border-t border-slate-100 space-y-3"><div><p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">{copy.marketsLabel}</p><p className="text-sm text-slate-700">{c.markets}</p></div><div><p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">{copy.standardsLabel}</p><p className="text-sm text-slate-700">{c.standards}</p></div></div></div>)}</div></div></section>
+      <section className="py-16 px-4 bg-slate-50"><div className="max-w-6xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><div><h2 className="text-3xl font-black text-slate-900 mb-6">{copy.integrityTitle}</h2><div className="space-y-4">{copy.process.map((item) => <div key={item.title} className="flex gap-4 p-4 bg-white rounded-xl border border-slate-100"><span className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">✓</span><div><p className="font-bold text-slate-900 text-sm">{item.title}</p><p className="text-slate-600 text-sm mt-0.5 leading-relaxed">{item.desc}</p></div></div>)}</div></div><div className="bg-white border border-slate-100 rounded-2xl p-8"><h3 className="text-xl font-bold text-slate-900 mb-6">{copy.coverageTitle}</h3><div className="space-y-4">{copy.coverage.map((m) => <div key={m.market} className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0"><div><p className="font-bold text-slate-900 text-sm">{m.market}</p><p className="text-slate-500 text-xs">{m.certs}</p></div><span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">{m.share}</span></div>)}</div></div></div></div></section>
+      <section className="py-16 px-4 bg-blue-600 text-white"><div className="max-w-3xl mx-auto text-center"><h2 className="text-3xl font-black mb-4">{copy.ctaTitle}</h2><p className="text-blue-100 mb-8 leading-relaxed">{copy.ctaDescription}</p><div className="flex flex-wrap justify-center gap-4"><Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">{copy.ctaPack}</Link><Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-700 text-white border border-blue-500 font-bold rounded-xl hover:bg-blue-800 transition-all hover:-translate-y-0.5">{copy.ctaProducts}</Link></div></div></section>
+    </main></>
   );
 }

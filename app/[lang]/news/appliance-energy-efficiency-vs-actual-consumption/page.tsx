@@ -426,7 +426,11 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to all News & Insights
+          {lang === 'en' ? '← Back to all News & Insights' :
+           lang === 'es' ? '← Volver a todas las noticias y análisis' :
+           lang === 'de' ? '← Zurück zu allen News und Insights' :
+           lang === 'fr' ? '← Retour à toutes les actualités et analyses' :
+           '← العودة إلى جميع الأخبار والرؤى'}
         </Link>
       </div>
     </main>

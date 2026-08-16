@@ -6,12 +6,22 @@ import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrum
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
 import { getOGLocale } from '@/lib/seo-utils';
+import { getLocalizedProduct } from '@/lib/localized-content';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
 
-const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
+const validLangs = ['en', 'es', 'de', 'fr', 'ar'] as const;
+type Lang = (typeof validLangs)[number];
 const ogLocales: Record<string, string> = { en: 'en_US', es: 'es_ES', de: 'de_DE', fr: 'fr_FR', ar: 'ar_SA' };
+
+const productPageCopy: Record<Lang, { wholesale: string; catalogueTitle: string; catalogueDescription: string; viewDetails: string; productsLabel: string; categoryLabels: Record<string, string>; home: string; products: string; schemaName: string; schemaDescription: string }> = {
+  en: { wholesale: 'HousePlus Professional Wholesale', catalogueTitle: 'HousePlus Complete Product Catalogue', catalogueDescription: 'Check out our full product range — from solar panels to smart watches, all available with OEM/ODM support and CE/FCC/RoHS certifications.', viewDetails: 'View Details', productsLabel: 'products', categoryLabels: { solar: 'Solar Energy Systems', appliances: 'Home Appliances', electronics: '3C Electronics' }, home: 'Home', products: 'Products', schemaName: 'HousePlus Complete Product Catalogue', schemaDescription: 'Solar systems, home appliances and 3C electronics for global wholesale buyers.' },
+  es: { wholesale: 'Venta mayorista profesional de HousePlus', catalogueTitle: 'Catálogo completo de productos HousePlus', catalogueDescription: 'Consulte toda nuestra gama de productos — desde paneles solares hasta relojes inteligentes, con soporte OEM/ODM y certificaciones CE/FCC/RoHS.', viewDetails: 'Ver detalles', productsLabel: 'productos', categoryLabels: { solar: 'Sistemas de energía solar', appliances: 'Electrodomésticos', electronics: 'Electrónica 3C' }, home: 'Inicio', products: 'Productos', schemaName: 'Catálogo completo de productos HousePlus', schemaDescription: 'Sistemas solares, electrodomésticos y electrónica 3C para compradores mayoristas internacionales.' },
+  de: { wholesale: 'Professioneller Großhandel von HousePlus', catalogueTitle: 'Vollständiger HousePlus-Produktkatalog', catalogueDescription: 'Entdecken Sie unser vollständiges Sortiment — von Solarmodulen bis zu Smartwatches, mit OEM/ODM-Unterstützung und CE/FCC/RoHS-Zertifizierungen.', viewDetails: 'Details ansehen', productsLabel: 'Produkte', categoryLabels: { solar: 'Solarenergiesysteme', appliances: 'Haushaltsgeräte', electronics: '3C-Elektronik' }, home: 'Startseite', products: 'Produkte', schemaName: 'Vollständiger HousePlus-Produktkatalog', schemaDescription: 'Solarsysteme, Haushaltsgeräte und 3C-Elektronik für internationale Großhandelskäufer.' },
+  fr: { wholesale: 'Vente en gros professionnelle HousePlus', catalogueTitle: 'Catalogue complet des produits HousePlus', catalogueDescription: 'Découvrez toute notre gamme — des panneaux solaires aux montres connectées, avec accompagnement OEM/ODM et certifications CE/FCC/RoHS.', viewDetails: 'Voir les détails', productsLabel: 'produits', categoryLabels: { solar: 'Systèmes d’énergie solaire', appliances: 'Appareils électroménagers', electronics: 'Électronique 3C' }, home: 'Accueil', products: 'Produits', schemaName: 'Catalogue complet des produits HousePlus', schemaDescription: 'Systèmes solaires, appareils électroménagers et électronique 3C pour les acheteurs grossistes internationaux.' },
+  ar: { wholesale: 'البيع بالجملة الاحترافي من هاوس بلس', catalogueTitle: 'كتالوج منتجات هاوس بلس الكامل', catalogueDescription: 'اطّلع على مجموعتنا الكاملة — من الألواح الشمسية إلى الساعات الذكية، مع دعم OEM/ODM وشهادات CE وFCC وRoHS.', viewDetails: 'عرض التفاصيل', productsLabel: 'منتجات', categoryLabels: { solar: 'أنظمة الطاقة الشمسية', appliances: 'الأجهزة المنزلية', electronics: 'إلكترونيات 3C' }, home: 'الرئيسية', products: 'المنتجات', schemaName: 'كتالوج منتجات هاوس بلس الكامل', schemaDescription: 'أنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C للمشترين بالجملة حول العالم.' },
+};
 
 export const dynamicParams = false;
 
@@ -159,25 +169,30 @@ const productCategories = [
   },
 ];
 
-// Build products array directly from PRODUCT_DATA to ensure list page and detail page are always in sync
-const products = Object.entries(PRODUCT_DATA).map(([slug, data]) => {
-  const modelSpec = data.specs.find((s) => s.key === 'Model' || s.key === 'SKU');
-  return {
-    slug,
-    name: data.name,
-    category: data.category,
-    model: modelSpec?.value || '',
-    coverImage: data.coverImage,
-    description: data.description,
-    badge: data.badge || '',
-    imageAlt: data.imageAlt || data.name,
-    imageTitle: data.imageTitle || data.name,
-    imageDimensions: r2ImageDimensions(data.coverImage, { width: 900, height: 675 }),
-  };
-});
+// Build products from the same source as detail pages; localized fields are merged from products.json.
+function getProductsForLocale(locale: string) {
+  return Object.entries(PRODUCT_DATA).map(([slug, data]) => {
+    const localizedData = getLocalizedProduct(slug, locale, data);
+    const modelSpec = localizedData.specs.find((s) => s.key === 'Model' || s.key === 'SKU' || s.key === 'Modèle' || s.key === 'Modell' || s.key === 'Modelo' || s.key === 'الطراز');
+    return {
+      slug,
+      name: localizedData.name,
+      category: localizedData.category,
+      model: modelSpec?.value || '',
+      coverImage: localizedData.coverImage,
+      description: localizedData.description,
+      badge: localizedData.badge || '',
+      imageAlt: localizedData.imageAlt || localizedData.name,
+      imageTitle: localizedData.imageTitle || localizedData.name,
+      imageDimensions: r2ImageDimensions(localizedData.coverImage, { width: 900, height: 675 }),
+    };
+  });
+}
+
+type ProductListItem = ReturnType<typeof getProductsForLocale>[number];
 
 // Helper: generate varied alt/title based on product name length (deterministic, avoids hydration mismatch)
-function getImageAlt(product: typeof products[0]) {
+function getImageAlt(product: ProductListItem) {
   const model = product.model ? `(${product.model})` : '';
   const catMap: Record<string, string> = { solar: 'Solar Energy', appliances: 'Home Appliance', electronics: '3C Electronic' };
   const cat = catMap[product.category] || 'Wholesale';
@@ -186,7 +201,7 @@ function getImageAlt(product: typeof products[0]) {
   if (v === 1) return `HousePlus ${cat} Supplier — ${product.name} ${model}`;
   return `${product.name} ${model} — CE/RoHS Certified HousePlus ${cat}`;
 }
-function getImageTitle(product: typeof products[0]) {
+function getImageTitle(product: ProductListItem) {
   const model = product.model ? `(${product.model})` : '';
   const catMap: Record<string, string> = { solar: 'Solar Energy', appliances: 'Home Appliances', electronics: '3C Electronics' };
   const cat = catMap[product.category] || 'Wholesale';
@@ -198,21 +213,24 @@ function getImageTitle(product: typeof products[0]) {
 
 export default async function ProductsPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
+  const locale = (validLangs.includes(lang as Lang) ? lang : 'en') as Lang;
+  const copy = productPageCopy[locale];
 
+  const products = getProductsForLocale(locale);
   const solarProducts = products.filter((p) => p.category === 'solar');
   const applianceProducts = products.filter((p) => p.category === 'appliances');
   const electronicsProducts = products.filter((p) => p.category === 'electronics');
 
   const categoryGroups = [
-    { ...productCategories[0], items: solarProducts },
-    { ...productCategories[1], items: applianceProducts },
-    { ...productCategories[2], items: electronicsProducts },
+    { ...productCategories[0], label: copy.categoryLabels.solar, items: solarProducts },
+    { ...productCategories[1], label: copy.categoryLabels.appliances, items: applianceProducts },
+    { ...productCategories[2], label: copy.categoryLabels.electronics, items: electronicsProducts },
   ];
 
   // Generate ItemList structured data
   const itemListSchema = generateItemListSchema(
-    'HousePlus Complete Product Catalogue',
-    'Solar systems, home appliances and 3C electronics for global wholesale buyers.',
+    copy.schemaName,
+    copy.schemaDescription,
     `${BASE_URL}/${lang}/products`,
     products.map((p, i) => ({
       position: i + 1,
@@ -225,17 +243,17 @@ export default async function ProductsPage({ params }: { params: { lang: string 
   );
 
   const catalogSchema = generateCollectionPageSchema({
-    name: 'HousePlus Complete Product Catalogue',
-    description: 'Solar energy systems, home appliances and 3C electronics for global wholesale buyers.',
+    name: copy.schemaName,
+    description: copy.schemaDescription,
     url: `${BASE_URL}/${lang}/products`,
     lang,
     image: products[0]?.coverImage,
-    categories: ['Solar Energy Systems', 'Home Appliances', '3C Electronics'],
+    categories: [copy.categoryLabels.solar, copy.categoryLabels.appliances, copy.categoryLabels.electronics],
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `${BASE_URL}/${lang}` },
-    { name: 'Products', url: `${BASE_URL}/${lang}/products` },
+    { name: copy.home, url: `${BASE_URL}/${lang}` },
+    { name: copy.products, url: `${BASE_URL}/${lang}/products` },
   ]);
 
   return (
@@ -246,16 +264,16 @@ export default async function ProductsPage({ params }: { params: { lang: string 
       <div className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5">
-            🏭 HousePlus Professional Wholesale
+             🏭 {copy.wholesale}
           </span>
           <h1 className="text-4xl md:text-6xl font-black text-white mb-5 tracking-tight">
-            HousePlus Complete Product Catalogue
+            {copy.catalogueTitle}
           </h1>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Check out our full product range - from solar panels to smart watches, all available with OEM/ODM support and CE/FCC/RoHS certifications.
+            {copy.catalogueDescription}
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-8">
-            {productCategories.map((cat) => (
+            {categoryGroups.map((cat) => (
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
@@ -279,7 +297,8 @@ export default async function ProductsPage({ params }: { params: { lang: string 
                 {group.label}
               </div>
               <div className="flex-1 h-px bg-slate-100" />
-              <span className="text-slate-400 text-sm">{group.items.length} products</span>
+                              <span className="text-slate-400 text-sm">{group.items.length} {copy.productsLabel}</span>
+
             </div>
 
             {/* Product Grid */}
@@ -326,9 +345,9 @@ export default async function ProductsPage({ params }: { params: { lang: string 
                       {product.description}
                     </p>
                     <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                      <span className="text-xs text-blue-600 font-semibold">View Details →</span>
+                      <span className="text-xs text-blue-600 font-semibold">{copy.viewDetails} →</span>
                       <span className="text-[10px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
-                        {product.category === 'solar' ? 'Solar' : product.category === 'appliances' ? 'Appliance' : '3C'}
+                        {product.category === 'solar' ? copy.categoryLabels.solar : product.category === 'appliances' ? copy.categoryLabels.appliances : copy.categoryLabels.electronics}
                       </span>
                     </div>
                   </div>

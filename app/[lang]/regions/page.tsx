@@ -7,6 +7,13 @@ import { generateOrganizationSchema } from '@/lib/schema-generator';
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'] as const;
 type Locale = typeof validLangs[number];
 type Market = { title: string; desc: string; bullets: string[]; cta: string };
+const schemaDescriptions: Record<Locale, string> = {
+  en: 'HousePlus global wholesale markets across Africa, Southeast Asia and Europe.',
+  es: 'Mercados mayoristas globales de HousePlus en África, Sudeste Asiático y Europa.',
+  de: 'HousePlus globale Großhandelsmärkte in Afrika, Südostasien und Europa.',
+  fr: 'Marchés de gros mondiaux HousePlus en Afrique, en Asie du Sud-Est et en Europe.',
+  ar: 'أسواق الجملة العالمية من HousePlus في أفريقيا وجنوب شرق آسيا وأوروبا.',
+};
 type PageCopy = {
   hero: { title: string; subtitle: string };
   image: { alt: string; title: string };
@@ -63,7 +70,7 @@ function getLocale(value: string): Locale { return (validLangs as readonly strin
 export default async function RegionsPage({ params }: { params: { lang: string } }) {
   const locale = getLocale(params.lang);
   const t = copy[locale];
-  const schemas = [generateOrganizationSchema({ title: 'HousePlus', description: 'HousePlus global wholesale markets across Africa, Southeast Asia and Europe.', url: `https://www.houseplus-ch.com/${locale}/regions`, lang: locale, type: 'Organization' })];
+  const schemas = [generateOrganizationSchema({ title: 'HousePlus', description: schemaDescriptions[locale], url: `https://www.houseplus-ch.com/${locale}/regions`, lang: locale, type: 'Organization' })];
   const cards: { market: Market; href: string; style: string; color: string }[] = [
     { market: t.markets.africa, href: `/${locale}/regions/africa`, style: 'from-orange-50 to-orange-100 border-orange-200', color: 'text-orange-600' },
     { market: t.markets.southeastAsia, href: `/${locale}/regions/southeast_asia`, style: 'from-green-50 to-green-100 border-green-200', color: 'text-green-600' },

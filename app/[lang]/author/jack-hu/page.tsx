@@ -291,6 +291,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
       experience: 'Industry Experience',
       founded: 'Year Founded',
       contact: 'Contact',
+      certifications: 'Certifications',
       viewAllArticles: 'View All Articles →',
     },
     es: {
@@ -305,6 +306,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
       experience: 'Experiencia Sectorial',
       founded: 'Año de Fundación',
       contact: 'Contacto',
+      certifications: 'Certificaciones',
       viewAllArticles: 'Ver Todos los Artículos →',
     },
     de: {
@@ -319,6 +321,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
       experience: 'Branchenerfahrung',
       founded: 'Gründungsjahr',
       contact: 'Kontakt',
+      certifications: 'Zertifizierungen',
       viewAllArticles: 'Alle Artikel ansehen →',
     },
     fr: {
@@ -333,6 +336,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
       experience: 'Expérience Secteur',
       founded: 'Année de Fondation',
       contact: 'Contact',
+      certifications: 'Certifications',
       viewAllArticles: 'Voir tous les articles →',
     },
     ar: {
@@ -347,6 +351,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
       experience: 'الخبرة الصناعية',
       founded: 'سنة التأسيس',
       contact: 'اتصل',
+      certifications: 'الشهادات',
       viewAllArticles: 'عرض جميع المقالات ←',
     },
   };
@@ -412,7 +417,7 @@ export default async function AuthorPage({ params }: { params: { lang: string } 
         <section className="max-w-5xl mx-auto px-4 py-16">
           <div className="bg-slate-50 rounded-2xl p-8 md:p-10 border border-slate-100">
             <p className="text-lg text-slate-700 leading-relaxed">{data.intro}</p>
-            <p className="text-sm text-slate-500 mt-4">Certifications: {data.certifications}</p>
+            <p className="text-sm text-slate-500 mt-4">{t.certifications}: {data.certifications}</p>
           </div>
         </section>
 

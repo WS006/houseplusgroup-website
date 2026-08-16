@@ -15,7 +15,7 @@ const pages = [
   { slug: 'news', required: { es: 'Noticias', de: 'News', fr: 'Actualités', ar: 'الأخبار' } },
   { slug: 'oem-odm', required: { es: 'OEM', de: 'OEM', fr: 'OEM', ar: 'OEM' } },
   { slug: 'products', required: { es: 'Productos', de: 'Produkte', fr: 'Produits', ar: 'المنتجات' } },
-  { slug: 'regions', required: { es: 'Regiones', de: 'Regionen', fr: 'Régions', ar: 'المناطق' } },
+  { slug: 'regions', required: { es: 'Mercados mayoristas', de: 'Großhandelsmärkte', fr: 'Marchés de gros', ar: 'أسواق الجملة' } },
   { slug: 'service', required: { es: 'Servicio', de: 'Service', fr: 'Service', ar: 'الخدمة' } },
   { slug: 'support', required: { es: 'Soporte', de: 'Support', fr: 'Support', ar: 'الدعم' } },
   { slug: 'team', required: { es: 'Equipo', de: 'Team', fr: 'Équipe', ar: 'فريق' } },

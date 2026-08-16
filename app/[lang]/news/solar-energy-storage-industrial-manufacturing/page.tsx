@@ -12,6 +12,14 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamicParams = false;
 
+const ctaCopy: Record<string, { title: string; description: string; contact: string; back: string }> = {
+  en: { title: 'Partner with HousePlus for Industrial Solar Storage', description: 'Contact our team to discuss your industrial energy storage requirements. We offer free consultation, system design, and competitive OEM/ODM pricing for B2B partners worldwide.', contact: 'Contact HousePlus', back: '← Back to all News & Insights' },
+  es: { title: 'Colabore con HousePlus para almacenamiento solar industrial', description: 'Contacte con nuestro equipo para analizar sus necesidades de almacenamiento energético industrial. Ofrecemos consulta sin coste, diseño de sistemas y precios OEM/ODM competitivos para socios B2B de todo el mundo.', contact: 'Contactar a HousePlus', back: '← Volver a todas las noticias y análisis' },
+  de: { title: 'Arbeiten Sie mit HousePlus für industrielle Solarspeicher zusammen', description: 'Kontaktieren Sie unser Team, um Ihre Anforderungen an industrielle Energiespeicher zu besprechen. Wir bieten kostenlose Beratung, Systemdesign und wettbewerbsfähige OEM/ODM-Preise für B2B-Partner weltweit.', contact: 'HousePlus kontaktieren', back: '← Zurück zu allen News und Insights' },
+  fr: { title: 'Associez-vous à HousePlus pour le stockage solaire industriel', description: 'Contactez notre équipe pour étudier vos besoins de stockage d’énergie industriel. Nous proposons une consultation gratuite, la conception de systèmes et des prix OEM/ODM compétitifs aux partenaires B2B du monde entier.', contact: 'Contacter HousePlus', back: '← Retour à toutes les actualités et analyses' },
+  ar: { title: 'تعاون مع هاوس بلس لتخزين الطاقة الشمسية الصناعي', description: 'تواصل مع فريقنا لمناقشة متطلبات تخزين الطاقة الصناعية لديك. نقدم استشارة مجانية وتصميم أنظمة وأسعار OEM/ODM تنافسية لشركاء B2B حول العالم.', contact: 'تواصل مع هاوس بلس', back: '← العودة إلى جميع الأخبار والرؤى' },
+};
+
 export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
@@ -294,6 +302,7 @@ const articleContent: Record<string, any> = {
 export default async function BlogPostPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const content = articleContent[lang] || articleContent.en;
+  const cta = ctaCopy[lang] || ctaCopy.en;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },
@@ -355,20 +364,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
       {/* CTA */}
       <div className="max-w-4xl mx-auto px-4 pb-12">
         <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-blue-800 mb-3">Partner with HousePlus for Industrial Solar Storage</h3>
-          <p className="text-blue-700 mb-6">Contact our team to discuss your industrial energy storage requirements. We offer free consultation, system design, and competitive OEM/ODM pricing for B2B partners worldwide.</p>
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">{cta.title}</h3>
+          <p className="text-blue-700 mb-6">{cta.description}</p>
           <Link
             href={`/${lang}/contact`}
             className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
           >
-            Contact HousePlus
+            {cta.contact}
           </Link>
         </div>
       </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to all News & Insights
+          {cta.back}
         </Link>
       </div>
     </main>

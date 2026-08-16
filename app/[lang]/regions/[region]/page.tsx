@@ -85,6 +85,22 @@ const regionConfigs: Record<string, RegionConfig> = {
   },
 };
 
+const regionSchemaDescriptions: Record<string, string> = {
+  en: 'B2B sourcing support for solar systems, home appliances and 3C electronics in {region}.',
+  es: 'Soporte de abastecimiento B2B para sistemas solares, electrodomésticos y electrónica 3C en {region}.',
+  de: 'B2B-Beschaffungsunterstützung für Solarsysteme, Haushaltsgeräte und 3C-Elektronik in {region}.',
+  fr: 'Accompagnement de l’approvisionnement B2B en systèmes solaires, appareils électroménagers et électronique 3C en {region}.',
+  ar: 'دعم التوريد بين الشركات لأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C في {region}.',
+};
+
+const regionUtilityLabels: Record<string, { whatsapp: string; taxInformation: string }> = {
+  en: { whatsapp: 'WhatsApp', taxInformation: 'Tax Information' },
+  es: { whatsapp: 'WhatsApp', taxInformation: 'Información fiscal' },
+  de: { whatsapp: 'WhatsApp', taxInformation: 'Steuerinformationen' },
+  fr: { whatsapp: 'WhatsApp', taxInformation: 'Informations fiscales' },
+  ar: { whatsapp: 'واتساب', taxInformation: 'المعلومات الضريبية' },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -173,10 +189,11 @@ export default async function RegionPage({
   const regionName = regionNames[lang]?.[config.code] || config.name;
   const copy = getRegionCopy(lang);
   const t = (key: string) => translateRegionTemplate(copy[key] || key, regionName);
+  const utility = regionUtilityLabels[lang] || regionUtilityLabels.en;
 
   const organizationSchema = generateOrganizationSchema({
     title: `HousePlus ${regionName}`,
-    description: `B2B sourcing support for solar systems, home appliances and 3C electronics in ${regionName}.`,
+    description: (regionSchemaDescriptions[lang] || regionSchemaDescriptions.en).replace('{region}', regionName),
     url: `https://www.houseplus-ch.com/${lang}/regions/${region}`,
     lang,
     type: 'Organization',
@@ -232,7 +249,7 @@ export default async function RegionPage({
                 href={`https://wa.me/${config.phoneDisplay.replace(/\D/g, '')}`}
                 className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-all border border-blue-500"
               >
-                WhatsApp: {config.phoneDisplay}
+                {utility.whatsapp}: {config.phoneDisplay}
               </a>
             </div>
           </div>
@@ -304,7 +321,7 @@ export default async function RegionPage({
                   </div>
                   {config.vatInfo && (
                     <div>
-                      <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Tax Information</p>
+                      <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">{utility.taxInformation}</p>
                       <p className="text-slate-700">{config.vatInfo}</p>
                     </div>
                   )}

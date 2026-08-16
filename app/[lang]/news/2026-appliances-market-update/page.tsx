@@ -12,6 +12,14 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamicParams = false;
 
+const ctaCopy: Record<string, { title: string; description: string; contact: string; back: string }> = {
+  en: { title: 'Partner with HousePlus for Smart Appliances', description: 'Contact our team for refrigerator, washing machine, dishwasher, and air conditioner quotations. MOQ from 200 pcs, flexible OEM/ODM, A+++ energy rating, CE/FCC/RoHS certified.', contact: 'Contact HousePlus', back: '← Back to all News & Insights' },
+  es: { title: 'Colabore con HousePlus para electrodomésticos inteligentes', description: 'Contacte con nuestro equipo para solicitar cotizaciones de frigoríficos, lavadoras, lavavajillas y aires acondicionados. MOQ desde 200 unidades, OEM/ODM flexible, clasificación energética A+++ y certificación CE/FCC/RoHS.', contact: 'Contactar a HousePlus', back: '← Volver a todas las noticias y análisis' },
+  de: { title: 'Arbeiten Sie mit HousePlus für smarte Haushaltsgeräte zusammen', description: 'Kontaktieren Sie unser Team für Angebote zu Kühlschränken, Waschmaschinen, Geschirrspülern und Klimageräten. MOQ ab 200 Stück, flexibles OEM/ODM, Energieeffizienzklasse A+++ und CE/FCC/RoHS-Zertifizierung.', contact: 'HousePlus kontaktieren', back: '← Zurück zu allen News und Insights' },
+  fr: { title: 'Associez-vous à HousePlus pour les appareils intelligents', description: 'Contactez notre équipe pour des devis de réfrigérateurs, lave-linge, lave-vaisselle et climatiseurs. MOQ à partir de 200 pièces, OEM/ODM flexible, classe énergétique A+++ et certification CE/FCC/RoHS.', contact: 'Contacter HousePlus', back: '← Retour à toutes les actualités et analyses' },
+  ar: { title: 'تعاون مع هاوس بلس للأجهزة المنزلية الذكية', description: 'تواصل مع فريقنا للحصول على عروض أسعار للثلاجات والغسالات وغسالات الأطباق ومكيفات الهواء. الحد الأدنى للطلب يبدأ من 200 قطعة، مع OEM/ODM مرن وتصنيف طاقة A+++ وشهادات CE وFCC وRoHS.', contact: 'تواصل مع هاوس بلس', back: '← العودة إلى جميع الأخبار والرؤى' },
+};
+
 export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
@@ -272,6 +280,7 @@ const articleContent: Record<string, any> = {
 export default async function BlogPostPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const content = articleContent[lang] || articleContent.en;
+  const cta = ctaCopy[lang] || ctaCopy.en;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : lang === 'es' ? 'Inicio' : lang === 'de' ? 'Startseite' : lang === 'fr' ? 'Accueil' : 'الرئيسية', url: `/${lang}` },
@@ -336,20 +345,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
       {/* CTA */}
       <div className="max-w-4xl mx-auto px-4 pb-12">
         <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-blue-800 mb-3">Partner with HousePlus for Smart Appliances</h3>
-          <p className="text-blue-700 mb-6">Contact our team for refrigerator, washing machine, dishwasher, and air conditioner quotations. MOQ from 200 pcs, flexible OEM/ODM, A+++ energy rating, CE/FCC/RoHS certified.</p>
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">{cta.title}</h3>
+          <p className="text-blue-700 mb-6">{cta.description}</p>
           <Link
             href={`/${lang}/contact`}
             className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
           >
-            Contact HousePlus
+            {cta.contact}
           </Link>
         </div>
       </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to all News & Insights
+          {cta.back}
         </Link>
       </div>
     </main>

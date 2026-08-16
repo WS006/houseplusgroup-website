@@ -12,6 +12,14 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamicParams = false;
 
+const ctaCopy: Record<string, { title: string; description: string; contact: string; back: string }> = {
+  en: { title: 'Source 3C Electronics from HousePlus', description: 'Contact our team for TWS earphones, smart wearables, and power bank quotations. MOQ from 100 pcs, 20–35 day lead time, CE/FCC/RoHS certified. OEM/ODM available.', contact: 'Contact HousePlus', back: '← Back to all News & Insights' },
+  es: { title: 'Abastezca electrónica 3C de HousePlus', description: 'Contacte con nuestro equipo para solicitar cotizaciones de auriculares TWS, dispositivos inteligentes y baterías externas. MOQ desde 100 unidades, plazo de 20–35 días, certificación CE/FCC/RoHS y OEM/ODM disponible.', contact: 'Contactar a HousePlus', back: '← Volver a todas las noticias y análisis' },
+  de: { title: '3C-Elektronik von HousePlus beschaffen', description: 'Kontaktieren Sie unser Team für Angebote zu TWS-Ohrhörern, Smart Wearables und Powerbanks. MOQ ab 100 Stück, 20–35 Tage Lieferzeit, CE/FCC/RoHS-zertifiziert und OEM/ODM verfügbar.', contact: 'HousePlus kontaktieren', back: '← Zurück zu allen News und Insights' },
+  fr: { title: 'Approvisionnez-vous en électronique 3C auprès de HousePlus', description: 'Contactez notre équipe pour des devis d’écouteurs TWS, objets connectés et batteries externes. MOQ à partir de 100 pièces, délai de 20 à 35 jours, certification CE/FCC/RoHS et OEM/ODM disponible.', contact: 'Contacter HousePlus', back: '← Retour à toutes les actualités et analyses' },
+  ar: { title: 'وفّر إلكترونيات 3C من هاوس بلس', description: 'تواصل مع فريقنا للحصول على عروض أسعار لسماعات TWS والأجهزة الذكية القابلة للارتداء وبنوك الطاقة. الحد الأدنى للطلب يبدأ من 100 قطعة، ومدة التوريد 20–35 يوماً، مع شهادات CE وFCC وRoHS وخدمات OEM/ODM.', contact: 'تواصل مع هاوس بلس', back: '← العودة إلى جميع الأخبار والرؤى' },
+};
+
 export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
@@ -251,6 +259,7 @@ const articleContent: Record<string, any> = {
 export default async function BlogPostPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const content = articleContent[lang] || articleContent.en;
+  const cta = ctaCopy[lang] || ctaCopy.en;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },
@@ -315,20 +324,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
       {/* CTA */}
       <div className="max-w-4xl mx-auto px-4 pb-12">
         <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-blue-800 mb-3">Source 3C Electronics from HousePlus</h3>
-          <p className="text-blue-700 mb-6">Contact our team for TWS earphones, smart wearables, and power bank quotations. MOQ from 100 pcs, 20–35 day lead time, CE/FCC/RoHS certified. OEM/ODM available.</p>
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">{cta.title}</h3>
+          <p className="text-blue-700 mb-6">{cta.description}</p>
           <Link
             href={`/${lang}/contact`}
             className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
           >
-            Contact HousePlus
+            {cta.contact}
           </Link>
         </div>
       </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to all News & Insights
+          {cta.back}
         </Link>
       </div>
     </main>

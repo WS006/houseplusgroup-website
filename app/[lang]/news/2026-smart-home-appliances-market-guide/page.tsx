@@ -12,6 +12,14 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamicParams = false;
 
+const ctaCopy: Record<string, { title: string; description: string; contact: string; back: string }> = {
+  en: { title: 'Procure Smart Home Appliances with HousePlus', description: 'Contact our team for 2026 smart appliance catalog and pricing. MOQ from 100 pcs, flexible OEM/ODM, CE/FCC/RoHS certified, 20–35 day lead time.', contact: 'Contact HousePlus', back: '← Back to all News & Insights' },
+  es: { title: 'Adquiera electrodomésticos inteligentes con HousePlus', description: 'Contacte con nuestro equipo para recibir el catálogo y precios de electrodomésticos inteligentes 2026. MOQ desde 100 unidades, OEM/ODM flexible, certificación CE/FCC/RoHS y plazo de 20–35 días.', contact: 'Contactar a HousePlus', back: '← Volver a todas las noticias y análisis' },
+  de: { title: 'Smarte Haushaltsgeräte mit HousePlus beschaffen', description: 'Kontaktieren Sie unser Team für den Katalog und Preise für smarte Haushaltsgeräte 2026. MOQ ab 100 Stück, flexibles OEM/ODM, CE/FCC/RoHS-zertifiziert und 20–35 Tage Lieferzeit.', contact: 'HousePlus kontaktieren', back: '← Zurück zu allen News und Insights' },
+  fr: { title: 'Approvisionnez-vous en appareils intelligents avec HousePlus', description: 'Contactez notre équipe pour recevoir le catalogue et les prix des appareils intelligents 2026. MOQ à partir de 100 pièces, OEM/ODM flexible, certification CE/FCC/RoHS et délai de 20 à 35 jours.', contact: 'Contacter HousePlus', back: '← Retour à toutes les actualités et analyses' },
+  ar: { title: 'اشترِ الأجهزة المنزلية الذكية من هاوس بلس', description: 'تواصل مع فريقنا للحصول على كتالوج وأسعار الأجهزة الذكية لعام 2026. الحد الأدنى للطلب يبدأ من 100 قطعة، مع OEM/ODM مرن وشهادات CE وFCC وRoHS ومدة توريد 20–35 يوماً.', contact: 'تواصل مع هاوس بلس', back: '← العودة إلى جميع الأخبار والرؤى' },
+};
+
 export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
@@ -337,6 +345,7 @@ const articleContent: Record<string, any> = {
 export default async function BlogPostPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const content = articleContent[lang] || articleContent.en;
+  const cta = ctaCopy[lang] || ctaCopy.en;
 
   const breadcrumbs = [
     { name: lang === 'en' ? 'Home' : 'Inicio', url: `/${lang}` },
@@ -401,20 +410,20 @@ export default async function BlogPostPage({ params }: { params: { lang: string 
       {/* CTA */}
       <div className="max-w-4xl mx-auto px-4 pb-12">
         <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-blue-800 mb-3">Procure Smart Home Appliances with HousePlus</h3>
-          <p className="text-blue-700 mb-6">Contact our team for 2026 smart appliance catalog and pricing. MOQ from 100 pcs, flexible OEM/ODM, CE/FCC/RoHS certified, 20–35 day lead time.</p>
+          <h3 className="text-2xl font-bold text-blue-800 mb-3">{cta.title}</h3>
+          <p className="text-blue-700 mb-6">{cta.description}</p>
           <Link
             href={`/${lang}/contact`}
             className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
           >
-            Contact HousePlus
+            {cta.contact}
           </Link>
         </div>
       </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
-          ← Back to all News & Insights
+          {cta.back}
         </Link>
       </div>
     </main>

@@ -3,10 +3,21 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { sortedBlogPosts } from '@/lib/blog-data';
+import localizedArticles from '@/lib/localized-content/articles.json';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 export const dynamicParams = false;
+
+type Lang = (typeof validLangs)[number];
+
+const pageText: Record<Lang, { globalB2B: string; featured: string; readFeatured: string; explore: string; latestLabel: string; category: Record<string, string> }> = {
+  en: { globalB2B: 'Global B2B intelligence', featured: 'Featured insight', readFeatured: 'Read featured insight', explore: 'Explore article', latestLabel: 'Latest HousePlus insights', category: { solar: 'Solar & Storage', electronics: '3C Electronics', appliances: 'Home Appliances', industry: 'Industry Insights' } },
+  es: { globalB2B: 'Inteligencia B2B global', featured: 'Análisis destacado', readFeatured: 'Leer análisis destacado', explore: 'Explorar artículo', latestLabel: 'Últimos análisis de HousePlus', category: { solar: 'Energía solar y almacenamiento', electronics: 'Electrónica 3C', appliances: 'Electrodomésticos', industry: 'Perspectivas de la industria' } },
+  de: { globalB2B: 'Globale B2B-Insights', featured: 'Ausgewählter Einblick', readFeatured: 'Ausgewählten Einblick lesen', explore: 'Artikel lesen', latestLabel: 'Aktuelle HousePlus-Einblicke', category: { solar: 'Solarenergie und Speicher', electronics: '3C-Elektronik', appliances: 'Haushaltsgeräte', industry: 'Brancheneinblicke' } },
+  fr: { globalB2B: 'Analyses B2B internationales', featured: 'Analyse à la une', readFeatured: 'Lire l’analyse à la une', explore: 'Découvrir l’article', latestLabel: 'Dernières analyses HousePlus', category: { solar: 'Solaire et stockage', electronics: 'Électronique 3C', appliances: 'Électroménager', industry: 'Analyses du secteur' } },
+  ar: { globalB2B: 'رؤى B2B العالمية', featured: 'رؤية مميزة', readFeatured: 'اقرأ الرؤية المميزة', explore: 'استكشف المقال', latestLabel: 'أحدث رؤى هاوس بلس', category: { solar: 'الطاقة الشمسية والتخزين', electronics: 'إلكترونيات 3C', appliances: 'الأجهزة المنزلية', industry: 'رؤى الصناعة' } },
+};
 
 export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
@@ -65,14 +76,17 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     ar: 'اقرأ آخر الأخبار والمقالات والرؤى من مجموعة HousePlus. استكشف الاتجاهات في الطاقة الشمسية والأجهزة المنزلية والإلكترونيات 3C. مصدرك للمعرفة الصناعية وتحديثات الشركة.',
   };
 
-  const blogArticles = sortedBlogPosts.map((post) => ({
-    slug: post.slug,
-    image: post.heroImage,
-    imageAlt: post.heroImageAlt,
-    title: { en: post.title },
-    description: { en: post.description },
-    date: post.datePublished,
-  }));
+  const blogArticles = sortedBlogPosts.map((post) => {
+    const localized = (localizedArticles as Record<string, Partial<Record<Lang, { title: string; description: string }>>>)[post.slug];
+    return {
+      slug: post.slug,
+      image: post.heroImage,
+      imageAlt: post.heroImageAlt,
+      title: Object.fromEntries(validLangs.map((locale) => [locale, localized?.[locale]?.title || post.title])),
+      description: Object.fromEntries(validLangs.map((locale) => [locale, localized?.[locale]?.description || post.description])),
+      date: post.datePublished,
+    };
+  });
 
   const articles = [
     ...blogArticles,
@@ -419,11 +433,12 @@ export default async function NewsPage({ params }: { params: { lang: string } })
     },
   ];
 
+  const text = pageText[(validLangs.includes(lang as Lang) ? lang : 'en') as Lang];
   const categoryFor = (slug: string) => {
-    if (/(solar|battery|lifepo|mppt|pwm|energy-storage)/.test(slug)) return 'Solar & Storage';
-    if (/(ssd|earphone|electronics|3c|consumer-electronics)/.test(slug)) return '3C Electronics';
-    if (/(oem|manufacturing|wholesale|appliance|air-fryer|kitchen)/.test(slug)) return 'Home Appliances';
-    return 'Industry Insights';
+    if (/(solar|battery|lifepo|mppt|pwm|energy-storage)/.test(slug)) return text.category.solar;
+    if (/(ssd|earphone|electronics|3c|consumer-electronics)/.test(slug)) return text.category.electronics;
+    if (/(oem|manufacturing|wholesale|appliance|air-fryer|kitchen)/.test(slug)) return text.category.appliances;
+    return text.category.industry;
   };
   const featuredArticle = articles[0];
   const articleGrid = articles.slice(1);
@@ -433,7 +448,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
       <div className="relative overflow-hidden bg-slate-900 px-4 py-20 text-white md:py-32">
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <Breadcrumb lang={lang} slug="news" />
-          <p className="mt-6 text-xs font-black uppercase tracking-[0.22em] text-blue-300">Global B2B intelligence</p>
+          <p className="mt-6 text-xs font-black uppercase tracking-[0.22em] text-blue-300">{text.globalB2B}</p>
           <h1 className="mb-4 mt-3 text-3xl font-black leading-tight md:text-5xl">
             {titles[lang] || titles.en}
           </h1>
@@ -443,7 +458,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
         </div>
       </div>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20" aria-label="Latest HousePlus insights">
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20" aria-label={text.latestLabel}>
         {featuredArticle && (
           <Link
             href={`/${lang}/news/${featuredArticle.slug}`}
@@ -460,7 +475,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
               />
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/55 to-transparent" aria-hidden="true" />
               <figcaption className="absolute bottom-5 left-5 rounded-full border border-white/35 bg-slate-950/80 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-md">
-                Featured insight
+                {text.featured}
               </figcaption>
             </figure>
             <div className="flex flex-col justify-center bg-gradient-to-br from-white via-white to-blue-50/70 px-7 py-8 md:px-10 md:py-12">
@@ -473,7 +488,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
                 {featuredArticle.description[lang as keyof typeof featuredArticle.description] || featuredArticle.description.en}
               </p>
               <div className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-blue-700">
-                Read featured insight <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
+                {text.readFeatured} <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
               </div>
             </div>
           </Link>
@@ -511,7 +526,7 @@ export default async function NewsPage({ params }: { params: { lang: string } })
                   {article.description[lang as keyof typeof article.description] || article.description.en}
                 </p>
                 <div className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-blue-700">
-                  Explore article <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  {text.explore} <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </div>
               </div>
             </Link>
