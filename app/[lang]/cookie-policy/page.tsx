@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { cookiePolicyLocales } from '@/lib/localized-content/cookie-policy';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -46,7 +47,7 @@ export default async function CookiePolicyPage({ params }: { params: { lang: str
     ar: 'سياسة ملفات تعريف الارتباط',
   };
 
-  const sections = [
+  const englishSections = [
     {
       title: '1. What Are Cookies?',
       content: 'Cookies are small text files that are placed on your device (computer, tablet, or mobile phone) when you visit a website. They are widely used to make websites work more efficiently, provide a better browsing experience, and give website owners statistical information about their visitors. Cookies do not contain any personally identifiable information by themselves.',
@@ -114,6 +115,9 @@ Business Hours: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)`,
     },
   ];
 
+  const localizedCopy = cookiePolicyLocales[lang];
+  const sections = localizedCopy?.sections || englishSections;
+
   const renderContent = (text: string) => {
     const lines = text.split('\n');
     return lines.map((line, i) => {
@@ -139,14 +143,14 @@ Business Hours: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)`,
       <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto">
           <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-            HousePlus Legal
+            {localizedCopy?.kicker || 'HousePlus Legal'}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
-            {h1Labels[lang] || h1Labels.en}
+            {localizedCopy?.title || h1Labels[lang] || h1Labels.en}
           </h1>
-          <p className="text-gray-500 text-sm mb-4">Last Updated: January 15, 2025</p>
+          <p className="text-gray-500 text-sm mb-4">{localizedCopy?.updated || 'Last Updated: January 15, 2025'}</p>
           <p className="text-lg text-slate-600 leading-relaxed">
-            This Cookie Policy explains how HousePlus Group uses cookies and similar tracking technologies when you visit our website houseplus-ch.com.
+            {localizedCopy?.intro || 'This Cookie Policy explains how HousePlus Group uses cookies and similar tracking technologies when you visit our website houseplus-ch.com.'}
           </p>
         </div>
       </section>
@@ -168,20 +172,20 @@ Business Hours: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)`,
       {/* Links to other policies */}
       <section className="py-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4 text-slate-900">Related Policies</h2>
-          <p className="text-slate-600 mb-6">For more information about how HousePlus handles your data, please review our related policies.</p>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">{localizedCopy?.relatedTitle || 'Related Policies'}</h2>
+          <p className="text-slate-600 mb-6">{localizedCopy?.relatedDescription || 'For more information about how HousePlus handles your data, please review our related policies.'}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`/${lang}/privacy`}
               className="inline-block px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition"
             >
-              Privacy Policy
+              {localizedCopy?.privacy || 'Privacy Policy'}
             </a>
             <a
               href={`/${lang}/terms`}
               className="inline-block px-8 py-3 bg-slate-700 text-white rounded-xl font-semibold hover:bg-slate-800 transition"
             >
-              Terms of Service
+              {localizedCopy?.terms || 'Terms of Service'}
             </a>
           </div>
         </div>

@@ -32,7 +32,12 @@ const jobs = pages.flatMap((page) => locales.map((locale) => ({ page, locale }))
 async function checkPage({ page, locale }) {
   const url = `${baseUrl}/${locale}/${page.slug}`;
   try {
-    const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(30000) });
+    const isLocal = /^http:\/\/(?:localhost|127\.0\.0\.1)/.test(url);
+    const response = await fetch(url, {
+      redirect: 'follow',
+      signal: AbortSignal.timeout(30000),
+      headers: isLocal ? { 'x-forwarded-proto': 'https' } : undefined,
+    });
     const html = await response.text();
     const genericTemplate = genericTemplateSignatures[locale].every((marker) => html.includes(marker));
     const expectedPageText = html.includes(`lang="${locale}"`) && html.includes(page.required[locale]);

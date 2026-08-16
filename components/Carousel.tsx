@@ -30,31 +30,33 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const localeCopy: Record<string, { badge: string; quote: string; previous: string; next: string; goTo: string; slides: Array<Pick<CarouselItem, 'title' | 'subtitle' | 'button_text'>> }> = {
+    en: { badge: 'HousePlus — Global Wholesale Manufacturer', quote: 'Get a Quote', previous: 'Previous slide', next: 'Next slide', goTo: 'Go to slide', slides: [{ title: 'High-Efficiency Solar Solutions', subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners', button_text: 'Explore Solar Products' }, { title: 'Smart Home Appliances', subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support', button_text: 'View Appliances' }, { title: '3C Electronics & Accessories', subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers', button_text: 'View Electronics' }] },
+    es: { badge: 'HousePlus — Fabricante mayorista global', quote: 'Solicitar cotización', previous: 'Diapositiva anterior', next: 'Diapositiva siguiente', goTo: 'Ir a la diapositiva', slides: [{ title: 'Soluciones solares de alta eficiencia', subtitle: 'Paneles solares, inversores y estaciones de energía portátiles de grado profesional para socios mayoristas globales', button_text: 'Explorar productos solares' }, { title: 'Electrodomésticos inteligentes', subtitle: 'Electrodomésticos de cocina y hogar eficientes con soporte completo de personalización OEM/ODM', button_text: 'Ver electrodomésticos' }, { title: 'Electrónica y accesorios 3C', subtitle: 'Auriculares, relojes inteligentes, SSD portátiles y accesorios de carga para consumidores modernos', button_text: 'Ver electrónica' }] },
+    de: { badge: 'HousePlus — Globaler Großhandelshersteller', quote: 'Angebot anfordern', previous: 'Vorherige Folie', next: 'Nächste Folie', goTo: 'Zur Folie', slides: [{ title: 'Hocheffiziente Solarlösungen', subtitle: 'Professionelle Solarmodule, Wechselrichter und tragbare Kraftwerke für globale Großhandelspartner', button_text: 'Solarprodukte entdecken' }, { title: 'Smarte Haushaltsgeräte', subtitle: 'Energieeffiziente Küchen- und Haushaltsgeräte mit umfassender OEM/ODM-Anpassung', button_text: 'Haushaltsgeräte ansehen' }, { title: '3C-Elektronik und Zubehör', subtitle: 'Premium-Kopfhörer, Smartwatches, portable SSDs und Ladezubehör für moderne Verbraucher', button_text: 'Elektronik ansehen' }] },
+    fr: { badge: 'HousePlus — Fabricant grossiste mondial', quote: 'Demander un devis', previous: 'Diapositive précédente', next: 'Diapositive suivante', goTo: 'Aller à la diapositive', slides: [{ title: 'Solutions solaires à haut rendement', subtitle: 'Panneaux solaires, onduleurs et stations d’énergie portables de qualité professionnelle pour partenaires grossistes mondiaux', button_text: 'Explorer les produits solaires' }, { title: 'Appareils ménagers intelligents', subtitle: 'Appareils de cuisine et de maison économes en énergie avec prise en charge OEM/ODM complète', button_text: 'Voir les appareils' }, { title: 'Électronique et accessoires 3C', subtitle: 'Casques haut de gamme, montres intelligentes, SSD portables et accessoires de charge pour consommateurs modernes', button_text: 'Voir l’électronique' }] },
+    ar: { badge: 'HousePlus — مصنع جملة عالمي', quote: 'اطلب عرض سعر', previous: 'الشريحة السابقة', next: 'الشريحة التالية', goTo: 'انتقل إلى الشريحة', slides: [{ title: 'حلول شمسية عالية الكفاءة', subtitle: 'ألواح شمسية ومحولات ومحطات طاقة محمولة احترافية لشركاء الجملة حول العالم', button_text: 'استكشف المنتجات الشمسية' }, { title: 'أجهزة منزلية ذكية', subtitle: 'أجهزة مطبخ ومنزل موفرة للطاقة مع دعم كامل للتخصيص OEM/ODM', button_text: 'عرض الأجهزة المنزلية' }, { title: 'إلكترونيات وملحقات 3C', subtitle: 'سماعات وساعات ذكية ووحدات SSD محمولة وملحقات شحن للمستهلكين العصريين', button_text: 'عرض الإلكترونيات' }] },
+  };
+  const copy = localeCopy[lang] || localeCopy.en;
 
   // Professional HousePlus default items — self-hosted R2 images for SEO
   const getDefaultItems = (): CarouselItem[] => [
     {
       _uid: 'default-1',
       image: { filename: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/', alt: 'HousePlus Solar Energy Solutions — Solar Panels, Inverters and Battery Storage for Wholesale' },
-      title: 'High-Efficiency Solar Solutions',
-      subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners',
-      button_text: 'Explore Solar Products',
+      ...copy.slides[0],
       button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: 'default-2',
       image: { filename: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/', alt: 'HousePlus Smart Home Appliances — Induction Cooktops, Air Fryers and Electric Kettles for OEM ODM' },
-      title: 'Smart Home Appliances',
-      subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support',
-      button_text: 'View Appliances',
+      ...copy.slides[1],
       button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: 'default-3',
       image: { filename: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
-      title: '3C Electronics & Accessories',
-      subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers',
-      button_text: 'View Electronics',
+      ...copy.slides[2],
       button_link: { url: `/products`, cached_url: `/products` }
     }
   ];
@@ -139,7 +141,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
           <div className="absolute inset-0 flex items-center justify-start px-8 md:px-20">
             <div className="max-w-2xl">
               {/* Slide badge */}
-              <span className={`inline-block px-4 py-1.5 bg-blue-600 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5 transition-all duration-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`}>HousePlus — Global Wholesale Manufacturer</span>
+              <span className={`inline-block px-4 py-1.5 bg-blue-600 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-5 transition-all duration-700 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`}>{copy.badge}</span>
               <h2 className={`text-3xl md:text-5xl lg:text-6xl font-black text-white mb-5 tracking-tight leading-tight transition-all duration-1000 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 {item.title}
               </h2>
@@ -158,7 +160,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
                     href={`/${lang}/contact`}
                     className="px-8 py-4 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white border border-white/40 font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
-                    Get a Quote
+                    {copy.quote}
                   </Link>
                 </div>
               )}
@@ -170,14 +172,14 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
       <button
         onClick={() => handleManualAction(goToPrevious)}
         className="absolute left-6 top-1/2 -translate-y-1/2 p-3 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full transition-all hidden md:flex z-20 border border-white/30"
-        aria-label="Previous slide"
+        aria-label={copy.previous}
       >
         <ChevronLeft size={24} strokeWidth={2.5} />
       </button>
       <button
         onClick={() => handleManualAction(goToNext)}
         className="absolute right-6 top-1/2 -translate-y-1/2 p-3 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full transition-all hidden md:flex z-20 border border-white/30"
-        aria-label="Next slide"
+        aria-label={copy.next}
       >
         <ChevronRight size={24} strokeWidth={2.5} />
       </button>
@@ -190,7 +192,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             className={`h-1.5 transition-all duration-500 rounded-full ${
               index === currentIndex ? 'w-10 bg-blue-500' : 'w-3 bg-white/50 hover:bg-white/70'
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`${copy.goTo} ${index + 1}`}
           />
         ))}
       </div>

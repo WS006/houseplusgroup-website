@@ -5,7 +5,7 @@ import { getStoryblokApi } from '@storyblok/react/rsc';
 import { productSlugs as canonicalProductSlugs, newsSlugs } from '@/lib/urls';
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { blogPosts } from '@/lib/blog-data';
-import { staticNewsFeedEntries } from '@/lib/static-news-feed';
+import { getLocalizedStaticNewsEntry, staticNewsFeedEntries } from '@/lib/static-news-feed';
 import { getLocalizedArticle, getLocalizedProduct } from '@/lib/localized-content';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
@@ -200,7 +200,7 @@ export default function SitemapPage({ params }: SitemapPageProps) {
       return { slug, title: getLocalizedArticle(slug, lang, dynamicArticle).title };
     }
     const staticArticle = staticNewsBySlug.get(slug);
-    return { slug, title: staticArticle?.title ?? slug.replace(/-/g, ' ') };
+    return { slug, title: staticArticle ? getLocalizedStaticNewsEntry(staticArticle, lang).title : slug.replace(/-/g, ' ') };
   });
 
   return (

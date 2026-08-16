@@ -317,6 +317,75 @@ Heures d'ouverture : Lundi – Vendredi : 9h00 – 18h00 (GMT+8)`,
   };
 
   const data = content[lang] || content.en;
+  const additionalSections: Record<string, any[]> = {
+    es: [
+      { title: '3. Divulgación de su información', content: `Podemos compartir información en circunstancias concretas:
+
+**Por ley o para proteger derechos:** cuando sea necesario para atender un procedimiento legal, investigar infracciones de políticas o proteger derechos, bienes y seguridad.
+
+**Proveedores de servicios y socios comerciales:** podemos compartir datos con proveedores que prestan procesamiento de pagos, análisis, correo electrónico, alojamiento, atención al cliente o asistencia de marketing, y con transitarios, agentes de aduana y operadores logísticos para cumplir pedidos.
+
+**Transferencias empresariales e internacionales:** los datos pueden transferirse en relación con una fusión, venta, financiación o adquisición. Como operamos globalmente, también pueden procesarse fuera de su país, donde las leyes de protección de datos pueden ser distintas.` },
+      { title: '5. Política para menores', content: 'No solicitamos deliberadamente información de menores de 18 años ni dirigimos marketing a ellos. Si conoce datos que hayamos recopilado de un menor de 18 años, contáctenos usando los datos indicados abajo. Los servicios HousePlus están destinados a transacciones mayoristas B2B y no se dirigen a menores.' },
+      { title: '6. Cookies y tecnologías de seguimiento', content: `Podemos utilizar cookies, balizas web, píxeles de seguimiento y tecnologías similares para personalizar el sitio y mejorar su experiencia. Puede eliminar o rechazar cookies en su navegador, aunque ello puede afectar la disponibilidad o funcionalidad del sitio.
+
+Utilizamos **cookies esenciales** para operar el sitio, **cookies analíticas** para comprender la interacción de visitantes, **cookies de marketing** para fines promocionales y **cookies de preferencias** para recordar ajustes.` },
+      { title: '8. Cambios en esta Política de Privacidad', content: 'Podemos actualizar esta Política de Privacidad para reflejar cambios en nuestras prácticas o por motivos operativos, legales o regulatorios. Publicaremos la nueva política en esta página y actualizaremos la fecha de última actualización. Le recomendamos revisarla periódicamente.' },
+    ],
+    de: [
+      { title: '3. Weitergabe Ihrer Informationen', content: `Wir können Informationen in bestimmten Situationen weitergeben:
+
+**Aufgrund gesetzlicher Vorgaben oder zum Schutz von Rechten:** wenn dies für Rechtsverfahren, die Untersuchung möglicher Richtlinienverstöße oder den Schutz von Rechten, Eigentum und Sicherheit erforderlich ist.
+
+**Dienstleister und Geschäftspartner:** Daten können mit Dienstleistern für Zahlungsabwicklung, Analyse, E-Mail, Hosting, Kundenservice oder Marketing sowie mit Spediteuren, Zollagenten und Logistikdienstleistern zur Auftragserfüllung geteilt werden.
+
+**Unternehmens- und internationale Übertragungen:** Daten können im Zusammenhang mit Fusionen, Verkäufen, Finanzierungen oder Übernahmen übertragen werden. Da wir global tätig sind, können Daten auch in Ländern verarbeitet werden, deren Datenschutzgesetze abweichen.` },
+      { title: '5. Richtlinie für Minderjährige', content: 'Wir fordern wissentlich keine Informationen von Personen unter 18 Jahren an und richten kein Marketing an sie. Falls Sie Kenntnis von Daten erhalten, die wir von Minderjährigen unter 18 Jahren erhoben haben, kontaktieren Sie uns bitte über die unten genannten Angaben. HousePlus-Dienste sind für B2B-Großhandel bestimmt und richten sich nicht an Minderjährige.' },
+      { title: '6. Cookies und Tracking-Technologien', content: `Wir können Cookies, Web-Beacons, Tracking-Pixel und ähnliche Technologien einsetzen, um die Website anzupassen und Ihr Nutzungserlebnis zu verbessern. Sie können Cookies in Ihrem Browser entfernen oder ablehnen; dies kann jedoch Verfügbarkeit oder Funktionalität der Website beeinträchtigen.
+
+Wir verwenden **notwendige Cookies** für den Betrieb, **Analyse-Cookies** zum Verständnis der Besucherinteraktion, **Marketing-Cookies** zu Werbezwecken und **Präferenz-Cookies** zum Speichern von Einstellungen.` },
+      { title: '8. Änderungen dieser Datenschutzerklärung', content: 'Wir können diese Datenschutzerklärung aktualisieren, um Änderungen unserer Praktiken oder betriebliche, rechtliche bzw. regulatorische Anforderungen widerzuspiegeln. Die neue Erklärung wird auf dieser Seite veröffentlicht und das Aktualisierungsdatum angepasst. Bitte überprüfen Sie die Erklärung regelmäßig.' },
+    ],
+    fr: [
+      { title: '3. Divulgation de vos informations', content: `Nous pouvons partager des informations dans certaines situations :
+
+**En vertu de la loi ou pour protéger des droits :** lorsqu’il est nécessaire de répondre à une procédure légale, d’enquêter sur une violation de nos politiques ou de protéger les droits, les biens et la sécurité.
+
+**Prestataires et partenaires commerciaux :** les données peuvent être partagées avec les prestataires de paiement, d’analyse, d’e-mail, d’hébergement, de service client ou d’assistance marketing, ainsi qu’avec les transitaires, agents en douane et prestataires logistiques pour exécuter les commandes.
+
+**Transferts d’entreprise et internationaux :** les données peuvent être transférées dans le cadre d’une fusion, d’une vente, d’un financement ou d’une acquisition. Notre activité étant mondiale, elles peuvent aussi être traitées dans des pays dont les lois de protection diffèrent.` },
+      { title: '5. Politique relative aux mineurs', content: 'Nous ne sollicitons pas sciemment d’informations auprès de personnes de moins de 18 ans et ne leur adressons pas de communications marketing. Si vous avez connaissance de données recueillies auprès d’un mineur, contactez-nous aux coordonnées ci-dessous. Les services HousePlus sont destinés aux transactions B2B de gros et non aux mineurs.' },
+      { title: '6. Cookies et technologies de suivi', content: `Nous pouvons utiliser des cookies, balises web, pixels de suivi et technologies similaires afin de personnaliser le site et d’améliorer votre expérience. Vous pouvez supprimer ou refuser les cookies dans votre navigateur, mais cela peut affecter la disponibilité ou les fonctionnalités du site.
+
+Nous utilisons des **cookies essentiels** pour le fonctionnement du site, des **cookies analytiques** pour comprendre les interactions, des **cookies marketing** à des fins promotionnelles et des **cookies de préférences** pour mémoriser vos réglages.` },
+      { title: '8. Modifications de cette Politique de Confidentialité', content: 'Nous pouvons mettre à jour cette Politique de Confidentialité afin de refléter l’évolution de nos pratiques ou pour des raisons opérationnelles, légales ou réglementaires. La nouvelle politique sera publiée sur cette page et la date de mise à jour sera modifiée. Nous vous invitons à la consulter régulièrement.' },
+    ],
+    ar: [
+      { title: '3. الإفصاح عن معلوماتك', content: `قد نشارك المعلومات في حالات محددة:
+
+**بموجب القانون أو لحماية الحقوق:** عندما يكون الإفصاح ضرورياً للاستجابة لإجراء قانوني أو التحقيق في انتهاك محتمل لسياساتنا أو حماية الحقوق والممتلكات والسلامة.
+
+**مقدمو الخدمات وشركاء الأعمال:** قد نشارك البيانات مع جهات تعالج المدفوعات أو تقدم التحليلات أو البريد الإلكتروني أو الاستضافة أو خدمة العملاء أو المساعدة التسويقية، ومع وكلاء الشحن والجمارك والخدمات اللوجستية لتنفيذ طلباتك.
+
+**التحويلات التجارية والدولية:** قد تنقل البيانات فيما يتعلق باندماج أو بيع أو تمويل أو استحواذ. وبما أننا نعمل عالمياً، فقد تعالج البيانات في بلدان تختلف قوانين حماية البيانات فيها.` },
+      { title: '5. سياسة القاصرين', content: 'لا نطلب عن علم معلومات من أشخاص دون 18 عاماً ولا نسوق لهم. إذا علمت بأننا جمعنا بيانات من شخص دون 18 عاماً، يرجى التواصل معنا باستخدام بيانات الاتصال أدناه. خدمات HousePlus مخصصة لمعاملات الجملة بين الشركات وليست موجهة إلى القاصرين.' },
+      { title: '6. ملفات تعريف الارتباط وتقنيات التتبع', content: `قد نستخدم ملفات تعريف الارتباط وإشارات الويب وبكسلات التتبع وتقنيات مشابهة لتخصيص الموقع وتحسين تجربتك. يمكنك إزالة ملفات تعريف الارتباط أو رفضها من المتصفح، لكن ذلك قد يؤثر في توفر الموقع أو وظائفه.
+
+نستخدم **ملفات أساسية** لتشغيل الموقع، و**ملفات تحليلية** لفهم تفاعل الزوار، و**ملفات تسويقية** للأغراض الترويجية، و**ملفات تفضيلات** لتذكر إعداداتك.` },
+      { title: '8. التغييرات على سياسة الخصوصية', content: 'قد نحدّث سياسة الخصوصية هذه لتعكس تغييرات في ممارساتنا أو لأسباب تشغيلية أو قانونية أو تنظيمية. سننشر السياسة الجديدة على هذه الصفحة ونحدّث تاريخ آخر تعديل. ننصحك بمراجعتها بصورة دورية.' },
+    ],
+  };
+  const sections = lang === 'en'
+    ? data.sections
+    : [data.sections[0], data.sections[1], ...(additionalSections[lang]?.slice(0, 1) || []), data.sections[2], ...(additionalSections[lang]?.slice(1, 3) || []), data.sections[3], ...(additionalSections[lang]?.slice(3) || []), data.sections[4]];
+  const uiCopy: Record<string, { badge: string; privacyCommitment: string; dataTitle: string; dataBody: string; whatsapp: string }> = {
+    en: { badge: '🏭 HousePlus Privacy Policy', privacyCommitment: 'HousePlus is committed to protecting your privacy.', dataTitle: '🏭 HousePlus Privacy & Data Protection', dataBody: 'For questions about how HousePlus handles your data, please contact our privacy team.', whatsapp: 'WhatsApp: +86 155 7811 9543' },
+    es: { badge: '🏭 Política de Privacidad de HousePlus', privacyCommitment: 'HousePlus se compromete a proteger su privacidad.', dataTitle: '🏭 Privacidad y Protección de Datos de HousePlus', dataBody: 'Para consultas sobre cómo HousePlus maneja sus datos, contacte con nuestro equipo de privacidad.', whatsapp: 'WhatsApp: +86 155 7811 9543' },
+    de: { badge: '🏭 Datenschutzrichtlinie von HousePlus', privacyCommitment: 'HousePlus verpflichtet sich, Ihre Privatsphäre zu schützen.', dataTitle: '🏭 Datenschutz und Datensicherheit bei HousePlus', dataBody: 'Bei Fragen zur Verarbeitung Ihrer Daten durch HousePlus wenden Sie sich bitte an unser Datenschutzteam.', whatsapp: 'WhatsApp: +86 155 7811 9543' },
+    fr: { badge: '🏭 Politique de Confidentialité HousePlus', privacyCommitment: 'HousePlus s’engage à protéger votre vie privée.', dataTitle: '🏭 Confidentialité et Protection des Données HousePlus', dataBody: 'Pour toute question sur le traitement de vos données par HousePlus, contactez notre équipe chargée de la confidentialité.', whatsapp: 'WhatsApp : +86 155 7811 9543' },
+    ar: { badge: '🏭 سياسة خصوصية HousePlus', privacyCommitment: 'تلتزم HousePlus بحماية خصوصيتك.', dataTitle: '🏭 خصوصية البيانات وحمايتها لدى HousePlus', dataBody: 'للأسئلة حول كيفية تعامل HousePlus مع بياناتك، يرجى التواصل مع فريق الخصوصية لدينا.', whatsapp: 'واتساب: +86 155 7811 9543' },
+  };
+  const ui = uiCopy[lang] || uiCopy.en;
 
   // Helper to render markdown-like bold text
   const renderContent = (text: string) => {
@@ -348,19 +417,19 @@ Heures d'ouverture : Lundi – Vendredi : 9h00 – 18h00 (GMT+8)`,
         <div className="max-w-4xl mx-auto">
           <div className="mb-4">
             <span className="inline-block px-4 py-1.5 bg-blue-200 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-              🏭 HousePlus Privacy Policy
+              {ui.badge}
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">🏭 {data.title}</h1>
           <p className="text-gray-500 text-sm mb-4">{data.lastUpdated}</p>
-          <p className="text-lg text-slate-600 leading-relaxed"><strong>HousePlus</strong> is committed to protecting your privacy. {data.intro}</p>
+          <p className="text-lg text-slate-600 leading-relaxed"><strong>HousePlus</strong> {ui.privacyCommitment.replace('HousePlus ', '')} {data.intro}</p>
         </div>
       </section>
 
       {/* Content */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          {data.sections.map((section: any, idx: number) => (
+          {sections.map((section: any, idx: number) => (
             <div key={idx} className="mb-10 pb-10 border-b border-gray-200 last:border-0">
               <h2 className="text-2xl font-bold mb-4 text-slate-900">{section.title}</h2>
               <div className="prose max-w-none">
@@ -374,8 +443,8 @@ Heures d'ouverture : Lundi – Vendredi : 9h00 – 18h00 (GMT+8)`,
       {/* Contact CTA */}
       <section className="py-12 px-4 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4 text-slate-900">🏭 HousePlus Privacy & Data Protection</h2>
-          <p className="text-slate-600 mb-6">For questions about how <strong>HousePlus</strong> handles your data, please contact our privacy team.</p>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">{ui.dataTitle}</h2>
+          <p className="text-slate-600 mb-6">{ui.dataBody}</p>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">
             {lang === 'en' && 'Questions About Our Privacy Policy?'}
             {lang === 'es' && '¿Preguntas Sobre Nuestra Política de Privacidad?'}
@@ -401,7 +470,7 @@ Heures d'ouverture : Lundi – Vendredi : 9h00 – 18h00 (GMT+8)`,
               href="https://wa.me/8615578119543"
               className="inline-block px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition"
             >
-              WhatsApp: +86 155 7811 9543
+              {ui.whatsapp}
             </a>
           </div>
         </div>

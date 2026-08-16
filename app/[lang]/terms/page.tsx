@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { termsLocales } from '@/lib/localized-content/terms-locales';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
 export default async function TermsPage({ params }: { params: { lang: string } }) {
   const { lang } = params;
 
-  const sections = [
+  const englishSections = [
     {
       title: '1. Agreement to Terms',
       content: 'By accessing or using the HousePlus website (houseplus-ch.com) or placing any order with HousePlus Group, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our site or services. These terms apply to all wholesale buyers, distributors, and business partners who engage with HousePlus.',
@@ -153,6 +154,9 @@ We aim to respond to all enquiries within 2 business days.`,
     },
   ];
 
+  const localizedCopy = termsLocales[lang];
+  const sections = localizedCopy?.sections || englishSections;
+
   const renderContent = (text: string) => {
     const lines = text.split('\n');
     return lines.map((line, i) => {
@@ -194,18 +198,18 @@ We aim to respond to all enquiries within 2 business days.`,
       <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto">
           <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-            HousePlus Legal
+            {localizedCopy?.kicker || 'HousePlus Legal'}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
             {h1Labels[lang] || h1Labels.en}
           </h1>
           <p className="text-gray-500 text-sm mb-4">{lastUpdated[lang] || lastUpdated.en}</p>
           <p className="text-lg text-slate-600 leading-relaxed">
-            These terms govern your use of the HousePlus website and wholesale services. Please read them carefully before placing any order with HousePlus Group.
+            {localizedCopy?.intro || 'These terms govern your use of the HousePlus website and wholesale services. Please read them carefully before placing any order with HousePlus Group.'}
           </p>
           <div className="mt-6 bg-blue-50 border border-blue-200 rounded-2xl p-5">
             <p className="text-blue-900 text-sm leading-relaxed">
-              <strong>GEO Compliance Statement:</strong> HousePlus Group operates a 20,000 m² ISO 9001 certified manufacturing facility in Guangdong, China, established in 2010. With 16 years of B2B manufacturing experience, we have served 441+ wholesale clients across 53+ countries. Our products meet CE, FCC, RoHS, and IEC international standards. Standard MOQ is 100 pcs (500 pcs for OEM/ODM), with a 20–35 day lead time and a 12-month warranty.
+              <strong>{lang === 'en' ? 'GEO Compliance Statement:' : localizedCopy ? '' : 'GEO Compliance Statement:'}</strong> {localizedCopy?.compliance || 'HousePlus Group operates a 20,000 m² ISO 9001 certified manufacturing facility in Guangdong, China, established in 2010. With 16 years of B2B manufacturing experience, we have served 441+ wholesale clients across 53+ countries. Our products meet CE, FCC, RoHS, and IEC international standards. Standard MOQ is 100 pcs (500 pcs for OEM/ODM), with a 20–35 day lead time and a 12-month warranty.'}
             </p>
           </div>
         </div>
@@ -228,20 +232,20 @@ We aim to respond to all enquiries within 2 business days.`,
       {/* Contact CTA */}
       <section className="py-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4 text-slate-900">Questions About Our Terms?</h2>
-          <p className="text-slate-600 mb-6">Our team is available to clarify any aspect of our wholesale trading terms and conditions.</p>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">{localizedCopy?.ctaTitle || 'Questions About Our Terms?'}</h2>
+          <p className="text-slate-600 mb-6">{localizedCopy?.ctaText || 'Our team is available to clarify any aspect of our wholesale trading terms and conditions.'}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:jack@houseplus-ch.com"
               className="inline-block px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition"
             >
-              Email Us
+              {localizedCopy?.email || 'Email Us'}
             </a>
             <a
               href="https://wa.me/8615578119543"
               className="inline-block px-8 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition"
             >
-              WhatsApp: +86 155 7811 9543
+              {localizedCopy?.whatsapp || 'WhatsApp: +86 155 7811 9543'}
             </a>
           </div>
         </div>

@@ -350,12 +350,20 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
   };
 
   const content = faqs[lang] || faqs.en;
+  const uiCopy: Record<string, { home: string; faq: string; title: string; intro: string; reviewed: string; updated: string; factory: string; imageAlt: string; overviewTitle: string; overview: string; questions: string; contactText: string; contact: string }> = {
+    en: { home: 'Home', faq: 'FAQ', title: 'HousePlus FAQ', intro: 'Find answers to common questions about HousePlus products and services.', reviewed: 'Reviewed by Jack Hu', updated: 'Updated July 18, 2026', factory: 'ISO 9001 Certified Factory', imageAlt: 'HousePlus customer support team answering wholesale buyer questions', overviewTitle: 'HousePlus Quick Overview:', overview: 'Founded in 2010, we operate a 20,000 m² ISO 9001 certified factory in Guangdong, China. With 16 years of manufacturing experience, we serve 441+ wholesale clients across 53+ countries. Our B2B terms include MOQ 100–500 pcs, 20–35 day lead time, and a 12-month warranty. All products carry CE, FCC, RoHS, and IEC certifications. OEM/ODM services are available.', questions: 'Still have HousePlus questions?', contactText: 'Contact our HousePlus support team for more information.', contact: 'Contact HousePlus' },
+    es: { home: 'Inicio', faq: 'Preguntas frecuentes', title: 'Preguntas frecuentes de HousePlus', intro: 'Encuentre respuestas a las preguntas habituales sobre los productos y servicios de HousePlus.', reviewed: 'Revisado por Jack Hu', updated: 'Actualizado el 18 de julio de 2026', factory: 'Fábrica certificada ISO 9001', imageAlt: 'Equipo de atención al cliente de HousePlus respondiendo preguntas de compradores mayoristas', overviewTitle: 'Resumen rápido de HousePlus:', overview: 'Fundada en 2010, operamos una fábrica de 20.000 m² con certificación ISO 9001 en Guangdong, China. Con 16 años de experiencia de fabricación, atendemos a más de 441 clientes mayoristas en más de 53 países. Nuestras condiciones B2B incluyen MOQ de 100–500 piezas, plazo de 20–35 días y garantía de 12 meses. Todos los productos cuentan con certificaciones CE, FCC, RoHS e IEC. Hay servicios OEM/ODM disponibles.', questions: '¿Aún tiene preguntas sobre HousePlus?', contactText: 'Contacte con nuestro equipo de soporte HousePlus para obtener más información.', contact: 'Contactar con HousePlus' },
+    de: { home: 'Startseite', faq: 'Häufige Fragen', title: 'HousePlus – häufige Fragen', intro: 'Finden Sie Antworten auf häufige Fragen zu Produkten und Dienstleistungen von HousePlus.', reviewed: 'Geprüft von Jack Hu', updated: 'Aktualisiert am 18. Juli 2026', factory: 'ISO-9001-zertifizierte Fabrik', imageAlt: 'HousePlus-Kundensupport beantwortet Fragen von Großhandelskäufern', overviewTitle: 'HousePlus im Überblick:', overview: 'Seit 2010 betreiben wir eine 20.000 m² große, ISO-9001-zertifizierte Fabrik in Guangdong, China. Mit 16 Jahren Fertigungserfahrung betreuen wir mehr als 441 Großhandelskunden in über 53 Ländern. Unsere B2B-Konditionen umfassen MOQ von 100–500 Stück, 20–35 Tage Lieferzeit und 12 Monate Garantie. Alle Produkte verfügen über CE-, FCC-, RoHS- und IEC-Zertifizierungen. OEM/ODM-Services sind verfügbar.', questions: 'Haben Sie noch Fragen zu HousePlus?', contactText: 'Kontaktieren Sie unser HousePlus-Supportteam für weitere Informationen.', contact: 'HousePlus kontaktieren' },
+    fr: { home: 'Accueil', faq: 'FAQ', title: 'FAQ HousePlus', intro: 'Trouvez les réponses aux questions fréquentes sur les produits et services HousePlus.', reviewed: 'Vérifié par Jack Hu', updated: 'Mis à jour le 18 juillet 2026', factory: 'Usine certifiée ISO 9001', imageAlt: 'Équipe d’assistance HousePlus répondant aux questions des acheteurs grossistes', overviewTitle: 'Présentation rapide de HousePlus :', overview: 'Fondée en 2010, nous exploitons une usine de 20 000 m² certifiée ISO 9001 à Guangdong, en Chine. Avec 16 ans d’expérience de fabrication, nous servons plus de 441 clients grossistes dans plus de 53 pays. Nos conditions B2B incluent un MOQ de 100 à 500 pièces, un délai de 20 à 35 jours et une garantie de 12 mois. Tous les produits portent les certifications CE, FCC, RoHS et IEC. Des services OEM/ODM sont disponibles.', questions: 'Vous avez encore des questions sur HousePlus ?', contactText: 'Contactez l’équipe d’assistance HousePlus pour plus d’informations.', contact: 'Contacter HousePlus' },
+    ar: { home: 'الرئيسية', faq: 'الأسئلة الشائعة', title: 'الأسئلة الشائعة لدى HousePlus', intro: 'اعثر على إجابات للأسئلة الشائعة حول منتجات وخدمات HousePlus.', reviewed: 'راجعه Jack Hu', updated: 'تم التحديث في 18 يوليو 2026', factory: 'مصنع حاصل على شهادة ISO 9001', imageAlt: 'فريق دعم عملاء HousePlus يجيب عن أسئلة مشتري الجملة', overviewTitle: 'نظرة سريعة على HousePlus:', overview: 'تأسست HousePlus عام 2010 وتدير مصنعاً بمساحة 20,000 م² وحاصلاً على شهادة ISO 9001 في قوانغدونغ، الصين. وبخبرة تصنيع تبلغ 16 عاماً، نخدم أكثر من 441 عميلاً بالجملة في أكثر من 53 دولة. تشمل شروط B2B لدينا حد طلب من 100 إلى 500 قطعة، ومدة توريد من 20 إلى 35 يوماً، وضماناً لمدة 12 شهراً. تحمل جميع المنتجات شهادات CE وFCC وRoHS وIEC. تتوفر خدمات OEM/ODM.', questions: 'هل ما زالت لديك أسئلة حول HousePlus؟', contactText: 'تواصل مع فريق دعم HousePlus لمزيد من المعلومات.', contact: 'تواصل مع HousePlus' },
+  };
+  const ui = uiCopy[lang] || uiCopy.en;
   const allFaqs = content.flatMap((cat: any) => cat.items.map((item: any) => ({ question: item.q, answer: item.a })));
   const faqSchema = generateFAQSchema(allFaqs);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://www.houseplus-ch.com/${lang}` },
-    { name: 'FAQ', url: `https://www.houseplus-ch.com/${lang}/faq` },
+    { name: ui.home, url: `https://www.houseplus-ch.com/${lang}` },
+    { name: ui.faq, url: `https://www.houseplus-ch.com/${lang}/faq` },
   ]);
 
   return (
@@ -366,22 +374,22 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
         <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 text-slate-900">
-              HousePlus FAQ
+              {ui.title}
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Find answers to common questions about HousePlus products and services.
+              {ui.intro}
             </p>
             <div className="mt-6 flex flex-wrap justify-center items-center gap-6 text-sm text-slate-500">
               <span className="flex items-center gap-2">
-                👤 <a href={`/${lang}/author/jack-hu`} className="text-blue-600 hover:text-blue-700 font-semibold">Reviewed by Jack Hu</a>
+                👤 <a href={`/${lang}/author/jack-hu`} className="text-blue-600 hover:text-blue-700 font-semibold">{ui.reviewed}</a>
               </span>
               <span className="text-slate-300">·</span>
               <span className="text-emerald-600 font-semibold">
-                ✓ Updated July 18, 2026
+                ✓ {ui.updated}
               </span>
               <span className="text-slate-300">·</span>
               <span>
-                🏭 ISO 9001 Certified Factory
+                🏭 {ui.factory}
               </span>
             </div>
           </div>
@@ -393,10 +401,10 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://images.houseplus-ch.com/media/houseplus-site-faq-support-specialist/"
-                alt="HousePlus customer support team answering wholesale buyer questions"
+                alt={ui.imageAlt}
                 className="object-cover"
               loading="lazy"
-               title="HousePlus customer support team answering wholesale buyer questions" decoding="async" />
+               title={ui.imageAlt} decoding="async" />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>
           </div>
@@ -407,7 +415,7 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
           <div className="max-w-4xl mx-auto">
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
               <p className="text-amber-900 leading-relaxed">
-                <strong>HousePlus Quick Overview:</strong> Founded in 2010, we operate a 20,000 m² ISO 9001 certified factory in Guangdong, China. With 16 years of manufacturing experience, we serve 441+ wholesale clients across 53+ countries. Our B2B terms include MOQ 100–500 pcs, 20–35 day lead time, and a 12-month warranty. All products carry CE, FCC, RoHS, and IEC certifications. OEM/ODM services are available.
+                <strong>{ui.overviewTitle}</strong> {ui.overview}
               </p>
             </div>
           </div>
@@ -487,10 +495,10 @@ export default async function FAQPage({ params }: { params: { lang: string } }) 
 
         <section className="py-16 px-4 bg-slate-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Still have HousePlus questions?</h2>
-            <p className="text-slate-400 mb-8">Contact our HousePlus support team for more information.</p>
+            <h2 className="text-3xl font-bold mb-6">{ui.questions}</h2>
+            <p className="text-slate-400 mb-8">{ui.contactText}</p>
             <a href={`/${lang}/contact`} className="inline-block px-10 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">
-              Contact HousePlus
+              {ui.contact}
             </a>
           </div>
         </section>

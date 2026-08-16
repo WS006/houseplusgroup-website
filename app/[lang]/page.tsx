@@ -211,6 +211,7 @@ export default async function LangHome({ params }: { params: { lang: string } })
           {copy.categories.map((industry, index) => (
             <IndustrySection
               key={index}
+              lang={lang}
               title={industry.title}
               description={industry.description}
               image={{ filename: ['https://images.houseplus-ch.com/media/houseplus-solar-panel-1-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-home-home-appliances-collection-b/', 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/'][index], alt: industry.title }}

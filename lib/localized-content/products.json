@@ -4072,9 +4072,9 @@
         "Eficiencia MPPT pico >=98% -- 25-30% más energía que los controladores PWM",
         "Detección automática de batería 12V/24V -- no requiere configuración manual",
         "La pantalla LCD muestra el voltaje PV, el voltaje de la batería, la corriente de carga y el estado",
-        "Protección integral: overcharge, over-discharge, short-circuit, reverse polarity"
+        "Protección integral: sobrecarga, sobredescarga, cortocircuito y polaridad inversa"
       ],
-      "imageAlt": "MPPT 40A solar charge controller HP-SOL-MPPT40 with 98% efficiency for solar systems",
+      "imageAlt": "Controlador de carga solar MPPT 40A HP-SOL-MPPT40 con eficiencia del 98% para sistemas solares",
       "imageTitle": "Controlador MPPT 40A HP-SOL-MPPT40 | HousePlus Solar Venta al por mayor",
       "badge": "",
       "faq": []
