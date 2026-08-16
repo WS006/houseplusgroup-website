@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { baseUrl, locales, staticPageSlugs, productSlugs, newsSlugs, regionSlugs } from '@/lib/urls';
+import { canonicalSiteUrl, locales, staticPageSlugs, productSlugs, newsSlugs, regionSlugs } from '@/lib/urls';
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
@@ -72,10 +72,9 @@ type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly
 function buildHreflangs(slug: string) {
   const languages: Record<string, string> = {};
   for (const lang of locales) {
-    const path = slug ? `/${lang}/${slug}` : `/${lang}`;
-    languages[lang] = `${baseUrl}${path}`;
+    languages[lang] = canonicalSiteUrl(slug ? `${lang}/${slug}` : lang);
   }
-  languages['x-default'] = `${baseUrl}/en${slug ? `/${slug}` : ''}`;
+  languages['x-default'] = canonicalSiteUrl(slug ? `en/${slug}` : 'en');
   return languages;
 }
 
@@ -86,7 +85,7 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
   const entries = [];
 
   for (const lang of targetLocales) {
-    const url = slug ? `${baseUrl}/${lang}/${slug}` : `${baseUrl}/${lang}`;
+    const url = canonicalSiteUrl(slug ? `${lang}/${slug}` : lang);
     entries.push({
       url,
       lastModified: lastmod,

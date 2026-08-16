@@ -127,7 +127,7 @@ export default async function BlogPostPage({
 
   const post = getLocalizedArticle(slug, lang, basePost);
   const ui = articleUi[lang] || articleUi.en;
-  const articleUrl = `https://www.houseplus-ch.com/${lang}/news/${slug}`;
+  const articleUrl = `https://www.houseplus-ch.com/${lang}/news/${slug}/`;
 
   const articleSchema = generateArticleSchema({
     headline: post.title,

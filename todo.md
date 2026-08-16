@@ -18,3 +18,9 @@
 - [x] 补齐遗漏页面和文章正文中的 ES/DE/FR/AR 翻译与本地化 CTA
 - [x] 补齐产品、文章、图片 Alt/Title 和 Schema 描述中的多语言字段
 - [x] 运行全量路由多语言与 SEO 回归并完成生产抽样验收
+- [x] 获取并分类 Google Search Console 未编入索引、核心网页指标、图片元数据和产品展示问题
+- [x] 审计并优化 Sitemap、robots、canonical、hreflang、重定向、Schema 与关键页面性能
+- [ ] 提交 Search Console 技术优化并完成生产复验与重抓取提交
+- [x] 分类 Image Metadata、Breadcrumbs、Product snippets、Merchant listings 和 Merchant opportunities 的已出现与待触发条件
+- [x] 制定并实施 Core Web Vitals、HTTPS、索引覆盖与购物富媒体的可控参数优化
+- [x] 使用既有 Google Search Console 服务账号 API 采集站点地图、搜索表现与逐 URL 索引基线

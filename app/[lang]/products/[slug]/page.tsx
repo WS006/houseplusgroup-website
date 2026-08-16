@@ -76,9 +76,9 @@ export async function generateMetadata({
 
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
-    langAlternates[locale] = `${BASE_URL}/${locale}/products/${slug}`;
+    langAlternates[locale] = `${BASE_URL}/${locale}/products/${slug}/`;
   }
-  langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}`;
+  langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}/`;
 
   const titleTemplates: Record<string, string> = {
     en: `${name} | HousePlus Wholesale — Professional Manufacturer`,
@@ -114,7 +114,7 @@ export async function generateMetadata({
   const title = isRetailProduct ? (retailTitleTemplates[lang] || retailTitleTemplates.en) : (titleTemplates[lang] || titleTemplates.en);
   const description = isRetailProduct ? (retailDescTemplates[lang] || retailDescTemplates.en) : (descTemplates[lang] || descTemplates.en);
   const shouldIndexLocale = LOCALES.includes(lang);
-  const canonicalUrl = `${BASE_URL}/${lang}/products/${slug}`;
+  const canonicalUrl = `${BASE_URL}/${lang}/products/${slug}/`;
   const imageDimensions = r2ImageDimensions(product?.coverImage, { width: 900, height: 675 });
 
   return {
@@ -186,7 +186,7 @@ export default async function ProductDetailPage({
   const commercialInfo = product.b2bInfo;
   const retailOffer = product.retailOffer;
   const quotationFaq = [{ question: ui.quoteQuestion, answer: ui.quoteAnswer }];
-  const productUrl = `${BASE_URL}/${lang}/products/${slug}`;
+  const productUrl = `${BASE_URL}/${lang}/products/${slug}/`;
   const modelSpec = product.specs.find((s) => s.key === 'Model');
   const sku = modelSpec?.value || slug.toUpperCase();
   const imageDimensions = r2ImageDimensions(product.coverImage, { width: 900, height: 675 });
@@ -212,7 +212,7 @@ export default async function ProductDetailPage({
     b2bInfo: commercialInfo,
     retailOffer,
     lang,
-    contactUrl: `${BASE_URL}/${lang}/contact`,
+    contactUrl: `${BASE_URL}/${lang}/contact/`,
     contactActionName: (schemaActionCopy[lang] || schemaActionCopy.en).name,
     contactActionDescription: (schemaActionCopy[lang] || schemaActionCopy.en).description,
   });

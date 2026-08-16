@@ -16,8 +16,10 @@ test('remote R2 images remain eligible for Next responsive image optimization', 
 
 test('homepage carousel prioritizes only the initial hero and defers the remaining slides', () => {
   assert.match(carousel, /import Image from 'next\/image'/);
+  assert.match(carousel, /useState<Set<number>>\(\(\) => new Set\(\[0\]\)\)/);
+  assert.match(carousel, /loadedSlides\.has\(index\)/);
+  assert.match(carousel, /window\.setTimeout\(\(\) => ensureSlideLoaded\(nextIndex\), 2500\)/);
   assert.match(carousel, /priority=\{index === 0\}/);
-  assert.match(carousel, /loading=\{index === 0 \? undefined : 'lazy'\}/);
   assert.match(carousel, /sizes="100vw"/);
 });
 

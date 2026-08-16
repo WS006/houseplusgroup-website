@@ -341,6 +341,31 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     });
   }
 
+  const productImageObject = {
+    '@type': 'ImageObject',
+    '@id': `${image}#image`,
+    url: image,
+    contentUrl: image,
+    width: imageDimensions.width,
+    height: imageDimensions.height,
+    caption: resolvedImageCaption,
+    description: resolvedImageDescription,
+    name: resolvedImageCaption,
+    representativeOfPage: true,
+    inLanguage: lang,
+    ...HOUSEPLUS_IMAGE_RIGHTS,
+    contentLocation: {
+      '@type': 'Place',
+      name: 'Zhongshan, Guangdong, China',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zhongshan',
+        addressRegion: 'Guangdong',
+        addressCountry: 'CN',
+      },
+    },
+  };
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -348,31 +373,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     name,
     description,
     inLanguage: lang,
-    image: image,
-    imageObject: {
-      '@type': 'ImageObject',
-      '@id': `${image}#image`,
-      url: image,
-      contentUrl: image,
-      width: imageDimensions.width,
-      height: imageDimensions.height,
-      caption: resolvedImageCaption,
-      description: resolvedImageDescription,
-      name: resolvedImageCaption,
-      representativeOfPage: true,
-      inLanguage: lang,
-      ...HOUSEPLUS_IMAGE_RIGHTS,
-      contentLocation: {
-        '@type': 'Place',
-        name: 'Zhongshan, Guangdong, China',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Zhongshan',
-          addressRegion: 'Guangdong',
-          addressCountry: 'CN',
-        },
-      },
-    },
+    image: [productImageObject],
     sku,
     mpn: sku,
     brand: {
@@ -393,7 +394,12 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         addressCountry: 'CN',
       },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url, inLanguage: lang },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+      inLanguage: lang,
+      primaryImageOfPage: { '@id': productImageObject['@id'] },
+    },
     isRelatedTo: { '@id': `${BASE_URL}/#organization` },
     ...(retailOffer && {
       offers: {
@@ -624,6 +630,32 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
   const inferredLanguage = (() => {
     try { return new URL(url).pathname.split('/').filter(Boolean)[0] || 'en'; } catch { return 'en'; }
   })();
+  const articleImage = image || DEFAULT_SOCIAL_IMAGE;
+  const articleImageDetails = getR2MediaDetails(articleImage);
+  const articleImageDimensions = r2ImageDimensions(articleImage, { width: 1200, height: 630 });
+  const articleImageObject = {
+    '@type': 'ImageObject',
+    '@id': `${articleImage}#image`,
+    url: articleImage,
+    contentUrl: articleImage,
+    width: articleImageDimensions.width,
+    height: articleImageDimensions.height,
+    caption: articleImageDetails?.title || headline,
+    description: articleImageDetails?.description || articleImageDetails?.alt || description,
+    name: articleImageDetails?.title || headline,
+    representativeOfPage: true,
+    ...HOUSEPLUS_IMAGE_RIGHTS,
+    contentLocation: {
+      '@type': 'Place',
+      name: 'Zhongshan, Guangdong, China',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zhongshan',
+        addressRegion: 'Guangdong',
+        addressCountry: 'CN',
+      },
+    },
+  };
 
   return {
     '@context': 'https://schema.org',
@@ -631,35 +663,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     '@id': `${url}#article`,
     headline,
     description,
-    image: image || DEFAULT_SOCIAL_IMAGE,
-    imageObject: (() => {
-      const articleImage = image || DEFAULT_SOCIAL_IMAGE;
-      const details = getR2MediaDetails(articleImage);
-      const dimensions = r2ImageDimensions(articleImage, { width: 1200, height: 630 });
-      return {
-      '@type': 'ImageObject',
-      '@id': `${articleImage}#image`,
-      url: articleImage,
-      contentUrl: articleImage,
-      width: dimensions.width,
-      height: dimensions.height,
-      caption: details?.title || headline,
-      description: details?.description || details?.alt || description,
-      name: details?.title || headline,
-      representativeOfPage: true,
-      ...HOUSEPLUS_IMAGE_RIGHTS,
-      contentLocation: {
-        '@type': 'Place',
-        name: 'Zhongshan, Guangdong, China',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Zhongshan',
-          addressRegion: 'Guangdong',
-          addressCountry: 'CN',
-        },
-      },
-      };
-    })(),
+    image: [articleImageObject],
     ...(datePublished && { datePublished }),
     ...(dateModified && { dateModified }),
     inLanguage: inferredLanguage,
@@ -699,6 +703,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
       '@type': 'WebPage',
       '@id': `${url}#webpage`,
       inLanguage: inferredLanguage,
+      primaryImageOfPage: { '@id': articleImageObject['@id'] },
     },
   };
 }

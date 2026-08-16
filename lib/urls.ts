@@ -1,6 +1,15 @@
 export const baseUrl = 'https://www.houseplus-ch.com';
 export const locales = ['en', 'es', 'de', 'fr', 'ar'] as const;
 
+/**
+ * Production routes use Next.js trailing-slash redirects. Sitemap and
+ * submission URLs must use the final 200-response URL, not the 308 source.
+ */
+export function canonicalSiteUrl(path = ''): string {
+  const normalizedPath = path.replace(/^\/+|\/+$/g, '');
+  return normalizedPath ? `${baseUrl}/${normalizedPath}/` : `${baseUrl}/`;
+}
+
 // All static page slugs (single source of truth)
 // Pages marked as noindex (privacy, terms, cookie-policy, sitemap-page) are excluded from sitemap
 export const staticPageSlugs = [
@@ -149,29 +158,25 @@ export const newsSlugs = [
 export function generateAllUrls(): string[] {
   const urls: string[] = [];
 
-  // Root homepage
-  urls.push(baseUrl);
-
   // Static pages (all languages)
   for (const lang of locales) {
     for (const slug of staticPageSlugs) {
-      const url = slug ? `${baseUrl}/${lang}/${slug}` : `${baseUrl}/${lang}`;
-      urls.push(url);
+      urls.push(canonicalSiteUrl(slug ? `${lang}/${slug}` : lang));
     }
 
     // Product pages
     for (const product of productSlugs) {
-      urls.push(`${baseUrl}/${lang}/products/${product}`);
+      urls.push(canonicalSiteUrl(`${lang}/products/${product}`));
     }
 
     // Region pages
     for (const region of regionSlugs) {
-      urls.push(`${baseUrl}/${lang}/regions/${region}`);
+      urls.push(canonicalSiteUrl(`${lang}/regions/${region}`));
     }
 
     // News pages
     for (const news of newsSlugs) {
-      urls.push(`${baseUrl}/${lang}/news/${news}`);
+      urls.push(canonicalSiteUrl(`${lang}/news/${news}`));
     }
   }
 
@@ -181,17 +186,16 @@ export function generateAllUrls(): string[] {
 // Generate main page URLs (for quick submission)
 export function generateMainPageUrls(): string[] {
   const urls: string[] = [];
-  urls.push(baseUrl);
 
   for (const lang of locales) {
-    urls.push(`${baseUrl}/${lang}`);
-    urls.push(`${baseUrl}/${lang}/about-us`);
-    urls.push(`${baseUrl}/${lang}/products`);
-    urls.push(`${baseUrl}/${lang}/news`);
-    urls.push(`${baseUrl}/${lang}/factory`);
-    urls.push(`${baseUrl}/${lang}/service`);
-    urls.push(`${baseUrl}/${lang}/faq`);
-    urls.push(`${baseUrl}/${lang}/contact`);
+    urls.push(canonicalSiteUrl(lang));
+    urls.push(canonicalSiteUrl(`${lang}/about-us`));
+    urls.push(canonicalSiteUrl(`${lang}/products`));
+    urls.push(canonicalSiteUrl(`${lang}/news`));
+    urls.push(canonicalSiteUrl(`${lang}/factory`));
+    urls.push(canonicalSiteUrl(`${lang}/service`));
+    urls.push(canonicalSiteUrl(`${lang}/faq`));
+    urls.push(canonicalSiteUrl(`${lang}/contact`));
   }
 
   return urls;

@@ -1,6 +1,7 @@
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { blogPosts } from '@/lib/blog-data';
 import { r2MediaUrl } from '@/lib/r2-media-map';
+import { canonicalSiteUrl } from '@/lib/urls';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 
@@ -179,8 +180,8 @@ function generateImageSitemap(): string {
   const pages = [...dynamicArticleImages, ...staticArticleImages, ...productImages, ...corePageImages];
 
   const urlEntries = pages.map((page) => {
-    const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${BASE_URL}/terms</image:license>\n    </image:image>`).join('\n');
-    return `  <url>\n    <loc>${BASE_URL}${page.pageUrl}</loc>\n    <lastmod>${lastmod}</lastmod>\n${imageTags}\n  </url>`;
+    const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
+    return `  <url>\n    <loc>${canonicalSiteUrl(page.pageUrl)}</loc>\n    <lastmod>${lastmod}</lastmod>\n${imageTags}\n  </url>`;
   }).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urlEntries}\n</urlset>`;
