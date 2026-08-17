@@ -849,3 +849,85 @@ export function generatePersonSchema(options: PersonSchemaOptions) {
     sameAs: sameAs || [],
   };
 }
+
+export interface ManufacturingSchemaOptions {
+  name: string;
+  description: string;
+  url: string;
+  lang: string;
+  image: string;
+}
+
+export function generateManufacturingSchema(options: ManufacturingSchemaOptions) {
+  const { name, description, url, lang, image } = options;
+  const imageObj = houseplusImageReference(image);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: lang,
+    isPartOf: { '@id': `${BASE_URL}/#website` },
+    publisher: { '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    primaryImageOfPage: imageObj,
+    about: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'HousePlus Group',
+      knowsAbout: [
+        'Advanced B2B Manufacturing',
+        'Solar Energy Systems OEM/ODM',
+        'Home Appliances Customization',
+        '3C Electronics Mass Production',
+        'Quality Control & Sourcing Workflow',
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zhongshan',
+        addressRegion: 'Guangdong',
+        addressCountry: 'CN',
+      },
+    },
+  };
+}
+
+export interface OEMServiceSchemaOptions {
+  name: string;
+  description: string;
+  url: string;
+  lang: string;
+  image: string;
+}
+
+export function generateOEMServiceSchema(options: OEMServiceSchemaOptions) {
+  const { name, description, url, lang, image } = options;
+  const imageObj = houseplusImageReference(image);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name,
+    description,
+    inLanguage: lang,
+    provider: {
+      '@id': `${BASE_URL}/#organization`,
+      name: 'HousePlus Group',
+    },
+    serviceType: 'OEM/ODM Custom Manufacturing & Sourcing',
+    areaServed: ['Worldwide', 'Nigeria', 'Germany', 'France', 'United Arab Emirates'],
+    image: imageObj,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+      inLanguage: lang,
+      primaryImageOfPage: { '@id': imageObj['@id'] },
+    },
+    potentialAction: {
+      '@type': 'Action',
+      name: 'Request OEM Quotation',
+      target: `${BASE_URL}/${lang}/contact`,
+    },
+  };
+}

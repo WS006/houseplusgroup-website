@@ -1,8 +1,8 @@
 {
   "baseUrl": "https://www.houseplus-ch.com",
-  "checkedAt": "2026-08-16T13:36:55.554Z",
+  "checkedAt": "2026-08-16T16:27:16.469Z",
   "expectedChecks": 56,
-  "passed": 38,
+  "passed": 48,
   "failed": [
     {
       "slug": "about-us",
@@ -89,151 +89,10 @@
       "pass": false
     },
     {
-      "slug": "faq",
-      "locale": "es",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/es/faq/",
-      "mainTextBytes": 9579,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 63,
-      "pass": false
-    },
-    {
-      "slug": "faq",
-      "locale": "de",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/de/faq/",
-      "mainTextBytes": 9188,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 62,
-      "pass": false
-    },
-    {
-      "slug": "faq",
-      "locale": "fr",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/fr/faq/",
-      "mainTextBytes": 10327,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 62,
-      "pass": false
-    },
-    {
-      "slug": "faq",
-      "locale": "ar",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/ar/faq/",
-      "mainTextBytes": 12185,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 62,
-      "pass": false
-    },
-    {
-      "slug": "news",
-      "locale": "fr",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/fr/news/",
-      "mainTextBytes": 10776,
-      "matchingEnglishPhrases": [
-        "is shaping the future of",
-        "shaping the future of smart",
-        "the future of smart home",
-        "future of smart home appliances",
-        "of smart home appliances with",
-        "smart home appliances with energy-efficient",
-        "home appliances with energy-efficient connected",
-        "appliances with energy-efficient connected and",
-        "with energy-efficient connected and intuitive",
-        "energy-efficient connected and intuitive solutions",
-        "connected and intuitive solutions for",
-        "and intuitive solutions for modern"
-      ],
-      "matchingEnglishPhraseCount": 17,
-      "pass": false
-    },
-    {
-      "slug": "products",
-      "locale": "es",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/es/products/",
-      "mainTextBytes": 27267,
-      "matchingEnglishPhrases": [
-        "mppt a solar charge controller",
-        "a solar charge controller hp-sol-mppt",
-        "solar charge controller hp-sol-mppt with",
-        "charge controller hp-sol-mppt with efficiency",
-        "controller hp-sol-mppt with efficiency for",
-        "hp-sol-mppt with efficiency for solar",
-        "with efficiency for solar systems"
-      ],
-      "matchingEnglishPhraseCount": 7,
-      "pass": false
-    },
-    {
       "slug": "products",
       "locale": "de",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/de/products/",
-      "mainTextBytes": 24540,
-      "matchingEnglishPhrases": [
-        "supports lead-acid gel and lifepo",
-        "lead-acid gel and lifepo batteries",
-        "a w max ghz wifi"
-      ],
-      "matchingEnglishPhraseCount": 3,
-      "pass": false
+      "pass": false,
+      "error": "fetch failed"
     },
     {
       "slug": "products",
@@ -257,12 +116,6 @@
       ],
       "matchingEnglishPhraseCount": 18,
       "pass": false
-    },
-    {
-      "slug": "service",
-      "locale": "en",
-      "pass": false,
-      "error": "The operation was aborted due to timeout"
     }
   ],
   "checks": [
@@ -546,92 +399,42 @@
       "locale": "es",
       "status": 200,
       "finalUrl": "https://www.houseplus-ch.com/es/faq/",
-      "mainTextBytes": 9579,
+      "mainTextBytes": 9740,
       "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
+        "power banks ssds cables q"
       ],
-      "matchingEnglishPhraseCount": 63,
-      "pass": false
+      "matchingEnglishPhraseCount": 1,
+      "pass": true
     },
     {
       "slug": "faq",
       "locale": "de",
       "status": 200,
       "finalUrl": "https://www.houseplus-ch.com/de/faq/",
-      "mainTextBytes": 9188,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 62,
-      "pass": false
+      "mainTextBytes": 9306,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
     },
     {
       "slug": "faq",
       "locale": "fr",
       "status": 200,
       "finalUrl": "https://www.houseplus-ch.com/fr/faq/",
-      "mainTextBytes": 10327,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 62,
-      "pass": false
+      "mainTextBytes": 10464,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
     },
     {
       "slug": "faq",
       "locale": "ar",
       "status": 200,
       "finalUrl": "https://www.houseplus-ch.com/ar/faq/",
-      "mainTextBytes": 12185,
-      "matchingEnglishPhrases": [
-        "faq find answers to common",
-        "find answers to common questions",
-        "answers to common questions about",
-        "products and services reviewed by",
-        "and services reviewed by jack",
-        "services reviewed by jack hu",
-        "reviewed by jack hu updated",
-        "by jack hu updated july",
-        "jack hu updated july iso",
-        "hu updated july iso certified",
-        "updated july iso certified factory",
-        "quick overview founded in we"
-      ],
-      "matchingEnglishPhraseCount": 62,
-      "pass": false
+      "mainTextBytes": 12556,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
     },
     {
       "slug": "news",
@@ -658,23 +461,10 @@
       "locale": "fr",
       "status": 200,
       "finalUrl": "https://www.houseplus-ch.com/fr/news/",
-      "mainTextBytes": 10776,
-      "matchingEnglishPhrases": [
-        "is shaping the future of",
-        "shaping the future of smart",
-        "the future of smart home",
-        "future of smart home appliances",
-        "of smart home appliances with",
-        "smart home appliances with energy-efficient",
-        "home appliances with energy-efficient connected",
-        "appliances with energy-efficient connected and",
-        "with energy-efficient connected and intuitive",
-        "energy-efficient connected and intuitive solutions",
-        "connected and intuitive solutions for",
-        "and intuitive solutions for modern"
-      ],
-      "matchingEnglishPhraseCount": 17,
-      "pass": false
+      "mainTextBytes": 10811,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
     },
     {
       "slug": "news",
@@ -734,32 +524,16 @@
       "locale": "es",
       "status": 200,
       "finalUrl": "https://www.houseplus-ch.com/es/products/",
-      "mainTextBytes": 27267,
-      "matchingEnglishPhrases": [
-        "mppt a solar charge controller",
-        "a solar charge controller hp-sol-mppt",
-        "solar charge controller hp-sol-mppt with",
-        "charge controller hp-sol-mppt with efficiency",
-        "controller hp-sol-mppt with efficiency for",
-        "hp-sol-mppt with efficiency for solar",
-        "with efficiency for solar systems"
-      ],
-      "matchingEnglishPhraseCount": 7,
-      "pass": false
+      "mainTextBytes": 27277,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
     },
     {
       "slug": "products",
       "locale": "de",
-      "status": 200,
-      "finalUrl": "https://www.houseplus-ch.com/de/products/",
-      "mainTextBytes": 24540,
-      "matchingEnglishPhrases": [
-        "supports lead-acid gel and lifepo",
-        "lead-acid gel and lifepo batteries",
-        "a w max ghz wifi"
-      ],
-      "matchingEnglishPhraseCount": 3,
-      "pass": false
+      "pass": false,
+      "error": "fetch failed"
     },
     {
       "slug": "products",
@@ -838,9 +612,45 @@
     },
     {
       "slug": "service",
-      "locale": "en",
-      "pass": false,
-      "error": "The operation was aborted due to timeout"
+      "locale": "es",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/service/",
+      "mainTextBytes": 4716,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
+    },
+    {
+      "slug": "service",
+      "locale": "de",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/service/",
+      "mainTextBytes": 4454,
+      "matchingEnglishPhrases": [
+        "moq pcs odm private label"
+      ],
+      "matchingEnglishPhraseCount": 1,
+      "pass": true
+    },
+    {
+      "slug": "service",
+      "locale": "fr",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/service/",
+      "mainTextBytes": 4702,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
+    },
+    {
+      "slug": "service",
+      "locale": "ar",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/service/",
+      "mainTextBytes": 5689,
+      "matchingEnglishPhrases": [],
+      "matchingEnglishPhraseCount": 0,
+      "pass": true
     },
     {
       "slug": "support",

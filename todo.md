@@ -25,10 +25,18 @@
 - [x] 制定并实施 Core Web Vitals、HTTPS、索引覆盖与购物富媒体的可控参数优化
 - [x] 使用既有 Google Search Console 服务账号 API 采集站点地图、搜索表现与逐 URL 索引基线
 
-- [ ] 实施新闻列表页 CollectionPage、ItemList、BreadcrumbList 与 ImageObject 结构化数据注入
-- [ ] 强化 FAQ 页面与主要内容页的 Schema 完整性及尾斜杠规范 URL 映射
-- [ ] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境
-- [ ] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态
+- [x] 实施新闻列表页 CollectionPage、ItemList、BreadcrumbList 与 ImageObject 结构化数据注入
+- [x] 强化 FAQ 页面与主要内容页的 Schema 完整性及尾斜杠规范 URL 映射
+- [x] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境
+- [x] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态
+- [ ] 修复 /404 与 /500 预渲染期间的 Next.js Document 构建错误并完成生产构建验证
+- [ ] 将最新制造能力与 OEM 支持优化安全推送到 GitHub main 并完成发布前检查
+- [ ] 在 Vercel 或项目管理界面手动触发生产部署并复验上线输出（需用户操作）
+- [ ] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态（部署后）
+- [ ] 强化 FAQ 页面与主要内容页的 Schema 完整性及尾斜杠规范 URL 映射（部署后联动）
+- [ ] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境（部署后联动）
+- [ ] 实施新闻列表页 CollectionPage、ItemList、BreadcrumbList 与 ImageObject 结构化数据注入（部署后联动）
+- [ ] 记录本次发布前构建阻塞：Next.js /404 与 /500 Document 上下文错误
 - [x] 重构首页 Organization JSON-LD，补齐已验证的 sameAs、Brand、PostalAddress、ContactPoint 与制造商实体字段
 - [x] 为首页实体 JSON-LD 增加回归测试并完成生产 Schema 输出复验
 
@@ -39,3 +47,6 @@
 - [x] 依据 GEO/AEO 策略手册完成全站实体、内容、Schema、图片、爬虫、站外引用与监测缺口审计
 - [x] 实施全站剩余可控 GEO/AEO 技术与内容优化并补充回归测试
 - [x] 完成生产复验并区分可控优化、真实业务资料依赖与站外权威引用行动项
+
+- [x] 制定并发布后续长效 GEO/AEO 运营策略指南
+- [x] 制造能力与 OEM 支持：建立完整的实体内容、多语言翻译与 Schema/ImageObject/FAQ/HowTo 结构化数据

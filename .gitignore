@@ -39,3 +39,4 @@ next-env.d.ts
 /cloudflare/media-control-plane/*_request.json
 /audit/r2-switch/
 /cloudflare/media-control-plane/diagnose_publish_asset.mjs
+.env*
