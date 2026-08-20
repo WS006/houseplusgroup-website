@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | HousePlus',
+  robots: 'noindex, follow',
+};
 
 export default function RootNotFound() {
   return (

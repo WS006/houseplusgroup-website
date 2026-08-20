@@ -26,9 +26,51 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { lang: string; slug: string[] } }): Promise<Metadata> {
   const { lang, slug } = params;
   if (!validLangs.includes(lang)) {
-    return {};
+    return {
+      title: 'Page Not Found | HousePlus',
+      robots: 'noindex, follow',
+    };
   }
   const fullSlug = slug?.join('/') || '';
+  if (!fullSlug) {
+    return {
+      title: 'Page Not Found | HousePlus',
+      robots: 'noindex, follow',
+    };
+  }
+
+  // This catch-all route must not manufacture indexable metadata for unknown
+  // paths. Validate that Storyblok can resolve either the requested story or a
+  // legitimate child collection before emitting canonical/hreflang signals.
+  let storyExists = false;
+  let childStoriesExist = false;
+  try {
+    const storyblokApi = getStoryblokApi();
+    const [storyResult, childrenResult] = await Promise.allSettled([
+      storyblokApi.getStory(fullSlug, {
+        version: 'published',
+        language: lang,
+        resolve_links: 'url',
+      }),
+      storyblokApi.getStories({
+        starts_with: `${fullSlug}/`,
+        version: 'published',
+        language: lang,
+      }),
+    ]);
+    storyExists = storyResult.status === 'fulfilled' && Boolean(storyResult.value.data?.story);
+    childStoriesExist = childrenResult.status === 'fulfilled' && Boolean(childrenResult.value.data?.stories?.length);
+  } catch {
+    // A failed lookup is treated as not found, matching the page renderer's
+    // existing behaviour and avoiding an indexable soft-404 during failures.
+  }
+
+  if (!storyExists && !childStoriesExist) {
+    return {
+      title: 'Page Not Found | HousePlus',
+      robots: 'noindex, follow',
+    };
+  }
   const titleParts = fullSlug.split('/').filter(p => p);
   
   let title = '';
@@ -225,7 +267,7 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
 
   const BASE_URL = 'https://www.houseplus-ch.com';
   const LOCALES = ['en', 'es', 'de', 'fr', 'ar'];
-  const pathSlug = slug?.join('/') || '';
+  const pathSlug = fullSlug;
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
     langAlternates[locale] = pathSlug ? `${BASE_URL}/${locale}/${pathSlug}` : `${BASE_URL}/${locale}`;

@@ -20,6 +20,54 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Consolidate historical page aliases that were previously crawlable with
+      // generic or duplicated titles. Keep specific aliases before the generic
+      // /products/:slug rule so they resolve to their real canonical pages.
+      {
+        source: '/products',
+        destination: '/en/products',
+        permanent: true,
+      },
+      {
+        source: '/products/products',
+        destination: '/en/products',
+        permanent: true,
+      },
+      {
+        source: '/products/factory',
+        destination: '/en/factory',
+        permanent: true,
+      },
+      {
+        source: '/contact-us',
+        destination: '/en/contact',
+        permanent: true,
+      },
+      {
+        source: '/about-us/contact',
+        destination: '/en/contact',
+        permanent: true,
+      },
+      {
+        source: '/about-us/team',
+        destination: '/en/team',
+        permanent: true,
+      },
+      {
+        source: '/regions/careers',
+        destination: '/en/careers',
+        permanent: true,
+      },
+      {
+        source: '/news/factory',
+        destination: '/en/factory',
+        permanent: true,
+      },
+      {
+        source: '/news/2026-appliances-market-update',
+        destination: '/en/news/2026-appliances-market-update',
+        permanent: true,
+      },
       {
         source: '/products/:slug',
         destination: '/en/products/:slug',

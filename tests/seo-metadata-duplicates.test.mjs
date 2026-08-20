@@ -44,3 +44,42 @@ test('French electronics and smart-home market pages retain distinct metadata', 
   assert.match(smartHome, /Tendances du marché mondial des appareils électroménagers intelligents 2026/);
   assert.doesNotMatch(electronics, /Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents/);
 });
+
+test('invalid product slugs return a real noindex 404 instead of an indexable generic product page', () => {
+  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  assert.match(productPage, /import \{ notFound \} from 'next\/navigation';/);
+  assert.match(productPage, /if \(!baseProduct \|\| !validLangs\.includes\(lang\)\) \{\s*return \{\s*title: 'Product Not Found \| HousePlus',\s*robots: 'noindex, follow',/s);
+  assert.match(productPage, /if \(!baseProduct \|\| !validLangs\.includes\(lang\)\) \{\s*notFound\(\);/s);
+  assert.match(productPage, /if \(!product\) notFound\(\);/);
+});
+
+test('confirmed historical aliases permanently consolidate to their unique canonical pages', () => {
+  const nextConfig = read('next.config.js');
+  for (const [source, destination] of [
+    ['/products/products', '/en/products'],
+    ['/products/factory', '/en/factory'],
+    ['/contact-us', '/en/contact'],
+    ['/about-us/contact', '/en/contact'],
+    ['/about-us/team', '/en/team'],
+    ['/regions/careers', '/en/careers'],
+    ['/news/factory', '/en/factory'],
+    ['/news/2026-appliances-market-update', '/en/news/2026-appliances-market-update'],
+  ]) {
+    assert.match(nextConfig, new RegExp(`source: '${source.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}',\\s*destination: '${destination.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}',\\s*permanent: true`, 's'));
+  }
+});
+
+test('catch-all and localized not-found routes never emit indexable metadata for unknown URLs', () => {
+  const catchAll = read('app/[lang]/[...slug]/page.tsx');
+  const localizedNotFound = read('app/[lang]/not-found.tsx');
+  const rootNotFound = read('app/not-found.tsx');
+  assert.match(catchAll, /Promise\.allSettled\(\[/);
+  assert.match(catchAll, /if \(!storyExists && !childStoriesExist\) \{\s*return \{\s*title: 'Page Not Found \| HousePlus',\s*robots: 'noindex, follow',/s);
+  assert.match(catchAll, /must not manufacture indexable metadata for unknown/);
+  assert.match(localizedNotFound, /export function generateMetadata/);
+  assert.match(localizedNotFound, /robots: 'noindex, follow'/);
+  assert.match(localizedNotFound, /Page Not Found \| HousePlus/);
+  assert.match(rootNotFound, /export const metadata: Metadata/);
+  assert.match(rootNotFound, /title: 'Page Not Found \| HousePlus'/);
+  assert.match(rootNotFound, /robots: 'noindex, follow'/);
+});

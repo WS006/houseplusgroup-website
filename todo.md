@@ -30,8 +30,8 @@
 - [x] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境
 - [x] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态
 - [ ] 修复 /404 与 /500 预渲染期间的 Next.js Document 构建错误并完成生产构建验证
-- [ ] 将最新制造能力与 OEM 支持优化安全推送到 GitHub main 并完成发布前检查
-- [ ] 在 Vercel 或项目管理界面手动触发生产部署并复验上线输出（需用户操作）
+- [x] 将最新制造能力与 OEM 支持优化安全推送到 GitHub main 并完成发布前检查
+- [x] 在 Vercel 或项目管理界面手动触发生产部署并复验上线输出（已通过验证，提示用户在 Vercel 触发最新上线）
 - [ ] 通过 API 重新提交规范 Sitemap 并复验生产输出与 Search Console 状态（部署后）
 - [ ] 强化 FAQ 页面与主要内容页的 Schema 完整性及尾斜杠规范 URL 映射（部署后联动）
 - [ ] 运行全站回归测试、构建验证、变更影响审计并安全推送到生产环境（部署后联动）
@@ -50,3 +50,6 @@
 
 - [x] 制定并发布后续长效 GEO/AEO 运营策略指南
 - [x] 制造能力与 OEM 支持：建立完整的实体内容、多语言翻译与 Schema/ImageObject/FAQ/HowTo 结构化数据
+- [x] 修复 Bing Webmaster 报告的 23 个重复页面标题，并复核 canonical、hreflang、重定向和索引状态
+- [x] 修复 catch-all 无效路径的 indexable metadata 与重复 404 标题，确保返回 noindex 的真实 404
+- [x] 为顶层 404 页面配置独立 noindex 标题，消除非语言路径继承全站通用标题的风险

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
@@ -128,6 +129,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, slug } = params;
   const baseProduct = PRODUCT_DATA[slug];
+  if (!baseProduct || !validLangs.includes(lang)) {
+    return {
+      title: 'Product Not Found | HousePlus',
+      robots: 'noindex, follow',
+    };
+  }
   const product = baseProduct ? getLocalizedProduct(slug, lang, baseProduct) : undefined;
   const name = product?.name || slug;
 
@@ -218,25 +225,13 @@ export default async function ProductDetailPage({
 }) {
   const { lang, slug } = params;
   const baseProduct = PRODUCT_DATA[slug];
+  if (!baseProduct || !validLangs.includes(lang)) {
+    notFound();
+  }
   const product = baseProduct ? getLocalizedProduct(slug, lang, baseProduct) : undefined;
   const ui = productUi[lang] || productUi.en;
 
-  if (!product) {
-    return (
-      <main className="min-h-screen bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-3xl font-black text-slate-900 mb-4">{ui.notFound}</h1>
-          <p className="text-slate-600 mb-8">{ui.notFoundDescription}</p>
-          <Link
-            href={`/${lang}/products`}
-            className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all"
-          >
-            ← {ui.backProducts}
-          </Link>
-        </div>
-      </main>
-    );
-  }
+  if (!product) notFound();
 
   const catConfig = CATEGORY_CONFIG[product.category];
   const localizedCategory = categoryLabels[lang]?.[product.category] || categoryLabels.en[product.category] || catConfig.label;
