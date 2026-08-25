@@ -1,9 +1,7 @@
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ServiceWidget from '@/components/ServiceWidget';
-import ChatBot from '@/components/ChatBot';
-import BackToTop from '@/components/BackToTop';
+import FloatingTools from '@/components/FloatingTools';
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN || '',
@@ -30,9 +28,7 @@ export default async function LangLayout({
       <Header lang={lang} />
       <main className="min-h-screen">{children}</main>
       <Footer lang={lang} />
-      <ServiceWidget lang={lang} />
-      <ChatBot lang={lang} />
-      <BackToTop />
+      <FloatingTools lang={lang} />
     </>
   );
 }

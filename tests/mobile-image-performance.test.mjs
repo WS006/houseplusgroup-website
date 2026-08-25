@@ -42,3 +42,11 @@ test('mobile headings wrap long localized compound terms rather than widening th
   assert.match(globals, /overflow-wrap: anywhere/);
   assert.match(globals, /hyphens: auto/);
 });
+
+test('floating interaction tools are delayed so they do not block the initial homepage bundle', () => {
+  const layout = readFileSync(new URL('../app/[lang]/layout.tsx', import.meta.url), 'utf8');
+  const floatingTools = readFileSync(new URL('../components/FloatingTools.tsx', import.meta.url), 'utf8');
+  assert.match(layout, /import FloatingTools from '@\/components\/FloatingTools'/);
+  assert.doesNotMatch(layout, /import (ServiceWidget|ChatBot|BackToTop)/);
+  assert.match(floatingTools, /dynamic\(\(\) => import\('@\/components\/(ServiceWidget|ChatBot|BackToTop)'\), \{ ssr: false \}\)/);
+});

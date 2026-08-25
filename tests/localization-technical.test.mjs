@@ -147,8 +147,10 @@ test('confirmed missing-data products publish warranty and category certificatio
 
 test('online support widget receives the active locale and provides all five language label sets', () => {
   const langLayout = read('app/[lang]/layout.tsx');
+  const floatingTools = read('components/FloatingTools.tsx');
   const widget = read('components/ServiceWidget.tsx');
-  assert.match(langLayout, /<ServiceWidget lang=\{lang\} \/>/);
+  assert.match(langLayout, /<FloatingTools lang=\{lang\} \/>/);
+  assert.match(floatingTools, /<ServiceWidget lang=\{lang\} \/>/);
   for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
     assert.match(widget, new RegExp(`${locale}: \\{ service:`));
   }
@@ -170,8 +172,10 @@ test('related-product cards localize product data and the details action in ever
 
 test('floating chat receives the active locale, supplies five language copy sets, and clears mobile title space', () => {
   const langLayout = read('app/[lang]/layout.tsx');
+  const floatingTools = read('components/FloatingTools.tsx');
   const chat = read('components/ChatBot.tsx');
-  assert.match(langLayout, /<ChatBot lang=\{lang\} \/>/);
+  assert.match(langLayout, /<FloatingTools lang=\{lang\} \/>/);
+  assert.match(floatingTools, /<ChatBot lang=\{lang\} \/>/);
   for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
     assert.match(chat, new RegExp(`${locale}: \\{`));
   }
