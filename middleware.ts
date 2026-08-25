@@ -64,13 +64,25 @@ export function middleware(request: NextRequest) {
   // Permanently consolidate historical home aliases to the language root.
   if (firstSegment === 'home') {
     const url = request.nextUrl.clone();
-    url.pathname = `/${defaultLocale}`;
+    const legacyHomeTail = segments.slice(2).filter(Boolean).join('/');
+    url.pathname = legacyHomeTail ? `/${defaultLocale}/${legacyHomeTail}` : `/${defaultLocale}`;
     return NextResponse.redirect(url, 308);
   }
 
   if (validLangs.includes(firstSegment) && segments[2] === 'home') {
     const url = request.nextUrl.clone();
-    url.pathname = `/${firstSegment}`;
+    const legacyHomeTail = segments.slice(3).filter(Boolean).join('/');
+    url.pathname = legacyHomeTail ? `/${firstSegment}/${legacyHomeTail}` : `/${firstSegment}`;
+    return NextResponse.redirect(url, 308);
+  }
+
+  // Historical crawls also discovered language-prefixed /index.html/ copies.
+  // Preserve their requested content path rather than redirecting every deep
+  // alias to the language homepage, which Google can treat as a soft 404.
+  if (validLangs.includes(firstSegment) && segments[2] === 'index.html') {
+    const url = request.nextUrl.clone();
+    const legacyIndexTail = segments.slice(3).filter(Boolean).join('/');
+    url.pathname = legacyIndexTail ? `/${firstSegment}/${legacyIndexTail}` : `/${firstSegment}`;
     return NextResponse.redirect(url, 308);
   }
 

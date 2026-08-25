@@ -76,3 +76,5 @@
 - [ ] 核验 Breadcrumbs itemListElement.item 共享详情中的状态、URL 示例与生产 Schema 字段一致性
 - [ ] 从 Pages 问题截图提取 Crawled-not-indexed、canonical、重定向与替代页面 URL 样本并按路径模式复测
 - [x] 为 Contact 的 product 与 region 预填查询参数页添加 noindex，保留表单上下文但避免重复索引
+- [ ] 从新增 Soft 404 截图提取 URL 样本，核验当前生产状态并修复仍存在的根因
+- [x] 修复旧 home 与 index.html 深层路径被错误归并到语言首页的问题，保留有效内容尾部并永久重定向到对应规范页

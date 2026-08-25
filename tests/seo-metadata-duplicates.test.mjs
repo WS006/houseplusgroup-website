@@ -77,6 +77,17 @@ test('confirmed historical aliases permanently consolidate to their unique canon
   }
 });
 
+test('deep legacy home and index.html paths retain their content tail during canonical redirects', () => {
+  const middleware = read('middleware.ts');
+  assert.match(middleware, /const legacyHomeTail = segments\.slice\(2\)\.filter\(Boolean\)\.join\('\/'\);/);
+  assert.match(middleware, /url\.pathname = legacyHomeTail \? `\/\$\{defaultLocale\}\/\$\{legacyHomeTail\}` : `\/\$\{defaultLocale\}`/);
+  assert.match(middleware, /const legacyHomeTail = segments\.slice\(3\)\.filter\(Boolean\)\.join\('\/'\);/);
+  assert.match(middleware, /url\.pathname = legacyHomeTail \? `\/\$\{firstSegment\}\/\$\{legacyHomeTail\}` : `\/\$\{firstSegment\}`/);
+  assert.match(middleware, /segments\[2\] === 'index\.html'/);
+  assert.match(middleware, /const legacyIndexTail = segments\.slice\(3\)\.filter\(Boolean\)\.join\('\/'\);/);
+  assert.match(middleware, /url\.pathname = legacyIndexTail \? `\/\$\{firstSegment\}\/\$\{legacyIndexTail\}` : `\/\$\{firstSegment\}`/);
+});
+
 test('catch-all and localized not-found routes never emit indexable metadata for unknown URLs', () => {
   const catchAll = read('app/[lang]/[...slug]/page.tsx');
   const localizedNotFound = read('app/[lang]/not-found.tsx');
