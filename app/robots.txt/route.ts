@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-static';
+export const revalidate = 86400;
+
 export async function GET() {
   const baseUrl = 'https://www.houseplus-ch.com';
-  const INDEXNOW_KEY = '084fadfd7e4a435b942858f905846430';
-
   const robotsTxt = `# Robots.txt for HousePlus Website
 # https://www.houseplus-ch.com
 # SEO / Generative Engine Optimization (GEO) / Answer Engine Optimization (AEO) Configuration
@@ -233,19 +234,15 @@ Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/feed.xml
 Sitemap: ${baseUrl}/image-sitemap.xml
 
-# ====================
-# INDEXNOW
-# ====================
-
-Host: ${baseUrl}
-IndexNow: ${baseUrl}/${INDEXNOW_KEY}.txt
+# IndexNow is exposed through the key endpoint and submission API; robots.txt
+# intentionally contains only crawler directives and Sitemap declarations.
 `;
 
   return new NextResponse(robotsTxt, {
     status: 200,
     headers: {
       'Content-Type': 'text/plain',
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800',
     },
   });
 }

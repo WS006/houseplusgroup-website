@@ -5,6 +5,18 @@ import test from 'node:test';
 const root = new URL('..', import.meta.url);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
+test('robots and llms discovery routes are statically cacheable for crawler reliability', () => {
+  const robots = read('app/robots.txt/route.ts');
+  const llms = read('app/llms.txt/route.ts');
+  assert.match(robots, /export const dynamic = 'force-static';/);
+  assert.match(robots, /export const revalidate = 86400;/);
+  assert.match(robots, /s-maxage=86400/);
+  assert.doesNotMatch(robots, /(?:^|\n)(?:Host|IndexNow):/);
+  assert.match(llms, /export const dynamic = 'force-static';/);
+  assert.match(llms, /export const revalidate = 86400;/);
+  assert.match(llms, /s-maxage=86400/);
+});
+
 test('AI retrieval crawlers receive explicit access to public HousePlus knowledge resources', () => {
   const robots = read('app/robots.txt/route.ts');
   for (const agent of ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'PerplexityBot', 'anthropic-ai', 'Claude-Web', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User']) {
