@@ -78,3 +78,4 @@
 - [x] 为 Contact 的 product 与 region 预填查询参数页添加 noindex，保留表单上下文但避免重复索引
 - [x] 从新增 Soft 404 截图提取 URL 样本，核验当前生产状态并修复仍存在的根因
 - [x] 修复旧 home 与 index.html 深层路径被错误归并到语言首页的问题，保留有效内容尾部并永久重定向到对应规范页
+- [x] 对 Pages、Breadcrumbs、Image Metadata、Core Web Vitals 与 HTTPS 开展新一轮全面生产、Sitemap、结构化数据及 GSC 可读取数据复核
