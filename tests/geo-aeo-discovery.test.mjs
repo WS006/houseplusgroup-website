@@ -43,6 +43,8 @@ test('llms discovery document uses verified commercial boundaries and canonical 
   assert.match(llms, /441\+ wholesale clients across 53\+ countries/);
   assert.match(llms, /product- and order-specific/);
   assert.match(llms, /https:\/\/www\.houseplus-ch\.com\/en\/brand\//);
+  assert.match(llms, /\[HousePlus website\]\(https:\/\/www\.houseplus-ch\.com\/en\/\)/);
+  assert.match(llms, /\[Product catalog\]\(https:\/\/www\.houseplus-ch\.com\/en\/products\/\)/);
   for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
     assert.match(llms, new RegExp(`https:\\/\\/www\\.houseplus-ch\\.com\\/${locale}\\/brand\\/`));
     assert.match(llms, new RegExp(`https:\\/\\/www\\.houseplus-ch\\.com\\/${locale}\\/products\\/`));
