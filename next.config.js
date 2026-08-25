@@ -14,6 +14,9 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
   },
   compress: true,
+  // Keep browser source maps available for production error diagnostics.
+  // This project ships no server secrets to client bundles.
+  productionBrowserSourceMaps: true,
   poweredByHeader: false,
   async rewrites() {
     return [];

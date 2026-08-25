@@ -12,6 +12,7 @@ const globals = readFileSync(new URL('../app/globals.css', import.meta.url), 'ut
 test('remote R2 images remain eligible for Next responsive image optimization', () => {
   assert.doesNotMatch(config, /unoptimized:\s*true/);
   assert.match(config, /hostname:\s*'images\.houseplus-ch\.com'/);
+  assert.match(config, /productionBrowserSourceMaps:\s*true/);
 });
 
 test('homepage carousel exposes every slide for discovery while prioritizing only the initial hero', () => {
