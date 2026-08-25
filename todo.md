@@ -61,3 +61,5 @@
 - [ ] 以真实数据审计并优化 Google Search Console 十项核心指标、Bing 重复标题和图片发现问题
 - [x] 为 20 个多语言地区详情页补齐可见 Breadcrumb 与 BreadcrumbList 结构化数据
 - [x] 同步 Sitemap 中首页、地区列表与地区详情页的真实修改日期
+- [x] 移除 Search Console 中拼写错误且处理失败的 image-sitemap.xm 历史提交
+- [x] 将已部署的规范 Sitemap 与图片 Sitemap 重新提交至 Search Console
