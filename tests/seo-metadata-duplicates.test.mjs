@@ -94,6 +94,16 @@ test('homepage carousel exposes every SEO image and Alt Text in HTML while prote
   assert.match(carousel, /fetchPriority=\{index === 0 \? 'high' : 'low'\}/);
 });
 
+test('product listing canonicals and hreflang URLs use the trailing-slash URLs served in production', () => {
+  const productsPage = read('app/[lang]/products/page.tsx');
+  assert.match(productsPage, /\$\{BASE_URL\}\/\$\{locale\}\/products\/\?category=\$\{category\}/);
+  assert.match(productsPage, /\$\{BASE_URL\}\/\$\{locale\}\/products\//);
+  assert.match(productsPage, /const canonicalUrl = isValidCategory\s*\? `\$\{BASE_URL\}\/\$\{lang\}\/products\/\?category=\$\{category\}`\s*:\s*`\$\{BASE_URL\}\/\$\{lang\}\/products\/`/s);
+  assert.match(productsPage, /canonical: canonicalUrl/);
+  assert.match(productsPage, /url: canonicalUrl/);
+  assert.doesNotMatch(productsPage, /products\?category=\$\{category\}/);
+});
+
 test('localized region detail pages expose a visible Breadcrumb and localized BreadcrumbList labels', () => {
   const regionPage = read('app/[lang]/regions/[region]/page.tsx');
   const breadcrumb = read('components/Breadcrumb.tsx');

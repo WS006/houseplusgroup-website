@@ -107,21 +107,25 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
 
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
-    langAlternates[locale] = isValidCategory ? `${BASE_URL}/${locale}/products?category=${category}` : `${BASE_URL}/${locale}/products`;
+    langAlternates[locale] = isValidCategory ? `${BASE_URL}/${locale}/products/?category=${category}` : `${BASE_URL}/${locale}/products/`;
   }
-  langAlternates['x-default'] = isValidCategory ? `${BASE_URL}/en/products?category=${category}` : `${BASE_URL}/en/products`;
+  langAlternates['x-default'] = isValidCategory ? `${BASE_URL}/en/products/?category=${category}` : `${BASE_URL}/en/products/`;
+
+  const canonicalUrl = isValidCategory
+    ? `${BASE_URL}/${lang}/products/?category=${category}`
+    : `${BASE_URL}/${lang}/products/`;
 
   return {
     title,
     description,
     alternates: {
-      canonical: isValidCategory ? `${BASE_URL}/${lang}/products?category=${category}` : `${BASE_URL}/${lang}/products`,
+      canonical: canonicalUrl,
       languages: langAlternates,
     },
     openGraph: featuredProduct ? {
       title,
       description,
-      url: isValidCategory ? `${BASE_URL}/${lang}/products?category=${category}` : `${BASE_URL}/${lang}/products`,
+      url: canonicalUrl,
       siteName: 'HousePlus',
       locale: getOGLocale(lang),
       alternateLocale: LOCALES.filter((locale) => locale !== lang).map((locale) => ogLocales[locale]),

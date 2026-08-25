@@ -63,3 +63,9 @@
 - [x] 同步 Sitemap 中首页、地区列表与地区详情页的真实修改日期
 - [x] 移除 Search Console 中拼写错误且处理失败的 image-sitemap.xm 历史提交
 - [x] 将已部署的规范 Sitemap 与图片 Sitemap 重新提交至 Search Console
+- [ ] 专项核验并优化 Pages、Breadcrumbs、Image Metadata、Core Web Vitals 与 HTTPS 五项指标
+- [ ] 建立本机 Chrome 连接并读取五项 Search Console 报告的 URL 分组与错误详情
+- [ ] 通过已连接的本机 Chrome 提取五项报告的实时状态、URL 分组与错误样本
+- [ ] 读取用户共享的 Google Sheets 导出数据并分析五项指标的 URL 分组与错误根因
+- [ ] 优先提取并处理 Pages 中 Soft 404、5xx、404、重定向与 canonical 问题的实际 URL 样本
+- [x] 修复产品分类筛选页 canonical、hreflang 与实际尾斜杠 URL 不一致问题
