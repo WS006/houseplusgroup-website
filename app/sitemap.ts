@@ -6,7 +6,8 @@ const lastModDates: Record<string, string> = {
   // Homepage carousel images were made crawler-discoverable on 2026-08-25.
   '': '2026-08-25',
   'about-us': '2026-08-16',
-  'products': '2026-08-16',
+  // Product listing metadata and category canonical URLs were normalized on 2026-08-25.
+  'products': '2026-08-25',
   'news': '2026-06-29',
   'factory': '2026-08-16',
   'service': '2026-08-16',
@@ -43,6 +44,12 @@ const lastModDates: Record<string, string> = {
 // Region detail pages received visible localized breadcrumbs and BreadcrumbList
 // schema on this date. Keep this separate from immutable product update dates.
 const regionLastModified = '2026-08-25';
+
+// These query-filtered catalog views publish distinct, indexable metadata. List
+// their exact final URLs in the sitemap so Google receives the same canonical
+// and hreflang signal as the rendered product listing page.
+const productCategoryFilters = ['solar', 'home-appliances', '3c-electronics'] as const;
+const productCategoryLastModified = '2026-08-25';
 
 // All static page slugs from single source of truth
 const staticPages = staticPageSlugs.map(slug => {
@@ -109,6 +116,30 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
   return entries;
 }
 
+function buildProductCategoryEntries(): MetadataRoute.Sitemap {
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const category of productCategoryFilters) {
+    const languages: Record<string, string> = {};
+    for (const lang of locales) {
+      languages[lang] = `${canonicalSiteUrl(`${lang}/products`)}?category=${category}`;
+    }
+    languages['x-default'] = `${canonicalSiteUrl('en/products')}?category=${category}`;
+
+    for (const lang of locales) {
+      entries.push({
+        url: languages[lang],
+        lastModified: productCategoryLastModified,
+        changeFrequency: 'weekly',
+        priority: lang === 'en' ? 0.75 : 0.675,
+        alternates: { languages },
+      });
+    }
+  }
+
+  return entries;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const allEntries: MetadataRoute.Sitemap = [];
 
@@ -117,6 +148,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const entries = buildUrlEntry(page.slug, page.priority, page.changefreq);
     allEntries.push(...entries);
   }
+
+  allEntries.push(...buildProductCategoryEntries());
 
   // Product detail pages carry verified ES/DE/FR/AR translations and are published
   // as five independent language URLs with reciprocal hreflang annotations.

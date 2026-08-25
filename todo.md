@@ -69,3 +69,5 @@
 - [ ] 读取用户共享的 Google Sheets 导出数据并分析五项指标的 URL 分组与错误根因
 - [ ] 优先提取并处理 Pages 中 Soft 404、5xx、404、重定向与 canonical 问题的实际 URL 样本
 - [x] 修复产品分类筛选页 canonical、hreflang 与实际尾斜杠 URL 不一致问题
+- [ ] 整合五份共享 Search Console 导出表格，建立 Pages、Core Web Vitals、Breadcrumbs、Image Metadata 与 HTTPS 的 URL 级问题清单
+- [x] 将已声明为可索引的产品分类筛选页规范 URL 纳入 Sitemap 并同步真实更新时间
