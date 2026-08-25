@@ -81,4 +81,4 @@
 - [x] 对 Pages、Breadcrumbs、Image Metadata、Core Web Vitals 与 HTTPS 开展新一轮全面生产、Sitemap、结构化数据及 GSC 可读取数据复核
 - [x] 修复 PageSpeed 长截图显示的 robots.txt 语法、llms.txt 获取可靠性、首页低对比度与移动端 Carousel 触控目标问题
 - [ ] 进一步定位 PageSpeed 仍提示的未使用 JavaScript/CSS、长主线程任务与图片交付资源，并在有明确资源证据后优化
-- [ ] 核验 PageSpeed 报告指出的首方 vendor JavaScript source map 缺失，评估是否安全提供生产调试映射
+- [x] 核验并修复 PageSpeed 报告指出的首方 vendor JavaScript source map 缺失，确认公开映射未检出服务端密钥且 PageSpeed Agentic Browsing 达到 3/3
