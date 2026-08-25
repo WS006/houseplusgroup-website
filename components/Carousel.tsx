@@ -131,7 +131,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             alt={item.image.alt || item.title}
             title={item.image.alt || item.title}
             fill
-            sizes="100vw"
+            sizes="(max-width: 767px) 100vw, 1400px"
             priority={index === 0}
             loading={index === 0 ? 'eager' : 'lazy'}
             fetchPriority={index === 0 ? 'high' : 'low'}

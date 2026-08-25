@@ -22,7 +22,7 @@ test('homepage carousel exposes every slide for discovery while prioritizing onl
   assert.match(carousel, /priority=\{index === 0\}/);
   assert.match(carousel, /loading=\{index === 0 \? 'eager' : 'lazy'\}/);
   assert.match(carousel, /fetchPriority=\{index === 0 \? 'high' : 'low'\}/);
-  assert.match(carousel, /sizes="100vw"/);
+  assert.match(carousel, /sizes="\(max-width: 767px\) 100vw, 1400px"/);
 });
 
 test('below-the-fold industry and product LCP images declare responsive sizes', () => {
