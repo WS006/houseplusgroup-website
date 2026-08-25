@@ -20,12 +20,18 @@ const copy: Record<Locale, Record<string, string>> = {
 export const dynamicParams = false;
 export function generateStaticParams() { return validLangs.map((lang) => ({ lang })); }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: { params: { lang: string }; searchParams?: { product?: string; region?: string } }): Promise<Metadata> {
   const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
-  return generateSEOMetadata({ title: copy[lang].title, description: copy[lang].meta, keywords: ['contact', 'inquiry', 'wholesale', 'sales', 'HousePlus', 'OEM', 'ODM'], url: `/${lang}/contact`, lang, type: 'website' });
+  const isInquiryPrefill = typeof searchParams?.product === 'string' || typeof searchParams?.region === 'string';
+  return {
+    ...generateSEOMetadata({ title: copy[lang].title, description: copy[lang].meta, keywords: ['contact', 'inquiry', 'wholesale', 'sales', 'HousePlus', 'OEM', 'ODM'], url: `/${lang}/contact`, lang, type: 'website' }),
+    // Product and region parameters only prefill the inquiry form. They do not
+    // create standalone contact content and must not compete with /contact/.
+    ...(isInquiryPrefill ? { robots: 'noindex, follow' } : {}),
+  };
 }
 
-export default function ContactPage({ params, searchParams }: { params: { lang: string }; searchParams?: { product?: string } }) {
+export default function ContactPage({ params, searchParams }: { params: { lang: string }; searchParams?: { product?: string; region?: string } }) {
   const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
   const t = copy[lang];
   const productContext = typeof searchParams?.product === 'string' ? searchParams.product.slice(0, 200) : '';

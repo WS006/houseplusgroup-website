@@ -71,3 +71,8 @@
 - [x] 修复产品分类筛选页 canonical、hreflang 与实际尾斜杠 URL 不一致问题
 - [ ] 整合五份共享 Search Console 导出表格，建立 Pages、Core Web Vitals、Breadcrumbs、Image Metadata 与 HTTPS 的 URL 级问题清单
 - [x] 将已声明为可索引的产品分类筛选页规范 URL 纳入 Sitemap 并同步真实更新时间
+- [ ] 核验两份新增 Search Console 导出表格并提取缺失的 Core Web Vitals、Breadcrumbs 或 Pages URL 样本
+- [ ] 读取 Breadcrumbs 共享明细并对照生产 BreadcrumbList 输出核验有效项与错误状态
+- [ ] 核验 Breadcrumbs itemListElement.item 共享详情中的状态、URL 示例与生产 Schema 字段一致性
+- [ ] 从 Pages 问题截图提取 Crawled-not-indexed、canonical、重定向与替代页面 URL 样本并按路径模式复测
+- [x] 为 Contact 的 product 与 region 预填查询参数页添加 noindex，保留表单上下文但避免重复索引

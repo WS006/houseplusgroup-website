@@ -53,6 +53,14 @@ test('invalid product slugs return a real noindex 404 instead of an indexable ge
   assert.match(productPage, /if \(!product\) notFound\(\);/);
 });
 
+test('Contact inquiry prefill parameters retain form context without creating indexable duplicates', () => {
+  const contactPage = read('app/[lang]/contact/page.tsx');
+  assert.match(contactPage, /searchParams\?: \{ product\?: string; region\?: string \}/);
+  assert.match(contactPage, /const isInquiryPrefill = typeof searchParams\?\.product === 'string' \|\| typeof searchParams\?\.region === 'string';/);
+  assert.match(contactPage, /isInquiryPrefill \? \{ robots: 'noindex, follow' \} : \{\}/);
+  assert.match(contactPage, /initialProduct=\{productContext\}/);
+});
+
 test('confirmed historical aliases permanently consolidate to their unique canonical pages', () => {
   const nextConfig = read('next.config.js');
   for (const [source, destination] of [
