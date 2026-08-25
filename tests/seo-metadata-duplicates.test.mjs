@@ -111,6 +111,8 @@ test('homepage carousel exposes every SEO image and Alt Text in HTML while prote
   assert.match(carousel, /priority=\{index === 0\}/);
   assert.match(carousel, /loading=\{index === 0 \? 'eager' : 'lazy'\}/);
   assert.match(carousel, /fetchPriority=\{index === 0 \? 'high' : 'low'\}/);
+  assert.match(carousel, /min-w-11 items-center justify-center/);
+  assert.match(carousel, /aria-hidden="true"/);
 });
 
 test('product listing canonicals and hreflang URLs use the trailing-slash URLs served in production', () => {

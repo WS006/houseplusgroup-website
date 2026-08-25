@@ -190,11 +190,16 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
           <button
             key={index}
             onClick={() => handleManualAction(() => goToSlide(index))}
-            className={`h-1.5 transition-all duration-500 rounded-full ${
-              index === currentIndex ? 'w-10 bg-blue-500' : 'w-3 bg-white/50 hover:bg-white/70'
-            }`}
+            className="relative flex h-11 min-w-11 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             aria-label={`${copy.goTo} ${index + 1}`}
-          />
+          >
+            <span
+              aria-hidden="true"
+              className={`block h-1.5 rounded-full transition-all duration-500 ${
+                index === currentIndex ? 'w-10 bg-blue-500' : 'w-3 bg-white/50 group-hover:bg-white/70'
+              }`}
+            />
+          </button>
         ))}
       </div>
       {/* Slide counter */}
