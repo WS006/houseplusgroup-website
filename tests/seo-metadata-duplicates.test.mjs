@@ -93,3 +93,16 @@ test('homepage carousel exposes every SEO image and Alt Text in HTML while prote
   assert.match(carousel, /loading=\{index === 0 \? 'eager' : 'lazy'\}/);
   assert.match(carousel, /fetchPriority=\{index === 0 \? 'high' : 'low'\}/);
 });
+
+test('localized region detail pages expose a visible Breadcrumb and localized BreadcrumbList labels', () => {
+  const regionPage = read('app/[lang]/regions/[region]/page.tsx');
+  const breadcrumb = read('components/Breadcrumb.tsx');
+  assert.match(regionPage, /import Breadcrumb from '@\/components\/Breadcrumb';/);
+  assert.match(regionPage, /const regionBreadcrumbLabels: Record<string, string>/);
+  assert.match(regionPage, /slug=\{`regions\/\$\{region\}`\}/);
+  assert.match(regionPage, /customLabel=\{regionName\}/);
+  assert.match(regionPage, /labelOverrides=\{\{ regions: regionBreadcrumbLabel \}\}/);
+  assert.match(breadcrumb, /labelOverrides\?: Record<string, string>;/);
+  assert.match(breadcrumb, /labelOverrides\?\.\[segment\] \|\| pageLabels\[segment\]/);
+  assert.match(breadcrumb, /'@type': 'BreadcrumbList'/);
+});

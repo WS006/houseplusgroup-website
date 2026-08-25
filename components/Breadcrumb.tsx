@@ -5,9 +5,10 @@ interface BreadcrumbProps {
   lang: string;
   slug?: string;
   customLabel?: string;
+  labelOverrides?: Record<string, string>;
 }
 
-export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps) {
+export default function Breadcrumb({ lang, slug, customLabel, labelOverrides }: BreadcrumbProps) {
   const pathSegments = slug ? slug.split('/').filter(s => s && s !== lang) : [];
 
   const validPages = new Set([
@@ -50,7 +51,7 @@ export default function Breadcrumb({ lang, slug, customLabel }: BreadcrumbProps)
   pathSegments.forEach((segment, index) => {
     const pathSoFar = pathSegments.slice(0, index + 1).join('/');
     const href = `/${lang}/${pathSoFar}`;
-    const label = pageLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+    const label = labelOverrides?.[segment] || pageLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     const isValidPage = validPages.has(segment) || index === pathSegments.length - 1;
     items.push({ label, href, isValidPage });
   });

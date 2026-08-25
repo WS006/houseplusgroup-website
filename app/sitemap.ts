@@ -3,7 +3,8 @@ import { canonicalSiteUrl, locales, staticPageSlugs, productSlugs, newsSlugs, re
 
 // Last modified dates for static pages (update these periodically)
 const lastModDates: Record<string, string> = {
-  '': '2026-08-16',
+  // Homepage carousel images were made crawler-discoverable on 2026-08-25.
+  '': '2026-08-25',
   'about-us': '2026-08-16',
   'products': '2026-08-16',
   'news': '2026-06-29',
@@ -38,6 +39,10 @@ const lastModDates: Record<string, string> = {
   'news/consumer-electronics-battery-life-testing': '2026-07-18',
   'news/solar-storage-efficiency-optimization-guide': '2026-07-18',
 };
+
+// Region detail pages received visible localized breadcrumbs and BreadcrumbList
+// schema on this date. Keep this separate from immutable product update dates.
+const regionLastModified = '2026-08-25';
 
 // All static page slugs from single source of truth
 const staticPages = staticPageSlugs.map(slug => {
@@ -83,6 +88,8 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
   // updated with the current multilingual release.
   const lastmod = slug.startsWith('products/')
     ? '2026-08-16'
+    : slug.startsWith('regions/')
+    ? regionLastModified
     : (lastModDates[slug] || '2026-08-13');
   const entries = [];
 

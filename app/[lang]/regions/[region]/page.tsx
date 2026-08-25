@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { permanentRedirect } from 'next/navigation';
 import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { getRegionCopy, translateRegionTemplate } from '@/lib/localized-content';
@@ -101,6 +102,14 @@ const regionUtilityLabels: Record<string, { whatsapp: string; taxInformation: st
   ar: { whatsapp: 'واتساب', taxInformation: 'المعلومات الضريبية' },
 };
 
+const regionBreadcrumbLabels: Record<string, string> = {
+  en: 'Regions',
+  es: 'Regiones',
+  de: 'Regionen',
+  fr: 'Régions',
+  ar: 'المناطق',
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -190,6 +199,7 @@ export default async function RegionPage({
   const copy = getRegionCopy(lang);
   const t = (key: string) => translateRegionTemplate(copy[key] || key, regionName);
   const utility = regionUtilityLabels[lang] || regionUtilityLabels.en;
+  const regionBreadcrumbLabel = regionBreadcrumbLabels[lang] || regionBreadcrumbLabels.en;
 
   const organizationSchema = generateOrganizationSchema({
     title: `HousePlus ${regionName}`,
@@ -226,6 +236,16 @@ export default async function RegionPage({
     <>
       <SEOHead schemas={[organizationSchema]} />
       <main className="min-h-screen bg-white">
+        <div className="bg-white px-4 pt-4">
+          <div className="max-w-6xl mx-auto">
+            <Breadcrumb
+              lang={lang}
+              slug={`regions/${region}`}
+              customLabel={regionName}
+              labelOverrides={{ regions: regionBreadcrumbLabel }}
+            />
+          </div>
+        </div>
         {/* Hero */}
         <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">

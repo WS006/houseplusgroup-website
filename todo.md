@@ -57,3 +57,7 @@
 - [ ] 审计并优化 Pages、Sitemaps、Removals、Core Web Vitals、HTTPS、Product snippets、Merchant listings、Merchant opportunities、Breadcrumbs 和 Image Metadata
 - [x] 修复首页家电与 3C 轮播图在初始 HTML 中缺少可发现 img/Alt Text 的图片 SEO 问题
 - [x] 使首页轮播图在初始 HTML 中输出标准图片与 Alt Text，并保留非首屏 lazy/low-priority 加载
+- [x] 通过 GitHub API 直接验证当前令牌的仓库写权限并同步提交 9e33ad7
+- [ ] 以真实数据审计并优化 Google Search Console 十项核心指标、Bing 重复标题和图片发现问题
+- [x] 为 20 个多语言地区详情页补齐可见 Breadcrumb 与 BreadcrumbList 结构化数据
+- [x] 同步 Sitemap 中首页、地区列表与地区详情页的真实修改日期

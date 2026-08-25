@@ -7,9 +7,13 @@ const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 test('GEO/AEO entity and product updates emit fresh sitemap lastmod signals', () => {
   const sitemap = read('app/sitemap.ts');
-  for (const slug of ["''", "'about-us'", "'products'", "'factory'", "'service'", "'certifications'", "'oem-odm'", "'brand'"]) {
+  assert.match(sitemap, /'': '2026-08-25'/);
+  for (const slug of ["'about-us'", "'products'", "'factory'", "'service'", "'certifications'", "'oem-odm'", "'brand'"]) {
     assert.match(sitemap, new RegExp(`${slug}: '2026-08-16'`));
   }
   assert.match(sitemap, /slug\.startsWith\('products\/'\)/);
   assert.match(sitemap, /\? '2026-08-16'/);
+  assert.match(sitemap, /const regionLastModified = '2026-08-25'/);
+  assert.match(sitemap, /slug\.startsWith\('regions\/'\)/);
+  assert.match(sitemap, /\? regionLastModified/);
 });
