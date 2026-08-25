@@ -53,3 +53,7 @@
 - [x] 修复 Bing Webmaster 报告的 23 个重复页面标题，并复核 canonical、hreflang、重定向和索引状态
 - [x] 修复 catch-all 无效路径的 indexable metadata 与重复 404 标题，确保返回 noindex 的真实 404
 - [x] 为顶层 404 页面配置独立 noindex 标题，消除非语言路径继承全站通用标题的风险
+- [ ] 全面核查 Google 页面索引 10 类未收录原因、Bing 23 个重复标题与图片轮播 Alt Text，并按根因实施收录优化
+- [ ] 审计并优化 Pages、Sitemaps、Removals、Core Web Vitals、HTTPS、Product snippets、Merchant listings、Merchant opportunities、Breadcrumbs 和 Image Metadata
+- [x] 修复首页家电与 3C 轮播图在初始 HTML 中缺少可发现 img/Alt Text 的图片 SEO 问题
+- [x] 使首页轮播图在初始 HTML 中输出标准图片与 Alt Text，并保留非首屏 lazy/low-priority 加载

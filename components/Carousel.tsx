@@ -29,7 +29,6 @@ interface CarouselProps {
 export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [loadedSlides, setLoadedSlides] = useState<Set<number>>(() => new Set([0]));
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const localeCopy: Record<string, { badge: string; quote: string; previous: string; next: string; goTo: string; slides: Array<Pick<CarouselItem, 'title' | 'subtitle' | 'button_text'>> }> = {
     en: { badge: 'HousePlus — Global Wholesale Manufacturer', quote: 'Get a Quote', previous: 'Previous slide', next: 'Next slide', goTo: 'Go to slide', slides: [{ title: 'High-Efficiency Solar Solutions', subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners', button_text: 'Explore Solar Products' }, { title: 'Smart Home Appliances', subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support', button_text: 'View Appliances' }, { title: '3C Electronics & Accessories', subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers', button_text: 'View Electronics' }] },
@@ -66,31 +65,17 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
 
   const displayItems = items && items.length > 0 ? items : defaultItems;
 
-  const ensureSlideLoaded = useCallback((index: number) => {
-    setLoadedSlides((previous) => {
-      if (previous.has(index)) return previous;
-      const next = new Set(previous);
-      next.add(index);
-      return next;
-    });
-  }, []);
-
   const goToNext = useCallback(() => {
-    const nextIndex = (currentIndex + 1) % displayItems.length;
-    ensureSlideLoaded(nextIndex);
-    setCurrentIndex(nextIndex);
-  }, [currentIndex, displayItems.length, ensureSlideLoaded]);
+    setCurrentIndex((previousIndex) => (previousIndex + 1) % displayItems.length);
+  }, [displayItems.length]);
 
   const goToPrevious = useCallback(() => {
-    const previousIndex = (currentIndex - 1 + displayItems.length) % displayItems.length;
-    ensureSlideLoaded(previousIndex);
-    setCurrentIndex(previousIndex);
-  }, [currentIndex, displayItems.length, ensureSlideLoaded]);
+    setCurrentIndex((previousIndex) => (previousIndex - 1 + displayItems.length) % displayItems.length);
+  }, [displayItems.length]);
 
   const goToSlide = useCallback((index: number) => {
-    ensureSlideLoaded(index);
     setCurrentIndex(index);
-  }, [ensureSlideLoaded]);
+  }, []);
 
   useEffect(() => {
     if (displayItems.length <= 1 || !isAutoPlaying) {
@@ -102,16 +87,6 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [displayItems, isAutoPlaying, autoPlayInterval, goToNext]);
-
-  // Do not compete with the LCP image at initial render.  Warm the next slide
-  // only after the first viewport has had time to settle, preserving a smooth
-  // automatic transition without downloading all hero media at once.
-  useEffect(() => {
-    if (displayItems.length <= 1) return;
-    const nextIndex = (currentIndex + 1) % displayItems.length;
-    const preloadTimer = window.setTimeout(() => ensureSlideLoaded(nextIndex), 2500);
-    return () => window.clearTimeout(preloadTimer);
-  }, [currentIndex, displayItems.length, ensureSlideLoaded]);
 
   const handleManualAction = (action: () => void) => {
     setIsAutoPlaying(false);
@@ -151,17 +126,17 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             index === currentIndex ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 scale-105 pointer-events-none'
           }`}
         >
-          {loadedSlides.has(index) && (
-            <Image
-              src={item.image.filename}
-              alt={item.image.alt || item.title}
-              title={item.image.alt || item.title}
-              fill
-              sizes="100vw"
-              priority={index === 0}
-              className="object-cover brightness-[0.75]"
-            />
-          )}
+          <Image
+            src={item.image.filename}
+            alt={item.image.alt || item.title}
+            title={item.image.alt || item.title}
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            fetchPriority={index === 0 ? 'high' : 'low'}
+            className="object-cover brightness-[0.75]"
+          />
           {/* Left-aligned gradient overlay for business style */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/65 via-slate-800/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-start px-8 md:px-20">

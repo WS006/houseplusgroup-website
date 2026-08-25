@@ -14,12 +14,14 @@ test('remote R2 images remain eligible for Next responsive image optimization', 
   assert.match(config, /hostname:\s*'images\.houseplus-ch\.com'/);
 });
 
-test('homepage carousel prioritizes only the initial hero and defers the remaining slides', () => {
+test('homepage carousel exposes every slide for discovery while prioritizing only the initial hero', () => {
   assert.match(carousel, /import Image from 'next\/image'/);
-  assert.match(carousel, /useState<Set<number>>\(\(\) => new Set\(\[0\]\)\)/);
-  assert.match(carousel, /loadedSlides\.has\(index\)/);
-  assert.match(carousel, /window\.setTimeout\(\(\) => ensureSlideLoaded\(nextIndex\), 2500\)/);
+  assert.doesNotMatch(carousel, /loadedSlides/);
+  assert.match(carousel, /src=\{item\.image\.filename\}/);
+  assert.match(carousel, /alt=\{item\.image\.alt \|\| item\.title\}/);
   assert.match(carousel, /priority=\{index === 0\}/);
+  assert.match(carousel, /loading=\{index === 0 \? 'eager' : 'lazy'\}/);
+  assert.match(carousel, /fetchPriority=\{index === 0 \? 'high' : 'low'\}/);
   assert.match(carousel, /sizes="100vw"/);
 });
 

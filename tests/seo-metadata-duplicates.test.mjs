@@ -83,3 +83,13 @@ test('catch-all and localized not-found routes never emit indexable metadata for
   assert.match(rootNotFound, /title: 'Page Not Found \| HousePlus'/);
   assert.match(rootNotFound, /robots: 'noindex, follow'/);
 });
+
+test('homepage carousel exposes every SEO image and Alt Text in HTML while protecting the LCP image', () => {
+  const carousel = read('components/Carousel.tsx');
+  assert.doesNotMatch(carousel, /loadedSlides/);
+  assert.match(carousel, /src=\{item\.image\.filename\}/);
+  assert.match(carousel, /alt=\{item\.image\.alt \|\| item\.title\}/);
+  assert.match(carousel, /priority=\{index === 0\}/);
+  assert.match(carousel, /loading=\{index === 0 \? 'eager' : 'lazy'\}/);
+  assert.match(carousel, /fetchPriority=\{index === 0 \? 'high' : 'low'\}/);
+});
