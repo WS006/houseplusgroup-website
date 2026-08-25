@@ -82,3 +82,4 @@
 - [x] 修复 PageSpeed 长截图显示的 robots.txt 语法、llms.txt 获取可靠性、首页低对比度与移动端 Carousel 触控目标问题
 - [ ] 进一步定位 PageSpeed 仍提示的未使用 JavaScript/CSS、长主线程任务与图片交付资源，并在有明确资源证据后优化
 - [x] 核验并修复 PageSpeed 报告指出的首方 vendor JavaScript source map 缺失，确认公开映射未检出服务端密钥且 PageSpeed Agentic Browsing 达到 3/3
+- [x] 逐项核对既有 HousePlus 更新的 GitHub 推送、Vercel READY 部署与公开生产生效状态
