@@ -17,6 +17,15 @@ test('robots and llms discovery routes are statically cacheable for crawler reli
   assert.match(llms, /s-maxage=86400/);
 });
 
+test('service widget controls meet mobile touch and contrast safeguards', () => {
+  const serviceWidget = read('components/ServiceWidget.tsx');
+  assert.match(serviceWidget, /min-h-11 min-w-11 bg-blue-600/);
+  assert.match(serviceWidget, /<button type="button" aria-label=\{`\$\{ui\.wechat\}: \$\{wechat\}`\}/);
+  assert.match(serviceWidget, /text-xs text-gray-600/);
+  assert.match(serviceWidget, /text-gray-500.*ChevronRight|ChevronRight.*text-gray-500/);
+  assert.doesNotMatch(serviceWidget, /cursor-pointer/);
+});
+
 test('AI retrieval crawlers receive explicit access to public HousePlus knowledge resources', () => {
   const robots = read('app/robots.txt/route.ts');
   for (const agent of ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'PerplexityBot', 'anthropic-ai', 'Claude-Web', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User']) {

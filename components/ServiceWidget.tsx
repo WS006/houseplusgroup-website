@@ -33,7 +33,7 @@ export default function ServiceWidget({
       <button
         aria-label={ui.service}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-blue-600 text-white p-2.5 md:p-3 rounded-l-lg shadow-lg hover:bg-blue-700 transition-all flex flex-col items-center gap-1"
+        className="min-h-11 min-w-11 bg-blue-600 text-white p-2.5 md:p-3 rounded-l-lg shadow-lg hover:bg-blue-700 transition-all flex flex-col items-center gap-1"
       >
         {isOpen ? <X size={20} /> : <Mail size={20} />}
         <span className="text-[10px] font-bold uppercase tracking-wider [writing-mode:vertical-lr]">{ui.service}</span>
@@ -59,22 +59,22 @@ export default function ServiceWidget({
                 <MessageCircle size={18} />
               </div>
               <div>
-                <p className="text-xs text-gray-500">WhatsApp</p>
+                <p className="text-xs text-gray-600">WhatsApp</p>
                 <p className="text-sm font-semibold text-gray-700">{whatsapp}</p>
               </div>
-              <ChevronRight size={14} className="ml-auto text-gray-300" />
+              <ChevronRight size={14} className="ml-auto text-gray-500" />
             </a>
 
             {/* WeChat */}
-            <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer">
+            <button type="button" aria-label={`${ui.wechat}: ${wechat}`} className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 transition-colors group text-left">
               <div className="bg-blue-100 p-2 rounded-full text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <MessageCircle size={18} />
               </div>
               <div>
-                <p className="text-xs text-gray-500">{ui.wechat}</p>
+                <p className="text-xs text-gray-600">{ui.wechat}</p>
                 <p className="text-sm font-semibold text-gray-700">{wechat}</p>
               </div>
-            </div>
+            </button>
 
             {/* Email */}
             <a 
@@ -85,10 +85,10 @@ export default function ServiceWidget({
                 <Mail size={18} />
               </div>
               <div>
-                <p className="text-xs text-gray-500">{ui.email}</p>
+                <p className="text-xs text-gray-600">{ui.email}</p>
                 <p className="text-sm font-semibold text-gray-700 truncate w-40">{email}</p>
               </div>
-              <ChevronRight size={14} className="ml-auto text-gray-300" />
+              <ChevronRight size={14} className="ml-auto text-gray-500" />
             </a>
 
             {/* Phone */}
@@ -100,15 +100,15 @@ export default function ServiceWidget({
                 <Phone size={18} />
               </div>
               <div>
-                <p className="text-xs text-gray-500">{ui.call}</p>
+                <p className="text-xs text-gray-600">{ui.call}</p>
                 <p className="text-sm font-semibold text-gray-700">{phone}</p>
               </div>
-              <ChevronRight size={14} className="ml-auto text-gray-300" />
+              <ChevronRight size={14} className="ml-auto text-gray-500" />
             </a>
           </div>
 
           <div className="mt-6 pt-4 border-t border-gray-100 text-center">
-            <p className="text-[10px] text-gray-400 uppercase tracking-widest">HousePlus Global Trade</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-widest">HousePlus Global Trade</p>
           </div>
         </div>
       </div>
