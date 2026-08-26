@@ -225,6 +225,7 @@ export default async function BlogPostPage({
               aria-label={post.video.description}
               playsInline
             >
+              <source src={post.video.contentUrl} type="video/mp4" />
               {post.video.captionsUrl && (
                 <track
                   kind="descriptions"

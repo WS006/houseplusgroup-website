@@ -18,6 +18,7 @@ test('portable power video articles reference durable v2 R2 media URLs instead o
 });
 
 test('video player exposes verified visual descriptions for the no-narration source video', () => {
+  assert.match(articlePageSource, /<source src=\{post\.video\.contentUrl\} type="video\/mp4" \/>/);
   assert.match(articlePageSource, /kind="descriptions"/);
   assert.match(articlePageSource, /label="English visual descriptions"/);
   assert.match(articlePageSource, /poster=\{post\.video\.poster\}/);
