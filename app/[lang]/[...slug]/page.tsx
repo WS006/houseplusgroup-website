@@ -23,8 +23,8 @@ export function generateStaticParams() {
   return [];
 }
 
-export async function generateMetadata({ params }: { params: { lang: string; slug: string[] } }): Promise<Metadata> {
-  const { lang, slug } = params;
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
   if (!validLangs.includes(lang)) {
     return {
       title: 'Page Not Found | HousePlus',
@@ -303,8 +303,8 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
   };
 }
 
-export default async function CatchAllPage({ params }: { params: { lang: string; slug: string[] } }) {
-  const { lang, slug } = params;
+export default async function CatchAllPage({ params }: { params: Promise<{ lang: string; slug: string[] }> }) {
+  const { lang, slug } = await params;
   if (!validLangs.includes(lang)) {
     notFound();
   }

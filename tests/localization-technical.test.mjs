@@ -14,7 +14,7 @@ test('middleware forwards the locale for server-rendered HTML attributes', () =>
 test('root layout renders localized lang and direction attributes', () => {
   const layout = read('app/layout.tsx');
   assert.match(layout, /export const dynamic = 'force-dynamic'/);
-  assert.match(layout, /headers\(\)\.get\('x-houseplus-locale'\)/);
+  assert.match(layout, /\(await headers\(\)\)\.get\('x-houseplus-locale'\)/);
   assert.match(layout, /<html lang=\{locale\} dir=\{getLocaleDirection\(locale\)\}>/);
 });
 

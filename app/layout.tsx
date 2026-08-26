@@ -55,12 +55,12 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const requestedLocale = headers().get('x-houseplus-locale') || defaultLocale;
+  const requestedLocale = (await headers()).get('x-houseplus-locale') || defaultLocale;
   const locale = isValidLocale(requestedLocale) ? requestedLocale : defaultLocale;
   const orgSchema = generateOrganizationSchema({
     title: 'HousePlus',

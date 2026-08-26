@@ -1,2 +1,5 @@
 allowBuilds:
-  unrs-resolver: set this to true or false
+  sharp: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - resend@6.24.0
