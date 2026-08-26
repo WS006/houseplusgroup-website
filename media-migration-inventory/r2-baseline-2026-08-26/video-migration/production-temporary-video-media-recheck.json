@@ -1,0 +1,3621 @@
+{
+  "summary": {
+    "generatedAt": "2026-08-26T09:21:57.053Z",
+    "total": 600,
+    "status200": 599,
+    "temporaryVideoUrlPages": 0,
+    "failed": 1,
+    "failures": [
+      {
+        "url": "https://www.houseplus-ch.com/de/news/portable-power-supply-solar-storage-b2b-guide/",
+        "status": null,
+        "matches": [],
+        "passed": false,
+        "error": "The operation was aborted due to timeout"
+      }
+    ]
+  },
+  "results": [
+    {
+      "url": "https://www.houseplus-ch.com/ar/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/about-us/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/brand/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/careers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/case-studies/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/certifications/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/contact/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/factory/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/faq/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/2026-appliances-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/2026-electronics-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/2026-smart-home-appliances-market-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/2026-solar-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/advanced-manufacturing-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/air-fryer-sourcing-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/appliance-energy-efficiency-vs-actual-consumption/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/battery-energy-storage-rfq-data-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/ce-certification-solar-panels-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/consumer-electronics-battery-life-testing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/energy-efficiency-standards-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/global-wholesale-guide-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/home-appliance-oem-manufacturer-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/home-appliance-oem-sample-evaluation-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/how-to-choose-solar-panel-manufacturer-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/how-to-choose-wholesale-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/kitchen-appliances-wholesale-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/lifepo4-vs-lead-acid-battery/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/mono-vs-poly-vs-perc-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/mppt-vs-pwm-charge-controller/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/oem-odm-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/portable-power-supply-solar-storage-b2b-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/portable-ssd-vs-external-hdd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/solar-energy-storage-industrial-manufacturing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/solar-energy-storage-solutions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/solar-panel-rfq-checklist-international-buyers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/solar-panel-wholesale-price-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/solar-storage-efficiency-optimization-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/the-evolution-of-3c-electronics/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/the-future-of-smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/the-future-of-solar-energy/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/tws-earphones-oem-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/news/usb-c-accessories-wholesale-specification-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/oem-odm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/?category=3c-electronics",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/?category=home-appliances",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/?category=solar",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/air-fryer-12l-rotisserie/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/air-fryer-4-5l-visual/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/air-fryer-5-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/air-fryer-8l-digital/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/bluetooth-earphone-tws/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/built-in-gas-oven-60l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/built-in-oven-65l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/cassette-gas-stove-double-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/cassette-gas-stove-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/ceramic-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/ceramic-hob-double-zone/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/charge-controller-60a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/electric-blender-1500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/electric-kettle-1-5l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/electric-water-heater-50l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/flexible-solar-panel-400w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/foldable-solar-panel-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-electric-hybrid-cooktop/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-stove-2-burner-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-stove-3-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-stove-4-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-stove-5-burner-wok/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-stove-freestanding-oven/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-water-heater-10l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-water-heater-12l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/gas-water-heater-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/headphone-over-ear/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/home-energy-storage-5000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/induction-cooktop-2000w-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/induction-cooktop-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/induction-hob-3-zone-flex/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/induction-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/lead-acid-battery-100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/lifepo4-battery-12v100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/lithium-battery-5kwh/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/magnetic-power-bank-10000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/micro-sd-128gb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/microwave-oven-25l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/mppt-controller-40a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/outdoor-power-station-600w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/portable-induction-cooker-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/portable-power-station-3000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/portable-ssd-1tb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/power-bank-60w-pd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/pure-sine-inverter-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/range-hood-600mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/range-hood-750mm-inclined/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/range-hood-900mm-curved-glass/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/range-hood-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/range-hood-island-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/smart-watch/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/smart-wifi-plug-meter/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-fan-20w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-generator-kit-300w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-inverter-3kw/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-panel-100w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-panel-500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-power-bank-20000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/solar-street-light-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/steam-oven-30l-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/toaster-2-slice/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/usb-c-cable-100w-5a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/products/usb-c-cable-2m/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/regions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/regions/africa/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/regions/europe/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/regions/ng/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/regions/southeast_asia/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/service/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/support/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/ar/team/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/about-us/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/brand/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/careers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/case-studies/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/certifications/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/contact/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/factory/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/faq/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/2026-appliances-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/2026-electronics-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/2026-smart-home-appliances-market-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/2026-solar-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/advanced-manufacturing-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/air-fryer-sourcing-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/appliance-energy-efficiency-vs-actual-consumption/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/battery-energy-storage-rfq-data-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/ce-certification-solar-panels-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/consumer-electronics-battery-life-testing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/energy-efficiency-standards-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/global-wholesale-guide-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/home-appliance-oem-manufacturer-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/home-appliance-oem-sample-evaluation-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/how-to-choose-solar-panel-manufacturer-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/how-to-choose-wholesale-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/kitchen-appliances-wholesale-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/lifepo4-vs-lead-acid-battery/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/mono-vs-poly-vs-perc-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/mppt-vs-pwm-charge-controller/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/oem-odm-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/portable-power-supply-solar-storage-b2b-guide/",
+      "status": null,
+      "matches": [],
+      "passed": false,
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/portable-ssd-vs-external-hdd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/solar-energy-storage-industrial-manufacturing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/solar-energy-storage-solutions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/solar-panel-rfq-checklist-international-buyers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/solar-panel-wholesale-price-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/solar-storage-efficiency-optimization-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/the-evolution-of-3c-electronics/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/the-future-of-smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/the-future-of-solar-energy/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/tws-earphones-oem-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/news/usb-c-accessories-wholesale-specification-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/oem-odm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/?category=3c-electronics",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/?category=home-appliances",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/?category=solar",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/air-fryer-12l-rotisserie/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/air-fryer-4-5l-visual/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/air-fryer-5-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/air-fryer-8l-digital/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/bluetooth-earphone-tws/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/built-in-gas-oven-60l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/built-in-oven-65l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/cassette-gas-stove-double-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/cassette-gas-stove-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/ceramic-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/ceramic-hob-double-zone/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/charge-controller-60a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/electric-blender-1500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/electric-kettle-1-5l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/electric-water-heater-50l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/flexible-solar-panel-400w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/foldable-solar-panel-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-electric-hybrid-cooktop/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-stove-2-burner-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-stove-3-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-stove-4-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-stove-5-burner-wok/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-stove-freestanding-oven/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-water-heater-10l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-water-heater-12l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/gas-water-heater-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/headphone-over-ear/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/home-energy-storage-5000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/induction-cooktop-2000w-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/induction-cooktop-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/induction-hob-3-zone-flex/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/induction-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/lead-acid-battery-100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/lifepo4-battery-12v100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/lithium-battery-5kwh/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/magnetic-power-bank-10000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/micro-sd-128gb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/microwave-oven-25l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/mppt-controller-40a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/outdoor-power-station-600w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/portable-induction-cooker-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/portable-power-station-3000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/portable-ssd-1tb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/power-bank-60w-pd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/pure-sine-inverter-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/range-hood-600mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/range-hood-750mm-inclined/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/range-hood-900mm-curved-glass/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/range-hood-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/range-hood-island-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/smart-watch/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/smart-wifi-plug-meter/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-fan-20w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-generator-kit-300w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-inverter-3kw/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-panel-100w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-panel-500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-power-bank-20000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/solar-street-light-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/steam-oven-30l-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/toaster-2-slice/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/usb-c-cable-100w-5a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/products/usb-c-cable-2m/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/regions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/regions/africa/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/regions/europe/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/regions/ng/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/regions/southeast_asia/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/service/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/support/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/de/team/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/about-us/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/brand/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/careers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/case-studies/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/certifications/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/contact/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/factory/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/faq/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/2026-appliances-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/2026-electronics-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/2026-smart-home-appliances-market-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/2026-solar-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/advanced-manufacturing-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/air-fryer-sourcing-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/appliance-energy-efficiency-vs-actual-consumption/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/battery-energy-storage-rfq-data-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/ce-certification-solar-panels-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/consumer-electronics-battery-life-testing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/energy-efficiency-standards-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/global-wholesale-guide-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/home-appliance-oem-manufacturer-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/home-appliance-oem-sample-evaluation-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/how-to-choose-solar-panel-manufacturer-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/how-to-choose-wholesale-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/kitchen-appliances-wholesale-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/lifepo4-vs-lead-acid-battery/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/mono-vs-poly-vs-perc-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/mppt-vs-pwm-charge-controller/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/oem-odm-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/portable-power-supply-solar-storage-b2b-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/portable-ssd-vs-external-hdd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/solar-energy-storage-industrial-manufacturing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/solar-energy-storage-solutions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/solar-panel-rfq-checklist-international-buyers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/solar-panel-wholesale-price-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/solar-storage-efficiency-optimization-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/the-evolution-of-3c-electronics/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/the-future-of-smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/the-future-of-solar-energy/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/tws-earphones-oem-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/news/usb-c-accessories-wholesale-specification-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/oem-odm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/?category=3c-electronics",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/?category=home-appliances",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/?category=solar",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/air-fryer-12l-rotisserie/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/air-fryer-4-5l-visual/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/air-fryer-5-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/air-fryer-8l-digital/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/bluetooth-earphone-tws/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/built-in-gas-oven-60l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/built-in-oven-65l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/cassette-gas-stove-double-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/cassette-gas-stove-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/ceramic-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/ceramic-hob-double-zone/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/charge-controller-60a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/electric-blender-1500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/electric-kettle-1-5l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/electric-water-heater-50l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/flexible-solar-panel-400w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/foldable-solar-panel-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-electric-hybrid-cooktop/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-stove-2-burner-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-stove-3-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-stove-4-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-stove-5-burner-wok/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-stove-freestanding-oven/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-water-heater-10l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-water-heater-12l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/gas-water-heater-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/headphone-over-ear/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/home-energy-storage-5000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/induction-cooktop-2000w-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/induction-cooktop-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/induction-hob-3-zone-flex/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/induction-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/lead-acid-battery-100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/lifepo4-battery-12v100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/lithium-battery-5kwh/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/magnetic-power-bank-10000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/micro-sd-128gb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/microwave-oven-25l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/mppt-controller-40a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/outdoor-power-station-600w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/portable-induction-cooker-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/portable-power-station-3000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/portable-ssd-1tb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/power-bank-60w-pd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/pure-sine-inverter-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/range-hood-600mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/range-hood-750mm-inclined/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/range-hood-900mm-curved-glass/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/range-hood-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/range-hood-island-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/smart-watch/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/smart-wifi-plug-meter/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-fan-20w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-generator-kit-300w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-inverter-3kw/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-panel-100w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-panel-500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-power-bank-20000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/solar-street-light-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/steam-oven-30l-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/toaster-2-slice/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/usb-c-cable-100w-5a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/products/usb-c-cable-2m/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/regions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/regions/africa/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/regions/europe/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/regions/ng/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/regions/southeast_asia/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/service/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/support/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/en/team/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/about-us/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/brand/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/careers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/case-studies/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/certifications/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/contact/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/factory/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/faq/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/2026-appliances-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/2026-electronics-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/2026-smart-home-appliances-market-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/2026-solar-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/advanced-manufacturing-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/air-fryer-sourcing-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/appliance-energy-efficiency-vs-actual-consumption/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/battery-energy-storage-rfq-data-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/ce-certification-solar-panels-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/consumer-electronics-battery-life-testing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/energy-efficiency-standards-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/global-wholesale-guide-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/home-appliance-oem-manufacturer-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/home-appliance-oem-sample-evaluation-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/how-to-choose-solar-panel-manufacturer-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/how-to-choose-wholesale-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/kitchen-appliances-wholesale-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/lifepo4-vs-lead-acid-battery/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/mono-vs-poly-vs-perc-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/mppt-vs-pwm-charge-controller/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/oem-odm-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/portable-power-supply-solar-storage-b2b-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/portable-ssd-vs-external-hdd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/solar-energy-storage-industrial-manufacturing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/solar-energy-storage-solutions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/solar-panel-rfq-checklist-international-buyers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/solar-panel-wholesale-price-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/solar-storage-efficiency-optimization-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/the-evolution-of-3c-electronics/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/the-future-of-smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/the-future-of-solar-energy/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/tws-earphones-oem-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/news/usb-c-accessories-wholesale-specification-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/oem-odm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/?category=3c-electronics",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/?category=home-appliances",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/?category=solar",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/air-fryer-12l-rotisserie/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/air-fryer-4-5l-visual/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/air-fryer-5-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/air-fryer-8l-digital/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/bluetooth-earphone-tws/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/built-in-gas-oven-60l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/built-in-oven-65l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/cassette-gas-stove-double-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/cassette-gas-stove-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/ceramic-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/ceramic-hob-double-zone/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/charge-controller-60a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/electric-blender-1500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/electric-kettle-1-5l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/electric-water-heater-50l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/flexible-solar-panel-400w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/foldable-solar-panel-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-electric-hybrid-cooktop/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-stove-2-burner-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-stove-3-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-stove-4-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-stove-5-burner-wok/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-stove-freestanding-oven/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-water-heater-10l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-water-heater-12l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/gas-water-heater-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/headphone-over-ear/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/home-energy-storage-5000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/induction-cooktop-2000w-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/induction-cooktop-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/induction-hob-3-zone-flex/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/induction-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/lead-acid-battery-100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/lifepo4-battery-12v100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/lithium-battery-5kwh/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/magnetic-power-bank-10000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/micro-sd-128gb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/microwave-oven-25l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/mppt-controller-40a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/outdoor-power-station-600w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/portable-induction-cooker-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/portable-power-station-3000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/portable-ssd-1tb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/power-bank-60w-pd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/pure-sine-inverter-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/range-hood-600mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/range-hood-750mm-inclined/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/range-hood-900mm-curved-glass/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/range-hood-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/range-hood-island-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/smart-watch/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/smart-wifi-plug-meter/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-fan-20w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-generator-kit-300w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-inverter-3kw/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-panel-100w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-panel-500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-power-bank-20000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/solar-street-light-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/steam-oven-30l-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/toaster-2-slice/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/usb-c-cable-100w-5a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/products/usb-c-cable-2m/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/regions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/regions/africa/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/regions/europe/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/regions/ng/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/regions/southeast_asia/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/service/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/support/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/es/team/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/about-us/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/brand/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/careers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/case-studies/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/certifications/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/contact/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/factory/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/faq/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/2026-appliances-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/2026-electronics-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/2026-smart-home-appliances-market-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/2026-solar-market-update/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/advanced-manufacturing-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/air-fryer-sourcing-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/appliance-energy-efficiency-vs-actual-consumption/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/battery-energy-storage-rfq-data-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/ce-certification-solar-panels-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/consumer-electronics-battery-life-testing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/energy-efficiency-standards-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/global-wholesale-guide-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/home-appliance-oem-manufacturer-guide-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/home-appliance-oem-sample-evaluation-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/how-to-choose-solar-panel-manufacturer-china/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/how-to-choose-wholesale-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/kitchen-appliances-wholesale-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/lifepo4-vs-lead-acid-battery/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/mono-vs-poly-vs-perc-solar-panels/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/mppt-vs-pwm-charge-controller/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/oem-odm-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/portable-power-supply-solar-storage-b2b-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/portable-ssd-vs-external-hdd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/solar-energy-storage-industrial-manufacturing/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/solar-energy-storage-solutions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/solar-panel-rfq-checklist-international-buyers/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/solar-panel-wholesale-price-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/solar-storage-efficiency-optimization-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/the-evolution-of-3c-electronics/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/the-future-of-smart-home-appliances/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/the-future-of-solar-energy/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/tws-earphones-oem-manufacturing-guide/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/news/usb-c-accessories-wholesale-specification-checklist/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/oem-odm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/?category=3c-electronics",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/?category=home-appliances",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/?category=solar",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/air-fryer-12l-rotisserie/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/air-fryer-4-5l-visual/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/air-fryer-5-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/air-fryer-8l-digital/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/bluetooth-earphone-tws/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/built-in-gas-oven-60l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/built-in-oven-65l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/cassette-gas-stove-double-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/cassette-gas-stove-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/ceramic-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/ceramic-hob-double-zone/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/charge-controller-60a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/electric-blender-1500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/electric-kettle-1-5l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/electric-water-heater-50l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/flexible-solar-panel-400w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/foldable-solar-panel-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-electric-hybrid-cooktop/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-stove-2-burner-portable/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-stove-3-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-stove-4-burner/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-stove-5-burner-wok/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-stove-freestanding-oven/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-water-heater-10l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-water-heater-12l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/gas-water-heater-8l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/headphone-over-ear/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/home-energy-storage-5000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/induction-cooktop-2000w-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/induction-cooktop-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/induction-hob-3-zone-flex/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/induction-hob-4-zone-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/lead-acid-battery-100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/lifepo4-battery-12v100ah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/lithium-battery-5kwh/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/magnetic-power-bank-10000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/micro-sd-128gb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/microwave-oven-25l/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/mppt-controller-40a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/outdoor-power-station-600w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/portable-induction-cooker-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/portable-power-station-3000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/portable-ssd-1tb/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/power-bank-60w-pd/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/pure-sine-inverter-2000w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/range-hood-600mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/range-hood-750mm-inclined/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/range-hood-900mm-curved-glass/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/range-hood-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/range-hood-island-900mm/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/smart-watch/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/smart-wifi-plug-meter/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-fan-20w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-generator-kit-300w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-inverter-3kw/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-panel-100w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-panel-500w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-power-bank-20000mah/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/solar-street-light-200w/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/steam-oven-30l-built-in/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/toaster-2-slice/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/usb-c-cable-100w-5a/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/products/usb-c-cable-2m/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/regions/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/regions/africa/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/regions/europe/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/regions/ng/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/regions/southeast_asia/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/service/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/support/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    },
+    {
+      "url": "https://www.houseplus-ch.com/fr/team/",
+      "status": 200,
+      "matches": [],
+      "passed": true
+    }
+  ]
+}
