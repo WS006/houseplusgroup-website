@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
@@ -9,6 +10,7 @@ import { generateArticleSchema, generateFAQSchema, generateVideoObjectSchema } f
 import { blogPosts, blogSlugs } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data/types';
 import { getLocalizedArticle } from '@/lib/localized-content';
+import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-semantics';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -173,6 +175,7 @@ export default async function BlogPostPage(
     twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(articleUrl)}`,
     whatsapp: `https://wa.me/?text=${encodeURIComponent(post.title + ' ' + articleUrl)}`,
   };
+  const heroImageTitle = getLocalizedArticleImageTitle(slug, lang, post.heroImageTitle || post.heroImageAlt);
 
   return (
     <main className="min-h-screen bg-white">
@@ -204,12 +207,15 @@ export default async function BlogPostPage(
 
       {/* Standalone feature image: preserves the visual subject without compromising text contrast. */}
       <figure className="relative z-10 mx-auto -mt-10 max-w-6xl overflow-hidden rounded-[2rem] border-4 border-white bg-slate-100 shadow-[0_22px_55px_rgba(15,23,42,0.24)] md:-mt-14 md:rounded-[2.5rem]">
-        <img
+        <Image
           src={post.heroImage}
           alt={post.heroImageAlt}
-          title={post.heroImageAlt}
+          title={heroImageTitle}
+          width={1600}
+          height={900}
+          sizes="(max-width: 767px) 100vw, (max-width: 1280px) 92vw, 1152px"
+          priority
           className={`w-full ${post.heroImageFocus === 'landscape' ? 'aspect-video bg-[#a9cce0] object-contain' : post.heroImageFocus === 'upper' ? 'aspect-[5/3] object-cover object-[50%_5%]' : 'aspect-[16/10] object-cover object-center md:aspect-[16/9]'}`}
-          decoding="async"
         />
       </figure>
 

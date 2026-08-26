@@ -71,6 +71,8 @@ export interface BlogPost {
   heroImageFocus?: 'upper' | 'landscape' | 'center';
   /** Alt text for hero image — descriptive, contains keyword */
   heroImageAlt: string;
+  /** Optional image-specific title for a hero image; falls back to localized Alt text. */
+  heroImageTitle?: string;
   /** Article body sections */
   sections: BlogSection[];
   /** FAQ entries — drive FAQPage schema */

@@ -310,6 +310,22 @@ test('news listing delivers R2 covers through responsive Next Image with only th
   assert.match(newsPage, /alt=\{imageAltFor\(article\.imageAlt\)\}[\s\S]*loading="lazy"/s);
 });
 
+test('priority article covers have image-specific localized titles on both listing and detail pages', () => {
+  const imageSemantics = read('lib/localized-content/image-semantics.ts');
+  const newsPage = read('app/[lang]/news/page.tsx');
+  const articlePage = read('app/[lang]/news/[slug]/page.tsx');
+  for (const slug of [
+    'solar-panel-rfq-checklist-international-buyers',
+    'home-appliance-oem-sample-evaluation-checklist',
+    'usb-c-accessories-wholesale-specification-checklist',
+    'battery-energy-storage-rfq-data-checklist',
+    'portable-power-supply-solar-storage-b2b-guide',
+  ]) assert.match(imageSemantics, new RegExp(`'${slug}'`));
+  assert.match(newsPage, /getLocalizedArticleImageTitle\(slug, lang,/);
+  assert.match(articlePage, /getLocalizedArticleImageTitle\(slug, lang, post\.heroImageTitle \|\| post\.heroImageAlt\)/);
+  assert.match(articlePage, /sizes="\(max-width: 767px\) 100vw, \(max-width: 1280px\) 92vw, 1152px"/);
+});
+
 test('factory and service pages use responsive Next Image for core R2 media without over-prioritizing non-LCP images', () => {
   const factory = read('app/[lang]/factory/page.tsx');
   const service = read('app/[lang]/service/page.tsx');

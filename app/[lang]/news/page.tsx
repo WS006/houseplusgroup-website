@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { sortedBlogPosts } from '@/lib/blog-data';
 import localizedArticles from '@/lib/localized-content/articles.json';
+import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-semantics';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -449,6 +450,9 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
   const imageAltFor = (imageAlt: string | Record<string, string>) => (
     typeof imageAlt === 'string' ? imageAlt : imageAlt[lang] || imageAlt.en
   );
+  const imageTitleFor = (slug: string, imageAlt: string | Record<string, string>, fallback: string) => (
+    getLocalizedArticleImageTitle(slug, lang, fallback || imageAltFor(imageAlt))
+  );
 
   return (
     <main className="min-h-screen bg-white">
@@ -475,7 +479,7 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
               <Image
                 src={featuredArticle.image}
                 alt={imageAltFor(featuredArticle.imageAlt)}
-                title={featuredArticle.title[lang as keyof typeof featuredArticle.title] || featuredArticle.title.en}
+                title={imageTitleFor(featuredArticle.slug, featuredArticle.imageAlt, featuredArticle.title[lang as keyof typeof featuredArticle.title] || featuredArticle.title.en)}
                 fill
                 sizes="(max-width: 1023px) 100vw, 58vw"
                 priority
@@ -513,7 +517,7 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
                 <Image
                   src={article.image}
                   alt={imageAltFor(article.imageAlt)}
-                  title={article.title[lang as keyof typeof article.title] || article.title.en}
+                  title={imageTitleFor(article.slug, article.imageAlt, article.title[lang as keyof typeof article.title] || article.title.en)}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.035]"
