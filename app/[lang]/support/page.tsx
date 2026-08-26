@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -657,13 +658,15 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
         {/* Hero Section */}
         <section className="py-24 px-4 bg-slate-900 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-             <img
+             <Image
                 src="https://images.houseplus-ch.com/media/houseplus-site-support-customer-service/"
                 alt={t.heroImage.alt}
                 title={t.heroImage.title}
+                fill
+                sizes="100vw"
                 className="object-cover"
                 loading="lazy"
-              decoding="async" />
+              />
           </div>
           <div className="max-w-4xl mx-auto relative z-10">
             <h1 className="text-5xl md:text-6xl font-black mb-6">{t.title}</h1>

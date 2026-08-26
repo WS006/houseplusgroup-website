@@ -352,6 +352,14 @@ test('factory and service pages use responsive Next Image for core R2 media with
   assert.match(service, /houseplus-site-service-technical-consultation\/[\s\S]*sizes="\(max-width: 1023px\) 100vw, 50vw"[\s\S]*loading="lazy"/s);
 });
 
+test('support and region pages serve governed R2 visuals with responsive sizes and lazy loading', () => {
+  const support = read('app/[lang]/support/page.tsx');
+  const regions = read('app/[lang]/regions/page.tsx');
+  for (const source of [support, regions]) assert.match(source, /import Image from 'next\/image';/);
+  assert.match(support, /houseplus-site-support-customer-service\/[\s\S]*fill[\s\S]*sizes="100vw"[\s\S]*loading="lazy"/s);
+  assert.match(regions, /houseplus-site-global-world-map-markets\/[\s\S]*fill[\s\S]*sizes="\(max-width: 1280px\) 100vw, 1152px"[\s\S]*loading="lazy"/s);
+});
+
 test('all static news routes are included in the RSS source without replaying unverified commercial claims', () => {
   const feed = read('app/feed.xml/route.ts');
   const staticFeed = read('lib/static-news-feed.ts');
