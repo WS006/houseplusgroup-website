@@ -15,7 +15,7 @@ test('portable power video articles reference durable v2 R2 media URLs instead o
   assert.doesNotMatch(articleSource, /manus-storage\/houseplus-portable-power/);
   for (const url of mediaUrls) assert.match(articleSource, new RegExp(url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
   assert.equal((articleSource.match(/video: portablePowerOverviewVideo/g) ?? []).length, 2);
-  assert.match(articleSource, /heroImageFocus: 'top'/);
+  assert.match(articleSource, /heroImageFocus: 'upper'/);
 });
 
 test('video player exposes verified visual descriptions for the no-narration source video', () => {
@@ -24,5 +24,5 @@ test('video player exposes verified visual descriptions for the no-narration sou
   assert.match(articlePageSource, /label="English visual descriptions"/);
   assert.match(articlePageSource, /poster=\{post\.video\.poster\}/);
   assert.match(articlePageSource, /src=\{post\.video\.captionsUrl\}/);
-  assert.match(articlePageSource, /post\.heroImageFocus === 'top' \? 'object-top' : 'object-center'/);
+  assert.match(articlePageSource, /post\.heroImageFocus === 'upper' \? 'object-\[50%_5%\]' : 'object-center'/);
 });

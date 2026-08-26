@@ -158,7 +158,7 @@ export const portablePowerB2bGuide: BlogPost = {
   keywords: 'portable power supply B2B, solar storage sourcing, mobile power station procurement, LiFePO4 battery RFQ, portable solar generator OEM',
   author, authorRole: role, datePublished: '2026-08-26', dateModified: '2026-08-26', readingTime: '8 min read', category: 'Solar & Storage',
   heroImage: portablePowerOverviewVideo.poster,
-  heroImageFocus: 'top',
+  heroImageFocus: 'upper',
   heroImageAlt: 'HousePlus portable power supply and solar storage products shown in a B2B product overview video',
   sections: [
     { heading: 'What the HousePlus product overview shows', paragraphs: [
