@@ -227,10 +227,10 @@ export default async function BlogPostPage({
             >
               {post.video.captionsUrl && (
                 <track
-                  kind="captions"
+                  kind="descriptions"
                   src={post.video.captionsUrl}
                   srcLang="en"
-                  label="English captions"
+                  label="English visual descriptions"
                   default
                 />
               )}

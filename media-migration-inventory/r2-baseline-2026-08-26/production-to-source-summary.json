@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-08-26T07:33:34.577Z",
+  "productionUniqueMediaUrls": 239,
+  "productionPublicMediaUrls": 223,
+  "productionTemporaryManusStorageUrls": 4,
+  "sourceObjects": 280,
+  "targetObjects": 98,
+  "publicSlugAliases": 186,
+  "sourceAssetsWithMappedSlug": 187,
+  "mappedProductionMedia": 223,
+  "unmappedProductionMedia": 0,
+  "targetSameKeyCollisions": 0
+}

@@ -1,0 +1,17 @@
+{
+  "sitemap_url": "https://www.houseplus-ch.com/sitemap.xml",
+  "sitemap_pages": 600,
+  "pages_fetched": 600,
+  "page_errors": 0,
+  "media_reference_records": 17505,
+  "unique_media_urls": 239,
+  "hosts": {
+    "images.houseplus-ch.com": 223,
+    "www.houseplus-ch.comhttps:": 12,
+    "www.houseplus-ch.com": 4
+  },
+  "classes": {
+    "media-worker-path": 235,
+    "manus-storage": 4
+  }
+}

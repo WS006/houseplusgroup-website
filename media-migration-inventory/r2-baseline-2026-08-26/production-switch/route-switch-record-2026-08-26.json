@@ -1,0 +1,56 @@
+{
+  "switchedAt": "2026-08-26T08:54:48.657Z",
+  "method": "cloudflare-workers-route",
+  "accountId": "5cd2f2781f30e866504997ad801d7dbd",
+  "zoneId": "e45c8dfbcb844ba7518c3ef5dab703f6",
+  "zoneName": "houseplus-ch.com",
+  "hostname": "images.houseplus-ch.com",
+  "worker": "houseplus-media-v2",
+  "route": {
+    "id": "5ccffe0e015646adab982ba50d266bc7",
+    "pattern": "images.houseplus-ch.com/*",
+    "script": "houseplus-media-v2"
+  },
+  "dnsRecord": {
+    "id": "b9456a7bb8e3dfea3bf9cef6095d4f0b",
+    "type": "A",
+    "name": "images.houseplus-ch.com",
+    "content": "76.76.21.21",
+    "before": {
+      "proxied": false,
+      "ttl": 60,
+      "entrypoint": "Vercel media handler"
+    },
+    "after": {
+      "proxied": true,
+      "ttl": 1,
+      "entrypoint": "houseplus-media-v2 Worker Route"
+    }
+  },
+  "validation": {
+    "productionMediaCheck": {
+      "file": "media-v2-production-full-check.json",
+      "total": 132,
+      "passed": 132,
+      "failed": 0,
+      "checks": ["HTTP 200", "source ETag", "Content-Type", "x-houseplus-media-origin"]
+    },
+    "pageAndSeoCheck": {
+      "file": "production-page-seo-check.json",
+      "pagesPassed": 8,
+      "pagesTotal": 8,
+      "endpointsPassed": 3,
+      "endpointsTotal": 3,
+      "coverage": ["EN/ES/DE/FR/AR product pages", "mobile user agent", "brand", "news", "region", "Next image", "image sitemap"]
+    }
+  },
+  "rollback": {
+    "trigger": "Any material media delivery, image rendering, SEO URL, or cache regression during the observation period.",
+    "steps": [
+      "DELETE /zones/e45c8dfbcb844ba7518c3ef5dab703f6/workers/routes/5ccffe0e015646adab982ba50d266bc7",
+      "PATCH /zones/e45c8dfbcb844ba7518c3ef5dab703f6/dns_records/b9456a7bb8e3dfea3bf9cef6095d4f0b with { proxied: false }",
+      "Re-run the pre-switch public media and Next image checks."
+    ],
+    "preserved": ["old houseplus-media-api Worker", "old houseplus R2 bucket", "target migration backups", "Vercel origin path"]
+  }
+}

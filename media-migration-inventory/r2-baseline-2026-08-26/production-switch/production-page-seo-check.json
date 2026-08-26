@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "generatedAt": "2026-08-26T08:58:05.266Z",
+    "pagesPassed": 8,
+    "pagesTotal": 8,
+    "endpointsPassed": 3,
+    "endpointsTotal": 3,
+    "passed": true
+  },
+  "pages": [
+    {
+      "label": "英文产品页",
+      "url": "https://www.houseplus-ch.com/en/products/solar-inverter-3kw/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/en/products/solar-inverter-3kw/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "jsonLdBlocks": 11,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "西班牙语产品页",
+      "url": "https://www.houseplus-ch.com/es/products/solar-inverter-3kw/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/es/products/solar-inverter-3kw/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "jsonLdBlocks": 11,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "德语产品页",
+      "url": "https://www.houseplus-ch.com/de/products/solar-inverter-3kw/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/de/products/solar-inverter-3kw/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "jsonLdBlocks": 11,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "法语产品页",
+      "url": "https://www.houseplus-ch.com/fr/products/solar-inverter-3kw/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/fr/products/solar-inverter-3kw/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "jsonLdBlocks": 11,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "阿拉伯语产品页（移动 UA）",
+      "url": "https://www.houseplus-ch.com/ar/products/solar-inverter-3kw/",
+      "expectsMedia": true,
+      "mobile": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/ar/products/solar-inverter-3kw/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "jsonLdBlocks": 11,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "英文品牌页",
+      "url": "https://www.houseplus-ch.com/en/brand/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/en/brand/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/",
+      "jsonLdBlocks": 11,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "英文新闻页",
+      "url": "https://www.houseplus-ch.com/en/news/portable-power-supply-solar-storage-b2b-guide/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/en/news/portable-power-supply-solar-storage-b2b-guide/",
+      "ogImage": "https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg",
+      "twitterImage": "https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg",
+      "jsonLdBlocks": 6,
+      "mediaMentioned": true,
+      "passed": true
+    },
+    {
+      "label": "英文地区页",
+      "url": "https://www.houseplus-ch.com/en/regions/africa/",
+      "expectsMedia": true,
+      "status": 200,
+      "canonical": "https://www.houseplus-ch.com/en/regions/africa/",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/",
+      "jsonLdBlocks": 7,
+      "mediaMentioned": true,
+      "passed": true
+    }
+  ],
+  "endpoints": [
+    {
+      "label": "正式媒体源",
+      "url": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "origin": "houseplus-media-v2",
+      "passed": true
+    },
+    {
+      "label": "Next 图片优化",
+      "url": "https://www.houseplus-ch.com/_next/image/?url=https%3A%2F%2Fimages.houseplus-ch.com%2Fmedia%2Fhouseplus-solar-inverter-3kw-wholesale%2F&w=1080&q=75",
+      "status": 200,
+      "contentType": "image/png",
+      "origin": null,
+      "passed": true
+    },
+    {
+      "label": "图片 Sitemap",
+      "url": "https://www.houseplus-ch.com/image-sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml; charset=utf-8",
+      "origin": null,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-08-26T09:03:05.700Z",
+  "targetBucket": "houseplus-images",
+  "batchPrefix": "media-live-v1/objects/video-houseplus-portable-power-overview",
+  "assets": [
+    {
+      "assetId": "video-houseplus-portable-power-overview",
+      "publicSlug": "houseplus-portable-power-supply-product-overview-video",
+      "localPath": "/home/ubuntu/upload/HousePlusFactoryPortablePowerSupplyHousePlusGroupFactorySolarProducts.mp4",
+      "targetKey": "media-live-v1/objects/video-houseplus-portable-power-overview/HousePlusFactoryPortablePowerSupplyHousePlusGroupFactorySolarProducts.mp4",
+      "contentType": "video/mp4",
+      "assetType": "video",
+      "byteSize": 40534308,
+      "sha256": "5e37f8a8a19eae40027e7475f9e0a8cc34969a2cd372b6a42a7adbac4584511b",
+      "publicUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/"
+    },
+    {
+      "assetId": "video-houseplus-portable-power-overview-poster",
+      "publicSlug": "houseplus-portable-power-supply-product-overview-poster",
+      "localPath": "/home/ubuntu/media-migration-staging/houseplus-portable-power-supply-video-poster.jpg",
+      "targetKey": "media-live-v1/objects/video-houseplus-portable-power-overview/houseplus-portable-power-supply-video-poster.jpg",
+      "contentType": "image/jpeg",
+      "assetType": "image",
+      "byteSize": 325651,
+      "sha256": "42c52e77af17ae2fc225127ce37a6f7138a3974370c80e2090b855a46e0e05f3",
+      "publicUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/"
+    },
+    {
+      "assetId": "video-houseplus-portable-power-overview-captions-en",
+      "publicSlug": "houseplus-portable-power-supply-captions-en",
+      "localPath": "/home/ubuntu/media-migration-staging/houseplus-portable-power-supply-captions-en.vtt",
+      "targetKey": "media-live-v1/objects/video-houseplus-portable-power-overview/houseplus-portable-power-supply-captions-en.vtt",
+      "contentType": "text/vtt",
+      "assetType": "caption",
+      "byteSize": 1660,
+      "sha256": "a56b4464261bb18f0c1c54c210c65ae2a793390a5e7082479de37053b73bee2d",
+      "publicUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/"
+    }
+  ]
+}

@@ -4,6 +4,15 @@ import { r2MediaUrl } from '../r2-media-map';
 const author = 'HousePlus Editorial Team';
 const role = 'B2B sourcing and product development insights';
 const related = (slug: string, title: string): { slug: string; title: string; excerpt: string; date: string; readingTime: string } => ({ slug, title, excerpt: `A practical HousePlus reference for international B2B buyers evaluating ${title.toLowerCase()}.`, date: '2026-08-01', readingTime: '7 min read' });
+const portablePowerOverviewVideo = {
+  name: 'HousePlus Portable Power Supply and Solar Energy Storage Product Overview',
+  description: 'A 42-second vertical visual overview of HousePlus portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. Product specifications shown on screen require confirmation for the selected model and destination.',
+  contentUrl: 'https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/',
+  poster: 'https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/',
+  duration: 'PT42S', width: 1440, height: 2560, uploadDate: '2026-08-26',
+  captionsUrl: 'https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/',
+  transcript: 'The video presents HousePlus solar energy storage and mobile power supply products, including QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, folding solar panels, a LiFePO4 battery and industrial storage equipment. It contains background music and on-screen English product information without spoken narration.',
+};
 
 export const solarRfqChecklist: BlogPost = {
   slug: 'solar-panel-rfq-checklist-international-buyers',
@@ -139,15 +148,7 @@ export const batteryRfqDataGuide: BlogPost = {
     { question: 'Are warranty and cycle-life terms universal?', answer: 'No. They depend on configuration, operating conditions, destination and contract scope and must be confirmed in writing.' }
   ],
   relatedArticles: [related('lifepo4-vs-lead-acid-battery', 'battery technology comparison'), related('solar-energy-storage-industrial-manufacturing', 'industrial solar storage')], productRecommendations: [],
-  video: {
-    name: 'HousePlus Portable Power Supply and Solar Energy Storage Product Overview',
-    description: 'A 42-second HousePlus product overview showing portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. Specifications shown in the video should be confirmed for the selected model and destination.',
-    contentUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products_6e7eef30.mp4',
-    poster: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg',
-    duration: 'PT42S', width: 1440, height: 2560, uploadDate: '2026-08-26',
-    captionsUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-captions_73816408.vtt',
-    transcript: 'The video presents HousePlus solar energy storage and mobile power supply products, including QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, folding solar panels, a LiFePO4 battery and industrial storage equipment. It contains background music and on-screen English product information without spoken narration.'
-  }
+  video: portablePowerOverviewVideo
 };
 
 export const portablePowerB2bGuide: BlogPost = {
@@ -156,7 +157,7 @@ export const portablePowerB2bGuide: BlogPost = {
   description: 'Review portable power supply and solar storage products for B2B sourcing with a practical guide to specifications, applications, documentation and RFQ preparation.',
   keywords: 'portable power supply B2B, solar storage sourcing, mobile power station procurement, LiFePO4 battery RFQ, portable solar generator OEM',
   author, authorRole: role, datePublished: '2026-08-26', dateModified: '2026-08-26', readingTime: '8 min read', category: 'Solar & Storage',
-  heroImage: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg',
+  heroImage: portablePowerOverviewVideo.poster,
   heroImageAlt: 'HousePlus portable power supply and solar storage products shown in a B2B product overview video',
   sections: [
     { heading: 'What the HousePlus product overview shows', paragraphs: [
@@ -182,13 +183,5 @@ export const portablePowerB2bGuide: BlogPost = {
     { question: 'Does the video include spoken narration?', answer: 'No spoken narration was identified. It uses background music and on-screen English product information, with an English caption track added for accessibility.' }
   ],
   relatedArticles: [related('battery-energy-storage-rfq-data-checklist', 'battery storage RFQ data'), related('solar-energy-storage-industrial-manufacturing', 'industrial solar storage')], productRecommendations: [],
-  video: {
-    name: 'HousePlus Portable Power Supply and Solar Energy Storage Product Overview',
-    description: 'A 42-second visual overview of HousePlus portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. Product specifications shown on screen require confirmation for the selected model and destination.',
-    contentUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products_6e7eef30.mp4',
-    poster: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg',
-    duration: 'PT42S', width: 1440, height: 2560, uploadDate: '2026-08-26',
-    captionsUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-captions_73816408.vtt',
-    transcript: 'The video presents HousePlus solar energy storage and mobile power supply products, including portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. It contains background music and on-screen English product information without spoken narration.'
-  }
+  video: portablePowerOverviewVideo
 };

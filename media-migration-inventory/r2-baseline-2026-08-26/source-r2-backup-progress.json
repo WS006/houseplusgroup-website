@@ -1,0 +1,2079 @@
+{
+  "backupPrefix": "migration-backups/houseplus-source-2026-08-26/objects/",
+  "lastCompletedIndex": 280,
+  "latest": {
+    "sourceKey": "variants/fa65d41c-2e23-4880-a19f-774c3bacdaa1/webp-1920.webp",
+    "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/fa65d41c-2e23-4880-a19f-774c3bacdaa1/webp-1920.webp",
+    "status": "copied_and_verified",
+    "sourceBytes": 160322,
+    "sourceETag": "\"f4d220c999a894814010540cc24718bf\"",
+    "sha256": "c9c2f6d52470b9d2e230c8b4633555deafa4ac8900a981eb3f9ddf410e2669e5"
+  },
+  "results": [
+    {
+      "sourceKey": "ingest/2026-08-12/03a73424-0574-4fb8-9354-abda05ef57bf/houseplus-horizontal-logo.png",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/03a73424-0574-4fb8-9354-abda05ef57bf/houseplus-horizontal-logo.png",
+      "status": "already_verified",
+      "sourceBytes": 33197,
+      "sourceETag": "\"dc2fb9d3c19caf16af2d585df33d2459\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/03d4dbfa-db81-4af1-b127-423007a43827/articles-electronics-battery-testing-lab-equipment.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/03d4dbfa-db81-4af1-b127-423007a43827/articles-electronics-battery-testing-lab-equipment.jpg",
+      "status": "already_verified",
+      "sourceBytes": 60940,
+      "sourceETag": "\"491c6b385fcf61e26d4c4bd8cdb73ac9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/044cea9e-02a0-42f2-a3c9-7fac928c7854/products-product-power-station.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/044cea9e-02a0-42f2-a3c9-7fac928c7854/products-product-power-station.jpg",
+      "status": "already_verified",
+      "sourceBytes": 74403,
+      "sourceETag": "\"c20341f862fdc567e76e4f7886d7c957\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/062de3c9-36e6-4b10-a584-463e89581bf2/products-gas-stove-3-burner.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/062de3c9-36e6-4b10-a584-463e89581bf2/products-gas-stove-3-burner.jpg",
+      "status": "already_verified",
+      "sourceBytes": 291699,
+      "sourceETag": "\"b551bb321ffbb123d6365cf8d4dd4c8c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/06ead54a-13e5-4cc1-8935-189c80ff5881/products-smart-watch.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/06ead54a-13e5-4cc1-8935-189c80ff5881/products-smart-watch.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3012935,
+      "sourceETag": "\"a6a5c2cb5ae171ad8f090914c94d836c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/071603fb-ef14-4247-bb85-7f8da9997ca9/products-range-hood-600mm.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/071603fb-ef14-4247-bb85-7f8da9997ca9/products-range-hood-600mm.jpg",
+      "status": "already_verified",
+      "sourceBytes": 263836,
+      "sourceETag": "\"0148c3b4b94f95041129f8aab4375444\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/0f863c7d-64e1-4a61-adeb-da3d252768b6/home-appliances-hero.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/0f863c7d-64e1-4a61-adeb-da3d252768b6/home-appliances-hero.jpg",
+      "status": "already_verified",
+      "sourceBytes": 147881,
+      "sourceETag": "\"416a4d76818619bc2cda51869ad05c26\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/0fefeced-e43b-45f2-992d-892d8e54740b/products-portable-power-station.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/0fefeced-e43b-45f2-992d-892d8e54740b/products-portable-power-station.jpg",
+      "status": "already_verified",
+      "sourceBytes": 91097,
+      "sourceETag": "\"899e85c516ec60319826be48d5e9b025\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1008a398-c41f-4341-9a5e-81c4fa78fc75/products-product-bluetooth-earbuds.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1008a398-c41f-4341-9a5e-81c4fa78fc75/products-product-bluetooth-earbuds.jpg",
+      "status": "already_verified",
+      "sourceBytes": 44347,
+      "sourceETag": "\"922f51c291155840c912b6a5a320116e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/11336000-c3dc-4bca-ae37-f08ce9b67fb6/site-warehouse-logistics-shipping.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/11336000-c3dc-4bca-ae37-f08ce9b67fb6/site-warehouse-logistics-shipping.jpg",
+      "status": "already_verified",
+      "sourceBytes": 92967,
+      "sourceETag": "\"7c0210d672671f2f0ee76071a1a5fc16\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/116a9221-5b5f-48a9-9383-c0409c8909bb/site-customer-support-helpdesk.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/116a9221-5b5f-48a9-9383-c0409c8909bb/site-customer-support-helpdesk.jpg",
+      "status": "already_verified",
+      "sourceBytes": 106491,
+      "sourceETag": "\"aeed1d7f2cf71510debe0fae4caf1484\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/11d0360b-af72-446e-a9f3-3cb438d1a388/products-range-hood-750mm-inclined.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/11d0360b-af72-446e-a9f3-3cb438d1a388/products-range-hood-750mm-inclined.jpg",
+      "status": "already_verified",
+      "sourceBytes": 192956,
+      "sourceETag": "\"6b739de7649ed632f1bedd4e31049ac9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1387f02c-fe72-466e-b383-bfe4f27a716b/articles-electronics-electronics-headphones-product.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1387f02c-fe72-466e-b383-bfe4f27a716b/articles-electronics-electronics-headphones-product.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4574894,
+      "sourceETag": "\"9b595f56a84fe0bcfa8b6bb4c463a8ab\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/15e34719-75ce-4403-833b-cd8715a50c42/products-electric-water-heater-50l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/15e34719-75ce-4403-833b-cd8715a50c42/products-electric-water-heater-50l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 99434,
+      "sourceETag": "\"434c9dd0a473f964a1e755da7d0fba7b\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/17075f2b-067e-44f0-9229-18997fbc73ca/site-support-customer-service.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/17075f2b-067e-44f0-9229-18997fbc73ca/site-support-customer-service.jpg",
+      "status": "already_verified",
+      "sourceBytes": 206103,
+      "sourceETag": "\"3627ac7047f29923b6925956bcbc2c01\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/18406370-f61f-4c38-99d6-b6ba4ca5e659/articles-covers-solar-energy-storage-industrial-manufacturing.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/18406370-f61f-4c38-99d6-b6ba4ca5e659/articles-covers-solar-energy-storage-industrial-manufacturing.jpg",
+      "status": "already_verified",
+      "sourceBytes": 278618,
+      "sourceETag": "\"c65ef3c6f63b466a1bd9a9cf326f1605\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1a43d798-709d-41fa-be2c-b978573f6a49/articles-covers-energy-efficiency-standards-appliances.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1a43d798-709d-41fa-be2c-b978573f6a49/articles-covers-energy-efficiency-standards-appliances.jpg",
+      "status": "already_verified",
+      "sourceBytes": 116584,
+      "sourceETag": "\"7e71efdd8e8a1a8e80e8483677545fb2\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1a65d956-2f3f-4ceb-8dbd-6667d9df5983/site-case-studies-logistics-review.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1a65d956-2f3f-4ceb-8dbd-6667d9df5983/site-case-studies-logistics-review.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4901238,
+      "sourceETag": "\"c58a73ac47d1c3627093d4cde8fe7351\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1dabea73-9a4d-463b-b32f-f3e2c5192acd/home-solar-hero.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1dabea73-9a4d-463b-b32f-f3e2c5192acd/home-solar-hero.jpg",
+      "status": "already_verified",
+      "sourceBytes": 233292,
+      "sourceETag": "\"174713e15880b15edacd4620384eb450\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/products-lifepo4-battery-12v100ah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/products-lifepo4-battery-12v100ah.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4327339,
+      "sourceETag": "\"a48e0c9451639c567dff00f82336bb13\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1e310ff8-8186-4803-ac0d-867ca08c9710/articles-covers-lifepo4-vs-lead-acid-battery.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1e310ff8-8186-4803-ac0d-867ca08c9710/articles-covers-lifepo4-vs-lead-acid-battery.jpg",
+      "status": "already_verified",
+      "sourceBytes": 152343,
+      "sourceETag": "\"70a8dc1e634ae8704d583f874721aec2\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/articles-covers-consumer-electronics-battery-life-testing.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/articles-covers-consumer-electronics-battery-life-testing.jpg",
+      "status": "already_verified",
+      "sourceBytes": 119962,
+      "sourceETag": "\"6299f3fdf8d2842a1354420102aa5986\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2280d26e-4918-4d57-9047-2cb7213e06b0/products-toaster-2-slice.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2280d26e-4918-4d57-9047-2cb7213e06b0/products-toaster-2-slice.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3987314,
+      "sourceETag": "\"62edd304b549a1283c665cf06f6d58f2\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/22a78111-711a-4db6-bcd7-a40166b052cb/carousel-carousel-electronics.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/22a78111-711a-4db6-bcd7-a40166b052cb/carousel-carousel-electronics.jpg",
+      "status": "already_verified",
+      "sourceBytes": 285131,
+      "sourceETag": "\"d190405b1b67f834b3ec1722d7072151\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/22ba0268-8628-44a3-bd37-2edbcc224e04/products-wireless-charger.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/22ba0268-8628-44a3-bd37-2edbcc224e04/products-wireless-charger.jpg",
+      "status": "already_verified",
+      "sourceBytes": 251934,
+      "sourceETag": "\"1e876712c921bf4c018ea845bced9d38\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2360e8f7-e149-4cc7-8266-58bb8a22b890/articles-appliances-smart-home-trends-2026.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2360e8f7-e149-4cc7-8266-58bb8a22b890/articles-appliances-smart-home-trends-2026.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4320894,
+      "sourceETag": "\"2e9f74944b63c104a439ae71c00e09ac\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/24e8b932-f7d0-4511-9e03-8a98cbb987f5/products-smart-wifi-plug-meter.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/24e8b932-f7d0-4511-9e03-8a98cbb987f5/products-smart-wifi-plug-meter.jpg",
+      "status": "already_verified",
+      "sourceBytes": 2520266,
+      "sourceETag": "\"131876da44f3a20359a38352958eaf4a\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2556637e-92ab-43d4-8940-2bb1c8ad319b/products-lead-acid-battery-100ah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2556637e-92ab-43d4-8940-2bb1c8ad319b/products-lead-acid-battery-100ah.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3231859,
+      "sourceETag": "\"a4839c2a98353bc30c8dd23e81fa1eb2\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/255d7fe0-8d21-43b8-a568-39d38bb6a0bc/carousel-carousel-home-appliances.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/255d7fe0-8d21-43b8-a568-39d38bb6a0bc/carousel-carousel-home-appliances.jpg",
+      "status": "already_verified",
+      "sourceBytes": 436095,
+      "sourceETag": "\"dee2b68d67cf74f1e57cc706e864278d\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/270d35e2-b004-4941-95e7-1a0674a5b4b9/products-solar-inverter-3kw.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/270d35e2-b004-4941-95e7-1a0674a5b4b9/products-solar-inverter-3kw.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3613150,
+      "sourceETag": "\"004f9de3cd3233942e7c8c1028d3ed7d\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/29040940-175f-46fc-acb5-e6f57ce68e2f/about-manufacturing-facility.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/29040940-175f-46fc-acb5-e6f57ce68e2f/about-manufacturing-facility.jpg",
+      "status": "already_verified",
+      "sourceBytes": 73158,
+      "sourceETag": "\"be28bd343c4227e47e17d14345ba74eb\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2946709f-9053-4d33-991a-28e37dfd3f27/team-team-manufacturing-collaboration.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2946709f-9053-4d33-991a-28e37dfd3f27/team-team-manufacturing-collaboration.jpg",
+      "status": "already_verified",
+      "sourceBytes": 323284,
+      "sourceETag": "\"febad480e4a1ac809a3d764a8f82ec49\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2a83c236-4c98-4d82-9fa9-ff7cbd3b8b7b/site-service-technical-consultation.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2a83c236-4c98-4d82-9fa9-ff7cbd3b8b7b/site-service-technical-consultation.jpg",
+      "status": "already_verified",
+      "sourceBytes": 244432,
+      "sourceETag": "\"626d14a2f91bd232b0cffcb1d881b2c6\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2ca51974-8d59-47e0-8469-b583ff64db42/articles-electronics-electronics-usb-cable-product.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2ca51974-8d59-47e0-8469-b583ff64db42/articles-electronics-electronics-usb-cable-product.jpg",
+      "status": "already_verified",
+      "sourceBytes": 80276,
+      "sourceETag": "\"ac553ab59113f1515495c5987aef8c51\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2d06a54e-fc52-43b8-876d-637416da6083/products-appliances-showcase.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2d06a54e-fc52-43b8-876d-637416da6083/products-appliances-showcase.jpg",
+      "status": "already_verified",
+      "sourceBytes": 137930,
+      "sourceETag": "\"b00ee42fe5511979858a7ec10bb0d906\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2fadb571-9933-41a8-8e8f-3903230f1006/team-logistics-port.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2fadb571-9933-41a8-8e8f-3903230f1006/team-logistics-port.jpg",
+      "status": "already_verified",
+      "sourceBytes": 106276,
+      "sourceETag": "\"e3483253ef8d7254c9d46b848b773a4e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/2fd9cc95-2d2a-4309-a730-eed1f7e56e55/products-gas-water-heater-8l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/2fd9cc95-2d2a-4309-a730-eed1f7e56e55/products-gas-water-heater-8l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 109897,
+      "sourceETag": "\"73e9190e20aa5dea5bb49b6fd6ce3879\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/328d6bbc-d1b1-487c-9604-eb7a66ba3d93/articles-covers-mppt-vs-pwm-charge-controller.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/328d6bbc-d1b1-487c-9604-eb7a66ba3d93/articles-covers-mppt-vs-pwm-charge-controller.jpg",
+      "status": "already_verified",
+      "sourceBytes": 146845,
+      "sourceETag": "\"cd66c517eee943d283ebc7b2b68463d9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/3393939f-fdff-454a-a31b-a21b44262856/products-product-rice-cooker.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/3393939f-fdff-454a-a31b-a21b44262856/products-product-rice-cooker.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3921520,
+      "sourceETag": "\"0cace04539ac8b4dbc587e6502e0d07d\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/374739a1-d933-4820-8817-56b657c0e371/products-portable-power-station-3000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/374739a1-d933-4820-8817-56b657c0e371/products-portable-power-station-3000w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4563507,
+      "sourceETag": "\"540ffcfb4551c22014dcbe2bb1bcf8fb\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/3a511818-4b8e-4023-9631-106691f27e4d/products-bluetooth-earphone-tws.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/3a511818-4b8e-4023-9631-106691f27e4d/products-bluetooth-earphone-tws.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3105119,
+      "sourceETag": "\"082c7ffab4136cd769e789e121edc36e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/3db7555b-8e6c-4bb6-ac34-6963f1503353/products-product-electric-kettle.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/3db7555b-8e6c-4bb6-ac34-6963f1503353/products-product-electric-kettle.jpg",
+      "status": "already_verified",
+      "sourceBytes": 46620,
+      "sourceETag": "\"40c91427de1cfaf7f0fa58d680441bfc\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/3ff31e44-5a92-4d95-ac80-597a8e391816/articles-covers-global-wholesale-guide-home-appliances.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/3ff31e44-5a92-4d95-ac80-597a8e391816/articles-covers-global-wholesale-guide-home-appliances.jpg",
+      "status": "already_verified",
+      "sourceBytes": 220617,
+      "sourceETag": "\"65cfc38336d4a69313fd6ef85e14c8db\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/412f5266-8f26-429b-b3ce-ea16afe4a74d/articles-covers-tws-earphones-oem-manufacturing-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/412f5266-8f26-429b-b3ce-ea16afe4a74d/articles-covers-tws-earphones-oem-manufacturing-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 154332,
+      "sourceETag": "\"3eec223e6d757cdd7543cdb9936aac12\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/41c54f69-c354-4bf9-963a-3f9cb00306d6/products-solar-power-station.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/41c54f69-c354-4bf9-963a-3f9cb00306d6/products-solar-power-station.jpg",
+      "status": "already_verified",
+      "sourceBytes": 175577,
+      "sourceETag": "\"579ff80c2c714f20a6e7822013b7cf51\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/44b1ac39-b07d-49b8-bb55-f9e7266893a3/favicon.png",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/44b1ac39-b07d-49b8-bb55-f9e7266893a3/favicon.png",
+      "status": "already_verified",
+      "sourceBytes": 1723,
+      "sourceETag": "\"dfb277aff0032738519675c1b6ad8e0c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/479fc9ee-005a-4fb4-aa60-80180c522a2c/articles-covers-how-to-choose-solar-panel-manufacturer-china.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/479fc9ee-005a-4fb4-aa60-80180c522a2c/articles-covers-how-to-choose-solar-panel-manufacturer-china.jpg",
+      "status": "already_verified",
+      "sourceBytes": 219406,
+      "sourceETag": "\"8537c9c688c84712e248691cd0da766a\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/498a7ad8-81cf-403f-bdee-77c08dc04c3e/products-home-energy-storage-5000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/498a7ad8-81cf-403f-bdee-77c08dc04c3e/products-home-energy-storage-5000w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 2912511,
+      "sourceETag": "\"0da83205c931ef04906b64d4d2bf5125\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/4c25ace1-b0fb-48c9-ae3e-3ac3381f78c8/android-chrome-512x512.png",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/4c25ace1-b0fb-48c9-ae3e-3ac3381f78c8/android-chrome-512x512.png",
+      "status": "already_verified",
+      "sourceBytes": 37843,
+      "sourceETag": "\"d014ce0e62c70b08cae8716e43ee723a\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/4d0a9e19-d28c-4de3-a2b2-137ff1d12a49/carousel-carousel-solar-energy.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/4d0a9e19-d28c-4de3-a2b2-137ff1d12a49/carousel-carousel-solar-energy.jpg",
+      "status": "already_verified",
+      "sourceBytes": 228394,
+      "sourceETag": "\"779d69f40c20e3c7b01393e51d418224\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/4f03bb60-9b13-411b-9f33-6924f5461668/products-power-bank.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/4f03bb60-9b13-411b-9f33-6924f5461668/products-power-bank.jpg",
+      "status": "already_verified",
+      "sourceBytes": 163803,
+      "sourceETag": "\"beb4b9be6f3d08c3598a3bf8d6962eaa\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/524e182e-6794-475d-b75f-563d55031eec/products-foldable-solar-panel-200w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/524e182e-6794-475d-b75f-563d55031eec/products-foldable-solar-panel-200w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4788459,
+      "sourceETag": "\"30df55e1a748133c6a0c5f779dd25f3f\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5385ec50-3886-4a91-b94c-090ea035e2b1/articles-solar-solar-energy-farm-panels.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5385ec50-3886-4a91-b94c-090ea035e2b1/articles-solar-solar-energy-farm-panels.jpg",
+      "status": "already_verified",
+      "sourceBytes": 124246,
+      "sourceETag": "\"c574a31eaa5160efd61dc9fdde415389\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/53c1ad46-cc96-43d0-aace-a8926f2e55a3/products-3c-electronics-banner.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/53c1ad46-cc96-43d0-aace-a8926f2e55a3/products-3c-electronics-banner.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4004302,
+      "sourceETag": "\"580ea4f8025afc937a55347beb04a636\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/56493de4-d16d-4b6e-935a-9daa1bbb5f07/articles-covers-2026-electronics-market-update.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/56493de4-d16d-4b6e-935a-9daa1bbb5f07/articles-covers-2026-electronics-market-update.jpg",
+      "status": "already_verified",
+      "sourceBytes": 166812,
+      "sourceETag": "\"26912957e5061103167fd192371ad8c0\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/571a114b-d1ca-449d-b381-a45ee5d2a4f8/products-appliances-package.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/571a114b-d1ca-449d-b381-a45ee5d2a4f8/products-appliances-package.jpg",
+      "status": "already_verified",
+      "sourceBytes": 337309,
+      "sourceETag": "\"d37c9d6df826337764f89002279c0ac9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5735b9be-6402-4007-bc79-fc2ee8581f7b/home-home-appliances-collection-b.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5735b9be-6402-4007-bc79-fc2ee8581f7b/home-home-appliances-collection-b.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4548340,
+      "sourceETag": "\"5d9661470417d625682e207aa7d260eb\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/58f2d257-8d5c-481d-acd7-edb56c65c5b3/articles-covers-2026-solar-market-update.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/58f2d257-8d5c-481d-acd7-edb56c65c5b3/articles-covers-2026-solar-market-update.jpg",
+      "status": "already_verified",
+      "sourceBytes": 224137,
+      "sourceETag": "\"d1e17e7584725000bef19f3cae453a43\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5a0a79d4-5347-402f-9448-447aca926c6b/articles-covers-portable-ssd-vs-external-hdd.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5a0a79d4-5347-402f-9448-447aca926c6b/articles-covers-portable-ssd-vs-external-hdd.jpg",
+      "status": "already_verified",
+      "sourceBytes": 129508,
+      "sourceETag": "\"6731a31d4fecedf07ddbda1cf35481b6\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5cb40786-8213-4e6e-a8f9-4552b97b1b9b/about-production-line.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5cb40786-8213-4e6e-a8f9-4552b97b1b9b/about-production-line.jpg",
+      "status": "already_verified",
+      "sourceBytes": 80900,
+      "sourceETag": "\"7d2a434efc81c00199054865a874b028\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5cd0f0a7-b597-47f4-a2bd-52c783eb7025/articles-solar-solar-panel-sunset-industrial.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5cd0f0a7-b597-47f4-a2bd-52c783eb7025/articles-solar-solar-panel-sunset-industrial.jpg",
+      "status": "already_verified",
+      "sourceBytes": 620083,
+      "sourceETag": "\"24e202af24cb33c6701d7ceec5173102\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5d38e1b0-b17a-4434-887c-5afe172afe81/articles-covers-air-fryer-sourcing-guide-china.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5d38e1b0-b17a-4434-887c-5afe172afe81/articles-covers-air-fryer-sourcing-guide-china.jpg",
+      "status": "already_verified",
+      "sourceBytes": 139832,
+      "sourceETag": "\"8376356a86d188d359643f5f001bf3a7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5e2f09d5-57bd-459f-af91-fe2ea3102ed0/products-induction-hob-3-zone-flex.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5e2f09d5-57bd-459f-af91-fe2ea3102ed0/products-induction-hob-3-zone-flex.jpg",
+      "status": "already_verified",
+      "sourceBytes": 118247,
+      "sourceETag": "\"36a9c3955be85dfdb2d12831b3fdc8fe\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5ec6c2d5-bed3-4f1d-a04d-2a2a56a8c54f/articles-covers-2026-smart-home-appliances-market-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5ec6c2d5-bed3-4f1d-a04d-2a2a56a8c54f/articles-covers-2026-smart-home-appliances-market-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 123861,
+      "sourceETag": "\"045a2bb624b554c3d0f202eafb42dacf\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5f55fac9-2fc5-4a4e-b907-50058cb51e72/products-ceramic-hob-double-zone.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5f55fac9-2fc5-4a4e-b907-50058cb51e72/products-ceramic-hob-double-zone.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3637492,
+      "sourceETag": "\"c0ca3c9da28dcd4c092d63750ab8d55f\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/5ff6f019-260b-4697-879f-48d2f21ef639/products-product-power-bank-white.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/5ff6f019-260b-4697-879f-48d2f21ef639/products-product-power-bank-white.jpg",
+      "status": "already_verified",
+      "sourceBytes": 355418,
+      "sourceETag": "\"abc8873ee495d9d20fc7e2363338e800\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6042ca96-4095-4e07-9a0b-ef4241c85615/articles-appliances-appliance-energy-efficiency-label.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6042ca96-4095-4e07-9a0b-ef4241c85615/articles-appliances-appliance-energy-efficiency-label.jpg",
+      "status": "already_verified",
+      "sourceBytes": 91097,
+      "sourceETag": "\"899e85c516ec60319826be48d5e9b025\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/61c253cd-37e3-4079-949c-81e5b5ad2c9a/products-solar-generator-kit-300w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/61c253cd-37e3-4079-949c-81e5b5ad2c9a/products-solar-generator-kit-300w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3593978,
+      "sourceETag": "\"76e4be445fe0fb3e2afb00ccf2a5ab7c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6421407b-ee01-434c-a73b-454abd290556/products-product-solar-panel.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6421407b-ee01-434c-a73b-454abd290556/products-product-solar-panel.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3708370,
+      "sourceETag": "\"7eed637fa80c941cef37a338d40b7015\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/66608ca2-0849-4fc7-8d55-f15563719d87/products-ceramic-hob-4-zone-built-in.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/66608ca2-0849-4fc7-8d55-f15563719d87/products-ceramic-hob-4-zone-built-in.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3962073,
+      "sourceETag": "\"5a83e4b5480f8151940ed85fe59f3a10\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/672c03dc-e68c-482b-a764-5a603ebb759b/articles-electronics-electronics-bluetooth-speaker.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/672c03dc-e68c-482b-a764-5a603ebb759b/articles-electronics-electronics-bluetooth-speaker.jpg",
+      "status": "already_verified",
+      "sourceBytes": 111324,
+      "sourceETag": "\"f0f9a3655d0eea87a43c2a1a09135277\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/677858d4-b888-4d1e-a53c-7e069b35795a/products-range-hood-900mm-curved-glass.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/677858d4-b888-4d1e-a53c-7e069b35795a/products-range-hood-900mm-curved-glass.jpg",
+      "status": "already_verified",
+      "sourceBytes": 291332,
+      "sourceETag": "\"741fd31587882989d7b3738c00e905b8\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/69504194-8acf-4409-a265-22e169fed404/articles-appliances-smart-refrigerator-2026.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/69504194-8acf-4409-a265-22e169fed404/articles-appliances-smart-refrigerator-2026.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4212624,
+      "sourceETag": "\"4e9924d007d9fc2b67da0179daf0f6d6\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/products-charge-controller-60a.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/products-charge-controller-60a.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4095918,
+      "sourceETag": "\"06d82f4a0c9e9e91c1fb40ca7b0f6965\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6b234004-d413-4690-8a78-4a3fbbf299f4/products-headphone-over-ear.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6b234004-d413-4690-8a78-4a3fbbf299f4/products-headphone-over-ear.jpg",
+      "status": "already_verified",
+      "sourceBytes": 1419082,
+      "sourceETag": "\"c721b270aab5a50154f37a02c118718f\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6b262d13-49de-4082-be8e-7dcbf4da2339/team-office-meeting.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6b262d13-49de-4082-be8e-7dcbf4da2339/team-office-meeting.jpg",
+      "status": "already_verified",
+      "sourceBytes": 29082,
+      "sourceETag": "\"aaaf83bdb489db24f696910eb689c15b\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6b9e1e60-56d8-4cb0-804e-224851863cb6/products-outdoor-power-station-600w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6b9e1e60-56d8-4cb0-804e-224851863cb6/products-outdoor-power-station-600w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3061206,
+      "sourceETag": "\"1917d6bc6ab8b54a0e6da712ae765ae8\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/products-gas-electric-hybrid-cooktop.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/products-gas-electric-hybrid-cooktop.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4421343,
+      "sourceETag": "\"6b4ceb92e5375f4c76b01f8d17251ef7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6bfda11b-fe44-442f-b517-3b236a6a720c/articles-appliances-appliance-circuit-board-technology.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6bfda11b-fe44-442f-b517-3b236a6a720c/articles-appliances-appliance-circuit-board-technology.jpg",
+      "status": "already_verified",
+      "sourceBytes": 163803,
+      "sourceETag": "\"beb4b9be6f3d08c3598a3bf8d6962eaa\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/6c3c4c04-475a-4549-ab50-d9bfdcdfd604/products-kitchen-appliances.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/6c3c4c04-475a-4549-ab50-d9bfdcdfd604/products-kitchen-appliances.jpg",
+      "status": "already_verified",
+      "sourceBytes": 148073,
+      "sourceETag": "\"8aa006621f868294ea45c13eb7a4f349\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7029a48a-1aed-4de9-9545-e4ebe710a7e5/products-mppt-controller-40a.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7029a48a-1aed-4de9-9545-e4ebe710a7e5/products-mppt-controller-40a.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4243240,
+      "sourceETag": "\"e6e39689595243a7d34bff47789f0089\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/704da104-cca1-49ee-bc4c-ff72679cc5a1/products-lithium-battery-5kwh.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/704da104-cca1-49ee-bc4c-ff72679cc5a1/products-lithium-battery-5kwh.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3753087,
+      "sourceETag": "\"d079d6ee386f3657f3e6a9d6aa745501\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/711b5854-ae37-4eea-b73e-c65b018a98d0/products-steam-oven-30l-built-in.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/711b5854-ae37-4eea-b73e-c65b018a98d0/products-steam-oven-30l-built-in.jpg",
+      "status": "already_verified",
+      "sourceBytes": 154444,
+      "sourceETag": "\"15d0c0dbd95850c46f8e584acac30739\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/71300c09-58a1-460d-9fb5-bb83e959f974/home-electronics-hero.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/71300c09-58a1-460d-9fb5-bb83e959f974/home-electronics-hero.jpg",
+      "status": "already_verified",
+      "sourceBytes": 429169,
+      "sourceETag": "\"a5b8fd11ede178aa626ed7aabbf262f2\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7130f903-35d2-4a18-a270-9db239a81de3/articles-electronics-electronics-smartwatch-product.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7130f903-35d2-4a18-a270-9db239a81de3/articles-electronics-electronics-smartwatch-product.jpg",
+      "status": "already_verified",
+      "sourceBytes": 33318,
+      "sourceETag": "\"9f9ae001f90f4abea9cf5fc82636c424\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/products-solar-panel-100w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/products-solar-panel-100w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4518566,
+      "sourceETag": "\"113e56f472658ef7042d44617d7cac21\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/735c5115-bf87-4cf8-bbc8-5b5e6472e290/articles-electronics-electronics-charger-adapter.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/735c5115-bf87-4cf8-bbc8-5b5e6472e290/articles-electronics-electronics-charger-adapter.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3977148,
+      "sourceETag": "\"dc8c7f140a200bbf3e42c67c9fe2741d\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7580d6b8-f9d3-43b7-9d1f-1ad415061320/articles-covers-solar-panel-wholesale-price-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7580d6b8-f9d3-43b7-9d1f-1ad415061320/articles-covers-solar-panel-wholesale-price-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 233887,
+      "sourceETag": "\"f3bd6144b48580c2d7e6d50134511b61\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/774c9cb3-9c43-4d1f-9993-f56e2f7de104/articles-appliances-smart-home-living-room.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/774c9cb3-9c43-4d1f-9993-f56e2f7de104/articles-appliances-smart-home-living-room.jpg",
+      "status": "already_verified",
+      "sourceBytes": 230979,
+      "sourceETag": "\"c537b582fa0332540366f539115a2b52\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/78648eac-89d5-4571-a9c2-2aad26b4d6c6/products-portable-ssd-1tb.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/78648eac-89d5-4571-a9c2-2aad26b4d6c6/products-portable-ssd-1tb.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3230242,
+      "sourceETag": "\"cb8be089c0170db1b042fd577fed57ea\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/793ae24c-c7ee-453e-ab2c-038d0a20e818/products-air-fryer-5-8l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/793ae24c-c7ee-453e-ab2c-038d0a20e818/products-air-fryer-5-8l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3773399,
+      "sourceETag": "\"c77e2031f8c26d31870af74d3445cbd5\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7af04ae5-30e2-40cd-942f-1831b4c6472a/articles-appliances-air-conditioner-2026.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7af04ae5-30e2-40cd-942f-1831b4c6472a/articles-appliances-air-conditioner-2026.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4666904,
+      "sourceETag": "\"4c36ae33a6d366217e16a5e3440ee062\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7c1147cf-92c3-45b1-b683-1e7070703c89/products-electric-kettle-1-5l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7c1147cf-92c3-45b1-b683-1e7070703c89/products-electric-kettle-1-5l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3965129,
+      "sourceETag": "\"8d7f5fb94c929c63a49e6fcc3525606e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7d3e4426-84de-441e-b9ce-86b385f4c0ff/site-careers-growth-workshop.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7d3e4426-84de-441e-b9ce-86b385f4c0ff/site-careers-growth-workshop.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4860823,
+      "sourceETag": "\"cccb7478ae8424b368b4db069c1fb94e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7e48bd2c-3570-4527-9af3-78b81731e16d/articles-electronics-electronics-smart-home-device.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7e48bd2c-3570-4527-9af3-78b81731e16d/articles-electronics-electronics-smart-home-device.jpg",
+      "status": "already_verified",
+      "sourceBytes": 68076,
+      "sourceETag": "\"440e6acdcf77deec61a5a5bb971285f4\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7f712b0f-2530-48e8-866b-d70eb0b3bd75/carousel-houseplus-3c-electronics-hero.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7f712b0f-2530-48e8-866b-d70eb0b3bd75/carousel-houseplus-3c-electronics-hero.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4048067,
+      "sourceETag": "\"57826cad09f80474f48afbd95af4cde7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/7fc48e49-d6e0-4e28-beaf-4ec1764492ae/products-microwave-oven-25l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/7fc48e49-d6e0-4e28-beaf-4ec1764492ae/products-microwave-oven-25l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 186170,
+      "sourceETag": "\"775fac8da36a53505dbfde6ebb228f13\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/81acdfc5-2957-48dd-b973-a072872a100c/articles-electronics-electronics-headphones-audio.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/81acdfc5-2957-48dd-b973-a072872a100c/articles-electronics-electronics-headphones-audio.jpg",
+      "status": "already_verified",
+      "sourceBytes": 75618,
+      "sourceETag": "\"8752694a3ed77d58b6de57469e97202f\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/832688c7-3f11-4854-a56a-04f042603449/articles-covers-kitchen-appliances-wholesale-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/832688c7-3f11-4854-a56a-04f042603449/articles-covers-kitchen-appliances-wholesale-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 131906,
+      "sourceETag": "\"7e9f73c3c55314a31b15bcedeced91ff\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/850363dd-6ab1-471f-a289-931f0c6387bc/products-usb-c-cable-2m.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/850363dd-6ab1-471f-a289-931f0c6387bc/products-usb-c-cable-2m.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4257053,
+      "sourceETag": "\"7e46381e045f07c946a87e79157a1e6e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/87a27e1f-6ae7-4d09-b021-5965ab06ffcc/products-product-headphone-over-ear.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/87a27e1f-6ae7-4d09-b021-5965ab06ffcc/products-product-headphone-over-ear.jpg",
+      "status": "already_verified",
+      "sourceBytes": 81391,
+      "sourceETag": "\"d15edf64cd93628bd21a7ca19ae0956c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/886e83cd-9f61-4f90-a1e7-5d8e2c290394/team-team-innovation-culture.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/886e83cd-9f61-4f90-a1e7-5d8e2c290394/team-team-innovation-culture.jpg",
+      "status": "already_verified",
+      "sourceBytes": 292297,
+      "sourceETag": "\"0dfdc47087d84d1d590f9ae1a0f44a03\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/8cb972ad-ec3b-42b9-8e85-a4a2af146841/products-range-hood-900mm.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/8cb972ad-ec3b-42b9-8e85-a4a2af146841/products-range-hood-900mm.jpg",
+      "status": "already_verified",
+      "sourceBytes": 251709,
+      "sourceETag": "\"30f250690f7a104510b6460569ed6642\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d/products-solar-panel-1.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d/products-solar-panel-1.jpg",
+      "status": "already_verified",
+      "sourceBytes": 125972,
+      "sourceETag": "\"f12dd90e0c70f414fa3f2a0fa19c87a6\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/8d271900-f7f0-4415-82fe-e0fdaa9875c6/products-power-bank-60w-pd.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/8d271900-f7f0-4415-82fe-e0fdaa9875c6/products-power-bank-60w-pd.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3243654,
+      "sourceETag": "\"98789872a5e9a92faf4d4521c7727ca8\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/8df3552b-495a-4f26-9292-197f1b592597/articles-covers-2026-appliances-market-update.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/8df3552b-495a-4f26-9292-197f1b592597/articles-covers-2026-appliances-market-update.jpg",
+      "status": "already_verified",
+      "sourceBytes": 166922,
+      "sourceETag": "\"46662a80d6281f99f9e950234da52172\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/8f7da832-0947-4d91-ab42-fb64fce87b8d/products-pure-sine-inverter-2000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/8f7da832-0947-4d91-ab42-fb64fce87b8d/products-pure-sine-inverter-2000w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3856224,
+      "sourceETag": "\"d657700cbf685703d1c07d5c1944f274\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/8f842a06-7161-4941-a88b-1bc165c2bb6d/articles-covers-mono-vs-poly-vs-perc-solar-panels.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/8f842a06-7161-4941-a88b-1bc165c2bb6d/articles-covers-mono-vs-poly-vs-perc-solar-panels.jpg",
+      "status": "already_verified",
+      "sourceBytes": 240217,
+      "sourceETag": "\"0279778bb48c74703df52dc0f55e0446\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/9212f903-26be-46b9-bb26-aff39aa5ac13/products-product-wall-outlet-usb.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/9212f903-26be-46b9-bb26-aff39aa5ac13/products-product-wall-outlet-usb.jpg",
+      "status": "already_verified",
+      "sourceBytes": 49415,
+      "sourceETag": "\"d2b5076b6adebbce2c0c4197858bc4c8\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/93c9172f-bc50-400b-b347-4c212f7b2137/factory-factory-appliance-qc-lab.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/93c9172f-bc50-400b-b347-4c212f7b2137/factory-factory-appliance-qc-lab.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4591497,
+      "sourceETag": "\"e034d09dcf876d5ec71aa018d944b40e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/93e131d6-97cb-4ef4-a371-909061a46afc/team-team-quality-engineering.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/93e131d6-97cb-4ef4-a371-909061a46afc/team-team-quality-engineering.jpg",
+      "status": "already_verified",
+      "sourceBytes": 262103,
+      "sourceETag": "\"265751f58a9bb5012cbbc29d480f6be7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/945b2fd6-563d-4d8d-9de8-a529b9110552/houseplus-solar-led-light-3-.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/945b2fd6-563d-4d8d-9de8-a529b9110552/houseplus-solar-led-light-3-.jpg",
+      "status": "already_verified",
+      "sourceBytes": 206837,
+      "sourceETag": "\"edbd1e9c0bd88cd570f88f125d47a6b8\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/94c9de7e-f180-43fa-80a3-7d7b335c9ffd/site-global-world-map-markets.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/94c9de7e-f180-43fa-80a3-7d7b335c9ffd/site-global-world-map-markets.jpg",
+      "status": "already_verified",
+      "sourceBytes": 168292,
+      "sourceETag": "\"950600e1520810d70749580050a2e1eb\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/factory-assembly-line.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/factory-assembly-line.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4767409,
+      "sourceETag": "\"2ce86ea909050c14934857c6bf018ea7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/9547b8fb-b6d7-488c-95c3-a156e7c1a937/articles-covers-ce-certification-solar-panels-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/9547b8fb-b6d7-488c-95c3-a156e7c1a937/articles-covers-ce-certification-solar-panels-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 143270,
+      "sourceETag": "\"ec83c4921d03523bb1bcdd85e8c8433c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/95eda0e9-0acb-4eed-a7de-13252c1bd78d/about-houseplus-automated-manufacturing-facility.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/95eda0e9-0acb-4eed-a7de-13252c1bd78d/about-houseplus-automated-manufacturing-facility.jpg",
+      "status": "already_verified",
+      "sourceBytes": 460199,
+      "sourceETag": "\"4914e803eebe420a2f6c96d43bf3b719\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/products-solar-panel-500w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/products-solar-panel-500w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3942628,
+      "sourceETag": "\"eb57e01d00f8351b92a0bd9b3f0e2553\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/9819887f-5fc5-429b-a91c-64734dc84449/products-gas-stove-freestanding-oven.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/9819887f-5fc5-429b-a91c-64734dc84449/products-gas-stove-freestanding-oven.jpg",
+      "status": "already_verified",
+      "sourceBytes": 246649,
+      "sourceETag": "\"3106cc6fb903f3b175b5d79a907f349d\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/99546983-391c-4c1d-8843-863643d0bf18/articles-covers-oem-odm-manufacturing-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/99546983-391c-4c1d-8843-863643d0bf18/articles-covers-oem-odm-manufacturing-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 151892,
+      "sourceETag": "\"0222f77f7a6ad35148bbf159afb1cc0a\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/9c25f9ff-fae9-4d82-8263-8f9a41f4239d/articles-covers-legacy-future-solar-energy.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/9c25f9ff-fae9-4d82-8263-8f9a41f4239d/articles-covers-legacy-future-solar-energy.jpg",
+      "status": "already_verified",
+      "sourceBytes": 272981,
+      "sourceETag": "\"99be99ef5d7b9ae8a744325f038b183b\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/9e5befe4-ccd9-4354-a66c-0c3a4706adc0/products-range-hood-island-900mm.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/9e5befe4-ccd9-4354-a66c-0c3a4706adc0/products-range-hood-island-900mm.jpg",
+      "status": "already_verified",
+      "sourceBytes": 191960,
+      "sourceETag": "\"9a8f3fb2bab28e7cd9c14584102d7ef8\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/a01d9b03-6265-4e9e-9500-edb50c289152/articles-covers-appliance-energy-efficiency-vs-actual-consumption.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/a01d9b03-6265-4e9e-9500-edb50c289152/articles-covers-appliance-energy-efficiency-vs-actual-consumption.jpg",
+      "status": "already_verified",
+      "sourceBytes": 148548,
+      "sourceETag": "\"a792ee8c9f784c02c8a230e68fed8243\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/a01ff960-1aac-4a09-8fe7-caa1116be031/products-flexible-solar-panel-400w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/a01ff960-1aac-4a09-8fe7-caa1116be031/products-flexible-solar-panel-400w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4875728,
+      "sourceETag": "\"524d4e24638ab31b520b6f906bc58fdb\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/a6a318fa-4b78-4907-af53-f77a113ff183/products-induction-hob-4-zone-built-in.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/a6a318fa-4b78-4907-af53-f77a113ff183/products-induction-hob-4-zone-built-in.jpg",
+      "status": "already_verified",
+      "sourceBytes": 146096,
+      "sourceETag": "\"fd48dbe12e5c4e3cd2767bd0c19d922c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/a70ffc8f-c63c-45bc-949e-6ff11431097d/articles-covers-legacy-solar-energy-storage-solutions.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/a70ffc8f-c63c-45bc-949e-6ff11431097d/articles-covers-legacy-solar-energy-storage-solutions.jpg",
+      "status": "already_verified",
+      "sourceBytes": 218401,
+      "sourceETag": "\"00de347180019342e165a3667b06c7b4\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/a995074a-c554-403f-baf0-01c674344215/articles-appliances-smart-kitchen-appliances-modern.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/a995074a-c554-403f-baf0-01c674344215/articles-appliances-smart-kitchen-appliances-modern.jpg",
+      "status": "already_verified",
+      "sourceBytes": 68076,
+      "sourceETag": "\"440e6acdcf77deec61a5a5bb971285f4\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ab54c494-e09b-4e89-9b9e-afbd1c932c16/articles-covers-solar-storage-efficiency-optimization-guide.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ab54c494-e09b-4e89-9b9e-afbd1c932c16/articles-covers-solar-storage-efficiency-optimization-guide.jpg",
+      "status": "already_verified",
+      "sourceBytes": 235690,
+      "sourceETag": "\"b18300ad1cfe689cec4822e225ccdacd\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/abd5ffd2-bcaf-4cc0-8234-849d66e48445/site-team-working-together.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/abd5ffd2-bcaf-4cc0-8234-849d66e48445/site-team-working-together.jpg",
+      "status": "already_verified",
+      "sourceBytes": 84914,
+      "sourceETag": "\"d9ef2abdd2a0b60e751743d560e839ff\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ac664de3-5b8c-46cb-9afd-c392e80c6130/products-induction-cooktop-2000w-built-in.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ac664de3-5b8c-46cb-9afd-c392e80c6130/products-induction-cooktop-2000w-built-in.jpg",
+      "status": "already_verified",
+      "sourceBytes": 115076,
+      "sourceETag": "\"86a34ad97ead3dd5ad067fb9488039be\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ac8011c3-e195-40e5-9259-1314af4c699a/products-portable-induction-cooker-2000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ac8011c3-e195-40e5-9259-1314af4c699a/products-portable-induction-cooker-2000w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 146149,
+      "sourceETag": "\"c0d2eb86a76ca7c7e860aa7c1fea9ba9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ad62dfa5-144f-4c53-a568-e6229aa9a990/products-solar-panel-2.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ad62dfa5-144f-4c53-a568-e6229aa9a990/products-solar-panel-2.jpg",
+      "status": "already_verified",
+      "sourceBytes": 311116,
+      "sourceETag": "\"cc5997f3e1a9075d875a07c051ca92ac\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ae8ef5d1-c5ef-45a6-a31c-995600890e2d/articles-service-quality-control-lab-testing.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ae8ef5d1-c5ef-45a6-a31c-995600890e2d/articles-service-quality-control-lab-testing.jpg",
+      "status": "already_verified",
+      "sourceBytes": 147512,
+      "sourceETag": "\"c20793a31dabcb9f8ce781c9a472caed\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b03e71c6-1ec9-4c4e-aabe-93a692944a74/products-cassette-gas-stove-portable.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b03e71c6-1ec9-4c4e-aabe-93a692944a74/products-cassette-gas-stove-portable.jpg",
+      "status": "already_verified",
+      "sourceBytes": 250825,
+      "sourceETag": "\"f5ad4e8d7d66a667f4799a1772955dac\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/products-built-in-gas-oven-60l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/products-built-in-gas-oven-60l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4233957,
+      "sourceETag": "\"5854aa47ce44636cade18d54f66b8ffb\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b159a3a6-85d6-490f-8bbb-a753cf220c8c/apple-touch-icon.png",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b159a3a6-85d6-490f-8bbb-a753cf220c8c/apple-touch-icon.png",
+      "status": "already_verified",
+      "sourceBytes": 12183,
+      "sourceETag": "\"7f43558117b8a56ed831373faddcb9d2\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b15c481b-032b-419d-9a0d-65aae514a8b5/products-electric-blender-1500w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b15c481b-032b-419d-9a0d-65aae514a8b5/products-electric-blender-1500w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 182548,
+      "sourceETag": "\"cb55f06e8d99a89a502d298263adac74\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b27365bb-fd56-47d0-9e87-437f365e60b0/articles-covers-legacy-evolution-3c-electronics.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b27365bb-fd56-47d0-9e87-437f365e60b0/articles-covers-legacy-evolution-3c-electronics.jpg",
+      "status": "already_verified",
+      "sourceBytes": 127849,
+      "sourceETag": "\"28dac52358d893f61dec7c53eb142396\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b4c9ed3f-2e76-4a95-b100-558f790a3332/articles-service-factory-production-line-automated.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b4c9ed3f-2e76-4a95-b100-558f790a3332/articles-service-factory-production-line-automated.jpg",
+      "status": "already_verified",
+      "sourceBytes": 164892,
+      "sourceETag": "\"6cd87fd6b32638d25c0fc8f4b758c70c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b5ab5d43-b340-41e9-9b50-a284592d3acc/articles-appliances-home-appliance-refrigerator-interior.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b5ab5d43-b340-41e9-9b50-a284592d3acc/articles-appliances-home-appliance-refrigerator-interior.jpg",
+      "status": "already_verified",
+      "sourceBytes": 488535,
+      "sourceETag": "\"2cf520eb7ce98f6678850c6c4e4531d1\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b668322c-a0df-4bba-be3a-dbc8f1636c38/products-gas-water-heater-12l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b668322c-a0df-4bba-be3a-dbc8f1636c38/products-gas-water-heater-12l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 116393,
+      "sourceETag": "\"39c2643696b28ef239872da5a0534264\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/b7dbffd2-f52e-42bc-b0c2-43329ca68682/carousel-houseplus-home-appliances-hero.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/b7dbffd2-f52e-42bc-b0c2-43329ca68682/carousel-houseplus-home-appliances-hero.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4375233,
+      "sourceETag": "\"d8a051247afd981d99485f8ba3db6c02\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/bbe76ab7-5027-4c3b-b738-860d9dbf7841/products-air-fryer-8l-digital.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/bbe76ab7-5027-4c3b-b738-860d9dbf7841/products-air-fryer-8l-digital.jpg",
+      "status": "already_verified",
+      "sourceBytes": 173631,
+      "sourceETag": "\"c96cfa523a35646f6f630395f8e6255c\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/bef3aa36-c9c7-4043-93d0-0453b53143c4/articles-appliances-home-appliance-kitchen-modern.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/bef3aa36-c9c7-4043-93d0-0453b53143c4/articles-appliances-home-appliance-kitchen-modern.jpg",
+      "status": "already_verified",
+      "sourceBytes": 104123,
+      "sourceETag": "\"0406f84739416f395e872d7b11c48c51\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/c0f1967e-254f-4779-8127-5aa0d4f9a1e1/android-chrome-192x192.png",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/c0f1967e-254f-4779-8127-5aa0d4f9a1e1/android-chrome-192x192.png",
+      "status": "already_verified",
+      "sourceBytes": 12896,
+      "sourceETag": "\"5a9fa8ca54880ad396607044922a0d62\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/c183162c-9a62-4617-9be9-003d487f9644/products-usb-c-cable-100w-5a.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/c183162c-9a62-4617-9be9-003d487f9644/products-usb-c-cable-100w-5a.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3968617,
+      "sourceETag": "\"231f761db28936d7cd5966c2de4d185d\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/products-solar-power-bank-20000mah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/products-solar-power-bank-20000mah.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3221694,
+      "sourceETag": "\"c83c68c8dcc66d414a1c394c1ee124d6\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/c2dbf35c-a0a1-4743-be72-7268fa5db61e/products-air-fryer-12l-rotisserie.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/c2dbf35c-a0a1-4743-be72-7268fa5db61e/products-air-fryer-12l-rotisserie.jpg",
+      "status": "already_verified",
+      "sourceBytes": 322292,
+      "sourceETag": "\"7e63962f9a510de62e05839fb2a3259a\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/c41b8c7f-f034-49c3-93d4-b4499b6b2dcd/articles-covers-legacy-smart-home-appliances-connected-living.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/c41b8c7f-f034-49c3-93d4-b4499b6b2dcd/articles-covers-legacy-smart-home-appliances-connected-living.jpg",
+      "status": "already_verified",
+      "sourceBytes": 210763,
+      "sourceETag": "\"7055d9ce99d0ef643bdc48ad68f443cf\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/factory-production-line.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/factory-production-line.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4893956,
+      "sourceETag": "\"b0a38950a1d2ebedbddb36662a27dded\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ca8d34cb-cf99-4346-8999-6e93f1128a8c/products-product-solar-battery.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ca8d34cb-cf99-4346-8999-6e93f1128a8c/products-product-solar-battery.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3794615,
+      "sourceETag": "\"8f47a7e9c859f096e882ea1fcff9efa6\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/cacd6cd2-a0a8-425d-b922-7dacb07bd53f/products-gas-stove-2-burner-portable.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/cacd6cd2-a0a8-425d-b922-7dacb07bd53f/products-gas-stove-2-burner-portable.jpg",
+      "status": "already_verified",
+      "sourceBytes": 238881,
+      "sourceETag": "\"93e8383c6c3e9ee1936abee8ff725543\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/cc93e128-6181-4854-928f-c6deaf8fe983/products-gas-stove-4-burner.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/cc93e128-6181-4854-928f-c6deaf8fe983/products-gas-stove-4-burner.jpg",
+      "status": "already_verified",
+      "sourceBytes": 297626,
+      "sourceETag": "\"1e4fd1c983246eeb2622c5b03790ab6f\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ccb343d0-eaea-498e-81e3-af9f444e2f36/articles-electronics-electronics-router-network.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ccb343d0-eaea-498e-81e3-af9f444e2f36/articles-electronics-electronics-router-network.jpg",
+      "status": "already_verified",
+      "sourceBytes": 160856,
+      "sourceETag": "\"7ac70d9320434b84cf740df35966bc30\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d0d99916-6fcb-434b-a921-b58652edca3e/articles-solar-solar-power-station-outdoor.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d0d99916-6fcb-434b-a921-b58652edca3e/articles-solar-solar-power-station-outdoor.jpg",
+      "status": "already_verified",
+      "sourceBytes": 129743,
+      "sourceETag": "\"fc8d49babac8b08d5caf8e8319ac78d9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d3642fb5-d016-4cec-aa3a-e9ab2326050a/articles-service-factory-assembly-workers.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d3642fb5-d016-4cec-aa3a-e9ab2326050a/articles-service-factory-assembly-workers.jpg",
+      "status": "already_verified",
+      "sourceBytes": 197540,
+      "sourceETag": "\"6d3886f7e36040605a8070d0bfd357bc\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d4e5da12-8183-40a8-a335-2fae5f277395/products-gas-stove-5-burner-wok.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d4e5da12-8183-40a8-a335-2fae5f277395/products-gas-stove-5-burner-wok.jpg",
+      "status": "already_verified",
+      "sourceBytes": 290012,
+      "sourceETag": "\"66dea117469e4a9a3f3c30970ad4ad0f\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d51397fe-cf8d-4660-a3e1-22dc5374710b/site-office-meeting-boardroom.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d51397fe-cf8d-4660-a3e1-22dc5374710b/site-office-meeting-boardroom.jpg",
+      "status": "already_verified",
+      "sourceBytes": 235514,
+      "sourceETag": "\"45fd2e93d17407fa956dfa56ae619248\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d52528a6-ba27-4a75-9dea-a7c36c2780e7/logo.png",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d52528a6-ba27-4a75-9dea-a7c36c2780e7/logo.png",
+      "status": "already_verified",
+      "sourceBytes": 56073,
+      "sourceETag": "\"a2525cb7117021cba90fee46dc1fd871\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d60400d1-1ec0-49be-a8c6-b57e35fb77e5/articles-appliances-washing-machine-2026.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d60400d1-1ec0-49be-a8c6-b57e35fb77e5/articles-appliances-washing-machine-2026.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4137579,
+      "sourceETag": "\"59a849c9394115d504cc3c9602e79632\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/d7e108a6-54fd-4932-b703-45f41fa68382/articles-covers-how-to-choose-wholesale-solar-panels.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/d7e108a6-54fd-4932-b703-45f41fa68382/articles-covers-how-to-choose-wholesale-solar-panels.jpg",
+      "status": "already_verified",
+      "sourceBytes": 252272,
+      "sourceETag": "\"3218350cd7020689ec98e8a35960cfdf\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/daf64118-fa8e-4bf1-bbf3-05795dc72c3d/products-induction-cooktop-2000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/daf64118-fa8e-4bf1-bbf3-05795dc72c3d/products-induction-cooktop-2000w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 124728,
+      "sourceETag": "\"5e3834dceb63b686916e3a20d7823044\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/de5d96cf-4a29-4d31-96f5-55d2b4c3a741/products-led-lighting.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/de5d96cf-4a29-4d31-96f5-55d2b4c3a741/products-led-lighting.jpg",
+      "status": "already_verified",
+      "sourceBytes": 225537,
+      "sourceETag": "\"a33e9c28bb621f58368e6f38a93a5b71\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e0245a6c-9df0-40ed-997e-d29c73309ac3/articles-solar-solar-energy-storage-battery-bank.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e0245a6c-9df0-40ed-997e-d29c73309ac3/articles-solar-solar-energy-storage-battery-bank.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3931232,
+      "sourceETag": "\"cc0210f4bd1eff05a1181ef6ce690b29\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/carousel-houseplus-solar-hero.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/carousel-houseplus-solar-hero.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4457183,
+      "sourceETag": "\"7f4d412b3e69561c506750f83a742b10\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3/products-gas-water-heater-10l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3/products-gas-water-heater-10l.jpg",
+      "status": "already_verified",
+      "sourceBytes": 112386,
+      "sourceETag": "\"49250c78fb5380ee3d113208c2e1a984\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/products-solar-fan-20w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/products-solar-fan-20w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3421118,
+      "sourceETag": "\"b2eaa865a31f082aca2b2a7a390260d7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e2185887-f46e-4f60-8c6c-5c0ba9061fa8/products-cassette-gas-stove-double-burner.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e2185887-f46e-4f60-8c6c-5c0ba9061fa8/products-cassette-gas-stove-double-burner.jpg",
+      "status": "already_verified",
+      "sourceBytes": 292149,
+      "sourceETag": "\"990472443b3eb935b9fc5125088d9e70\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e27fc0bc-0448-4691-9d3e-fd1e64454ebf/articles-appliances-home-appliance-washing-machine.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e27fc0bc-0448-4691-9d3e-fd1e64454ebf/articles-appliances-home-appliance-washing-machine.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4459059,
+      "sourceETag": "\"79b42a64605e5709f3889d4727b26a3e\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e54388d7-02ef-41eb-bf0f-d578d9e9138f/products-solar-street-light-200w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e54388d7-02ef-41eb-bf0f-d578d9e9138f/products-solar-street-light-200w.jpg",
+      "status": "already_verified",
+      "sourceBytes": 4466317,
+      "sourceETag": "\"900ee7b51f696f3210a5d5a701382d05\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/products-micro-sd-128gb.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/products-micro-sd-128gb.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3725393,
+      "sourceETag": "\"80c78ada816898d5106e985bf24bda67\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e7daf0ff-9c87-445b-a3c9-f6c19ffc17c4/products-product-smartwatch-display.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e7daf0ff-9c87-445b-a3c9-f6c19ffc17c4/products-product-smartwatch-display.jpg",
+      "status": "already_verified",
+      "sourceBytes": 120320,
+      "sourceETag": "\"a871649ded632d5786661eed1fba1e74\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e828543b-5b73-45b8-805d-48a2d6c560ae/site-faq-support-specialist.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e828543b-5b73-45b8-805d-48a2d6c560ae/site-faq-support-specialist.jpg",
+      "status": "already_verified",
+      "sourceBytes": 164307,
+      "sourceETag": "\"d79d7911b8479893d88c6b0fde6599f9\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/products-magnetic-power-bank-10000mah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/products-magnetic-power-bank-10000mah.jpg",
+      "status": "already_verified",
+      "sourceBytes": 3391650,
+      "sourceETag": "\"5502e8acec60c7fabecd5d1bb3ce57ce\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/e9b197e1-c2ea-499b-b9e9-d7db0a781c47/articles-electronics-electronics-power-bank-product.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/e9b197e1-c2ea-499b-b9e9-d7db0a781c47/articles-electronics-electronics-power-bank-product.jpg",
+      "status": "already_verified",
+      "sourceBytes": 59446,
+      "sourceETag": "\"68e4164498c462776c29111239f96a2b\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/eb6de44f-80ca-463e-bad4-94cc57c8951a/articles-appliances-home-appliance-wholesale-warehouse.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/eb6de44f-80ca-463e-bad4-94cc57c8951a/articles-appliances-home-appliance-wholesale-warehouse.jpg",
+      "status": "already_verified",
+      "sourceBytes": 332349,
+      "sourceETag": "\"7b5fb01f29f0e66c3eb9e37983a659c7\""
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ecabb27c-fadc-421f-8217-1e83a5c708de/articles-appliances-home-appliance-manufacturing-line.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ecabb27c-fadc-421f-8217-1e83a5c708de/articles-appliances-home-appliance-manufacturing-line.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 4785325,
+      "sourceETag": "\"be4025ec658a0fe55e788f20fcbf8347\"",
+      "sha256": "786971e6ec67fae8dad3ded23cc008eeefe78a5f52fecfaf64cbc658703529fc"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/ecf442ab-f6c0-405c-b6f8-f84ad418e606/articles-solar-solar-panel-installation-rooftop.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/ecf442ab-f6c0-405c-b6f8-f84ad418e606/articles-solar-solar-panel-installation-rooftop.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 288489,
+      "sourceETag": "\"3e81fadcb2b12064bcbe046088fa94a6\"",
+      "sha256": "668d35371b639d1ca203ee78c87d74f6d204ab5f8c5a9a1512ee5ef2ad95c2c7"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/efe98e55-70bc-460b-aa5e-7ec2f120398e/products-air-fryer-4-5l-visual.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/efe98e55-70bc-460b-aa5e-7ec2f120398e/products-air-fryer-4-5l-visual.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 169138,
+      "sourceETag": "\"5bc67af6fa707da921307ab96eba76ac\"",
+      "sha256": "7ee2ed3b20c8d724d5d46d1c96a069ff7bf489a87fcf9ed17cd6c87e0f9f0423"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/f0a4515c-e1f7-4037-a943-4d7381c90a34/articles-covers-advanced-manufacturing-home-appliances.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/f0a4515c-e1f7-4037-a943-4d7381c90a34/articles-covers-advanced-manufacturing-home-appliances.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 243774,
+      "sourceETag": "\"0cc14876ff13d20e1b935e0d99acddef\"",
+      "sha256": "62cf2428af9935194ede6fdeec233e76b0b2952f242c3399cea9a91805b41c35"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/f491859c-7659-425f-8e34-2e9126ccf0d5/articles-appliances-b2b-distribution-2026.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/f491859c-7659-425f-8e34-2e9126ccf0d5/articles-appliances-b2b-distribution-2026.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 5044151,
+      "sourceETag": "\"b3c660ca16719f6264936dfeb8ff0bb8\"",
+      "sha256": "f615ad3f8c8d174f7996d052ddbb559693a7e4e576c32ca060cca9b3fe5d08eb"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/f4945947-2ed0-4aaf-8f72-6611fd6a7619/site-team-collaboration-office.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/f4945947-2ed0-4aaf-8f72-6611fd6a7619/site-team-collaboration-office.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 128209,
+      "sourceETag": "\"faa7f0d2ab1d34c799e4abad3c572eb0\"",
+      "sha256": "66bcdd4ed062588c939d6bc833a8df87bed765744afb8c7060111be0249f79b5"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/f58941f1-cba4-4bd3-bb11-b73cf4f63664/articles-covers-the-future-of-smart-home-appliances.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/f58941f1-cba4-4bd3-bb11-b73cf4f63664/articles-covers-the-future-of-smart-home-appliances.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 211873,
+      "sourceETag": "\"d96a4ee374b25464a5d519562521f3ea\"",
+      "sha256": "c6fa7ebb931449fffc8250e17f0956fe89cc45a83c0f675b5fd8e90aa2129e61"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/f61e16f4-1527-4680-8302-cf75a689cbc0/products-built-in-oven-65l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/f61e16f4-1527-4680-8302-cf75a689cbc0/products-built-in-oven-65l.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 255704,
+      "sourceETag": "\"c6cec18e0215378c9c9238bf46784661\"",
+      "sha256": "630737f9e4309d2bb4fc9afb79328814ad30be250780966096796032d156714f"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/f824783e-644f-4256-9c82-09d0786a8096/products-solar-panel-3.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/f824783e-644f-4256-9c82-09d0786a8096/products-solar-panel-3.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 1570991,
+      "sourceETag": "\"775abc78e514ac0c93e6b33d715757e2\"",
+      "sha256": "d44d5da8598e11287240f3990ca96bfd5797ba37d923ca14e96745a150fa2097"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/fa65d41c-2e23-4880-a19f-774c3bacdaa1/factory-factory-solar-assembly-line.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/fa65d41c-2e23-4880-a19f-774c3bacdaa1/factory-factory-solar-assembly-line.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 4589949,
+      "sourceETag": "\"b58f547575723301f4729c72e0f05741\"",
+      "sha256": "53f545559c33003743d40b44dd4878b8d82604e58fe0109ff0c162ba06d65471"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/fb5ccfe2-c73a-4c70-a90b-1f822d124ffd/about-houseplus-group-factory.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/fb5ccfe2-c73a-4c70-a90b-1f822d124ffd/about-houseplus-group-factory.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 165262,
+      "sourceETag": "\"d3206aecdbc283fcccb69bdbefa4082f\"",
+      "sha256": "607d661ef940c85b7982bfdd901250f0a8e80a8fc0f534c49c94fdeec0e18b72"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/fce5cc58-c69d-4fff-9fb7-80de63ab100f/site-factory-worker-precision.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/fce5cc58-c69d-4fff-9fb7-80de63ab100f/site-factory-worker-precision.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 148073,
+      "sourceETag": "\"8aa006621f868294ea45c13eb7a4f349\"",
+      "sha256": "eb6cb0898d5e26fb52319a44adf90ec1b13cdddc9e2443a656fdd99e23239348"
+    },
+    {
+      "sourceKey": "ingest/2026-08-12/fdbcee0d-563f-4b3b-9e60-5abd6f39aae7/articles-covers-home-appliance-oem-manufacturer-guide-china.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/ingest/2026-08-12/fdbcee0d-563f-4b3b-9e60-5abd6f39aae7/articles-covers-home-appliance-oem-manufacturer-guide-china.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 198241,
+      "sourceETag": "\"f6c85b3e11c6258da45850fc6dafe28a\"",
+      "sha256": "aa9f2203f52639f88cd8a0fb9180d2e6c9af0d2df689568bfcd7b0e720041eaa"
+    },
+    {
+      "sourceKey": "products/air-fryer-5-8l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/air-fryer-5-8l.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 94732,
+      "sourceETag": "\"da4327e6b4f9c205c0d35a3d27c1d853\"",
+      "sha256": "3db2ff9500f594f9a0310c1b0e5c8b76f797a2fbdbe1e3213e262b19ffe2b0fb"
+    },
+    {
+      "sourceKey": "products/bluetooth-earphone-tws.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/bluetooth-earphone-tws.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 83616,
+      "sourceETag": "\"c3540bfed53fced6d91a2a5ff8abe47b\"",
+      "sha256": "cd4fb6c6a97272d34960ebdb61368230ee9b2ac56e988ab4b63ba65448765828"
+    },
+    {
+      "sourceKey": "products/charge-controller-60a.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/charge-controller-60a.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 190096,
+      "sourceETag": "\"4eb35e9d7ab883bcb006414fcc7850e2\"",
+      "sha256": "b50cf597b7a2e259a1e73f0711c320db37eb67db58f950f8e462614cb04aaa41"
+    },
+    {
+      "sourceKey": "products/electric-kettle-1-5l.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/electric-kettle-1-5l.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 140582,
+      "sourceETag": "\"2f7aafc0a98ebe9c9440952b86c832e0\"",
+      "sha256": "675ebd61aa5b1cb17047a8f0fb33057d4386b96166047eafe186c6d2f09b6fab"
+    },
+    {
+      "sourceKey": "products/flexible-solar-panel-400w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/flexible-solar-panel-400w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 116849,
+      "sourceETag": "\"3ff44d91a51316b4db8c634a652ade4c\"",
+      "sha256": "99e9dbd59dae4b287c235c14f00713db67fe5bdf7e496e94c82dc40b30a6f6d9"
+    },
+    {
+      "sourceKey": "products/foldable-solar-panel-200w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/foldable-solar-panel-200w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 358507,
+      "sourceETag": "\"1590f1eed7df8f6dc08a93cf6e74ab2e\"",
+      "sha256": "d7690991b70586ff9decb163d2bdb860420531a93ec188801a96ecff2fbe65a7"
+    },
+    {
+      "sourceKey": "products/headphone-over-ear.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/headphone-over-ear.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 58815,
+      "sourceETag": "\"b0816980759acc112c9b00165ade9cf9\"",
+      "sha256": "8ce69abf2f0764713bf0df4b01c6ef772310696dec01984cfb087af86b4f3b0d"
+    },
+    {
+      "sourceKey": "products/home-energy-storage-5000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/home-energy-storage-5000w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 56233,
+      "sourceETag": "\"20ba2c5a998628d49aa6ac43ceb197ee\"",
+      "sha256": "2090f2d8bd7abc467830cb67cb2f42173f6b41decc6295d768243533483dc97a"
+    },
+    {
+      "sourceKey": "products/induction-cooktop-2000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/induction-cooktop-2000w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 80316,
+      "sourceETag": "\"0b4e29e79dd7751c92d8fce6dde9faf7\"",
+      "sha256": "ae4bb078369f1169e79125ad9a10932480626cf6dfba26c8df2717ea71baaa76"
+    },
+    {
+      "sourceKey": "products/lead-acid-battery-100ah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/lead-acid-battery-100ah.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 62563,
+      "sourceETag": "\"11af8e6dc47c44a6dc29cb46dc3285ac\"",
+      "sha256": "deb0f7e493e5e036e6a66d0e5e0eb7d266729de99eadc83ed55f7c6e3214ebcb"
+    },
+    {
+      "sourceKey": "products/lifepo4-battery-12v100ah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/lifepo4-battery-12v100ah.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 85345,
+      "sourceETag": "\"799a2a3d39ecc6a435cdc476d8f4802b\"",
+      "sha256": "cabebd818cd536e1e0e91d443b4b9c4e5274daea585c9aea2bcb8bb8f3a6b556"
+    },
+    {
+      "sourceKey": "products/lithium-battery-5kwh.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/lithium-battery-5kwh.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 1570991,
+      "sourceETag": "\"775abc78e514ac0c93e6b33d715757e2\"",
+      "sha256": "d44d5da8598e11287240f3990ca96bfd5797ba37d923ca14e96745a150fa2097"
+    },
+    {
+      "sourceKey": "products/magnetic-power-bank-10000mah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/magnetic-power-bank-10000mah.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 200181,
+      "sourceETag": "\"66fa11eb9f3e6360a1a4b851a84bf121\"",
+      "sha256": "26c13db65e38df4e87844f826ca9074c3c682792207f4a446875c1927bd2a993"
+    },
+    {
+      "sourceKey": "products/micro-sd-128gb.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/micro-sd-128gb.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 201744,
+      "sourceETag": "\"7abf5016f4f19ea11d42f97d9a06c42a\"",
+      "sha256": "715a6ccd444e334e097e1b90b6444036c277aacb1b35ea8d69e8c5f39d8a732f"
+    },
+    {
+      "sourceKey": "products/mppt-controller-40a.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/mppt-controller-40a.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 105483,
+      "sourceETag": "\"565d5e8e32e49a52d0f6cc4b5b22c8c0\"",
+      "sha256": "2a3ed18a2a299ba3f9822d74fc0b4ddf572d0a06051fbf177541a2a3788f38df"
+    },
+    {
+      "sourceKey": "products/outdoor-power-station-600w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/outdoor-power-station-600w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 101963,
+      "sourceETag": "\"ff00f1a0025a98909f1fe586fe6ecb9b\"",
+      "sha256": "7fcbc290b086a99a9e65dbca4c40e8223197536197c3ffd6a1986bba3ae31767"
+    },
+    {
+      "sourceKey": "products/portable-power-station-3000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/portable-power-station-3000w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 244467,
+      "sourceETag": "\"5ebddc34128cb2ab97568d4275e9ec22\"",
+      "sha256": "d965b3d775866bf4a41611c94462de33d75590f9f166783edaef7d4475dfbf45"
+    },
+    {
+      "sourceKey": "products/portable-ssd-1tb.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/portable-ssd-1tb.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 149881,
+      "sourceETag": "\"2754655735421cc494e1d0315f35ec31\"",
+      "sha256": "820983b1ee31d95fe4b81eb3cc77a5febdaf870339b44dd1c1623ac7f42a2244"
+    },
+    {
+      "sourceKey": "products/power-bank-60w-pd.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/power-bank-60w-pd.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 178855,
+      "sourceETag": "\"a6358aa83a34f95c89e9576ac2f65400\"",
+      "sha256": "444c978778babfbacb25f25d340ea53d25eab68c90650bf0fd71727536ae7ffa"
+    },
+    {
+      "sourceKey": "products/pure-sine-inverter-2000w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/pure-sine-inverter-2000w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 237697,
+      "sourceETag": "\"50464e7719bba6baeb39875353e744e4\"",
+      "sha256": "bea189bfb1bc02c89691475ad20075c4886b16c54000b6c630631a63e1d9ef1b"
+    },
+    {
+      "sourceKey": "products/smart-watch.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/smart-watch.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 25335,
+      "sourceETag": "\"915f7059867293e0ed843a390ac88d8a\"",
+      "sha256": "e64dd009edec84e02cad45c975db82a7f3d43e5cd977084ae5b1e308874188e7"
+    },
+    {
+      "sourceKey": "products/smart-wifi-plug-meter.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/smart-wifi-plug-meter.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 92803,
+      "sourceETag": "\"cf29c56aff280a3bf9cf9eb9acf52159\"",
+      "sha256": "ae49d81c214160dd61b67fdafadb144d16110af657919bef20b2f163e293fc2c"
+    },
+    {
+      "sourceKey": "products/solar-fan-20w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-fan-20w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 90559,
+      "sourceETag": "\"27ab9e798d52e7452a0ad5ffe38be448\"",
+      "sha256": "b654cdab013af35d9e069a60da37bdee6fe6184ae9d1307873e3fe1048d5d86a"
+    },
+    {
+      "sourceKey": "products/solar-generator-kit-300w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-generator-kit-300w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 156857,
+      "sourceETag": "\"41f47f384b67ffa78a63796c77667a6b\"",
+      "sha256": "3239e4714308224602e27f53e3fa30221692bf5e037d732a80786c0d9cfa11c5"
+    },
+    {
+      "sourceKey": "products/solar-inverter-3kw.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-inverter-3kw.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 311116,
+      "sourceETag": "\"cc5997f3e1a9075d875a07c051ca92ac\"",
+      "sha256": "f8f0fd02e1e108a3626107dcf5d9df746a9f0f57c41a5bfc7d45bbec516a4871"
+    },
+    {
+      "sourceKey": "products/solar-panel-100w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-panel-100w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 118207,
+      "sourceETag": "\"c6defb67a531755faf534532771f7d80\"",
+      "sha256": "ecd5f9ba27dc53901ff46e2cdc92b7fa4685b9d8c5a67c147feb2f82b427fcd8"
+    },
+    {
+      "sourceKey": "products/solar-panel-500w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-panel-500w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 125972,
+      "sourceETag": "\"f12dd90e0c70f414fa3f2a0fa19c87a6\"",
+      "sha256": "ac393507326a7d15bc5fdc4b8a19d2015b9323f9187c95aea7438d1d8f8c01fd"
+    },
+    {
+      "sourceKey": "products/solar-power-bank-20000mah.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-power-bank-20000mah.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 163992,
+      "sourceETag": "\"eccc4937b7403a1047d0ab019ecd7584\"",
+      "sha256": "6f52ae75a3a2f1c76479223005da929185d30f17229d08b05e0548aebede6b84"
+    },
+    {
+      "sourceKey": "products/solar-street-light-200w.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/solar-street-light-200w.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 267540,
+      "sourceETag": "\"abacb6100bb4bdd526d94b75085a92c7\"",
+      "sha256": "849ad952b09a0027296917de51cc984186b6b46d23ca00a8b9d7a2ef9cdeaa4e"
+    },
+    {
+      "sourceKey": "products/toaster-2-slice.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/toaster-2-slice.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 92206,
+      "sourceETag": "\"fc27f0b5eb46ff758b3550aa7ba89915\"",
+      "sha256": "70b460b55bcde3b818a2260ee49d1e0b24665e26242a6f63dda1543068912033"
+    },
+    {
+      "sourceKey": "products/usb-c-cable-100w-5a.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/usb-c-cable-100w-5a.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 88656,
+      "sourceETag": "\"8c4cce397d48e07afce8e0140e8cc7af\"",
+      "sha256": "45b5615cedf49128cf33bbdef6edd2af0f175b4c3c5c423aec8be88005ccc379"
+    },
+    {
+      "sourceKey": "products/usb-c-cable-2m.jpg",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/products/usb-c-cable-2m.jpg",
+      "status": "copied_and_verified",
+      "sourceBytes": 64584,
+      "sourceETag": "\"ce2089e346910d59054797f8e1e9ca9d\"",
+      "sha256": "90c2716c2bb4a908696b65fda8f429fb455d492d1611abd9c7b2b78ae6b8fdf8"
+    },
+    {
+      "sourceKey": "variants/06ead54a-13e5-4cc1-8935-189c80ff5881/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/06ead54a-13e5-4cc1-8935-189c80ff5881/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 45504,
+      "sourceETag": "\"82f4af640c0e25b0d84e7f58d5d8700c\"",
+      "sha256": "af921208d623c5589cfcd2fb0b9817e57461430af1c3f62a74d7ebed508efadb"
+    },
+    {
+      "sourceKey": "variants/1387f02c-fe72-466e-b383-bfe4f27a716b/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/1387f02c-fe72-466e-b383-bfe4f27a716b/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 80936,
+      "sourceETag": "\"d3f2bddb631b467480135162cb1c326f\"",
+      "sha256": "3075617d8f87dc286dcceb9e6ee4876cb315a14469efd6e7223b949f2739bc54"
+    },
+    {
+      "sourceKey": "variants/1a65d956-2f3f-4ceb-8dbd-6667d9df5983/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/1a65d956-2f3f-4ceb-8dbd-6667d9df5983/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 159112,
+      "sourceETag": "\"00860d0bf3348ae0f347b1b1acac10c6\"",
+      "sha256": "e93eab67241b04b72495765a908287f58ab9734332f9aa868fc35a0469e345f3"
+    },
+    {
+      "sourceKey": "variants/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 46742,
+      "sourceETag": "\"e5eda9ed6119e637c3409d1846f9caca\"",
+      "sha256": "9e4c2b01361634373af59a526906f490702c1cf51c133be5f38e324f8bd4502e"
+    },
+    {
+      "sourceKey": "variants/2280d26e-4918-4d57-9047-2cb7213e06b0/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/2280d26e-4918-4d57-9047-2cb7213e06b0/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 52170,
+      "sourceETag": "\"e0e45ed34f9d495201194e2826db4d15\"",
+      "sha256": "b64fc19287a329e36458129f73fe4e5133dfd28f8fbf6d34b8642f0cc875eb48"
+    },
+    {
+      "sourceKey": "variants/2360e8f7-e149-4cc7-8266-58bb8a22b890/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/2360e8f7-e149-4cc7-8266-58bb8a22b890/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 72080,
+      "sourceETag": "\"3a155de0ed9abd9b48f711d4a2384d6f\"",
+      "sha256": "48b221fa6a396d73c66d55691524682fa2b1ad665381762204432199170fd9de"
+    },
+    {
+      "sourceKey": "variants/24e8b932-f7d0-4511-9e03-8a98cbb987f5/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/24e8b932-f7d0-4511-9e03-8a98cbb987f5/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 17180,
+      "sourceETag": "\"3a5f8e19caf61227c862f92a9fcad432\"",
+      "sha256": "f2507da645e1107fe310e3882086b0ceb5a7d51af0f5b6abfc403fcc2d54d3bc"
+    },
+    {
+      "sourceKey": "variants/2556637e-92ab-43d4-8940-2bb1c8ad319b/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/2556637e-92ab-43d4-8940-2bb1c8ad319b/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 48930,
+      "sourceETag": "\"417b7b0748a7f8d03d6766fa582092ed\"",
+      "sha256": "cc73d71c856af5d111799d928ad058e7a775f62d2b2fb758df5e505384ed18da"
+    },
+    {
+      "sourceKey": "variants/270d35e2-b004-4941-95e7-1a0674a5b4b9/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/270d35e2-b004-4941-95e7-1a0674a5b4b9/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 26550,
+      "sourceETag": "\"2ef49bec7367cce7aa34d326b170627d\"",
+      "sha256": "623dda13f7526e4ce7c376fcc24e696f70b01859fc01bf773b3bdcdd11ab9abd"
+    },
+    {
+      "sourceKey": "variants/3393939f-fdff-454a-a31b-a21b44262856/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/3393939f-fdff-454a-a31b-a21b44262856/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 35634,
+      "sourceETag": "\"fbd9702827842b290133f2c6a9286f7f\"",
+      "sha256": "aa3774bbe48786c795a15080becba5d8c952103a01f9f52bda18640eb0193a1b"
+    },
+    {
+      "sourceKey": "variants/374739a1-d933-4820-8817-56b657c0e371/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/374739a1-d933-4820-8817-56b657c0e371/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 96132,
+      "sourceETag": "\"fada49a0524d5f99524c01df89ad30f4\"",
+      "sha256": "3397e19f3ad01658f0ad8320d39b12ed6458b45c62ffe68790f5416a99edd447"
+    },
+    {
+      "sourceKey": "variants/3a511818-4b8e-4023-9631-106691f27e4d/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/3a511818-4b8e-4023-9631-106691f27e4d/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 36532,
+      "sourceETag": "\"59c5ffb83d770781fc9d57c2d477d893\"",
+      "sha256": "0f9fec39c8a662aa487eb156c7b3c7f3135665aa830be5dd890555106c0067d1"
+    },
+    {
+      "sourceKey": "variants/498a7ad8-81cf-403f-bdee-77c08dc04c3e/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/498a7ad8-81cf-403f-bdee-77c08dc04c3e/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 19756,
+      "sourceETag": "\"eeaacb389e5c875466c466f1c7964acb\"",
+      "sha256": "8feb32ff2a41a7be2be06278ce35e85b97a6874a1cc1e4df686635bf739f2e85"
+    },
+    {
+      "sourceKey": "variants/524e182e-6794-475d-b75f-563d55031eec/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/524e182e-6794-475d-b75f-563d55031eec/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 288790,
+      "sourceETag": "\"c77eade1d1077190b12b55ece7979ae0\"",
+      "sha256": "3c7260d9be5eeb00234e345c7afe607a978007d51e4b0e7686c52cd80c166580"
+    },
+    {
+      "sourceKey": "variants/53c1ad46-cc96-43d0-aace-a8926f2e55a3/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/53c1ad46-cc96-43d0-aace-a8926f2e55a3/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 56938,
+      "sourceETag": "\"e9db483357017442e7d5b2ed755db517\"",
+      "sha256": "b5c47fc3456f4bcf806aae4de0458cdf74e81df93bc068f63308139670759769"
+    },
+    {
+      "sourceKey": "variants/5735b9be-6402-4007-bc79-fc2ee8581f7b/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/5735b9be-6402-4007-bc79-fc2ee8581f7b/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 136698,
+      "sourceETag": "\"f9a7d6c0fbb8ad302b1a1fdb5a539afa\"",
+      "sha256": "dab3b86b926ba7d8e24bb8ce52b2ec4bf70096aa62ad6a64aaccc25c64b11c96"
+    },
+    {
+      "sourceKey": "variants/5f55fac9-2fc5-4a4e-b907-50058cb51e72/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/5f55fac9-2fc5-4a4e-b907-50058cb51e72/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 56572,
+      "sourceETag": "\"1860deed07d48e4d802b008e6786479d\"",
+      "sha256": "3c2348811e19dc83977abc345b95fc621ab20807f39994cc275b5c34e1168fe0"
+    },
+    {
+      "sourceKey": "variants/61c253cd-37e3-4079-949c-81e5b5ad2c9a/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/61c253cd-37e3-4079-949c-81e5b5ad2c9a/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 119520,
+      "sourceETag": "\"3ce7b57bce83557ee5c9239560220161\"",
+      "sha256": "eed6e490860a19c925174f76d423f07bb2e28f8a33652f164eae5400a118a797"
+    },
+    {
+      "sourceKey": "variants/6421407b-ee01-434c-a73b-454abd290556/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/6421407b-ee01-434c-a73b-454abd290556/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 127732,
+      "sourceETag": "\"a2cda14a0d2bab55f590c05426c15226\"",
+      "sha256": "7dfcb346bf4291dc10108c6ad7e5bac1da4865d8e277f6e39365ec898f6ef063"
+    },
+    {
+      "sourceKey": "variants/66608ca2-0849-4fc7-8d55-f15563719d87/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/66608ca2-0849-4fc7-8d55-f15563719d87/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 92576,
+      "sourceETag": "\"933998c8d475f4a76ccf43efb825e82a\"",
+      "sha256": "197701dce867b731ce264d5ded24f6047f535e07f90b93a16d492693493ed020"
+    },
+    {
+      "sourceKey": "variants/69504194-8acf-4409-a265-22e169fed404/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/69504194-8acf-4409-a265-22e169fed404/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 57944,
+      "sourceETag": "\"c2aee18473d04d5f0a6405bc6808be3a\"",
+      "sha256": "80bd9fe9ec522f2c94c83ad59cba4e9c0907b5ab8835568cea6c8255a74f6329"
+    },
+    {
+      "sourceKey": "variants/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 74826,
+      "sourceETag": "\"d8004072a47f9cf65487b47dc0333ee5\"",
+      "sha256": "642ff0755b24c62e991fd5ae53a1e5f63647c04cbfb0c4eee881fee23a5aace4"
+    },
+    {
+      "sourceKey": "variants/6b234004-d413-4690-8a78-4a3fbbf299f4/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/6b234004-d413-4690-8a78-4a3fbbf299f4/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 287508,
+      "sourceETag": "\"ed79b841dbf84845ece336c0bf269e7d\"",
+      "sha256": "ef0535425a796664e1aaf4ab5545e6145c4fc7e75cda0f34b0929772d502c2a5"
+    },
+    {
+      "sourceKey": "variants/6b9e1e60-56d8-4cb0-804e-224851863cb6/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/6b9e1e60-56d8-4cb0-804e-224851863cb6/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 45472,
+      "sourceETag": "\"8613b11268ae17ed6d86b6d6f13dad07\"",
+      "sha256": "258ae3e81e609a61c269707eedfee9d3f3035216e559c6bc09c76d03db607fb6"
+    },
+    {
+      "sourceKey": "variants/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 88944,
+      "sourceETag": "\"bcf531faa7c8acf2df4eeaf5ca27923f\"",
+      "sha256": "43e04b2780ee0ad6cff9c1c55c64afa0275888108feae53cec91f31c6a8a4a9a"
+    },
+    {
+      "sourceKey": "variants/7029a48a-1aed-4de9-9545-e4ebe710a7e5/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/7029a48a-1aed-4de9-9545-e4ebe710a7e5/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 77770,
+      "sourceETag": "\"0a93711f500f10ff6aeeb47fd36dd2cb\"",
+      "sha256": "d80e63400d8f7108efd9de215dc4be5245987fb46575ba565e8828e822dc6f08"
+    },
+    {
+      "sourceKey": "variants/704da104-cca1-49ee-bc4c-ff72679cc5a1/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/704da104-cca1-49ee-bc4c-ff72679cc5a1/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 39686,
+      "sourceETag": "\"694d3675bfbc97c563a7f464121a3ebc\"",
+      "sha256": "27c3117267afebe9c0b88a01d13f78b67ba406346e598a5ef2602d3aa4dfee67"
+    },
+    {
+      "sourceKey": "variants/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 97672,
+      "sourceETag": "\"4db200ef23d16f32653e387738146c97\"",
+      "sha256": "3df89eefdfb3c306ae40d83b148faf807bb92506d0164de8e877c9e62f0c6e80"
+    },
+    {
+      "sourceKey": "variants/735c5115-bf87-4cf8-bbc8-5b5e6472e290/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/735c5115-bf87-4cf8-bbc8-5b5e6472e290/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 48874,
+      "sourceETag": "\"a199e7e6646341ae5783ba2d8f02d497\"",
+      "sha256": "b4684d0652992d722750cfd66450abf5ce46deb1327dc1add3193298008fc7c8"
+    },
+    {
+      "sourceKey": "variants/78648eac-89d5-4571-a9c2-2aad26b4d6c6/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/78648eac-89d5-4571-a9c2-2aad26b4d6c6/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 78034,
+      "sourceETag": "\"b69024653cba7b7903942fd463301bc2\"",
+      "sha256": "6c7160f540cd5c917247516f965aa2bdd15d4b2ca3404539f705a14d8969e0a9"
+    },
+    {
+      "sourceKey": "variants/793ae24c-c7ee-453e-ab2c-038d0a20e818/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/793ae24c-c7ee-453e-ab2c-038d0a20e818/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 36516,
+      "sourceETag": "\"f81ea32e58712863cfbe46dc36657587\"",
+      "sha256": "a3db8b1e7e1c6feec5f0b5c77bf3b4c2e949660a88131d19e47939d1b21a4064"
+    },
+    {
+      "sourceKey": "variants/7af04ae5-30e2-40cd-942f-1831b4c6472a/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/7af04ae5-30e2-40cd-942f-1831b4c6472a/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 126212,
+      "sourceETag": "\"e52f30566eaa1fbc4334b4eb7ff81ef2\"",
+      "sha256": "55cb0ec195c947bc17e647072cabeb0f93994971ac0f18dcadec889da4444953"
+    },
+    {
+      "sourceKey": "variants/7c1147cf-92c3-45b1-b683-1e7070703c89/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/7c1147cf-92c3-45b1-b683-1e7070703c89/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 40264,
+      "sourceETag": "\"9d25dd0d44c1df18ecdb6f956b591193\"",
+      "sha256": "11f5050a437a613951bc014c7935f502d5fbb4950f505dd35bd0c645a22d1efd"
+    },
+    {
+      "sourceKey": "variants/7d3e4426-84de-441e-b9ce-86b385f4c0ff/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/7d3e4426-84de-441e-b9ce-86b385f4c0ff/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 161890,
+      "sourceETag": "\"7e240f5bf61c5ec8338e1ea8e12454f1\"",
+      "sha256": "f0bf32a0a2e843e16646fd8d25cc9397c4201f91b05eaf67747f74b7ba50e8b0"
+    },
+    {
+      "sourceKey": "variants/7f712b0f-2530-48e8-866b-d70eb0b3bd75/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/7f712b0f-2530-48e8-866b-d70eb0b3bd75/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 68816,
+      "sourceETag": "\"131580b199254fd8c5597ca3a65bfb09\"",
+      "sha256": "ad7d4ec9eebfd858039f360a2f9e08eb7701f5535c8b790c1eceb1f0b85987ee"
+    },
+    {
+      "sourceKey": "variants/850363dd-6ab1-471f-a289-931f0c6387bc/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/850363dd-6ab1-471f-a289-931f0c6387bc/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 52144,
+      "sourceETag": "\"235094decb57e14ce237e61a7b193460\"",
+      "sha256": "f368a4aff3f286ff077ec22ab5d2ce8bccd44389dda3dd654bcf1695bb600065"
+    },
+    {
+      "sourceKey": "variants/8d271900-f7f0-4415-82fe-e0fdaa9875c6/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/8d271900-f7f0-4415-82fe-e0fdaa9875c6/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 59142,
+      "sourceETag": "\"2ce33579118848fd5e7d2a571135ac65\"",
+      "sha256": "70e4523fc0099abf297fefc1621fb6348a1d82f711ca7c267e247b1bd6e330a3"
+    },
+    {
+      "sourceKey": "variants/8f7da832-0947-4d91-ab42-fb64fce87b8d/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/8f7da832-0947-4d91-ab42-fb64fce87b8d/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 77960,
+      "sourceETag": "\"44efdf62b98361055b4edea1c310e2ef\"",
+      "sha256": "e9b33c0be5cfdb8d32846dc11a8f5bca940cf9d66e54fd8ac4d623dfbbeea542"
+    },
+    {
+      "sourceKey": "variants/93c9172f-bc50-400b-b347-4c212f7b2137/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/93c9172f-bc50-400b-b347-4c212f7b2137/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 131152,
+      "sourceETag": "\"696a4497c24db6a6c1265a0403ac8f29\"",
+      "sha256": "d3ca5143f1f74e91a08d314dfaed13a6c7620a6a5334436b070ed0e2be3b4d5d"
+    },
+    {
+      "sourceKey": "variants/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 197478,
+      "sourceETag": "\"cc50245d1b4eb0c9b8947ce3d1715399\"",
+      "sha256": "d9778a17d0cbb4b22cbfda95f28561133d001fa38b2e1798916803e9df5656cf"
+    },
+    {
+      "sourceKey": "variants/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 126600,
+      "sourceETag": "\"3a2e4d1894f986a4c5ef846c0446fde3\"",
+      "sha256": "1b08f4296a703bba719e903e3a23802fb255de467afd0c65c1327fccbc84a77a"
+    },
+    {
+      "sourceKey": "variants/a01ff960-1aac-4a09-8fe7-caa1116be031/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/a01ff960-1aac-4a09-8fe7-caa1116be031/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 183824,
+      "sourceETag": "\"84c19ae56f2c800588d2ee73b48a0218\"",
+      "sha256": "5db25e5f256eaa947a3f7af44f8266b4dbc986ff9e0d9c5aae02d4d20d523ee0"
+    },
+    {
+      "sourceKey": "variants/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 117152,
+      "sourceETag": "\"f6597354b5066feb8f13ccce3f752f7d\"",
+      "sha256": "1d7d3e9a46a637eee02195b513b3ecdd45629c525df3c8603a1e5fad9f71d530"
+    },
+    {
+      "sourceKey": "variants/b7dbffd2-f52e-42bc-b0c2-43329ca68682/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/b7dbffd2-f52e-42bc-b0c2-43329ca68682/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 101880,
+      "sourceETag": "\"81b1d01f5cec6fc653828e47d56540f0\"",
+      "sha256": "8bd023695affb2254345cf13cc5ad22d8cdd2e6855fd81044e1f28f1afcae401"
+    },
+    {
+      "sourceKey": "variants/c183162c-9a62-4617-9be9-003d487f9644/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/c183162c-9a62-4617-9be9-003d487f9644/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 142490,
+      "sourceETag": "\"6802118b62de259702e28f70c0ab42ac\"",
+      "sha256": "a401bb7bc4155f314b82267e3489c275444c2ff2405a8b0b4243592ee650d5e1"
+    },
+    {
+      "sourceKey": "variants/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 79060,
+      "sourceETag": "\"3b86bc5d691473f133d877e824ff13a7\"",
+      "sha256": "a78a8768240e72ece8d10ddc983c09b35e4b822b14e8664dfe5786a63cee5a62"
+    },
+    {
+      "sourceKey": "variants/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 184608,
+      "sourceETag": "\"176b760dd896128322c37b49910841cf\"",
+      "sha256": "cff245c100f63088b891f98831f10e57756219523e5596ba846a8607e1b3d446"
+    },
+    {
+      "sourceKey": "variants/ca8d34cb-cf99-4346-8999-6e93f1128a8c/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/ca8d34cb-cf99-4346-8999-6e93f1128a8c/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 22862,
+      "sourceETag": "\"beb54616435ed230a93b3402250a55cd\"",
+      "sha256": "80aa0182d8b4d2a1b03869ecc5e030edc11fc5ea5a2cafe7daec733166065d0f"
+    },
+    {
+      "sourceKey": "variants/d60400d1-1ec0-49be-a8c6-b57e35fb77e5/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/d60400d1-1ec0-49be-a8c6-b57e35fb77e5/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 97962,
+      "sourceETag": "\"dbf097c7aa6f0ed0546ecf58f6213ec9\"",
+      "sha256": "5e6ae1fdcca654bfffb13950c315b0987ffe19795ab1a7f55b4b1b0ec83a59f7"
+    },
+    {
+      "sourceKey": "variants/e0245a6c-9df0-40ed-997e-d29c73309ac3/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e0245a6c-9df0-40ed-997e-d29c73309ac3/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 67078,
+      "sourceETag": "\"4f675833152e1ee9df5d155e7c5c5569\"",
+      "sha256": "e118990124bae2420a1d084074082eff13e2550808e4169d78043d7612f53e6f"
+    },
+    {
+      "sourceKey": "variants/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 122360,
+      "sourceETag": "\"560142486de0d9493f2e7390f19a3d02\"",
+      "sha256": "dd02b6ffdbec3dab269e9167effe6f93c98e6e89e8c710144dee1e4f1423e6b0"
+    },
+    {
+      "sourceKey": "variants/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 103308,
+      "sourceETag": "\"4fd890136b068f3fcd35676bd47f0fbe\"",
+      "sha256": "17b329834195f4646112d1d88d0fb23c165d00de83b7e67d2be4cca19c4d5c5e"
+    },
+    {
+      "sourceKey": "variants/e27fc0bc-0448-4691-9d3e-fd1e64454ebf/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e27fc0bc-0448-4691-9d3e-fd1e64454ebf/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 119778,
+      "sourceETag": "\"537888320e0680d55da98f6968af5881\"",
+      "sha256": "d8c2831784ad877e3adc368d533d3493ff8f4ec8c38ff9d47df28aced2bd9e5f"
+    },
+    {
+      "sourceKey": "variants/e54388d7-02ef-41eb-bf0f-d578d9e9138f/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e54388d7-02ef-41eb-bf0f-d578d9e9138f/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 70014,
+      "sourceETag": "\"1f695775c6e4d745932f2ff28574e53a\"",
+      "sha256": "d7ef4df1c513a982ee962ec0ca59365621ec89fb7670bac3374783bb8891c757"
+    },
+    {
+      "sourceKey": "variants/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 152542,
+      "sourceETag": "\"76ecb755df7a2f817ed3a6726245e349\"",
+      "sha256": "64d3822478d74b6f77aec9d64346cdc482dd4bba31a0c0212e4331a1de6f488c"
+    },
+    {
+      "sourceKey": "variants/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 31584,
+      "sourceETag": "\"5cdcfe06ec795e15ce89e3a640fd26e8\"",
+      "sha256": "847d402baf674984724c44aeffa793e99cf1eb170c88595e559e785acb40ea7d"
+    },
+    {
+      "sourceKey": "variants/ecabb27c-fadc-421f-8217-1e83a5c708de/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/ecabb27c-fadc-421f-8217-1e83a5c708de/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 183554,
+      "sourceETag": "\"8319f0b1871231fc8a277ecef63b5e60\"",
+      "sha256": "672044f693b9d3717bba913d899575f940895b98bd49da91d3aa8464b40f1d7e"
+    },
+    {
+      "sourceKey": "variants/f491859c-7659-425f-8e34-2e9126ccf0d5/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/f491859c-7659-425f-8e34-2e9126ccf0d5/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 225192,
+      "sourceETag": "\"9ee689c5ed38890e2363f52c177147b9\"",
+      "sha256": "8ab3db10bdf8b708f0bab61f85754920ce31c33e2b51de4b078ea5b0cb23efa8"
+    },
+    {
+      "sourceKey": "variants/f824783e-644f-4256-9c82-09d0786a8096/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/f824783e-644f-4256-9c82-09d0786a8096/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 359736,
+      "sourceETag": "\"0ca8d9613907caff16d274a6f0ce8bdc\"",
+      "sha256": "fbd68a25dac3d1a448f133915f21dddd475bac93253a774501ff7d5f9c63379a"
+    },
+    {
+      "sourceKey": "variants/fa65d41c-2e23-4880-a19f-774c3bacdaa1/webp-1920.webp",
+      "targetKey": "migration-backups/houseplus-source-2026-08-26/objects/variants/fa65d41c-2e23-4880-a19f-774c3bacdaa1/webp-1920.webp",
+      "status": "copied_and_verified",
+      "sourceBytes": 160322,
+      "sourceETag": "\"f4d220c999a894814010540cc24718bf\"",
+      "sha256": "c9c2f6d52470b9d2e230c8b4633555deafa4ac8900a981eb3f9ddf410e2669e5"
+    }
+  ]
+}

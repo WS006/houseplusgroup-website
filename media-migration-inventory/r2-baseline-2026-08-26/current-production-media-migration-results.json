@@ -1,0 +1,1945 @@
+{
+  "generatedAt": "2026-08-26T07:50:25.194Z",
+  "livePrefix": "media-live-v1/objects/",
+  "assets": [
+    {
+      "assetId": "03a73424-0574-4fb8-9354-abda05ef57bf",
+      "publicSlug": "houseplus-horizontal-logo",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-horizontal-logo/",
+        "https://images.houseplus-ch.com/media/houseplus-horizontal-logo/#logo"
+      ],
+      "sourceKey": "ingest/2026-08-12/03a73424-0574-4fb8-9354-abda05ef57bf/houseplus-horizontal-logo.png",
+      "sourceBytes": 33197,
+      "sourceETag": "dc2fb9d3c19caf16af2d585df33d2459",
+      "sourceContentType": "image/png",
+      "targetKey": "media-live-v1/objects/03a73424-0574-4fb8-9354-abda05ef57bf/houseplus-horizontal-logo.png",
+      "status": "copied_and_verified",
+      "sha256": "fa40c0fe41db7dd7b2140e091a364ae88300735842904f9fd99fb507d5b3eb94"
+    },
+    {
+      "assetId": "062de3c9-36e6-4b10-a584-463e89581bf2",
+      "publicSlug": "houseplus-gas-stove-3-burner-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-3-burner-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-3-burner-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/062de3c9-36e6-4b10-a584-463e89581bf2/products-gas-stove-3-burner.jpg",
+      "sourceBytes": 291699,
+      "sourceETag": "b551bb321ffbb123d6365cf8d4dd4c8c",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/062de3c9-36e6-4b10-a584-463e89581bf2/products-gas-stove-3-burner.jpg",
+      "status": "copied_and_verified",
+      "sha256": "5bb949745f211e801de527bc339006b8c5d9d07045ee44216cb377a4915edec5"
+    },
+    {
+      "assetId": "06ead54a-13e5-4cc1-8935-189c80ff5881",
+      "publicSlug": "houseplus-smart-watch-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-smart-watch-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-smart-watch-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/06ead54a-13e5-4cc1-8935-189c80ff5881/products-smart-watch.jpg",
+      "sourceBytes": 3012935,
+      "sourceETag": "a6a5c2cb5ae171ad8f090914c94d836c",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/06ead54a-13e5-4cc1-8935-189c80ff5881/products-smart-watch.jpg",
+      "status": "copied_and_verified",
+      "sha256": "9fb76b07e668b806b41731d9aa16510364fdee54a2e661953db757c6b7629847"
+    },
+    {
+      "assetId": "071603fb-ef14-4247-bb85-7f8da9997ca9",
+      "publicSlug": "houseplus-range-hood-600mm-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-600mm-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-600mm-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/071603fb-ef14-4247-bb85-7f8da9997ca9/products-range-hood-600mm.jpg",
+      "sourceBytes": 263836,
+      "sourceETag": "0148c3b4b94f95041129f8aab4375444",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/071603fb-ef14-4247-bb85-7f8da9997ca9/products-range-hood-600mm.jpg",
+      "status": "copied_and_verified",
+      "sha256": "a47cc92381d108be73fd02798b66f140ab065e85be69f548f6c3fc309da03d49"
+    },
+    {
+      "assetId": "11d0360b-af72-446e-a9f3-3cb438d1a388",
+      "publicSlug": "houseplus-range-hood-750mm-inclined-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-750mm-inclined-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-750mm-inclined-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/11d0360b-af72-446e-a9f3-3cb438d1a388/products-range-hood-750mm-inclined.jpg",
+      "sourceBytes": 192956,
+      "sourceETag": "6b739de7649ed632f1bedd4e31049ac9",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/11d0360b-af72-446e-a9f3-3cb438d1a388/products-range-hood-750mm-inclined.jpg",
+      "status": "copied_and_verified",
+      "sha256": "c07db2d218306f96d744375e8ae1cb5c468b2a5a9c9a34e0ad1999888943bdb9"
+    },
+    {
+      "assetId": "1387f02c-fe72-466e-b383-bfe4f27a716b",
+      "publicSlug": "houseplus-articles-electronics-electronics-headphones-product-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-headphones-product-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/1387f02c-fe72-466e-b383-bfe4f27a716b/articles-electronics-electronics-headphones-product.jpg",
+      "sourceBytes": 4574894,
+      "sourceETag": "9b595f56a84fe0bcfa8b6bb4c463a8ab",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/1387f02c-fe72-466e-b383-bfe4f27a716b/articles-electronics-electronics-headphones-product.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ce1df3a7222894b97da2eb8022a90daef03d3bb022e4c41eb2059c1fd6675212"
+    },
+    {
+      "assetId": "15e34719-75ce-4403-833b-cd8715a50c42",
+      "publicSlug": "houseplus-electric-water-heater-50l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-electric-water-heater-50l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-electric-water-heater-50l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/15e34719-75ce-4403-833b-cd8715a50c42/products-electric-water-heater-50l.jpg",
+      "sourceBytes": 99434,
+      "sourceETag": "434c9dd0a473f964a1e755da7d0fba7b",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/15e34719-75ce-4403-833b-cd8715a50c42/products-electric-water-heater-50l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "01efd7582280ecddb5767f2ca817f79e9730ae00bdc5fc534274bbf835de1019"
+    },
+    {
+      "assetId": "17075f2b-067e-44f0-9229-18997fbc73ca",
+      "publicSlug": "houseplus-site-support-customer-service",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-support-customer-service/"
+      ],
+      "sourceKey": "ingest/2026-08-12/17075f2b-067e-44f0-9229-18997fbc73ca/site-support-customer-service.jpg",
+      "sourceBytes": 206103,
+      "sourceETag": "3627ac7047f29923b6925956bcbc2c01",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/17075f2b-067e-44f0-9229-18997fbc73ca/site-support-customer-service.jpg",
+      "status": "copied_and_verified",
+      "sha256": "b697ca63496eac81276680347fd408c727669bd31c59de9c3067fafaf82a518c"
+    },
+    {
+      "assetId": "18406370-f61f-4c38-99d6-b6ba4ca5e659",
+      "publicSlug": "houseplus-articles-covers-solar-energy-storage-industrial-manufacturing-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-energy-storage-industrial-manufacturing-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-energy-storage-industrial-manufacturing-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/18406370-f61f-4c38-99d6-b6ba4ca5e659/articles-covers-solar-energy-storage-industrial-manufacturing.jpg",
+      "sourceBytes": 278618,
+      "sourceETag": "c65ef3c6f63b466a1bd9a9cf326f1605",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/18406370-f61f-4c38-99d6-b6ba4ca5e659/articles-covers-solar-energy-storage-industrial-manufacturing.jpg",
+      "status": "copied_and_verified",
+      "sha256": "732e4d820ff6581ae92417289f332430897cb495ca325dcf40796db8cd0cabd8"
+    },
+    {
+      "assetId": "1a43d798-709d-41fa-be2c-b978573f6a49",
+      "publicSlug": "houseplus-articles-covers-energy-efficiency-standards-appliances-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-energy-efficiency-standards-appliances-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/1a43d798-709d-41fa-be2c-b978573f6a49/articles-covers-energy-efficiency-standards-appliances.jpg",
+      "sourceBytes": 116584,
+      "sourceETag": "7e71efdd8e8a1a8e80e8483677545fb2",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/1a43d798-709d-41fa-be2c-b978573f6a49/articles-covers-energy-efficiency-standards-appliances.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0988de973877092a04037cecb7d0a48e47f0d0361f81a55e4f7a2f9a21024efa"
+    },
+    {
+      "assetId": "1a65d956-2f3f-4ceb-8dbd-6667d9df5983",
+      "publicSlug": "houseplus-site-case-studies-logistics-review",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-case-studies-logistics-review/"
+      ],
+      "sourceKey": "ingest/2026-08-12/1a65d956-2f3f-4ceb-8dbd-6667d9df5983/site-case-studies-logistics-review.jpg",
+      "sourceBytes": 4901238,
+      "sourceETag": "c58a73ac47d1c3627093d4cde8fe7351",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/1a65d956-2f3f-4ceb-8dbd-6667d9df5983/site-case-studies-logistics-review.jpg",
+      "status": "copied_and_verified",
+      "sha256": "a1cccfcb7215184c0ebf2816b9ebefe964dd9025d115c298d06749d669939ed4"
+    },
+    {
+      "assetId": "1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b",
+      "publicSlug": "houseplus-lifepo4-battery-12v100ah-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-lifepo4-battery-12v100ah-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-lifepo4-battery-12v100ah-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/products-lifepo4-battery-12v100ah.jpg",
+      "sourceBytes": 4327339,
+      "sourceETag": "a48e0c9451639c567dff00f82336bb13",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/1e3050dc-5b9c-4ae0-b95f-2df5806cdf6b/products-lifepo4-battery-12v100ah.jpg",
+      "status": "copied_and_verified",
+      "sha256": "e69e6face6e231b19d58a7f7e2a14e00be1773683db264803cde414c4e26a6e7"
+    },
+    {
+      "assetId": "1e310ff8-8186-4803-ac0d-867ca08c9710",
+      "publicSlug": "houseplus-articles-covers-lifepo4-vs-lead-acid-battery-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-lifepo4-vs-lead-acid-battery-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-lifepo4-vs-lead-acid-battery-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/1e310ff8-8186-4803-ac0d-867ca08c9710/articles-covers-lifepo4-vs-lead-acid-battery.jpg",
+      "sourceBytes": 152343,
+      "sourceETag": "70a8dc1e634ae8704d583f874721aec2",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/1e310ff8-8186-4803-ac0d-867ca08c9710/articles-covers-lifepo4-vs-lead-acid-battery.jpg",
+      "status": "copied_and_verified",
+      "sha256": "8dcf9ee8d932a4560a6c4c075e53ddc66161ca75eeabd8d0188081b054d4ff4a"
+    },
+    {
+      "assetId": "1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4",
+      "publicSlug": "houseplus-articles-covers-consumer-electronics-battery-life-testing-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-consumer-electronics-battery-life-testing-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-consumer-electronics-battery-life-testing-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/articles-covers-consumer-electronics-battery-life-testing.jpg",
+      "sourceBytes": 119962,
+      "sourceETag": "6299f3fdf8d2842a1354420102aa5986",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/1f4dac40-3e4c-4b68-9bb5-b4d596c5f5f4/articles-covers-consumer-electronics-battery-life-testing.jpg",
+      "status": "copied_and_verified",
+      "sha256": "1a7f29f325a0236e3963d78973a8397ba7a05714593e01f227833ce9fd7a8085"
+    },
+    {
+      "assetId": "2280d26e-4918-4d57-9047-2cb7213e06b0",
+      "publicSlug": "houseplus-toaster-2-slice-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-toaster-2-slice-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-toaster-2-slice-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/2280d26e-4918-4d57-9047-2cb7213e06b0/products-toaster-2-slice.jpg",
+      "sourceBytes": 3987314,
+      "sourceETag": "62edd304b549a1283c665cf06f6d58f2",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2280d26e-4918-4d57-9047-2cb7213e06b0/products-toaster-2-slice.jpg",
+      "status": "copied_and_verified",
+      "sha256": "c2610c77d41d6b1f449b173e421611bbb1ac0d6c40da1e6825dad26163c84938"
+    },
+    {
+      "assetId": "2360e8f7-e149-4cc7-8266-58bb8a22b890",
+      "publicSlug": "houseplus-articles-appliances-smart-home-trends-2026-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-smart-home-trends-2026-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/2360e8f7-e149-4cc7-8266-58bb8a22b890/articles-appliances-smart-home-trends-2026.jpg",
+      "sourceBytes": 4320894,
+      "sourceETag": "2e9f74944b63c104a439ae71c00e09ac",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2360e8f7-e149-4cc7-8266-58bb8a22b890/articles-appliances-smart-home-trends-2026.jpg",
+      "status": "copied_and_verified",
+      "sha256": "d899228e41604a6d863b769b94e76e8a2be3a2561898fd9a2d7896f26ea9a531"
+    },
+    {
+      "assetId": "24e8b932-f7d0-4511-9e03-8a98cbb987f5",
+      "publicSlug": "houseplus-smart-wifi-plug-meter-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-smart-wifi-plug-meter-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-smart-wifi-plug-meter-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/24e8b932-f7d0-4511-9e03-8a98cbb987f5/products-smart-wifi-plug-meter.jpg",
+      "sourceBytes": 2520266,
+      "sourceETag": "131876da44f3a20359a38352958eaf4a",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/24e8b932-f7d0-4511-9e03-8a98cbb987f5/products-smart-wifi-plug-meter.jpg",
+      "status": "copied_and_verified",
+      "sha256": "16adf7322d379238e360702c9f472b8d8ee1b8519e59823dff826f46959b06bf"
+    },
+    {
+      "assetId": "2556637e-92ab-43d4-8940-2bb1c8ad319b",
+      "publicSlug": "houseplus-lead-acid-battery-100ah-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-lead-acid-battery-100ah-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-lead-acid-battery-100ah-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/2556637e-92ab-43d4-8940-2bb1c8ad319b/products-lead-acid-battery-100ah.jpg",
+      "sourceBytes": 3231859,
+      "sourceETag": "a4839c2a98353bc30c8dd23e81fa1eb2",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2556637e-92ab-43d4-8940-2bb1c8ad319b/products-lead-acid-battery-100ah.jpg",
+      "status": "copied_and_verified",
+      "sha256": "cf4868057569b2050f90b97b3bf96d5761726b6f1f4fd5411e7748d4d5f96f2f"
+    },
+    {
+      "assetId": "270d35e2-b004-4941-95e7-1a0674a5b4b9",
+      "publicSlug": "houseplus-solar-inverter-3kw-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/270d35e2-b004-4941-95e7-1a0674a5b4b9/products-solar-inverter-3kw.jpg",
+      "sourceBytes": 3613150,
+      "sourceETag": "004f9de3cd3233942e7c8c1028d3ed7d",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/270d35e2-b004-4941-95e7-1a0674a5b4b9/products-solar-inverter-3kw.jpg",
+      "status": "copied_and_verified",
+      "sha256": "cf2352ab6ca2818ca6f5c3a404ac58c825870e3f75e4df735e6dde83cf76a68d"
+    },
+    {
+      "assetId": "2946709f-9053-4d33-991a-28e37dfd3f27",
+      "publicSlug": "houseplus-team-team-manufacturing-collaboration",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-team-team-manufacturing-collaboration/"
+      ],
+      "sourceKey": "ingest/2026-08-12/2946709f-9053-4d33-991a-28e37dfd3f27/team-team-manufacturing-collaboration.jpg",
+      "sourceBytes": 323284,
+      "sourceETag": "febad480e4a1ac809a3d764a8f82ec49",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2946709f-9053-4d33-991a-28e37dfd3f27/team-team-manufacturing-collaboration.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ec9bf67a4fca8d3751f990417e82dbaa8d3e9ec4219ba5589256648bcc9491b6"
+    },
+    {
+      "assetId": "2a83c236-4c98-4d82-9fa9-ff7cbd3b8b7b",
+      "publicSlug": "houseplus-site-service-technical-consultation",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-service-technical-consultation/"
+      ],
+      "sourceKey": "ingest/2026-08-12/2a83c236-4c98-4d82-9fa9-ff7cbd3b8b7b/site-service-technical-consultation.jpg",
+      "sourceBytes": 244432,
+      "sourceETag": "626d14a2f91bd232b0cffcb1d881b2c6",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2a83c236-4c98-4d82-9fa9-ff7cbd3b8b7b/site-service-technical-consultation.jpg",
+      "status": "copied_and_verified",
+      "sha256": "19840e27a8331ef660841112dd83afce55f31147e03ef44e98dc4184649b22e6"
+    },
+    {
+      "assetId": "2ca51974-8d59-47e0-8469-b583ff64db42",
+      "publicSlug": "houseplus-articles-electronics-electronics-usb-cable-product-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-usb-cable-product-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-usb-cable-product-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/2ca51974-8d59-47e0-8469-b583ff64db42/articles-electronics-electronics-usb-cable-product.jpg",
+      "sourceBytes": 80276,
+      "sourceETag": "ac553ab59113f1515495c5987aef8c51",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2ca51974-8d59-47e0-8469-b583ff64db42/articles-electronics-electronics-usb-cable-product.jpg",
+      "status": "copied_and_verified",
+      "sha256": "feebade0a767dce171d64e376a7833cb983ba7caddccbf207bec30fee3eb0343"
+    },
+    {
+      "assetId": "2fd9cc95-2d2a-4309-a730-eed1f7e56e55",
+      "publicSlug": "houseplus-gas-water-heater-8l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-water-heater-8l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-water-heater-8l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/2fd9cc95-2d2a-4309-a730-eed1f7e56e55/products-gas-water-heater-8l.jpg",
+      "sourceBytes": 109897,
+      "sourceETag": "73e9190e20aa5dea5bb49b6fd6ce3879",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/2fd9cc95-2d2a-4309-a730-eed1f7e56e55/products-gas-water-heater-8l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0c94548ee7b38368a81b4552251a7891336c5eccb634fa975b7b4073061ba61d"
+    },
+    {
+      "assetId": "328d6bbc-d1b1-487c-9604-eb7a66ba3d93",
+      "publicSlug": "houseplus-articles-covers-mppt-vs-pwm-charge-controller-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-mppt-vs-pwm-charge-controller-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-mppt-vs-pwm-charge-controller-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/328d6bbc-d1b1-487c-9604-eb7a66ba3d93/articles-covers-mppt-vs-pwm-charge-controller.jpg",
+      "sourceBytes": 146845,
+      "sourceETag": "cd66c517eee943d283ebc7b2b68463d9",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/328d6bbc-d1b1-487c-9604-eb7a66ba3d93/articles-covers-mppt-vs-pwm-charge-controller.jpg",
+      "status": "copied_and_verified",
+      "sha256": "725171b5b4ed0558dff01fe8090800d6b1336aa163ae58106cd64df1a5d29fca"
+    },
+    {
+      "assetId": "374739a1-d933-4820-8817-56b657c0e371",
+      "publicSlug": "houseplus-portable-power-station-3000w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-portable-power-station-3000w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-portable-power-station-3000w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/374739a1-d933-4820-8817-56b657c0e371/products-portable-power-station-3000w.jpg",
+      "sourceBytes": 4563507,
+      "sourceETag": "540ffcfb4551c22014dcbe2bb1bcf8fb",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/374739a1-d933-4820-8817-56b657c0e371/products-portable-power-station-3000w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ff8c27e24f74aaefe0d2069b6c17c3fa37e4a8e8b5f94753a515ad936ffddba2"
+    },
+    {
+      "assetId": "3a511818-4b8e-4023-9631-106691f27e4d",
+      "publicSlug": "houseplus-bluetooth-earphone-tws-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-bluetooth-earphone-tws-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-bluetooth-earphone-tws-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/3a511818-4b8e-4023-9631-106691f27e4d/products-bluetooth-earphone-tws.jpg",
+      "sourceBytes": 3105119,
+      "sourceETag": "082c7ffab4136cd769e789e121edc36e",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/3a511818-4b8e-4023-9631-106691f27e4d/products-bluetooth-earphone-tws.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0f9d2ec9d3faf7c53185c766e368237efb40ecc263201501fed406764dfd9a71"
+    },
+    {
+      "assetId": "3ff31e44-5a92-4d95-ac80-597a8e391816",
+      "publicSlug": "houseplus-articles-covers-global-wholesale-guide-home-appliances-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-global-wholesale-guide-home-appliances-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/3ff31e44-5a92-4d95-ac80-597a8e391816/articles-covers-global-wholesale-guide-home-appliances.jpg",
+      "sourceBytes": 220617,
+      "sourceETag": "65cfc38336d4a69313fd6ef85e14c8db",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/3ff31e44-5a92-4d95-ac80-597a8e391816/articles-covers-global-wholesale-guide-home-appliances.jpg",
+      "status": "copied_and_verified",
+      "sha256": "f5ac7f43e7eb65e6ac8ae6ccb335a194c2a8e486d5f09644cab2e621c3903d70"
+    },
+    {
+      "assetId": "412f5266-8f26-429b-b3ce-ea16afe4a74d",
+      "publicSlug": "houseplus-articles-covers-tws-earphones-oem-manufacturing-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-tws-earphones-oem-manufacturing-guide-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-tws-earphones-oem-manufacturing-guide-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/412f5266-8f26-429b-b3ce-ea16afe4a74d/articles-covers-tws-earphones-oem-manufacturing-guide.jpg",
+      "sourceBytes": 154332,
+      "sourceETag": "3eec223e6d757cdd7543cdb9936aac12",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/412f5266-8f26-429b-b3ce-ea16afe4a74d/articles-covers-tws-earphones-oem-manufacturing-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ac2982113f61493ff712b08b0b16da0d1d01557cc7d5dc698d5363089803e856"
+    },
+    {
+      "assetId": "44b1ac39-b07d-49b8-bb55-f9e7266893a3",
+      "publicSlug": "houseplus-group-brand-icon",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-group-brand-icon/"
+      ],
+      "sourceKey": "ingest/2026-08-12/44b1ac39-b07d-49b8-bb55-f9e7266893a3/favicon.png",
+      "sourceBytes": 1723,
+      "sourceETag": "dfb277aff0032738519675c1b6ad8e0c",
+      "sourceContentType": "image/png",
+      "targetKey": "media-live-v1/objects/44b1ac39-b07d-49b8-bb55-f9e7266893a3/favicon.png",
+      "status": "copied_and_verified",
+      "sha256": "f888d97710818f2630f4af24fcd391f17706c81f98e563633cd621c84ffc52f5"
+    },
+    {
+      "assetId": "479fc9ee-005a-4fb4-aa60-80180c522a2c",
+      "publicSlug": "houseplus-articles-covers-how-to-choose-solar-panel-manufacturer-china-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-how-to-choose-solar-panel-manufacturer-china-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-how-to-choose-solar-panel-manufacturer-china-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/479fc9ee-005a-4fb4-aa60-80180c522a2c/articles-covers-how-to-choose-solar-panel-manufacturer-china.jpg",
+      "sourceBytes": 219406,
+      "sourceETag": "8537c9c688c84712e248691cd0da766a",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/479fc9ee-005a-4fb4-aa60-80180c522a2c/articles-covers-how-to-choose-solar-panel-manufacturer-china.jpg",
+      "status": "copied_and_verified",
+      "sha256": "8550e34fbdc5e452d745b9656e77694ddd7c36807b2b866f89d7325a80303987"
+    },
+    {
+      "assetId": "498a7ad8-81cf-403f-bdee-77c08dc04c3e",
+      "publicSlug": "houseplus-home-energy-storage-5000w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-home-energy-storage-5000w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-home-energy-storage-5000w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/498a7ad8-81cf-403f-bdee-77c08dc04c3e/products-home-energy-storage-5000w.jpg",
+      "sourceBytes": 2912511,
+      "sourceETag": "0da83205c931ef04906b64d4d2bf5125",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/498a7ad8-81cf-403f-bdee-77c08dc04c3e/products-home-energy-storage-5000w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "9f1a544ec818dd6ef41f7b27cc550c9c8854117d12f1205e9868183dc0f6ddb7"
+    },
+    {
+      "assetId": "524e182e-6794-475d-b75f-563d55031eec",
+      "publicSlug": "houseplus-foldable-solar-panel-200w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-foldable-solar-panel-200w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-foldable-solar-panel-200w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/524e182e-6794-475d-b75f-563d55031eec/products-foldable-solar-panel-200w.jpg",
+      "sourceBytes": 4788459,
+      "sourceETag": "30df55e1a748133c6a0c5f779dd25f3f",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/524e182e-6794-475d-b75f-563d55031eec/products-foldable-solar-panel-200w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "06b57baa3ae1cfbcb4558e7f3b220ec43da1765d5c27be73dc66776c152a1546"
+    },
+    {
+      "assetId": "56493de4-d16d-4b6e-935a-9daa1bbb5f07",
+      "publicSlug": "houseplus-articles-covers-2026-electronics-market-update-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/56493de4-d16d-4b6e-935a-9daa1bbb5f07/articles-covers-2026-electronics-market-update.jpg",
+      "sourceBytes": 166812,
+      "sourceETag": "26912957e5061103167fd192371ad8c0",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/56493de4-d16d-4b6e-935a-9daa1bbb5f07/articles-covers-2026-electronics-market-update.jpg",
+      "status": "copied_and_verified",
+      "sha256": "f6838e3193d0f1cc1a353f2f06111d4f70835bc6f810f63eefc15e81fd3fc073"
+    },
+    {
+      "assetId": "5735b9be-6402-4007-bc79-fc2ee8581f7b",
+      "publicSlug": "houseplus-home-home-appliances-collection-b",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-home-home-appliances-collection-b/"
+      ],
+      "sourceKey": "ingest/2026-08-12/5735b9be-6402-4007-bc79-fc2ee8581f7b/home-home-appliances-collection-b.jpg",
+      "sourceBytes": 4548340,
+      "sourceETag": "5d9661470417d625682e207aa7d260eb",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/5735b9be-6402-4007-bc79-fc2ee8581f7b/home-home-appliances-collection-b.jpg",
+      "status": "copied_and_verified",
+      "sha256": "1360384f3f7f561576e273d4eb0680c6689bd59c037c70ee733db2bcca8de692"
+    },
+    {
+      "assetId": "58f2d257-8d5c-481d-acd7-edb56c65c5b3",
+      "publicSlug": "houseplus-articles-covers-2026-solar-market-update-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-solar-market-update-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-solar-market-update-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/58f2d257-8d5c-481d-acd7-edb56c65c5b3/articles-covers-2026-solar-market-update.jpg",
+      "sourceBytes": 224137,
+      "sourceETag": "d1e17e7584725000bef19f3cae453a43",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/58f2d257-8d5c-481d-acd7-edb56c65c5b3/articles-covers-2026-solar-market-update.jpg",
+      "status": "copied_and_verified",
+      "sha256": "7184da3f7c1412ed328b32293291e2bc2c6765862a3f569647911b9c5149d8b7"
+    },
+    {
+      "assetId": "5a0a79d4-5347-402f-9448-447aca926c6b",
+      "publicSlug": "houseplus-articles-covers-portable-ssd-vs-external-hdd-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-portable-ssd-vs-external-hdd-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-portable-ssd-vs-external-hdd-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/5a0a79d4-5347-402f-9448-447aca926c6b/articles-covers-portable-ssd-vs-external-hdd.jpg",
+      "sourceBytes": 129508,
+      "sourceETag": "6731a31d4fecedf07ddbda1cf35481b6",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/5a0a79d4-5347-402f-9448-447aca926c6b/articles-covers-portable-ssd-vs-external-hdd.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3acbc73995b8b7104c52d8d1ba6dcbb1b0309ae31254840dc926157986360d03"
+    },
+    {
+      "assetId": "5d38e1b0-b17a-4434-887c-5afe172afe81",
+      "publicSlug": "houseplus-articles-covers-air-fryer-sourcing-guide-china-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-air-fryer-sourcing-guide-china-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-air-fryer-sourcing-guide-china-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/5d38e1b0-b17a-4434-887c-5afe172afe81/articles-covers-air-fryer-sourcing-guide-china.jpg",
+      "sourceBytes": 139832,
+      "sourceETag": "8376356a86d188d359643f5f001bf3a7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/5d38e1b0-b17a-4434-887c-5afe172afe81/articles-covers-air-fryer-sourcing-guide-china.jpg",
+      "status": "copied_and_verified",
+      "sha256": "7783c1a1cd3dd97155d9be5e96457059a96a8f6f94109281ed128902cfa46cd4"
+    },
+    {
+      "assetId": "5e2f09d5-57bd-459f-af91-fe2ea3102ed0",
+      "publicSlug": "houseplus-induction-hob-3-zone-flex-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-induction-hob-3-zone-flex-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-induction-hob-3-zone-flex-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/5e2f09d5-57bd-459f-af91-fe2ea3102ed0/products-induction-hob-3-zone-flex.jpg",
+      "sourceBytes": 118247,
+      "sourceETag": "36a9c3955be85dfdb2d12831b3fdc8fe",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/5e2f09d5-57bd-459f-af91-fe2ea3102ed0/products-induction-hob-3-zone-flex.jpg",
+      "status": "copied_and_verified",
+      "sha256": "a051c1d457eac9e3ad988193404f24191b08415a0527c4b7f337ddc535147095"
+    },
+    {
+      "assetId": "5ec6c2d5-bed3-4f1d-a04d-2a2a56a8c54f",
+      "publicSlug": "houseplus-articles-covers-2026-smart-home-appliances-market-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-smart-home-appliances-market-guide-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-smart-home-appliances-market-guide-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/5ec6c2d5-bed3-4f1d-a04d-2a2a56a8c54f/articles-covers-2026-smart-home-appliances-market-guide.jpg",
+      "sourceBytes": 123861,
+      "sourceETag": "045a2bb624b554c3d0f202eafb42dacf",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/5ec6c2d5-bed3-4f1d-a04d-2a2a56a8c54f/articles-covers-2026-smart-home-appliances-market-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "c1cb9ee94cad28552f4e7f0476d67f52a90c2370675c19d2a9efea4200a38ec4"
+    },
+    {
+      "assetId": "5f55fac9-2fc5-4a4e-b907-50058cb51e72",
+      "publicSlug": "houseplus-ceramic-hob-double-zone-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-ceramic-hob-double-zone-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-ceramic-hob-double-zone-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/5f55fac9-2fc5-4a4e-b907-50058cb51e72/products-ceramic-hob-double-zone.jpg",
+      "sourceBytes": 3637492,
+      "sourceETag": "c0ca3c9da28dcd4c092d63750ab8d55f",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/5f55fac9-2fc5-4a4e-b907-50058cb51e72/products-ceramic-hob-double-zone.jpg",
+      "status": "copied_and_verified",
+      "sha256": "91fdfbfd465ec26f2cecab6626c7639901baca21a3fc798b70a7c09827dd0a38"
+    },
+    {
+      "assetId": "61c253cd-37e3-4079-949c-81e5b5ad2c9a",
+      "publicSlug": "houseplus-solar-generator-kit-300w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-generator-kit-300w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-generator-kit-300w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/61c253cd-37e3-4079-949c-81e5b5ad2c9a/products-solar-generator-kit-300w.jpg",
+      "sourceBytes": 3593978,
+      "sourceETag": "76e4be445fe0fb3e2afb00ccf2a5ab7c",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/61c253cd-37e3-4079-949c-81e5b5ad2c9a/products-solar-generator-kit-300w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "b6df2cf4071f9e10c800495211db88ef6e11707f8058756966d8104ca258e613"
+    },
+    {
+      "assetId": "66608ca2-0849-4fc7-8d55-f15563719d87",
+      "publicSlug": "houseplus-ceramic-hob-4-zone-built-in-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-ceramic-hob-4-zone-built-in-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-ceramic-hob-4-zone-built-in-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/66608ca2-0849-4fc7-8d55-f15563719d87/products-ceramic-hob-4-zone-built-in.jpg",
+      "sourceBytes": 3962073,
+      "sourceETag": "5a83e4b5480f8151940ed85fe59f3a10",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/66608ca2-0849-4fc7-8d55-f15563719d87/products-ceramic-hob-4-zone-built-in.jpg",
+      "status": "copied_and_verified",
+      "sha256": "48c6e73572068a5bdc95a7087fe501fdb9742eb6bc41089890dca79e712ef59e"
+    },
+    {
+      "assetId": "677858d4-b888-4d1e-a53c-7e069b35795a",
+      "publicSlug": "houseplus-range-hood-900mm-curved-glass-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-900mm-curved-glass-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-900mm-curved-glass-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/677858d4-b888-4d1e-a53c-7e069b35795a/products-range-hood-900mm-curved-glass.jpg",
+      "sourceBytes": 291332,
+      "sourceETag": "741fd31587882989d7b3738c00e905b8",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/677858d4-b888-4d1e-a53c-7e069b35795a/products-range-hood-900mm-curved-glass.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3446883ef37af2cd0db66fb24adf775219360bfd3cdfd7ce45ee59d579df32bd"
+    },
+    {
+      "assetId": "69504194-8acf-4409-a265-22e169fed404",
+      "publicSlug": "houseplus-articles-appliances-smart-refrigerator-2026-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-smart-refrigerator-2026-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/69504194-8acf-4409-a265-22e169fed404/articles-appliances-smart-refrigerator-2026.jpg",
+      "sourceBytes": 4212624,
+      "sourceETag": "4e9924d007d9fc2b67da0179daf0f6d6",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/69504194-8acf-4409-a265-22e169fed404/articles-appliances-smart-refrigerator-2026.jpg",
+      "status": "copied_and_verified",
+      "sha256": "8dc2c05f930412bb03951c576d2c3129ef4412014b9260d896d2b954700c84d2"
+    },
+    {
+      "assetId": "6a0caf8d-e8ef-4ee9-86ed-20c082f9a091",
+      "publicSlug": "houseplus-charge-controller-60a-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-charge-controller-60a-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-charge-controller-60a-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/products-charge-controller-60a.jpg",
+      "sourceBytes": 4095918,
+      "sourceETag": "06d82f4a0c9e9e91c1fb40ca7b0f6965",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/6a0caf8d-e8ef-4ee9-86ed-20c082f9a091/products-charge-controller-60a.jpg",
+      "status": "copied_and_verified",
+      "sha256": "f2117f817d9aee5c0155e390ee67c84f5d50bda30babaaab8f6d0ff4760c8b27"
+    },
+    {
+      "assetId": "6b234004-d413-4690-8a78-4a3fbbf299f4",
+      "publicSlug": "houseplus-headphone-over-ear-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/6b234004-d413-4690-8a78-4a3fbbf299f4/products-headphone-over-ear.jpg",
+      "sourceBytes": 1419082,
+      "sourceETag": "c721b270aab5a50154f37a02c118718f",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/6b234004-d413-4690-8a78-4a3fbbf299f4/products-headphone-over-ear.jpg",
+      "status": "copied_and_verified",
+      "sha256": "16cb73a9df9f84387644175e8d238f09a85524a39335156784d47b2a50413dae"
+    },
+    {
+      "assetId": "6b9e1e60-56d8-4cb0-804e-224851863cb6",
+      "publicSlug": "houseplus-outdoor-power-station-600w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-outdoor-power-station-600w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-outdoor-power-station-600w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/6b9e1e60-56d8-4cb0-804e-224851863cb6/products-outdoor-power-station-600w.jpg",
+      "sourceBytes": 3061206,
+      "sourceETag": "1917d6bc6ab8b54a0e6da712ae765ae8",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/6b9e1e60-56d8-4cb0-804e-224851863cb6/products-outdoor-power-station-600w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "eaa5a837f12bd6f24a9dd2ab06b133ffc4f89b85d3460c55735a8e7b6c615282"
+    },
+    {
+      "assetId": "6bce08ff-a5e8-4b16-a176-fe75d1f2de2d",
+      "publicSlug": "houseplus-gas-electric-hybrid-cooktop-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-electric-hybrid-cooktop-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-electric-hybrid-cooktop-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/products-gas-electric-hybrid-cooktop.jpg",
+      "sourceBytes": 4421343,
+      "sourceETag": "6b4ceb92e5375f4c76b01f8d17251ef7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/6bce08ff-a5e8-4b16-a176-fe75d1f2de2d/products-gas-electric-hybrid-cooktop.jpg",
+      "status": "copied_and_verified",
+      "sha256": "784f39d14894b341c4f9056e36b7ad5005db5a39e3f210deea985009fe6e348e"
+    },
+    {
+      "assetId": "6bfda11b-fe44-442f-b517-3b236a6a720c",
+      "publicSlug": "houseplus-articles-appliances-appliance-circuit-board-technology-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-appliance-circuit-board-technology-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/6bfda11b-fe44-442f-b517-3b236a6a720c/articles-appliances-appliance-circuit-board-technology.jpg",
+      "sourceBytes": 163803,
+      "sourceETag": "beb4b9be6f3d08c3598a3bf8d6962eaa",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/6bfda11b-fe44-442f-b517-3b236a6a720c/articles-appliances-appliance-circuit-board-technology.jpg",
+      "status": "copied_and_verified",
+      "sha256": "87be94726e557188bee0901691eed7b395dadd72803cc25ff6b72bd9f5483179"
+    },
+    {
+      "assetId": "7029a48a-1aed-4de9-9545-e4ebe710a7e5",
+      "publicSlug": "houseplus-mppt-controller-40a-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-mppt-controller-40a-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-mppt-controller-40a-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/7029a48a-1aed-4de9-9545-e4ebe710a7e5/products-mppt-controller-40a.jpg",
+      "sourceBytes": 4243240,
+      "sourceETag": "e6e39689595243a7d34bff47789f0089",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7029a48a-1aed-4de9-9545-e4ebe710a7e5/products-mppt-controller-40a.jpg",
+      "status": "copied_and_verified",
+      "sha256": "e5b8f2cfa3c928d8e9df1997ce281389478d9f9e610720763856266b29cb65cb"
+    },
+    {
+      "assetId": "704da104-cca1-49ee-bc4c-ff72679cc5a1",
+      "publicSlug": "houseplus-lithium-battery-5kwh-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-lithium-battery-5kwh-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-lithium-battery-5kwh-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/704da104-cca1-49ee-bc4c-ff72679cc5a1/products-lithium-battery-5kwh.jpg",
+      "sourceBytes": 3753087,
+      "sourceETag": "d079d6ee386f3657f3e6a9d6aa745501",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/704da104-cca1-49ee-bc4c-ff72679cc5a1/products-lithium-battery-5kwh.jpg",
+      "status": "copied_and_verified",
+      "sha256": "333df2c13d150fbd79f44553ffeddde30a0eae5edd5ffe21279b6c5c2d88cb42"
+    },
+    {
+      "assetId": "711b5854-ae37-4eea-b73e-c65b018a98d0",
+      "publicSlug": "houseplus-steam-oven-30l-built-in-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-steam-oven-30l-built-in-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-steam-oven-30l-built-in-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/711b5854-ae37-4eea-b73e-c65b018a98d0/products-steam-oven-30l-built-in.jpg",
+      "sourceBytes": 154444,
+      "sourceETag": "15d0c0dbd95850c46f8e584acac30739",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/711b5854-ae37-4eea-b73e-c65b018a98d0/products-steam-oven-30l-built-in.jpg",
+      "status": "copied_and_verified",
+      "sha256": "bd1016dfaee17f2abc4d44d3c33c79c0f9aacbe05e202f6982415390d2f1ea0a"
+    },
+    {
+      "assetId": "71cebd48-d1c1-4bf9-af8e-77961ba1b58c",
+      "publicSlug": "houseplus-solar-panel-100w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-panel-100w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-panel-100w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/products-solar-panel-100w.jpg",
+      "sourceBytes": 4518566,
+      "sourceETag": "113e56f472658ef7042d44617d7cac21",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/71cebd48-d1c1-4bf9-af8e-77961ba1b58c/products-solar-panel-100w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "594fe17872c19cf889cae490b4267436e0021d02dec5e48032d199b2a9aba428"
+    },
+    {
+      "assetId": "735c5115-bf87-4cf8-bbc8-5b5e6472e290",
+      "publicSlug": "houseplus-articles-electronics-electronics-charger-adapter-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-charger-adapter-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/735c5115-bf87-4cf8-bbc8-5b5e6472e290/articles-electronics-electronics-charger-adapter.jpg",
+      "sourceBytes": 3977148,
+      "sourceETag": "dc8c7f140a200bbf3e42c67c9fe2741d",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/735c5115-bf87-4cf8-bbc8-5b5e6472e290/articles-electronics-electronics-charger-adapter.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0d94ee8131bca6719603dcea1e402467fa4556b07a442b4c5aea8bdbd5ed1ff7"
+    },
+    {
+      "assetId": "7580d6b8-f9d3-43b7-9d1f-1ad415061320",
+      "publicSlug": "houseplus-articles-covers-solar-panel-wholesale-price-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-panel-wholesale-price-guide-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-panel-wholesale-price-guide-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/7580d6b8-f9d3-43b7-9d1f-1ad415061320/articles-covers-solar-panel-wholesale-price-guide.jpg",
+      "sourceBytes": 233887,
+      "sourceETag": "f3bd6144b48580c2d7e6d50134511b61",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7580d6b8-f9d3-43b7-9d1f-1ad415061320/articles-covers-solar-panel-wholesale-price-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "04ad005e5e3410967e1786acb8ade64dcc809289cb70797c07b7aef4ee12cf42"
+    },
+    {
+      "assetId": "78648eac-89d5-4571-a9c2-2aad26b4d6c6",
+      "publicSlug": "houseplus-portable-ssd-1tb-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-portable-ssd-1tb-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-portable-ssd-1tb-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/78648eac-89d5-4571-a9c2-2aad26b4d6c6/products-portable-ssd-1tb.jpg",
+      "sourceBytes": 3230242,
+      "sourceETag": "cb8be089c0170db1b042fd577fed57ea",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/78648eac-89d5-4571-a9c2-2aad26b4d6c6/products-portable-ssd-1tb.jpg",
+      "status": "copied_and_verified",
+      "sha256": "2a7bb230c1640a6799145b4de8691d2bf8dedb88b450460eb7c8ca4110fa5cf5"
+    },
+    {
+      "assetId": "793ae24c-c7ee-453e-ab2c-038d0a20e818",
+      "publicSlug": "houseplus-air-fryer-5-8l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-5-8l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-5-8l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/793ae24c-c7ee-453e-ab2c-038d0a20e818/products-air-fryer-5-8l.jpg",
+      "sourceBytes": 3773399,
+      "sourceETag": "c77e2031f8c26d31870af74d3445cbd5",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/793ae24c-c7ee-453e-ab2c-038d0a20e818/products-air-fryer-5-8l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "b5cb441e4fc529ee3ebd3bcb3d62c9e47a4d0d8d4a98cd3c2ba923ac02366201"
+    },
+    {
+      "assetId": "7af04ae5-30e2-40cd-942f-1831b4c6472a",
+      "publicSlug": "houseplus-articles-appliances-air-conditioner-2026-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-air-conditioner-2026-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/7af04ae5-30e2-40cd-942f-1831b4c6472a/articles-appliances-air-conditioner-2026.jpg",
+      "sourceBytes": 4666904,
+      "sourceETag": "4c36ae33a6d366217e16a5e3440ee062",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7af04ae5-30e2-40cd-942f-1831b4c6472a/articles-appliances-air-conditioner-2026.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3988e087ca07b9ad8d5cda8244624de45f3539679ae6e4aef608fd769d72f22d"
+    },
+    {
+      "assetId": "7c1147cf-92c3-45b1-b683-1e7070703c89",
+      "publicSlug": "houseplus-electric-kettle-1-5l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-electric-kettle-1-5l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-electric-kettle-1-5l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/7c1147cf-92c3-45b1-b683-1e7070703c89/products-electric-kettle-1-5l.jpg",
+      "sourceBytes": 3965129,
+      "sourceETag": "8d7f5fb94c929c63a49e6fcc3525606e",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7c1147cf-92c3-45b1-b683-1e7070703c89/products-electric-kettle-1-5l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0e1656107919a9ac9a6c8552c73e5bfb99f48151f9438688993833dd335dc4d8"
+    },
+    {
+      "assetId": "7d3e4426-84de-441e-b9ce-86b385f4c0ff",
+      "publicSlug": "houseplus-site-careers-growth-workshop",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-careers-growth-workshop/"
+      ],
+      "sourceKey": "ingest/2026-08-12/7d3e4426-84de-441e-b9ce-86b385f4c0ff/site-careers-growth-workshop.jpg",
+      "sourceBytes": 4860823,
+      "sourceETag": "cccb7478ae8424b368b4db069c1fb94e",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7d3e4426-84de-441e-b9ce-86b385f4c0ff/site-careers-growth-workshop.jpg",
+      "status": "copied_and_verified",
+      "sha256": "2d85f75e8b440b3904507c4dc38dd5994d4c7766d2a095a7030943f697e63b5a"
+    },
+    {
+      "assetId": "7e48bd2c-3570-4527-9af3-78b81731e16d",
+      "publicSlug": "houseplus-articles-electronics-electronics-smart-home-device-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-smart-home-device-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/7e48bd2c-3570-4527-9af3-78b81731e16d/articles-electronics-electronics-smart-home-device.jpg",
+      "sourceBytes": 68076,
+      "sourceETag": "440e6acdcf77deec61a5a5bb971285f4",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7e48bd2c-3570-4527-9af3-78b81731e16d/articles-electronics-electronics-smart-home-device.jpg",
+      "status": "copied_and_verified",
+      "sha256": "74016d27731856aede42f00fc1cf76e3e2b371c20ae48d2d000dd2fd00a47a6c"
+    },
+    {
+      "assetId": "7f712b0f-2530-48e8-866b-d70eb0b3bd75",
+      "publicSlug": "houseplus-carousel-houseplus-3c-electronics-hero",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/"
+      ],
+      "sourceKey": "ingest/2026-08-12/7f712b0f-2530-48e8-866b-d70eb0b3bd75/carousel-houseplus-3c-electronics-hero.jpg",
+      "sourceBytes": 4048067,
+      "sourceETag": "57826cad09f80474f48afbd95af4cde7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7f712b0f-2530-48e8-866b-d70eb0b3bd75/carousel-houseplus-3c-electronics-hero.jpg",
+      "status": "copied_and_verified",
+      "sha256": "42907406c14d2a6b3c188c4fc315a139dede34572000878bbbbd79cf1b690409"
+    },
+    {
+      "assetId": "7fc48e49-d6e0-4e28-beaf-4ec1764492ae",
+      "publicSlug": "houseplus-microwave-oven-25l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-microwave-oven-25l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-microwave-oven-25l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/7fc48e49-d6e0-4e28-beaf-4ec1764492ae/products-microwave-oven-25l.jpg",
+      "sourceBytes": 186170,
+      "sourceETag": "775fac8da36a53505dbfde6ebb228f13",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/7fc48e49-d6e0-4e28-beaf-4ec1764492ae/products-microwave-oven-25l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3ae82035dbba5d67b4bee3d62df31f34c38c92945efe0ac8c6fe725e58402075"
+    },
+    {
+      "assetId": "832688c7-3f11-4854-a56a-04f042603449",
+      "publicSlug": "houseplus-articles-covers-kitchen-appliances-wholesale-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-kitchen-appliances-wholesale-guide-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-kitchen-appliances-wholesale-guide-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/832688c7-3f11-4854-a56a-04f042603449/articles-covers-kitchen-appliances-wholesale-guide.jpg",
+      "sourceBytes": 131906,
+      "sourceETag": "7e9f73c3c55314a31b15bcedeced91ff",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/832688c7-3f11-4854-a56a-04f042603449/articles-covers-kitchen-appliances-wholesale-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "c624fe809b0588ea07ad24eb7251e44c68559d3ee6921f63fca00bfeaec3a605"
+    },
+    {
+      "assetId": "850363dd-6ab1-471f-a289-931f0c6387bc",
+      "publicSlug": "houseplus-usb-c-cable-2m-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-usb-c-cable-2m-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-usb-c-cable-2m-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/850363dd-6ab1-471f-a289-931f0c6387bc/products-usb-c-cable-2m.jpg",
+      "sourceBytes": 4257053,
+      "sourceETag": "7e46381e045f07c946a87e79157a1e6e",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/850363dd-6ab1-471f-a289-931f0c6387bc/products-usb-c-cable-2m.jpg",
+      "status": "copied_and_verified",
+      "sha256": "aff887d56ce9a255b0eaf184fd1f896cc1400c52df364ea2f0530266d039ca42"
+    },
+    {
+      "assetId": "886e83cd-9f61-4f90-a1e7-5d8e2c290394",
+      "publicSlug": "houseplus-team-team-innovation-culture",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-team-team-innovation-culture/"
+      ],
+      "sourceKey": "ingest/2026-08-12/886e83cd-9f61-4f90-a1e7-5d8e2c290394/team-team-innovation-culture.jpg",
+      "sourceBytes": 292297,
+      "sourceETag": "0dfdc47087d84d1d590f9ae1a0f44a03",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/886e83cd-9f61-4f90-a1e7-5d8e2c290394/team-team-innovation-culture.jpg",
+      "status": "copied_and_verified",
+      "sha256": "1f56abacdd4bae62955b81664ad853d9041b5fed21bf33b1b64efc7716f0566f"
+    },
+    {
+      "assetId": "8cb972ad-ec3b-42b9-8e85-a4a2af146841",
+      "publicSlug": "houseplus-range-hood-900mm-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-900mm-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-900mm-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/8cb972ad-ec3b-42b9-8e85-a4a2af146841/products-range-hood-900mm.jpg",
+      "sourceBytes": 251709,
+      "sourceETag": "30f250690f7a104510b6460569ed6642",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/8cb972ad-ec3b-42b9-8e85-a4a2af146841/products-range-hood-900mm.jpg",
+      "status": "copied_and_verified",
+      "sha256": "6ccc124600bb44f6536358043db5d13cb0f58211a46e9f08b768e9c2c29cbd67"
+    },
+    {
+      "assetId": "8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d",
+      "publicSlug": "houseplus-solar-panel-1-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-panel-1-wholesale/"
+      ],
+      "sourceKey": "ingest/2026-08-12/8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d/products-solar-panel-1.jpg",
+      "sourceBytes": 125972,
+      "sourceETag": "f12dd90e0c70f414fa3f2a0fa19c87a6",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/8d0b7de0-2348-49f6-8ac6-b41fd42d0e6d/products-solar-panel-1.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ac393507326a7d15bc5fdc4b8a19d2015b9323f9187c95aea7438d1d8f8c01fd"
+    },
+    {
+      "assetId": "8d271900-f7f0-4415-82fe-e0fdaa9875c6",
+      "publicSlug": "houseplus-power-bank-60w-pd-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-power-bank-60w-pd-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-power-bank-60w-pd-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/8d271900-f7f0-4415-82fe-e0fdaa9875c6/products-power-bank-60w-pd.jpg",
+      "sourceBytes": 3243654,
+      "sourceETag": "98789872a5e9a92faf4d4521c7727ca8",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/8d271900-f7f0-4415-82fe-e0fdaa9875c6/products-power-bank-60w-pd.jpg",
+      "status": "copied_and_verified",
+      "sha256": "cb1f1f0a81284a8b7e4b2cd14ea030860a351c10dbf570b8a550dc4ca3aba8af"
+    },
+    {
+      "assetId": "8df3552b-495a-4f26-9292-197f1b592597",
+      "publicSlug": "houseplus-articles-covers-2026-appliances-market-update-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-appliances-market-update-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-appliances-market-update-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/8df3552b-495a-4f26-9292-197f1b592597/articles-covers-2026-appliances-market-update.jpg",
+      "sourceBytes": 166922,
+      "sourceETag": "46662a80d6281f99f9e950234da52172",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/8df3552b-495a-4f26-9292-197f1b592597/articles-covers-2026-appliances-market-update.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0be40d913d2f8010c96acfc7b64fbb133713be20cb5edf079a8c93dc85e11992"
+    },
+    {
+      "assetId": "8f7da832-0947-4d91-ab42-fb64fce87b8d",
+      "publicSlug": "houseplus-pure-sine-inverter-2000w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-pure-sine-inverter-2000w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-pure-sine-inverter-2000w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/8f7da832-0947-4d91-ab42-fb64fce87b8d/products-pure-sine-inverter-2000w.jpg",
+      "sourceBytes": 3856224,
+      "sourceETag": "d657700cbf685703d1c07d5c1944f274",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/8f7da832-0947-4d91-ab42-fb64fce87b8d/products-pure-sine-inverter-2000w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "572599b07caa56914d8b3aaa71d8c6a95624db35bbef4e9bcb10a3afbd0abdfb"
+    },
+    {
+      "assetId": "8f842a06-7161-4941-a88b-1bc165c2bb6d",
+      "publicSlug": "houseplus-articles-covers-mono-vs-poly-vs-perc-solar-panels-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-mono-vs-poly-vs-perc-solar-panels-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-mono-vs-poly-vs-perc-solar-panels-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/8f842a06-7161-4941-a88b-1bc165c2bb6d/articles-covers-mono-vs-poly-vs-perc-solar-panels.jpg",
+      "sourceBytes": 240217,
+      "sourceETag": "0279778bb48c74703df52dc0f55e0446",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/8f842a06-7161-4941-a88b-1bc165c2bb6d/articles-covers-mono-vs-poly-vs-perc-solar-panels.jpg",
+      "status": "copied_and_verified",
+      "sha256": "544949e93155f9f272136482568202416596b766bfcc5728384ecd85feb70720"
+    },
+    {
+      "assetId": "93c9172f-bc50-400b-b347-4c212f7b2137",
+      "publicSlug": "houseplus-factory-factory-appliance-qc-lab",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-factory-factory-appliance-qc-lab/"
+      ],
+      "sourceKey": "ingest/2026-08-12/93c9172f-bc50-400b-b347-4c212f7b2137/factory-factory-appliance-qc-lab.jpg",
+      "sourceBytes": 4591497,
+      "sourceETag": "e034d09dcf876d5ec71aa018d944b40e",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/93c9172f-bc50-400b-b347-4c212f7b2137/factory-factory-appliance-qc-lab.jpg",
+      "status": "copied_and_verified",
+      "sha256": "4a7b8d78a9714c6fd803deb9e1a817573984d11e43366ae9a4fc25d8e4e41282"
+    },
+    {
+      "assetId": "93e131d6-97cb-4ef4-a371-909061a46afc",
+      "publicSlug": "houseplus-team-team-quality-engineering",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-team-team-quality-engineering/"
+      ],
+      "sourceKey": "ingest/2026-08-12/93e131d6-97cb-4ef4-a371-909061a46afc/team-team-quality-engineering.jpg",
+      "sourceBytes": 262103,
+      "sourceETag": "265751f58a9bb5012cbbc29d480f6be7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/93e131d6-97cb-4ef4-a371-909061a46afc/team-team-quality-engineering.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ae65c1039fa78c1cdae8c992fa563e8afbbf4e9655bbbc5b2bb5e28952260ff1"
+    },
+    {
+      "assetId": "94c9de7e-f180-43fa-80a3-7d7b335c9ffd",
+      "publicSlug": "houseplus-site-global-world-map-markets",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-global-world-map-markets/"
+      ],
+      "sourceKey": "ingest/2026-08-12/94c9de7e-f180-43fa-80a3-7d7b335c9ffd/site-global-world-map-markets.jpg",
+      "sourceBytes": 168292,
+      "sourceETag": "950600e1520810d70749580050a2e1eb",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/94c9de7e-f180-43fa-80a3-7d7b335c9ffd/site-global-world-map-markets.jpg",
+      "status": "copied_and_verified",
+      "sha256": "de5e7c4263f52422ed12be47137e7acc6f4ff59f319bd6590d32ad0e2517fd9f"
+    },
+    {
+      "assetId": "951527a9-22ef-4ef3-9dfb-29c78bd9e99e",
+      "publicSlug": "houseplus-factory-assembly-line",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-factory-assembly-line/"
+      ],
+      "sourceKey": "ingest/2026-08-12/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/factory-assembly-line.jpg",
+      "sourceBytes": 4767409,
+      "sourceETag": "2ce86ea909050c14934857c6bf018ea7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/951527a9-22ef-4ef3-9dfb-29c78bd9e99e/factory-assembly-line.jpg",
+      "status": "copied_and_verified",
+      "sha256": "dd23b5d4f30a5fc9903027f3d33d61e8d44a3520d32f712c42bf4cebe1880f72"
+    },
+    {
+      "assetId": "9547b8fb-b6d7-488c-95c3-a156e7c1a937",
+      "publicSlug": "houseplus-articles-covers-ce-certification-solar-panels-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-ce-certification-solar-panels-guide-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-ce-certification-solar-panels-guide-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/9547b8fb-b6d7-488c-95c3-a156e7c1a937/articles-covers-ce-certification-solar-panels-guide.jpg",
+      "sourceBytes": 143270,
+      "sourceETag": "ec83c4921d03523bb1bcdd85e8c8433c",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/9547b8fb-b6d7-488c-95c3-a156e7c1a937/articles-covers-ce-certification-solar-panels-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "6c4f094ee3e0283475f96839a9fa1e4070ade0181f8c1b829ed2b0441fbf282a"
+    },
+    {
+      "assetId": "95eda0e9-0acb-4eed-a7de-13252c1bd78d",
+      "publicSlug": "houseplus-about-houseplus-automated-manufacturing-facility",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-about-houseplus-automated-manufacturing-facility/"
+      ],
+      "sourceKey": "ingest/2026-08-12/95eda0e9-0acb-4eed-a7de-13252c1bd78d/about-houseplus-automated-manufacturing-facility.jpg",
+      "sourceBytes": 460199,
+      "sourceETag": "4914e803eebe420a2f6c96d43bf3b719",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/95eda0e9-0acb-4eed-a7de-13252c1bd78d/about-houseplus-automated-manufacturing-facility.jpg",
+      "status": "copied_and_verified",
+      "sha256": "b48f5552cefe03940b441756f7560b0b0ff7a65ecca76c0a79b11e48059ca66c"
+    },
+    {
+      "assetId": "97865882-af5c-41fc-9b64-e8ddcc5d3b1c",
+      "publicSlug": "houseplus-solar-panel-500w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/products-solar-panel-500w.jpg",
+      "sourceBytes": 3942628,
+      "sourceETag": "eb57e01d00f8351b92a0bd9b3f0e2553",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/97865882-af5c-41fc-9b64-e8ddcc5d3b1c/products-solar-panel-500w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "62f583ecd844ad38cba2ac78ddd51093f6bce70a6a4b8c85f337cfb930bd4dea"
+    },
+    {
+      "assetId": "9819887f-5fc5-429b-a91c-64734dc84449",
+      "publicSlug": "houseplus-gas-stove-freestanding-oven-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-freestanding-oven-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-freestanding-oven-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/9819887f-5fc5-429b-a91c-64734dc84449/products-gas-stove-freestanding-oven.jpg",
+      "sourceBytes": 246649,
+      "sourceETag": "3106cc6fb903f3b175b5d79a907f349d",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/9819887f-5fc5-429b-a91c-64734dc84449/products-gas-stove-freestanding-oven.jpg",
+      "status": "copied_and_verified",
+      "sha256": "16ff884c49103b5fc7dad3240cd102c6ecd99158e5d25ed7ad358db52088655f"
+    },
+    {
+      "assetId": "99546983-391c-4c1d-8843-863643d0bf18",
+      "publicSlug": "houseplus-articles-covers-oem-odm-manufacturing-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-oem-odm-manufacturing-guide-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/99546983-391c-4c1d-8843-863643d0bf18/articles-covers-oem-odm-manufacturing-guide.jpg",
+      "sourceBytes": 151892,
+      "sourceETag": "0222f77f7a6ad35148bbf159afb1cc0a",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/99546983-391c-4c1d-8843-863643d0bf18/articles-covers-oem-odm-manufacturing-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "d8fbb07f597e41723a8c83b849f1ca7030c0f0d67222f7f981ba62b719252c94"
+    },
+    {
+      "assetId": "9c25f9ff-fae9-4d82-8263-8f9a41f4239d",
+      "publicSlug": "houseplus-articles-covers-legacy-future-solar-energy-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-future-solar-energy-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/9c25f9ff-fae9-4d82-8263-8f9a41f4239d/articles-covers-legacy-future-solar-energy.jpg",
+      "sourceBytes": 272981,
+      "sourceETag": "99be99ef5d7b9ae8a744325f038b183b",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/9c25f9ff-fae9-4d82-8263-8f9a41f4239d/articles-covers-legacy-future-solar-energy.jpg",
+      "status": "copied_and_verified",
+      "sha256": "310531ae562524d2cd9d1b24e7dd458e283be7026c2cc9d372d78c37ff3cecc5"
+    },
+    {
+      "assetId": "9e5befe4-ccd9-4354-a66c-0c3a4706adc0",
+      "publicSlug": "houseplus-range-hood-island-900mm-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-island-900mm-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-range-hood-island-900mm-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/9e5befe4-ccd9-4354-a66c-0c3a4706adc0/products-range-hood-island-900mm.jpg",
+      "sourceBytes": 191960,
+      "sourceETag": "9a8f3fb2bab28e7cd9c14584102d7ef8",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/9e5befe4-ccd9-4354-a66c-0c3a4706adc0/products-range-hood-island-900mm.jpg",
+      "status": "copied_and_verified",
+      "sha256": "56518e048f8a0089a957a245a7f54cf09fe1da7af6d316f7517dedb21603b22f"
+    },
+    {
+      "assetId": "a01d9b03-6265-4e9e-9500-edb50c289152",
+      "publicSlug": "houseplus-articles-covers-appliance-energy-efficiency-vs-actual-consumption-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-appliance-energy-efficiency-vs-actual-consumption-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-appliance-energy-efficiency-vs-actual-consumption-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/a01d9b03-6265-4e9e-9500-edb50c289152/articles-covers-appliance-energy-efficiency-vs-actual-consumption.jpg",
+      "sourceBytes": 148548,
+      "sourceETag": "a792ee8c9f784c02c8a230e68fed8243",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/a01d9b03-6265-4e9e-9500-edb50c289152/articles-covers-appliance-energy-efficiency-vs-actual-consumption.jpg",
+      "status": "copied_and_verified",
+      "sha256": "665ea7aa05d04366334be61146c4ff67b31a55d9f1b4d60847ee13f048cc6607"
+    },
+    {
+      "assetId": "a01ff960-1aac-4a09-8fe7-caa1116be031",
+      "publicSlug": "houseplus-flexible-solar-panel-400w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-flexible-solar-panel-400w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-flexible-solar-panel-400w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/a01ff960-1aac-4a09-8fe7-caa1116be031/products-flexible-solar-panel-400w.jpg",
+      "sourceBytes": 4875728,
+      "sourceETag": "524d4e24638ab31b520b6f906bc58fdb",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/a01ff960-1aac-4a09-8fe7-caa1116be031/products-flexible-solar-panel-400w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "6acadbb5e4311833c4c5ab4b80e944f188db8405fe55a200aa61024de698a37f"
+    },
+    {
+      "assetId": "a6a318fa-4b78-4907-af53-f77a113ff183",
+      "publicSlug": "houseplus-induction-hob-4-zone-built-in-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-induction-hob-4-zone-built-in-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-induction-hob-4-zone-built-in-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/a6a318fa-4b78-4907-af53-f77a113ff183/products-induction-hob-4-zone-built-in.jpg",
+      "sourceBytes": 146096,
+      "sourceETag": "fd48dbe12e5c4e3cd2767bd0c19d922c",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/a6a318fa-4b78-4907-af53-f77a113ff183/products-induction-hob-4-zone-built-in.jpg",
+      "status": "copied_and_verified",
+      "sha256": "a47ad1ce5829cdcfd03b1b52ae4897cb8e31644ccc5831858c86c93d466987f2"
+    },
+    {
+      "assetId": "a70ffc8f-c63c-45bc-949e-6ff11431097d",
+      "publicSlug": "houseplus-articles-covers-legacy-solar-energy-storage-solutions-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-solar-energy-storage-solutions-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/a70ffc8f-c63c-45bc-949e-6ff11431097d/articles-covers-legacy-solar-energy-storage-solutions.jpg",
+      "sourceBytes": 218401,
+      "sourceETag": "00de347180019342e165a3667b06c7b4",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/a70ffc8f-c63c-45bc-949e-6ff11431097d/articles-covers-legacy-solar-energy-storage-solutions.jpg",
+      "status": "copied_and_verified",
+      "sha256": "d984f89c4accd58af9851cbc1785fa2652db47b4e6a6369a48bd9aaa98e938ab"
+    },
+    {
+      "assetId": "ab54c494-e09b-4e89-9b9e-afbd1c932c16",
+      "publicSlug": "houseplus-articles-covers-solar-storage-efficiency-optimization-guide-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-storage-efficiency-optimization-guide-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-solar-storage-efficiency-optimization-guide-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/ab54c494-e09b-4e89-9b9e-afbd1c932c16/articles-covers-solar-storage-efficiency-optimization-guide.jpg",
+      "sourceBytes": 235690,
+      "sourceETag": "b18300ad1cfe689cec4822e225ccdacd",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/ab54c494-e09b-4e89-9b9e-afbd1c932c16/articles-covers-solar-storage-efficiency-optimization-guide.jpg",
+      "status": "copied_and_verified",
+      "sha256": "41a86ba45c21595b16bcf658c099820d191d43416a8ab11b5204948598b40255"
+    },
+    {
+      "assetId": "ac664de3-5b8c-46cb-9afd-c392e80c6130",
+      "publicSlug": "houseplus-induction-cooktop-2000w-built-in-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-induction-cooktop-2000w-built-in-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-induction-cooktop-2000w-built-in-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/ac664de3-5b8c-46cb-9afd-c392e80c6130/products-induction-cooktop-2000w-built-in.jpg",
+      "sourceBytes": 115076,
+      "sourceETag": "86a34ad97ead3dd5ad067fb9488039be",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/ac664de3-5b8c-46cb-9afd-c392e80c6130/products-induction-cooktop-2000w-built-in.jpg",
+      "status": "copied_and_verified",
+      "sha256": "b2ecf8d5e9ca0d63cd5134df0e4496a54d5692410b2afbd5dfdd70fb73ae2cc7"
+    },
+    {
+      "assetId": "ac8011c3-e195-40e5-9259-1314af4c699a",
+      "publicSlug": "houseplus-portable-induction-cooker-2000w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-portable-induction-cooker-2000w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-portable-induction-cooker-2000w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/ac8011c3-e195-40e5-9259-1314af4c699a/products-portable-induction-cooker-2000w.jpg",
+      "sourceBytes": 146149,
+      "sourceETag": "c0d2eb86a76ca7c7e860aa7c1fea9ba9",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/ac8011c3-e195-40e5-9259-1314af4c699a/products-portable-induction-cooker-2000w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "6eb4b08f0587118817ddfc6ec013c34770a5026c3e1ebd4295d5a1d31060a7c1"
+    },
+    {
+      "assetId": "b03e71c6-1ec9-4c4e-aabe-93a692944a74",
+      "publicSlug": "houseplus-cassette-gas-stove-portable-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-cassette-gas-stove-portable-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-cassette-gas-stove-portable-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/b03e71c6-1ec9-4c4e-aabe-93a692944a74/products-cassette-gas-stove-portable.jpg",
+      "sourceBytes": 250825,
+      "sourceETag": "f5ad4e8d7d66a667f4799a1772955dac",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/b03e71c6-1ec9-4c4e-aabe-93a692944a74/products-cassette-gas-stove-portable.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0369655e6a26933b2569de5a1b53b162f2e536d7f58e2bb173c276f35937937d"
+    },
+    {
+      "assetId": "b06788f8-3e47-4d09-a2f1-ab9adb0c60e8",
+      "publicSlug": "houseplus-built-in-gas-oven-60l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-built-in-gas-oven-60l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-built-in-gas-oven-60l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/products-built-in-gas-oven-60l.jpg",
+      "sourceBytes": 4233957,
+      "sourceETag": "5854aa47ce44636cade18d54f66b8ffb",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/b06788f8-3e47-4d09-a2f1-ab9adb0c60e8/products-built-in-gas-oven-60l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3a8ef45b95788da1897936a91415d1dda905a3c14dfa33957bf4f93427750611"
+    },
+    {
+      "assetId": "b159a3a6-85d6-490f-8bbb-a753cf220c8c",
+      "publicSlug": "houseplus-apple-touch-icon",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-apple-touch-icon/"
+      ],
+      "sourceKey": "ingest/2026-08-12/b159a3a6-85d6-490f-8bbb-a753cf220c8c/apple-touch-icon.png",
+      "sourceBytes": 12183,
+      "sourceETag": "7f43558117b8a56ed831373faddcb9d2",
+      "sourceContentType": "image/png",
+      "targetKey": "media-live-v1/objects/b159a3a6-85d6-490f-8bbb-a753cf220c8c/apple-touch-icon.png",
+      "status": "copied_and_verified",
+      "sha256": "4b54324d2885945b8bc0860af832f2ef894657cbbf5ed8ef9f850ed67a78ce96"
+    },
+    {
+      "assetId": "b15c481b-032b-419d-9a0d-65aae514a8b5",
+      "publicSlug": "houseplus-electric-blender-1500w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-electric-blender-1500w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-electric-blender-1500w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/b15c481b-032b-419d-9a0d-65aae514a8b5/products-electric-blender-1500w.jpg",
+      "sourceBytes": 182548,
+      "sourceETag": "cb55f06e8d99a89a502d298263adac74",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/b15c481b-032b-419d-9a0d-65aae514a8b5/products-electric-blender-1500w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "e0fdcc9ab887f9d2de809fe9c3f801f129631b85b54884b1b203ad95e096154a"
+    },
+    {
+      "assetId": "b27365bb-fd56-47d0-9e87-437f365e60b0",
+      "publicSlug": "houseplus-articles-covers-legacy-evolution-3c-electronics-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-evolution-3c-electronics-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/b27365bb-fd56-47d0-9e87-437f365e60b0/articles-covers-legacy-evolution-3c-electronics.jpg",
+      "sourceBytes": 127849,
+      "sourceETag": "28dac52358d893f61dec7c53eb142396",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/b27365bb-fd56-47d0-9e87-437f365e60b0/articles-covers-legacy-evolution-3c-electronics.jpg",
+      "status": "copied_and_verified",
+      "sha256": "e65d2683bb23c8c2e6790fe95e806444ec0c9a9022a6934e5e4c4c13830cda42"
+    },
+    {
+      "assetId": "b668322c-a0df-4bba-be3a-dbc8f1636c38",
+      "publicSlug": "houseplus-gas-water-heater-12l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-water-heater-12l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-water-heater-12l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/b668322c-a0df-4bba-be3a-dbc8f1636c38/products-gas-water-heater-12l.jpg",
+      "sourceBytes": 116393,
+      "sourceETag": "39c2643696b28ef239872da5a0534264",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/b668322c-a0df-4bba-be3a-dbc8f1636c38/products-gas-water-heater-12l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "1e2f4a08cd94e96aec662d0e153fd09c6c8d2c5d601900a6e76016d8e6bf5faa"
+    },
+    {
+      "assetId": "b7dbffd2-f52e-42bc-b0c2-43329ca68682",
+      "publicSlug": "houseplus-carousel-houseplus-home-appliances-hero",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/"
+      ],
+      "sourceKey": "ingest/2026-08-12/b7dbffd2-f52e-42bc-b0c2-43329ca68682/carousel-houseplus-home-appliances-hero.jpg",
+      "sourceBytes": 4375233,
+      "sourceETag": "d8a051247afd981d99485f8ba3db6c02",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/b7dbffd2-f52e-42bc-b0c2-43329ca68682/carousel-houseplus-home-appliances-hero.jpg",
+      "status": "copied_and_verified",
+      "sha256": "f869a3fdd5679ae5690119b48608bf7708083f2bafc2a8e199f75ae57afacb92"
+    },
+    {
+      "assetId": "bbe76ab7-5027-4c3b-b738-860d9dbf7841",
+      "publicSlug": "houseplus-air-fryer-8l-digital-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-8l-digital-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-8l-digital-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/bbe76ab7-5027-4c3b-b738-860d9dbf7841/products-air-fryer-8l-digital.jpg",
+      "sourceBytes": 173631,
+      "sourceETag": "c96cfa523a35646f6f630395f8e6255c",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/bbe76ab7-5027-4c3b-b738-860d9dbf7841/products-air-fryer-8l-digital.jpg",
+      "status": "copied_and_verified",
+      "sha256": "4556f3770c9cc7996652e2ee3c5e3e6d60675cf68b6198b765ad2251dee7dfae"
+    },
+    {
+      "assetId": "bef3aa36-c9c7-4043-93d0-0453b53143c4",
+      "publicSlug": "houseplus-articles-appliances-home-appliance-kitchen-modern-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-kitchen-modern-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-kitchen-modern-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/bef3aa36-c9c7-4043-93d0-0453b53143c4/articles-appliances-home-appliance-kitchen-modern.jpg",
+      "sourceBytes": 104123,
+      "sourceETag": "0406f84739416f395e872d7b11c48c51",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/bef3aa36-c9c7-4043-93d0-0453b53143c4/articles-appliances-home-appliance-kitchen-modern.jpg",
+      "status": "copied_and_verified",
+      "sha256": "5c4693fee96551ec38cf65214da6881f3c1d5ae1bc67510eaec5af6ddb4382ed"
+    },
+    {
+      "assetId": "c183162c-9a62-4617-9be9-003d487f9644",
+      "publicSlug": "houseplus-usb-c-cable-100w-5a-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-usb-c-cable-100w-5a-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-usb-c-cable-100w-5a-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/c183162c-9a62-4617-9be9-003d487f9644/products-usb-c-cable-100w-5a.jpg",
+      "sourceBytes": 3968617,
+      "sourceETag": "231f761db28936d7cd5966c2de4d185d",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/c183162c-9a62-4617-9be9-003d487f9644/products-usb-c-cable-100w-5a.jpg",
+      "status": "copied_and_verified",
+      "sha256": "df8222dddd0e1b8d856d4bcf4d8150f81e0e33b2e635a081041f723aef625750"
+    },
+    {
+      "assetId": "c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2",
+      "publicSlug": "houseplus-solar-power-bank-20000mah-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-power-bank-20000mah-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-power-bank-20000mah-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/products-solar-power-bank-20000mah.jpg",
+      "sourceBytes": 3221694,
+      "sourceETag": "c83c68c8dcc66d414a1c394c1ee124d6",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/c1b3a6b6-7a5d-4147-9e05-63ff9e8793c2/products-solar-power-bank-20000mah.jpg",
+      "status": "copied_and_verified",
+      "sha256": "1760295257a4be31d1458628aefd9231b3a733eef32d4e77baec185d23eabfb1"
+    },
+    {
+      "assetId": "c2dbf35c-a0a1-4743-be72-7268fa5db61e",
+      "publicSlug": "houseplus-air-fryer-12l-rotisserie-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-12l-rotisserie-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-12l-rotisserie-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/c2dbf35c-a0a1-4743-be72-7268fa5db61e/products-air-fryer-12l-rotisserie.jpg",
+      "sourceBytes": 322292,
+      "sourceETag": "7e63962f9a510de62e05839fb2a3259a",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/c2dbf35c-a0a1-4743-be72-7268fa5db61e/products-air-fryer-12l-rotisserie.jpg",
+      "status": "copied_and_verified",
+      "sha256": "25bf4618a5ea134c9a2d57941fa25c370abd391dd7cadb2876cbef1fca89dc92"
+    },
+    {
+      "assetId": "c41b8c7f-f034-49c3-93d4-b4499b6b2dcd",
+      "publicSlug": "houseplus-articles-covers-legacy-smart-home-appliances-connected-living-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-legacy-smart-home-appliances-connected-living-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/c41b8c7f-f034-49c3-93d4-b4499b6b2dcd/articles-covers-legacy-smart-home-appliances-connected-living.jpg",
+      "sourceBytes": 210763,
+      "sourceETag": "7055d9ce99d0ef643bdc48ad68f443cf",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/c41b8c7f-f034-49c3-93d4-b4499b6b2dcd/articles-covers-legacy-smart-home-appliances-connected-living.jpg",
+      "status": "copied_and_verified",
+      "sha256": "a896760a2f44eb38b2d4cd39e2c89ad7aeecf3075547d18b62b1768ad1c5ecf2"
+    },
+    {
+      "assetId": "ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8",
+      "publicSlug": "houseplus-factory-production-line",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-factory-production-line/",
+        "https://images.houseplus-ch.com/media/houseplus-factory-production-line/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/factory-production-line.jpg",
+      "sourceBytes": 4893956,
+      "sourceETag": "b0a38950a1d2ebedbddb36662a27dded",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/ca450b7a-5f1a-46e9-85b4-ff523b4b1bb8/factory-production-line.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3c720bb6cfe0e46167d1fa0a550be6c5e6b22dda1ad7f7a2d1dcc023fd59b2b0"
+    },
+    {
+      "assetId": "cacd6cd2-a0a8-425d-b922-7dacb07bd53f",
+      "publicSlug": "houseplus-gas-stove-2-burner-portable-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-2-burner-portable-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-2-burner-portable-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/cacd6cd2-a0a8-425d-b922-7dacb07bd53f/products-gas-stove-2-burner-portable.jpg",
+      "sourceBytes": 238881,
+      "sourceETag": "93e8383c6c3e9ee1936abee8ff725543",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/cacd6cd2-a0a8-425d-b922-7dacb07bd53f/products-gas-stove-2-burner-portable.jpg",
+      "status": "copied_and_verified",
+      "sha256": "0fa5672b8fa2f09349b261f15403c289a69511d87eb62d80cc28f8334b955a5a"
+    },
+    {
+      "assetId": "cc93e128-6181-4854-928f-c6deaf8fe983",
+      "publicSlug": "houseplus-gas-stove-4-burner-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-4-burner-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-4-burner-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/cc93e128-6181-4854-928f-c6deaf8fe983/products-gas-stove-4-burner.jpg",
+      "sourceBytes": 297626,
+      "sourceETag": "1e4fd1c983246eeb2622c5b03790ab6f",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/cc93e128-6181-4854-928f-c6deaf8fe983/products-gas-stove-4-burner.jpg",
+      "status": "copied_and_verified",
+      "sha256": "7e30025ae3c345cf73c5ca341e258497ce9633881990de4dc4bae009ecbe5465"
+    },
+    {
+      "assetId": "d3642fb5-d016-4cec-aa3a-e9ab2326050a",
+      "publicSlug": "houseplus-articles-service-factory-assembly-workers-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-service-factory-assembly-workers-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/d3642fb5-d016-4cec-aa3a-e9ab2326050a/articles-service-factory-assembly-workers.jpg",
+      "sourceBytes": 197540,
+      "sourceETag": "6d3886f7e36040605a8070d0bfd357bc",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/d3642fb5-d016-4cec-aa3a-e9ab2326050a/articles-service-factory-assembly-workers.jpg",
+      "status": "copied_and_verified",
+      "sha256": "7044916392646659d1def1c5d121b73e7bf46d61c6ff2cb07e24d45555b855e3"
+    },
+    {
+      "assetId": "d4e5da12-8183-40a8-a335-2fae5f277395",
+      "publicSlug": "houseplus-gas-stove-5-burner-wok-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-5-burner-wok-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-stove-5-burner-wok-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/d4e5da12-8183-40a8-a335-2fae5f277395/products-gas-stove-5-burner-wok.jpg",
+      "sourceBytes": 290012,
+      "sourceETag": "66dea117469e4a9a3f3c30970ad4ad0f",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/d4e5da12-8183-40a8-a335-2fae5f277395/products-gas-stove-5-burner-wok.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ec4da28e787e697daf251eccf4bd0faef6587be0880ca0fc8c119bfd1a5a225b"
+    },
+    {
+      "assetId": "d51397fe-cf8d-4660-a3e1-22dc5374710b",
+      "publicSlug": "houseplus-site-office-meeting-boardroom",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-office-meeting-boardroom/"
+      ],
+      "sourceKey": "ingest/2026-08-12/d51397fe-cf8d-4660-a3e1-22dc5374710b/site-office-meeting-boardroom.jpg",
+      "sourceBytes": 235514,
+      "sourceETag": "45fd2e93d17407fa956dfa56ae619248",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/d51397fe-cf8d-4660-a3e1-22dc5374710b/site-office-meeting-boardroom.jpg",
+      "status": "copied_and_verified",
+      "sha256": "476c7b37fa3a8fb5e1c3fbb16076487cd32378de3750a704c00765e6cc680cde"
+    },
+    {
+      "assetId": "d52528a6-ba27-4a75-9dea-a7c36c2780e7",
+      "publicSlug": "houseplus-group-logo",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-group-logo/"
+      ],
+      "sourceKey": "ingest/2026-08-12/d52528a6-ba27-4a75-9dea-a7c36c2780e7/logo.png",
+      "sourceBytes": 56073,
+      "sourceETag": "a2525cb7117021cba90fee46dc1fd871",
+      "sourceContentType": "image/png",
+      "targetKey": "media-live-v1/objects/d52528a6-ba27-4a75-9dea-a7c36c2780e7/logo.png",
+      "status": "copied_and_verified",
+      "sha256": "26fb43160057c5bbf323346f8174530c9df37a8449a527f91de7bf41e25bc1e9"
+    },
+    {
+      "assetId": "d60400d1-1ec0-49be-a8c6-b57e35fb77e5",
+      "publicSlug": "houseplus-articles-appliances-washing-machine-2026-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-washing-machine-2026-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/d60400d1-1ec0-49be-a8c6-b57e35fb77e5/articles-appliances-washing-machine-2026.jpg",
+      "sourceBytes": 4137579,
+      "sourceETag": "59a849c9394115d504cc3c9602e79632",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/d60400d1-1ec0-49be-a8c6-b57e35fb77e5/articles-appliances-washing-machine-2026.jpg",
+      "status": "copied_and_verified",
+      "sha256": "38a3217757adb75a36596c101a535bf8ec3c8b34e516ddaefb9a75968c359358"
+    },
+    {
+      "assetId": "d7e108a6-54fd-4932-b703-45f41fa68382",
+      "publicSlug": "houseplus-articles-covers-how-to-choose-wholesale-solar-panels-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-how-to-choose-wholesale-solar-panels-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-how-to-choose-wholesale-solar-panels-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/d7e108a6-54fd-4932-b703-45f41fa68382/articles-covers-how-to-choose-wholesale-solar-panels.jpg",
+      "sourceBytes": 252272,
+      "sourceETag": "3218350cd7020689ec98e8a35960cfdf",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/d7e108a6-54fd-4932-b703-45f41fa68382/articles-covers-how-to-choose-wholesale-solar-panels.jpg",
+      "status": "copied_and_verified",
+      "sha256": "c6b66749a2fe9ad8780d96b4b4907337156e692560ec575d8b77b11b5bc22b38"
+    },
+    {
+      "assetId": "daf64118-fa8e-4bf1-bbf3-05795dc72c3d",
+      "publicSlug": "houseplus-induction-cooktop-2000w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-induction-cooktop-2000w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-induction-cooktop-2000w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/daf64118-fa8e-4bf1-bbf3-05795dc72c3d/products-induction-cooktop-2000w.jpg",
+      "sourceBytes": 124728,
+      "sourceETag": "5e3834dceb63b686916e3a20d7823044",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/daf64118-fa8e-4bf1-bbf3-05795dc72c3d/products-induction-cooktop-2000w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "3846dcc7d3a4f5a0c18d92547395815ba206410362398e5a2fc88c35cdb79e29"
+    },
+    {
+      "assetId": "e0245a6c-9df0-40ed-997e-d29c73309ac3",
+      "publicSlug": "houseplus-articles-solar-solar-energy-storage-battery-bank-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-energy-storage-battery-bank-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-energy-storage-battery-bank-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e0245a6c-9df0-40ed-997e-d29c73309ac3/articles-solar-solar-energy-storage-battery-bank.jpg",
+      "sourceBytes": 3931232,
+      "sourceETag": "cc0210f4bd1eff05a1181ef6ce690b29",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e0245a6c-9df0-40ed-997e-d29c73309ac3/articles-solar-solar-energy-storage-battery-bank.jpg",
+      "status": "copied_and_verified",
+      "sha256": "8449229f7b3a60e1089c57e011989d189de795c70c277cf655b02cd7ba288728"
+    },
+    {
+      "assetId": "e0fd1e30-2241-4255-bc5f-cf5e8dc55135",
+      "publicSlug": "houseplus-carousel-houseplus-solar-hero",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/",
+        "https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/carousel-houseplus-solar-hero.jpg",
+      "sourceBytes": 4457183,
+      "sourceETag": "7f4d412b3e69561c506750f83a742b10",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e0fd1e30-2241-4255-bc5f-cf5e8dc55135/carousel-houseplus-solar-hero.jpg",
+      "status": "copied_and_verified",
+      "sha256": "628471dcd4f4d147794f114b5fc456800b55282ce53eb5c075e55809e013b090"
+    },
+    {
+      "assetId": "e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3",
+      "publicSlug": "houseplus-gas-water-heater-10l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-gas-water-heater-10l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-gas-water-heater-10l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3/products-gas-water-heater-10l.jpg",
+      "sourceBytes": 112386,
+      "sourceETag": "49250c78fb5380ee3d113208c2e1a984",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e1ecc4cc-b71c-480e-8edf-5b0fc03b5bf3/products-gas-water-heater-10l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "489573d41b18feebd0fb317691bda849ab4c7d6534b9fa8f164e244a59f4a991"
+    },
+    {
+      "assetId": "e21466e5-27da-4c27-a6e8-06fc1baaa6f0",
+      "publicSlug": "houseplus-solar-fan-20w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-fan-20w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-fan-20w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/products-solar-fan-20w.jpg",
+      "sourceBytes": 3421118,
+      "sourceETag": "b2eaa865a31f082aca2b2a7a390260d7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e21466e5-27da-4c27-a6e8-06fc1baaa6f0/products-solar-fan-20w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "4f7063efe1f6ff8be701f375c52fae84156599edd19852d67764f69481546ee4"
+    },
+    {
+      "assetId": "e2185887-f46e-4f60-8c6c-5c0ba9061fa8",
+      "publicSlug": "houseplus-cassette-gas-stove-double-burner-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-cassette-gas-stove-double-burner-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-cassette-gas-stove-double-burner-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e2185887-f46e-4f60-8c6c-5c0ba9061fa8/products-cassette-gas-stove-double-burner.jpg",
+      "sourceBytes": 292149,
+      "sourceETag": "990472443b3eb935b9fc5125088d9e70",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e2185887-f46e-4f60-8c6c-5c0ba9061fa8/products-cassette-gas-stove-double-burner.jpg",
+      "status": "copied_and_verified",
+      "sha256": "809b432d3d16990eafb187ef3db8269811efb5038a16ade5e3dadd80ef3e2c89"
+    },
+    {
+      "assetId": "e27fc0bc-0448-4691-9d3e-fd1e64454ebf",
+      "publicSlug": "houseplus-articles-appliances-home-appliance-washing-machine-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-washing-machine-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/e27fc0bc-0448-4691-9d3e-fd1e64454ebf/articles-appliances-home-appliance-washing-machine.jpg",
+      "sourceBytes": 4459059,
+      "sourceETag": "79b42a64605e5709f3889d4727b26a3e",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e27fc0bc-0448-4691-9d3e-fd1e64454ebf/articles-appliances-home-appliance-washing-machine.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ef1a33d4d46feb2d98f15c95109e5417f38ee2880a2bc01f334aae2faae46191"
+    },
+    {
+      "assetId": "e54388d7-02ef-41eb-bf0f-d578d9e9138f",
+      "publicSlug": "houseplus-solar-street-light-200w-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-solar-street-light-200w-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-solar-street-light-200w-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e54388d7-02ef-41eb-bf0f-d578d9e9138f/products-solar-street-light-200w.jpg",
+      "sourceBytes": 4466317,
+      "sourceETag": "900ee7b51f696f3210a5d5a701382d05",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e54388d7-02ef-41eb-bf0f-d578d9e9138f/products-solar-street-light-200w.jpg",
+      "status": "copied_and_verified",
+      "sha256": "9b660d55198d03f2d6148489ddcf1543f97b4068d4de4d1445bc814a20135a47"
+    },
+    {
+      "assetId": "e54f96f5-92ee-491d-8cd9-94aa7f1b58de",
+      "publicSlug": "houseplus-micro-sd-128gb-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-micro-sd-128gb-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-micro-sd-128gb-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/products-micro-sd-128gb.jpg",
+      "sourceBytes": 3725393,
+      "sourceETag": "80c78ada816898d5106e985bf24bda67",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e54f96f5-92ee-491d-8cd9-94aa7f1b58de/products-micro-sd-128gb.jpg",
+      "status": "copied_and_verified",
+      "sha256": "ed2d7bcaeaf936815dc212b3b805f1d07f97a826d85a621050ab1e46026a0035"
+    },
+    {
+      "assetId": "e828543b-5b73-45b8-805d-48a2d6c560ae",
+      "publicSlug": "houseplus-site-faq-support-specialist",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-site-faq-support-specialist/"
+      ],
+      "sourceKey": "ingest/2026-08-12/e828543b-5b73-45b8-805d-48a2d6c560ae/site-faq-support-specialist.jpg",
+      "sourceBytes": 164307,
+      "sourceETag": "d79d7911b8479893d88c6b0fde6599f9",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e828543b-5b73-45b8-805d-48a2d6c560ae/site-faq-support-specialist.jpg",
+      "status": "copied_and_verified",
+      "sha256": "abee8f4bd78beaa05f56cc6038c4eebde887e83baac59af318c8bd46a7fa67f8"
+    },
+    {
+      "assetId": "e8ecf4e2-eb52-4a5c-b3b6-e84d84303011",
+      "publicSlug": "houseplus-magnetic-power-bank-10000mah-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-magnetic-power-bank-10000mah-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-magnetic-power-bank-10000mah-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/products-magnetic-power-bank-10000mah.jpg",
+      "sourceBytes": 3391650,
+      "sourceETag": "5502e8acec60c7fabecd5d1bb3ce57ce",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/e8ecf4e2-eb52-4a5c-b3b6-e84d84303011/products-magnetic-power-bank-10000mah.jpg",
+      "status": "copied_and_verified",
+      "sha256": "43c3d04eec756b5c2e90bac4e36e09f7968ce7fcc45547362e93b1fb776d37f1"
+    },
+    {
+      "assetId": "eb6de44f-80ca-463e-bad4-94cc57c8951a",
+      "publicSlug": "houseplus-articles-appliances-home-appliance-wholesale-warehouse-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-wholesale-warehouse-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-wholesale-warehouse-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/eb6de44f-80ca-463e-bad4-94cc57c8951a/articles-appliances-home-appliance-wholesale-warehouse.jpg",
+      "sourceBytes": 332349,
+      "sourceETag": "7b5fb01f29f0e66c3eb9e37983a659c7",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/eb6de44f-80ca-463e-bad4-94cc57c8951a/articles-appliances-home-appliance-wholesale-warehouse.jpg",
+      "status": "copied_and_verified",
+      "sha256": "282abfe19dc315c29a3908b085aad53041f2700cb8114fe3781199983ac57039"
+    },
+    {
+      "assetId": "ecf442ab-f6c0-405c-b6f8-f84ad418e606",
+      "publicSlug": "houseplus-articles-solar-solar-panel-installation-rooftop-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-panel-installation-rooftop-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-panel-installation-rooftop-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/ecf442ab-f6c0-405c-b6f8-f84ad418e606/articles-solar-solar-panel-installation-rooftop.jpg",
+      "sourceBytes": 288489,
+      "sourceETag": "3e81fadcb2b12064bcbe046088fa94a6",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/ecf442ab-f6c0-405c-b6f8-f84ad418e606/articles-solar-solar-panel-installation-rooftop.jpg",
+      "status": "copied_and_verified",
+      "sha256": "668d35371b639d1ca203ee78c87d74f6d204ab5f8c5a9a1512ee5ef2ad95c2c7"
+    },
+    {
+      "assetId": "efe98e55-70bc-460b-aa5e-7ec2f120398e",
+      "publicSlug": "houseplus-air-fryer-4-5l-visual-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-4-5l-visual-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-air-fryer-4-5l-visual-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/efe98e55-70bc-460b-aa5e-7ec2f120398e/products-air-fryer-4-5l-visual.jpg",
+      "sourceBytes": 169138,
+      "sourceETag": "5bc67af6fa707da921307ab96eba76ac",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/efe98e55-70bc-460b-aa5e-7ec2f120398e/products-air-fryer-4-5l-visual.jpg",
+      "status": "copied_and_verified",
+      "sha256": "7ee2ed3b20c8d724d5d46d1c96a069ff7bf489a87fcf9ed17cd6c87e0f9f0423"
+    },
+    {
+      "assetId": "f0a4515c-e1f7-4037-a943-4d7381c90a34",
+      "publicSlug": "houseplus-articles-covers-advanced-manufacturing-home-appliances-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-advanced-manufacturing-home-appliances-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/f0a4515c-e1f7-4037-a943-4d7381c90a34/articles-covers-advanced-manufacturing-home-appliances.jpg",
+      "sourceBytes": 243774,
+      "sourceETag": "0cc14876ff13d20e1b935e0d99acddef",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/f0a4515c-e1f7-4037-a943-4d7381c90a34/articles-covers-advanced-manufacturing-home-appliances.jpg",
+      "status": "copied_and_verified",
+      "sha256": "62cf2428af9935194ede6fdeec233e76b0b2952f242c3399cea9a91805b41c35"
+    },
+    {
+      "assetId": "f491859c-7659-425f-8e34-2e9126ccf0d5",
+      "publicSlug": "houseplus-articles-appliances-b2b-distribution-2026-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-appliances-b2b-distribution-2026-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/f491859c-7659-425f-8e34-2e9126ccf0d5/articles-appliances-b2b-distribution-2026.jpg",
+      "sourceBytes": 5044151,
+      "sourceETag": "b3c660ca16719f6264936dfeb8ff0bb8",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/f491859c-7659-425f-8e34-2e9126ccf0d5/articles-appliances-b2b-distribution-2026.jpg",
+      "status": "copied_and_verified",
+      "sha256": "f615ad3f8c8d174f7996d052ddbb559693a7e4e576c32ca060cca9b3fe5d08eb"
+    },
+    {
+      "assetId": "f58941f1-cba4-4bd3-bb11-b73cf4f63664",
+      "publicSlug": "houseplus-articles-covers-the-future-of-smart-home-appliances-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-the-future-of-smart-home-appliances-b2b-guide/"
+      ],
+      "sourceKey": "ingest/2026-08-12/f58941f1-cba4-4bd3-bb11-b73cf4f63664/articles-covers-the-future-of-smart-home-appliances.jpg",
+      "sourceBytes": 211873,
+      "sourceETag": "d96a4ee374b25464a5d519562521f3ea",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/f58941f1-cba4-4bd3-bb11-b73cf4f63664/articles-covers-the-future-of-smart-home-appliances.jpg",
+      "status": "copied_and_verified",
+      "sha256": "c6fa7ebb931449fffc8250e17f0956fe89cc45a83c0f675b5fd8e90aa2129e61"
+    },
+    {
+      "assetId": "f61e16f4-1527-4680-8302-cf75a689cbc0",
+      "publicSlug": "houseplus-built-in-oven-65l-wholesale",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-built-in-oven-65l-wholesale/",
+        "https://images.houseplus-ch.com/media/houseplus-built-in-oven-65l-wholesale/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/f61e16f4-1527-4680-8302-cf75a689cbc0/products-built-in-oven-65l.jpg",
+      "sourceBytes": 255704,
+      "sourceETag": "c6cec18e0215378c9c9238bf46784661",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/f61e16f4-1527-4680-8302-cf75a689cbc0/products-built-in-oven-65l.jpg",
+      "status": "copied_and_verified",
+      "sha256": "630737f9e4309d2bb4fc9afb79328814ad30be250780966096796032d156714f"
+    },
+    {
+      "assetId": "fa65d41c-2e23-4880-a19f-774c3bacdaa1",
+      "publicSlug": "houseplus-factory-factory-solar-assembly-line",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-factory-factory-solar-assembly-line/"
+      ],
+      "sourceKey": "ingest/2026-08-12/fa65d41c-2e23-4880-a19f-774c3bacdaa1/factory-factory-solar-assembly-line.jpg",
+      "sourceBytes": 4589949,
+      "sourceETag": "b58f547575723301f4729c72e0f05741",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/fa65d41c-2e23-4880-a19f-774c3bacdaa1/factory-factory-solar-assembly-line.jpg",
+      "status": "copied_and_verified",
+      "sha256": "53f545559c33003743d40b44dd4878b8d82604e58fe0109ff0c162ba06d65471"
+    },
+    {
+      "assetId": "fdbcee0d-563f-4b3b-9e60-5abd6f39aae7",
+      "publicSlug": "houseplus-articles-covers-home-appliance-oem-manufacturer-guide-china-b2b-guide",
+      "publicUrls": [
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-home-appliance-oem-manufacturer-guide-china-b2b-guide/",
+        "https://images.houseplus-ch.com/media/houseplus-articles-covers-home-appliance-oem-manufacturer-guide-china-b2b-guide/#image"
+      ],
+      "sourceKey": "ingest/2026-08-12/fdbcee0d-563f-4b3b-9e60-5abd6f39aae7/articles-covers-home-appliance-oem-manufacturer-guide-china.jpg",
+      "sourceBytes": 198241,
+      "sourceETag": "f6c85b3e11c6258da45850fc6dafe28a",
+      "sourceContentType": "image/jpeg",
+      "targetKey": "media-live-v1/objects/fdbcee0d-563f-4b3b-9e60-5abd6f39aae7/articles-covers-home-appliance-oem-manufacturer-guide-china.jpg",
+      "status": "copied_and_verified",
+      "sha256": "aa9f2203f52639f88cd8a0fb9180d2e6c9af0d2df689568bfcd7b0e720041eaa"
+    }
+  ]
+}

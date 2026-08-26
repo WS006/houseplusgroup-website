@@ -1,0 +1,61 @@
+{
+  "capturedAt": "2026-08-26T08:20:52.101Z",
+  "host": "images.houseplus-ch.com",
+  "dns": [
+    {
+      "address": "76.76.21.21",
+      "family": 4
+    }
+  ],
+  "publicMedia": {
+    "url": "https://images.houseplus-ch.com/media/houseplus-solar-inverter-3kw-wholesale/",
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "age": "0",
+      "cache-control": "public, max-age=31536000, immutable",
+      "connection": "close",
+      "content-disposition": "inline; filename=\"products/solar-inverter-3kw.jpg\"",
+      "content-type": "image/jpeg",
+      "cross-origin-resource-policy": "cross-origin",
+      "date": "Wed, 26 Aug 2026 08:20:57 GMT",
+      "etag": "\"004f9de3cd3233942e7c8c1028d3ed7d\"",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BESN9GwG2liCOYABiexR7wWm1XTH7%2F5PhVwAcPHYpdu0MMLOVBeuBV2lVhhYumxj8xWrewfVQwJfG14Wo8S5sDCY1QNTYPVlpaFwrhIb06m2qqRAsneFTtQHj1nqpI%2FCYuh5y3RP4GEk4uI3kz%2BibgiydwrST7e8yXatVQ%3D%3D\"}]}",
+      "server": "Vercel",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "vary": "Accept",
+      "x-content-type-options": "nosniff",
+      "x-dns-prefetch-control": "on",
+      "x-frame-options": "SAMEORIGIN",
+      "x-houseplus-media-origin": "r2",
+      "x-matched-path": "/media/[assetId]",
+      "x-vercel-cache": "MISS",
+      "x-vercel-id": "cdg1::lhr1::h9jgr-1787732454922-97e2ac0d1977",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  "nextImage": {
+    "url": "https://www.houseplus-ch.com/_next/image/?url=https%3A%2F%2Fimages.houseplus-ch.com%2Fmedia%2Fhouseplus-solar-inverter-3kw-wholesale%2F&w=1080&q=75",
+    "status": 200,
+    "headers": {
+      "age": "3515",
+      "cache-control": "public, max-age=31536000, must-revalidate",
+      "connection": "close",
+      "content-disposition": "inline; filename=\"image.png\"",
+      "content-length": "129629",
+      "content-security-policy": "script-src 'none'; frame-src 'none'; sandbox;",
+      "content-type": "image/png",
+      "date": "Wed, 26 Aug 2026 07:22:25 GMT",
+      "last-modified": "Wed, 26 Aug 2026 07:22:25 GMT",
+      "server": "Vercel",
+      "strict-transport-security": "max-age=63072000",
+      "vary": "Accept",
+      "x-vercel-cache": "HIT",
+      "x-vercel-id": "cdg1::rnwbc-1787732460535-c453a7a2113d"
+    }
+  },
+  "rollbackTarget": "existing DNS and Vercel media entry before Worker custom-domain binding"
+}
