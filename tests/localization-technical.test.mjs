@@ -326,6 +326,22 @@ test('priority article covers have image-specific localized titles on both listi
   assert.match(articlePage, /sizes="\(max-width: 767px\) 100vw, \(max-width: 1280px\) 92vw, 1152px"/);
 });
 
+test('image sitemap uses explicit page-role governance and excludes decorative brand logos', () => {
+  const governance = read('lib/image-sitemap-governance.ts');
+  const imageSitemap = read('app/image-sitemap.xml/route.ts');
+  assert.match(governance, /pageHero: 'page_hero'/);
+  assert.match(governance, /pageInline: 'page_inline'/);
+  assert.match(governance, /pageGallery: 'page_gallery'/);
+  assert.doesNotMatch(governance, /houseplus-group-logo/);
+  for (const slug of [
+    'houseplus-factory-assembly-line',
+    'houseplus-site-service-technical-consultation',
+    'houseplus-site-support-customer-service',
+    'houseplus-site-global-world-map-markets',
+  ]) assert.match(governance, new RegExp(slug));
+  assert.match(imageSitemap, /CURATED_CORE_PAGE_IMAGES/);
+});
+
 test('factory and service pages use responsive Next Image for core R2 media without over-prioritizing non-LCP images', () => {
   const factory = read('app/[lang]/factory/page.tsx');
   const service = read('app/[lang]/service/page.tsx');

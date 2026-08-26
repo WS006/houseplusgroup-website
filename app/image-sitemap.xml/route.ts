@@ -2,6 +2,7 @@ import { PRODUCT_DATA } from '@/lib/product-data';
 import { blogPosts } from '@/lib/blog-data';
 import { r2MediaUrl } from '@/lib/r2-media-map';
 import { canonicalSiteUrl } from '@/lib/urls';
+import { CURATED_CORE_PAGE_IMAGES } from '@/lib/image-sitemap-governance';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 
@@ -126,45 +127,14 @@ const productImages: PageImages[] = Object.entries(PRODUCT_DATA).map(([slug, pro
   }],
 }));
 
-const corePageImages: PageImages[] = [
-  {
-    pageUrl: '/en',
-    images: [
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-group-logo/'), title: 'HousePlus Group logo', caption: 'HousePlus global wholesale manufacturer logo based in Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/'), title: 'HousePlus solar energy solutions', caption: 'Solar panels, inverters and energy storage solutions for global wholesale buyers.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/'), title: 'HousePlus home appliances', caption: 'Energy-efficient home appliances with OEM and ODM support from Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/'), title: 'HousePlus 3C electronics', caption: '3C electronics and accessories for international B2B distribution.' },
-    ],
-  },
-  {
-    pageUrl: '/en/brand',
-    images: [
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-group-logo/'), title: 'HousePlus Group brand logo', caption: 'HousePlus Group global wholesale manufacturer brand identity.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-factory-production-line/'), title: 'HousePlus production line', caption: 'Home appliance manufacturing production line in Zhongshan, Guangdong, China.' },
-    ],
-  },
-  {
-    pageUrl: '/en/contact',
-    images: [{ loc: absolute('https://images.houseplus-ch.com/media/houseplus-group-logo/'), title: 'Contact HousePlus', caption: 'HousePlus wholesale manufacturer contact page for global B2B buyers.' }],
-  },
-  {
-    pageUrl: '/en/factory',
-    images: [
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-articles-service-factory-assembly-workers-b2b-guide/'), title: 'HousePlus factory operations', caption: 'HousePlus manufacturing operations in Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-factory-production-line/'), title: 'Home appliance production line', caption: 'Precision manufacturing line for home appliances.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-factory-factory-solar-assembly-line/'), title: 'Solar energy assembly line', caption: 'Solar energy equipment assembly line at HousePlus.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-factory-factory-appliance-qc-lab/'), title: 'HousePlus appliance quality laboratory', caption: 'Home appliance quality assurance laboratory in Zhongshan, Guangdong, China.' },
-    ],
-  },
-  {
-    pageUrl: '/en/team',
-    images: [
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-team-team-manufacturing-collaboration/'), title: 'HousePlus manufacturing collaboration team', caption: 'Manufacturing operations team collaborating in Zhongshan, Guangdong, China.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-team-team-quality-engineering/'), title: 'HousePlus quality engineering team', caption: 'Quality engineers conducting product testing for international compliance.' },
-      { loc: absolute('https://images.houseplus-ch.com/media/houseplus-team-team-innovation-culture/'), title: 'HousePlus innovation and R&D culture', caption: 'Research and development team collaborating on product innovation.' },
-    ],
-  },
-];
+const corePageImages: PageImages[] = Object.values(
+  CURATED_CORE_PAGE_IMAGES.reduce<Record<string, PageImages>>((pages, image) => {
+    const page = pages[image.pageUrl] || { pageUrl: image.pageUrl, images: [] };
+    page.images.push({ loc: absolute(image.loc), title: image.title, caption: image.caption });
+    pages[image.pageUrl] = page;
+    return pages;
+  }, {})
+);
 
 function escapeXml(text: string): string {
   return text
