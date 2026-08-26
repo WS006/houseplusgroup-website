@@ -206,7 +206,7 @@ export default async function BlogPostPage({
           src={post.heroImage}
           alt={post.heroImageAlt}
           title={post.heroImageAlt}
-          className={`aspect-[16/10] w-full object-cover ${post.heroImageFocus === 'upper' ? 'object-[50%_15%]' : 'object-center'} md:aspect-[16/9]`}
+          className={`w-full ${post.heroImageFocus === 'landscape' ? 'aspect-video bg-[#a9cce0] object-contain' : post.heroImageFocus === 'upper' ? 'aspect-[5/3] object-cover object-[50%_5%]' : 'aspect-[16/10] object-cover object-center md:aspect-[16/9]'}`}
           decoding="async"
         />
       </figure>

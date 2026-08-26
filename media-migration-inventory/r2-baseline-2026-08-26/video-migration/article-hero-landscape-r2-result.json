@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-08-26T10:06:15.198Z",
+  "execute": true,
+  "asset": {
+    "assetId": "article-hero-houseplus-portable-power-landscape",
+    "publicSlug": "houseplus-portable-power-supply-article-hero-landscape",
+    "sourcePath": "/home/ubuntu/webdev-static-assets/houseplus-portable-power-article-hero-landscape.png",
+    "targetKey": "media-live-v1/objects/article-hero-houseplus-portable-power-landscape/houseplus-portable-power-article-hero-landscape.png",
+    "contentType": "image/png",
+    "width": 2560,
+    "height": 1440,
+    "byteSize": 4038432,
+    "sha256": "f92d73ba33230b453712cea78746994afce621184deb2eb9773fd91b2e8e9f0c"
+  },
+  "action": "uploaded-and-verified"
+}

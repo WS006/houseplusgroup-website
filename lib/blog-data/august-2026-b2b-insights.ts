@@ -157,9 +157,9 @@ export const portablePowerB2bGuide: BlogPost = {
   description: 'Review portable power supply and solar storage products for B2B sourcing with a practical guide to specifications, applications, documentation and RFQ preparation.',
   keywords: 'portable power supply B2B, solar storage sourcing, mobile power station procurement, LiFePO4 battery RFQ, portable solar generator OEM',
   author, authorRole: role, datePublished: '2026-08-26', dateModified: '2026-08-26', readingTime: '8 min read', category: 'Solar & Storage',
-  heroImage: portablePowerOverviewVideo.poster,
-  heroImageFocus: 'upper',
-  heroImageAlt: 'HousePlus portable power supply and solar storage products shown in a B2B product overview video',
+  heroImage: 'https://images.houseplus-ch.com/media/houseplus-portable-power-supply-article-hero-landscape/',
+  heroImageFocus: 'landscape',
+  heroImageAlt: 'HousePlus portable power supply contact hero with HousePlus logo, WhatsApp and WeChat QR codes, and a portable power unit',
   sections: [
     { heading: 'What the HousePlus product overview shows', paragraphs: [
       'The accompanying video presents a visual overview of HousePlus solar energy storage and mobile power supply products. It shows a home solar storage illustration, several portable power supply models, folding solar panels, a LiFePO4 battery and an industrial storage cabinet. On-screen product information is presented for reference; buyers should confirm the selected model specification before using it in a quotation or product listing.',
