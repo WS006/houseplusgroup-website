@@ -37,6 +37,17 @@ test('formerly duplicated multilingual news metadata uses localized title and de
   }
 });
 
+test('FAQ metadata uses localized, non-committal buyer guidance in all five languages', () => {
+  const faq = read('app/[lang]/faq/page.tsx');
+  const descriptions = faq.slice(faq.indexOf('const descriptions:'), faq.indexOf('return generateSEOMetadata'));
+  assert.match(faq, /description: descriptions\[lang\] \|\| descriptions\.en/);
+  assert.match(faq, /keywords: keywords\[lang\] \|\| keywords\.en/);
+  for (const locale of ['en', 'es', 'de', 'fr', 'ar']) {
+    assert.match(descriptions, new RegExp(`\\n    ${locale}: '`));
+  }
+  assert.doesNotMatch(descriptions, /MOQ 100 pcs|20–35 day lead time|441\+ clients/);
+});
+
 test('French electronics and smart-home market pages retain distinct metadata', () => {
   const electronics = read('app/[lang]/news/2026-electronics-market-update/page.tsx');
   const smartHome = read('app/[lang]/news/2026-smart-home-appliances-market-guide/page.tsx');

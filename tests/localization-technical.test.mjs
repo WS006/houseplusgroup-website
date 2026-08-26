@@ -71,6 +71,17 @@ test('homepage logo uses a responsive Next Image and brand page distinguishes re
   assert.doesNotMatch(brand, /Over 8% of annual revenue/);
 });
 
+test('brand production image supplies localized Alt, Title and visible caption in every language', () => {
+  const brand = read('app/[lang]/brand/page.tsx');
+  for (const field of ['factoryImageAlt', 'factoryImageTitle', 'factoryImageCaption']) {
+    assert.match(brand, new RegExp(`${field}: string;`));
+    assert.match(brand, new RegExp(`${field}: '`, 'g'));
+  }
+  assert.match(brand, /alt=\{current\.factoryImageAlt\}/);
+  assert.match(brand, /title=\{current\.factoryImageTitle\}/);
+  assert.match(brand, />\{current\.factoryImageCaption\}<\/figcaption>/);
+});
+
 test('fallback error routes use the framework Document during production builds', () => {
   assert.equal(existsSync(new URL('pages/_document.tsx', root)), false);
 });
@@ -277,6 +288,36 @@ test('all static news routes remain represented in the news listing and image si
     assert.match(imageSitemap, new RegExp(`'${slug}'`));
   }
   assert.match(imageSitemap, /image\.image \|\| coverPath\(slug\)/);
+});
+
+test('news listing preserves localized dynamic article hero Alt text for every locale', () => {
+  const newsPage = read('app/[lang]/news/page.tsx');
+  const localizedArticles = read('lib/localized-content/articles.json');
+  assert.match(newsPage, /type LocalizedArticleSummary = \{ title\?: string; description\?: string; heroImageAlt\?: string \}/);
+  assert.match(newsPage, /localized\?\.\[locale\]\?\.heroImageAlt \|\| post\.heroImageAlt/);
+  assert.match(newsPage, /const imageAltFor = \(imageAlt: string \| Record<string, string>\)/);
+  assert.match(newsPage, /alt=\{imageAltFor\(featuredArticle\.imageAlt\)\}/);
+  assert.match(newsPage, /alt=\{imageAltFor\(article\.imageAlt\)\}/);
+  assert.match(localizedArticles, /"portable-power-supply-solar-storage-b2b-guide"[\s\S]*"heroImageAlt"/);
+});
+
+test('news listing delivers R2 covers through responsive Next Image with only the featured cover prioritized', () => {
+  const newsPage = read('app/[lang]/news/page.tsx');
+  assert.match(newsPage, /import Image from 'next\/image';/);
+  assert.match(newsPage, /sizes="\(max-width: 1023px\) 100vw, 58vw"/);
+  assert.match(newsPage, /sizes="\(max-width: 767px\) 100vw, \(max-width: 1023px\) 50vw, 33vw"/);
+  assert.match(newsPage, /alt=\{imageAltFor\(featuredArticle\.imageAlt\)\}[\s\S]*priority/s);
+  assert.match(newsPage, /alt=\{imageAltFor\(article\.imageAlt\)\}[\s\S]*loading="lazy"/s);
+});
+
+test('factory and service pages use responsive Next Image for core R2 media without over-prioritizing non-LCP images', () => {
+  const factory = read('app/[lang]/factory/page.tsx');
+  const service = read('app/[lang]/service/page.tsx');
+  for (const source of [factory, service]) assert.match(source, /import Image from 'next\/image';/);
+  assert.match(factory, /houseplus-articles-service-factory-assembly-workers-b2b-guide\/[\s\S]*sizes="\(max-width: 1023px\) 100vw, 50vw"[\s\S]*priority/s);
+  assert.match(factory, /houseplus-factory-factory-appliance-qc-lab\/[\s\S]*loading="lazy"/s);
+  assert.match(factory, /\(max-width: 767px\) 100vw, \(max-width: 1023px\) 50vw, 33vw/);
+  assert.match(service, /houseplus-site-service-technical-consultation\/[\s\S]*sizes="\(max-width: 1023px\) 100vw, 50vw"[\s\S]*loading="lazy"/s);
 });
 
 test('all static news routes are included in the RSS source without replaying unverified commercial claims', () => {

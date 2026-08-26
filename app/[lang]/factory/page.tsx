@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -804,12 +805,15 @@ export default async function FactoryPage(props: { params: Promise<{ lang: strin
                 </div>
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-articles-service-factory-assembly-workers-b2b-guide/"
                   alt={t.hero.imgAlt}
                   title={t.hero.imgTitle}
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 50vw"
+                  priority
                   className="object-cover"
-                  decoding="async" />
+                />
               </div>
             </div>
           </div>
@@ -835,13 +839,15 @@ export default async function FactoryPage(props: { params: Promise<{ lang: strin
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {t.gallery.images.map((img, i) => (
                 <div key={i} className="relative h-60 rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                  <img
+                  <Image
                     src={img.src}
                     alt={img.alt}
                     title={img.alt}
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
-                    decoding="async" />
+                  />
                 </div>
               ))}
             </div>
@@ -891,13 +897,15 @@ export default async function FactoryPage(props: { params: Promise<{ lang: strin
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-factory-factory-appliance-qc-lab/"
                   alt={t.qa.imgAlt}
                   title={t.qa.imgTitle}
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  decoding="async" />
+                />
               </div>
               <div>
                 <h2 className="text-3xl font-black text-slate-900 mb-6">{t.qa.heading}</h2>

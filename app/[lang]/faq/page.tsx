@@ -24,10 +24,26 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     ar: 'الأسئلة الشائعة HousePlus',
   };
 
+  const descriptions: Record<string, string> = {
+    en: 'Answers for wholesale buyers about HousePlus solar systems, home appliances and 3C electronics. Discuss product documents, samples, OEM/ODM options, order planning, shipping and after-sales support with our team.',
+    es: 'Respuestas para compradores mayoristas sobre los sistemas solares, electrodomésticos y electrónica 3C de HousePlus. Consulte con nuestro equipo la documentación, las muestras, las opciones OEM/ODM, la planificación del pedido, el envío y el soporte posventa.',
+    de: 'Antworten für Großhandelskäufer zu Solarsystemen, Haushaltsgeräten und 3C-Elektronik von HousePlus. Besprechen Sie Produktunterlagen, Muster, OEM/ODM-Optionen, Auftragsplanung, Versand und After-Sales-Support mit unserem Team.',
+    fr: 'Réponses pour les acheteurs en gros au sujet des systèmes solaires, appareils ménagers et produits électroniques 3C de HousePlus. Échangez avec notre équipe sur les documents produits, les échantillons, les options OEM/ODM, la préparation de commande, l’expédition et le service après-vente.',
+    ar: 'إجابات للمشترين بالجملة حول أنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C من HousePlus. ناقش مع فريقنا مستندات المنتجات والعينات وخيارات OEM/ODM وتخطيط الطلب والشحن ودعم ما بعد البيع.',
+  };
+
+  const keywords: Record<string, string[]> = {
+    en: ['HousePlus FAQ', 'wholesale questions', 'OEM ODM support', 'product documents', 'after-sales support'],
+    es: ['Preguntas frecuentes HousePlus', 'preguntas mayoristas', 'soporte OEM ODM', 'documentación de productos', 'soporte posventa'],
+    de: ['HousePlus FAQ', 'Großhandelsfragen', 'OEM ODM Unterstützung', 'Produktunterlagen', 'After-Sales-Support'],
+    fr: ['FAQ HousePlus', 'questions achat en gros', 'support OEM ODM', 'documents produits', 'service après-vente'],
+    ar: ['الأسئلة الشائعة HousePlus', 'أسئلة الجملة', 'دعم OEM ODM', 'مستندات المنتجات', 'دعم ما بعد البيع'],
+  };
+
   return generateSEOMetadata({
     title: titles[lang] || titles.en,
-    description: 'HousePlus FAQ for wholesale buyers. MOQ 100 pcs, 20–35 day lead time, 12-month warranty. CE, FCC, RoHS, ISO 9001 certified. 441+ clients across 53+ countries. OEM/ODM available. Solar, appliance and 3C electronics from 20,000 m² factory since 2010.',
-    keywords: ['FAQ', 'questions', 'answers', 'help', 'support', 'HousePlus'],
+    description: descriptions[lang] || descriptions.en,
+    keywords: keywords[lang] || keywords.en,
     url: `/${lang}/faq`,
     lang: lang as any,
     type: 'website',

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -10,6 +11,7 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 export const dynamicParams = false;
 
 type Lang = (typeof validLangs)[number];
+type LocalizedArticleSummary = { title?: string; description?: string; heroImageAlt?: string };
 
 const pageText: Record<Lang, { globalB2B: string; featured: string; readFeatured: string; explore: string; latestLabel: string; category: Record<string, string> }> = {
   en: { globalB2B: 'Global B2B intelligence', featured: 'Featured insight', readFeatured: 'Read featured insight', explore: 'Explore article', latestLabel: 'Latest HousePlus insights', category: { solar: 'Solar & Storage', electronics: '3C Electronics', appliances: 'Home Appliances', industry: 'Industry Insights' } },
@@ -79,11 +81,11 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
   };
 
   const blogArticles = sortedBlogPosts.map((post) => {
-    const localized = (localizedArticles as Record<string, Partial<Record<Lang, { title: string; description: string }>>>)[post.slug];
+    const localized = (localizedArticles as Record<string, Partial<Record<Lang, LocalizedArticleSummary>>>)[post.slug];
     return {
       slug: post.slug,
       image: post.heroImage,
-      imageAlt: post.heroImageAlt,
+      imageAlt: Object.fromEntries(validLangs.map((locale) => [locale, localized?.[locale]?.heroImageAlt || post.heroImageAlt])),
       title: Object.fromEntries(validLangs.map((locale) => [locale, localized?.[locale]?.title || post.title])),
       description: Object.fromEntries(validLangs.map((locale) => [locale, localized?.[locale]?.description || post.description])),
       date: post.datePublished,
@@ -444,6 +446,9 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
   };
   const featuredArticle = articles[0];
   const articleGrid = articles.slice(1);
+  const imageAltFor = (imageAlt: string | Record<string, string>) => (
+    typeof imageAlt === 'string' ? imageAlt : imageAlt[lang] || imageAlt.en
+  );
 
   return (
     <main className="min-h-screen bg-white">
@@ -467,13 +472,14 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
             className="group mb-10 grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_48px_rgba(15,23,42,0.10)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_28px_56px_rgba(37,99,235,0.16)] md:mb-14 lg:grid-cols-[1.15fr_0.85fr]"
           >
             <figure className="relative min-h-[17rem] overflow-hidden bg-slate-100 md:min-h-[25rem]">
-              <img
+              <Image
                 src={featuredArticle.image}
-                alt={featuredArticle.imageAlt}
+                alt={imageAltFor(featuredArticle.imageAlt)}
                 title={featuredArticle.title[lang as keyof typeof featuredArticle.title] || featuredArticle.title.en}
+                fill
+                sizes="(max-width: 1023px) 100vw, 58vw"
+                priority
                 className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                loading="eager"
-                decoding="async"
               />
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/55 to-transparent" aria-hidden="true" />
               <figcaption className="absolute bottom-5 left-5 rounded-full border border-white/35 bg-slate-950/80 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-md">
@@ -504,13 +510,14 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
               className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-slate-200/90 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_22px_45px_rgba(37,99,235,0.16)]"
             >
               <figure className="relative aspect-[16/10] overflow-hidden bg-slate-100 md:aspect-video">
-                <img
+                <Image
                   src={article.image}
-                  alt={article.imageAlt}
+                  alt={imageAltFor(article.imageAlt)}
                   title={article.title[lang as keyof typeof article.title] || article.title.en}
+                  fill
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                   loading="lazy"
-                  decoding="async"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-950/45 to-transparent" aria-hidden="true" />
                 <figcaption className="absolute bottom-4 left-4">

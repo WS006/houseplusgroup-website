@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -772,13 +773,14 @@ export default async function ServicePage(props: { params: Promise<{ lang: strin
                 </div>
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-site-service-technical-consultation/"
                   alt={t.imageAlt}
                   title={t.imageTitle}
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="object-cover"
                   loading="lazy"
-                  decoding="async"
                 />
               </div>
             </div>

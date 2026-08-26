@@ -42,6 +42,9 @@ type BrandCopy = {
   browse: string;
   contact: string;
   about: string;
+  factoryImageAlt: string;
+  factoryImageTitle: string;
+  factoryImageCaption: string;
 };
 
 const copy: Record<string, BrandCopy> = {
@@ -74,6 +77,9 @@ const copy: Record<string, BrandCopy> = {
     ctaTitle: 'Find the Right Purchase Path',
     ctaDescription: 'Browse products to see available retail options, or contact HousePlus to discuss B2B/OEM sourcing and receive a quotation.',
     browse: 'Browse Products', contact: 'Contact for B2B/OEM', about: 'About HousePlus',
+    factoryImageAlt: 'HousePlus home appliance production line in a manufacturing environment',
+    factoryImageTitle: 'HousePlus home appliance production line',
+    factoryImageCaption: 'HousePlus Group production environment',
   },
   es: {
     title: 'HousePlus | Productos Minoristas y Suministro B2B/OEM',
@@ -95,6 +101,9 @@ const copy: Record<string, BrandCopy> = {
     supportTitle: 'Una Ruta Clara para Cada Comprador', supportDescription: 'Use la página de producto para disponibilidad minorista actual. Para volumen, marca, empaque, documentación o requisitos por destino, contacte a HousePlus para una cotización B2B/OEM.',
     ctaTitle: 'Encuentre la Ruta de Compra Adecuada', ctaDescription: 'Explore productos para ver opciones minoristas disponibles o contacte a HousePlus para abastecimiento B2B/OEM y una cotización.',
     browse: 'Ver Productos', contact: 'Contactar para B2B/OEM', about: 'Sobre HousePlus',
+    factoryImageAlt: 'Línea de producción de electrodomésticos de HousePlus en un entorno de fabricación',
+    factoryImageTitle: 'Línea de producción de electrodomésticos de HousePlus',
+    factoryImageCaption: 'Entorno de producción de HousePlus Group',
   },
   de: {
     title: 'HousePlus | Einzelhandel und B2B/OEM-Beschaffung',
@@ -116,6 +125,9 @@ const copy: Record<string, BrandCopy> = {
     supportTitle: 'Ein Klarer Weg für Jeden Käufer', supportDescription: 'Nutzen Sie die Produktseite für die aktuelle Einzelhandelsverfügbarkeit. Für Mengen, Branding, Verpackung, Unterlagen oder zielortspezifische Anforderungen kontaktieren Sie HousePlus für ein B2B/OEM-Angebot.',
     ctaTitle: 'Den Passenden Kaufweg Finden', ctaDescription: 'Durchsuchen Sie Produkte nach verfügbaren Einzelhandelsoptionen oder kontaktieren Sie HousePlus für B2B/OEM-Beschaffung und ein Angebot.',
     browse: 'Produkte Ansehen', contact: 'B2B/OEM Kontakt', about: 'Über HousePlus',
+    factoryImageAlt: 'HousePlus Produktionslinie für Haushaltsgeräte in einer Fertigungsumgebung',
+    factoryImageTitle: 'HousePlus Produktionslinie für Haushaltsgeräte',
+    factoryImageCaption: 'Produktionsumgebung der HousePlus Group',
   },
   fr: {
     title: 'HousePlus | Produits Retail et Approvisionnement B2B/OEM',
@@ -137,6 +149,9 @@ const copy: Record<string, BrandCopy> = {
     supportTitle: 'Un Parcours Clair pour Chaque Acheteur', supportDescription: 'Utilisez la page produit pour la disponibilité retail actuelle. Pour les volumes, la marque, l’emballage, les documents ou les besoins par destination, contactez HousePlus pour un devis B2B/OEM.',
     ctaTitle: 'Choisir le Bon Parcours d’Achat', ctaDescription: 'Parcourez les produits pour voir les options retail disponibles ou contactez HousePlus pour l’approvisionnement B2B/OEM et un devis.',
     browse: 'Voir les Produits', contact: 'Contact B2B/OEM', about: 'À Propos de HousePlus',
+    factoryImageAlt: 'Ligne de production d’électroménager HousePlus dans un environnement de fabrication',
+    factoryImageTitle: 'Ligne de production d’électroménager HousePlus',
+    factoryImageCaption: 'Environnement de production de HousePlus Group',
   },
   ar: {
     title: 'هاوس بلس | منتجات التجزئة وتوريد B2B/OEM',
@@ -158,6 +173,9 @@ const copy: Record<string, BrandCopy> = {
     supportTitle: 'مسار واضح لكل مشترٍ', supportDescription: 'استخدم صفحة المنتج لمعرفة توفر التجزئة الحالي. وللكميات أو العلامة التجارية أو التعبئة أو الوثائق أو متطلبات الوجهة، تواصل مع هاوس بلس للحصول على عرض B2B/OEM.',
     ctaTitle: 'اعثر على مسار الشراء المناسب', ctaDescription: 'تصفح المنتجات للاطلاع على خيارات التجزئة المتاحة أو تواصل مع هاوس بلس لتوريد B2B/OEM والحصول على عرض سعر.',
     browse: 'تصفح المنتجات', contact: 'تواصل لـ B2B/OEM', about: 'عن هاوس بلس',
+    factoryImageAlt: 'خط إنتاج الأجهزة المنزلية لدى HousePlus في بيئة تصنيع',
+    factoryImageTitle: 'خط إنتاج الأجهزة المنزلية لدى HousePlus',
+    factoryImageCaption: 'بيئة الإنتاج لدى مجموعة HousePlus',
   },
 };
 
@@ -207,8 +225,8 @@ export default async function BrandPage(props: { params: Promise<{ lang: string 
               </div>
             </div>
             <figure className="relative min-h-80 h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-              <Image src="https://images.houseplus-ch.com/media/houseplus-factory-production-line/" alt="HousePlus product manufacturing environment" title="HousePlus manufacturing environment" fill priority sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover" />
-              <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">HousePlus Group</figcaption>
+              <Image src="https://images.houseplus-ch.com/media/houseplus-factory-production-line/" alt={current.factoryImageAlt} title={current.factoryImageTitle} fill priority sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover" />
+              <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">{current.factoryImageCaption}</figcaption>
             </figure>
           </div>
         </section>
