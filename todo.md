@@ -84,5 +84,5 @@
 - [x] 核验并修复 PageSpeed 报告指出的首方 vendor JavaScript source map 缺失，确认公开映射未检出服务端密钥且 PageSpeed Agentic Browsing 达到 3/3
 - [x] 逐项核对既有 HousePlus 更新的 GitHub 推送、Vercel READY 部署与公开生产生效状态
 - [x] 核对最近一次推送部署日志，并全面盘点生产站图片、图片 Sitemap、Alt Text、结构化数据与图片收录差异
-- [ ] 全面审计全站页面、代码、内容、SEO/GEO/AEO、多语言、Schema、链接与移动端体验，并实施经核验的优化
-- [ ] 新增 3–4 篇事实边界清晰的行业洞察新闻，使用当月分散日期并按日期从新到旧排序
+- [x] 全面审计全站页面、代码、内容、SEO/GEO/AEO、多语言、Schema、链接与移动端体验，并实施经核验的优化
+- [x] 新增 3–4 篇事实边界清晰的行业洞察新闻，使用当月分散日期并按日期从新到旧排序
