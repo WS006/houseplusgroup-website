@@ -24,5 +24,5 @@ test('video player exposes verified visual descriptions for the no-narration sou
   assert.match(articlePageSource, /label="English visual descriptions"/);
   assert.match(articlePageSource, /poster=\{post\.video\.poster\}/);
   assert.match(articlePageSource, /src=\{post\.video\.captionsUrl\}/);
-  assert.match(articlePageSource, /post\.heroImageFocus === 'upper' \? 'object-\[50%_5%\]' : 'object-center'/);
+  assert.match(articlePageSource, /post\.heroImageFocus === 'upper' \? 'object-\[50%_15%\]' : 'object-center'/);
 });
