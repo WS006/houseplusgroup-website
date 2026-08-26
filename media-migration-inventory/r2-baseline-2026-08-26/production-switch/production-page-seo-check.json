@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-08-26T08:58:05.266Z",
+    "generatedAt": "2026-08-26T09:43:30.741Z",
     "pagesPassed": 8,
     "pagesTotal": 8,
     "endpointsPassed": 3,
@@ -87,8 +87,8 @@
       "expectsMedia": true,
       "status": 200,
       "canonical": "https://www.houseplus-ch.com/en/news/portable-power-supply-solar-storage-b2b-guide/",
-      "ogImage": "https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg",
-      "twitterImage": "https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg",
+      "ogImage": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+      "twitterImage": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
       "jsonLdBlocks": 6,
       "mediaMentioned": true,
       "passed": true
