@@ -67,6 +67,8 @@ export interface BlogPost {
   category: string;
   /** Hero image URL */
   heroImage: string;
+  /** Optional vertical focal point when a portrait hero is displayed in a wide article banner */
+  heroImageFocus?: 'top' | 'center';
   /** Alt text for hero image — descriptive, contains keyword */
   heroImageAlt: string;
   /** Article body sections */

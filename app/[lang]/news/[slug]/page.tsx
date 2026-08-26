@@ -206,7 +206,7 @@ export default async function BlogPostPage({
           src={post.heroImage}
           alt={post.heroImageAlt}
           title={post.heroImageAlt}
-          className="aspect-[16/10] w-full object-cover object-center md:aspect-[16/9]"
+          className={`aspect-[16/10] w-full object-cover ${post.heroImageFocus === 'top' ? 'object-top' : 'object-center'} md:aspect-[16/9]`}
           decoding="async"
         />
       </figure>
