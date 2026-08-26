@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-16T15:44:56.071Z",
+  "generatedAt": "2026-08-26T03:44:01.577Z",
   "sources": {
     "productSlugs": 63,
     "productDataSlugs": 63,
-    "newsSlugs": 29,
-    "blogSlugs": 12,
+    "newsSlugs": 33,
+    "blogSlugs": 16,
     "staticNewsRoutes": 17,
     "imageCoverSlugs": 17,
     "rssUsesBlogRegistry": true

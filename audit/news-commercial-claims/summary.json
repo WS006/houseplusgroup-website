@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-08-26T03:44:58.447Z",
+  "auditedFiles": 30,
+  "findings": 276,
+  "byCategory": {
+    "unverified-certification": 184,
+    "unverified-commercial-term": 34,
+    "unverified-scale-or-performance": 58
+  }
+}

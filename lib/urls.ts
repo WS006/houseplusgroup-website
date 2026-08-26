@@ -152,6 +152,10 @@ export const newsSlugs = [
   'appliance-energy-efficiency-vs-actual-consumption',
   'consumer-electronics-battery-life-testing',
   'solar-storage-efficiency-optimization-guide',
+  'solar-panel-rfq-checklist-international-buyers',
+  'home-appliance-oem-sample-evaluation-checklist',
+  'usb-c-accessories-wholesale-specification-checklist',
+  'battery-energy-storage-rfq-data-checklist',
 ];
 
 // Generate ALL URLs from the single source of truth

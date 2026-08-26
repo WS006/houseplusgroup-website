@@ -12,8 +12,8 @@ export function getLocalizedProduct<T extends object>(slug: string, locale: stri
 
 export function getLocalizedArticle<T extends object>(slug: string, locale: string, fallback: T): T {
   if (locale === 'en') return fallback;
-  const localized = (articleLocalizations as unknown as Record<string, Record<string, T>>)[slug]?.[locale];
-  return localized || fallback;
+  const localized = (articleLocalizations as unknown as Record<string, Record<string, Partial<T>>>)[slug]?.[locale];
+  return localized ? ({ ...fallback, ...localized } as T) : fallback;
 }
 
 export function getRegionCopy(locale: string): Record<string, string> {

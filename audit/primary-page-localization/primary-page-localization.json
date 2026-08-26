@@ -1,0 +1,569 @@
+{
+  "baseUrl": "https://www.houseplus-ch.com",
+  "checkedAt": "2026-08-26T03:38:10.232Z",
+  "expectedChecks": 56,
+  "passed": 56,
+  "failed": [],
+  "checks": [
+    {
+      "locale": "es",
+      "slug": "about-us",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/about-us/",
+      "htmlBytes": 95741,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "about-us",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/about-us/",
+      "htmlBytes": 95290,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "about-us",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/about-us/",
+      "htmlBytes": 96196,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "about-us",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/about-us/",
+      "htmlBytes": 99375,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "brand",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/brand/",
+      "htmlBytes": 83420,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "brand",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/brand/",
+      "htmlBytes": 83198,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "brand",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/brand/",
+      "htmlBytes": 83873,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "brand",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/brand/",
+      "htmlBytes": 86677,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "careers",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/careers/",
+      "htmlBytes": 69478,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "careers",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/careers/",
+      "htmlBytes": 69473,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "careers",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/careers/",
+      "htmlBytes": 69934,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "careers",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/careers/",
+      "htmlBytes": 71486,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "case-studies",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/case-studies/",
+      "htmlBytes": 92689,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "case-studies",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/case-studies/",
+      "htmlBytes": 92518,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "case-studies",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/case-studies/",
+      "htmlBytes": 93402,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "case-studies",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/case-studies/",
+      "htmlBytes": 97691,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "certifications",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/certifications/",
+      "htmlBytes": 91528,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "certifications",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/certifications/",
+      "htmlBytes": 90992,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "certifications",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/certifications/",
+      "htmlBytes": 91647,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "certifications",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/certifications/",
+      "htmlBytes": 96464,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "factory",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/factory/",
+      "htmlBytes": 88556,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "factory",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/factory/",
+      "htmlBytes": 88041,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "factory",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/factory/",
+      "htmlBytes": 88671,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "factory",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/factory/",
+      "htmlBytes": 91826,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "faq",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/faq/",
+      "htmlBytes": 113407,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "faq",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/faq/",
+      "htmlBytes": 111800,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "faq",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/faq/",
+      "htmlBytes": 116060,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "faq",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/faq/",
+      "htmlBytes": 124937,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "news",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/news/",
+      "htmlBytes": 191013,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "news",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/news/",
+      "htmlBytes": 189214,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "news",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/news/",
+      "htmlBytes": 192244,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "news",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/news/",
+      "htmlBytes": 199785,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "oem-odm",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/oem-odm/",
+      "htmlBytes": 102257,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "oem-odm",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/oem-odm/",
+      "htmlBytes": 102331,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "oem-odm",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/oem-odm/",
+      "htmlBytes": 103252,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "oem-odm",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/oem-odm/",
+      "htmlBytes": 107469,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "products",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/products/",
+      "htmlBytes": 415986,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "products",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/products/",
+      "htmlBytes": 399317,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "products",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/products/",
+      "htmlBytes": 417882,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "products",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/products/",
+      "htmlBytes": 452732,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "regions",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/regions/",
+      "htmlBytes": 68617,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "regions",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/regions/",
+      "htmlBytes": 68183,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "regions",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/regions/",
+      "htmlBytes": 68740,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "regions",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/regions/",
+      "htmlBytes": 70775,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "service",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/service/",
+      "htmlBytes": 95963,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "service",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/service/",
+      "htmlBytes": 95528,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "service",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/service/",
+      "htmlBytes": 96028,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "service",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/service/",
+      "htmlBytes": 99663,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "support",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/support/",
+      "htmlBytes": 87439,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "support",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/support/",
+      "htmlBytes": 86983,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "support",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/support/",
+      "htmlBytes": 87508,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "support",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/support/",
+      "htmlBytes": 90448,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "es",
+      "slug": "team",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/es/team/",
+      "htmlBytes": 77505,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "team",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/de/team/",
+      "htmlBytes": 77047,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "fr",
+      "slug": "team",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/fr/team/",
+      "htmlBytes": 77802,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "team",
+      "status": 200,
+      "finalUrl": "https://www.houseplus-ch.com/ar/team/",
+      "htmlBytes": 79748,
+      "expectedPageText": true,
+      "genericTemplate": false,
+      "pass": true
+    }
+  ]
+}

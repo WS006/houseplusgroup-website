@@ -30,6 +30,12 @@ import portableSsdVsExternalHdd from './portable-ssd-vs-external-hdd';
 import homeApplianceOemManufacturerGuide from './home-appliance-oem-manufacturer-guide-china';
 import airFryerSourcingGuide from './air-fryer-sourcing-guide-china';
 import kitchenAppliancesWholesaleGuide from './kitchen-appliances-wholesale-guide';
+import {
+  solarRfqChecklist,
+  applianceSampleEvaluation,
+  usbCProcurementGuide,
+  batteryRfqDataGuide,
+} from './august-2026-b2b-insights';
 
 // === Article Registry ===
 // This record is the single source of truth consumed by:
@@ -50,6 +56,10 @@ export const blogPosts: Record<string, BlogPost> = {
   'home-appliance-oem-manufacturer-guide-china': homeApplianceOemManufacturerGuide,
   'air-fryer-sourcing-guide-china': airFryerSourcingGuide,
   'kitchen-appliances-wholesale-guide': kitchenAppliancesWholesaleGuide,
+  'solar-panel-rfq-checklist-international-buyers': solarRfqChecklist,
+  'home-appliance-oem-sample-evaluation-checklist': applianceSampleEvaluation,
+  'usb-c-accessories-wholesale-specification-checklist': usbCProcurementGuide,
+  'battery-energy-storage-rfq-data-checklist': batteryRfqDataGuide,
 };
 
 // === Sorted list for blog index page (newest first) ===
