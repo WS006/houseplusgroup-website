@@ -16,7 +16,8 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
 
   const titles: Record<string, string> = {
@@ -255,7 +256,8 @@ const ctaCopy: Record<string, { title: string; description: string; contact: str
   ar: { title: 'وفّر حلول الطاقة الشمسية لعام 2026 من هاوس بلس', description: 'تواصل مع فريقنا للحصول على عروض أسعار للألواح الشمسية والمحولات وتخزين البطاريات. الحد الأدنى للطلب يبدأ من 100 قطعة، ومدة التوريد 20–35 يوماً، مع دعم كامل لشهادات CE وFCC وRoHS.', contact: 'تواصل مع هاوس بلس', back: '← العودة إلى جميع الأخبار والرؤى' },
 };
 
-export default async function BlogPostPage({ params }: { params: { lang: string } }) {
+export default async function BlogPostPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
   const content = articleContent[lang] || articleContent.en;
   const cta = ctaCopy[lang] || ctaCopy.en;

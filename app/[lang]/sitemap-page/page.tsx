@@ -17,10 +17,11 @@ export function generateStaticParams() {
 }
 
 interface SitemapPageProps {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }
 
-export async function generateMetadata({ params }: SitemapPageProps): Promise<Metadata> {
+export async function generateMetadata(props: SitemapPageProps): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
   const titles: Record<string, string> = {
     en: 'Sitemap - HousePlus Group',
@@ -185,7 +186,8 @@ function SitemapSection({
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────
-export default function SitemapPage({ params }: SitemapPageProps) {
+export default async function SitemapPage(props: SitemapPageProps) {
+  const params = await props.params;
   const { lang } = params;
   const t = labels[lang] ?? labels.en;
   const isRTL = lang === 'ar';

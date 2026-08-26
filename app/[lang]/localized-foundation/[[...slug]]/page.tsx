@@ -15,7 +15,8 @@ export function generateStaticParams() {
   return locales.flatMap((lang) => slugs.map((slug) => ({ lang, slug: [slug] })));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string; slug?: string[] } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string; slug?: string[] }> }): Promise<Metadata> {
+  const params = await props.params;
   const slug = pageSlug(params.slug) as FoundationPageSlug;
   const lang = params.lang as FoundationLocale;
   const copy = foundationPageCopy[slug]?.[lang];
@@ -31,7 +32,8 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
   });
 }
 
-export default function LocalizedFoundationRoute({ params }: { params: { lang: string; slug?: string[] } }) {
+export default async function LocalizedFoundationRoute(props: { params: Promise<{ lang: string; slug?: string[] }> }) {
+  const params = await props.params;
   const slug = pageSlug(params.slug) as FoundationPageSlug;
   const lang = params.lang as FoundationLocale;
   if (!foundationPageCopy[slug]?.[lang]) notFound();

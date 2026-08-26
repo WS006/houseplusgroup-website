@@ -166,13 +166,15 @@ const pageCopy: Record<Lang, PageCopy> = {
   },
 };
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const lang = (validLangs.includes(params.lang as Lang) ? params.lang : 'en') as Lang;
   const copy = pageCopy[lang];
   return generateSEOMetadata({ title: copy.title, description: copy.description, keywords: ['HousePlus case studies', 'wholesale clients', 'solar distributor', 'appliance importer', '3C electronics', 'B2B manufacturing', 'global export'], url: `/${lang}/case-studies`, lang, type: 'website' });
 }
 
-export default async function CaseStudiesPage({ params }: { params: { lang: string } }) {
+export default async function CaseStudiesPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const lang = (validLangs.includes(params.lang as Lang) ? params.lang : 'en') as Lang;
   const copy = pageCopy[lang];
   const organizationSchema = generateOrganizationSchema({ title: 'HousePlus', description: copy.organizationDescription, url: `https://www.houseplus-ch.com/${lang}/case-studies`, lang, type: 'Organization' });

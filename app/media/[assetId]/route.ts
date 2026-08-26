@@ -37,10 +37,12 @@ async function proxyMedia(request: NextRequest, assetId: string, omitBody = fals
   });
 }
 
-export async function GET(request: NextRequest, { params }: { params: { assetId: string } }) {
+export async function GET(request: NextRequest, props: { params: Promise<{ assetId: string }> }) {
+  const params = await props.params;
   return proxyMedia(request, params.assetId);
 }
 
-export async function HEAD(request: NextRequest, { params }: { params: { assetId: string } }) {
+export async function HEAD(request: NextRequest, props: { params: Promise<{ assetId: string }> }) {
+  const params = await props.params;
   return proxyMedia(request, params.assetId, true);
 }

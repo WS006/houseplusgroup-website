@@ -147,7 +147,7 @@ export async function POST(request: NextRequest) {
         const { data, error } = await resend.emails.send({
           from: 'HousePlus Inquiry <inquiry@houseplus-ch.com>',
           to: ['jack@houseplus-ch.com'],
-          reply_to: sanitizedData.email,
+          replyTo: sanitizedData.email,
           subject: `New Inquiry from ${sanitizedData.name}`,
           html: buildEmailTemplate(sanitizedData),
         });

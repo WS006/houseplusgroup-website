@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import test from 'node:test';
 
 const root = new URL('..', import.meta.url);
@@ -71,12 +71,8 @@ test('homepage logo uses a responsive Next Image and brand page distinguishes re
   assert.doesNotMatch(brand, /Over 8% of annual revenue/);
 });
 
-test('fallback error routes have a valid Pages Router Document context for production builds', () => {
-  const document = read('pages/_document.tsx');
-  assert.match(document, /from 'next\/document'/);
-  assert.match(document, /<Html lang="en">/);
-  assert.match(document, /<Main \/>/);
-  assert.match(document, /<NextScript \/>/);
+test('fallback error routes use the framework Document during production builds', () => {
+  assert.equal(existsSync(new URL('pages/_document.tsx', root)), false);
 });
 
 test('static Pages Router fallbacks do not depend on Document components', () => {

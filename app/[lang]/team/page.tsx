@@ -12,9 +12,10 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
-  
+
   const titles: Record<string, string> = {
     en: 'HousePlus Team - Experienced Professionals',
     es: 'Equipo HousePlus - Profesionales Experimentados',
@@ -41,7 +42,8 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
-export default async function TeamPage({ params }: { params: { lang: string } }) {
+export default async function TeamPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
 
   const organizationSchema = generateOrganizationSchema({

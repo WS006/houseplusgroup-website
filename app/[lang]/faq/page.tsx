@@ -12,9 +12,10 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
-  
+
   const titles: Record<string, string> = {
     en: 'HousePlus FAQ - Frequently Asked Questions',
     es: 'Preguntas Frecuentes HousePlus',
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
-export default async function FAQPage({ params }: { params: { lang: string } }) {
+export default async function FAQPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
 
   const faqs: Record<string, any[]> = {

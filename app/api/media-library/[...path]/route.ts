@@ -41,14 +41,17 @@ async function proxy(request: NextRequest, segments: string[]) {
   return new Response(upstream.body, { status: upstream.status, headers: responseHeaders });
 }
 
-export async function GET(request: NextRequest, { params }: { params: { path: string[] } }) {
+export async function GET(request: NextRequest, props: { params: Promise<{ path: string[] }> }) {
+  const params = await props.params;
   return proxy(request, params.path);
 }
 
-export async function POST(request: NextRequest, { params }: { params: { path: string[] } }) {
+export async function POST(request: NextRequest, props: { params: Promise<{ path: string[] }> }) {
+  const params = await props.params;
   return proxy(request, params.path);
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { path: string[] } }) {
+export async function PATCH(request: NextRequest, props: { params: Promise<{ path: string[] }> }) {
+  const params = await props.params;
   return proxy(request, params.path);
 }

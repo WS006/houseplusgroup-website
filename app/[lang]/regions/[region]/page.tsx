@@ -110,11 +110,12 @@ const regionBreadcrumbLabels: Record<string, string> = {
   ar: 'المناطق',
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: string; region: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ lang: string; region: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { lang, region } = params;
   if (legacyRegionAliases[region]) {
     return {
@@ -185,11 +186,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function RegionPage({
-  params,
-}: {
-  params: { lang: string; region: string };
-}) {
+export default async function RegionPage(
+  props: {
+    params: Promise<{ lang: string; region: string }>;
+  }
+) {
+  const params = await props.params;
   const { lang, region } = params;
   if (legacyRegionAliases[region]) {
     permanentRedirect(`/${lang}/regions/${legacyRegionAliases[region]}`);

@@ -55,7 +55,8 @@ test('invalid product slugs return a real noindex 404 instead of an indexable ge
 
 test('Contact inquiry prefill parameters retain form context without creating indexable duplicates', () => {
   const contactPage = read('app/[lang]/contact/page.tsx');
-  assert.match(contactPage, /searchParams\?: \{ product\?: string; region\?: string \}/);
+  assert.match(contactPage, /searchParams\?: Promise<\{ product\?: string; region\?: string \}>/);
+  assert.match(contactPage, /const searchParams = await props\.searchParams;/);
   assert.match(contactPage, /const isInquiryPrefill = typeof searchParams\?\.product === 'string' \|\| typeof searchParams\?\.region === 'string';/);
   assert.match(contactPage, /isInquiryPrefill \? \{ robots: 'noindex, follow' \} : \{\}/);
   assert.match(contactPage, /initialProduct=\{productContext\}/);

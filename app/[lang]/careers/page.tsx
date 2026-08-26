@@ -29,9 +29,10 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
-  
+
   const titles: Record<string, string> = {
     en: 'Careers at HousePlus - Join Our Global Team',
     es: 'Carreras en HousePlus - Únete a Nuestro Equipo Global',
@@ -58,7 +59,8 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
-export default async function CareersPage({ params }: { params: { lang: string } }) {
+export default async function CareersPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
   const locale = (validLangs as readonly string[]).includes(lang) ? lang : 'en';
   const t = careerCopy[locale];

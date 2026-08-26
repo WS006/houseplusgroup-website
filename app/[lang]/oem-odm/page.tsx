@@ -13,7 +13,8 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
 
   const titles: Record<string, string> = {
@@ -800,7 +801,8 @@ const copy: Record<string, Copy> = {
   },
 };
 
-export default async function OemOdmPage({ params }: { params: { lang: string } }) {
+export default async function OemOdmPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
   const t = copy[lang] || copy['en'];
 

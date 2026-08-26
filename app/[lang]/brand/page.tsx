@@ -161,7 +161,8 @@ const copy: Record<string, BrandCopy> = {
   },
 };
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const current = copy[params.lang] || copy.en;
   return generateSEOMetadata({
     title: current.title,
@@ -173,7 +174,8 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
-export default function BrandPage({ params }: { params: { lang: string } }) {
+export default async function BrandPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const lang = validLangs.includes(params.lang) ? params.lang : 'en';
   const current = copy[lang];
   const facts = getCompanyFacts(lang);

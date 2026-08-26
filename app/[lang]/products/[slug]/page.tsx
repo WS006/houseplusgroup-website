@@ -122,11 +122,12 @@ const categoryLabels: Record<string, Record<string, string>> = {
   ar: { solar: 'أنظمة الطاقة الشمسية', appliances: 'الأجهزة المنزلية', electronics: 'إلكترونيات 3C' },
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: string; slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ lang: string; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { lang, slug } = params;
   const baseProduct = PRODUCT_DATA[slug];
   if (!baseProduct || !validLangs.includes(lang)) {
@@ -218,11 +219,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProductDetailPage({
-  params,
-}: {
-  params: { lang: string; slug: string };
-}) {
+export default async function ProductDetailPage(
+  props: {
+    params: Promise<{ lang: string; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const { lang, slug } = params;
   const baseProduct = PRODUCT_DATA[slug];
   if (!baseProduct || !validLangs.includes(lang)) {

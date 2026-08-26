@@ -20,7 +20,11 @@ const copy: Record<Locale, Record<string, string>> = {
 export const dynamicParams = false;
 export function generateStaticParams() { return validLangs.map((lang) => ({ lang })); }
 
-export async function generateMetadata({ params, searchParams }: { params: { lang: string }; searchParams?: { product?: string; region?: string } }): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: Promise<{ lang: string }>; searchParams?: Promise<{ product?: string; region?: string }> }
+): Promise<Metadata> {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
   const isInquiryPrefill = typeof searchParams?.product === 'string' || typeof searchParams?.region === 'string';
   return {
@@ -31,7 +35,11 @@ export async function generateMetadata({ params, searchParams }: { params: { lan
   };
 }
 
-export default function ContactPage({ params, searchParams }: { params: { lang: string }; searchParams?: { product?: string; region?: string } }) {
+export default async function ContactPage(
+  props: { params: Promise<{ lang: string }>; searchParams?: Promise<{ product?: string; region?: string }> }
+) {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
   const t = copy[lang];
   const productContext = typeof searchParams?.product === 'string' ? searchParams.product.slice(0, 200) : '';

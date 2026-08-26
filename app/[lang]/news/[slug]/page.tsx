@@ -83,11 +83,12 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: string; slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ lang: string; slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { lang, slug } = params;
   const basePost = blogPosts[slug];
   if (!basePost) return {};
@@ -113,11 +114,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { lang: string; slug: string };
-}) {
+export default async function BlogPostPage(
+  props: {
+    params: Promise<{ lang: string; slug: string }>;
+  }
+) {
+  const params = await props.params;
   const { lang, slug } = params;
   const basePost: BlogPost | undefined = blogPosts[slug];
 

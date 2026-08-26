@@ -26,7 +26,8 @@ type PageCopy = {
 export const dynamicParams = false;
 export function generateStaticParams() { return validLangs.map((lang) => ({ lang })); }
 
-export async function generateMetadata({ params }: { params: { lang: string } }) {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
   const titles: Record<string, string> = {
     en: 'HousePlus Global Wholesale Markets - Africa, Southeast Asia, Europe', es: 'Mercados Mayoristas Globales de HousePlus - África, Sudeste Asiático, Europa', de: 'HousePlus Globale Großhandelsmärkte - Afrika, Südostasien, Europa', fr: 'Marchés de Gros Mondiaux HousePlus - Afrique, Asie du Sud-Est, Europe', ar: 'أسواق الجملة العالمية HousePlus - أفريقيا، جنوب شرق آسيا، أوروبا',
@@ -67,7 +68,8 @@ const copy: Record<Locale, PageCopy> = {
 
 function getLocale(value: string): Locale { return (validLangs as readonly string[]).includes(value) ? value as Locale : 'en'; }
 
-export default async function RegionsPage({ params }: { params: { lang: string } }) {
+export default async function RegionsPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const locale = getLocale(params.lang);
   const t = copy[locale];
   const schemas = [generateOrganizationSchema({ title: 'HousePlus', description: schemaDescriptions[locale], url: `https://www.houseplus-ch.com/${locale}/regions`, lang: locale, type: 'Organization' })];

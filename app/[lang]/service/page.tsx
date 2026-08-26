@@ -13,7 +13,8 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
 
   const titles: Record<string, string> = {
@@ -625,7 +626,8 @@ const copy: Record<Lang, Copy> = {
   },
 };
 
-export default async function ServicePage({ params }: { params: { lang: string } }) {
+export default async function ServicePage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
   const activeLang: Lang = (['en', 'es', 'de', 'fr', 'ar'] as Lang[]).includes(lang as Lang) ? (lang as Lang) : 'en';
   const t = copy[activeLang];

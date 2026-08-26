@@ -29,7 +29,11 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params, searchParams }: { params: { lang: string }; searchParams?: { category?: string } }): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: Promise<{ lang: string }>; searchParams?: Promise<{ category?: string }> }
+): Promise<Metadata> {
+  const searchParams = await props.searchParams;
+  const params = await props.params;
   const { lang } = params;
   const category = searchParams?.category;
 
@@ -215,7 +219,8 @@ function getImageTitle(product: ProductListItem) {
   return `${product.name} ${model} | HousePlus ${cat} Export`;
 }
 
-export default async function ProductsPage({ params }: { params: { lang: string } }) {
+export default async function ProductsPage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
   const locale = (validLangs.includes(lang as Lang) ? lang : 'en') as Lang;
   const copy = productPageCopy[locale];

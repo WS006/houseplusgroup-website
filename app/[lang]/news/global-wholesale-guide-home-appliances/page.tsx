@@ -16,7 +16,8 @@ export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { lang } = params;
   const titles: Record<string, string> = {
     en: 'Wholesale Home Appliances: Global B2B Sourcing Guide | HousePlus',
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: { params: { lang: string } })
   });
 }
 
-export default async function ArticlePage({ params }: { params: { lang: string } }) {
+export default async function ArticlePage(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
   const { lang } = params;
 
   const breadcrumbs = [
