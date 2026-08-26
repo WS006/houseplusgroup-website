@@ -31,6 +31,19 @@ export interface ProductRecommendation {
   image: string;
 }
 
+export interface BlogVideo {
+  name: string;
+  description: string;
+  contentUrl: string;
+  poster: string;
+  duration: string;
+  width: number;
+  height: number;
+  uploadDate: string;
+  captionsUrl?: string;
+  transcript?: string;
+}
+
 export interface BlogPost {
   /** URL slug — kebab-case, contains target keyword */
   slug: string;
@@ -64,4 +77,6 @@ export interface BlogPost {
   relatedArticles: RelatedArticle[];
   /** Product recommendations for conversion sidebar */
   productRecommendations: ProductRecommendation[];
+  /** Optional embedded video with accessible metadata */
+  video?: BlogVideo;
 }

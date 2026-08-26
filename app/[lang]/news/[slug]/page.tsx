@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import ArticleMeta from '@/components/ArticleMeta';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateArticleSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { generateArticleSchema, generateFAQSchema, generateVideoObjectSchema } from '@/lib/schema-generator';
 import { blogPosts, blogSlugs } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data/types';
 import { getLocalizedArticle } from '@/lib/localized-content';
@@ -141,8 +141,27 @@ export default async function BlogPostPage({
 
   const faqSchema =
     post.faqs && post.faqs.length > 0 ? generateFAQSchema(post.faqs) : null;
+  const videoSchema = post.video
+    ? generateVideoObjectSchema({
+        name: post.video.name,
+        description: post.video.description,
+        contentUrl: post.video.contentUrl,
+        thumbnailUrl: post.video.poster,
+        duration: post.video.duration,
+        width: post.video.width,
+        height: post.video.height,
+        uploadDate: post.video.uploadDate,
+        embedUrl: articleUrl,
+        inLanguage: lang,
+        captionUrl: post.video.captionsUrl,
+        transcript: post.video.transcript,
+      })
+    : null;
 
-  const schemas: Record<string, any>[] = [articleSchema];
+  const schemas: Record<string, any>[] = [
+    articleSchema,
+    ...(videoSchema ? [videoSchema] : []),
+  ];
   if (faqSchema) {
     schemas.push(faqSchema);
   }
@@ -191,6 +210,38 @@ export default async function BlogPostPage({
           decoding="async"
         />
       </figure>
+
+      {post.video && (
+        <figure className="mx-auto mt-10 max-w-3xl px-4">
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-xl">
+            <video
+              className="mx-auto max-h-[720px] w-full object-contain"
+              controls
+              preload="metadata"
+              poster={post.video.poster}
+              width={post.video.width}
+              height={post.video.height}
+              title={post.video.name}
+              aria-label={post.video.description}
+              playsInline
+            >
+              {post.video.captionsUrl && (
+                <track
+                  kind="captions"
+                  src={post.video.captionsUrl}
+                  srcLang="en"
+                  label="English captions"
+                  default
+                />
+              )}
+              Your browser does not support the HTML video element.
+            </video>
+          </div>
+          <figcaption className="mt-3 text-center text-sm leading-6 text-slate-600">
+            {post.video.description} The displayed specifications are for product reference and should be confirmed for the selected model and destination.
+          </figcaption>
+        </figure>
+      )}
 
       {/* Article Body + Sidebar */}
       <div className="max-w-6xl mx-auto py-16 px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">

@@ -156,6 +156,7 @@ export const newsSlugs = [
   'home-appliance-oem-sample-evaluation-checklist',
   'usb-c-accessories-wholesale-specification-checklist',
   'battery-energy-storage-rfq-data-checklist',
+  'portable-power-supply-solar-storage-b2b-guide',
 ];
 
 // Generate ALL URLs from the single source of truth

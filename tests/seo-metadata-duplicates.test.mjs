@@ -138,3 +138,19 @@ test('localized region detail pages expose a visible Breadcrumb and localized Br
   assert.match(breadcrumb, /labelOverrides\?\.\[segment\] \|\| pageLabels\[segment\]/);
   assert.match(breadcrumb, /'@type': 'BreadcrumbList'/);
 });
+
+
+test('portable power supply article publishes an accessible video and VideoObject metadata', () => {
+  const article = read('lib/blog-data/august-2026-b2b-insights.ts');
+  const registry = read('lib/blog-data/index.ts');
+  const page = read('app/[lang]/news/[slug]/page.tsx');
+  const schema = read('lib/schema-generator.ts');
+  assert.match(registry, /portable-power-supply-solar-storage-b2b-guide/);
+  assert.match(article, /duration: 'PT42S'/);
+  assert.match(article, /width: 1440, height: 2560/);
+  assert.match(article, /captionsUrl:/);
+  assert.match(page, /<video/);
+  assert.match(page, /<track/);
+  assert.match(page, /generateVideoObjectSchema/);
+  assert.match(schema, /'@type': 'VideoObject'/);
+});

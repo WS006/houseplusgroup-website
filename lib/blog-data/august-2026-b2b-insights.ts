@@ -138,5 +138,57 @@ export const batteryRfqDataGuide: BlogPost = {
     { question: 'Can nominal battery capacity be compared without other data?', answer: 'Not reliably. Usable energy, power limits, operating conditions, system losses and test definitions should also be reviewed.' },
     { question: 'Are warranty and cycle-life terms universal?', answer: 'No. They depend on configuration, operating conditions, destination and contract scope and must be confirmed in writing.' }
   ],
-  relatedArticles: [related('lifepo4-vs-lead-acid-battery', 'battery technology comparison'), related('solar-energy-storage-industrial-manufacturing', 'industrial solar storage')], productRecommendations: []
+  relatedArticles: [related('lifepo4-vs-lead-acid-battery', 'battery technology comparison'), related('solar-energy-storage-industrial-manufacturing', 'industrial solar storage')], productRecommendations: [],
+  video: {
+    name: 'HousePlus Portable Power Supply and Solar Energy Storage Product Overview',
+    description: 'A 42-second HousePlus product overview showing portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. Specifications shown in the video should be confirmed for the selected model and destination.',
+    contentUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products_6e7eef30.mp4',
+    poster: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg',
+    duration: 'PT42S', width: 1440, height: 2560, uploadDate: '2026-08-26',
+    captionsUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-captions_73816408.vtt',
+    transcript: 'The video presents HousePlus solar energy storage and mobile power supply products, including QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, folding solar panels, a LiFePO4 battery and industrial storage equipment. It contains background music and on-screen English product information without spoken narration.'
+  }
+};
+
+export const portablePowerB2bGuide: BlogPost = {
+  slug: 'portable-power-supply-solar-storage-b2b-guide',
+  title: 'Portable Power Supply and Solar Storage: A B2B Product Evaluation Guide',
+  description: 'Review portable power supply and solar storage products for B2B sourcing with a practical guide to specifications, applications, documentation and RFQ preparation.',
+  keywords: 'portable power supply B2B, solar storage sourcing, mobile power station procurement, LiFePO4 battery RFQ, portable solar generator OEM',
+  author, authorRole: role, datePublished: '2026-08-26', dateModified: '2026-08-26', readingTime: '8 min read', category: 'Solar & Storage',
+  heroImage: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg',
+  heroImageAlt: 'HousePlus portable power supply and solar storage products shown in a B2B product overview video',
+  sections: [
+    { heading: 'What the HousePlus product overview shows', paragraphs: [
+      'The accompanying video presents a visual overview of HousePlus solar energy storage and mobile power supply products. It shows a home solar storage illustration, several portable power supply models, folding solar panels, a LiFePO4 battery and an industrial storage cabinet. On-screen product information is presented for reference; buyers should confirm the selected model specification before using it in a quotation or product listing.',
+      'The video uses background music and on-screen English text rather than spoken narration. The caption track summarizes the visible sequence so buyers can understand the content without audio and search systems can associate the media with the surrounding article.'
+    ] },
+    { heading: 'How to read a portable power supply specification', paragraphs: [
+      'Start with the distinction between battery energy, rated output power, ports and operating conditions. A product may show separate values for stored energy and AC output, so a buyer should not treat one number as a complete description of expected runtime or supported loads.',
+      'Record the exact model, dimensions, weight, input methods, output interfaces, protection functions and accessories. If a video shows several models in a short sequence, keep each model in a separate RFQ line to avoid mixing specifications between products.'
+    ] },
+    { heading: 'Match the configuration to the application', paragraphs: [
+      'Portable systems may be evaluated for emergency backup, outdoor use, mobile work, household loads or integration with folding solar panels. The right configuration depends on the load profile, recharge method, environment, transport needs and destination-market requirements.',
+      'For commercial or industrial storage, the inquiry should also cover installation conditions, system boundaries, communication interfaces, maintenance responsibilities and grid or inverter integration. These questions should be answered by the selected project team rather than inferred from a short product video.'
+    ] },
+    { heading: 'Prepare a responsible B2B inquiry', paragraphs: [
+      'A clear inquiry includes the target market, quantity by model, preferred branding and packaging, required documents, inspection expectations, delivery location and requested commercial basis. Ask the supplier to identify which information is standard, which requires engineering confirmation and which depends on the final configuration.',
+      'Performance, safety, transport, after-sales and delivery terms must be confirmed for the selected model and destination. HousePlus can review a specific product brief and return applicable documentation and commercial options; this article is a preparation guide, not a substitute for the final quotation.'
+    ] }
+  ],
+  faqs: [
+    { question: 'What products appear in the HousePlus video?', answer: 'The video shows portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment alongside a home solar storage illustration.' },
+    { question: 'Can the specifications shown in the video be used as a final quotation?', answer: 'No. They are visual product references. Confirm the exact model, configuration, destination and current documentation before preparing a quotation.' },
+    { question: 'Does the video include spoken narration?', answer: 'No spoken narration was identified. It uses background music and on-screen English product information, with an English caption track added for accessibility.' }
+  ],
+  relatedArticles: [related('battery-energy-storage-rfq-data-checklist', 'battery storage RFQ data'), related('solar-energy-storage-industrial-manufacturing', 'industrial solar storage')], productRecommendations: [],
+  video: {
+    name: 'HousePlus Portable Power Supply and Solar Energy Storage Product Overview',
+    description: 'A 42-second visual overview of HousePlus portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. Product specifications shown on screen require confirmation for the selected model and destination.',
+    contentUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products_6e7eef30.mp4',
+    poster: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-factory-solar-products-poster_dca13d63.jpg',
+    duration: 'PT42S', width: 1440, height: 2560, uploadDate: '2026-08-26',
+    captionsUrl: 'https://www.houseplus-ch.com/manus-storage/houseplus-portable-power-supply-captions_73816408.vtt',
+    transcript: 'The video presents HousePlus solar energy storage and mobile power supply products, including portable power supplies, folding solar panels, a LiFePO4 battery and industrial energy storage equipment. It contains background music and on-screen English product information without spoken narration.'
+  }
 };

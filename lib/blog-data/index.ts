@@ -35,6 +35,7 @@ import {
   applianceSampleEvaluation,
   usbCProcurementGuide,
   batteryRfqDataGuide,
+  portablePowerB2bGuide,
 } from './august-2026-b2b-insights';
 
 // === Article Registry ===
@@ -60,6 +61,7 @@ export const blogPosts: Record<string, BlogPost> = {
   'home-appliance-oem-sample-evaluation-checklist': applianceSampleEvaluation,
   'usb-c-accessories-wholesale-specification-checklist': usbCProcurementGuide,
   'battery-energy-storage-rfq-data-checklist': batteryRfqDataGuide,
+  'portable-power-supply-solar-storage-b2b-guide': portablePowerB2bGuide,
 };
 
 // === Sorted list for blog index page (newest first) ===

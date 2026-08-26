@@ -712,6 +712,45 @@ export interface ArticleSchemaOptions {
   url?: string;
 }
 
+export interface VideoObjectSchemaOptions {
+  name: string;
+  description: string;
+  contentUrl: string;
+  thumbnailUrl: string;
+  duration: string;
+  width: number;
+  height: number;
+  uploadDate: string;
+  embedUrl: string;
+  inLanguage?: string;
+  captionUrl?: string;
+  transcript?: string;
+}
+
+export function generateVideoObjectSchema(options: VideoObjectSchemaOptions) {
+  const inLanguage = options.inLanguage || 'en';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    '@id': `${options.embedUrl}#video`,
+    name: options.name,
+    description: options.description,
+    contentUrl: options.contentUrl,
+    embedUrl: options.embedUrl,
+    thumbnailUrl: [options.thumbnailUrl],
+    uploadDate: options.uploadDate,
+    duration: options.duration,
+    width: options.width,
+    height: options.height,
+    inLanguage,
+    isFamilyFriendly: true,
+    publisher: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
+    ...HOUSEPLUS_IMAGE_RIGHTS,
+    ...(options.captionUrl ? { caption: options.captionUrl } : {}),
+    ...(options.transcript ? { transcript: options.transcript } : {}),
+  };
+}
+
 // Article / BlogPosting Schema - 统一品牌实体为 HousePlus Group，邮箱 jack@houseplus-ch.com
 export function generateArticleSchema(options: ArticleSchemaOptions) {
   const {
