@@ -295,10 +295,24 @@ test('news listing preserves localized dynamic article hero Alt text for every l
   const localizedArticles = read('lib/localized-content/articles.json');
   assert.match(newsPage, /type LocalizedArticleSummary = \{ title\?: string; description\?: string; heroImageAlt\?: string \}/);
   assert.match(newsPage, /localized\?\.\[locale\]\?\.heroImageAlt \|\| post\.heroImageAlt/);
-  assert.match(newsPage, /const imageAltFor = \(imageAlt: string \| Record<string, string>\)/);
-  assert.match(newsPage, /alt=\{imageAltFor\(featuredArticle\.imageAlt\)\}/);
-  assert.match(newsPage, /alt=\{imageAltFor\(article\.imageAlt\)\}/);
+  assert.match(newsPage, /const imageAltFor = \(slug: string, imageAlt: string \| Record<string, string>\)/);
+  assert.match(newsPage, /getLocalizedStaticNewsImageAlt\(slug, lang, imageAlt\)/);
+  assert.match(newsPage, /alt=\{imageAltFor\(featuredArticle\.slug, featuredArticle\.imageAlt\)\}/);
+  assert.match(newsPage, /alt=\{imageAltFor\(article\.slug, article\.imageAlt\)\}/);
   assert.match(localizedArticles, /"portable-power-supply-solar-storage-b2b-guide"[\s\S]*"heroImageAlt"/);
+});
+
+test('all audited static news covers have a localized descriptive Alt mapping', () => {
+  const imageSemantics = read('lib/localized-content/image-semantics.ts');
+  for (const slug of [
+    'consumer-electronics-battery-life-testing', 'appliance-energy-efficiency-vs-actual-consumption',
+    'solar-storage-efficiency-optimization-guide', '2026-solar-market-update', '2026-appliances-market-update',
+    '2026-electronics-market-update', '2026-smart-home-appliances-market-guide', 'solar-energy-storage-industrial-manufacturing',
+    'oem-odm-manufacturing-guide', 'energy-efficiency-standards-appliances', 'global-wholesale-guide-home-appliances',
+    'advanced-manufacturing-home-appliances', 'the-future-of-smart-home-appliances', 'smart-home-appliances',
+    'solar-energy-storage-solutions', 'the-evolution-of-3c-electronics', 'the-future-of-solar-energy',
+  ]) assert.match(imageSemantics, new RegExp(`'${slug}'`));
+  assert.match(imageSemantics, /getLocalizedStaticNewsImageAlt/);
 });
 
 test('news listing delivers R2 covers through responsive Next Image with only the featured cover prioritized', () => {
@@ -306,8 +320,8 @@ test('news listing delivers R2 covers through responsive Next Image with only th
   assert.match(newsPage, /import Image from 'next\/image';/);
   assert.match(newsPage, /sizes="\(max-width: 1023px\) 100vw, 58vw"/);
   assert.match(newsPage, /sizes="\(max-width: 767px\) 100vw, \(max-width: 1023px\) 50vw, 33vw"/);
-  assert.match(newsPage, /alt=\{imageAltFor\(featuredArticle\.imageAlt\)\}[\s\S]*priority/s);
-  assert.match(newsPage, /alt=\{imageAltFor\(article\.imageAlt\)\}[\s\S]*loading="lazy"/s);
+  assert.match(newsPage, /alt=\{imageAltFor\(featuredArticle\.slug, featuredArticle\.imageAlt\)\}[\s\S]*priority/s);
+  assert.match(newsPage, /alt=\{imageAltFor\(article\.slug, article\.imageAlt\)\}[\s\S]*loading="lazy"/s);
 });
 
 test('priority article covers have image-specific localized titles on both listing and detail pages', () => {

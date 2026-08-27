@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { sortedBlogPosts } from '@/lib/blog-data';
 import localizedArticles from '@/lib/localized-content/articles.json';
-import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-semantics';
+import { getLocalizedArticleImageTitle, getLocalizedStaticNewsImageAlt } from '@/lib/localized-content/image-semantics';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -447,11 +447,13 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
   };
   const featuredArticle = articles[0];
   const articleGrid = articles.slice(1);
-  const imageAltFor = (imageAlt: string | Record<string, string>) => (
-    typeof imageAlt === 'string' ? imageAlt : imageAlt[lang] || imageAlt.en
+  const imageAltFor = (slug: string, imageAlt: string | Record<string, string>) => (
+    typeof imageAlt === 'string'
+      ? getLocalizedStaticNewsImageAlt(slug, lang, imageAlt)
+      : imageAlt[lang] || imageAlt.en
   );
   const imageTitleFor = (slug: string, imageAlt: string | Record<string, string>, fallback: string) => (
-    getLocalizedArticleImageTitle(slug, lang, fallback || imageAltFor(imageAlt))
+    getLocalizedArticleImageTitle(slug, lang, fallback || imageAltFor(slug, imageAlt))
   );
 
   return (
@@ -478,7 +480,7 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
             <figure className="relative min-h-[17rem] overflow-hidden bg-slate-100 md:min-h-[25rem]">
               <Image
                 src={featuredArticle.image}
-                alt={imageAltFor(featuredArticle.imageAlt)}
+                alt={imageAltFor(featuredArticle.slug, featuredArticle.imageAlt)}
                 title={imageTitleFor(featuredArticle.slug, featuredArticle.imageAlt, featuredArticle.title[lang as keyof typeof featuredArticle.title] || featuredArticle.title.en)}
                 fill
                 sizes="(max-width: 1023px) 100vw, 58vw"
@@ -516,7 +518,7 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
               <figure className="relative aspect-[16/10] overflow-hidden bg-slate-100 md:aspect-video">
                 <Image
                   src={article.image}
-                  alt={imageAltFor(article.imageAlt)}
+                  alt={imageAltFor(article.slug, article.imageAlt)}
                   title={imageTitleFor(article.slug, article.imageAlt, article.title[lang as keyof typeof article.title] || article.title.en)}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
