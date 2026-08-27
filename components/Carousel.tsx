@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback, useRef } from 'react';
+import type { TouchEvent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -32,6 +33,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(() => new Set([0]));
   const [initialSlideReady, setInitialSlideReady] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const touchStartXRef = useRef<number | null>(null);
   const localeCopy: Record<string, { badge: string; quote: string; previous: string; next: string; goTo: string; slides: Array<Pick<CarouselItem, 'title' | 'subtitle' | 'button_text'>> }> = {
     en: { badge: 'HousePlus — Global Wholesale Manufacturer', quote: 'Get a Quote', previous: 'Previous slide', next: 'Next slide', goTo: 'Go to slide', slides: [{ title: 'High-Efficiency Solar Solutions', subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners', button_text: 'Explore Solar Products' }, { title: 'Smart Home Appliances', subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support', button_text: 'View Appliances' }, { title: '3C Electronics & Accessories', subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers', button_text: 'View Electronics' }] },
     es: { badge: 'HousePlus — Fabricante mayorista global', quote: 'Solicitar cotización', previous: 'Diapositiva anterior', next: 'Diapositiva siguiente', goTo: 'Ir a la diapositiva', slides: [{ title: 'Soluciones solares de alta eficiencia', subtitle: 'Paneles solares, inversores y estaciones de energía portátiles de grado profesional para socios mayoristas globales', button_text: 'Explorar productos solares' }, { title: 'Electrodomésticos inteligentes', subtitle: 'Electrodomésticos de cocina y hogar eficientes con soporte completo de personalización OEM/ODM', button_text: 'Ver electrodomésticos' }, { title: 'Electrónica y accesorios 3C', subtitle: 'Auriculares, relojes inteligentes, SSD portátiles y accesorios de carga para consumidores modernos', button_text: 'Ver electrónica' }] },
@@ -117,6 +119,18 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
+  const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    touchStartXRef.current = event.touches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
+    const startX = touchStartXRef.current;
+    const endX = event.changedTouches[0]?.clientX;
+    touchStartXRef.current = null;
+    if (startX === null || endX === undefined || Math.abs(startX - endX) < 48) return;
+    handleManualAction(startX > endX ? goToNext : goToPrevious);
+  };
+
   const formatLink = (link: any) => {
     if (!link) return `/${lang}/products`;
     let url = link.cached_url || link.url || '';
@@ -138,9 +152,12 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
 
   return (
     <div
+      data-carousel="home"
       className="relative w-full h-[520px] md:h-[680px] overflow-hidden group bg-slate-800"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {displayItems.map((item, index) => (
         <div
@@ -218,6 +235,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             onClick={() => handleManualAction(() => goToSlide(index))}
             className="relative flex h-11 min-w-11 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             aria-label={`${copy.goTo} ${index + 1}`}
+            aria-current={index === currentIndex ? 'true' : undefined}
           >
             <span
               aria-hidden="true"

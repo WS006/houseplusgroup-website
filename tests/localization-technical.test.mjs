@@ -389,6 +389,10 @@ test('homepage carousel defers transparent non-active slide image requests until
   assert.match(carousel, /setTimeout\(\(\) => markSlideLoaded\(nextIndex\), 1500\)/);
   assert.match(carousel, /\{loadedIndexes\.has\(index\) && \(/);
   assert.match(carousel, /onLoad=\{index === 0 \? \(\) => setInitialSlideReady\(true\) : undefined\}/);
+  assert.match(carousel, /onTouchStart=\{handleTouchStart\}/);
+  assert.match(carousel, /onTouchEnd=\{handleTouchEnd\}/);
+  assert.match(carousel, /Math\.abs\(startX - endX\) < 48/);
+  assert.match(carousel, /aria-current=\{index === currentIndex \? 'true' : undefined\}/);
 });
 
 test('all static news routes are included in the RSS source without replaying unverified commercial claims', () => {
