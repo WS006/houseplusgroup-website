@@ -101,7 +101,7 @@ const articleContent: Record<string, any> = {
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    heroImageAlt: 'Exposición de productos de electrónica 3C de HousePlus',
                     sections: [
       {
         heading: '¿Cuáles Son las Tendencias Clave de la Industria Electrónica 2026?',
@@ -141,7 +141,7 @@ const articleContent: Record<string, any> = {
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    heroImageAlt: 'HousePlus 3C-Elektronik-Produktpräsentation',
                     sections: [
       {
         heading: 'Was Sind die Wichtigsten Elektronikindustrie-Trends 2026?',
@@ -181,7 +181,7 @@ const articleContent: Record<string, any> = {
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    heroImageAlt: 'Présentation de produits électroniques 3C HousePlus',
                     sections: [
       {
         heading: 'Quelles Sont les Principales Tendances de l\'Industrie Électronique 2026 ?',
@@ -221,7 +221,7 @@ const articleContent: Record<string, any> = {
     datePublished: '2026-04-17',
     dateModified: '2026-07-18',
     heroImage: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/',
-    heroImageAlt: 'HousePlus 3C electronics product showcase',
+    heroImageAlt: 'عرض منتجات إلكترونيات 3C من HousePlus',
                     sections: [
       {
         heading: 'ما هي أهم اتجاهات صناعة الإلكترونيات لعام 2026؟',

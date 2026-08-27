@@ -315,6 +315,14 @@ test('all audited static news covers have a localized descriptive Alt mapping', 
   assert.match(imageSemantics, /getLocalizedStaticNewsImageAlt/);
 });
 
+test('2026 electronics market article keeps its non-English hero Alt text localized', () => {
+  const article = read('app/[lang]/news/2026-electronics-market-update/page.tsx');
+  assert.match(article, /heroImageAlt: 'Exposición de productos de electrónica 3C de HousePlus'/);
+  assert.match(article, /heroImageAlt: 'HousePlus 3C-Elektronik-Produktpräsentation'/);
+  assert.match(article, /heroImageAlt: 'Présentation de produits électroniques 3C HousePlus'/);
+  assert.match(article, /heroImageAlt: 'عرض منتجات إلكترونيات 3C من HousePlus'/);
+});
+
 test('news listing delivers R2 covers through responsive Next Image with only the featured cover prioritized', () => {
   const newsPage = read('app/[lang]/news/page.tsx');
   assert.match(newsPage, /import Image from 'next\/image';/);
