@@ -12,6 +12,9 @@ const nextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
     ],
     dangerouslyAllowSVG: true,
+    // Product and editorial images are public visual assets. Keep optimized
+    // responses viewable in a new tab rather than forcing an attachment download.
+    contentDispositionType: 'inline',
   },
   compress: true,
   // Keep browser source maps available for production error diagnostics.
