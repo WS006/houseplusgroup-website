@@ -29,6 +29,8 @@ interface CarouselProps {
 export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(() => new Set([0]));
+  const [initialSlideReady, setInitialSlideReady] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const localeCopy: Record<string, { badge: string; quote: string; previous: string; next: string; goTo: string; slides: Array<Pick<CarouselItem, 'title' | 'subtitle' | 'button_text'>> }> = {
     en: { badge: 'HousePlus — Global Wholesale Manufacturer', quote: 'Get a Quote', previous: 'Previous slide', next: 'Next slide', goTo: 'Go to slide', slides: [{ title: 'High-Efficiency Solar Solutions', subtitle: 'Professional-grade solar panels, inverters and portable power stations for global wholesale partners', button_text: 'Explore Solar Products' }, { title: 'Smart Home Appliances', subtitle: 'Energy-efficient kitchen and household appliances with full OEM/ODM customisation support', button_text: 'View Appliances' }, { title: '3C Electronics & Accessories', subtitle: 'Premium headphones, smart watches, portable SSDs and charging accessories for modern consumers', button_text: 'View Electronics' }] },
@@ -65,17 +67,27 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
 
   const displayItems = items && items.length > 0 ? items : defaultItems;
 
-  const goToNext = useCallback(() => {
-    setCurrentIndex((previousIndex) => (previousIndex + 1) % displayItems.length);
-  }, [displayItems.length]);
-
-  const goToPrevious = useCallback(() => {
-    setCurrentIndex((previousIndex) => (previousIndex - 1 + displayItems.length) % displayItems.length);
-  }, [displayItems.length]);
+  const markSlideLoaded = useCallback((index: number) => {
+    setLoadedIndexes((previousIndexes) => {
+      if (previousIndexes.has(index)) return previousIndexes;
+      const nextIndexes = new Set(previousIndexes);
+      nextIndexes.add(index);
+      return nextIndexes;
+    });
+  }, []);
 
   const goToSlide = useCallback((index: number) => {
+    markSlideLoaded(index);
     setCurrentIndex(index);
-  }, []);
+  }, [markSlideLoaded]);
+
+  const goToNext = useCallback(() => {
+    goToSlide((currentIndex + 1) % displayItems.length);
+  }, [currentIndex, displayItems.length, goToSlide]);
+
+  const goToPrevious = useCallback(() => {
+    goToSlide((currentIndex - 1 + displayItems.length) % displayItems.length);
+  }, [currentIndex, displayItems.length, goToSlide]);
 
   useEffect(() => {
     if (displayItems.length <= 1 || !isAutoPlaying) {
@@ -87,6 +99,17 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [displayItems, isAutoPlaying, autoPlayInterval, goToNext]);
+
+  // Transparent absolute slides still sit in the browser's viewport geometry,
+  // so native lazy loading can request them during the initial navigation.
+  // Keep first-view bandwidth for the LCP slide, then prepare only the next
+  // slide after the first image has completed.
+  useEffect(() => {
+    if (!initialSlideReady || displayItems.length <= 1) return;
+    const nextIndex = (currentIndex + 1) % displayItems.length;
+    const preloadTimer = window.setTimeout(() => markSlideLoaded(nextIndex), 1500);
+    return () => window.clearTimeout(preloadTimer);
+  }, [currentIndex, displayItems.length, initialSlideReady, markSlideLoaded]);
 
   const handleManualAction = (action: () => void) => {
     setIsAutoPlaying(false);
@@ -126,17 +149,20 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
             index === currentIndex ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 scale-105 pointer-events-none'
           }`}
         >
-          <Image
-            src={item.image.filename}
-            alt={item.image.alt || item.title}
-            title={item.image.alt || item.title}
-            fill
-            sizes="(max-width: 767px) 100vw, 1400px"
-            priority={index === 0}
-            loading={index === 0 ? 'eager' : 'lazy'}
-            fetchPriority={index === 0 ? 'high' : 'low'}
-            className="object-cover brightness-[0.75]"
-          />
+          {loadedIndexes.has(index) && (
+            <Image
+              src={item.image.filename}
+              alt={item.image.alt || item.title}
+              title={item.image.alt || item.title}
+              fill
+              sizes="(max-width: 767px) 100vw, 1400px"
+              priority={index === 0}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              onLoad={index === 0 ? () => setInitialSlideReady(true) : undefined}
+              className="object-cover brightness-[0.75]"
+            />
+          )}
           {/* Left-aligned gradient overlay for business style */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/65 via-slate-800/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-start px-8 md:px-20">
