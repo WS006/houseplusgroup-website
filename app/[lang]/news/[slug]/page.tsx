@@ -155,7 +155,7 @@ export default async function BlogPostPage(
         width: post.video.width,
         height: post.video.height,
         uploadDate: post.video.uploadDate,
-        embedUrl: articleUrl,
+        id: `${articleUrl}#video`,
         inLanguage: lang,
         captionUrl: post.video.captionsUrl,
         transcript: post.video.transcript,

@@ -28,7 +28,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Handle XML feed routes - let public/ static files handle these
-  if (pathname === '/merchant-feed.xml' || pathname === '/feed.xml' || pathname === '/image-sitemap.xml' || pathname === '/manifest.webmanifest') {
+  if (pathname === '/merchant-feed.xml' || pathname === '/feed.xml' || pathname === '/image-sitemap.xml' || pathname === '/video-sitemap.xml' || pathname === '/manifest.webmanifest') {
     const response = NextResponse.next();
     addSecurityHeaders(response);
     return response;
@@ -113,7 +113,8 @@ export function middleware(request: NextRequest) {
     !pathname.startsWith('/_next/') &&
     !pathname.startsWith('/merchant-feed.xml') &&
     !pathname.startsWith('/feed.xml') &&
-    !pathname.startsWith('/image-sitemap.xml')
+    !pathname.startsWith('/image-sitemap.xml') &&
+    !pathname.startsWith('/video-sitemap.xml')
   ) {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}/404`;
@@ -140,6 +141,6 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|feed.xml|image-sitemap.xml|sitemap.xml|robots.txt).*)',
+    '/((?!_next/static|_next/image|favicon.ico|feed.xml|image-sitemap.xml|video-sitemap.xml|sitemap.xml|robots.txt).*)',
   ],
 };

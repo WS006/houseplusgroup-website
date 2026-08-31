@@ -23,6 +23,7 @@ Allow: /ar/
 Allow: /sitemap.xml
 Allow: /feed.xml
 Allow: /image-sitemap.xml
+Allow: /video-sitemap.xml
 Allow: /merchant-feed.xml
 Allow: /llms.txt
 Allow: /favicon.ico
@@ -233,6 +234,7 @@ Disallow: /
 Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/feed.xml
 Sitemap: ${baseUrl}/image-sitemap.xml
+Sitemap: ${baseUrl}/video-sitemap.xml
 
 # IndexNow is exposed through the key endpoint and submission API; robots.txt
 # intentionally contains only crawler directives and Sitemap declarations.

@@ -721,7 +721,8 @@ export interface VideoObjectSchemaOptions {
   width: number;
   height: number;
   uploadDate: string;
-  embedUrl: string;
+  embedUrl?: string;
+  id?: string;
   inLanguage?: string;
   captionUrl?: string;
   transcript?: string;
@@ -732,11 +733,11 @@ export function generateVideoObjectSchema(options: VideoObjectSchemaOptions) {
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    '@id': `${options.embedUrl}#video`,
+    '@id': options.id || `${options.contentUrl}#video`,
     name: options.name,
     description: options.description,
     contentUrl: options.contentUrl,
-    embedUrl: options.embedUrl,
+    ...(options.embedUrl ? { embedUrl: options.embedUrl } : {}),
     thumbnailUrl: [options.thumbnailUrl],
     uploadDate: options.uploadDate,
     duration: options.duration,
