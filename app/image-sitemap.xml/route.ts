@@ -3,6 +3,7 @@ import { blogPosts } from '@/lib/blog-data';
 import { r2MediaUrl } from '@/lib/r2-media-map';
 import { canonicalSiteUrl } from '@/lib/urls';
 import { CURATED_CORE_PAGE_IMAGES } from '@/lib/image-sitemap-governance';
+import { getSitemapLastModified, PRODUCT_DETAIL_LAST_MODIFIED } from '@/lib/sitemap-lastmod';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 
@@ -14,6 +15,7 @@ interface ImageEntry {
 
 interface PageImages {
   pageUrl: string;
+  lastModified: string;
   images: ImageEntry[];
 }
 
@@ -102,6 +104,7 @@ function coverPath(slug: string): string {
 
 const dynamicArticleImages: PageImages[] = Object.values(blogPosts).map((post) => ({
   pageUrl: `/en/news/${post.slug}`,
+  lastModified: post.dateModified || post.datePublished,
   images: [{
     loc: absolute(post.heroImage),
     title: post.title,
@@ -111,6 +114,7 @@ const dynamicArticleImages: PageImages[] = Object.values(blogPosts).map((post) =
 
 const staticArticleImages: PageImages[] = Object.entries(ARTICLE_COVERS).map(([slug, image]) => ({
   pageUrl: `/en/news/${slug}`,
+  lastModified: getSitemapLastModified(`news/${slug}`),
   images: [{
     loc: absolute(image.image || coverPath(slug)),
     title: image.title,
@@ -120,6 +124,7 @@ const staticArticleImages: PageImages[] = Object.entries(ARTICLE_COVERS).map(([s
 
 const productImages: PageImages[] = Object.entries(PRODUCT_DATA).map(([slug, product]) => ({
   pageUrl: `/en/products/${slug}`,
+  lastModified: PRODUCT_DETAIL_LAST_MODIFIED,
   images: [{
     loc: absolute(product.coverImage),
     title: product.imageTitle || product.name,
@@ -129,7 +134,11 @@ const productImages: PageImages[] = Object.entries(PRODUCT_DATA).map(([slug, pro
 
 const corePageImages: PageImages[] = Object.values(
   CURATED_CORE_PAGE_IMAGES.reduce<Record<string, PageImages>>((pages, image) => {
-    const page = pages[image.pageUrl] || { pageUrl: image.pageUrl, images: [] };
+    const page = pages[image.pageUrl] || {
+      pageUrl: image.pageUrl,
+      lastModified: getSitemapLastModified(image.pageUrl.replace(/^\/en\/?/, '')),
+      images: [],
+    };
     page.images.push({ loc: absolute(image.loc), title: image.title, caption: image.caption });
     pages[image.pageUrl] = page;
     return pages;
@@ -146,12 +155,11 @@ function escapeXml(text: string): string {
 }
 
 function generateImageSitemap(): string {
-  const lastmod = new Date().toISOString().split('T')[0];
   const pages = [...dynamicArticleImages, ...staticArticleImages, ...productImages, ...corePageImages];
 
   const urlEntries = pages.map((page) => {
     const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
-    return `  <url>\n    <loc>${canonicalSiteUrl(page.pageUrl)}</loc>\n    <lastmod>${lastmod}</lastmod>\n${imageTags}\n  </url>`;
+    return `  <url>\n    <loc>${canonicalSiteUrl(page.pageUrl)}</loc>\n    <lastmod>${escapeXml(page.lastModified)}</lastmod>\n${imageTags}\n  </url>`;
   }).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urlEntries}\n</urlset>`;
