@@ -7,16 +7,18 @@ const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 test('GEO/AEO entity and product updates emit fresh sitemap lastmod signals', () => {
   const sitemap = read('app/sitemap.ts');
-  assert.match(sitemap, /'': '2026-08-25'/);
-  assert.match(sitemap, /'products': '2026-08-25'/);
-  for (const slug of ["'about-us'", "'factory'", "'service'", "'certifications'", "'oem-odm'", "'brand'"]) {
-    assert.match(sitemap, new RegExp(`${slug}: '2026-08-16'`));
-  }
-  assert.match(sitemap, /slug\.startsWith\('products\/'\)/);
-  assert.match(sitemap, /\? '2026-08-16'/);
-  assert.match(sitemap, /const regionLastModified = '2026-08-25'/);
-  assert.match(sitemap, /slug\.startsWith\('regions\/'\)/);
-  assert.match(sitemap, /\? regionLastModified/);
+  assert.match(sitemap, /getSitemapLastModified/);
+  assert.match(sitemap, /PRODUCT_CATEGORY_LAST_MODIFIED/);
+  const lastmod = read('lib/sitemap-lastmod.ts');
+  assert.match(lastmod, /'': '2026-08-25'/);
+  assert.match(lastmod, /products: '2026-08-25'/);
+  assert.match(lastmod, /about-us': '2026-08-16'/);
+  assert.match(lastmod, /certifications: '2026-08-16'/);
+  assert.match(lastmod, /oem-odm': '2026-08-16'/);
+  assert.match(lastmod, /slug\.startsWith\('products/);
+  assert.match(lastmod, /PRODUCT_DETAIL_LAST_MODIFIED/);
+  assert.match(lastmod, /slug\.startsWith\('regions/);
+  assert.match(lastmod, /REGION_LAST_MODIFIED/);
 });
 
 test('indexable product category filters are represented by final canonical URLs in the sitemap', () => {

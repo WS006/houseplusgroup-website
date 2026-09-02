@@ -248,8 +248,13 @@ export default async function ProductDetailPage(
   const productImageTitle = product.imageTitle || getDetailTitle(product, modelSpec?.value || slug.toUpperCase());
   const howToCopy = productHowToCopy[lang] || productHowToCopy.en;
 
-  // Generate structured data schemas
-  const productSchema = generateProductSchema({
+  // Google Product rich results require a complete Offer, Review, or AggregateRating.
+  // Quote-only B2B products have no public price or verified user-generated rating,
+  // so omit Product JSON-LD until a real retail feed supplies the required facts.
+  const hasCompleteRetailOffer = Boolean(
+    retailOffer?.price && retailOffer.currency && retailOffer.purchaseUrl && retailOffer.availability
+  );
+  const productSchema = hasCompleteRetailOffer ? generateProductSchema({
     name: product.name,
     description: product.geoDescription || product.description,
     image: product.coverImage,
@@ -271,7 +276,7 @@ export default async function ProductDetailPage(
     contactActionName: (schemaActionCopy[lang] || schemaActionCopy.en).name,
     contactActionDescription: (schemaActionCopy[lang] || schemaActionCopy.en).description,
     specifications: product.specs.map((spec) => ({ name: spec.key, value: spec.value })),
-  });
+  }) : null;
 
   const faqSchema = generateFAQSchema(quotationFaq, lang);
   const productHowToSchema = generateProductHowToSchema({
@@ -285,7 +290,7 @@ export default async function ProductDetailPage(
 
   return (
     <main className="min-h-screen bg-white">
-      <SEOHead schemas={[productSchema, ...(faqSchema ? [faqSchema] : []), productHowToSchema]} />
+      <SEOHead schemas={[...(productSchema ? [productSchema] : []), ...(faqSchema ? [faqSchema] : []), productHowToSchema]} />
       <Breadcrumb lang={lang} slug={`products/${slug}`} customLabel={product.name} />
 
       {/* Product Hero */}

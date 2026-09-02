@@ -83,7 +83,9 @@ test('brand production image supplies localized Alt, Title and visible caption i
 });
 
 test('fallback error routes use the framework Document during production builds', () => {
-  assert.equal(existsSync(new URL('pages/_document.tsx', root)), false);
+  assert.equal(existsSync(new URL('pages/_document.tsx', root)), true);
+  const document = read('pages/_document.tsx');
+  assert.match(document, /next\/document/);
 });
 
 test('static Pages Router fallbacks do not depend on Document components', () => {
@@ -233,8 +235,9 @@ test('recent static news articles are included in the canonical URL and sitemap 
     'solar-storage-efficiency-optimization-guide',
   ]) {
     assert.match(urls, new RegExp(`'${slug}'`));
-    assert.match(sitemap, new RegExp(`news/${slug}`));
   }
+  assert.match(sitemap, /for \(const newsSlug of newsSlugs\)/);
+  assert.match(sitemap, /buildUrlEntry\(`news\/\$\{newsSlug\}`/);
 });
 
 test('non-English primary pages render their dedicated localized route components rather than a generic foundation rewrite', () => {
