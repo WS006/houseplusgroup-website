@@ -154,22 +154,67 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function generateImageSitemap(): string {
+const DYNAMIC_MEDIA_SITEMAP_URL = `${(process.env.HOUSEPLUS_MEDIA_API_URL || 'https://houseplus-media-api.jack006hu.workers.dev').replace(/\/$/, '')}/sitemap-images.xml`;
+
+function renderPage(page: PageImages): string {
+  const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
+  return `  <url>\n    <loc>${canonicalSiteUrl(page.pageUrl)}</loc>\n    <lastmod>${escapeXml(page.lastModified)}</lastmod>\n${imageTags}\n  </url>`;
+}
+
+function extractTag(block: string, tag: string): string | null {
+  const match = block.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`));
+  return match?.[1] || null;
+}
+
+function mergeDynamicMediaSitemap(staticXml: string, dynamicXml: string): string {
+  const staticBlocks = [...staticXml.matchAll(/<url>[\s\S]*?<\/url>/g)].map((match) => match[0]);
+  const dynamicBlocks = [...dynamicXml.matchAll(/<url>[\s\S]*?<\/url>/g)].map((match) => match[0]);
+  const blocks = new Map<string, string>();
+  for (const block of staticBlocks) {
+    const loc = extractTag(block, 'loc');
+    if (loc) blocks.set(loc, block);
+  }
+  for (const block of dynamicBlocks) {
+    const loc = extractTag(block, 'loc');
+    if (!loc) continue;
+    const existing = blocks.get(loc);
+    if (!existing) {
+      blocks.set(loc, block);
+      continue;
+    }
+    const existingImages = [...existing.matchAll(/<image:image>[\s\S]*?<\/image:image>/g)].map((match) => match[0]);
+    const knownImageLocs = new Set(existingImages.map((image) => extractTag(image, 'image:loc')));
+    const additions = [...block.matchAll(/<image:image>[\s\S]*?<\/image:image>/g)]
+      .map((match) => match[0])
+      .filter((image) => !knownImageLocs.has(extractTag(image, 'image:loc')));
+    const dynamicLastmod = extractTag(block, 'lastmod');
+    const existingLastmod = extractTag(existing, 'lastmod');
+    const lastmod = dynamicLastmod && (!existingLastmod || dynamicLastmod > existingLastmod) ? dynamicLastmod : existingLastmod;
+    const withoutImages = existing.replace(/\s*<image:image>[\s\S]*?<\/image:image>/g, '');
+    const merged = withoutImages.replace('</url>', `${additions.join('')}\n  </url>`);
+    blocks.set(loc, lastmod ? merged.replace(/<lastmod>[\s\S]*?<\/lastmod>/, `<lastmod>${lastmod}</lastmod>`) : merged);
+  }
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${[...blocks.values()].join('\n')}\n</urlset>`;
+}
+
+function generateStaticImageSitemap(): string {
   const pages = [...dynamicArticleImages, ...staticArticleImages, ...productImages, ...corePageImages];
-
-  const urlEntries = pages.map((page) => {
-    const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
-    return `  <url>\n    <loc>${canonicalSiteUrl(page.pageUrl)}</loc>\n    <lastmod>${escapeXml(page.lastModified)}</lastmod>\n${imageTags}\n  </url>`;
-  }).join('\n');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urlEntries}\n</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${pages.map(renderPage).join('\n')}\n</urlset>`;
 }
 
 export async function GET() {
-  return new Response(generateImageSitemap(), {
+  const staticXml = generateStaticImageSitemap();
+  let xml = staticXml;
+  try {
+    const response = await fetch(DYNAMIC_MEDIA_SITEMAP_URL, { cache: 'no-store' });
+    if (response.ok) xml = mergeDynamicMediaSitemap(staticXml, await response.text());
+  } catch {
+    // Static source data remains a safe fallback if the media Worker is unavailable.
+  }
+  return new Response(xml, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+      'Cache-Control': 'public, max-age=300, s-maxage=300',
     },
   });
 }

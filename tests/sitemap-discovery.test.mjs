@@ -22,6 +22,13 @@ test('page and image sitemaps share a maintained lastmod source', () => {
   assert.match(lastmod, /REGION_LAST_MODIFIED/);
 });
 
+test('image sitemap merges approved dynamic media with a safe static fallback', () => {
+  assert.match(imageSitemap, /DYNAMIC_MEDIA_SITEMAP_URL/);
+  assert.match(imageSitemap, /mergeDynamicMediaSitemap\(staticXml, await response\.text\(\)\)/);
+  assert.match(imageSitemap, /Static source data remains a safe fallback/);
+  assert.match(imageSitemap, /max-age=300, s-maxage=300/);
+});
+
 test('crawler entry points remain declared', () => {
   assert.match(imageSitemap, /xmlns:image="http:\/\/www\.google\.com\/schemas\/sitemap-image\/1\.1"/);
   assert.match(robots, /Allow: \/image-sitemap\.xml/);
