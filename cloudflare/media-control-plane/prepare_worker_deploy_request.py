@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 ROOT = Path('/home/ubuntu/houseplusgroup-website/cloudflare/media-control-plane')
-WORKER_CODE = (ROOT / 'worker.mjs').read_text()
+WORKER_CODE = (ROOT / 'worker-v2.mjs').read_text()
 TOKEN_FILE = Path('/home/ubuntu/.houseplus_media_admin_token')
 REQUEST_FILE = ROOT / 'worker_deploy_request.json'
 ACCOUNT_ID = os.environ.get('HOUSEPLUS_CF_ACCOUNT_ID', '5cd2f2781f30e866504997ad801d7dbd')
