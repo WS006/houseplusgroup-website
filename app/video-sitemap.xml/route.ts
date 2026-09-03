@@ -1,5 +1,6 @@
 import { blogPosts } from '@/lib/blog-data';
 import { canonicalSiteUrl } from '@/lib/urls';
+import { toSchemaDateTime } from '@/lib/schema-generator';
 
 const LANGUAGES = ['en', 'es', 'de', 'fr', 'ar'] as const;
 
@@ -31,7 +32,7 @@ function generateVideoSitemap(): string {
       const pageUrl = canonicalSiteUrl(`/${lang}/news/${post.slug}`);
       const lastmod = post.dateModified || post.datePublished;
       const durationTag = duration ? `\n      <video:duration>${duration}</video:duration>` : '';
-      return `  <url>\n    <loc>${escapeXml(pageUrl)}</loc>\n    <lastmod>${escapeXml(lastmod)}</lastmod>\n    <video:video>\n      <video:thumbnail_loc>${escapeXml(video.poster)}</video:thumbnail_loc>\n      <video:title>${escapeXml(video.name)}</video:title>\n      <video:description>${escapeXml(video.description)}</video:description>\n      <video:content_loc>${escapeXml(video.contentUrl)}</video:content_loc>${durationTag}\n      <video:publication_date>${escapeXml(video.uploadDate)}</video:publication_date>\n      <video:family_friendly>yes</video:family_friendly>\n    </video:video>\n  </url>`;
+      return `  <url>\n    <loc>${escapeXml(pageUrl)}</loc>\n    <lastmod>${escapeXml(lastmod)}</lastmod>\n    <video:video>\n      <video:thumbnail_loc>${escapeXml(video.poster)}</video:thumbnail_loc>\n      <video:title>${escapeXml(video.name)}</video:title>\n      <video:description>${escapeXml(video.description)}</video:description>\n      <video:content_loc>${escapeXml(video.contentUrl)}</video:content_loc>${durationTag}\n      <video:publication_date>${escapeXml(toSchemaDateTime(video.uploadDate))}</video:publication_date>\n      <video:family_friendly>yes</video:family_friendly>\n    </video:video>\n  </url>`;
     });
   });
 

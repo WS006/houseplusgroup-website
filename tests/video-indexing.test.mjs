@@ -19,6 +19,7 @@ test('video sitemap is generated from real BlogVideo records for all supported l
   assert.match(sitemap, /video:description/);
   assert.match(sitemap, /video:content_loc/);
   assert.match(sitemap, /video:publication_date/);
+  assert.match(sitemap, /toSchemaDateTime\(video\.uploadDate\)/);
   assert.match(sitemap, /video:family_friendly/);
   assert.doesNotMatch(sitemap, /video:player_loc/);
 });
@@ -26,6 +27,12 @@ test('video sitemap is generated from real BlogVideo records for all supported l
 test('robots references the video sitemap and allows it for general crawlers', () => {
   assert.match(robots, /Allow: \/video-sitemap\.xml/);
   assert.match(robots, /Sitemap: \$\{baseUrl\}\/video-sitemap\.xml/);
+});
+
+test('VideoObject normalizes uploadDate to timezone-qualified ISO datetime', () => {
+  assert.match(schema, /export function toSchemaDateTime/);
+  assert.match(schema, /T00:00:00Z/);
+  assert.match(schema, /uploadDate: toSchemaDateTime\(options\.uploadDate\)/);
 });
 
 test('VideoObject does not invent an embedUrl when no player URL exists', () => {

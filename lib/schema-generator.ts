@@ -728,6 +728,13 @@ export interface VideoObjectSchemaOptions {
   transcript?: string;
 }
 
+export function toSchemaDateTime(value: string): string {
+  const trimmed = String(value || '').trim();
+  if (/^\\d{4}-\\d{2}-\\d{2}$/.test(trimmed)) return `${trimmed}T00:00:00Z`;
+  if (/^\\d{4}-\\d{2}-\\d{2}T[^Z+\\-]+$/.test(trimmed)) return `${trimmed}Z`;
+  return trimmed;
+}
+
 export function generateVideoObjectSchema(options: VideoObjectSchemaOptions) {
   const inLanguage = options.inLanguage || 'en';
   return {
@@ -739,7 +746,7 @@ export function generateVideoObjectSchema(options: VideoObjectSchemaOptions) {
     contentUrl: options.contentUrl,
     ...(options.embedUrl ? { embedUrl: options.embedUrl } : {}),
     thumbnailUrl: [options.thumbnailUrl],
-    uploadDate: options.uploadDate,
+    uploadDate: toSchemaDateTime(options.uploadDate),
     duration: options.duration,
     width: options.width,
     height: options.height,
