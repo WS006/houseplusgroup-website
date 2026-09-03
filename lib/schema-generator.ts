@@ -730,8 +730,8 @@ export interface VideoObjectSchemaOptions {
 
 export function toSchemaDateTime(value: string): string {
   const trimmed = String(value || '').trim();
-  if (/^\\d{4}-\\d{2}-\\d{2}$/.test(trimmed)) return `${trimmed}T00:00:00Z`;
-  if (/^\\d{4}-\\d{2}-\\d{2}T[^Z+\\-]+$/.test(trimmed)) return `${trimmed}Z`;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) return `${trimmed}T00:00:00Z`;
+  if (/^\d{4}-\d{2}-\d{2}T[^Z+\-]+$/.test(trimmed)) return `${trimmed}Z`;
   return trimmed;
 }
 

@@ -32,6 +32,7 @@ test('robots references the video sitemap and allows it for general crawlers', (
 test('VideoObject normalizes uploadDate to timezone-qualified ISO datetime', () => {
   assert.match(schema, /export function toSchemaDateTime/);
   assert.match(schema, /T00:00:00Z/);
+  assert.doesNotMatch(schema, /\\\\d\{4\}/);
   assert.match(schema, /uploadDate: toSchemaDateTime\(options\.uploadDate\)/);
 });
 
