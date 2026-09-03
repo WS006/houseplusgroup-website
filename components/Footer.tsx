@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 
+const SITE_FOUNDING_YEAR = 2010;
+const CURRENT_YEAR = new Date().getFullYear();
+
 interface FooterContent {
   quickLinks: { label: string; href: string }[];
   products: { label: string; href: string }[];
@@ -42,7 +45,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024-2025 HousePlus Group. All rights reserved.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. All rights reserved.`,
     followUs: 'Follow HousePlus',
   },
   es: {
@@ -75,7 +78,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024-2025 HousePlus Group. Todos los derechos reservados.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. Todos los derechos reservados.`,
     followUs: 'Síguenos',
   },
   de: {
@@ -108,7 +111,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024-2025 HousePlus Group. Alle Rechte vorbehalten.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. Alle Rechte vorbehalten.`,
     followUs: 'Folgen Sie uns',
   },
   fr: {
@@ -141,7 +144,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024-2025 HousePlus Group. Tous droits réservés.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. Tous droits réservés.`,
     followUs: 'Suivez-nous',
   },
   ar: {
@@ -174,7 +177,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'واتس آب', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'ويتشات', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024-2025 مجموعة HousePlus. جميع الحقوق محفوظة.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} مجموعة HousePlus. جميع الحقوق محفوظة.`,
     followUs: 'تابعنا',
   },
 };

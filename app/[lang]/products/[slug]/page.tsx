@@ -248,13 +248,14 @@ export default async function ProductDetailPage(
   const productImageTitle = product.imageTitle || getDetailTitle(product, modelSpec?.value || slug.toUpperCase());
   const howToCopy = productHowToCopy[lang] || productHowToCopy.en;
 
-  // Google Product rich results require a complete Offer, Review, or AggregateRating.
-  // Quote-only B2B products have no public price or verified user-generated rating,
-  // so omit Product JSON-LD until a real retail feed supplies the required facts.
+  // Every product page publishes a Product entity using verified product facts.
+  // Quote-only B2B products intentionally omit offers because no public price,
+  // currency, checkout URL, or verified availability is available to publish.
+  // Retail offers are included only when all required retail fields are present.
   const hasCompleteRetailOffer = Boolean(
     retailOffer?.price && retailOffer.currency && retailOffer.purchaseUrl && retailOffer.availability
   );
-  const productSchema = hasCompleteRetailOffer ? generateProductSchema({
+  const productSchema = generateProductSchema({
     name: product.name,
     description: product.geoDescription || product.description,
     image: product.coverImage,
@@ -276,7 +277,7 @@ export default async function ProductDetailPage(
     contactActionName: (schemaActionCopy[lang] || schemaActionCopy.en).name,
     contactActionDescription: (schemaActionCopy[lang] || schemaActionCopy.en).description,
     specifications: product.specs.map((spec) => ({ name: spec.key, value: spec.value })),
-  }) : null;
+  });
 
   const faqSchema = generateFAQSchema(quotationFaq, lang);
   const productHowToSchema = generateProductHowToSchema({

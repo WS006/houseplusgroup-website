@@ -377,7 +377,7 @@ export default async function FAQPage(props: { params: Promise<{ lang: string }>
   };
   const ui = uiCopy[lang] || uiCopy.en;
   const allFaqs = content.flatMap((cat: any) => cat.items.map((item: any) => ({ question: item.q, answer: item.a })));
-  const faqSchema = generateFAQSchema(allFaqs);
+  const faqSchema = generateFAQSchema(allFaqs, lang);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: ui.home, url: `https://www.houseplus-ch.com/${lang}` },

@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 
+const SITE_FOUNDING_YEAR = 2010;
+const CURRENT_YEAR = new Date().getFullYear();
+
 interface FooterContent {
   quickLinks: { label: string; href: string }[];
   products: { label: string; href: string }[];
@@ -36,7 +39,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Chinese WhatsApp', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. All rights reserved.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. All rights reserved.`,
     followUs: 'Follow Us',
   },
   es: {
@@ -63,7 +66,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'WhatsApp Chino', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. Todos los derechos reservados.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. Todos los derechos reservados.`,
     followUs: 'Síguenos',
   },
   de: {
@@ -90,7 +93,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'Chinesisches WhatsApp', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. Alle Rechte vorbehalten.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. Alle Rechte vorbehalten.`,
     followUs: 'Folgen Sie uns',
   },
   fr: {
@@ -117,7 +120,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'WhatsApp Chinois', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 HousePlus Group. Tous droits réservés.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} HousePlus Group. Tous droits réservés.`,
     followUs: 'Suivez-nous',
   },
   ar: {
@@ -144,7 +147,7 @@ const footerContent: Record<string, FooterContent> = {
       { label: 'واتس آب صيني', value: '+8615578119543', href: 'https://wa.me/8615578119543' },
       { label: 'ويتشات', value: 'JackHousePlus' },
     ],
-    copyright: '© 2024 مجموعة HousePlus. جميع الحقوق محفوظة.',
+    copyright: `© ${SITE_FOUNDING_YEAR}-${CURRENT_YEAR} مجموعة HousePlus. جميع الحقوق محفوظة.`,
     followUs: 'تابعنا',
   },
 };
