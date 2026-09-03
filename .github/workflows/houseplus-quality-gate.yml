@@ -1,0 +1,33 @@
+name: HousePlus Quality Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: houseplus-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Reject retired media targets
+        run: |
+          ! grep -RIn --exclude-dir=.git --exclude='*.md' \
+            -E "workers/scripts/houseplus-media-api|ACCOUNT_ID = 'affca529f7b55b7eb2b3770c954bd36d'" \
+            cloudflare scripts
+      - run: pnpm test
+      - run: pnpm build

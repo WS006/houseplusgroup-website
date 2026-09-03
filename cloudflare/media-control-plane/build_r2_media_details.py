@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import mimetypes
+import os
 import re
 from pathlib import Path
 from xml.etree import ElementTree
@@ -22,9 +23,14 @@ JOURNAL = ROOT / 'audit' / 'r2-media-publication.jsonl'
 OPTIMIZED = ROOT / 'audit' / 'r2-optimized-media'
 OUTPUT_DIR = ROOT / 'audit' / 'r2-switch'
 TYPESCRIPT_OUT = ROOT / 'lib' / 'r2-media-details.ts'
-ACCOUNT_ID = 'affca529f7b55b7eb2b3770c954bd36d'
-DATABASE_ID = 'd62b9de7-c3c4-46de-8931-aba6b38773f1'
+ACCOUNT_ID = os.environ.get('HOUSEPLUS_CF_ACCOUNT_ID', '5cd2f2781f30e866504997ad801d7dbd')
+DATABASE_ID = os.environ.get('HOUSEPLUS_MEDIA_DB_ID', '').strip()
 PUBLIC_MEDIA_ORIGIN = 'https://images.houseplus-ch.com'
+
+if not DATABASE_ID:
+    raise SystemExit('HOUSEPLUS_MEDIA_DB_ID is required; refuse to generate D1 requests without the production database')
+if ACCOUNT_ID == 'affca529f7b55b7eb2b3770c954bd36d':
+    raise SystemExit('Refusing to target the retired Cloudflare account')
 
 
 def source_file(source_path: str) -> Path:

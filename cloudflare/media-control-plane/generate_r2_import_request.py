@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 import json
+import os
 from pathlib import Path
 
 SOURCE = Path('/home/ubuntu/.mcp/tool-results/2026-08-12_05-46-30.718320457_cloudflare_execute_c8fc1c54.json')
 TARGET = Path('/home/ubuntu/houseplusgroup-website/cloudflare/media-control-plane/d1_import_r2_assets_request.json')
-ACCOUNT_ID = 'affca529f7b55b7eb2b3770c954bd36d'
-DATABASE_ID = 'd62b9de7-c3c4-46de-8931-aba6b38773f1'
+ACCOUNT_ID = os.environ.get('HOUSEPLUS_CF_ACCOUNT_ID', '5cd2f2781f30e866504997ad801d7dbd')
+DATABASE_ID = os.environ.get('HOUSEPLUS_MEDIA_DB_ID', '').strip()
+
+if not DATABASE_ID:
+    raise SystemExit('HOUSEPLUS_MEDIA_DB_ID is required; refuse to generate D1 import requests without the production database')
+if ACCOUNT_ID == 'affca529f7b55b7eb2b3770c954bd36d':
+    raise SystemExit('Refusing to target the retired Cloudflare account')
 
 payload = json.loads(SOURCE.read_text())
 objects = payload['result']
