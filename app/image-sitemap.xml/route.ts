@@ -154,6 +154,74 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;');
 }
 
+
+
+// The media Worker currently returns a small historical set of 404 JSON
+// responses. Keep those stale objects out of the public image Sitemap until
+// the corresponding assets are restored or retired in the media control plane.
+const INVALID_DYNAMIC_MEDIA_URLS = new Set([
+  'https://images.houseplus-ch.com/media/houseplus-3c-electronics-banner-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-solar-panel-3-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-solar-panel-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-solar-battery-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-rice-cooker-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-kitchen-appliances-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-led-lighting-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-portable-power-station-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-power-bank-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-bluetooth-earbuds-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-electric-kettle-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-headphone-over-ear-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-power-bank-white-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-power-station-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-smartwatch-display-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-product-wall-outlet-usb-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-solar-panel-2-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-solar-power-station-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-wireless-charger-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-site-factory-worker-precision/',
+  'https://images.houseplus-ch.com/media/houseplus-site-team-collaboration-office/',
+  'https://images.houseplus-ch.com/media/houseplus-site-team-working-together/',
+  'https://images.houseplus-ch.com/media/houseplus-site-warehouse-logistics-shipping/',
+  'https://images.houseplus-ch.com/media/houseplus-appliances-package-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-appliances-showcase-wholesale/',
+  'https://images.houseplus-ch.com/media/houseplus-carousel-carousel-electronics/',
+  'https://images.houseplus-ch.com/media/houseplus-carousel-carousel-home-appliances/',
+  'https://images.houseplus-ch.com/media/houseplus-carousel-carousel-solar-energy/',
+  'https://images.houseplus-ch.com/media/houseplus-home-appliances-hero/',
+  'https://images.houseplus-ch.com/media/houseplus-home-electronics-hero/',
+  'https://images.houseplus-ch.com/media/houseplus-home-solar-hero/',
+  'https://images.houseplus-ch.com/media/houseplus-about-houseplus-group-factory/',
+  'https://images.houseplus-ch.com/media/houseplus-about-manufacturing-facility/',
+  'https://images.houseplus-ch.com/media/houseplus-about-production-line/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-manufacturing-line-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-appliances-appliance-energy-efficiency-label-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-appliances-home-appliance-refrigerator-interior-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-appliances-smart-home-living-room-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-appliances-smart-kitchen-appliances-modern-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-electronics-battery-testing-lab-equipment-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-bluetooth-speaker-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-headphones-audio-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-power-bank-product-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-router-network-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-electronics-electronics-smartwatch-product-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-service-factory-production-line-automated-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-service-quality-control-lab-testing-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-energy-farm-panels-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-panel-sunset-industrial-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-articles-solar-solar-power-station-outdoor-b2b-guide/',
+  'https://images.houseplus-ch.com/media/houseplus-site-customer-support-helpdesk/',
+  'https://images.houseplus-ch.com/media/houseplus-team-logistics-port/',
+  'https://images.houseplus-ch.com/media/houseplus-team-office-meeting/'
+]);
+
+function removeInvalidDynamicImages(block: string): string {
+  return block.replace(/\s*<image:image>[\s\S]*?<\/image:image>/g, (image) => {
+    const loc = extractTag(image, 'image:loc');
+    return loc && INVALID_DYNAMIC_MEDIA_URLS.has(loc) ? '' : image;
+  });
+}
+
 const DYNAMIC_MEDIA_SITEMAP_URL = `${(process.env.HOUSEPLUS_MEDIA_API_URL || 'https://houseplus-media-api.jack006hu.workers.dev').replace(/\/$/, '')}/sitemap-images.xml`;
 
 function renderPage(page: PageImages): string {
@@ -167,8 +235,12 @@ function extractTag(block: string, tag: string): string | null {
 }
 
 function mergeDynamicMediaSitemap(staticXml: string, dynamicXml: string): string {
-  const staticBlocks = [...staticXml.matchAll(/<url>[\s\S]*?<\/url>/g)].map((match) => match[0]);
-  const dynamicBlocks = [...dynamicXml.matchAll(/<url>[\s\S]*?<\/url>/g)].map((match) => match[0]);
+  const staticBlocks = [...staticXml.matchAll(/<url>[\s\S]*?<\/url>/g)]
+    .map((match) => removeInvalidDynamicImages(match[0]))
+    .filter((block) => /<image:image>[\s\S]*?<\/image:image>/.test(block));
+  const dynamicBlocks = [...dynamicXml.matchAll(/<url>[\s\S]*?<\/url>/g)]
+    .map((match) => removeInvalidDynamicImages(match[0]))
+    .filter((block) => /<image:image>[\s\S]*?<\/image:image>/.test(block));
   const blocks = new Map<string, string>();
   for (const block of staticBlocks) {
     const loc = extractTag(block, 'loc');
