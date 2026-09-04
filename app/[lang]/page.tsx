@@ -15,25 +15,25 @@ const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
 const localizedHomeCopy = {
   en: {
-    tagline: 'HousePlus · Retail & B2B/OEM',
-    title: 'Solar, Home Appliance & 3C Products for Retail and B2B',
-    description: 'Explore eligible retail products or request product information, customisation scope and a B2B/OEM quotation for your requirements.',
+    tagline: 'HousePlus · Global Wholesale & OEM/ODM Manufacturer',
+    title: 'HousePlus® | Solar Energy Systems, Smart Home & 3C OEM/ODM Manufacturer',
+    description: 'HousePlus Group is a China-based solar energy, home appliance and 3C electronics OEM/ODM manufacturer for global wholesale buyers. Request product documentation and a tailored quotation.',
     browseProducts: 'Browse Products', requestQuote: 'B2B/OEM Quote',
     categories: [
-      { title: 'Solar Energy Systems', description: 'Panels, inverters, energy storage and accessories for retail selection or B2B sourcing.', buttonText: 'Explore Solar Products' },
-      { title: 'Home Appliances', description: 'Kitchen and household product categories for direct purchase or wholesale discussions.', buttonText: 'Explore Home Appliances' },
-      { title: '3C Electronics', description: 'Consumer electronics and accessories for retail purchase or B2B/OEM requirements.', buttonText: 'Explore 3C Electronics' },
+      { title: 'Solar Energy Systems', description: 'Panels, inverters, energy storage and accessories for wholesale sourcing, private label and OEM/ODM programmes.', buttonText: 'Explore Solar Products' },
+      { title: 'Home Appliances', description: 'Kitchen and household product categories for wholesale, private label and OEM/ODM manufacturing programmes.', buttonText: 'Explore Home Appliances' },
+      { title: '3C Electronics', description: 'Consumer electronics and accessories for wholesale distribution, private label and B2B/OEM requirements.', buttonText: 'Explore 3C Electronics' },
     ],
-    whyTitle: 'Retail Purchase and Professional Sourcing', whySubtitle: 'Use each product page for current retail availability, or request a quote for volume, customisation and project requirements.',
+    whyTitle: 'Global Wholesale & OEM/ODM Manufacturing', whySubtitle: 'Source documented products for distribution, private label and project requirements, with commercial terms confirmed through a tailored quotation.',
     features: [
-      { icon: 'Retail', title: 'Retail Availability', desc: 'Eligible product pages show their current retail availability, price and purchase path.' },
-      { icon: 'Scope', title: 'OEM/ODM Discussion', desc: 'Discuss branding, packaging and product modification requirements with the HousePlus team.' },
-      { icon: 'Quote', title: 'Quote-Led Coordination', desc: 'Commercial terms, production planning and delivery options are confirmed for your specific request.' },
+      { icon: 'Wholesale', title: 'Wholesale Product Supply', desc: 'Review product specifications and documentation for distribution, sourcing and project evaluation.' },
+      { icon: 'Scope', title: 'OEM/ODM Manufacturing', desc: 'Discuss branding, packaging and product modification requirements directly with the HousePlus factory team.' },
+      { icon: 'Quote', title: 'Quote-Led Coordination', desc: 'MOQ, production planning, export documentation and delivery options are confirmed for your request.' },
     ],
   },
   es: {
-    tagline: 'HousePlus · Retail y B2B/OEM', title: 'Productos Solares, Electrodomésticos y 3C para Retail y B2B',
-    description: 'Explore productos minoristas elegibles o solicite información, alcance de personalización y una cotización B2B/OEM según sus requisitos.',
+    tagline: 'HousePlus · Fabricante Global Mayorista y OEM/ODM', title: 'HousePlus® | Fabricante OEM/ODM de Sistemas Solares, Hogar Inteligente y 3C',
+    description: 'HousePlus Group es un fabricante OEM/ODM de sistemas solares, electrodomésticos y electrónica 3C para compradores mayoristas globales. Solicite documentación y una cotización personalizada.',
     browseProducts: 'Ver Productos', requestQuote: 'Cotización B2B/OEM',
     categories: [
       { title: 'Sistemas de Energía Solar', description: 'Paneles, inversores, almacenamiento y accesorios para compras B2B.', buttonText: 'Ver Productos Solares' },
@@ -48,8 +48,8 @@ const localizedHomeCopy = {
     ],
   },
   de: {
-    tagline: 'HousePlus · Einzelhandel und B2B/OEM', title: 'Solar-, Haushalts- und 3C-Produkte für Einzelhandel und B2B',
-    description: 'Entdecken Sie berechtigte Einzelhandelsprodukte oder fordern Sie Informationen, Anpassungsumfang und ein B2B/OEM-Angebot an.',
+    tagline: 'HousePlus · Globaler Großhandel und OEM/ODM', title: 'HousePlus® | OEM/ODM-Hersteller für Solarsysteme, Smart Home und 3C',
+    description: 'HousePlus Group ist ein OEM/ODM-Hersteller für Solarsysteme, Haushaltsgeräte und 3C-Elektronik für globale Großhandelskäufer. Fordern Sie Unterlagen und ein individuelles Angebot an.',
     browseProducts: 'Produkte ansehen', requestQuote: 'B2B/OEM-Angebot',
     categories: [
       { title: 'Solarenergiesysteme', description: 'Module, Wechselrichter, Speicher und Zubehör für die B2B-Beschaffung.', buttonText: 'Solarprodukte ansehen' },
@@ -64,8 +64,8 @@ const localizedHomeCopy = {
     ],
   },
   fr: {
-    tagline: 'HousePlus · Retail et B2B/OEM', title: 'Produits Solaires, Électroménager et 3C pour Retail et B2B',
-    description: 'Découvrez les produits retail éligibles ou demandez informations, périmètre de personnalisation et devis B2B/OEM selon vos besoins.',
+    tagline: 'HousePlus · Fabricant Grossiste et OEM/ODM Global', title: 'HousePlus® | Fabricant OEM/ODM de Systèmes Solaires, Smart Home et 3C',
+    description: 'HousePlus Group est un fabricant OEM/ODM de systèmes solaires, appareils ménagers et électronique 3C pour les acheteurs grossistes internationaux. Demandez documentation et devis personnalisé.',
     browseProducts: 'Voir les Produits', requestQuote: 'Devis B2B/OEM',
     categories: [
       { title: 'Systèmes d’Énergie Solaire', description: 'Panneaux, onduleurs, stockage et accessoires pour l’approvisionnement B2B.', buttonText: 'Voir le Solaire' },
@@ -80,8 +80,8 @@ const localizedHomeCopy = {
     ],
   },
   ar: {
-    tagline: 'هاوس بلس · التجزئة وB2B/OEM', title: 'منتجات الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C للتجزئة وB2B',
-    description: 'استكشف منتجات التجزئة المؤهلة أو اطلب معلومات المنتج ونطاق التخصيص وعرض سعر B2B/OEM وفقًا لمتطلباتك.',
+    tagline: 'هاوس بلس · التصنيع العالمي بالجملة وOEM/ODM', title: 'HousePlus® | مُصنّع أنظمة الطاقة الشمسية والمنزل الذكي وإلكترونيات 3C OEM/ODM',
+    description: 'HousePlus Group مُصنّع لأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C بخدمات OEM/ODM للمشترين بالجملة عالميًا. اطلب وثائق المنتجات وعرضًا مخصصًا.',
     browseProducts: 'تصفح المنتجات', requestQuote: 'عرض B2B/OEM',
     categories: [
       { title: 'أنظمة الطاقة الشمسية', description: 'ألواح ومحولات وتخزين طاقة وملحقات للتوريد بين الشركات.', buttonText: 'استكشف المنتجات الشمسية' },
@@ -113,7 +113,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   return generateSEOMetadata({
     title: copy.title,
     description: copy.description,
-    keywords: ['solar energy', 'home appliances', '3C electronics', 'retail products', 'B2B', 'OEM', 'ODM'],
+    keywords: ['solar energy systems', 'smart home appliances', '3C electronics', 'wholesale manufacturer', 'B2B sourcing', 'OEM', 'ODM'],
     url: `/${lang}`,
     lang: lang as any,
     type: 'website',

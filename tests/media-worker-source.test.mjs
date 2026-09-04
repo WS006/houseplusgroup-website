@@ -13,6 +13,8 @@ test('media Worker source of truth contains the production media and Alt routes'
   assert.match(worker, /alt_generation_started/);
   assert.match(worker, /alt_generation_completed/);
   assert.match(worker, /alt_generation_failed/);
+  assert.match(worker, /dry_run/);
+  assert.match(worker, /generate_missing_alt_only/);
 });
 
 test('media deployment preparation targets the new production Worker explicitly', () => {

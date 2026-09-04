@@ -228,6 +228,23 @@ async function backfill(request, env, ctx) {
   const offset = Math.max(Number(body.offset) || 0, 0);
   const rows = await env.MEDIA_DB.prepare(`SELECT asset_id, public_slug, r2_key, original_filename, content_type, byte_size, status, topic, metadata_json FROM assets WHERE status = 'approved' ORDER BY created_at, asset_id LIMIT ? OFFSET ?`).bind(limit, offset).all();
   const assets = rows.results || [];
+  const dryRun = body.dry_run === true || body.dry_run === 'true';
+  if (dryRun) {
+    return json({
+      dry_run: true,
+      offset,
+      limit,
+      processed: assets.length,
+      next_offset: assets.length === limit ? offset + assets.length : null,
+      results: assets.map(asset => ({
+        asset_id: asset.asset_id,
+        public_slug: asset.public_slug,
+        image_url: publicUrl(asset),
+        planned_locales: LOCALES,
+        action: 'generate_missing_alt_only',
+      })),
+    }, 200, withCors(request));
+  }
   const results = [];
   for (const asset of assets) {
     try { results.push(await generateAltForAsset(env, asset, true)); }

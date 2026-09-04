@@ -146,7 +146,7 @@ export async function generateMetadata(
   langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}/`;
 
   const titleTemplates: Record<string, string> = {
-    en: `${name} | HousePlus Wholesale — Professional Manufacturer`,
+    en: `${name} | HousePlus ${categoryLabels.en[baseProduct.category] || 'Product'} Wholesale & OEM/ODM`,
     es: `${name} | HousePlus al por Mayor — Fabricante Profesional`,
     de: `${name} | HousePlus Großhandel — Professioneller Hersteller`,
     fr: `${name} | HousePlus Gros — Fabricant Professionnel`,
