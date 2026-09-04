@@ -115,6 +115,15 @@ test('catch-all and localized not-found routes never emit indexable metadata for
   assert.match(rootNotFound, /robots: 'noindex, follow'/);
 });
 
+test('homepage keeps Organization and WebSite JSON-LD at the root without duplicate page injection', () => {
+  const homePage = read('app/[lang]/page.tsx');
+  const rootLayout = read('app/layout.tsx');
+  assert.match(rootLayout, /generateOrganizationSchema/);
+  assert.match(rootLayout, /const graphSchema = \{/);
+  assert.doesNotMatch(homePage, /generateOrganizationSchema/);
+  assert.doesNotMatch(homePage, /<SEOHead/);
+});
+
 test('homepage carousel exposes every SEO image and Alt Text in HTML while protecting the LCP image', () => {
   const carousel = read('components/Carousel.tsx');
   assert.doesNotMatch(carousel, /loadedSlides/);

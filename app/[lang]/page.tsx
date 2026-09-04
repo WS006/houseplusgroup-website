@@ -1,8 +1,6 @@
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
-import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getDictionary } from '@/lib/i18n-config';
 import { r2MediaUrl } from '@/lib/r2-media-map';
 import { getCompanyFacts } from '@/lib/company-facts';
@@ -146,19 +144,8 @@ export default async function LangHome(props: { params: Promise<{ lang: string }
   // image-to-category mapping is deterministic in every deployed language.
   const displayCarouselItems = defaultCarouselItems;
 
-  const organizationSchema = generateOrganizationSchema({
-    title: 'HousePlus',
-    description: dict.site.description,
-    url: `https://www.houseplus-ch.com/${lang}`,
-    lang,
-    type: 'Organization',
-  });
-
-  const webSiteSchema = generateWebSiteSchema(lang);
-
   return (
     <>
-      <SEOHead schemas={[organizationSchema, webSiteSchema]} />
       <main className="min-h-screen bg-white">
         <section className="w-full">
           <Carousel items={displayCarouselItems} autoPlayInterval={5000} lang={lang} />
