@@ -1,9 +1,11 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import puppeteer from 'puppeteer-core';
 
-const urls = process.argv.slice(2);
-if (!urls.length) throw new Error('Usage: node scripts/audit-real-web-vitals.mjs <url> ...');
-const outputDir = process.argv.at(-1)?.endsWith('/') ? process.argv.at(-1) : 'audit/web-vitals-production';
+const args = process.argv.slice(2);
+const outIndex = args.indexOf('--out');
+const outputDir = outIndex >= 0 ? args[outIndex + 1] : 'audit/web-vitals-production';
+const urls = args.filter((_, index) => index !== outIndex && index !== outIndex + 1);
+if (!urls.length) throw new Error('Usage: node scripts/audit-real-web-vitals.mjs <url> ... [--out output-dir]');
 await mkdir(outputDir, { recursive: true });
 const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
 const results = [];
