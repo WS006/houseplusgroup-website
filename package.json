@@ -15,6 +15,7 @@
         "audit:news-claims": "node scripts/audit-news-commercial-claims.mjs",
         "audit:primary-pages": "node scripts/audit-primary-page-localization.mjs",
         "audit:primary-language-parity": "node scripts/audit-primary-page-language-parity.mjs",
+        "audit:production-image-sitemap": "node scripts/audit-production-image-sitemap.mjs",
         "mc:status": "node scripts/merchant-center-manager.js status",
         "mc:refetch": "node scripts/merchant-center-manager.js refetch",
         "mc:fix": "node scripts/merchant-center-manager.js fix",
