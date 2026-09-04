@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -371,11 +372,11 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
           </div>
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden shadow-2xl flex-shrink-0 border-4 border-white/20">
-              <img
+              <Image
                 src={data.image}
-                alt={data.imageAlt}
+                alt={data.imageAlt} width={1200} height={800}
                 className="object-cover"
-               title={data.imageAlt} decoding="async" />
+               title={data.imageAlt} decoding="async"  sizes="100vw" />
             </div>
             <div className="text-center md:text-left">
               <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-bold uppercase tracking-widest rounded-full mb-4">

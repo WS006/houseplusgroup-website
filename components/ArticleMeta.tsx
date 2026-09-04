@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 interface ArticleMetaProps {
   lang: string;
@@ -58,13 +59,13 @@ export default function ArticleMeta({
     <div className={`flex flex-wrap items-center gap-4 ${className} ${isRTL ? 'rtl' : 'ltr'}`}>
       <div className="flex items-center gap-3">
         <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-blue-100 flex-shrink-0">
-          <img
+          <Image
             src={avatar}
-            alt={authorName}
+            alt={authorName} width={1200} height={800}
             title={authorName}
             className="w-full h-full object-cover"
             loading="lazy"
-           decoding="async" />
+           decoding="async"  sizes="100vw" />
         </div>
         <div>
           <div className="text-sm font-bold text-slate-900">

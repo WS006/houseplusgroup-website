@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 from PIL import Image, ImageOps
 
-ROOT = Path('/home/ubuntu/houseplusgroup-website')
+ROOT = Path(__file__).resolve().parents[2]
 LOG_PATH = ROOT / 'audit' / 'r2-switch' / 'webp_variant_generation.jsonl'
 WORKER = os.environ.get('HOUSEPLUS_MEDIA_API_URL', 'https://houseplus-media-api.jack006hu.workers.dev').rstrip('/')
 TOKEN_PATH = Path('/home/ubuntu/.houseplus_media_admin_token')

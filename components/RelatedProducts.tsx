@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { getLocalizedProduct } from '@/lib/localized-content';
@@ -70,13 +71,13 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
                 className="group flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all"
               >
                 <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-slate-50">
-                  <img
+                  <Image
                     src={product.coverImage}
-                    alt={product.imageAlt || product.name}
+                    alt={product.imageAlt || product.name} width={1200} height={800}
                     title={product.imageTitle || product.name}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
-                   decoding="async" />
+                   decoding="async"  sizes="100vw" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">

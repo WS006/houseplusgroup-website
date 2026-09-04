@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -444,21 +445,21 @@ export default async function TeamPage(props: { params: Promise<{ lang: string }
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-team-team-manufacturing-collaboration/"
-                  alt={t.images.manufacturing.alt}
+                  alt={t.images.manufacturing.alt} width={1200} height={800}
                   title={t.images.manufacturing.title}
                   className="w-full h-full object-cover"
-                  decoding="async" />
+                  decoding="async"  sizes="100vw" />
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-team-team-quality-engineering/"
-                  alt={t.images.quality.alt}
+                  alt={t.images.quality.alt} width={1200} height={800}
                   title={t.images.quality.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  decoding="async" />
+                  decoding="async"  sizes="100vw" />
               </div>
             </div>
           </div>
@@ -499,13 +500,13 @@ export default async function TeamPage(props: { params: Promise<{ lang: string }
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-team-team-innovation-culture/"
-                  alt={t.images.culture.alt}
+                  alt={t.images.culture.alt} width={1200} height={800}
                   title={t.images.culture.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  decoding="async" />
+                  decoding="async"  sizes="100vw" />
               </div>
               <div>
                 <h2 className="text-3xl font-black text-slate-900 mb-4">🏭 {t.culture.heading}</h2>

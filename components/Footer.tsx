@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import Link from 'next/link';
 
 const SITE_FOUNDING_YEAR = 2010;
@@ -261,7 +263,7 @@ export default function Footer({ lang }: { lang: string }) {
           {/* Company Info */}
           <div className={isRTL ? 'text-right' : ''}>
             <Link href={`/${lang}`} aria-label="HousePlus home" className={`mb-6 inline-flex rounded-xl bg-white p-2.5 shadow-lg shadow-black/20 transition-transform duration-300 hover:scale-[1.02] ${isRTL ? 'ml-0 mr-auto' : ''}`}>
-              <img
+              <Image
                 src="https://images.houseplus-ch.com/media/houseplus-horizontal-logo/"
                 alt="HousePlus Group horizontal logo"
                 title="HousePlus Group official logo"
@@ -270,7 +272,7 @@ export default function Footer({ lang }: { lang: string }) {
                 loading="lazy"
                 decoding="async"
                 className="h-auto w-48 sm:w-52"
-              />
+               sizes="100vw" />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
               {ui.brandDescription}

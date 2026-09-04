@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -417,12 +418,12 @@ export default async function FAQPage(props: { params: Promise<{ lang: string }>
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-              <img
+              <Image
                 src="https://images.houseplus-ch.com/media/houseplus-site-faq-support-specialist/"
-                alt={ui.imageAlt}
+                alt={ui.imageAlt} width={1200} height={800}
                 className="object-cover"
               loading="lazy"
-               title={ui.imageAlt} decoding="async" />
+               title={ui.imageAlt} decoding="async"  sizes="100vw" />
               <div className="absolute inset-0 bg-blue-900/30" />
             </div>
           </div>

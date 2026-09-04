@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
@@ -766,13 +767,13 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
                 </p>
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-factory-production-line/"
-                  alt={t.hero.imageAlt}
+                  alt={t.hero.imageAlt} width={1200} height={800}
                   title={t.hero.imageTitle}
                   className="object-cover"
                   decoding="async"
-                />
+                 sizes="100vw" />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   {t.hero.imageCaption}
                 </figcaption>
@@ -883,14 +884,14 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
                 </div>
               </div>
               <figure className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
-                <img
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-about-houseplus-automated-manufacturing-facility/"
-                  alt={t.capabilities.imageAlt}
+                  alt={t.capabilities.imageAlt} width={1200} height={800}
                   title={t.capabilities.imageTitle}
                   className="object-cover"
                   loading="lazy"
                   decoding="async"
-                />
+                 sizes="100vw" />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-xs px-4 py-3">
                   {t.capabilities.imageCaption}
                 </figcaption>

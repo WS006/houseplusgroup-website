@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { getStoryblokApi, renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
@@ -406,7 +407,7 @@ export default async function CatchAllPage({ params }: { params: Promise<{ lang:
               return (
                 <a key={s.uuid} href={`/${lang}/${s.full_slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
                   <div className="aspect-[4/3] overflow-hidden relative">
-                    <img src={productImg} alt={imageAlt} title={imageTitle} width={imageDimensions.width} height={imageDimensions.height} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" decoding="async" />
+                    <Image src={productImg} alt={imageAlt} title={imageTitle} width={imageDimensions.width} height={imageDimensions.height} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" decoding="async"  sizes="100vw" />
                     <div className="absolute top-6 left-6">
                       <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-full">HousePlus Certified</span>
                     </div>

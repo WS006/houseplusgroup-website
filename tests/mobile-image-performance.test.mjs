@@ -9,6 +9,11 @@ const productPage = readFileSync(new URL('../app/[lang]/products/[slug]/page.tsx
 const productCatalog = readFileSync(new URL('../app/[lang]/products/page.tsx', import.meta.url), 'utf8');
 const serviceWidget = readFileSync(new URL('../components/ServiceWidget.tsx', import.meta.url), 'utf8');
 const globals = readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
+const pageSources = [
+  ...['about-us', 'careers', 'case-studies', 'contact', 'faq', 'team'].map((slug) => readFileSync(new URL(`../app/[lang]/${slug}/page.tsx`, import.meta.url), 'utf8')),
+  readFileSync(new URL('../components/ArticleFeatureImage.tsx', import.meta.url), 'utf8'),
+  readFileSync(new URL('../components/ArticleMeta.tsx', import.meta.url), 'utf8'),
+];
 
 test('remote R2 images remain eligible for Next responsive image optimization', () => {
   assert.doesNotMatch(config, /unoptimized:\s*true/);
@@ -47,6 +52,12 @@ test('mobile headings wrap long localized compound terms rather than widening th
   assert.match(globals, /@media \(max-width: 767px\)/);
   assert.match(globals, /overflow-wrap: anywhere/);
   assert.match(globals, /hyphens: auto/);
+});
+
+test('public page image components use Next Image instead of native img tags', () => {
+  for (const source of pageSources) {
+    assert.doesNotMatch(source, /<img\b/);
+  }
 });
 
 test('floating interaction tools are delayed so they do not block the initial homepage bundle', () => {

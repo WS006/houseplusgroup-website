@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -76,16 +77,16 @@ export default async function CareersPage(props: { params: Promise<{ lang: strin
     <SchemaRenderer schemas={schemas}>
       <main className="min-h-screen bg-white">
         <Breadcrumb lang={locale} slug="careers" />
-        
+
         {/* Hero Section */}
         <section className="relative py-24 px-4 bg-slate-900 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-40">
-            <img 
+            <Image
               src="https://images.houseplus-ch.com/media/houseplus-site-careers-growth-workshop/"
-              alt={t.heroAlt}
+              alt={t.heroAlt} width={1200} height={800}
               className="object-cover"
             loading="lazy"
-             title={t.heroAlt} decoding="async" />
+             title={t.heroAlt} decoding="async"  sizes="100vw" />
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="text-5xl md:text-7xl font-black mb-6">{t.heroTitle}</h1>
@@ -120,12 +121,12 @@ export default async function CareersPage(props: { params: Promise<{ lang: strin
                 </div>
               </div>
               <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-                <img 
+                <Image
                   src="https://images.houseplus-ch.com/media/houseplus-site-office-meeting-boardroom/"
-                  alt={t.teamAlt}
+                  alt={t.teamAlt} width={1200} height={800}
                   className="object-cover"
                 loading="lazy"
-                 title={t.teamAlt} decoding="async" />
+                 title={t.teamAlt} decoding="async"  sizes="100vw" />
               </div>
             </div>
           </div>
