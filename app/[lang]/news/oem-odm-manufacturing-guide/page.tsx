@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -279,11 +280,10 @@ export default async function ArticlePage(props: { params: Promise<{ lang: strin
                 </div>
                 {section.image && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md w-full">
-                    <img
+                    <Image
                       src={section.image}
-                      alt={section.imageAlt}
-                      width={800}
-                      height={450}
+                      alt={section.imageAlt} width={800} height={450}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     loading="lazy"
                      title={section.imageAlt} decoding="async" />

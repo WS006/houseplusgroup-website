@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -310,7 +311,8 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
             <p>{section.text}</p>
             {section.image && (
               <figure>
-                <img src={section.image} alt={section.imageAlt || section.heading} title={section.heading} width={800} height={450} className="rounded-lg shadow-lg" loading="lazy"  decoding="async" />
+                <Image src={section.image} alt={section.imageAlt || section.heading} width={800} height={450}
+                      sizes="(max-width: 768px) 100vw, 50vw" title={section.heading} className="rounded-lg shadow-lg" loading="lazy"  decoding="async" />
                 {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
               </figure>
             )}

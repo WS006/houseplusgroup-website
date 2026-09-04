@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -283,11 +284,10 @@ export default async function SmartHomeAppliancesArticle(props: { params: Promis
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">{section.text}</p>
                   {section.image && index % 2 === 0 && (
                     <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-md mt-4">
-                      <img
+                      <Image
                         src={section.image}
-                        alt={section.imageAlt}
-                        width={800}
-                        height={450}
+                        alt={section.imageAlt} width={800} height={450}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                       loading="lazy"
                        title={section.imageAlt} decoding="async" />
@@ -296,11 +296,10 @@ export default async function SmartHomeAppliancesArticle(props: { params: Promis
                 </div>
                 {section.image && index % 2 !== 0 && (
                   <div className="md:w-1/2 relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <img
+                    <Image
                       src={section.image}
-                      alt={section.imageAlt}
-                      width={800}
-                      height={450}
+                      alt={section.imageAlt} width={800} height={450}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     loading="lazy"
                      title={section.imageAlt} decoding="async" />
