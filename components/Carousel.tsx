@@ -47,19 +47,19 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   const getDefaultItems = (): CarouselItem[] => [
     {
       _uid: 'default-1',
-      image: { filename: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/', alt: 'HousePlus Solar Energy Solutions — Solar Panels, Inverters and Battery Storage for Wholesale' },
+      image: { filename: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/', alt: 'HousePlus Solar Energy Solutions — Solar Panels, Inverters and Battery Storage for Wholesale' },
       ...copy.slides[0],
       button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: 'default-2',
-      image: { filename: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/', alt: 'HousePlus Smart Home Appliances — Induction Cooktops, Air Fryers and Electric Kettles for OEM ODM' },
+      image: { filename: 'https://images.houseplus-ch.com/media/houseplus-air-fryer-5-8l-wholesale/', alt: 'HousePlus Smart Home Appliances — Induction Cooktops, Air Fryers and Electric Kettles for OEM ODM' },
       ...copy.slides[1],
       button_link: { url: `/products`, cached_url: `/products` }
     },
     {
       _uid: 'default-3',
-      image: { filename: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
+      image: { filename: 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/', alt: 'HousePlus 3C Electronics — Headphones, Smart Watches, SSD and Charging Accessories Wholesale' },
       ...copy.slides[2],
       button_link: { url: `/products`, cached_url: `/products` }
     }

@@ -70,13 +70,20 @@ async function findAsset(env, identifier) {
   ).bind(identifier, identifier).first();
 }
 
+function assetMetadata(asset) {
+  try { return JSON.parse(asset.metadata_json || '{}'); } catch { return {}; }
+}
+
 async function serveMedia(request, env, identifier) {
   const asset = await findAsset(env, identifier);
   if (!asset || asset.status !== 'approved') return json({ error: 'Media asset not found' }, 404, withCors(request));
-  const object = await env.MEDIA_BUCKET.get(asset.r2_key, { range: request.headers });
+  const metadata = assetMetadata(asset);
+  const variant = request.headers.get('accept')?.includes('image/webp') ? metadata.variants?.webp_1920 : null;
+  const objectKey = variant?.key || asset.r2_key;
+  const object = await env.MEDIA_BUCKET.get(objectKey, { range: request.headers });
   if (!object) return json({ error: 'Media object unavailable' }, 404, withCors(request));
   const headers = new Headers({
-    'content-type': asset.content_type || 'application/octet-stream',
+    'content-type': variant ? 'image/webp' : (asset.content_type || 'application/octet-stream'),
     'content-disposition': `inline; filename="${safeFilename(asset.original_filename || asset.public_slug)}"`,
     'cache-control': 'public, max-age=31536000, immutable',
     etag: object.httpEtag,
@@ -263,6 +270,23 @@ export default {
     if (request.method === 'GET' && url.pathname === '/v1/assets') {
       const rows = await env.MEDIA_DB.prepare("SELECT asset_id, public_slug, public_url, r2_key, content_type, byte_size, topic, status FROM assets WHERE status = 'approved' ORDER BY public_slug LIMIT 200").all();
       return json({ assets: rows.results || [], total: (rows.results || []).length }, 200, withCors(request));
+    }
+    const webpVariantMatch = url.pathname.match(/^\/v1\/assets\/([a-z0-9-]+)\/variants\/webp-1920\/?$/i);
+    if (request.method === 'POST' && webpVariantMatch) {
+      if (!isAuthorized(request, env)) return json({ error: 'Unauthorized' }, 401, withCors(request));
+      const asset = await findAsset(env, webpVariantMatch[1]);
+      if (!asset) return json({ error: 'Media asset not found' }, 404, withCors(request));
+      if ((request.headers.get('content-type') || '').split(';')[0].toLowerCase() !== 'image/webp') return json({ error: 'WebP upload required' }, 415, withCors(request));
+      const bytes = await request.arrayBuffer();
+      if (!bytes.byteLength || bytes.byteLength > MAX_UPLOAD_BYTES) return json({ error: 'Variant exceeds upload limit' }, 413, withCors(request));
+      const key = `variants/${asset.asset_id}/webp-1920.webp`;
+      const object = await env.MEDIA_BUCKET.put(key, bytes, { httpMetadata: { contentType: 'image/webp' } });
+      if (!object) return json({ error: 'Variant upload precondition failed' }, 412, withCors(request));
+      const metadata = assetMetadata(asset);
+      metadata.variants = { ...(metadata.variants || {}), webp_1920: { key, size: bytes.byteLength, updated_at: new Date().toISOString() } };
+      await env.MEDIA_DB.prepare('UPDATE assets SET metadata_json = ?, updated_at = CURRENT_TIMESTAMP WHERE asset_id = ?').bind(JSON.stringify(metadata), asset.asset_id).run();
+      await audit(env, asset.asset_id, 'webp_variant_uploaded', { key, size: bytes.byteLength });
+      return json({ asset_id: asset.asset_id, key, size: bytes.byteLength, content_type: 'image/webp' }, 201, withCors(request));
     }
     if (request.method === 'POST' && url.pathname === '/v1/upload') {
       try { return await upload(request, env, ctx); }
