@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
@@ -320,15 +321,16 @@ export default async function ProductsPage(props: { params: Promise<{ lang: stri
                 >
                   {/* Cover Image */}
                   <div className="relative aspect-[4/3] overflow-hidden bg-slate-50">
-                    <img
+                    <Image
                       src={product.coverImage}
                       alt={product.imageAlt || getImageAlt(product)}
                       title={product.imageTitle || getImageTitle(product)}
-                      width={product.imageDimensions.width}
-                      height={product.imageDimensions.height}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 400px"
+                      quality={78}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
-                     decoding="async" />
+                      decoding="async" />
                     {/* Hidden SEO-rich context for search engines */}
                     <span className="sr-only" data-seo-alt={product.imageAlt} data-seo-title={product.imageTitle}>
                       {product.imageAlt}

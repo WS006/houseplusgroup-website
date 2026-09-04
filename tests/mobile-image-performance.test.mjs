@@ -6,6 +6,7 @@ const config = readFileSync(new URL('../next.config.js', import.meta.url), 'utf8
 const carousel = readFileSync(new URL('../components/Carousel.tsx', import.meta.url), 'utf8');
 const industry = readFileSync(new URL('../components/IndustrySection.tsx', import.meta.url), 'utf8');
 const productPage = readFileSync(new URL('../app/[lang]/products/[slug]/page.tsx', import.meta.url), 'utf8');
+const productCatalog = readFileSync(new URL('../app/[lang]/products/page.tsx', import.meta.url), 'utf8');
 const serviceWidget = readFileSync(new URL('../components/ServiceWidget.tsx', import.meta.url), 'utf8');
 const globals = readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
 
@@ -31,6 +32,9 @@ test('below-the-fold industry and product LCP images declare responsive sizes', 
   assert.match(industry, /loading="lazy"/);
   assert.match(productPage, /sizes="\(max-width: 1024px\) 100vw, 50vw"/);
   assert.match(productPage, /priority/);
+  assert.match(productCatalog, /import Image from 'next\/image'/);
+  assert.match(productCatalog, /sizes="\(max-width: 768px\) 100vw, \(max-width: 1280px\) 33vw, 400px"/);
+  assert.match(productCatalog, /quality=\{78\}/);
 });
 
 test('closed service widget can shrink to zero width on mobile regardless of localized label length', () => {
