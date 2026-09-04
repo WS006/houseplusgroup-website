@@ -78,8 +78,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={getLocaleDirection(locale)}>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1d4ed8" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="https://images.houseplus-ch.com/media/houseplus-group-brand-icon/" type="image/png" sizes="32x32" />
