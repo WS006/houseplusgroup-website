@@ -2,7 +2,8 @@
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
-  images: {
+    images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       { protocol: 'https', hostname: 'a.storyblok.com', pathname: '/f/**' },
       { protocol: 'https', hostname: '*.storyblok.com' },
