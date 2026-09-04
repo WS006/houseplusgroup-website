@@ -282,6 +282,8 @@ export default async function ArticlePage(props: { params: Promise<{ lang: strin
                     <img
                       src={section.image}
                       alt={section.imageAlt}
+                      width={800}
+                      height={450}
                       className="object-cover"
                     loading="lazy"
                      title={section.imageAlt} decoding="async" />

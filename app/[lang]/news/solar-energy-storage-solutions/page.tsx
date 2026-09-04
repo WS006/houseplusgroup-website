@@ -293,7 +293,9 @@ export default async function SolarEnergyStorageArticle(props: { params: Promise
                       <img
                         src={section.image}
                         alt={section.imageAlt}
-                        className="object-cover"
+                        width={800}
+                        height={450}
+                      className="object-cover"
                       loading="lazy"
                        title={section.imageAlt} decoding="async" />
                     </div>
@@ -304,6 +306,8 @@ export default async function SolarEnergyStorageArticle(props: { params: Promise
                     <img
                       src={section.image}
                       alt={section.imageAlt}
+                      width={800}
+                      height={450}
                       className="object-cover"
                     loading="lazy"
                      title={section.imageAlt} decoding="async" />
