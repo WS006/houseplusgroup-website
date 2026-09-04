@@ -31,3 +31,5 @@ jobs:
             cloudflare scripts
       - run: pnpm test
       - run: pnpm build
+      - name: Audit production image Sitemap resources
+        run: pnpm audit:production-image-sitemap https://www.houseplus-ch.com/image-sitemap.xml audit/image-sitemap-ci
