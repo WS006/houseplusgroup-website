@@ -137,6 +137,15 @@ test('homepage carousel exposes every SEO image and Alt Text in HTML while prote
   assert.match(carousel, /aria-hidden="true"/);
 });
 
+test('homepage carousel remains pinned to the previous approved Hero asset set', () => {
+  const homePage = read('app/[lang]/page.tsx');
+  assert.match(homePage, /const PINNED_HOMEPAGE_CAROUSEL_IMAGES = \[/);
+  for (const slug of ['solar-hero', 'home-appliances-hero', '3c-electronics-hero']) {
+    assert.match(homePage, new RegExp(`houseplus-carousel-houseplus-${slug}`));
+  }
+  assert.match(homePage, /filename: PINNED_HOMEPAGE_CAROUSEL_IMAGES\[index\]/);
+});
+
 test('product listing canonicals and hreflang URLs use the trailing-slash URLs served in production', () => {
   const productsPage = read('app/[lang]/products/page.tsx');
   assert.match(productsPage, /\$\{BASE_URL\}\/\$\{locale\}\/products\/\?category=\$\{category\}/);

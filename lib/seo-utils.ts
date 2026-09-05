@@ -31,7 +31,7 @@ export const siteConfig = {
   name: 'HousePlus',
   url: 'https://www.houseplus-ch.com',
   description: 'HousePlus: Professional manufacturer of solar systems, home appliances, and 3C electronics. Global wholesale and OEM/ODM services. Contact us for competitive pricing and custom solutions. | Made in China',
-  defaultImage: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
+  defaultImage: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
 };
 
 export function getOGLocale(lang: string): string {

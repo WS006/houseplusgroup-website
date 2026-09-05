@@ -10,6 +10,14 @@ import { notFound } from 'next/navigation';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
+// Pinned to the previous homepage carousel asset set. Do not replace these
+// URLs during media optimization without an explicit product decision.
+const PINNED_HOMEPAGE_CAROUSEL_IMAGES = [
+  'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
+  'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/',
+  'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/',
+] as const;
+
 const localizedHomeCopy = {
   en: {
     tagline: 'HousePlus · Global Wholesale & OEM/ODM Manufacturer',
@@ -128,8 +136,8 @@ export default async function LangHome(props: { params: Promise<{ lang: string }
   const facts = getCompanyFacts(lang);
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
-    image: {
-      filename: ['https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-air-fryer-5-8l-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/'][index],
+      image: {
+      filename: PINNED_HOMEPAGE_CAROUSEL_IMAGES[index],
       alt: item.imageAlt
     },
     title: item.title,
@@ -138,9 +146,8 @@ export default async function LangHome(props: { params: Promise<{ lang: string }
     button_link: { url: '/products', cached_url: '/products' }
   }));
 
-  // The published CMS carousel still references the legacy, mismatched image set.
-  // Keep the homepage hero self-hosted and versioned with this repository so the
-  // image-to-category mapping is deterministic in every deployed language.
+  // The homepage carousel is intentionally pinned to the previous approved
+  // asset set so media optimization cannot silently change the visual baseline.
   const displayCarouselItems = defaultCarouselItems;
 
   return (
