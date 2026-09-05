@@ -2,7 +2,6 @@ import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { getDictionary } from '@/lib/i18n-config';
-import { r2MediaUrl } from '@/lib/r2-media-map';
 import { getCompanyFacts } from '@/lib/company-facts';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -130,7 +129,7 @@ export default async function LangHome(props: { params: Promise<{ lang: string }
   const defaultCarouselItems = dict.home.carousel.map((item, index) => ({
     _uid: String(index + 1),
     image: {
-      filename: r2MediaUrl(`/images/carousel/${['houseplus-solar-hero.jpg', 'houseplus-home-appliances-hero.jpg', 'houseplus-3c-electronics-hero.jpg'][index]}`),
+      filename: ['https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-air-fryer-5-8l-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/'][index],
       alt: item.imageAlt
     },
     title: item.title,
