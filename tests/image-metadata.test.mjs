@@ -6,6 +6,7 @@ const schemaSource = readFileSync(new URL('../lib/schema-generator.ts', import.m
 const footerSource = readFileSync(new URL('../components/Footer.tsx', import.meta.url), 'utf8');
 const imageSitemapSource = readFileSync(new URL('../app/image-sitemap.xml/route.ts', import.meta.url), 'utf8');
 const workflowSource = readFileSync(new URL('../.github/workflows/houseplus-quality-gate.yml', import.meta.url), 'utf8');
+const variantScript = readFileSync(new URL('../cloudflare/media-control-plane/build_webp_variants.py', import.meta.url), 'utf8');
 
 test('approved HousePlus ImageObject output includes the four recommended Google image metadata fields', () => {
   for (const field of ['acquireLicensePage', 'creditText', 'copyrightNotice', 'creator']) {
@@ -31,4 +32,9 @@ test('image Sitemap filters known stale media Worker 404 entries', () => {
 test('release gate runs the production image Sitemap resource audit', () => {
   assert.match(workflowSource, /pnpm audit:production-image-sitemap/);
   assert.match(workflowSource, /https:\/\/www\.houseplus-ch\.com\/image-sitemap\.xml/);
+});
+
+test('WebP variant uploader targets only the production v2 media origin', () => {
+  assert.match(variantScript, /https:\/\/images\.houseplus-ch\.com/);
+  assert.doesNotMatch(variantScript, /houseplus-media-api\.jack006hu\.workers\.dev/);
 });

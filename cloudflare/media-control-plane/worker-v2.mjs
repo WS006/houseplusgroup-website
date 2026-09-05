@@ -93,7 +93,7 @@ async function serveMedia(request, env, identifier) {
     ...withCors(request),
   });
   object.writeHttpMetadata(headers);
-  headers.set('content-type', asset.content_type || 'application/octet-stream');
+  headers.set('content-type', variant ? 'image/webp' : (asset.content_type || 'application/octet-stream'));
   if (request.headers.has('range') && object.range) {
     const end = object.range.offset + object.range.length - 1;
     headers.set('content-range', `bytes ${object.range.offset}-${end}/${object.size}`);

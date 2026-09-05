@@ -19,7 +19,7 @@ from PIL import Image, ImageOps
 ROOT = Path(__file__).resolve().parents[2]
 LOG_PATH = ROOT / 'audit' / 'r2-switch' / 'webp_variant_generation.jsonl'
 WORKER = os.environ.get('HOUSEPLUS_MEDIA_API_URL', 'https://images.houseplus-ch.com').rstrip('/')
-TOKEN_PATH = Path('/home/ubuntu/.houseplus_media_admin_token')
+TOKEN_PATH = Path('/home/ubuntu/.houseplus_v2_admin_token')
 PUBLIC_ORIGIN = 'https://images.houseplus-ch.com'
 MAX_SOURCE_BYTES = 1_000_000
 MAX_EDGE = 1920
