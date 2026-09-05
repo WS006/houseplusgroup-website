@@ -29,7 +29,19 @@ jobs:
           ! grep -RIn --exclude-dir=.git --exclude='*.md' \
             -E "workers/scripts/houseplus-media-api|ACCOUNT_ID = 'affca529f7b55b7eb2b3770c954bd36d'" \
             cloudflare scripts
+      - name: Reject legacy media URLs from runtime source
+        run: |
+          ! grep -RIn --exclude='*.md' \
+            -E "houseplus-media-api\\.jack006hu\\.workers\\.dev|workers/scripts/houseplus-media-api" \
+            app components lib next.config.* middleware.ts
       - run: pnpm test
       - run: pnpm build
       - name: Audit production image Sitemap resources
         run: pnpm audit:production-image-sitemap https://www.houseplus-ch.com/image-sitemap.xml audit/image-sitemap-ci
+      - name: Measure post-deployment Web Vitals
+        run: |
+          pnpm audit:real-web-vitals \
+            https://www.houseplus-ch.com/en/ \
+            https://www.houseplus-ch.com/en/products/ \
+            https://www.houseplus-ch.com/en/news/2026-electronics-market-update/ \
+            --out audit/web-vitals-ci

@@ -1,3 +1,4 @@
+// ARCHIVE ONLY — DO NOT RUN for new deployments. Use media-v2 tooling.
 import { mkdir, readFile, writeFile, readdir } from 'node:fs/promises';
 import { resolve, relative, extname, sep } from 'node:path';
 

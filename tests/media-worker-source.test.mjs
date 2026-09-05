@@ -17,6 +17,15 @@ test('media Worker source of truth contains the production media and Alt routes'
   assert.match(worker, /generate_missing_alt_only/);
 });
 
+test('v2 media delivery uses explicit edge-cache observability and legacy Worker is archive-only', () => {
+  const legacy = fs.readFileSync('cloudflare/media-control-plane/worker.mjs', 'utf8');
+  assert.match(worker, /caches\.default\.match/);
+  assert.match(worker, /caches\.default\.put/);
+  assert.match(worker, /x-houseplus-cache/);
+  assert.match(worker, /max-age=31536000, immutable/);
+  assert.match(legacy, /ARCHIVE ONLY/);
+});
+
 test('media deployment preparation targets the new production Worker explicitly', () => {
   assert.match(deploy, /houseplus-media-v2/);
   assert.match(deploy, /worker-v2\.mjs/);

@@ -79,6 +79,18 @@ async function serveMedia(request, env, identifier) {
   if (!asset || asset.status !== 'approved') return json({ error: 'Media asset not found' }, 404, withCors(request));
   const metadata = assetMetadata(asset);
   const variant = request.headers.get('accept')?.includes('image/webp') ? metadata.variants?.webp_1920 : null;
+  const cacheable = request.method === 'GET' && !request.headers.has('range');
+  const cacheUrl = new URL(request.url);
+  cacheUrl.searchParams.set('_format', variant ? 'webp' : 'original');
+  const cacheRequest = new Request(cacheUrl.toString(), request);
+  if (cacheable) {
+    const cached = await caches.default.match(cacheRequest);
+    if (cached) {
+      const headers = new Headers(cached.headers);
+      headers.set('x-houseplus-cache', 'HIT');
+      return new Response(cached.body, { status: cached.status, headers });
+    }
+  }
   const objectKey = variant?.key || asset.r2_key;
   const object = await env.MEDIA_BUCKET.get(objectKey, { range: request.headers });
   if (!object) return json({ error: 'Media object unavailable' }, 404, withCors(request));
@@ -101,7 +113,10 @@ async function serveMedia(request, env, identifier) {
     return new Response(request.method === 'HEAD' ? null : object.body, { status: 206, headers });
   }
   headers.set('content-length', String(object.size));
-  return new Response(request.method === 'HEAD' ? null : object.body, { status: 200, headers });
+  headers.set('x-houseplus-cache', cacheable ? 'MISS' : 'BYPASS');
+  const response = new Response(request.method === 'HEAD' ? null : object.body, { status: 200, headers });
+  if (cacheable) await caches.default.put(cacheRequest, response.clone());
+  return response;
 }
 
 async function parseUpload(request) {

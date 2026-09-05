@@ -1,3 +1,4 @@
+// ARCHIVE ONLY — DO NOT DEPLOY. Production source of truth is worker-v2.mjs.
 const ALLOWED_STATUSES = new Set(['draft', 'needs_review', 'approved', 'deprecated', 'archived']);
 const ALLOWED_ROLES = new Set(['article_hero', 'product_primary', 'product_gallery', 'page_hero', 'card', 'open_graph', 'inline', 'document_preview']);
 const ALLOWED_ENTITY_TYPES = new Set(['article', 'product', 'page', 'brand', 'team_member', 'factory', 'document']);
