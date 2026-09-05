@@ -2,7 +2,7 @@ import { getR2MediaDetails, r2ImageDimensions } from './r2-media-details';
 import { r2MediaUrl } from './r2-media-map';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
-const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
+const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/';
 const OFFICIAL_HORIZONTAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
 const VERIFIED_ORGANIZATION_PROFILES = [
   'https://www.facebook.com/houseplusgroup',

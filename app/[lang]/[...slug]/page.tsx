@@ -9,12 +9,12 @@ import { getR2MediaDetails, r2ImageDimensions } from '@/lib/r2-media-details';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const PAGE_IMAGE_BY_TYPE: Record<string, string> = {
-  products: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
-  news: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-3c-electronics-hero/',
+  products: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
+  news: 'https://images.houseplus-ch.com/media/houseplus-articles-covers-2026-electronics-market-update-b2b-guide/',
   'about-us': 'https://images.houseplus-ch.com/media/houseplus-factory-production-line/',
   factory: 'https://images.houseplus-ch.com/media/houseplus-articles-service-factory-assembly-workers-b2b-guide/',
   team: 'https://images.houseplus-ch.com/media/houseplus-team-team-manufacturing-collaboration/',
-  service: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-home-appliances-hero/',
+  service: 'https://images.houseplus-ch.com/media/houseplus-home-home-appliances-collection-b/',
 };
 const DEFAULT_PAGE_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-group-logo/';
 

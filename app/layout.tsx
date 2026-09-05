@@ -35,7 +35,7 @@ export const metadata = {
     url: 'https://www.houseplus-ch.com',
     siteName: 'HousePlus',
     images: [{
-      url: 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/',
+      url: 'https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/',
       width: 1200,
       height: 675,
       alt: 'HousePlus solar energy systems for global wholesale partners',
@@ -45,7 +45,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@houseplusglobal',
     creator: '@houseplusglobal',
-    images: ['https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/'],
+    images: ['https://images.houseplus-ch.com/media/houseplus-solar-panel-500w-wholesale/'],
   },
   other: {
     'geo.region': 'CN-GD',
