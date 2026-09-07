@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import InquiryForm from '../../../components/InquiryForm';
+import InquiryForm from '../../../../components/InquiryForm';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';

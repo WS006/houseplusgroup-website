@@ -6,7 +6,7 @@ const root = new URL('..', import.meta.url);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 test('legacy EU region URL permanently redirects and is excluded from the indexable region list', () => {
-  const regionPage = read('app/[lang]/regions/[region]/page.tsx');
+  const regionPage = read('app/(site)/[lang]/regions/[region]/page.tsx');
   const middleware = read('middleware.ts');
   const urls = read('lib/urls.ts');
   assert.match(regionPage, /permanentRedirect\(`\/\$\{lang\}\/regions\/\$\{legacyRegionAliases\[region\]\}`\)/);
@@ -25,9 +25,9 @@ test('middleware reads its administrator password only from the deployment envir
 
 test('formerly duplicated multilingual news metadata uses localized title and description maps', () => {
   for (const path of [
-    'app/[lang]/news/energy-efficiency-standards-appliances/page.tsx',
-    'app/[lang]/news/global-wholesale-guide-home-appliances/page.tsx',
-    'app/[lang]/news/oem-odm-manufacturing-guide/page.tsx',
+    'app/(site)/[lang]/news/energy-efficiency-standards-appliances/page.tsx',
+    'app/(site)/[lang]/news/global-wholesale-guide-home-appliances/page.tsx',
+    'app/(site)/[lang]/news/oem-odm-manufacturing-guide/page.tsx',
   ]) {
     const source = read(path);
     assert.match(source, /const titles: Record<string, string>/);
@@ -38,7 +38,7 @@ test('formerly duplicated multilingual news metadata uses localized title and de
 });
 
 test('FAQ metadata uses localized, non-committal buyer guidance in all five languages', () => {
-  const faq = read('app/[lang]/faq/page.tsx');
+  const faq = read('app/(site)/[lang]/faq/page.tsx');
   const descriptions = faq.slice(faq.indexOf('const descriptions:'), faq.indexOf('return generateSEOMetadata'));
   assert.match(faq, /description: descriptions\[lang\] \|\| descriptions\.en/);
   assert.match(faq, /keywords: keywords\[lang\] \|\| keywords\.en/);
@@ -49,15 +49,15 @@ test('FAQ metadata uses localized, non-committal buyer guidance in all five lang
 });
 
 test('French electronics and smart-home market pages retain distinct metadata', () => {
-  const electronics = read('app/[lang]/news/2026-electronics-market-update/page.tsx');
-  const smartHome = read('app/[lang]/news/2026-smart-home-appliances-market-guide/page.tsx');
+  const electronics = read('app/(site)/[lang]/news/2026-electronics-market-update/page.tsx');
+  const smartHome = read('app/(site)/[lang]/news/2026-smart-home-appliances-market-guide/page.tsx');
   assert.match(electronics, /Tendances du marché de l’électronique 3C en 2026/);
   assert.match(smartHome, /Tendances du marché mondial des appareils électroménagers intelligents 2026/);
   assert.doesNotMatch(electronics, /Explorez les tendances clés qui façonnent le marché des appareils électroménagers intelligents/);
 });
 
 test('invalid product slugs return a real noindex 404 instead of an indexable generic product page', () => {
-  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const productPage = read('app/(site)/[lang]/products/[slug]/page.tsx');
   assert.match(productPage, /import \{ notFound \} from 'next\/navigation';/);
   assert.match(productPage, /if \(!baseProduct \|\| !validLangs\.includes\(lang\)\) \{\s*return \{\s*title: 'Product Not Found \| HousePlus',\s*robots: 'noindex, follow',/s);
   assert.match(productPage, /if \(!baseProduct \|\| !validLangs\.includes\(lang\)\) \{\s*notFound\(\);/s);
@@ -65,7 +65,7 @@ test('invalid product slugs return a real noindex 404 instead of an indexable ge
 });
 
 test('Contact inquiry prefill parameters retain form context without creating indexable duplicates', () => {
-  const contactPage = read('app/[lang]/contact/page.tsx');
+  const contactPage = read('app/(site)/[lang]/contact/page.tsx');
   assert.match(contactPage, /searchParams\?: Promise<\{ product\?: string; region\?: string \}>/);
   assert.match(contactPage, /const searchParams = await props\.searchParams;/);
   assert.match(contactPage, /const isInquiryPrefill = typeof searchParams\?\.product === 'string' \|\| typeof searchParams\?\.region === 'string';/);
@@ -101,8 +101,8 @@ test('deep legacy home and index.html paths retain their content tail during can
 });
 
 test('catch-all and localized not-found routes never emit indexable metadata for unknown URLs', () => {
-  const catchAll = read('app/[lang]/[...slug]/page.tsx');
-  const localizedNotFound = read('app/[lang]/not-found.tsx');
+  const catchAll = read('app/(site)/[lang]/[...slug]/page.tsx');
+  const localizedNotFound = read('app/(site)/[lang]/not-found.tsx');
   const rootNotFound = read('app/not-found.tsx');
   assert.match(catchAll, /Promise\.allSettled\(\[/);
   assert.match(catchAll, /if \(!storyExists && !childStoriesExist\) \{\s*return \{\s*title: 'Page Not Found \| HousePlus',\s*robots: 'noindex, follow',/s);
@@ -116,8 +116,8 @@ test('catch-all and localized not-found routes never emit indexable metadata for
 });
 
 test('homepage keeps Organization and WebSite JSON-LD at the root without duplicate page injection', () => {
-  const homePage = read('app/[lang]/page.tsx');
-  const rootLayout = read('app/layout.tsx');
+  const homePage = read('app/(site)/[lang]/page.tsx');
+  const rootLayout = read('app/(site)/[lang]/layout.tsx');
   assert.match(rootLayout, /generateOrganizationSchema/);
   assert.match(rootLayout, /const graphSchema = \{/);
   assert.doesNotMatch(homePage, /generateOrganizationSchema/);
@@ -138,7 +138,7 @@ test('homepage carousel exposes every SEO image and Alt Text in HTML while prote
 });
 
 test('homepage carousel remains pinned to the previous approved Hero asset set', () => {
-  const homePage = read('app/[lang]/page.tsx');
+  const homePage = read('app/(site)/[lang]/page.tsx');
   assert.match(homePage, /const PINNED_HOMEPAGE_CAROUSEL_IMAGES = \[/);
   for (const slug of ['solar-hero', 'home-appliances-hero', '3c-electronics-hero']) {
     assert.match(homePage, new RegExp(`houseplus-carousel-houseplus-${slug}`));
@@ -147,7 +147,7 @@ test('homepage carousel remains pinned to the previous approved Hero asset set',
 });
 
 test('product listing canonicals and hreflang URLs use the trailing-slash URLs served in production', () => {
-  const productsPage = read('app/[lang]/products/page.tsx');
+  const productsPage = read('app/(site)/[lang]/products/page.tsx');
   assert.match(productsPage, /\$\{BASE_URL\}\/\$\{locale\}\/products\/\?category=\$\{category\}/);
   assert.match(productsPage, /\$\{BASE_URL\}\/\$\{locale\}\/products\//);
   assert.match(productsPage, /const canonicalUrl = isValidCategory\s*\? `\$\{BASE_URL\}\/\$\{lang\}\/products\/\?category=\$\{category\}`\s*:\s*`\$\{BASE_URL\}\/\$\{lang\}\/products\/`/s);
@@ -157,7 +157,7 @@ test('product listing canonicals and hreflang URLs use the trailing-slash URLs s
 });
 
 test('localized region detail pages expose a visible Breadcrumb and localized BreadcrumbList labels', () => {
-  const regionPage = read('app/[lang]/regions/[region]/page.tsx');
+  const regionPage = read('app/(site)/[lang]/regions/[region]/page.tsx');
   const breadcrumb = read('components/Breadcrumb.tsx');
   assert.match(regionPage, /import Breadcrumb from '@\/components\/Breadcrumb';/);
   assert.match(regionPage, /const regionBreadcrumbLabels: Record<string, string>/);
@@ -173,7 +173,7 @@ test('localized region detail pages expose a visible Breadcrumb and localized Br
 test('portable power supply article publishes an accessible video and VideoObject metadata', () => {
   const article = read('lib/blog-data/august-2026-b2b-insights.ts');
   const registry = read('lib/blog-data/index.ts');
-  const page = read('app/[lang]/news/[slug]/page.tsx');
+  const page = read('app/(site)/[lang]/news/[slug]/page.tsx');
   const schema = read('lib/schema-generator.ts');
   assert.match(registry, /portable-power-supply-solar-storage-b2b-guide/);
   assert.match(article, /duration: 'PT42S'/);

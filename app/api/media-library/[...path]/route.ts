@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const MEDIA_API_URL = process.env.HOUSEPLUS_MEDIA_API_URL || 'https://houseplus-media-api.jack006hu.workers.dev';
+const MEDIA_API_URL = process.env.HOUSEPLUS_MEDIA_API_URL || 'https://images.houseplus-ch.com';
 const MEDIA_API_TOKEN = process.env.HOUSEPLUS_MEDIA_API_TOKEN;
 
 function buildTarget(request: NextRequest, segments: string[]) {

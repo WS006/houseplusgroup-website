@@ -13,7 +13,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -26,18 +26,33 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Reject retired media targets
         run: |
-          ! grep -RIn --exclude-dir=.git --exclude='*.md' \
+          ! grep -RIn --exclude-dir=.git --exclude-dir=archive --exclude='*.md' \
             -E "workers/scripts/houseplus-media-api|ACCOUNT_ID = 'affca529f7b55b7eb2b3770c954bd36d'" \
             cloudflare scripts
       - name: Reject legacy media URLs from runtime source
         run: |
-          ! grep -RIn --exclude='*.md' \
+          ! grep -RIn --exclude-dir=archive --exclude='*.md' \
             -E "houseplus-media-api\\.jack006hu\\.workers\\.dev|workers/scripts/houseplus-media-api" \
             app components lib next.config.* middleware.ts
+      - name: Verify only v2 media Worker is active
+        run: |
+          test -f cloudflare/media-control-plane/worker-v2.mjs
+          test -f cloudflare/media-control-plane/archive/worker.mjs
+          ! find cloudflare/media-control-plane -maxdepth 1 -name 'worker.mjs' -print -quit | grep -q .
       - run: pnpm test
       - run: pnpm build
       - name: Audit production image Sitemap resources
         run: pnpm audit:production-image-sitemap https://www.houseplus-ch.com/image-sitemap.xml audit/image-sitemap-ci
+      - name: Audit production multilingual metadata and structured data
+        run: pnpm audit:localization https://www.houseplus-ch.com/sitemap.xml audit/seo-localization-ci
+      - name: Audit production product SEO and Schema
+        run: pnpm audit:product-seo https://www.houseplus-ch.com audit/product-seo-ci
+      - name: Audit primary page localization and language parity
+        run: |
+          pnpm audit:primary-pages https://www.houseplus-ch.com audit/primary-pages-ci
+          pnpm audit:primary-language-parity https://www.houseplus-ch.com audit/primary-language-parity-ci
+      - name: Measure production HTML TTFB trend
+        run: pnpm audit:production-ttfb https://www.houseplus-ch.com/sitemap.xml audit/production-ttfb-ci
       - name: Measure post-deployment Web Vitals
         run: |
           pnpm audit:real-web-vitals \
@@ -45,3 +60,17 @@ jobs:
             https://www.houseplus-ch.com/en/products/ \
             https://www.houseplus-ch.com/en/news/2026-electronics-market-update/ \
             --out audit/web-vitals-ci
+      - name: Upload performance audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: houseplus-performance-audits-${{ github.run_id }}
+          path: |
+            audit/production-ttfb-ci/
+            audit/web-vitals-ci/
+            audit/image-sitemap-ci/
+            audit/seo-localization-ci/
+            audit/product-seo-ci/
+            audit/primary-pages-ci/
+            audit/primary-language-parity-ci/
+          if-no-files-found: warn

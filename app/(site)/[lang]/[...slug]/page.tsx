@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { getStoryblokApi, renderRichText } from '@storyblok/react';
+import { renderRichText } from '@storyblok/react';
 import { notFound } from 'next/navigation';
 import { localizeImageUrl } from '@/lib/image-utils';
 import SEOHead from '@/components/SEOHead';
 import { generateImageObjectSchema, generateWebPageSchema } from '@/lib/schema-generator';
 import { getR2MediaDetails, r2ImageDimensions } from '@/lib/r2-media-details';
+import { getCachedStory, getCachedStories } from '@/lib/storyblok-cached';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const PAGE_IMAGE_BY_TYPE: Record<string, string> = {
@@ -46,21 +47,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   let storyExists = false;
   let childStoriesExist = false;
   try {
-    const storyblokApi = getStoryblokApi();
     const [storyResult, childrenResult] = await Promise.allSettled([
-      storyblokApi.getStory(fullSlug, {
-        version: 'published',
-        language: lang,
-        resolve_links: 'url',
-      }),
-      storyblokApi.getStories({
-        starts_with: `${fullSlug}/`,
-        version: 'published',
-        language: lang,
-      }),
+      getCachedStory(fullSlug, lang, { resolve_links: 'url' }),
+      getCachedStories({ starts_with: `${fullSlug}/`, language: lang }),
     ]);
-    storyExists = storyResult.status === 'fulfilled' && Boolean(storyResult.value.data?.story);
-    childStoriesExist = childrenResult.status === 'fulfilled' && Boolean(childrenResult.value.data?.stories?.length);
+    storyExists = storyResult.status === 'fulfilled' && Boolean(storyResult.value);
+    childStoriesExist = childrenResult.status === 'fulfilled' && Boolean(childrenResult.value?.length);
   } catch {
     // A failed lookup is treated as not found, matching the page renderer's
     // existing behaviour and avoiding an indexable soft-404 during failures.
@@ -315,25 +307,13 @@ export default async function CatchAllPage({ params }: { params: Promise<{ lang:
   let subStories: any[] = [];
 
   try {
-    const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.getStory(fullSlug, { 
-      version: 'published', 
-      language: lang,
-      resolve_links: 'url',
-    });
-    story = data?.story;
+    story = await getCachedStory(fullSlug, lang, { resolve_links: 'url' });
   } catch (e) {
     console.error('Error fetching story:', e);
   }
 
   try {
-    const storyblokApi = getStoryblokApi();
-    const { data: listData } = await storyblokApi.getStories({
-      starts_with: fullSlug + '/',
-      version: 'published',
-      language: lang,
-    });
-    subStories = listData?.stories || [];
+    subStories = await getCachedStories({ starts_with: `${fullSlug}/`, language: lang });
   } catch (e) {
     console.error('Error fetching sub-stories:', e);
   }

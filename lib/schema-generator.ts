@@ -4,6 +4,9 @@ import { r2MediaUrl } from './r2-media-map';
 const BASE_URL = 'https://www.houseplus-ch.com';
 const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
 const OFFICIAL_HORIZONTAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
+const ORGANIZATION_ID = `${BASE_URL}/#organization`;
+const LOGO_ID = `${BASE_URL}/#logo`;
+const BRAND_ID = `${BASE_URL}/#brand`;
 const VERIFIED_ORGANIZATION_PROFILES = [
   'https://www.facebook.com/houseplusgroup',
   'https://www.linkedin.com/company/houseplus-group',
@@ -41,10 +44,10 @@ interface SchemaOptions {
 }
 
 export function generateOrganizationSchema(options: SchemaOptions) {
-  const { title, description, lang } = options;
+  const { description, lang } = options;
   const logoImage = {
     '@type': 'ImageObject',
-    '@id': `${OFFICIAL_HORIZONTAL_LOGO}#logo`,
+    '@id': LOGO_ID,
     url: OFFICIAL_HORIZONTAL_LOGO,
     contentUrl: OFFICIAL_HORIZONTAL_LOGO,
     width: 611,
@@ -58,8 +61,8 @@ export function generateOrganizationSchema(options: SchemaOptions) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': `${BASE_URL}/#organization`,
-    name: title,
+    '@id': ORGANIZATION_ID,
+    name: 'HousePlus Group',
     alternateName: 'HousePlus Group',
     description,
     url: BASE_URL,
@@ -69,7 +72,7 @@ export function generateOrganizationSchema(options: SchemaOptions) {
     image: primaryImage,
     brand: {
       '@type': 'Brand',
-      '@id': `${BASE_URL}/#brand`,
+      '@id': BRAND_ID,
       name: 'HousePlus',
       alternateName: 'HousePlus Group',
       url: BASE_URL,

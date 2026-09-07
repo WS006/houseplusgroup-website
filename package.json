@@ -17,6 +17,8 @@
         "audit:primary-language-parity": "node scripts/audit-primary-page-language-parity.mjs",
         "audit:production-image-sitemap": "node scripts/audit-production-image-sitemap.mjs",
         "audit:real-web-vitals": "node scripts/audit-real-web-vitals.mjs",
+        "audit:production-ttfb": "node scripts/audit-production-ttfb.mjs",
+        "audit:reconcile-production": "node scripts/reconcile-production-content.mjs",
         "mc:status": "node scripts/merchant-center-manager.js status",
         "mc:refetch": "node scripts/merchant-center-manager.js refetch",
         "mc:fix": "node scripts/merchant-center-manager.js fix",

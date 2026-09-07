@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 
 const articleSource = readFileSync(new URL('../lib/blog-data/august-2026-b2b-insights.ts', import.meta.url), 'utf8');
-const articlePageSource = readFileSync(new URL('../app/[lang]/news/[slug]/page.tsx', import.meta.url), 'utf8');
+const articlePageSource = readFileSync(new URL('../app/(site)/[lang]/news/[slug]/page.tsx', import.meta.url), 'utf8');
 
 const mediaUrls = [
   'https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/',

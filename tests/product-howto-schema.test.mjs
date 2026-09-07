@@ -14,7 +14,7 @@ test('product schema publishes only visible technical specifications and keeps q
 });
 
 test('all localized product pages emit a visible-content-aligned B2B sourcing HowTo schema', () => {
-  const page = read('app/[lang]/products/[slug]/page.tsx');
+  const page = read('app/(site)/[lang]/products/[slug]/page.tsx');
   const schema = read('lib/schema-generator.ts');
   assert.match(page, /generateProductHowToSchema/);
   assert.match(page, /const productHowToCopy/);

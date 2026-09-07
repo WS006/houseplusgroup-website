@@ -16,10 +16,10 @@ test('approved HousePlus ImageObject output includes the four recommended Google
   assert.match(schemaSource, /R2 assets published through this website/);
 });
 
-test('footer organization logo has matching Image Metadata fields', () => {
-  for (const field of ['acquireLicensePage', 'creditText', 'copyrightNotice', 'creator']) {
-    assert.match(footerSource, new RegExp(`${field}:`));
-  }
+test('footer keeps a single site-level Organization source of truth', () => {
+  assert.doesNotMatch(footerSource, /'@type': 'Organization'/);
+  assert.match(schemaSource, /const LOGO_ID = `\$\{BASE_URL\}\/\#logo`/);
+  assert.match(schemaSource, /'@id': LOGO_ID/);
 });
 
 test('image Sitemap filters known stale media Worker 404 entries', () => {

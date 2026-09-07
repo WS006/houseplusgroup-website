@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
 
-const faqPage = fs.readFileSync('app/[lang]/faq/page.tsx', 'utf8');
+const faqPage = fs.readFileSync('app/(site)/[lang]/faq/page.tsx', 'utf8');
 const schemaGenerator = fs.readFileSync('lib/schema-generator.ts', 'utf8');
 
  test('FAQ page emits FAQPage JSON-LD from the visible Q&A dataset', () => {

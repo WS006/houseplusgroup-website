@@ -11,27 +11,27 @@ test('middleware forwards the locale for server-rendered HTML attributes', () =>
   assert.match(middleware, /NextResponse\.next\(\{ request: \{ headers: requestHeaders \} \}\)/);
 });
 
-test('root layout renders localized lang and direction attributes', () => {
-  const layout = read('app/layout.tsx');
-  assert.match(layout, /export const dynamic = 'force-dynamic'/);
-  assert.match(layout, /\(await headers\(\)\)\.get\('x-houseplus-locale'\)/);
-  assert.match(layout, /<html lang=\{locale\} dir=\{getLocaleDirection\(locale\)\}>/);
+test('localized root layout renders lang and direction attributes from route params', () => {
+  const layout = read('app/(site)/[lang]/layout.tsx');
+  assert.match(layout, /export const dynamic = 'force-static'/);
+  assert.match(layout, /params: Promise<\{ lang: string \}>/);
+  assert.match(layout, /isValidLocale\(rawLang\)/);
+  assert.match(layout, /<html lang=\{lang\} dir=\{getLocaleDirection\(lang\)\}>/);
 });
 
 test('localized product routes do not force static rendering ahead of server language attributes', () => {
-  const source = read('app/[lang]/products/[slug]/page.tsx');
+  const source = read('app/(site)/[lang]/products/[slug]/page.tsx');
   assert.doesNotMatch(source, /force-static/);
 });
 
-test('client-side locale navigation keeps Arabic document direction in sync', () => {
-  const layout = read('app/[lang]/layout.tsx');
-  assert.match(layout, /document\.documentElement\.lang=/);
-  assert.match(layout, /document\.documentElement\.dir=/);
-  assert.match(layout, /lang === 'ar' \? 'rtl' : 'ltr'/);
+test('localized root layout does not mutate document language on the client', () => {
+  const layout = read('app/(site)/[lang]/layout.tsx');
+  assert.doesNotMatch(layout, /document\.documentElement\.(lang|dir)=/);
+  assert.match(layout, /generateStaticParams/);
 });
 
 test('product pages show confirmed fixed terms when present and retain quotation guidance for other conditions', () => {
-  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const productPage = read('app/(site)/[lang]/products/[slug]/page.tsx');
   assert.doesNotMatch(productPage, /GEO Fact:/);
   assert.match(productPage, /const quotationFaq = \[\{ question: ui\.quoteQuestion, answer: ui\.quoteAnswer \}\]/);
   assert.match(productPage, /b2bInfo: commercialInfo/);
@@ -45,7 +45,7 @@ test('product pages show confirmed fixed terms when present and retain quotation
 
 test('retail offers are opt-in, source-backed fields while B2B/OEM inquiry remains available', () => {
   const productData = read('lib/product-data.ts');
-  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const productPage = read('app/(site)/[lang]/products/[slug]/page.tsx');
   const schemaGenerator = read('lib/schema-generator.ts');
   assert.match(productData, /export interface RetailOffer/);
   assert.match(productData, /retailOffer\?: RetailOffer/);
@@ -59,8 +59,8 @@ test('retail offers are opt-in, source-backed fields while B2B/OEM inquiry remai
 });
 
 test('homepage logo uses a responsive Next Image and brand page distinguishes retail from B2B/OEM', () => {
-  const home = read('app/[lang]/page.tsx');
-  const brand = read('app/[lang]/brand/page.tsx');
+  const home = read('app/(site)/[lang]/page.tsx');
+  const brand = read('app/(site)/[lang]/brand/page.tsx');
   assert.match(home, /import Image from 'next\/image'/);
   assert.match(home, /width=\{709\}/);
   assert.match(home, /sizes="\(max-width: 767px\) 64px, 80px"/);
@@ -72,7 +72,7 @@ test('homepage logo uses a responsive Next Image and brand page distinguishes re
 });
 
 test('brand production image supplies localized Alt, Title and visible caption in every language', () => {
-  const brand = read('app/[lang]/brand/page.tsx');
+  const brand = read('app/(site)/[lang]/brand/page.tsx');
   for (const field of ['factoryImageAlt', 'factoryImageTitle', 'factoryImageCaption']) {
     assert.match(brand, new RegExp(`${field}: string;`));
     assert.match(brand, new RegExp(`${field}: '`, 'g'));
@@ -105,7 +105,7 @@ test('region switcher safely handles nullable navigation hooks during production
 });
 
 test('homepage and localized foundation pages publish the confirmed company facts in all five languages', () => {
-  const homePage = read('app/[lang]/page.tsx');
+  const homePage = read('app/(site)/[lang]/page.tsx');
   const foundationPage = read('components/LocalizedFoundationPage.tsx');
   const facts = read('lib/company-facts.ts');
   const schema = read('lib/schema-generator.ts');
@@ -120,8 +120,8 @@ test('homepage and localized foundation pages publish the confirmed company fact
 
 test('localized contact pages retain the inquiry form and product CTAs preserve product context', () => {
   const middleware = read('middleware.ts');
-  const contactPage = read('app/[lang]/contact/page.tsx');
-  const productPage = read('app/[lang]/products/[slug]/page.tsx');
+  const contactPage = read('app/(site)/[lang]/contact/page.tsx');
+  const productPage = read('app/(site)/[lang]/products/[slug]/page.tsx');
   const inquiryForm = read('components/InquiryForm.tsx');
   assert.doesNotMatch(middleware, /'certifications', 'contact'/);
   assert.match(contactPage, /<InquiryForm lang=\{lang\} initialProduct=\{productContext\}/);
@@ -155,7 +155,7 @@ test('confirmed missing-data products publish warranty and category certificatio
 });
 
 test('online support widget receives the active locale and provides all five language label sets', () => {
-  const langLayout = read('app/[lang]/layout.tsx');
+  const langLayout = read('app/(site)/[lang]/layout.tsx');
   const floatingTools = read('components/FloatingTools.tsx');
   const widget = read('components/ServiceWidget.tsx');
   assert.match(langLayout, /<FloatingTools lang=\{lang\} \/>/);
@@ -180,7 +180,7 @@ test('related-product cards localize product data and the details action in ever
 });
 
 test('floating chat receives the active locale, supplies five language copy sets, and clears mobile title space', () => {
-  const langLayout = read('app/[lang]/layout.tsx');
+  const langLayout = read('app/(site)/[lang]/layout.tsx');
   const floatingTools = read('components/FloatingTools.tsx');
   const chat = read('components/ChatBot.tsx');
   assert.match(langLayout, /<FloatingTools lang=\{lang\} \/>/);
@@ -195,8 +195,8 @@ test('floating chat receives the active locale, supplies five language copy sets
 });
 
 test('product metadata and JSON-LD preserve locale-specific SEO and contact actions', () => {
-  const productPage = read('app/[lang]/products/[slug]/page.tsx');
-  const productsPage = read('app/[lang]/products/page.tsx');
+  const productPage = read('app/(site)/[lang]/products/[slug]/page.tsx');
+  const productsPage = read('app/(site)/[lang]/products/page.tsx');
   const schemaGenerator = read('lib/schema-generator.ts');
   assert.match(productPage, /locale: getOGLocale\(lang\)/);
   assert.match(productPage, /contactUrl: `\$\{BASE_URL\}\/\$\{lang\}\/contact\/`/);
@@ -221,7 +221,7 @@ test('static news articles provide locale-aware URLs to Article JSON-LD', () => 
     'the-future-of-solar-energy',
   ];
   for (const slug of slugs) {
-    const source = read(`app/[lang]/news/${slug}/page.tsx`);
+    const source = read(`app/(site)/[lang]/news/${slug}/page.tsx`);
     assert.ok(source.includes(`url: \`https://www.houseplus-ch.com/\${lang}/news/${slug}\``));
   }
 });
@@ -243,8 +243,8 @@ test('recent static news articles are included in the canonical URL and sitemap 
 test('non-English primary pages render their dedicated localized route components rather than a generic foundation rewrite', () => {
   const middleware = read('middleware.ts');
   const sitemap = read('app/sitemap.ts');
-  const home = read('app/[lang]/page.tsx');
-  const faq = read('app/[lang]/faq/page.tsx');
+  const home = read('app/(site)/[lang]/page.tsx');
+  const faq = read('app/(site)/[lang]/faq/page.tsx');
   assert.doesNotMatch(middleware, /localizedFoundationSlugs/);
   assert.doesNotMatch(middleware, /localized-foundation/);
   assert.match(faq, /const faqs: Record<string, any\[\]>/);
@@ -279,7 +279,7 @@ test('news commercial-claim audit protects search assets from unverified article
 });
 
 test('all static news routes remain represented in the news listing and image sitemap', () => {
-  const newsPage = read('app/[lang]/news/page.tsx');
+  const newsPage = read('app/(site)/[lang]/news/page.tsx');
   const imageSitemap = read('app/image-sitemap.xml/route.ts');
   for (const slug of [
     'smart-home-appliances',
@@ -294,7 +294,7 @@ test('all static news routes remain represented in the news listing and image si
 });
 
 test('news listing preserves localized dynamic article hero Alt text for every locale', () => {
-  const newsPage = read('app/[lang]/news/page.tsx');
+  const newsPage = read('app/(site)/[lang]/news/page.tsx');
   const localizedArticles = read('lib/localized-content/articles.json');
   assert.match(newsPage, /type LocalizedArticleSummary = \{ title\?: string; description\?: string; heroImageAlt\?: string \}/);
   assert.match(newsPage, /localized\?\.\[locale\]\?\.heroImageAlt \|\| post\.heroImageAlt/);
@@ -319,7 +319,7 @@ test('all audited static news covers have a localized descriptive Alt mapping', 
 });
 
 test('2026 electronics market article keeps its non-English hero Alt text localized', () => {
-  const article = read('app/[lang]/news/2026-electronics-market-update/page.tsx');
+  const article = read('app/(site)/[lang]/news/2026-electronics-market-update/page.tsx');
   assert.match(article, /heroImageAlt: 'Exposición de productos de electrónica 3C de HousePlus'/);
   assert.match(article, /heroImageAlt: 'HousePlus 3C-Elektronik-Produktpräsentation'/);
   assert.match(article, /heroImageAlt: 'Présentation de produits électroniques 3C HousePlus'/);
@@ -327,7 +327,7 @@ test('2026 electronics market article keeps its non-English hero Alt text locali
 });
 
 test('news listing delivers R2 covers through responsive Next Image with only the featured cover prioritized', () => {
-  const newsPage = read('app/[lang]/news/page.tsx');
+  const newsPage = read('app/(site)/[lang]/news/page.tsx');
   assert.match(newsPage, /import Image from 'next\/image';/);
   assert.match(newsPage, /sizes="\(max-width: 1023px\) 100vw, 58vw"/);
   assert.match(newsPage, /sizes="\(max-width: 767px\) 100vw, \(max-width: 1023px\) 50vw, 33vw"/);
@@ -337,8 +337,8 @@ test('news listing delivers R2 covers through responsive Next Image with only th
 
 test('priority article covers have image-specific localized titles on both listing and detail pages', () => {
   const imageSemantics = read('lib/localized-content/image-semantics.ts');
-  const newsPage = read('app/[lang]/news/page.tsx');
-  const articlePage = read('app/[lang]/news/[slug]/page.tsx');
+  const newsPage = read('app/(site)/[lang]/news/page.tsx');
+  const articlePage = read('app/(site)/[lang]/news/[slug]/page.tsx');
   for (const slug of [
     'solar-panel-rfq-checklist-international-buyers',
     'home-appliance-oem-sample-evaluation-checklist',
@@ -368,8 +368,8 @@ test('image sitemap uses explicit page-role governance and excludes decorative b
 });
 
 test('factory and service pages use responsive Next Image for core R2 media without over-prioritizing non-LCP images', () => {
-  const factory = read('app/[lang]/factory/page.tsx');
-  const service = read('app/[lang]/service/page.tsx');
+  const factory = read('app/(site)/[lang]/factory/page.tsx');
+  const service = read('app/(site)/[lang]/service/page.tsx');
   for (const source of [factory, service]) assert.match(source, /import Image from 'next\/image';/);
   assert.match(factory, /houseplus-articles-service-factory-assembly-workers-b2b-guide\/[\s\S]*sizes="\(max-width: 1023px\) 100vw, 50vw"[\s\S]*priority/s);
   assert.match(factory, /houseplus-factory-factory-appliance-qc-lab\/[\s\S]*loading="lazy"/s);
@@ -378,8 +378,8 @@ test('factory and service pages use responsive Next Image for core R2 media with
 });
 
 test('support stays lazy while the measured region-map LCP receives responsive priority', () => {
-  const support = read('app/[lang]/support/page.tsx');
-  const regions = read('app/[lang]/regions/page.tsx');
+  const support = read('app/(site)/[lang]/support/page.tsx');
+  const regions = read('app/(site)/[lang]/regions/page.tsx');
   for (const source of [support, regions]) assert.match(source, /import Image from 'next\/image';/);
   assert.match(support, /houseplus-site-support-customer-service\/[\s\S]*fill[\s\S]*sizes="100vw"[\s\S]*loading="lazy"/s);
   assert.match(regions, /houseplus-site-global-world-map-markets\/[\s\S]*fill[\s\S]*sizes="\(max-width: 1280px\) 100vw, 1152px"[\s\S]*priority/);
@@ -415,7 +415,7 @@ test('all static news routes are included in the RSS source without replaying un
 });
 
 test('visual sitemap page derives product and article links from the canonical registries', () => {
-  const sitemapPage = read('app/[lang]/sitemap-page/page.tsx');
+  const sitemapPage = read('app/(site)/[lang]/sitemap-page/page.tsx');
   assert.match(sitemapPage, /productSlugs as canonicalProductSlugs, newsSlugs/);
   assert.match(sitemapPage, /getLocalizedProduct/);
   assert.match(sitemapPage, /getLocalizedArticle/);

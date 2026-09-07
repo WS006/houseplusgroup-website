@@ -1,0 +1,34 @@
+name: HousePlus Production Reconcile
+
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: houseplus-production-reconcile
+  cancel-in-progress: true
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.34.5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Reconcile production sitemap and localized HTML
+        run: pnpm audit:reconcile-production https://www.houseplus-ch.com/sitemap.xml audit/production-reconcile
+      - name: Upload reconciliation result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: houseplus-production-reconcile-${{ github.run_id }}
+          path: audit/production-reconcile/
+          if-no-files-found: warn

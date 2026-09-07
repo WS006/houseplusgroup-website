@@ -13,7 +13,10 @@ test('Organization Schema publishes only footer-backed sameAs profiles and conne
   assert.doesNotMatch(schema, /https:\/\/www\.instagram\.com\/houseplusgroup/);
   assert.match(schema, /sameAs: VERIFIED_ORGANIZATION_PROFILES/);
   assert.match(schema, /'@type': 'Brand'/);
-  assert.match(schema, /'@id': `\$\{BASE_URL\}\/#brand`/);
+  assert.match(schema, /const ORGANIZATION_ID = `\$\{BASE_URL\}\/\#organization`/);
+  assert.match(schema, /const LOGO_ID = `\$\{BASE_URL\}\/\#logo`/);
+  assert.match(schema, /const BRAND_ID = `\$\{BASE_URL\}\/\#brand`/);
+  assert.match(schema, /'@id': BRAND_ID/);
 });
 
 test('Organization Schema includes verifiable contact, location, primary image and catalog semantics', () => {

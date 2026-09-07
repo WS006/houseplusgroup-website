@@ -7,7 +7,7 @@ const root = path.resolve(process.cwd());
 const sitemap = fs.readFileSync(path.join(root, 'app/video-sitemap.xml/route.ts'), 'utf8');
 const robots = fs.readFileSync(path.join(root, 'app/robots.txt/route.ts'), 'utf8');
 const schema = fs.readFileSync(path.join(root, 'lib/schema-generator.ts'), 'utf8');
-const article = fs.readFileSync(path.join(root, 'app/[lang]/news/[slug]/page.tsx'), 'utf8');
+const article = fs.readFileSync(path.join(root, 'app/(site)/[lang]/news/[slug]/page.tsx'), 'utf8');
 
 test('video sitemap is generated from real BlogVideo records for all supported languages', () => {
   assert.match(sitemap, /blogPosts/);

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
 
-const productPage = fs.readFileSync('app/[lang]/products/[slug]/page.tsx', 'utf8');
+const productPage = fs.readFileSync('app/(site)/[lang]/products/[slug]/page.tsx', 'utf8');
 const productData = fs.readFileSync('lib/product-data.ts', 'utf8');
 const schemaGenerator = fs.readFileSync('lib/schema-generator.ts', 'utf8');
 

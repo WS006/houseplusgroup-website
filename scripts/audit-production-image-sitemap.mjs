@@ -4,6 +4,8 @@ const sitemapUrl = process.argv[2] || 'https://www.houseplus-ch.com/image-sitema
 const outputDir = process.argv[3] || 'audit/image-sitemap-production';
 const concurrency = 12;
 const headers = { 'user-agent': 'HousePlusImageSitemapAudit/1.0' };
+const requestTimeoutMs = 30_000;
+const maxAttempts = 3;
 
 const sitemapResponse = await fetch(sitemapUrl, { headers });
 if (!sitemapResponse.ok) throw new Error(`Sitemap ${sitemapUrl} returned HTTP ${sitemapResponse.status}`);
@@ -13,11 +15,26 @@ const uniqueImageUrls = [...new Set(imageUrls)];
 
 let cursor = 0;
 const results = [];
+async function fetchWithRetry(url) {
+  let lastError;
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      return await fetch(url, {
+        headers,
+        signal: AbortSignal.timeout(requestTimeoutMs),
+      });
+    } catch (error) {
+      lastError = error;
+      if (attempt < maxAttempts) await new Promise((resolve) => setTimeout(resolve, attempt * 500));
+    }
+  }
+  throw lastError;
+}
 async function worker() {
   while (cursor < uniqueImageUrls.length) {
     const url = uniqueImageUrls[cursor++];
     try {
-      const response = await fetch(url, { headers });
+      const response = await fetchWithRetry(url);
       const contentType = response.headers.get('content-type') || '';
       const contentLength = Number(response.headers.get('content-length') || 0);
       results.push({ url, status: response.status, contentType, contentLength, cacheControl: response.headers.get('cache-control') || '' });

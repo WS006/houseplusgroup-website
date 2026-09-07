@@ -222,7 +222,13 @@ function removeInvalidDynamicImages(block: string): string {
   });
 }
 
-const DYNAMIC_MEDIA_SITEMAP_URL = `${(process.env.HOUSEPLUS_MEDIA_API_URL || 'https://houseplus-media-api.jack006hu.workers.dev').replace(/\/$/, '')}/sitemap-images.xml`;
+// The v2 media Worker is the only active media origin. It currently exposes
+// asset delivery and variants, not a dynamic image-sitemap endpoint. Keep the
+// static, code-owned sitemap as the safe source of truth unless a future v2
+// endpoint is explicitly configured.
+const DYNAMIC_MEDIA_SITEMAP_URL = process.env.HOUSEPLUS_MEDIA_SITEMAP_URL
+  ? `${process.env.HOUSEPLUS_MEDIA_SITEMAP_URL.replace(/\/$/, '')}/sitemap-images.xml`
+  : '';
 
 function renderPage(page: PageImages): string {
   const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
@@ -278,6 +284,7 @@ export async function GET() {
   const staticXml = generateStaticImageSitemap();
   let xml = staticXml;
   try {
+    if (!DYNAMIC_MEDIA_SITEMAP_URL) throw new Error('No v2 dynamic media sitemap configured');
     const response = await fetch(DYNAMIC_MEDIA_SITEMAP_URL, { cache: 'no-store' });
     if (response.ok) xml = mergeDynamicMediaSitemap(staticXml, await response.text());
   } catch {

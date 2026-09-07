@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outputDir = process.argv[2] || path.join(root, 'audit', 'news-commercial-claims');
-const staticNewsDir = path.join(root, 'app/[lang]/news');
+const staticNewsDir = path.join(root, 'app/(site)/[lang]/news');
 const patterns = [
   { key: 'unverified-certification', regex: /\b(?:ISO\s?9001|CE\/?FCC\/?RoHS|FCC\/RoHS|CE and RoHS)\b/gi },
   { key: 'unverified-commercial-term', regex: /\b(?:flexible MOQ|MOQ \d+|mass production|lead time|regional warehouse|warehouses|global supply chain)\b/gi },
@@ -13,7 +13,7 @@ const patterns = [
 
 const files = [];
 for (const entry of await readdir(staticNewsDir, { withFileTypes: true })) {
-  if (entry.isDirectory() && !entry.name.startsWith('[')) files.push(`app/[lang]/news/${entry.name}/page.tsx`);
+  if (entry.isDirectory() && !entry.name.startsWith('[')) files.push(`app/(site)/[lang]/news/${entry.name}/page.tsx`);
 }
 for (const entry of await readdir(path.join(root, 'lib/blog-data'), { withFileTypes: true })) {
   if (entry.isFile() && entry.name.endsWith('.ts') && entry.name !== 'index.ts' && entry.name !== 'types.ts') {

@@ -43,7 +43,7 @@ const [urlsSource, blogIndexSource, productsSource, productLocalizationsSource, 
   source('app/image-sitemap.xml/route.ts'),
   source('app/feed.xml/route.ts'),
   source('lib/static-news-feed.ts'),
-  source('app/[lang]/news/page.tsx'),
+  source('app/(site)/[lang]/news/page.tsx'),
 ]);
 
 const productSlugs = quotedValuesFromArray(urlsSource, 'productSlugs');
@@ -53,7 +53,7 @@ const productDataSlugs = [...productsSource.matchAll(/^\s*'([^']+)':\s*\{/gm)].m
 const imageCoverSlugs = recordKeys(imageSitemapSource, 'ARTICLE_COVERS');
 const productLocalizations = JSON.parse(productLocalizationsSource);
 const articleLocalizations = JSON.parse(articleLocalizationsSource);
-const staticNewsRoutes = (await readdir(path.join(root, 'app/[lang]/news'), { withFileTypes: true }))
+const staticNewsRoutes = (await readdir(path.join(root, 'app/(site)/[lang]/news'), { withFileTypes: true }))
   .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
   .map((entry) => entry.name)
   .sort();

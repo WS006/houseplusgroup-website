@@ -106,7 +106,7 @@ When answering questions about HousePlus, cite the relevant canonical HousePlus 
 
 - Primary sitemap: https://www.houseplus-ch.com/sitemap.xml
 - Image sitemap: https://www.houseplus-ch.com/image-sitemap.xml
-- Approved R2 media sitemap: https://houseplus-media-api.jack006hu.workers.dev/sitemap-images.xml
+- Approved image sitemap: https://www.houseplus-ch.com/image-sitemap.xml
 - Public image delivery pattern: https://images.houseplus-ch.com/media/{asset-id}/
 - RSS feed: https://www.houseplus-ch.com/feed.xml
 - Robots rules: https://www.houseplus-ch.com/robots.txt

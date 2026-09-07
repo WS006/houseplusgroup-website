@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-const DEFAULT_MEDIA_API = 'https://houseplus-media-api.jack006hu.workers.dev';
+const DEFAULT_MEDIA_API = 'https://images.houseplus-ch.com';
 const PUBLIC_MEDIA_IDENTIFIER_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/i;
 
 function mediaApiOrigin(): string {

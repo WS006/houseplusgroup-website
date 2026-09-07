@@ -7,7 +7,7 @@ const read = (path) => readFileSync(new URL(path, root), 'utf8');
 
 test('AI referral tracking is globally enabled without collecting visitor query content', () => {
   const tracker = read('components/AiReferralTracker.tsx');
-  const layout = read('app/layout.tsx');
+  const layout = read('app/(site)/[lang]/layout.tsx');
   for (const host of ['chatgpt.com', 'perplexity.ai', 'copilot.microsoft.com', 'claude.ai', 'gemini.google.com']) {
     assert.match(tracker, new RegExp(host.replace('.', '\\.')));
   }

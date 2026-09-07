@@ -5,12 +5,12 @@ import test from 'node:test';
 const config = readFileSync(new URL('../next.config.js', import.meta.url), 'utf8');
 const carousel = readFileSync(new URL('../components/Carousel.tsx', import.meta.url), 'utf8');
 const industry = readFileSync(new URL('../components/IndustrySection.tsx', import.meta.url), 'utf8');
-const productPage = readFileSync(new URL('../app/[lang]/products/[slug]/page.tsx', import.meta.url), 'utf8');
-const productCatalog = readFileSync(new URL('../app/[lang]/products/page.tsx', import.meta.url), 'utf8');
+const productPage = readFileSync(new URL('../app/(site)/[lang]/products/[slug]/page.tsx', import.meta.url), 'utf8');
+const productCatalog = readFileSync(new URL('../app/(site)/[lang]/products/page.tsx', import.meta.url), 'utf8');
 const serviceWidget = readFileSync(new URL('../components/ServiceWidget.tsx', import.meta.url), 'utf8');
 const globals = readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
 const pageSources = [
-  ...['about-us', 'careers', 'case-studies', 'contact', 'faq', 'team'].map((slug) => readFileSync(new URL(`../app/[lang]/${slug}/page.tsx`, import.meta.url), 'utf8')),
+  ...['about-us', 'careers', 'case-studies', 'contact', 'faq', 'team'].map((slug) => readFileSync(new URL(`../app/(site)/[lang]/${slug}/page.tsx`, import.meta.url), 'utf8')),
   readFileSync(new URL('../components/ArticleFeatureImage.tsx', import.meta.url), 'utf8'),
   readFileSync(new URL('../components/ArticleMeta.tsx', import.meta.url), 'utf8'),
 ];
@@ -61,7 +61,7 @@ test('public page image components use Next Image instead of native img tags', (
 });
 
 test('floating interaction tools are delayed so they do not block the initial homepage bundle', () => {
-  const layout = readFileSync(new URL('../app/[lang]/layout.tsx', import.meta.url), 'utf8');
+  const layout = readFileSync(new URL('../app/(site)/[lang]/layout.tsx', import.meta.url), 'utf8');
   const floatingTools = readFileSync(new URL('../components/FloatingTools.tsx', import.meta.url), 'utf8');
   assert.match(layout, /import FloatingTools from '@\/components\/FloatingTools'/);
   assert.doesNotMatch(layout, /import (ServiceWidget|ChatBot|BackToTop)/);
