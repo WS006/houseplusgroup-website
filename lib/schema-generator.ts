@@ -327,6 +327,12 @@ export function generateProductSchema(options: ProductSchemaOptions) {
   const imageDimensions = r2ImageDimensions(image, { width: imageWidth, height: imageHeight });
   const resolvedImageCaption = imageCaption || mediaDetails?.title || name;
   const resolvedImageDescription = imageDescription || mediaDetails?.description || mediaDetails?.alt || description;
+  // Quote-only B2B products must not publish a fabricated price such as "0".
+  // Keep the commercial meaning explicit in the Product description and use
+  // ContactAction below; real retail prices continue to use a normal Offer.
+  const schemaDescription = retailOffer
+    ? description
+    : `${description} Contact HousePlus Group for wholesale pricing, product documentation and order-specific commercial terms.`;
   // Technical specifications are published only when they are visibly shown
   // on the product page. B2B commercial terms remain quote-confirmed.
   const publishB2BProperties = false;
@@ -431,7 +437,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     '@type': 'Product',
     '@id': `${url}#product`,
     name,
-    description,
+    description: schemaDescription,
     inLanguage: lang,
     image: [productImageObject],
     sku,

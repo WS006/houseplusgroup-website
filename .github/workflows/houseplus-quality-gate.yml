@@ -47,6 +47,13 @@ jobs:
         run: pnpm audit:localization https://www.houseplus-ch.com/sitemap.xml audit/seo-localization-ci
       - name: Audit production product SEO and Schema
         run: pnpm audit:product-seo https://www.houseplus-ch.com audit/product-seo-ci
+      - name: Audit production metadata and global structured data
+        run: |
+          curl --fail --silent --show-error --location https://www.houseplus-ch.com/sitemap.xml -o /tmp/houseplus-sitemap.xml
+          pnpm audit:production-metadata /tmp/houseplus-sitemap.xml audit/metadata-production-ci
+          pnpm audit:production-seo-schema https://www.houseplus-ch.com/sitemap.xml audit/seo-schema-production-ci
+      - name: Audit source image SEO contract
+        run: pnpm audit:image-seo-source audit/image-seo-source-ci
       - name: Audit primary page localization and language parity
         run: |
           pnpm audit:primary-pages https://www.houseplus-ch.com audit/primary-pages-ci
@@ -71,6 +78,9 @@ jobs:
             audit/image-sitemap-ci/
             audit/seo-localization-ci/
             audit/product-seo-ci/
+            audit/metadata-production-ci/
+            audit/seo-schema-production-ci/
+            audit/image-seo-source-ci/
             audit/primary-pages-ci/
             audit/primary-language-parity-ci/
           if-no-files-found: warn

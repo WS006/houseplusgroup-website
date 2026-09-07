@@ -167,6 +167,34 @@ const pageCopy: Record<Lang, PageCopy> = {
   },
 };
 
+const productDiscoveryCopy: Record<Lang, { title: string; description: string; links: Array<{ href: string; label: string }> }> = {
+  en: { title: 'Explore the product categories behind these partnerships', description: 'Review the relevant HousePlus product ranges for wholesale sourcing, OEM discussions and distributor inquiries.', links: [
+    { href: '/products/?category=solar', label: 'Solar energy systems for wholesale buyers' },
+    { href: '/products/?category=home-appliances', label: 'Home appliances for OEM and private-label sourcing' },
+    { href: '/products/?category=3c-electronics', label: '3C electronics for distributors and importers' },
+  ] },
+  es: { title: 'Explore las categorías de productos de estas alianzas', description: 'Revise las gamas de HousePlus para compras mayoristas, proyectos OEM y consultas de distribuidores.', links: [
+    { href: '/products/?category=solar', label: 'Sistemas solares para compradores mayoristas' },
+    { href: '/products/?category=home-appliances', label: 'Electrodomésticos para abastecimiento OEM y marca privada' },
+    { href: '/products/?category=3c-electronics', label: 'Electrónica 3C para distribuidores e importadores' },
+  ] },
+  de: { title: 'Produktkategorien hinter diesen Partnerschaften entdecken', description: 'Prüfen Sie die HousePlus-Produktbereiche für Großhandel, OEM-Projekte und Anfragen von Distributoren.', links: [
+    { href: '/products/?category=solar', label: 'Solarenergiesysteme für Großhandelskunden' },
+    { href: '/products/?category=home-appliances', label: 'Haushaltsgeräte für OEM und Private Label' },
+    { href: '/products/?category=3c-electronics', label: '3C-Elektronik für Distributoren und Importeure' },
+  ] },
+  fr: { title: 'Découvrir les catégories de produits liées à ces partenariats', description: 'Consultez les gammes HousePlus pour l’approvisionnement en gros, les projets OEM et les demandes de distributeurs.', links: [
+    { href: '/products/?category=solar', label: 'Systèmes solaires pour acheteurs en gros' },
+    { href: '/products/?category=home-appliances', label: 'Appareils pour approvisionnement OEM et marque privée' },
+    { href: '/products/?category=3c-electronics', label: 'Électronique 3C pour distributeurs et importateurs' },
+  ] },
+  ar: { title: 'استكشف فئات المنتجات وراء هذه الشراكات', description: 'راجع مجموعات منتجات HousePlus للتوريد بالجملة ومشاريع OEM واستفسارات الموزعين.', links: [
+    { href: '/products/?category=solar', label: 'أنظمة الطاقة الشمسية للمشترين بالجملة' },
+    { href: '/products/?category=home-appliances', label: 'الأجهزة المنزلية لتوريد OEM والعلامة الخاصة' },
+    { href: '/products/?category=3c-electronics', label: 'إلكترونيات 3C للموزعين والمستوردين' },
+  ] },
+};
+
 export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const params = await props.params;
   const lang = (validLangs.includes(params.lang as Lang) ? params.lang : 'en') as Lang;
@@ -209,6 +237,19 @@ export default async function CaseStudiesPage(props: { params: Promise<{ lang: s
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6"><div className="bg-white/70 rounded-xl p-4 border border-slate-100"><p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">{copy.annualVolumeLabel}</p><p className="text-sm font-bold text-slate-900">{cs.volume}</p></div><div className="bg-white/70 rounded-xl p-4 border border-slate-100"><p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">{copy.productMixLabel}</p><p className="text-sm font-bold text-slate-900">{cs.productMix}</p></div></div>
               <div><p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-3">{copy.keyResultsLabel}</p><ul className="space-y-2">{cs.keyResults.map((result, i) => <li key={i} className="flex items-start gap-2 text-sm text-slate-700"><span className="text-blue-500 font-bold flex-shrink-0">✓</span>{result}</li>)}</ul></div>
             </div>)}</div>
+          </div>
+        </section>
+        <section className="py-14 px-4 border-y border-slate-100 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3">{productDiscoveryCopy[lang].title}</h2>
+            <p className="text-slate-600 max-w-3xl mb-6">{productDiscoveryCopy[lang].description}</p>
+            <nav aria-label={productDiscoveryCopy[lang].title} className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {productDiscoveryCopy[lang].links.map((link) => (
+                <Link key={link.href} href={`/${lang}${link.href}`} className="rounded-xl border border-blue-100 bg-blue-50 px-5 py-4 font-semibold text-blue-800 hover:bg-blue-100 transition-colors">
+                  {link.label} <span aria-hidden="true">→</span>
+                </Link>
+              ))}
+            </nav>
           </div>
         </section>
         <section className="py-16 px-4 bg-slate-50"><div className="max-w-6xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><div><h2 className="text-3xl font-black text-slate-900 mb-6">{copy.trustTitle}</h2><div className="space-y-4">{copy.trustItems.map((item) => <div key={item.title} className="flex gap-4 p-4 bg-white rounded-xl border border-slate-100"><span className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">✓</span><div><p className="font-bold text-slate-900 text-sm">{item.title}</p><p className="text-slate-600 text-sm mt-0.5">{item.desc}</p></div></div>)}</div></div><div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100"><Image src="https://images.houseplus-ch.com/media/houseplus-site-case-studies-logistics-review/" alt={copy.imageAlt} width={1200} height={800} className="object-cover" loading="lazy" title={copy.imageAlt} decoding="async"  sizes="100vw" /></div></div></div></section>

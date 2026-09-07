@@ -178,6 +178,14 @@ const productCategories = [
   },
 ];
 
+const caseStudyLinkCopy: Record<Lang, { title: string; description: string; label: string }> = {
+  en: { title: 'See how global buyers use these product categories', description: 'Explore HousePlus case studies for sourcing context, market requirements and long-term wholesale partnerships.', label: 'Read wholesale case studies' },
+  es: { title: 'Vea cómo los compradores internacionales utilizan estas categorías', description: 'Consulte casos de éxito de HousePlus para conocer el contexto de abastecimiento, los mercados y las alianzas mayoristas.', label: 'Leer casos de éxito mayoristas' },
+  de: { title: 'Erfahren Sie, wie internationale Kunden diese Produktkategorien einsetzen', description: 'Entdecken Sie HousePlus-Referenzen zu Beschaffung, Marktanforderungen und langfristigen Großhandelspartnerschaften.', label: 'Referenzkunden ansehen' },
+  fr: { title: 'Découvrez comment les acheteurs internationaux utilisent ces catégories', description: 'Consultez les références HousePlus pour comprendre l’approvisionnement, les marchés et les partenariats de gros.', label: 'Lire les références clients' },
+  ar: { title: 'تعرّف على كيفية استخدام المشترين الدوليين لهذه الفئات', description: 'استكشف قصص نجاح HousePlus لفهم التوريد ومتطلبات الأسواق والشراكات طويلة الأجل بالجملة.', label: 'اقرأ قصص نجاح العملاء' },
+};
+
 // Build products from the same source as detail pages; localized fields are merged from products.json.
 function getProductsForLocale(locale: string) {
   return Object.entries(PRODUCT_DATA).map(([slug, data]) => {
@@ -367,6 +375,13 @@ export default async function ProductsPage(props: { params: Promise<{ lang: stri
             </div>
           </section>
         ))}
+        <section className="rounded-2xl border border-blue-100 bg-blue-50 p-8 md:p-10">
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3">{caseStudyLinkCopy[locale].title}</h2>
+          <p className="text-slate-600 max-w-3xl mb-5">{caseStudyLinkCopy[locale].description}</p>
+          <Link href={`/${locale}/case-studies`} className="inline-flex items-center rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 transition-colors">
+            {caseStudyLinkCopy[locale].label} <span aria-hidden="true" className="ml-2">→</span>
+          </Link>
+        </section>
       </div>
     </main>
   );
