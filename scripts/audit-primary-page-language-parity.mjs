@@ -5,6 +5,14 @@ const baseUrl = process.argv[2] || 'https://www.houseplus-ch.com';
 const outputDir = process.argv[3] || path.join(process.cwd(), 'audit', 'primary-page-language-parity');
 const locales = ['es', 'de', 'fr', 'ar'];
 const slugs = ['about-us', 'brand', 'careers', 'case-studies', 'certifications', 'factory', 'faq', 'news', 'oem-odm', 'products', 'regions', 'service', 'support', 'team'];
+// These terms are intentionally shared across locales in certificates,
+// product specifications and connectivity standards. They are not evidence
+// of an untranslated English sentence and must not fail the parity gate.
+const technicalTokens = new Set([
+  'ce', 'fcc', 'rohs', 'iso', 'iec', 'un', 'moq', 'pcs', 'lifepo', 'lead-acid',
+  'usb-c', 'pd', 'ghz', 'wifi', 'wi-fi', 'max', 'w', 'v', 'mah', 'ah', 'dc', 'ac',
+  'm', 'mm', 'mbps', 'aluminium', 'nylon',
+]);
 
 function mainText(html) {
   const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || html;
@@ -22,7 +30,9 @@ function englishPhrases(text) {
   const phrases = new Set();
   for (let i = 0; i <= words.length - 5; i += 1) {
     const phrase = words.slice(i, i + 5).join(' ').toLowerCase();
-    if (!/houseplus(?:\s|$)/.test(phrase)) phrases.add(phrase);
+    const phraseTokens = phrase.split(' ');
+    const containsTechnicalToken = phraseTokens.some((token) => technicalTokens.has(token));
+    if (!/houseplus(?:\s|$)/.test(phrase) && !containsTechnicalToken) phrases.add(phrase);
   }
   return phrases;
 }
