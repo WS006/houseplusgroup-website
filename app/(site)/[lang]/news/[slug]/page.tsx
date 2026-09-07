@@ -14,6 +14,14 @@ import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-sem
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
+const videoUi: Record<string, { unsupported: string; specificationNote: string; trackLabel: string }> = {
+  en: { unsupported: 'Your browser does not support the HTML video element.', specificationNote: 'The displayed specifications are for product reference and should be confirmed for the selected model and destination.', trackLabel: 'English visual descriptions' },
+  es: { unsupported: 'Su navegador no admite el elemento de vídeo HTML.', specificationNote: 'Las especificaciones mostradas son únicamente de referencia y deben confirmarse para el modelo y destino seleccionados.', trackLabel: 'Descripciones visuales en inglés' },
+  de: { unsupported: 'Ihr Browser unterstützt das HTML-Videoelement nicht.', specificationNote: 'Die angezeigten Spezifikationen dienen nur als Produktreferenz und müssen für das ausgewählte Modell und Zielland bestätigt werden.', trackLabel: 'Englische visuelle Beschreibungen' },
+  fr: { unsupported: 'Votre navigateur ne prend pas en charge l’élément vidéo HTML.', specificationNote: 'Les spécifications affichées sont fournies à titre indicatif et doivent être confirmées pour le modèle et la destination sélectionnés.', trackLabel: 'Descriptions visuelles en anglais' },
+  ar: { unsupported: 'لا يدعم متصفحك عنصر الفيديو HTML.', specificationNote: 'المواصفات المعروضة مرجعية للمنتج ويجب تأكيدها للطراز والوجهة المحددين.', trackLabel: 'أوصاف مرئية باللغة الإنجليزية' },
+};
+
 const articleUi: Record<string, Record<string, string>> = {
   en: {
     quoteTitle: 'Request a Wholesale Quote from HousePlus',
@@ -176,6 +184,7 @@ export default async function BlogPostPage(
     whatsapp: `https://wa.me/?text=${encodeURIComponent(post.title + ' ' + articleUrl)}`,
   };
   const heroImageTitle = getLocalizedArticleImageTitle(slug, lang, post.heroImageTitle || post.heroImageAlt);
+  const localizedVideoUi = videoUi[lang] || videoUi.en;
 
   return (
     <main className="min-h-screen bg-white">
@@ -239,15 +248,15 @@ export default async function BlogPostPage(
                   kind="descriptions"
                   src={post.video.captionsUrl}
                   srcLang="en"
-                  label="English visual descriptions"
+                  label={localizedVideoUi.trackLabel}
                   default
                 />
               )}
-              Your browser does not support the HTML video element.
+              {localizedVideoUi.unsupported}
             </video>
           </div>
           <figcaption className="mt-3 text-center text-sm leading-6 text-slate-600">
-            {post.video.description} The displayed specifications are for product reference and should be confirmed for the selected model and destination.
+            {post.video.description} {localizedVideoUi.specificationNote}
           </figcaption>
         </figure>
       )}
