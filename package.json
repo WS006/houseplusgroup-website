@@ -19,6 +19,7 @@
         "audit:production-metadata": "node scripts/audit-production-metadata.mjs",
         "audit:production-seo-schema": "node scripts/audit-production-seo-schema.mjs",
         "audit:image-seo-source": "node scripts/audit-image-seo-source.mjs",
+        "audit:mobile-layout": "node scripts/audit-mobile-layout.mjs",
         "audit:real-web-vitals": "node scripts/audit-real-web-vitals.mjs",
         "audit:production-ttfb": "node scripts/audit-production-ttfb.mjs",
         "audit:reconcile-production": "node scripts/reconcile-production-content.mjs",

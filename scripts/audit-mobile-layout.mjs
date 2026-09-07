@@ -3,6 +3,7 @@ import puppeteer from 'puppeteer-core';
 
 const sitemapUrl = process.argv[2] || 'https://www.houseplus-ch.com/sitemap.xml';
 const outputDir = process.argv[3] || '/tmp/houseplus-mobile-layout-audit';
+const failOnIssues = process.argv.includes('--fail-on-issues');
 const chromePath = process.env.CHROME_PATH || '/usr/bin/chromium';
 const concurrency = 4;
 
@@ -24,11 +25,12 @@ async function inspect(url) {
     const metrics = await page.evaluate(() => ({
       scrollWidth: document.documentElement.scrollWidth,
       clientWidth: document.documentElement.clientWidth,
+      viewportMeta: document.querySelector('meta[name="viewport"]')?.getAttribute('content') || null,
       lang: document.documentElement.lang,
       dir: document.documentElement.dir,
       title: document.title,
     }));
-    if (!response || response.status() >= 400 || metrics.scrollWidth > metrics.clientWidth + 2) {
+    if (!response || response.status() >= 400 || metrics.scrollWidth > metrics.clientWidth + 2 || !metrics.viewportMeta) {
       issues.push({ url, status: response?.status() ?? null, ...metrics });
     }
   } catch (error) {
@@ -51,3 +53,4 @@ await mkdir(outputDir, { recursive: true });
 const summary = { sitemapUrl, viewport: '390x844', checked: urls.length, issueCount: issues.length, issues };
 await writeFile(`${outputDir}/summary.json`, JSON.stringify(summary, null, 2));
 console.log(JSON.stringify({ checked: urls.length, issueCount: issues.length, output: `${outputDir}/summary.json` }, null, 2));
+if (failOnIssues && issues.length > 0) process.exitCode = 1;

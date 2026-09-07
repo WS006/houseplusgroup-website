@@ -4,7 +4,8 @@ import puppeteer from 'puppeteer-core';
 const args = process.argv.slice(2);
 const outIndex = args.indexOf('--out');
 const outputDir = outIndex >= 0 ? args[outIndex + 1] : 'audit/web-vitals-production';
-const urls = args.filter((_, index) => index !== outIndex && index !== outIndex + 1);
+const failOnThresholds = args.includes('--fail-on-thresholds');
+const urls = args.filter((value, index) => value !== '--fail-on-thresholds' && index !== outIndex && index !== outIndex + 1);
 if (!urls.length) throw new Error('Usage: node scripts/audit-real-web-vitals.mjs <url> ... [--out output-dir]');
 await mkdir(outputDir, { recursive: true });
 const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
@@ -31,6 +32,16 @@ for (const url of urls) {
   await page.close();
 }
 await browser.close();
-const report = { generatedAt: new Date().toISOString(), network: 'mobile-like 150ms latency / 1.6Mbps down', results };
+// The approved legacy homepage Hero currently establishes an ~7.1s mobile-like
+// baseline. Keep the gate strict enough to catch regressions while allowing that
+// explicit compatibility constraint; tighten after the Hero is retired.
+const thresholds = { maxLcpMs: Number(process.env.MAX_LCP_MS || 8000), maxFcpMs: Number(process.env.MAX_FCP_MS || 8000), maxCls: Number(process.env.MAX_CLS || 0.1) };
+const violations = results.flatMap((result) => [
+  result.lcpMs != null && result.lcpMs > thresholds.maxLcpMs ? { url: result.url, metric: 'lcpMs', value: result.lcpMs, limit: thresholds.maxLcpMs } : null,
+  result.fcpMs != null && result.fcpMs > thresholds.maxFcpMs ? { url: result.url, metric: 'fcpMs', value: result.fcpMs, limit: thresholds.maxFcpMs } : null,
+  result.cls != null && result.cls > thresholds.maxCls ? { url: result.url, metric: 'cls', value: result.cls, limit: thresholds.maxCls } : null,
+].filter(Boolean));
+const report = { generatedAt: new Date().toISOString(), network: 'mobile-like 150ms latency / 1.6Mbps down', thresholds, violations, results };
 await writeFile(`${outputDir}/summary.json`, JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
+if (failOnThresholds && violations.length > 0) process.exitCode = 1;

@@ -1,33 +1,1613 @@
 {
   "solar-panel-rfq-checklist-international-buyers": {
-    "es": {"title": "Lista de verificación de RFQ de paneles solares para compradores B2B internacionales", "description": "Use esta lista para comparar requisitos técnicos, documentación y entrega antes de solicitar una cotización B2B de paneles solares.", "keywords": "lista RFQ paneles solares, abastecimiento solar B2B, especificación panel solar", "category": "Solar y almacenamiento", "heroImageAlt": "Instalación de paneles solares en una cubierta comercial para una revisión de compras B2B"},
-    "de": {"title": "Solarpanel-RFQ-Checkliste für internationale B2B-Einkäufer", "description": "Vergleichen Sie mit dieser Checkliste technische Anforderungen, Dokumente und Lieferoptionen vor einer B2B-Anfrage für Solarmodule.", "keywords": "Solarpanel RFQ Checkliste, B2B Solarbeschaffung, Solarmodul Spezifikation", "category": "Solarenergie und Speicher", "heroImageAlt": "Installation von Solarmodulen auf einem gewerblichen Dach für eine B2B-Beschaffungsprüfung"},
-    "fr": {"title": "Liste RFQ de panneaux solaires pour les acheteurs B2B internationaux", "description": "Comparez les exigences techniques, les documents et la livraison avant de demander un devis B2B de panneaux solaires.", "keywords": "liste RFQ panneaux solaires, approvisionnement solaire B2B, spécification panneau solaire", "category": "Solaire et stockage", "heroImageAlt": "Installation de panneaux solaires sur un toit commercial pour une étude d'approvisionnement B2B"},
-    "ar": {"title": "قائمة بيانات طلب عرض أسعار الألواح الشمسية للمشترين الدوليين B2B", "description": "استخدم هذه القائمة لمقارنة المتطلبات الفنية والوثائق وخيارات التسليم قبل طلب عرض أسعار للألواح الشمسية.", "keywords": "طلب عرض أسعار ألواح شمسية، توريد شمسي B2B، مواصفات الألواح الشمسية", "category": "الطاقة الشمسية والتخزين", "heroImageAlt": "تركيب ألواح شمسية على سطح تجاري لمراجعة مشتريات B2B"}
+    "es": {
+      "title": "Lista de verificación RFQ de paneles solares para compradores B2B internacionales",
+      "description": "Utilice esta lista de verificación RFQ de paneles solares para comparar requisitos técnicos, de documentación y de entrega antes de solicitar una cotización B2B a un proveedor.",
+      "keywords": "lista de verificación RFQ de paneles solares, aprovisionamiento de paneles solares, compras B2B de energía solar, especificación técnica solar, paneles solares OEM",
+      "category": "Solar y Almacenamiento",
+      "heroImageAlt": "Instalación de paneles solares en la cubierta de un edificio comercial para una revisión de aprovisionamiento internacional",
+      "slug": "solar-panel-rfq-checklist-international-buyers",
+      "author": "Equipo editorial de HousePlus",
+      "authorRole": "Información sobre aprovisionamiento B2B y desarrollo de producto",
+      "datePublished": "2026-08-24",
+      "dateModified": "2026-08-24",
+      "readingTime": "7 min de lectura",
+      "heroImage": "/images/articles/solar/solar-panel-installation-rooftop.jpg",
+      "sections": [
+        {
+          "heading": "Comience por la aplicación y el destino",
+          "paragraphs": [
+            "Una solicitud de cotización útil parte del contexto del proyecto en lugar de un nombre de producto aislado. Indique la aplicación prevista, el entorno de instalación, el mercado objetivo, la tensión del sistema, las condiciones de funcionamiento esperadas y si la solicitud cubre solo módulos o un alcance de sistema más amplio.",
+            "El destino determina qué cuestiones de documentación y etiquetado deben revisarse. Pida al proveedor que confirme qué documentos están disponibles para el modelo y mercado especificados, en lugar de suponer que un documento se aplica a todos los productos o destinos."
+          ]
+        },
+        {
+          "heading": "Defina los campos de comparación técnica",
+          "paragraphs": [
+            "Para una comparación equivalente, solicite la tecnología del módulo, la potencia nominal, las dimensiones, el peso, el tipo de conector, el rango de temperatura de operación, la información de carga mecánica y los documentos de garantía cuando proceda. Mantenga estos campos en una sola hoja de comparación para que una cotización inferior no oculte una especificación materialmente diferente.",
+            "Si el proyecto requiere marca personalizada, embalaje o configuración eléctrica, describa esos requisitos por separado del producto base. Esto facilita distinguir un modelo estándar disponible de una propuesta que aún requiere revisión de ingeniería."
+          ]
+        },
+        {
+          "heading": "Solicite un paquete de documentación y calidad",
+          "paragraphs": [
+            "Una RFQ profesional debe solicitar la hoja de datos vigente, la guía de instalación, los informes de ensayo relevantes para el mercado objetivo, los detalles de embalaje y un proceso de aprobación de muestras. El comprador debe verificar los números de documento, el alcance y el organismo emisor de forma independiente antes de hacer una declaración de cumplimiento en sus propios materiales comerciales.",
+            "Para la revisión de calidad, acuerde la etapa de inspección, el método de muestreo, las comprobaciones visuales, las comprobaciones eléctricas y el tratamiento de unidades no conformes. Estos son controles de aprovisionamiento, no una promesa de que todos los proveedores siguen el mismo proceso."
+          ]
+        },
+        {
+          "heading": "Compare la respuesta comercial sin falsa precisión",
+          "paragraphs": [
+            "Pida a los proveedores que separen producto, embalaje, utillaje, pruebas, flete y otros cargos opcionales. Confirme por escrito la moneda de la cotización, el Incoterm, la validez de la cotización, las etapas de pago y las suposiciones. HousePlus confirma la disponibilidad del producto, los documentos aplicables, los términos comerciales y las opciones de entrega para cada consulta específica.",
+            "No existe un umbral de pedido universal, un tiempo de entrega o un coste entregado para todos los proyectos solares. Esas cifras dependen del modelo, la configuración, el destino, la estación y el alcance del pedido, por lo que deben confirmarse en la cotización en lugar de copiarse de un artículo genérico."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué debe incluir una RFQ de paneles solares?",
+          "answer": "Incluya la aplicación, el destino, la especificación técnica, las necesidades de documentación, el embalaje, las expectativas de inspección y los términos comerciales solicitados. Separe los requisitos estándar de los requisitos personalizados."
+        },
+        {
+          "question": "¿Se puede suponer que un certificado cubre todos los modelos de paneles solares?",
+          "answer": "No. Confirme el modelo exacto, la configuración, el alcance de mercado, la validez y el organismo emisor de cada documento antes de utilizarlo en una declaración comercial."
+        },
+        {
+          "question": "¿Esta lista proporciona un umbral de pedido fijo o tiempos de entrega?",
+          "answer": "No. El umbral de pedido y los tiempos de entrega son específicos de la consulta y deben confirmarse para el modelo, la cantidad, el destino y el arreglo de entrega seleccionados."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "how-to-choose-wholesale-solar-panels",
+          "title": "paneles solares al por mayor",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan paneles solares al por mayor.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        },
+        {
+          "slug": "ce-certification-solar-panels-guide",
+          "title": "documentación solar",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan la documentación solar.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "de": {
+      "title": "RFQ-Checkliste für Solarmodule für internationale B2B-Einkäufer",
+      "description": "Verwenden Sie diese RFQ-Checkliste für Solarmodule, um technische, dokumentarische und Lieferanforderungen zu vergleichen, bevor Sie ein B2B-Angebot von einem Lieferanten anfordern.",
+      "keywords": "RFQ-Checkliste Solarmodule, Beschaffung von Solarmodulen, B2B-Solarbeschaffung, technische Solarspezifikation, OEM Solarmodule",
+      "category": "Solar & Speicher",
+      "heroImageAlt": "Installation von Solarmodulen auf einem gewerblichen Dach für eine internationale Beschaffungsprüfung",
+      "slug": "solar-panel-rfq-checklist-international-buyers",
+      "author": "HousePlus Redaktionsteam",
+      "authorRole": "Einblicke in B2B-Beschaffung und Produktentwicklung",
+      "datePublished": "2026-08-24",
+      "dateModified": "2026-08-24",
+      "readingTime": "7 min Lesezeit",
+      "heroImage": "/images/articles/solar/solar-panel-installation-rooftop.jpg",
+      "sections": [
+        {
+          "heading": "Beginnen Sie mit der Anwendung und dem Bestimmungsort",
+          "paragraphs": [
+            "Eine nützliche Anfrage zur Angebotsstellung beginnt mit dem Projektkontext und nicht nur mit einem Produktnamen. Geben Sie die beabsichtigte Anwendung, die Installationsumgebung, den Zielmarkt, die Systemspannung, die erwarteten Betriebsbedingungen und ob die Anfrage nur Module oder einen größeren Systemumfang abdeckt, an.",
+            "Der Bestimmungsort bestimmt, welche Fragen zu Dokumentation und Kennzeichnung überprüft werden müssen. Bitten Sie den Lieferanten, zu bestätigen, welche Dokumente für das angegebene Modell und den Markt verfügbar sind, anstatt davon auszugehen, dass ein Dokument für jedes Produkt oder jeden Bestimmungsort gilt."
+          ]
+        },
+        {
+          "heading": "Definieren Sie die technischen Vergleichsfelder",
+          "paragraphs": [
+            "Für einen Vergleich auf Augenhöhe fordern Sie die Modultechnologie, die Nennleistung, Abmessungen, Gewicht, Steckertyp, Betriebstemperaturbereich, Angaben zur mechanischen Belastung und Garantieunterlagen, soweit zutreffend, an. Halten Sie diese Felder in einem Vergleichsblatt, damit ein niedrigeres Angebot nicht eine materiell abweichende Spezifikation verschleiert.",
+            "Wenn das Projekt kundenspezifisches Branding, Verpackung oder elektrische Konfiguration erfordert, beschreiben Sie diese Anforderungen getrennt vom Basisprodukt. Dadurch lässt sich leichter unterscheiden, ob es sich um ein verfügbares Standardmodell oder einen Vorschlag handelt, der noch einer technischen Prüfung bedarf."
+          ]
+        },
+        {
+          "heading": "Fordern Sie ein Dokumentations- und Qualitätspaket an",
+          "paragraphs": [
+            "Eine professionelle RFQ sollte das aktuelle Datenblatt, Installationsanweisungen, Prüfberichte, die für den Zielmarkt relevant sind, Verpackungsdetails und einen Musterfreigabeprozess anfordern. Der Käufer sollte Dokumentnummern, Geltungsbereich und ausstellende Stelle unabhängig überprüfen, bevor er eine Konformitätserklärung in eigenen Vertriebsunterlagen abgibt.",
+            "Für die Qualitätsprüfung einigen Sie sich auf den Inspektionszeitpunkt, die Stichprobenmethode, Sichtprüfungen, elektrische Prüfungen und die Behandlung nicht konformer Einheiten. Dies sind Beschaffungskontrollen und keine Zusicherung, dass alle Lieferanten denselben Prozess befolgen."
+          ]
+        },
+        {
+          "heading": "Vergleichen Sie die kommerzielle Antwort ohne falsche Präzision",
+          "paragraphs": [
+            "Bitten Sie die Lieferanten, Produkt, Verpackung, Werkzeuge, Tests, Fracht und andere optionale Gebühren separat auszuweisen. Bestätigen Sie die Angebotswährung, den Incoterm, die Gültigkeit des Angebots, Zahlungsphasen und Annahmen schriftlich. HousePlus bestätigt die Produktverfügbarkeit, die anwendbaren Dokumente, die kommerziellen Bedingungen und die Lieferoptionen für jede konkrete Anfrage.",
+            "Es gibt keine universelle Bestellgrenze, Lieferzeit oder gelieferte Kosten für jedes Solarprojekt. Diese Zahlen hängen vom Modell, der Konfiguration, dem Bestimmungsort, der Jahreszeit und dem Bestellumfang ab und sollten daher in der Angebotsabgabe bestätigt werden und nicht aus einem generischen Artikel übernommen werden."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Was sollte eine RFQ für Solarmodule enthalten?",
+          "answer": "Fügen Sie die Anwendung, den Bestimmungsort, die technische Spezifikation, den Dokumentationsbedarf, Verpackung, Inspektionserwartungen und die angeforderten kommerziellen Bedingungen bei. Trennen Sie Standardanforderungen von kundenspezifischen Anforderungen."
+        },
+        {
+          "question": "Kann ein Zertifikat für jedes Solarmodell angenommen werden?",
+          "answer": "Nein. Bestätigen Sie das genaue Modell, die Konfiguration, den Geltungsbereich des Marktes, die Gültigkeit und die ausstellende Stelle jedes Dokuments, bevor Sie es in einer kommerziellen Aussage verwenden."
+        },
+        {
+          "question": "Bietet diese Checkliste eine feste Bestellgrenze oder Lieferzeiten?",
+          "answer": "Nein. Bestellgrenze und Lieferzeiten sind anfragebezogen und müssen für das ausgewählte Modell, die Menge, den Bestimmungsort und die Liefervereinbarung bestätigt werden."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "how-to-choose-wholesale-solar-panels",
+          "title": "Großhandels-Solarmodule",
+          "excerpt": "Eine praxisorientierte HousePlus-Referenz für internationale B2B-Einkäufer bei der Bewertung von Großhandels-Solarmodulen.",
+          "date": "2026-08-01",
+          "readingTime": "7 min Lesezeit"
+        },
+        {
+          "slug": "ce-certification-solar-panels-guide",
+          "title": "Solar-Dokumentation",
+          "excerpt": "Eine praxisorientierte HousePlus-Referenz für internationale B2B-Einkäufer bei der Bewertung von Solar-Dokumentation.",
+          "date": "2026-08-01",
+          "readingTime": "7 min Lesezeit"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "fr": {
+      "title": "Liste de contrôle RFQ pour panneaux solaires destinée aux acheteurs B2B internationaux",
+      "description": "Utilisez cette liste de contrôle RFQ pour panneaux solaires afin de comparer les exigences techniques, documentaires et de livraison avant de demander un devis B2B à un fournisseur.",
+      "keywords": "liste de contrôle RFQ panneaux solaires, approvisionnement de panneaux solaires, achats B2B solaires, spécification technique solaire, panneaux solaires OEM",
+      "category": "Solaire et stockage",
+      "heroImageAlt": "Installation de panneaux solaires sur le toit d'un bâtiment commercial pour une revue d'approvisionnement internationale",
+      "slug": "solar-panel-rfq-checklist-international-buyers",
+      "author": "Équipe éditoriale HousePlus",
+      "authorRole": "Informations sur l'approvisionnement B2B et le développement produit",
+      "datePublished": "2026-08-24",
+      "dateModified": "2026-08-24",
+      "readingTime": "7 min de lecture",
+      "heroImage": "/images/articles/solar/solar-panel-installation-rooftop.jpg",
+      "sections": [
+        {
+          "heading": "Commencez par l'application et la destination",
+          "paragraphs": [
+            "Une demande de prix utile part du contexte du projet plutôt que d'un nom de produit seul. Indiquez l'application prévue, l'environnement d'installation, le marché cible, la tension du système, les conditions d'exploitation attendues et si la demande couvre uniquement les modules ou un périmètre de système plus large.",
+            "La destination détermine quelles questions de documentation et d'étiquetage doivent être examinées. Demandez au fournisseur de confirmer quels documents sont disponibles pour le modèle et le marché spécifiés, plutôt que de supposer qu'un document s'applique à tous les produits ou destinations."
+          ]
+        },
+        {
+          "heading": "Définissez les champs de comparaison technique",
+          "paragraphs": [
+            "Pour une comparaison équivalente, demandez la technologie du module, la puissance nominale, les dimensions, le poids, le type de connecteur, la plage de température de fonctionnement, les informations sur la charge mécanique et les documents de garantie le cas échéant. Regroupez ces champs dans une seule feuille de comparaison afin qu'un devis inférieur ne masque pas une spécification matériellement différente.",
+            "Si le projet nécessite un marquage, un emballage ou une configuration électrique personnalisés, décrivez ces exigences séparément du produit de base. Cela facilite la distinction entre un modèle standard disponible et une proposition nécessitant encore un examen technique."
+          ]
+        },
+        {
+          "heading": "Demandez un package de documentation et de qualité",
+          "paragraphs": [
+            "Une RFQ professionnelle doit demander la fiche technique en vigueur, les instructions d'installation, les rapports d'essai pertinents pour le marché cible, les détails d'emballage et un processus d'approbation des échantillons. L'acheteur doit vérifier indépendamment les numéros de document, le périmètre et l'organisme émetteur avant d'émettre une déclaration de conformité dans ses propres documents commerciaux.",
+            "Pour l'examen qualité, convenez de l'étape d'inspection, de la méthode d'échantillonnage, des contrôles visuels, des contrôles électriques et du traitement des unités non conformes. Ce sont des contrôles d'approvisionnement, et non une promesse que tous les fournisseurs suivent le même processus."
+          ]
+        },
+        {
+          "heading": "Comparez la réponse commerciale sans fausse précision",
+          "paragraphs": [
+            "Demandez aux fournisseurs de séparer produit, emballage, outillage, tests, fret et autres frais optionnels. Confirmez par écrit la devise du devis, l'Incoterm, la validité du devis, les étapes de paiement et les hypothèses. HousePlus confirme la disponibilité du produit, les documents applicables, les conditions commerciales et les options de livraison pour chaque demande spécifique.",
+            "Il n'existe pas de seuil de commande universel, de délai de livraison ou de coût livré pour tous les projets solaires. Ces chiffres dépendent du modèle, la configuration, la destination, la saison et l'ampleur de la commande ; ils doivent donc être confirmés dans le devis plutôt que copiés depuis un article générique."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Que doit inclure une RFQ pour panneaux solaires ?",
+          "answer": "Incluez l'application, la destination, la spécification technique, les besoins en documentation, l'emballage, les attentes en matière d'inspection et les conditions commerciales demandées. Séparez les exigences standard des exigences personnalisées."
+        },
+        {
+          "question": "Peut-on supposer qu'un certificat couvre tous les modèles de panneaux solaires ?",
+          "answer": "Non. Confirmez le modèle exact, la configuration, le périmètre marché, la validité et l'organisme émetteur de chaque document avant de l'utiliser dans une déclaration commerciale."
+        },
+        {
+          "question": "Cette liste fournit-elle un seuil de commande fixe ou des délais de livraison ?",
+          "answer": "Non. Le seuil de commande et les délais de livraison sont propres à chaque demande et doivent être confirmés pour le modèle, la quantité, la destination et les modalités de livraison sélectionnés."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "how-to-choose-wholesale-solar-panels",
+          "title": "panneaux solaires en gros",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant les panneaux solaires en gros.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        },
+        {
+          "slug": "ce-certification-solar-panels-guide",
+          "title": "documentation solaire",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant la documentation solaire.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "ar": {
+      "title": "قائمة فحص RFQ لألواح الطاقة الشمسية للمشترين التجاريين الدوليين",
+      "description": "استخدم قائمة فحص RFQ هذه لألواح الطاقة الشمسية للمقارنة بين المتطلبات الفنية والوثائق والتسليم قبل طلب عرض سعر B2B من مورد.",
+      "keywords": "قائمة فحص RFQ لألواح الطاقة الشمسية، مصادر ألواح الطاقة الشمسية، شراء الطاقة الشمسية B2B، المواصفات الفنية للطاقة الشمسية، ألواح شمسية OEM",
+      "category": "الطاقة الشمسية والتخزين",
+      "heroImageAlt": "تركيب ألواح شمسية على سطح مبنى تجاري لمراجعة التوريد الدولية",
+      "slug": "solar-panel-rfq-checklist-international-buyers",
+      "author": "فريق تحرير HousePlus",
+      "authorRole": "رؤى حول التوريد B2B وتطوير المنتج",
+      "datePublished": "2026-08-24",
+      "dateModified": "2026-08-24",
+      "readingTime": "7 دقائق قراءة",
+      "heroImage": "/images/articles/solar/solar-panel-installation-rooftop.jpg",
+      "sections": [
+        {
+          "heading": "ابدأ بالتطبيق والوجهة",
+          "paragraphs": [
+            "يبدأ طلب عرض السعر المفيد بسياق المشروع بدلاً من اسم المنتج بمفرده. اذكر الاستخدام المقصود، وبيئة التركيب، والسوق المستهدفة، وجهد النظام، وظروف التشغيل المتوقعة، وما إذا كان الطلب يغطي الوحدات فقط أو نطاق نظام أوسع.",
+            "تحدد الوجهة الأسئلة المتعلقة بالوثائق ووضع العلامات التي يجب مراجعتها. اطلب من المورد تأكيد الوثائق المتاحة للطراز والسوق المحددين بدلاً من افتراض تطبيق وثيقة على كل منتج أو وجهة."
+          ]
+        },
+        {
+          "heading": "حدد حقول المقارنة الفنية",
+          "paragraphs": [
+            "للحصول على مقارنة متكافئة، اطلب تقنية الوحدة، والقدرة المقدرة، والأبعاد، والوزن، ونوع الموصل، ونطاق درجة حرارة التشغيل، ومعلومات التحميل الميكانيكي، ومستندات الضمان عند الاقتضاء. احتفظ بهذه الحقول في ورقة مقارنة واحدة حتى لا يخفي عرض سعر أقل مواصفات مختلفة جوهريًا.",
+            "إذا تطلب المشروع علامة تجارية مخصصة أو تغليفًا أو تكوينًا كهربائيًا خاصًا، فصف هذه المتطلبات بشكل منفصل عن المنتج الأساسي. هذا يجعل تحديد النموذج القياسي المتاح أسهل من عرض لا يزال بحاجة إلى مراجعة هندسية."
+          ]
+        },
+        {
+          "heading": "اطلب حزمة وثائق وجودة",
+          "paragraphs": [
+            "يجب أن يطلب طلب عرض السعر (RFQ) الاحترافي ورقة البيانات الحالية، وإرشادات التركيب، وتقارير الاختبار ذات الصلة بالسوق المستهدف، وتفاصيل التغليف، وعملية اعتماد العينات. يجب على المشتري التحقق من أرقام الوثائق والنطاق والجهة المصدرة بشكل مستقل قبل الإدلاء ببيان امتثال في مواد المبيعات الخاصة به.",
+            "للمراجعة النوعية، اتفق على مرحلة التفتيش، وطريقة أخذ العينات، والفحوصات البصرية، والفحوصات الكهربائية، ومعالجة الوحدات غير المطابقة. هذه ضوابط شراء وليست وعدًا بأن جميع الموردين يتبعون نفس العملية."
+          ]
+        },
+        {
+          "heading": "قارن الاستجابة التجارية دون دقة زائفة",
+          "paragraphs": [
+            "اطلب من الموردين فصل المنتج والتغليف والأدوات والاختبارات والشحن والرسوم الاختيارية الأخرى. أكد كتابةً عملة العرض، وIncoterm، وصلاحية العرض، ومراحل الدفع، والافتراضات. تؤكد HousePlus توفر المنتج، والمستندات المطبقة، والشروط التجارية، وخيارات التسليم لكل استفسار محدد.",
+            "لا يوجد حد طلب عالمي أو توقيت تسليم أو تكلفة واردة صالحة لكل مشروع شمسي. تعتمد هذه الأرقام على الطراز والتكوين والوجهة والموسم وحجم الطلب، لذا يجب تأكيدها في العرض بدلاً من نسخها من مقالة عامة."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "ما الذي يجب أن يتضمنه طلب عرض السعر (RFQ) لألواح الطاقة الشمسية؟",
+          "answer": "قم بتضمين التطبيق والوجهة والمواصفات الفنية واحتياجات الوثائق والتغليف وتوقعات الفحص والشروط التجارية المطلوبة. افصل المتطلبات القياسية عن المتطلبات المخصصة."
+        },
+        {
+          "question": "هل يمكن افتراض أن شهادة واحدة تغطي كل طراز من ألواح الطاقة الشمسية؟",
+          "answer": "لا. يجب تأكيد الطراز الدقيق والتكوين ونطاق السوق والصلاحية والجهة المصدرة لكل مستند قبل استخدامه في ادعاء تجاري."
+        },
+        {
+          "question": "هل توفر قائمة الفحص هذه حدًا ثابتًا للطلبات أو أوقات تسليم؟",
+          "answer": "لا. حدود الطلب وأوقات التسليم خاصة بكل استفسار ويجب تأكيدها للطراز والكمية والوجهة وترتيب التسليم المحددين."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "how-to-choose-wholesale-solar-panels",
+          "title": "الألواح الشمسية بالجملة",
+          "excerpt": "مرجع عملي من HousePlus للمشترين التجاريين الدوليين الذين يقيمون الألواح الشمسية بالجملة.",
+          "date": "2026-08-01",
+          "readingTime": "7 دقائق قراءة"
+        },
+        {
+          "slug": "ce-certification-solar-panels-guide",
+          "title": "توثيق الطاقة الشمسية",
+          "excerpt": "مرجع عملي من HousePlus للمشترين التجاريين الدوليين الذين يقيمون توثيق الطاقة الشمسية.",
+          "date": "2026-08-01",
+          "readingTime": "7 دقائق قراءة"
+        }
+      ],
+      "productRecommendations": []
+    }
   },
   "home-appliance-oem-sample-evaluation-checklist": {
-    "es": {"title": "Lista para evaluar muestras OEM de electrodomésticos para compradores B2B", "description": "Evalúe una muestra OEM de electrodomésticos con una lista práctica de función, seguridad, experiencia, embalaje y documentación.", "keywords": "muestra OEM electrodomésticos, lista abastecimiento B2B, revisión calidad OEM", "category": "Electrodomésticos", "heroImageAlt": "Muestra de electrodoméstico preparada para una evaluación de producto B2B"},
-    "de": {"title": "Checkliste zur Bewertung von OEM-Mustern für Haushaltsgeräte", "description": "Bewerten Sie ein OEM-Muster mit einer praktischen Checkliste für Funktion, Sicherheit, Verpackung und Marktdokumentation.", "keywords": "OEM Muster Haushaltsgeräte, B2B Beschaffungscheckliste, OEM Qualitätsprüfung", "category": "Haushaltsgeräte", "heroImageAlt": "Haushaltsgerätemuster für eine B2B-Produktprüfung in einer modernen Küche"},
-    "fr": {"title": "Liste d'évaluation des échantillons OEM d'appareils pour acheteurs B2B", "description": "Évaluez un échantillon OEM avec une liste pratique couvrant fonction, sécurité, expérience, emballage et documents.", "keywords": "échantillon OEM appareils, approvisionnement B2B, contrôle qualité OEM", "category": "Électroménager", "heroImageAlt": "Échantillon d'appareil ménager préparé pour une évaluation de produit B2B"},
-    "ar": {"title": "قائمة تقييم عينات الأجهزة المنزلية OEM للمشترين B2B", "description": "قيّم عينة الأجهزة المنزلية OEM بقائمة عملية تشمل الوظيفة والسلامة والتغليف ووثائق السوق.", "keywords": "عينة أجهزة منزلية OEM، قائمة توريد B2B، مراجعة جودة OEM", "category": "الأجهزة المنزلية", "heroImageAlt": "عينة جهاز منزلي معدة لتقييم منتج B2B"}
+    "es": {
+      "title": "Lista de verificación para la evaluación de muestras OEM de electrodomésticos para compradores B2B",
+      "description": "Evalúe una muestra OEM de electrodoméstico con una lista de verificación repetible que cubre función, seguridad, experiencia de usuario, embalaje y documentación de mercado.",
+      "keywords": "muestra OEM de electrodoméstico, lista de verificación de abastecimiento de electrodomésticos, adquisición B2B de electrodomésticos, revisión de calidad OEM, marca privada de electrodomésticos",
+      "category": "Electrodomésticos",
+      "heroImageAlt": "Muestra de electrodoméstico de cocina moderno preparada para una evaluación de producto B2B",
+      "slug": "home-appliance-oem-sample-evaluation-checklist",
+      "author": "Equipo editorial de HousePlus",
+      "authorRole": "Percepciones sobre abastecimiento B2B y desarrollo de producto",
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "readingTime": "7 min de lectura",
+      "heroImage": "/images/articles/appliances/home-appliance-kitchen-modern.jpg",
+      "sections": [
+        {
+          "heading": "Registre la configuración aprobada de la muestra",
+          "paragraphs": [
+            "Antes de las pruebas, anote la referencia del modelo, voltaje, enchufe, acabado, accesorios, versión de embalaje y versión de firmware o control cuando proceda. Una muestra sólo es útil como referencia cuando la especificación de producción puede rastrearse hasta ella.",
+            "Marque los cambios solicitados por separado respecto de las características aceptadas. Esto evita que una modificación no aprobada del prototipo se convierta accidentalmente en un requisito de producción."
+          ]
+        },
+        {
+          "heading": "Pruebe la función bajo uso realista",
+          "paragraphs": [
+            "Cree un plan de pruebas breve que cubra el arranque, el funcionamiento normal, los controles, el ruido, el calor, la limpieza, los cortes de seguridad y la recuperación tras una interrupción cuando proceda. Registre el entorno y la duración de la prueba para que dos muestras puedan compararse de forma justa.",
+            "No convierta una demostración exitosa en una afirmación general de rendimiento. Las pruebas repetibles de producción y la validación específica por mercado son pasos separados que deben documentarse antes del lanzamiento."
+          ]
+        },
+        {
+          "heading": "Revise seguridad, etiquetado y documentación",
+          "paragraphs": [
+            "Compruebe que las etiquetas de advertencia, las instrucciones de usuario, las placas de características y el idioma del embalaje coincidan con el mercado de destino y la configuración exacta de la muestra. Solicite el expediente técnico aplicable o la documentación de ensayo al proveedor para una revisión profesional.",
+            "La responsabilidad de cumplimiento depende del producto, el mercado y el acuerdo de suministro. Los compradores deben obtener asesoría legal o regulatoria cuando sea necesario y no deben publicar una declaración genérica de certificación sin verificación a nivel de documentos."
+          ]
+        },
+        {
+          "heading": "Cierre el ciclo de aprobación de la muestra",
+          "paragraphs": [
+            "Utilice un formulario escrito de aprobación de la muestra con fotos, mediciones, asuntos abiertos, partes responsables y un objetivo de resolución. Para trabajos OEM, incluya el arte, la colocación del logotipo, las especificaciones del cartón y las listas de accesorios en el mismo paquete con control de revisiones.",
+            "HousePlus puede revisar los requisitos del producto, el alcance de la personalización, la documentación aplicable y los términos de cotización a través de una consulta específica. La respuesta comercial final debe permanecer vinculada al modelo aprobado y al destino."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es el primer paso para evaluar una muestra OEM de electrodoméstico?",
+          "answer": "Registre la configuración exacta de la muestra y separe las características aprobadas de los cambios solicitados antes de la prueba."
+        },
+        {
+          "question": "¿Puede una prueba de muestra demostrar la calidad de producción?",
+          "answer": "No. Una revisión de muestra es un paso de aprobación; la calidad de producción requiere un proceso acordado de inspección y control de calidad."
+        },
+        {
+          "question": "¿Deberían copiarse las afirmaciones de certificación de una cotización del proveedor?",
+          "answer": "No. Confirme el alcance exacto del documento, el modelo, el mercado y la vigencia antes de utilizar una declaración de certificación."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "home-appliance-oem-manufacturer-guide-china",
+          "title": "Abastecimiento OEM de electrodomésticos",
+          "excerpt": "Una referencia práctica de HousePlus para compradores internacionales B2B que evalúan el abastecimiento OEM de electrodomésticos.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        },
+        {
+          "slug": "kitchen-appliances-wholesale-guide",
+          "title": "Adquisición de electrodomésticos de cocina",
+          "excerpt": "Una referencia práctica de HousePlus para compradores internacionales B2B que evalúan la adquisición de electrodomésticos de cocina.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "de": {
+      "title": "Checkliste zur Bewertung von OEM-Mustern für Haushaltsgeräte für B2B-Einkäufer",
+      "description": "Bewerten Sie ein OEM-Muster eines Haushaltsgeräts mit einer wiederholbaren Checkliste, die Funktion, Sicherheit, Benutzererlebnis, Verpackung und Marktdokumentation abdeckt.",
+      "keywords": "OEM-Muster für Haushaltsgeräte, Checkliste für Beschaffung von Geräten, B2B-Beschaffung von Geräten, OEM-Qualitätsprüfung, Private-Label-Geräte",
+      "category": "Haushaltsgeräte",
+      "heroImageAlt": "Muster eines modernen Küchengeräts, vorbereitet für eine B2B-Produktbewertung",
+      "slug": "home-appliance-oem-sample-evaluation-checklist",
+      "author": "HousePlus Redaktionsteam",
+      "authorRole": "Einblicke in B2B-Beschaffung und Produktentwicklung",
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "readingTime": "7 Min. Lesezeit",
+      "heroImage": "/images/articles/appliances/home-appliance-kitchen-modern.jpg",
+      "sections": [
+        {
+          "heading": "Dokumentieren Sie die freigegebene Musterkonfiguration",
+          "paragraphs": [
+            "Notieren Sie vor den Tests die Modellreferenz, Spannung, Stecker, Oberflächenfinish, Zubehör, Verpackungsversion sowie Firmware- oder Steuerungs-Version, sofern relevant. Ein Muster ist nur dann als Referenz nützlich, wenn die Produktionsspezifikation darauf zurückgeführt werden kann.",
+            "Kennzeichnen Sie angeforderte Änderungen getrennt von akzeptierten Merkmalen. Dadurch wird verhindert, dass eine nicht freigegebene Prototypänderung versehentlich zu einer Produktionsanforderung wird."
+          ]
+        },
+        {
+          "heading": "Prüfen Sie die Funktion unter realistischen Einsatzbedingungen",
+          "paragraphs": [
+            "Erstellen Sie einen kurzen Prüfplan, der Start, Normalbetrieb, Bedienelemente, Geräusch, Wärme, Reinigung, Sicherheitsabschaltungen und Wiederanlauf nach Unterbrechung abdeckt, sofern anwendbar. Dokumentieren Sie Umgebung und Testdauer, damit zwei Muster fair verglichen werden können.",
+            "Verwandeln Sie nicht eine erfolgreiche Demonstration in eine pauschale Leistungsbehauptung. Wiederholbare Produktionstests und marktspezifische Validierungen sind separate Schritte, die vor der Markteinführung dokumentiert werden sollten."
+          ]
+        },
+        {
+          "heading": "Überprüfen Sie Sicherheit, Kennzeichnung und Dokumentation",
+          "paragraphs": [
+            "Prüfen Sie, ob Warnhinweise, Bedienungsanleitungen, Typenschilder und die Verpackungssprache mit dem Zielland und der genauen Musterkonfiguration übereinstimmen. Fordern Sie die anwendbaren Technischen Unterlagen oder Prüfberichte vom Lieferanten zur fachlichen Überprüfung an.",
+            "Die Verantwortung für die Konformität hängt vom Produkt, vom Markt und von der Liefervereinbarung ab. Einkäufer sollten bei Bedarf rechtliche oder regulatorische Beratung einholen und keine allgemeine Zertifizierungsaussage ohne dokumentbasierte Überprüfung veröffentlichen."
+          ]
+        },
+        {
+          "heading": "Schließen Sie die Musterfreigabeschleife",
+          "paragraphs": [
+            "Verwenden Sie ein schriftliches Musterfreigabeformular mit Fotos, Messungen, offenen Punkten, zuständigen Parteien und einem Ziel für die Behebung. Bei OEM-Arbeiten sollten Artwork, Logo-Platzierung, Kartonspezifikationen und Zubehörlisten im selben revisionskontrollierten Paket enthalten sein.",
+            "HousePlus kann Produktanforderungen, Anpassungsumfang, anwendbare Dokumentation und Angebotsbedingungen im Rahmen einer spezifischen Anfrage prüfen. Die abschließende kommerzielle Antwort sollte an das freigegebene Modell und den Bestimmungsort gebunden bleiben."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Was ist der erste Schritt bei der Bewertung eines OEM-Gerätemusters?",
+          "answer": "Dokumentieren Sie die exakte Musterkonfiguration und trennen Sie genehmigte Merkmale von angeforderten Änderungen vor der Prüfung."
+        },
+        {
+          "question": "Kann ein Mustertest die Produktionsqualität nachweisen?",
+          "answer": "Nein. Eine Mustertestprüfung ist ein Freigabeschritt; Produktionsqualität erfordert einen vereinbarten Inspektions- und Qualitätskontrollprozess."
+        },
+        {
+          "question": "Sollten Zertifizierungsangaben aus einem Lieferantenangebot übernommen werden?",
+          "answer": "Nein. Bestätigen Sie den genauen Dokumentumfang, das Modell, den Markt und die Gültigkeit, bevor Sie eine Zertifizierungsaussage verwenden."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "home-appliance-oem-manufacturer-guide-china",
+          "title": "OEM-Beschaffung von Haushaltsgeräten",
+          "excerpt": "Eine praxisorientierte HousePlus-Referenz für internationale B2B-Einkäufer bei der Bewertung der OEM-Beschaffung von Haushaltsgeräten.",
+          "date": "2026-08-01",
+          "readingTime": "7 Min. Lesezeit"
+        },
+        {
+          "slug": "kitchen-appliances-wholesale-guide",
+          "title": "Beschaffung von Küchengeräten",
+          "excerpt": "Eine praxisorientierte HousePlus-Referenz für internationale B2B-Einkäufer bei der Bewertung der Beschaffung von Küchengeräten.",
+          "date": "2026-08-01",
+          "readingTime": "7 Min. Lesezeit"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "fr": {
+      "title": "Liste de contrôle pour l'évaluation d'échantillons OEM d'appareils électroménagers pour acheteurs B2B",
+      "description": "Évaluez un échantillon OEM d'appareil électroménager à l'aide d'une liste de contrôle reproductible couvrant la fonction, la sécurité, l'expérience utilisateur, l'emballage et la documentation marché.",
+      "keywords": "échantillon OEM appareil électroménager, liste de contrôle approvisionnement appareils, approvisionnement B2B appareils, revue qualité OEM, marque distributeur appareils",
+      "category": "Appareils électroménagers",
+      "heroImageAlt": "Échantillon d'appareil de cuisine moderne préparé pour une évaluation produit B2B",
+      "slug": "home-appliance-oem-sample-evaluation-checklist",
+      "author": "Équipe éditoriale HousePlus",
+      "authorRole": "Perspectives sur l'approvisionnement B2B et le développement produit",
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "readingTime": "7 min de lecture",
+      "heroImage": "/images/articles/appliances/home-appliance-kitchen-modern.jpg",
+      "sections": [
+        {
+          "heading": "Enregistrez la configuration d'échantillon approuvée",
+          "paragraphs": [
+            "Avant les essais, consignez la référence du modèle, la tension, la fiche, la finition, les accessoires, la version de l'emballage et la version du firmware ou du contrôle le cas échéant. Un échantillon n'est utile comme référence que lorsque la spécification de production peut être retracée jusqu'à lui.",
+            "Marquez séparément les modifications demandées des fonctionnalités acceptées. Cela évite qu'un ajustement de prototype non approuvé devienne accidentellement une exigence de production."
+          ]
+        },
+        {
+          "heading": "Testez la fonction en conditions d'utilisation réalistes",
+          "paragraphs": [
+            "Élaborez un plan de test succinct couvrant le démarrage, le fonctionnement normal, les commandes, le bruit, la chaleur, le nettoyage, les dispositifs de sécurité et la récupération après interruption le cas échéant. Enregistrez l'environnement et la durée du test afin que deux échantillons puissent être comparés équitablement.",
+            "Ne transformez pas une démonstration réussie en une revendication de performance générale. Les essais de production reproductibles et la validation spécifique au marché sont des étapes distinctes qui doivent être documentées avant le lancement."
+          ]
+        },
+        {
+          "heading": "Vérifiez la sécurité, l'étiquetage et la documentation",
+          "paragraphs": [
+            "Vérifiez que les étiquettes d'avertissement, les instructions utilisateur, les plaques signalétiques et la langue de l'emballage correspondent au marché de destination et à la configuration exacte de l'échantillon. Demandez au fournisseur le dossier technique applicable ou la documentation d'essai pour examen professionnel.",
+            "La responsabilité en matière de conformité dépend du produit, du marché et de l'accord d'approvisionnement. Les acheteurs doivent obtenir un avis juridique ou réglementaire si nécessaire et ne doivent pas publier une déclaration générique de certification sans vérification documentaire."
+          ]
+        },
+        {
+          "heading": "Clôturez la boucle d'approbation de l'échantillon",
+          "paragraphs": [
+            "Utilisez un formulaire d'approbation d'échantillon écrit avec photos, mesures, points ouverts, parties responsables et objectif de résolution. Pour les travaux OEM, incluez les visuels, le placement du logo, les spécifications du carton et les listes d'accessoires dans le même paquet contrôlé par version.",
+            "HousePlus peut examiner les exigences produit, l'étendue de la personnalisation, la documentation applicable et les conditions de cotation via une demande spécifique. La réponse commerciale finale doit rester liée au modèle approuvé et à la destination."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la première étape pour évaluer un échantillon OEM d'appareil électroménager ?",
+          "answer": "Enregistrez la configuration exacte de l'échantillon et séparez les fonctionnalités approuvées des modifications demandées avant les tests."
+        },
+        {
+          "question": "Un test d'échantillon peut-il prouver la qualité de production ?",
+          "answer": "Non. Une revue d'échantillon est une étape d'approbation ; la qualité de production nécessite un processus d'inspection et de contrôle qualité convenu."
+        },
+        {
+          "question": "Faut-il reprendre les allégations de certification d'une cotation fournisseur ?",
+          "answer": "Non. Confirmez la portée exacte du document, le modèle, le marché et la validité avant d'utiliser une déclaration de certification."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "home-appliance-oem-manufacturer-guide-china",
+          "title": "Approvisionnement OEM d'appareils électroménagers",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant l'approvisionnement OEM d'appareils électroménagers.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        },
+        {
+          "slug": "kitchen-appliances-wholesale-guide",
+          "title": "Approvisionnement en appareils de cuisine",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant l'approvisionnement en appareils de cuisine.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "ar": {
+      "title": "قائمة فحص تقييم عينة OEM للأجهزة المنزلية للمشترين B2B",
+      "description": "قيّم عينة OEM لجهاز منزلي باستخدام قائمة فحص قابلة للتكرار تغطي الوظيفة والسلامة وتجربة المستخدم والتغليف والوثائق السوقية.",
+      "keywords": "عينة OEM للأجهزة المنزلية، قائمة فحص تأمين الأجهزة، شراء الأجهزة B2B، مراجعة جودة OEM، علامة تجارية خاصة للأجهزة",
+      "category": "الأجهزة المنزلية",
+      "heroImageAlt": "عينة جهاز مطبخ حديث مُعدة لتقييم منتج بين الشركات (B2B)",
+      "slug": "home-appliance-oem-sample-evaluation-checklist",
+      "author": "فريق التحرير في HousePlus",
+      "authorRole": "رؤى حول التوريد B2B وتطوير المنتج",
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "readingTime": "7 دقائق قراءة",
+      "heroImage": "/images/articles/appliances/home-appliance-kitchen-modern.jpg",
+      "sections": [
+        {
+          "heading": "سجل تكوين العينة المعتمد",
+          "paragraphs": [
+            "قبل الاختبارات، سجّل مرجع الطراز، والجهد الكهربائي، والمقبس، والتشطيب، والاكسسوارات، وإصدار التغليف وإصدار البرنامج الثابت أو نظام التحكم عند الاقتضاء. تكون العينة مفيدة كمرجع فقط عندما يمكن تتبع مواصفات الإنتاج إليها.",
+            "حدّد التغييرات المطلوبة بشكل منفصل عن السمات المقبولة. يمنع ذلك أن يتحول تعديل غير معتمد للنموذج الأولي عن طريق الخطأ إلى متطلب إنتاج."
+          ]
+        },
+        {
+          "heading": "اختبر الوظيفة في ظروف استخدام واقعية",
+          "paragraphs": [
+            "ضع خطة اختبار قصيرة تغطي بدء التشغيل، والتشغيل الطبيعي، وعناصر التحكم، والضوضاء، والحرارة، والتنظيف، والقطع الأمني، واستعادة التشغيل بعد انقطاع التيار عند الاقتضاء. سجّل البيئة ومدة الاختبار حتى يمكن مقارنة عينتين بعدالة.",
+            "لا تحول عرضًا ناجحًا إلى ادعاء أداء شامل. اختبارات الإنتاج القابلة للتكرار والتحقق المتوافق مع السوق خطوات منفصلة يجب توثيقها قبل الإطلاق."
+          ]
+        },
+        {
+          "heading": "راجع السلامة والوسم والوثائق",
+          "paragraphs": [
+            "تحقق من أن ملصقات التحذير، وتعليمات المستخدم، ولوحات التصنيف، ولغة التغليف تتطابق مع سوق الوجهة والتكوين الدقيق للعينة. اطلب الملف الفني المعمول به أو وثائق الاختبار من المورد للمراجعة المهنية.",
+            "تعتمد مسؤولية الامتثال على المنتج والسوق وترتيبات التوريد. يجب على المشترين الحصول على مشورة قانونية أو تنظيمية عند الحاجة، ويجب ألا ينشروا بيان شهادة عام دون التحقق من المستندات."
+          ]
+        },
+        {
+          "heading": "أغلق حلقة الموافقة على العينة",
+          "paragraphs": [
+            "استخدم نموذج موافقة على العينة مكتوبًا يتضمن صورًا وقياسات ومسائل مفتوحة والأطراف المسؤولة وهدفًا للحل. لأعمال OEM، أدرج الأعمال الفنية، وموقع الشعار، ومواصفات الكرتون وقوائم الملحقات في نفس الحزمة الخاضعة للتحكم في الإصدارات.",
+            "يمكن لـ HousePlus مراجعة متطلبات المنتج ونطاق التخصيص والوثائق المطبقة وشروط الاقتباس من خلال استفسار محدد. يجب أن تظل الاستجابة التجارية النهائية مرتبطة بالطراز المعتمد والوجهة."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "ما هي الخطوة الأولى في تقييم عينة جهاز OEM؟",
+          "answer": "سجّل تكوين العينة بدقة وافصل السمات المعتمدة عن التغييرات المطلوبة قبل الاختبار."
+        },
+        {
+          "question": "هل يمكن لاختبار العينة إثبات جودة الإنتاج؟",
+          "answer": "لا. مراجعة العينة هي خطوة موافقة؛ تتطلب جودة الإنتاج عملية تفتيش ومراقبة جودة متفق عليها."
+        },
+        {
+          "question": "هل ينبغي نسخ ادعاءات الشهادة من عرض سعر المورد؟",
+          "answer": "لا. قم بتأكيد نطاق المستند الدقيق والطراز والسوق والصلاحية قبل استخدام بيان شهادة."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "home-appliance-oem-manufacturer-guide-china",
+          "title": "توريد OEM للأجهزة المنزلية",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليين B2B الذين يقيّمون توريد OEM للأجهزة المنزلية.",
+          "date": "2026-08-01",
+          "readingTime": "7 دقائق قراءة"
+        },
+        {
+          "slug": "kitchen-appliances-wholesale-guide",
+          "title": "توريد أجهزة المطبخ",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليين B2B الذين يقيّمون توريد أجهزة المطبخ.",
+          "date": "2026-08-01",
+          "readingTime": "7 دقائق قراءة"
+        }
+      ],
+      "productRecommendations": []
+    }
   },
   "usb-c-accessories-wholesale-specification-checklist": {
-    "es": {"title": "Lista de especificaciones para accesorios USB-C al por mayor", "description": "Compare cables y accesorios USB-C para compras mayoristas con una lista de potencia, datos, materiales, embalaje y mercado.", "keywords": "accesorios USB-C al por mayor, especificación cable USB-C, compras electrónicas B2B", "category": "Electrónica 3C", "heroImageAlt": "Cable USB-C preparado para revisar especificaciones de un producto mayorista"},
-    "de": {"title": "Checkliste für USB-C-Zubehör im Großhandel", "description": "Vergleichen Sie USB-C-Kabel und Zubehör nach Leistung, Daten, Materialien, Verpackung und Zielmarkt.", "keywords": "USB-C Großhandel, USB-C Kabel Spezifikation, B2B Elektronikbeschaffung", "category": "3C-Elektronik", "heroImageAlt": "USB-C-Kabel für die Spezifikationsprüfung eines Großhandelsprodukts"},
-    "fr": {"title": "Liste des spécifications des accessoires USB-C en gros", "description": "Comparez les câbles et accessoires USB-C avec une liste pratique pour puissance, données, matériaux et emballage.", "keywords": "accessoires USB-C en gros, spécification câble USB-C, achats électroniques B2B", "category": "Électronique 3C", "heroImageAlt": "Câble USB-C préparé pour l'examen des spécifications d'un produit de gros"},
-    "ar": {"title": "قائمة مواصفات ملحقات USB-C للبيع بالجملة", "description": "قارن كابلات وملحقات USB-C من خلال قائمة عملية للطاقة والبيانات والمواد والتغليف والسوق المستهدف.", "keywords": "ملحقات USB-C بالجملة، مواصفات كابل USB-C، مشتريات إلكترونيات B2B", "category": "إلكترونيات 3C", "heroImageAlt": "كابل USB-C معد لمراجعة مواصفات منتج بالجملة"}
+    "es": {
+      "title": "Lista de verificación de especificaciones para accesorios USB-C al por mayor",
+      "description": "Compare cables y accesorios USB-C para abastecimiento al por mayor con una lista de verificación práctica sobre energía, datos, materiales, embalaje y requisitos de destino.",
+      "keywords": "USB-C abastecimiento al por mayor, especificación de cable USB-C, adquisiciones B2B de electrónica, accesorios de carga OEM, lista de verificación de productos USB-C",
+      "category": "Electrónica 3C",
+      "heroImageAlt": "Accesorio de cable USB-C preparado para revisión de especificaciones de producto al por mayor",
+      "slug": "usb-c-accessories-wholesale-specification-checklist",
+      "author": "HousePlus Editorial Team",
+      "authorRole": "Perspectivas en abastecimiento B2B y desarrollo de producto",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "readingTime": "6 min de lectura",
+      "heroImage": "/images/articles/electronics/electronics-usb-cable-product.jpg",
+      "sections": [
+        {
+          "heading": "Separe el tipo de conector de la capacidad del producto",
+          "paragraphs": [
+            "USB-C describe una forma de conector, no una única capacidad de carga o de datos. Una solicitud de compra debe indicar el perfil de potencia esperado, el rendimiento de datos, la longitud del cable, la construcción del conector y los dispositivos previstos en lugar de confiar únicamente en el nombre del conector.",
+            "Solicite el método de prueba exacto y el enfoque de etiquetado utilizados para el modelo propuesto. Esto proporciona a los compradores una base más clara para comparar productos con el mismo conector pero diferente construcción interna."
+          ]
+        },
+        {
+          "heading": "Especifique requisitos de construcción y durabilidad",
+          "paragraphs": [
+            "Registre el material del conductor, el apantallamiento, el material de la cubierta, el alivio de tensión, las expectativas de flexión, el color, el método de logo y el embalaje. Si el producto está destinado a venta al por menor, defina el arte y los requisitos de código de barras por separado de la especificación técnica.",
+            "Los objetivos de durabilidad deben acordarse como condiciones de ensayo en lugar de usar términos vagos como premium o de alta resistencia. El proveedor debe identificar qué pruebas están disponibles para el modelo seleccionado y qué constituye un aprobado."
+          ]
+        },
+        {
+          "heading": "Revise compatibilidad y documentación para el mercado",
+          "paragraphs": [
+            "Solicite notas de compatibilidad para los dispositivos y casos de uso previstos, incluidas las necesidades de solo carga, transferencia de datos o requisitos relacionados con pantalla cuando proceda. Evite prometer compatibilidad universal a menos que se haya verificado para la configuración exacta.",
+            "Solicite el etiquetado del producto, el idioma del embalaje y la documentación aplicable para el mercado. Cualquier declaración regulatoria o medioambiental debe vincularse al modelo exacto y a un expediente de soporte."
+          ]
+        },
+        {
+          "heading": "Construya una consulta mayorista comparable",
+          "paragraphs": [
+            "Una consulta útil incluye modelo, longitud, color, logo, embalaje, cantidad por SKU, destino y modalidad de entrega preferida. Solicite un desglose de costes para la personalización para que el comprador pueda distinguir el coste del producto del trabajo de herramientas o embalaje.",
+            "HousePlus confirma configuraciones disponibles y términos comerciales caso por caso. Un artículo publicado debe guiar la consulta, no reemplazar la cotización específica del producto."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Todos los cables USB-C admiten la misma función de potencia o datos?",
+          "answer": "No. La forma del conector no define todas las capacidades eléctricas o de datos. Confirme la especificación exacta del modelo y la evidencia de prueba."
+        },
+        {
+          "question": "¿Qué debe especificar una consulta mayorista de USB-C?",
+          "answer": "Especifique capacidad, longitud, construcción, color, logo, embalaje, cantidad por SKU, destino y la documentación solicitada."
+        },
+        {
+          "question": "¿Se puede prometer compatibilidad universal en una ficha de producto?",
+          "answer": "Solo cuando la configuración exacta se haya validado para los dispositivos y casos de uso relevantes. De lo contrario, utilice un lenguaje de compatibilidad preciso."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "tws-earphones-oem-manufacturing-guide",
+          "title": "OEM de electrónica 3C",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan OEM de electrónica 3C.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        },
+        {
+          "slug": "portable-ssd-vs-external-hdd",
+          "title": "productos de almacenamiento portátil",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan productos de almacenamiento portátil.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "de": {
+      "title": "USB-C Zubehör Großhandels-Spezifikations-Checkliste",
+      "description": "Vergleichen Sie USB-C Kabel und Zubehör für den Großhandel mit einer praktischen Checkliste zu Leistung, Daten, Materialien, Verpackung und Zielanforderungen.",
+      "keywords": "USB-C Großhandel Beschaffung, USB-C Kabel Spezifikation, Elektronik B2B Beschaffung, Ladezubehör OEM, USB-C Produkt-Checkliste",
+      "category": "3C-Elektronik",
+      "heroImageAlt": "USB-C Kabelzubehör vorbereitet für die Spezifikationsprüfung im Großhandel",
+      "slug": "usb-c-accessories-wholesale-specification-checklist",
+      "author": "HousePlus Editorial Team",
+      "authorRole": "Einblicke in B2B-Beschaffung und Produktentwicklung",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "readingTime": "6 min Lesezeit",
+      "heroImage": "/images/articles/electronics/electronics-usb-cable-product.jpg",
+      "sections": [
+        {
+          "heading": "Trennen Sie den Steckertyp von der Produktfunktion",
+          "paragraphs": [
+            "USB-C beschreibt eine Steckform, nicht eine einzige Lade- oder Datenfunktion. Eine Beschaffungsanfrage sollte das erwartete Leistungsprofil, die Datenleistung, Kabellänge, Steckerkonstruktion und die vorgesehenen Geräte angeben, anstatt sich nur auf den Steckernamen zu verlassen.",
+            "Fordern Sie die genaue Prüfmethodik und die Kennzeichnungsweise für das vorgeschlagene Modell an. Das gibt Einkäufern eine klarere Grundlage, um Produkte mit demselben Stecker, aber unterschiedlicher interner Konstruktion zu vergleichen."
+          ]
+        },
+        {
+          "heading": "Geben Sie Konstruktions- und Haltbarkeitsanforderungen an",
+          "paragraphs": [
+            "Dokumentieren Sie Leiterwerkstoff, Abschirmung, Mantelmaterial, Zugentlastung, Biegeerwartungen, Farbe, Logo-Verfahren und Verpackung. Wenn das Produkt für den Einzelhandel vorgesehen ist, definieren Sie Artwork- und Barcode-Anforderungen getrennt von der technischen Spezifikation.",
+            "Haltbarkeitsziele sollten als Prüfbedingungen vereinbart werden, anstatt vage Begriffe wie Premium oder hochbelastbar zu verwenden. Der Lieferant sollte angeben, welche Tests für das ausgewählte Modell verfügbar sind und was als bestanden gilt."
+          ]
+        },
+        {
+          "heading": "Prüfen Sie Kompatibilität und Marktdokumentation",
+          "paragraphs": [
+            "Fordern Sie Kompatibilitätsangaben für die vorgesehenen Geräte und Anwendungsfälle an, einschließlich Anforderungen an reines Laden, Datenübertragung oder Display-Funktionen, wo relevant. Vermeiden Sie die Zusicherung universeller Kompatibilität, sofern sie nicht für die exakte Konfiguration verifiziert wurde.",
+            "Fordern Sie Produktkennzeichnung, Verpackungssprache und anwendbare Marktdokumentation an. Jede regulatorische oder umweltbezogene Aussage sollte dem exakten Modell und einem unterstützenden Nachweis zugeordnet sein."
+          ]
+        },
+        {
+          "heading": "Erstellen Sie eine vergleichbare Großhandelsanfrage",
+          "paragraphs": [
+            "Eine nützliche Anfrage umfasst Modell, Länge, Farbe, Logo, Verpackung, Menge pro SKU, Zielort und bevorzugte Liefervereinbarung. Fordern Sie eine Kostenaufstellung für Anpassungen an, damit der Einkäufer Produktkosten von Werkzeug- oder Verpackungsarbeiten unterscheiden kann.",
+            "HousePlus bestätigt verfügbare Konfigurationen und kommerzielle Bedingungen fallweise. Ein veröffentlichter Artikel sollte die Anfrage leiten, nicht das produktbezogene Angebot ersetzen."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Unterstützt jedes USB-C Kabel die gleiche Leistungs- oder Datenfunktion?",
+          "answer": "Nein. Die Form des Steckers bestimmt nicht alle elektrischen oder Datenfunktionen. Bestätigen Sie die genaue Modellspezifikation und Testnachweise."
+        },
+        {
+          "question": "Was sollte eine USB-C Großhandelsanfrage angeben?",
+          "answer": "Geben Sie Funktion, Länge, Konstruktion, Farbe, Logo, Verpackung, Menge pro SKU, Zielort und die angeforderten Dokumente an."
+        },
+        {
+          "question": "Kann in einer Produktbeschreibung universelle Kompatibilität versprochen werden?",
+          "answer": "Nur wenn die exakte Konfiguration für die relevanten Geräte und Anwendungsfälle validiert wurde. Andernfalls verwenden Sie eine präzise Formulierung zur Kompatibilität."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "tws-earphones-oem-manufacturing-guide",
+          "title": "OEM für 3C-Elektronik",
+          "excerpt": "Eine praktische HousePlus-Referenz für internationale B2B-Einkäufer, die OEMs für 3C-Elektronik bewerten.",
+          "date": "2026-08-01",
+          "readingTime": "7 min Lesezeit"
+        },
+        {
+          "slug": "portable-ssd-vs-external-hdd",
+          "title": "tragbare Speicherprodukte",
+          "excerpt": "Eine praktische HousePlus-Referenz für internationale B2B-Einkäufer, die tragbare Speicherprodukte bewerten.",
+          "date": "2026-08-01",
+          "readingTime": "7 min Lesezeit"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "fr": {
+      "title": "Checklist de spécifications pour accessoires USB-C en gros",
+      "description": "Comparez les câbles et accessoires USB-C pour les achats en gros à l'aide d'une checklist pratique couvrant la puissance, les données, les matériaux, l'emballage et les besoins de destination.",
+      "keywords": "approvisionnement USB-C en gros, spécification câble USB-C, achats B2B électronique, accessoires de charge OEM, checklist produit USB-C",
+      "category": "Électronique 3C",
+      "heroImageAlt": "Accessoire de câble USB-C préparé pour la revue des spécifications produit en gros",
+      "slug": "usb-c-accessories-wholesale-specification-checklist",
+      "author": "HousePlus Editorial Team",
+      "authorRole": "Perspectives d'achat B2B et de développement produit",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "readingTime": "6 min de lecture",
+      "heroImage": "/images/articles/electronics/electronics-usb-cable-product.jpg",
+      "sections": [
+        {
+          "heading": "Distinguer le type de connecteur de la capacité du produit",
+          "paragraphs": [
+            "USB-C décrit une forme de connecteur, pas une capacité unique de charge ou de données. Une demande d'approvisionnement devrait indiquer le profil de puissance attendu, les performances de données, la longueur du câble, la construction du connecteur et les appareils prévus au lieu de se fier uniquement au nom du connecteur.",
+            "Demandez la méthode de test exacte et l'approche d'étiquetage utilisées pour le modèle proposé. Cela donne aux acheteurs une base plus claire pour comparer des produits ayant le même connecteur mais des constructions internes différentes."
+          ]
+        },
+        {
+          "heading": "Spécifier les exigences de construction et de durabilité",
+          "paragraphs": [
+            "Consignez le matériau du conducteur, le blindage, le matériau de la gaine, la protection contre les contraintes, les attentes de flexion, la couleur, la méthode de marquage du logo et l'emballage. Si le produit est destiné au commerce de détail, définissez l'artwork et les exigences de code-barres séparément de la spécification technique.",
+            "Les objectifs de durabilité doivent être convenus comme conditions d'essai plutôt que par des termes vagues tels que premium ou haute résistance. Le fournisseur doit indiquer quels tests sont disponibles pour le modèle sélectionné et ce qui constitue une réussite."
+          ]
+        },
+        {
+          "heading": "Examiner la compatibilité et la documentation marché",
+          "paragraphs": [
+            "Demandez des notes de compatibilité pour les appareils et cas d'utilisation prévus, y compris les besoins de charge uniquement, de transfert de données ou liés à l'affichage lorsque c'est pertinent. Évitez de promettre une compatibilité universelle sauf si elle a été vérifiée pour la configuration exacte.",
+            "Demandez l'étiquetage du produit, la langue de l'emballage et la documentation applicable au marché. Toute déclaration réglementaire ou environnementale doit être liée au modèle exact et à un dossier justificatif."
+          ]
+        },
+        {
+          "heading": "Construire une demande d'achat en gros comparable",
+          "paragraphs": [
+            "Une demande utile inclut le modèle, la longueur, la couleur, le logo, l'emballage, la quantité par SKU, la destination et le mode de livraison préféré. Demandez une ventilation des coûts pour la personnalisation afin que l'acheteur puisse distinguer le coût produit des travaux d'outillage ou d'emballage.",
+            "HousePlus confirme les configurations disponibles et les conditions commerciales au cas par cas. Un article publié doit guider la demande, et non remplacer le devis spécifique au produit."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Est-ce que tous les câbles USB-C prennent en charge la même fonction de puissance ou de données ?",
+          "answer": "Non. La forme du connecteur ne définit pas toutes les capacités électriques ou de données. Confirmez la spécification exacte du modèle et les preuves de test."
+        },
+        {
+          "question": "Que doit spécifier une demande en gros USB-C ?",
+          "answer": "Spécifiez la capacité, la longueur, la construction, la couleur, le logo, l'emballage, la quantité par SKU, la destination et la documentation demandée."
+        },
+        {
+          "question": "Peut-on promettre une compatibilité universelle dans une fiche produit ?",
+          "answer": "Uniquement lorsque la configuration exacte a été validée pour les appareils et cas d'utilisation pertinents. Sinon, utilisez un langage de compatibilité précis."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "tws-earphones-oem-manufacturing-guide",
+          "title": "OEM d'électronique 3C",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant les OEM d'électronique 3C.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        },
+        {
+          "slug": "portable-ssd-vs-external-hdd",
+          "title": "produits de stockage portables",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant des produits de stockage portables.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        }
+      ],
+      "productRecommendations": []
+    },
+    "ar": {
+      "title": "قائمة التحقق لمواصفات ملحقات USB-C بالجملة",
+      "description": "قارن كابلات وملحقات USB-C لمصدر شراء بالجملة باستخدام قائمة تحقق عملية للقدرة على الطاقة والبيانات والمواد والتغليف ومتطلبات الوجهة.",
+      "keywords": "توريد USB-C بالجملة، مواصفة كابل USB-C، مشتريات إلكترونيات B2B، ملحقات شحن OEM، قائمة تحقق منتج USB-C",
+      "category": "إلكترونيات 3C",
+      "heroImageAlt": "ملحق كابل USB-C مُعد لمراجعة مواصفات المنتج بالجملة",
+      "slug": "usb-c-accessories-wholesale-specification-checklist",
+      "author": "HousePlus Editorial Team",
+      "authorRole": "رؤى في التوريد B2B وتطوير المنتج",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "readingTime": "6 دقائق قراءة",
+      "heroImage": "/images/articles/electronics/electronics-usb-cable-product.jpg",
+      "sections": [
+        {
+          "heading": "افصل نوع الموصل عن قدرة المنتج",
+          "paragraphs": [
+            "USB-C يصف شكل الموصل، وليس قدرة شحن أو بيانات واحدة. يجب أن تحدد طلبية الشراء ملف الطاقة المتوقع، أداء البيانات، طول الكابل، تركيب الموصل والأجهزة المقصودة بدلاً من الاعتماد على اسم الموصل وحده.",
+            "اطلب طريقة الاختبار الدقيقة ونهج الوسم المستخدمين للطراز المقترح. هذا يمنح المشترين أساسًا أوضح لمقارنة المنتجات ذات الموصل نفسه ولكن ذات تركيب داخلي مختلف."
+          ]
+        },
+        {
+          "heading": "حدد متطلبات البناء والمتانة",
+          "paragraphs": [
+            "سجل مادة الموصل، التدريع، مادة الغلاف، تخفيف الإجهاد، توقعات الانحناء، اللون، طريقة الشعار والتغليف. إذا كان المنتج موجهًا للبيع بالتجزئة، فحدد الأعمال الفنية ومتطلبات الباركود منفصلة عن المواصفة الفنية.",
+            "يجب الاتفاق على أهداف المتانة كظروف اختبار بدلاً من كلمات غامضة مثل ممتاز (premium) أو للخدمة الشاقة (heavy duty). يجب على المورد تحديد الاختبارات المتاحة للطراز المختار وما الذي يُعتبر ناجحًا."
+          ]
+        },
+        {
+          "heading": "مراجعة التوافق والوثائق السوقية",
+          "paragraphs": [
+            "اطلب ملاحظات التوافق للأجهزة وحالات الاستخدام المقصودة، بما في ذلك حالات الشحن فقط، نقل البيانات أو متطلبات العرض حيثما كان ذلك ذا صلة. تجنب الوعد بالتوافق الشامل إلا إذا تم التحقق منه للتكوين الدقيق.",
+            "اطلب وسم المنتج، لغة التغليف والوثائق السوقية المطبقة. يجب ربط أي بيان تنظيمي أو بيئي بالطراز الدقيق والسجل الداعم."
+          ]
+        },
+        {
+          "heading": "بناء استفسار جملة قابل للمقارنة",
+          "paragraphs": [
+            "يتضمن الاستفسار المفيد الطراز، الطول، اللون، الشعار، التغليف، الكمية حسب SKU، الوجهة وترتيب التسليم المفضل. اطلب تفصيلًا للتكلفة للتخصيص حتى يتمكن المشتري من تمييز تكلفة المنتج عن أعمال الأدوات أو التغليف.",
+            "تؤكد HousePlus التكوينات المتاحة والشروط التجارية حسب الحالة. يجب أن يوجه مقال منشور الاستفسار، لا أن يحل محل عرض السعر الخاص بالمنتج."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "هل يدعم كل كابل USB-C نفس وظيفة الطاقة أو البيانات؟",
+          "answer": "لا. شكل الموصل لا يحدد كل القدرات الكهربائية أو المتعلقة بالبيانات. أكد مواصفة الطراز الدقيقة وأدلة الاختبار."
+        },
+        {
+          "question": "ما الذي يجب أن يحدده استفسار الجملة عن USB-C؟",
+          "answer": "حدد القدرة، الطول، البناء، اللون، الشعار، التغليف، الكمية حسب SKU، الوجهة والوثائق المطلوبة."
+        },
+        {
+          "question": "هل يمكن الوعد بالتوافق الشامل في وصف المنتج؟",
+          "answer": "فقط عندما تم التحقق من التكوين الدقيق للأجهزة وحالات الاستخدام ذات الصلة. وإلا فاستعمل لغة توافق دقيقة."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "tws-earphones-oem-manufacturing-guide",
+          "title": "OEM إلكترونيات 3C",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليّين من قطاع B2B الذين يقيمون OEM لإلكترونيات 3C.",
+          "date": "2026-08-01",
+          "readingTime": "7 دقائق قراءة"
+        },
+        {
+          "slug": "portable-ssd-vs-external-hdd",
+          "title": "منتجات التخزين المحمولة",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليّين من قطاع B2B الذين يقيمون منتجات التخزين المحمولة.",
+          "date": "2026-08-01",
+          "readingTime": "7 دقائق قراءة"
+        }
+      ],
+      "productRecommendations": []
+    }
   },
   "battery-energy-storage-rfq-data-checklist": {
-    "es": {"title": "Lista de datos RFQ para proyectos comerciales de almacenamiento de baterías", "description": "Prepare una RFQ clara de almacenamiento de baterías con los datos necesarios para revisar configuración, documentación y entrega.", "keywords": "RFQ almacenamiento baterías, lista BESS, abastecimiento almacenamiento solar", "category": "Solar y almacenamiento", "heroImageAlt": "Equipo de almacenamiento de energía preparado para una consulta de proyecto comercial"},
-    "de": {"title": "RFQ-Datencheckliste für gewerbliche Batteriespeicherprojekte", "description": "Bereiten Sie eine klare Anfrage mit Projektdaten für Konfiguration, Dokumentation und Lieferoptionen vor.", "keywords": "Batteriespeicher RFQ, BESS Beschaffung, Solar Speicher Projekt", "category": "Solarenergie und Speicher", "heroImageAlt": "Batteriespeicher für eine gewerbliche Projektanfrage"},
-    "fr": {"title": "Liste des données RFQ pour les projets commerciaux de stockage par batterie", "description": "Préparez une RFQ claire avec les données utiles à l'examen de la configuration, des documents et de la livraison.", "keywords": "RFQ stockage batterie, approvisionnement BESS, stockage solaire commercial", "category": "Solaire et stockage", "heroImageAlt": "Équipement de stockage d'énergie préparé pour une demande de projet commercial"},
-    "ar": {"title": "قائمة بيانات طلب عرض أسعار لتخزين البطاريات للمشاريع التجارية", "description": "جهّز طلب عرض أسعار واضحاً ببيانات المشروع اللازمة لمراجعة التكوين والوثائق وخيارات التسليم.", "keywords": "طلب عرض أسعار تخزين البطاريات، توريد BESS، تخزين الطاقة الشمسية التجاري", "category": "الطاقة الشمسية والتخزين", "heroImageAlt": "معدات تخزين طاقة معدة لاستفسار مشروع تجاري"}
+    "es": {
+      "title": "Lista de verificación de datos RFQ para almacenamiento de energía con baterías en proyectos comerciales",
+      "description": "Prepare una solicitud RFQ de almacenamiento de energía con baterías más clara con los datos del proyecto que los proveedores necesitan para revisar configuración, documentación y opciones de entrega.",
+      "keywords": "RFQ de almacenamiento de energía con baterías, lista de verificación de adquisición BESS, aprovisionamiento de almacenamiento solar, datos de proyectos de baterías, almacenamiento de energía comercial",
+      "category": "Solar y Almacenamiento",
+      "heroImageAlt": "Equipamiento de almacenamiento de energía con baterías preparado para una consulta de proyecto comercial",
+      "slug": "battery-energy-storage-rfq-data-checklist",
+      "author": "Equipo editorial de HousePlus",
+      "authorRole": "Perspectivas sobre aprovisionamiento B2B y desarrollo de producto",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "readingTime": "7 min de lectura",
+      "heroImage": "/images/articles/solar/solar-energy-storage-battery-bank.jpg",
+      "sections": [
+        {
+          "heading": "Describa el proyecto antes de nombrar la batería",
+          "paragraphs": [
+            "Indique si el proyecto es para respaldo, gestión de picos, autoconsumo, una aplicación fuera de la red u otro caso de uso. Incluya condiciones del sitio, perfil de operación esperado, información de la red local y el alcance del sistema deseado cuando sea conocido.",
+            "La misma capacidad nominal puede respaldar distintos diseños de proyecto. Un brief de aplicación claro ayuda a los proveedores a identificar qué preguntas técnicas quedan abiertas antes de preparar una cotización."
+          ]
+        },
+        {
+          "heading": "Solicite los datos necesarios para la comparación",
+          "paragraphs": [
+            "Pida definiciones de energía utilizable y nominal, límites de potencia, temperatura de operación, supuestos de envolvente, interfaces de comunicación, funciones de protección, condiciones de instalación y requisitos de mantenimiento para la configuración propuesta.",
+            "Solicite aclaración sobre condiciones de prueba y puntos de medida. Cifras sin su contexto de prueba son difíciles de comparar y no deben reutilizarse como reclamaciones de rendimiento generalizadas."
+          ]
+        },
+        {
+          "heading": "Confirme el alcance de seguridad y documentación",
+          "paragraphs": [
+            "La RFQ debe identificar el mercado de destino y solicitar la documentación aplicable de seguridad, transporte, instalación e interfaz de red para la configuración exacta. El comprador debe verificar el alcance documental con profesionales cualificados antes de poner en marcha un sistema.",
+            "Cuando un proyecto requiera integración con un sistema de gestión de energía o un inversor, incluya requisitos de interfaz y límites de responsabilidad. Estos detalles pueden cambiar materialmente el trabajo de ingeniería y la planificación de la entrega."
+          ]
+        },
+        {
+          "heading": "Haga explícitas las suposiciones comerciales",
+          "paragraphs": [
+            "Separe equipo, integración, embalaje, pruebas, puesta en marcha, repuestos y logística en la consulta. Indique la cantidad deseada, el lugar de entrega, el Incoterm solicitado y si se espera una visita de sitio o aclaración técnica.",
+            "No existe una condición de posventa universal, promesa de vida útil en ciclos, umbral de pedido o calendario de entrega para todo proyecto de almacenamiento. Estos elementos deben confirmarse para la configuración seleccionada, el destino y el alcance contractual."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué información ayuda a un proveedor de almacenamiento de baterías a preparar una RFQ?",
+          "answer": "Proporcione la aplicación, condiciones del sitio, perfil de operación, alcance del sistema, destino, cantidad, requisitos de interfaz y necesidades de documentación."
+        },
+        {
+          "question": "¿Se puede comparar la capacidad nominal de la batería sin otros datos?",
+          "answer": "No de forma fiable. También deben revisarse la energía utilizable, límites de potencia, condiciones de operación, pérdidas del sistema y definiciones de prueba."
+        },
+        {
+          "question": "¿Son universales los términos de garantía y ciclo de vida?",
+          "answer": "No. Dependen de la configuración, condiciones de operación, destino y alcance contractual y deben confirmarse por escrito."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "lifepo4-vs-lead-acid-battery",
+          "title": "comparación de tecnología de baterías",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan la comparación de tecnologías de baterías.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "almacenamiento solar industrial",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan el almacenamiento solar industrial.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "Resumen de producto: Suministro de energía portátil y almacenamiento solar de HousePlus",
+        "description": "Una visión visual vertical de 42 segundos de los suministros de energía portátiles HousePlus, paneles solares plegables, una batería LiFePO4 y equipos industriales de almacenamiento de energía. Las especificaciones de producto mostradas en pantalla requieren confirmación para el modelo y destino seleccionados.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "El video presenta los productos de almacenamiento de energía solar y fuentes de alimentación móvil de HousePlus, incluidos QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, paneles solares plegables, una batería LiFePO4 y equipos de almacenamiento industrial. Contiene música de fondo e información visual en inglés sobre los productos en pantalla sin narración hablada."
+      }
+    },
+    "de": {
+      "title": "RFQ-Daten-Checkliste für Batteriespeicher bei kommerziellen Projekten",
+      "description": "Bereiten Sie eine klarere RFQ für Batteriespeicher vor, mit den Projektdaten, die Lieferanten benötigen, um Konfiguration, Dokumentation und Lieferoptionen zu prüfen.",
+      "keywords": "RFQ Batteriespeicher, BESS Beschaffungs-Checkliste, Beschaffung von Solarstromspeichern, Batteriedaten für Projekte, gewerblicher Energiespeicher",
+      "category": "Solar & Speicher",
+      "heroImageAlt": "Ausrüstung für Batteriespeicher vorbereitet für eine kommerzielle Projektanfrage",
+      "slug": "battery-energy-storage-rfq-data-checklist",
+      "author": "HousePlus Redaktionsteam",
+      "authorRole": "Einblicke in B2B-Beschaffung und Produktentwicklung",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "readingTime": "7 Min. Lesezeit",
+      "heroImage": "/images/articles/solar/solar-energy-storage-battery-bank.jpg",
+      "sections": [
+        {
+          "heading": "Beschreiben Sie das Projekt, bevor Sie die Batterie benennen",
+          "paragraphs": [
+            "Geben Sie an, ob das Projekt für Backup, Spitzenlastmanagement, Eigenverbrauch, eine Off-Grid-Anwendung oder einen anderen Anwendungsfall vorgesehen ist. Fügen Sie Standortbedingungen, erwartetes Betriebsprofil, Informationen zum örtlichen Netz und die gewünschte Systemgrenze hinzu, sofern bekannt.",
+            "Die gleiche Nennkapazität kann unterschiedliche Projektdesigns unterstützen. Ein klares Anwendungsbriefing hilft Lieferanten zu erkennen, welche technischen Fragen vor der Angebotserstellung noch offen sind."
+          ]
+        },
+        {
+          "heading": "Fordern Sie die zum Vergleich benötigten Daten an",
+          "paragraphs": [
+            "Fragen Sie nach Definitionen von nutzbarer und nomineller Energie, Leistungsgrenzen, Betriebstemperatur, Gehäuseannahmen, Schnittstellen für Kommunikation, Schutzfunktionen, Installationsbedingungen und Wartungsanforderungen für die vorgeschlagene Konfiguration.",
+            "Fordern Sie Klarstellungen zu Prüfbedingungen und Messpunkten an. Zahlen ohne ihren Prüfkontext sind schwer vergleichbar und sollten nicht als verallgemeinerbare Leistungsangaben wiederverwendet werden."
+          ]
+        },
+        {
+          "heading": "Bestätigen Sie den Umfang von Sicherheit und Dokumentation",
+          "paragraphs": [
+            "Die RFQ sollte den Zielmarkt identifizieren und die anwendbare Sicherheits-, Transport-, Installations- und Netzschnittstellendokumentation für die genaue Konfiguration anfordern. Der Käufer sollte den Dokumentationsumfang vor der Inbetriebnahme eines Systems mit qualifizierten Fachleuten verifizieren.",
+            "Wenn ein Projekt die Integration mit einem Energiemanagementsystem oder einem Wechselrichter erfordert, fügen Sie Schnittstellenanforderungen und Verantwortungsgrenzen hinzu. Diese Details können die Ingenieursarbeiten und die Lieferplanung erheblich verändern."
+          ]
+        },
+        {
+          "heading": "Machen Sie kommerzielle Annahmen explizit",
+          "paragraphs": [
+            "Trennen Sie in der Anfrage Ausrüstung, Integration, Verpackung, Tests, Inbetriebnahme, Ersatzteile und Logistik. Geben Sie die gewünschte Menge, den Lieferort, den angeforderten Incoterm und ob eine Vor-Ort-Begehung oder technische Klärung erwartet wird, an.",
+            "Es gibt keinen universellen After-Sales-Begriff, keine allgemeine Zusage zur Zyklenlebensdauer, keine Bestellschwelle oder Lieferzeit für jedes Speicherprojekt. Diese Punkte müssen für die ausgewählte Konfiguration, das Ziel und den Vertragsumfang bestätigt werden."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Welche Informationen helfen einem Batteriespeicherlieferanten bei der Erstellung einer RFQ?",
+          "answer": "Geben Sie die Anwendung, Standortbedingungen, Betriebsprofil, Systemgrenze, Zielmarkt, Menge, Schnittstellenanforderungen und Dokumentationsbedarf an."
+        },
+        {
+          "question": "Kann die Nennkapazität einer Batterie ohne weitere Daten verglichen werden?",
+          "answer": "Nicht zuverlässig. Nutzbare Energie, Leistungsgrenzen, Betriebsbedingungen, Systemverluste und Prüfdefinitionen sollten ebenfalls geprüft werden."
+        },
+        {
+          "question": "Sind Garantie- und Lebenszyklusbedingungen universell?",
+          "answer": "Nein. Sie hängen von Konfiguration, Betriebsbedingungen, Zielmarkt und Vertragsumfang ab und müssen schriftlich bestätigt werden."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "lifepo4-vs-lead-acid-battery",
+          "title": "Vergleich von Batterietechnologien",
+          "excerpt": "Eine praxisorientierte HousePlus-Referenz für internationale B2B-Käufer, die Batterietechnologien vergleichen.",
+          "date": "2026-08-01",
+          "readingTime": "7 Min. Lesezeit"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "industrieller Solarstromspeicher",
+          "excerpt": "Eine praxisorientierte HousePlus-Referenz für internationale B2B-Käufer, die industrielle Solarstromspeicher evaluieren.",
+          "date": "2026-08-01",
+          "readingTime": "7 Min. Lesezeit"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "Produktübersicht: HousePlus tragbare Stromversorgung und Solarenergiespeicher",
+        "description": "Eine 42-Sekunden-vertikale visuelle Übersicht über HousePlus tragbare Stromversorgungen, faltbare Solarmodule, eine LiFePO4-Batterie und industrielle Energiespeicherlösungen. Die auf dem Bildschirm gezeigten Produktspezifikationen müssen für das ausgewählte Modell und Ziel bestätigt werden.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "Das Video zeigt HousePlus Solarenergiespeicher- und mobile Stromversorgungsprodukte, darunter QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, faltbare Solarmodule, eine LiFePO4-Batterie und industrielle Speicherlösungen. Es enthält Hintergrundmusik und englische Produktinformationen auf dem Bildschirm ohne gesprochene Erzählung."
+      }
+    },
+    "fr": {
+      "title": "Liste de contrôle des données RFQ pour le stockage d'énergie par batterie pour projets commerciaux",
+      "description": "Préparez une RFQ de stockage d'énergie par batterie plus claire avec les données du projet dont les fournisseurs ont besoin pour examiner la configuration, la documentation et les options de livraison.",
+      "keywords": "RFQ stockage d'énergie batterie, checklist d'approvisionnement BESS, approvisionnement stockage solaire, données de projet batterie, stockage d'énergie commercial",
+      "category": "Solaire et Stockage",
+      "heroImageAlt": "Équipement de stockage d'énergie par batterie préparé pour une demande de projet commercial",
+      "slug": "battery-energy-storage-rfq-data-checklist",
+      "author": "Équipe éditoriale HousePlus",
+      "authorRole": "Perspectives sur l'approvisionnement B2B et le développement produit",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "readingTime": "7 min de lecture",
+      "heroImage": "/images/articles/solar/solar-energy-storage-battery-bank.jpg",
+      "sections": [
+        {
+          "heading": "Décrivez le projet avant de nommer la batterie",
+          "paragraphs": [
+            "Indiquez si le projet vise la sauvegarde, la gestion des pics, l'autoconsommation, une application hors réseau ou un autre cas d'usage. Incluez les conditions du site, le profil d'exploitation attendu, les informations sur le réseau local et la délimitation du système souhaitée lorsqu'elles sont connues.",
+            "La même capacité nominale peut soutenir différents designs de projet. Un cahier des charges d'application clair aide les fournisseurs à identifier quelles questions techniques restent ouvertes avant de préparer une offre."
+          ]
+        },
+        {
+          "heading": "Demandez les données nécessaires à la comparaison",
+          "paragraphs": [
+            "Demandez les définitions d'énergie utilisable et nominale, les limites de puissance, la température de fonctionnement, les hypothèses d'enceinte, les interfaces de communication, les fonctions de protection, les conditions d'installation et les exigences de maintenance pour la configuration proposée.",
+            "Demandez des précisions sur les conditions d'essai et les points de mesure. Des chiffres sans leur contexte d'essai sont difficiles à comparer et ne doivent pas être réutilisés comme revendications de performance généralisées."
+          ]
+        },
+        {
+          "heading": "Confirmez la portée de la sécurité et de la documentation",
+          "paragraphs": [
+            "La RFQ doit identifier le marché de destination et demander la documentation applicable relative à la sécurité, au transport, à l'installation et à l'interface réseau pour la configuration exacte. L'acheteur doit vérifier l'étendue documentaire avec des professionnels qualifiés avant la mise en service d'un système.",
+            "Lorsqu'un projet nécessite l'intégration avec un système de gestion de l'énergie ou un onduleur, incluez les exigences d'interface et les limites de responsabilité. Ces détails peuvent modifier de façon significative le travail d'ingénierie et la planification de la livraison."
+          ]
+        },
+        {
+          "heading": "Rendez explicites les hypothèses commerciales",
+          "paragraphs": [
+            "Séparez dans la demande l'équipement, l'intégration, l'emballage, les tests, la mise en service, les pièces de rechange et la logistique. Indiquez la quantité souhaitée, le lieu de livraison, l'Incoterm demandé et si une visite sur site ou une clarification technique est attendue.",
+            "Il n'existe pas de condition après-vente universelle, de promesse de durée de vie en cycles, de seuil de commande ou de calendrier de livraison pour chaque projet de stockage. Ces éléments doivent être confirmés pour la configuration sélectionnée, la destination et le périmètre du contrat."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Quelles informations aident un fournisseur de stockage de batteries à préparer une RFQ ?",
+          "answer": "Fournissez l'application, les conditions du site, le profil d'exploitation, la délimitation du système, la destination, la quantité, les exigences d'interface et les besoins en documentation."
+        },
+        {
+          "question": "La capacité nominale d'une batterie peut-elle être comparée sans autres données ?",
+          "answer": "Pas de manière fiable. L'énergie utilisable, les limites de puissance, les conditions d'exploitation, les pertes système et les définitions d'essai doivent également être examinées."
+        },
+        {
+          "question": "Les conditions de garantie et de cycle de vie sont-elles universelles ?",
+          "answer": "Non. Elles dépendent de la configuration, des conditions d'exploitation, de la destination et du périmètre contractuel et doivent être confirmées par écrit."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "lifepo4-vs-lead-acid-battery",
+          "title": "comparaison des technologies de batterie",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux qui évaluent la comparaison des technologies de batterie.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "stockage solaire industriel",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux qui évaluent le stockage solaire industriel.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "Aperçu produit HousePlus : alimentation portable et stockage d'énergie solaire",
+        "description": "Un aperçu visuel vertical de 42 secondes des alimentations portables HousePlus, panneaux solaires pliables, une batterie LiFePO4 et des équipements industriels de stockage d'énergie. Les spécifications produits affichées à l'écran doivent être confirmées pour le modèle et la destination sélectionnés.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "La vidéo présente les produits de stockage d'énergie solaire et d'alimentation mobile de HousePlus, notamment QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, panneaux solaires pliables, une batterie LiFePO4 et des équipements de stockage industriels. Elle contient de la musique de fond et des informations produits en anglais à l'écran sans narration parlée."
+      }
+    },
+    "ar": {
+      "title": "قائمة التحقق لبيانات RFQ لتخزين طاقة البطاريات للمشاريع التجارية",
+      "description": "حضّر RFQ أوضح لتخزين طاقة البطاريات باستخدام بيانات المشروع التي يحتاجها الموردون لمراجعة التكوين والوثائق وخيارات التسليم.",
+      "keywords": "RFQ تخزين طاقة البطاريات, قائمة تحقق شراء BESS, تأمين تخزين الطاقة الشمسية, بيانات مشروع البطارية, التخزين الطاقي التجاري",
+      "category": "الطاقة الشمسية والتخزين",
+      "heroImageAlt": "معدات تخزين طاقة البطاريات مُعدة لاستعلام مشروع تجاري",
+      "slug": "battery-energy-storage-rfq-data-checklist",
+      "author": "فريق التحرير في HousePlus",
+      "authorRole": "رؤى حول المشتريات B2B وتطوير المنتج",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "readingTime": "قراءة 7 دقائق",
+      "heroImage": "/images/articles/solar/solar-energy-storage-battery-bank.jpg",
+      "sections": [
+        {
+          "heading": "وصف المشروع قبل تسمية البطارية",
+          "paragraphs": [
+            "حدد ما إذا كان المشروع مخصصًا للنسخ الاحتياطي، إدارة الذروة، الاستهلاك الذاتي، تطبيق خارج الشبكة أو حالة استخدام أخرى. ادرج ظروف الموقع، الملف التشغيلي المتوقع، معلومات الشبكة المحلية وحدود النظام المطلوبة عندما تكون معروفة.",
+            "قد تدعم نفس السعة الاسمية تصاميم مشاريع مختلفة. تساعد مذكّرة تطبيق واضحة الموردين على تحديد الأسئلة الفنية المتبقية قبل إعداد عرض السعر."
+          ]
+        },
+        {
+          "heading": "اطلب البيانات اللازمة للمقارنة",
+          "paragraphs": [
+            "اطلب تعريفات الطاقة القابلة للاستخدام والاسمية، حدود القدرة، درجة حرارة التشغيل، افتراضات الحاوية، واجهات الاتصال، وظائف الحماية، شروط التركيب ومتطلبات الصيانة للتكوين المقترح.",
+            "اطلب توضيحًا بشأن ظروف الاختبار ونقاط القياس. الأرقام بدون سياق الاختبار الخاص بها يصعب مقارنتها ولا ينبغي إعادة استخدامها كادعاءات أداء معممة."
+          ]
+        },
+        {
+          "heading": "أكد نطاق السلامة والوثائق",
+          "paragraphs": [
+            "يجب أن تحدد RFQ سوق الوجهة وتطلب وثائق السلامة والنقل والتركيب وواجهة الشبكة المطبقة للتكوين الدقيق. يجب على المشتري التحقق من نطاق الوثائق مع متخصصين مؤهلين قبل تشغيل النظام.",
+            "عندما يتطلب المشروع التكامل مع نظام إدارة الطاقة أو العاكس، قم بتضمين متطلبات الواجهة وحدود المسؤولية. يمكن لهذه التفاصيل أن تغير بشكل جوهري أعمال الهندسة وتخطيط التسليم."
+          ]
+        },
+        {
+          "heading": "اجعل الافتراضات التجارية صريحة",
+          "paragraphs": [
+            "فصل المعدات والتكامل والتغليف والاختبارات والتشغيل الأولي وقطع الغيار واللوجستيات في الاستعلام. حدد الكمية المطلوبة، موقع التسليم، Incoterm المطلوب وما إذا كان متوقعًا إجراء مسح للموقع أو توضيح تقني.",
+            "لا يوجد شرط عالمي لخدمات ما بعد البيع، أو وعد بعمر الدورة، أو عتبة للطلب، أو توقيت للتسليم لكل مشروع تخزين. يجب تأكيد هذه البنود للتكوين المحدد والوجهة ونطاق العقد."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "ما المعلومات التي تساعد مورد تخزين البطاريات في إعداد RFQ؟",
+          "answer": "وفر التطبيق، ظروف الموقع، الملف التشغيلي، حد النظام، الوجهة، الكمية، متطلبات الواجهة واحتياجات الوثائق."
+        },
+        {
+          "question": "هل يمكن مقارنة السعة الاسمية للبطارية دون بيانات أخرى؟",
+          "answer": "ليس بشكل موثوق. يجب أيضًا مراجعة الطاقة القابلة للاستخدام، حدود القدرة، ظروف التشغيل، خسائر النظام وتعريفات الاختبار."
+        },
+        {
+          "question": "هل شروط الضمان وعمر الدورة عامة؟",
+          "answer": "لا. تعتمد على التكوين، ظروف التشغيل، الوجهة ونطاق العقد ويجب تأكيدها كتابيًا."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "lifepo4-vs-lead-acid-battery",
+          "title": "مقارنة تقنيات البطارية",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليين B2B الذين يقيمون مقارنة تقنيات البطاريات.",
+          "date": "2026-08-01",
+          "readingTime": "قراءة 7 دقائق"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "تخزين الطاقة الشمسية الصناعي",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليين B2B الذين يقيمون تخزين الطاقة الشمسية الصناعي.",
+          "date": "2026-08-01",
+          "readingTime": "قراءة 7 دقائق"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "نظرة عامة على منتجات HousePlus لمزودات الطاقة المحمولة وتخزين الطاقة الشمسية",
+        "description": "نظرة بصرية عمودية مدتها 42 ثانية على مزودات الطاقة المحمولة من HousePlus، الألواح الشمسية القابلة للطي، بطارية LiFePO4 ومعدات تخزين الطاقة الصناعية. تتطلب مواصفات المنتج المعروضة على الشاشة تأكيدًا للنموذج والوجهة المختارين.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "يعرض الفيديو منتجات تخزين الطاقة الشمسية ومزودات الطاقة المتنقلة من HousePlus، بما في ذلك QY-300 و QY-A600-A و QY-B1000 و QY-B3000-5000 والألواح الشمسية القابلة للطي وبطارية LiFePO4 ومعدات التخزين الصناعية. يحتوي على موسيقى خلفية ومعلومات منتجات باللغة الإنجليزية على الشاشة دون سرد منطوق."
+      }
+    }
   },
   "portable-power-supply-solar-storage-b2b-guide": {
-    "es": {"title": "Guía B2B para evaluar fuentes de energía portátiles y almacenamiento solar", "description": "Evalúe fuentes de energía portátiles y almacenamiento solar para compras B2B con una guía práctica de especificaciones, aplicaciones, documentación y RFQ.", "keywords": "fuente de energía portátil B2B, almacenamiento solar, compra de estación de energía, RFQ batería LiFePO4", "category": "Solar y almacenamiento", "heroImageAlt": "Fuentes de energía portátiles y productos de almacenamiento solar HousePlus en una presentación B2B"},
-    "de": {"title": "B2B-Leitfaden zur Bewertung tragbarer Stromversorgungen und Solarspeicher", "description": "Bewerten Sie tragbare Stromversorgungen und Solarspeicher für den B2B-Einkauf mit einem praktischen Leitfaden zu Spezifikationen, Anwendungen, Dokumentation und RFQ.", "keywords": "tragbare Stromversorgung B2B, Solarspeicher Beschaffung, Powerstation Einkauf, LiFePO4 Batterie RFQ", "category": "Solarenergie und Speicher", "heroImageAlt": "Tragbare Stromversorgungen und Solarspeicher von HousePlus in einer B2B-Produktübersicht"},
-    "fr": {"title": "Guide B2B pour évaluer les alimentations portables et le stockage solaire", "description": "Évaluez les alimentations portables et le stockage solaire pour vos achats B2B grâce à un guide pratique des spécifications, applications, documents et RFQ.", "keywords": "alimentation portable B2B, approvisionnement stockage solaire, station d'énergie, RFQ batterie LiFePO4", "category": "Solaire et stockage", "heroImageAlt": "Alimentations portables et produits de stockage solaire HousePlus dans une présentation B2B"},
-    "ar": {"title": "دليل B2B لتقييم مصادر الطاقة المحمولة وتخزين الطاقة الشمسية", "description": "قيّم مصادر الطاقة المحمولة وحلول التخزين الشمسي للشراء بين الشركات من خلال دليل عملي للمواصفات والتطبيقات والوثائق وطلبات عروض الأسعار.", "keywords": "مصدر طاقة محمول B2B، توريد تخزين الطاقة الشمسية، محطة طاقة محمولة، طلب عرض أسعار بطارية LiFePO4", "category": "الطاقة الشمسية والتخزين", "heroImageAlt": "مصادر طاقة محمولة ومنتجات تخزين شمسي من HousePlus في عرض منتجات B2B"}
+    "es": {
+      "title": "Fuente de alimentación portátil y almacenamiento solar: Guía de evaluación de productos B2B",
+      "description": "Revisión de productos de fuente de alimentación portátil y almacenamiento solar para aprovisionamiento B2B con una guía práctica sobre especificaciones, aplicaciones, documentación y preparación de RFQ.",
+      "keywords": "fuente de alimentación portátil B2B, aprovisionamiento de almacenamiento solar, adquisición de estaciones de energía móviles, RFQ de baterías LiFePO4, generador solar portátil OEM",
+      "category": "Solar y almacenamiento",
+      "heroImageAlt": "Contacto de fuente de alimentación portátil HousePlus con logo de HousePlus, códigos QR de WhatsApp y WeChat, y una unidad de energía portátil",
+      "slug": "portable-power-supply-solar-storage-b2b-guide",
+      "author": "Equipo editorial de HousePlus",
+      "authorRole": "Perspectivas sobre aprovisionamiento B2B y desarrollo de producto",
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-08-26",
+      "readingTime": "8 min de lectura",
+      "heroImage": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-article-hero-landscape/",
+      "heroImageFocus": "landscape",
+      "sections": [
+        {
+          "heading": "Qué muestra la visión general de producto de HousePlus",
+          "paragraphs": [
+            "El video adjunto presenta un resumen visual de los productos de almacenamiento de energía solar y fuentes de alimentación móviles de HousePlus. Muestra una ilustración de almacenamiento solar doméstico, varios modelos de fuente de alimentación portátil, paneles solares plegables, una batería LiFePO4 y un armario de almacenamiento industrial. La información del producto que aparece en pantalla se presenta como referencia; los compradores deben confirmar la especificación del modelo seleccionado antes de usarla en una cotización o en una ficha de producto.",
+            "El video utiliza música de fondo y texto en pantalla en inglés en lugar de narración hablada. La pista de subtítulos resume la secuencia visible para que los compradores puedan comprender el contenido sin audio y para que los sistemas de búsqueda puedan asociar el medio con el artículo que lo rodea."
+          ]
+        },
+        {
+          "heading": "Cómo leer una especificación de fuente de alimentación portátil",
+          "paragraphs": [
+            "Comience por distinguir entre la energía de la batería, la potencia de salida nominal, los puertos y las condiciones de operación. Un producto puede mostrar valores separados para la energía almacenada y la salida AC, por lo que un comprador no debe tratar un único número como una descripción completa del tiempo de funcionamiento esperado o de las cargas soportadas.",
+            "Registre el modelo exacto, las dimensiones, el peso, los métodos de entrada, las interfaces de salida, las funciones de protección y los accesorios. Si un video muestra varios modelos en una secuencia breve, mantenga cada modelo en una línea separada del RFQ para evitar mezclar especificaciones entre productos."
+          ]
+        },
+        {
+          "heading": "Ajuste la configuración a la aplicación",
+          "paragraphs": [
+            "Los sistemas portátiles pueden evaluarse para respaldo ante emergencias, uso al aire libre, trabajo móvil, cargas domésticas o integración con paneles solares plegables. La configuración adecuada depende del perfil de carga, el método de recarga, el entorno, las necesidades de transporte y los requisitos del mercado de destino.",
+            "Para almacenamiento comercial o industrial, la consulta también debe cubrir las condiciones de instalación, los límites del sistema, las interfaces de comunicación, las responsabilidades de mantenimiento y la integración con la red o el inversor. Estas preguntas deben responderlas el equipo de proyecto seleccionado en lugar de inferirse a partir de un video corto del producto."
+          ]
+        },
+        {
+          "heading": "Prepare una consulta B2B responsable",
+          "paragraphs": [
+            "Una consulta clara incluye el mercado objetivo, la cantidad por modelo, la marca y el embalaje preferidos, los documentos requeridos, las expectativas de inspección, el lugar de entrega y la base comercial solicitada. Pida al proveedor que identifique qué información es estándar, cuál requiere confirmación de ingeniería y qué depende de la configuración final.",
+            "Los términos de rendimiento, seguridad, transporte, posventa y entrega deben confirmarse para el modelo y el destino seleccionados. HousePlus puede revisar un resumen de producto específico y devolver la documentación aplicable y las opciones comerciales; este artículo es una guía de preparación, no un sustituto de la cotización final."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué productos aparecen en el video de HousePlus?",
+          "answer": "El video muestra fuentes de alimentación portátiles, paneles solares plegables, una batería LiFePO4 y equipos de almacenamiento de energía industrial junto a una ilustración de almacenamiento solar doméstico."
+        },
+        {
+          "question": "¿Se pueden usar las especificaciones mostradas en el video como cotización final?",
+          "answer": "No. Son referencias visuales de producto. Confirme el modelo exacto, la configuración, el destino y la documentación actual antes de preparar una cotización."
+        },
+        {
+          "question": "¿Incluye el video narración hablada?",
+          "answer": "No se identificó narración hablada. Utiliza música de fondo e información del producto en inglés en pantalla, con una pista de subtítulos en inglés añadida para accesibilidad."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "battery-energy-storage-rfq-data-checklist",
+          "title": "Datos RFQ de almacenamiento de baterías",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan datos RFQ de almacenamiento de baterías.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "Almacenamiento solar industrial",
+          "excerpt": "Una referencia práctica de HousePlus para compradores B2B internacionales que evalúan almacenamiento solar industrial.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lectura"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "Descripción de producto de HousePlus: fuente de alimentación portátil y almacenamiento de energía solar",
+        "description": "Una vista vertical visual de 42 segundos de las fuentes de alimentación portátiles de HousePlus, paneles solares plegables, una batería LiFePO4 y equipos de almacenamiento de energía industrial. Las especificaciones de producto mostradas en pantalla requieren confirmación para el modelo y el destino seleccionados.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "El video presenta los productos de almacenamiento de energía solar y fuentes de alimentación móviles de HousePlus, incluidos QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, paneles solares plegables, una batería LiFePO4 y equipos de almacenamiento industrial. Contiene música de fondo e información del producto en inglés en pantalla sin narración hablada."
+      }
+    },
+    "de": {
+      "title": "Tragbare Stromversorgung und Solar‑Speicher: Ein B2B-Leitfaden zur Produktbewertung",
+      "description": "Bewertung von tragbaren Stromversorgungen und Solar‑Speicherprodukten für B2B‑Beschaffung mit einem praktischen Leitfaden zu Spezifikationen, Anwendungen, Dokumentation und RFQ‑Vorbereitung.",
+      "keywords": "tragbare Stromversorgung B2B, Solar‑Speicher Beschaffung, Beschaffung mobiler Kraftwerke, RFQ Batterien LiFePO4, tragbarer Solargenerator OEM",
+      "category": "Solar & Speicher",
+      "heroImageAlt": "HousePlus Kontakt für tragbare Stromversorgung mit HousePlus‑Logo, WhatsApp‑ und WeChat‑QR‑Codes und einer tragbaren Energieeinheit",
+      "slug": "portable-power-supply-solar-storage-b2b-guide",
+      "author": "HousePlus Redaktionsteam",
+      "authorRole": "Einblicke in B2B‑Beschaffung und Produktentwicklung",
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-08-26",
+      "readingTime": "8 min Lesezeit",
+      "heroImage": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-article-hero-landscape/",
+      "heroImageFocus": "landscape",
+      "sections": [
+        {
+          "heading": "Was die Produktübersicht von HousePlus zeigt",
+          "paragraphs": [
+            "Das beigefügte Video bietet eine visuelle Übersicht über HousePlus Solar‑Energiespeicher und mobile Stromversorgungsprodukte. Es zeigt eine Illustration eines Heimspeichers, mehrere Modelle tragbarer Stromversorgungen, faltbare Solarmodule, eine LiFePO4‑Batterie und einen industriellen Speicherschrank. Die auf dem Bildschirm gezeigten Produktinformationen dienen als Referenz; Einkäufer sollten die Spezifikation des ausgewählten Modells bestätigen, bevor sie diese in einem Angebot oder einem Produktblatt verwenden.",
+            "Das Video verwendet Hintergrundmusik und englischen Text auf dem Bildschirm statt gesprochener Erzählung. Die Untertitelspur fasst die sichtbare Sequenz zusammen, damit Einkäufer den Inhalt ohne Ton verstehen können und Suchsysteme das Medium dem umgebenden Artikel zuordnen können."
+          ]
+        },
+        {
+          "heading": "Wie man eine Spezifikation für tragbare Stromversorgungen liest",
+          "paragraphs": [
+            "Beginnen Sie mit der Unterscheidung zwischen Batterieenergie, Nennausgangsleistung, Anschlüssen und Betriebsbedingungen. Ein Produkt kann getrennte Werte für gespeicherte Energie und AC‑Ausgang angeben; ein Einkäufer sollte daher eine einzelne Zahl nicht als vollständige Beschreibung der erwarteten Laufzeit oder der unterstützten Lasten betrachten.",
+            "Notieren Sie das genaue Modell, die Abmessungen, das Gewicht, Eingangsarten, Ausgangsschnittstellen, Schutzfunktionen und Zubehör. Wenn ein Video mehrere Modelle in kurzer Folge zeigt, führen Sie jedes Modell in einer separaten RFQ‑Zeile auf, um ein Vermischen von Spezifikationen zwischen Produkten zu vermeiden."
+          ]
+        },
+        {
+          "heading": "Konfiguration auf die Anwendung abstimmen",
+          "paragraphs": [
+            "Tragbare Systeme können für Notstrom, den Einsatz im Freien, mobile Arbeiten, Haushaltsbelastungen oder die Integration mit faltbaren Solarmodulen bewertet werden. Die richtige Konfiguration hängt vom Lastprofil, der Wiederauflademethode, der Umgebung, den Transportanforderungen und den Anforderungen des Ziellandes ab.",
+            "Für kommerzielle oder industrielle Speicher sollte die Anfrage außerdem Installationsbedingungen, Systemgrenzen, Kommunikationsschnittstellen, Wartungsverantwortlichkeiten und Netz‑ oder Wechselrichterintegration abdecken. Diese Fragen sollten vom ausgewählten Projektteam beantwortet werden, statt aus einem kurzen Produktvideo abgeleitet zu werden."
+          ]
+        },
+        {
+          "heading": "Bereiten Sie eine verantwortungsvolle B2B‑Anfrage vor",
+          "paragraphs": [
+            "Eine klare Anfrage enthält den Zielmarkt, die Menge pro Modell, bevorzugtes Branding und Verpackung, erforderliche Dokumente, Prüferwartungen, Lieferort und die gewünschte kommerzielle Grundlage. Bitten Sie den Lieferanten anzugeben, welche Informationen Standard sind, welche eine technische Bestätigung erfordern und welche von der finalen Konfiguration abhängen.",
+            "Leistungs‑, Sicherheits‑, Transport‑, After‑Sales‑ und Lieferbedingungen müssen für das ausgewählte Modell und das Ziel bestätigt werden. HousePlus kann ein spezifisches Produktbriefing prüfen und anwendbare Dokumentation sowie kommerzielle Optionen zurückgeben; dieser Artikel ist eine Vorbereitungsanleitung und kein Ersatz für das endgültige Angebot."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Welche Produkte erscheinen im HousePlus‑Video?",
+          "answer": "Das Video zeigt tragbare Stromversorgungen, faltbare Solarmodule, eine LiFePO4‑Batterie und industrielle Energiespeicherausrüstung neben einer Illustration eines Heimspeichers."
+        },
+        {
+          "question": "Können die im Video gezeigten Spezifikationen als endgültiges Angebot verwendet werden?",
+          "answer": "Nein. Sie sind visuelle Produktverweise. Bestätigen Sie das genaue Modell, die Konfiguration, das Ziel und die aktuelle Dokumentation, bevor Sie ein Angebot erstellen."
+        },
+        {
+          "question": "Enthält das Video gesprochene Erzählung?",
+          "answer": "Es wurde keine gesprochene Erzählung erkannt. Es verwendet Hintergrundmusik und englische Produktinformationen auf dem Bildschirm, mit einer englischen Untertitelspur zur Zugänglichkeit."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "battery-energy-storage-rfq-data-checklist",
+          "title": "RFQ‑Daten für Batteriespeicher",
+          "excerpt": "Eine praktische HousePlus‑Referenz für internationale B2B‑Einkäufer, die RFQ‑Daten zu Batteriespeichern bewerten.",
+          "date": "2026-08-01",
+          "readingTime": "7 min Lesezeit"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "Industrieller Solar‑Speicher",
+          "excerpt": "Eine praktische HousePlus‑Referenz für internationale B2B‑Einkäufer, die industriellen Solar‑Speicher bewerten.",
+          "date": "2026-08-01",
+          "readingTime": "7 min Lesezeit"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "HousePlus Produktübersicht: Tragbare Stromversorgung und Solar‑Energiespeicher",
+        "description": "Eine 42‑sekündige vertikale visuelle Übersicht über HousePlus tragbare Stromversorgungen, faltbare Solarmodule, eine LiFePO4‑Batterie und industrielle Energiespeicherausrüstung. Die auf dem Bildschirm angezeigten Produktspezifikationen müssen für das ausgewählte Modell und das Ziel bestätigt werden.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "Das Video präsentiert HousePlus Solar‑Energiespeicher und mobile Stromversorgungsprodukte, einschließlich QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, faltbarer Solarmodule, einer LiFePO4‑Batterie und industrieller Speicherausrüstung. Es enthält Hintergrundmusik und englische Produktinformationen auf dem Bildschirm ohne gesprochene Erzählung."
+      }
+    },
+    "fr": {
+      "title": "Alimentation portable et stockage solaire : Guide d'évaluation produit B2B",
+      "description": "Examinez les produits d'alimentation portable et de stockage solaire pour l'approvisionnement B2B avec un guide pratique sur les spécifications, les applications, la documentation et la préparation des RFQ.",
+      "keywords": "alimentation portable B2B, sourcing stockage solaire, approvisionnement station d'énergie mobile, RFQ batterie LiFePO4, générateur solaire portable OEM",
+      "category": "Solaire et stockage",
+      "heroImageAlt": "Contact alimentation portable HousePlus avec logo HousePlus, QR codes WhatsApp et WeChat, et une unité d'alimentation portable",
+      "slug": "portable-power-supply-solar-storage-b2b-guide",
+      "author": "Équipe éditoriale HousePlus",
+      "authorRole": "Informations sur le sourcing B2B et le développement produit",
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-08-26",
+      "readingTime": "8 min de lecture",
+      "heroImage": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-article-hero-landscape/",
+      "heroImageFocus": "landscape",
+      "sections": [
+        {
+          "heading": "Ce que présente l'aperçu produit HousePlus",
+          "paragraphs": [
+            "La vidéo jointe propose un aperçu visuel des produits de stockage d'énergie solaire et d'alimentations mobiles HousePlus. Elle montre une illustration de stockage solaire domestique, plusieurs modèles d'alimentation portable, des panneaux solaires pliables, une batterie LiFePO4 et une armoire de stockage industrielle. Les informations produit affichées à l'écran sont fournies à titre de référence ; les acheteurs doivent confirmer la spécification du modèle sélectionné avant de l'utiliser dans un devis ou une fiche produit.",
+            "La vidéo utilise de la musique de fond et du texte en anglais à l'écran plutôt qu'une narration parlée. La piste de sous-titres résume la séquence visible afin que les acheteurs puissent comprendre le contenu sans audio et que les systèmes de recherche puissent associer le média à l'article environnant."
+          ]
+        },
+        {
+          "heading": "Comment lire une spécification d'alimentation portable",
+          "paragraphs": [
+            "Commencez par distinguer l'énergie de la batterie, la puissance de sortie nominale, les ports et les conditions d'exploitation. Un produit peut afficher des valeurs distinctes pour l'énergie stockée et la sortie AC ; un acheteur ne doit donc pas considérer un seul chiffre comme une description complète de l'autonomie attendue ou des charges prises en charge.",
+            "Consignez le modèle exact, les dimensions, le poids, les modes d'entrée, les interfaces de sortie, les fonctions de protection et les accessoires. Si une vidéo montre plusieurs modèles en séquence courte, tenez chaque modèle sur une ligne RFQ distincte afin d'éviter de mélanger les spécifications entre les produits."
+          ]
+        },
+        {
+          "heading": "Adapter la configuration à l'application",
+          "paragraphs": [
+            "Les systèmes portables peuvent être évalués pour le secours d'urgence, l'utilisation en extérieur, le travail mobile, les charges domestiques ou l'intégration avec des panneaux solaires pliables. La bonne configuration dépend du profil de charge, du mode de recharge, de l'environnement, des besoins de transport et des exigences du marché de destination.",
+            "Pour le stockage commercial ou industriel, la demande doit également couvrir les conditions d'installation, les limites du système, les interfaces de communication, les responsabilités de maintenance et l'intégration au réseau ou à l'onduleur. Ces questions doivent être traitées par l'équipe de projet sélectionnée plutôt que déduites d'une courte vidéo produit."
+          ]
+        },
+        {
+          "heading": "Préparez une demande B2B responsable",
+          "paragraphs": [
+            "Une demande claire inclut le marché cible, la quantité par modèle, la marque et l'emballage souhaités, les documents requis, les attentes en matière d'inspection, le lieu de livraison et la base commerciale demandée. Demandez au fournisseur d'identifier quelles informations sont standard, lesquelles nécessitent une confirmation d'ingénierie et lesquelles dépendent de la configuration finale.",
+            "Les conditions de performance, de sécurité, de transport, d'après‑vente et de livraison doivent être confirmées pour le modèle et la destination sélectionnés. HousePlus peut examiner un brief produit spécifique et fournir la documentation applicable et les options commerciales ; cet article est un guide de préparation, et non un substitut au devis final."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Quels produits apparaissent dans la vidéo HousePlus ?",
+          "answer": "La vidéo montre des alimentations portables, des panneaux solaires pliables, une batterie LiFePO4 et des équipements de stockage d'énergie industriels, aux côtés d'une illustration de stockage solaire domestique."
+        },
+        {
+          "question": "Les spécifications montrées dans la vidéo peuvent‑elles servir de devis final ?",
+          "answer": "Non. Ce sont des références visuelles de produit. Confirmez le modèle exact, la configuration, la destination et la documentation en cours avant de préparer un devis."
+        },
+        {
+          "question": "La vidéo inclut‑elle une narration parlée ?",
+          "answer": "Aucune narration parlée n'a été identifiée. Elle utilise de la musique de fond et des informations produit en anglais à l'écran, avec une piste de sous‑titres en anglais ajoutée pour l'accessibilité."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "battery-energy-storage-rfq-data-checklist",
+          "title": "Données RFQ de stockage de batteries",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant les données RFQ de stockage de batteries.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "Stockage solaire industriel",
+          "excerpt": "Une référence pratique HousePlus pour les acheteurs B2B internationaux évaluant le stockage solaire industriel.",
+          "date": "2026-08-01",
+          "readingTime": "7 min de lecture"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "Présentation produit HousePlus : alimentation portable et stockage d'énergie solaire",
+        "description": "Une vue verticale visuelle de 42 secondes des alimentations portables HousePlus, des panneaux solaires pliables, d'une batterie LiFePO4 et d'équipements de stockage d'énergie industriels. Les spécifications produit affichées à l'écran doivent être confirmées pour le modèle et la destination sélectionnés.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "La vidéo présente les produits de stockage d'énergie solaire et d'alimentation mobile HousePlus, notamment QY-300, QY-A600-A, QY-B1000, QY-B3000-5000, des panneaux solaires pliables, une batterie LiFePO4 et des équipements de stockage industriels. Elle contient de la musique de fond et des informations produit en anglais à l'écran sans narration parlée."
+      }
+    },
+    "ar": {
+      "title": "مصدر طاقة محمول وتخزين الطاقة الشمسية: دليل تقييم المنتجات للأعمال (B2B)",
+      "description": "مراجعة لمنتجات مصدر الطاقة المحمول وتخزين الطاقة الشمسية للتوريد التجاري B2B مع دليل عملي للمواصفات والتطبيقات والوثائق وإعداد RFQ.",
+      "keywords": "مصدر طاقة محمول B2B، توريد تخزين شمسي، شراء محطة طاقة متنقلة، RFQ بطارية LiFePO4، مولد شمسي محمول OEM",
+      "category": "الطاقة الشمسية والتخزين",
+      "heroImageAlt": "جهة اتصال مصدر طاقة محمول من HousePlus بشعار HousePlus، رموز QR لـ WhatsApp وWeChat، ووحدة طاقة محمولة",
+      "slug": "portable-power-supply-solar-storage-b2b-guide",
+      "author": "فريق تحرير HousePlus",
+      "authorRole": "رؤى حول التوريد B2B وتطوير المنتج",
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-08-26",
+      "readingTime": "8 min قراءة",
+      "heroImage": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-article-hero-landscape/",
+      "heroImageFocus": "landscape",
+      "sections": [
+        {
+          "heading": "ما تعرضه نظرة عامة المنتج من HousePlus",
+          "paragraphs": [
+            "يعرض الفيديو المرفق لمحة مرئية عن منتجات HousePlus لتخزين الطاقة الشمسية ومصادر الطاقة المتنقلة. يُظهر توضيحًا لتخزين طاقة شمسية منزلية، وعددًا من نماذج مصادر الطاقة المحمولة، ولوحات شمسية قابلة للطي، وبطارية LiFePO4 وخزانة تخزين صناعية. تُعرض معلومات المنتج على الشاشة للرجوع إليها؛ يجب على المشترين تأكيد مواصفات النموذج المختار قبل استخدامه في عرض أسعار أو وصف المنتج.",
+            "يستخدم الفيديو موسيقى خلفية ونصًا باللغة الإنجليزية على الشاشة بدلًا من سرد صوتي منطوق. يُلخّص مسار الترجمة النصية التسلسل المرئي حتى يتمكن المشترون من فهم المحتوى دون صوت ولكي تتمكن أنظمة البحث من ربط الوسائط بالمقال المحيط."
+          ]
+        },
+        {
+          "heading": "كيفية قراءة مواصفة مصدر طاقة محمول",
+          "paragraphs": [
+            "ابدأ بالتمييز بين طاقة البطارية، الطاقة الاسمية للمخرج، المنافذ وظروف التشغيل. قد يعرض المنتج قيمًا منفصلة للطاقة المخزنة ومخرج التيار المتناوب، لذا لا ينبغي للمشتري اعتبار رقم واحد وصفًا كاملاً لوقت التشغيل المتوقع أو الأحمال المدعومة.",
+            "سجل الطراز الدقيق والأبعاد والوزن وطرق الإدخال وواجهات المخرج ووظائف الحماية والملحقات. إذا عرض الفيديو عدة طرازات في تسلسل قصير، ضع كل طراز في سطر RFQ منفصل لتجنب مزج المواصفات بين المنتجات."
+          ]
+        },
+        {
+          "heading": "مطابقة التكوين مع التطبيق",
+          "paragraphs": [
+            "قد تُقيَّم الأنظمة المحمولة للنسخ الاحتياطي الطارئ أو الاستخدام الخارجي أو العمل المتنقل أو الأحمال المنزلية أو التكامل مع الألواح الشمسية القابلة للطي. التكوين المناسب يعتمد على ملف الحمل، وطريقة إعادة الشحن، والبيئة، واحتياجات النقل، ومتطلبات سوق الوجهة.",
+            "بالنسبة للتخزين التجاري أو الصناعي، يجب أن تغطي الاستفسارات أيضًا ظروف التركيب وحدود النظام وواجهات الاتصال ومسؤوليات الصيانة وتكامل الشبكة أو العاكس. يجب أن تجيب فرق المشروع المختارة على هذه الأسئلة بدلاً من الاستنتاج من فيديو منتج قصير."
+          ]
+        },
+        {
+          "heading": "قم بإعداد استفسار B2B بمسؤولية",
+          "paragraphs": [
+            "يتضمن الاستفسار الواضح السوق المستهدف والكمية حسب الطراز والعلامة التجارية والتغليف المفضّل والوثائق المطلوبة وتوقعات التفتيش وموقع التسليم والأساس التجاري المطلوب. اطلب من المورد تحديد أي المعلومات تعتبر قياسية، وأيها يتطلب تأكيدًا هندسيًا، وأيها يعتمد على التكوين النهائي.",
+            "يجب تأكيد شروط الأداء والسلامة والنقل وما بعد البيع والتسليم للطراز والوجهة المختارين. يمكن لـ HousePlus مراجعة موجز منتج محدد وإعادة الوثائق المطبقة والخيارات التجارية؛ هذه المقالة هي دليل إعداد وليست بديلاً عن عرض السعر النهائي."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "ما المنتجات الظاهرة في فيديو HousePlus؟",
+          "answer": "يعرض الفيديو مصادر طاقة محمولة، ألواح شمسية قابلة للطي، بطارية LiFePO4 ومعدات تخزين طاقة صناعية إلى جانب توضيح لتخزين الطاقة الشمسية المنزلية."
+        },
+        {
+          "question": "هل يمكن استخدام المواصفات المعروضة في الفيديو كعرض سعر نهائي؟",
+          "answer": "لا. إنها مراجع مرئية للمنتج. قم بتأكيد الطراز الدقيق والتكوين والوجهة والوثائق الحالية قبل إعداد عرض السعر."
+        },
+        {
+          "question": "هل يتضمن الفيديو سردًا منطوقًا؟",
+          "answer": "لم يتم تحديد سرد منطوق. يستخدم موسيقى خلفية ومعلومات المنتج باللغة الإنجليزية على الشاشة، مع مسار ترجمة إنجليزي مضاف لسهولة الوصول."
+        }
+      ],
+      "relatedArticles": [
+        {
+          "slug": "battery-energy-storage-rfq-data-checklist",
+          "title": "بيانات RFQ لتخزين طاقة البطارية",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليين B2B الذين يقيمون بيانات RFQ لتخزين البطاريات.",
+          "date": "2026-08-01",
+          "readingTime": "7 min قراءة"
+        },
+        {
+          "slug": "solar-energy-storage-industrial-manufacturing",
+          "title": "تخزين الطاقة الشمسية الصناعي",
+          "excerpt": "مرجع عملي من HousePlus للمشترين الدوليين B2B الذين يقيمون تخزين الطاقة الشمسية الصناعي.",
+          "date": "2026-08-01",
+          "readingTime": "7 min قراءة"
+        }
+      ],
+      "productRecommendations": [],
+      "video": {
+        "name": "نظرة عامة على منتجات HousePlus: مصدر طاقة محمول وتخزين طاقة شمسية",
+        "description": "مقتطف مرئي عمودي مدته 42 ثانية عن مصادر الطاقة المحمولة من HousePlus، والألواح الشمسية القابلة للطي، وبطارية LiFePO4 ومعدات تخزين الطاقة الصناعية. المواصفات المعروضة على الشاشة تتطلب تأكيدًا للطراز والوجهة المختارين.",
+        "contentUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-video/",
+        "poster": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-product-overview-poster/",
+        "duration": "PT42S",
+        "width": 1440,
+        "height": 2560,
+        "uploadDate": "2026-08-26",
+        "captionsUrl": "https://images.houseplus-ch.com/media/houseplus-portable-power-supply-captions-en/",
+        "transcript": "يقدم الفيديو منتجات HousePlus لتخزين الطاقة الشمسية ومصادر الطاقة المتنقلة، بما في ذلك QY-300 وQY-A600-A وQY-B1000 وQY-B3000-5000 والألواح الشمسية القابلة للطي وبطارية LiFePO4 ومعدات التخزين الصناعية. يحتوي على موسيقى خلفية ومعلومات منتج باللغة الإنجليزية على الشاشة دون سرد منطوق."
+      }
+    }
   },
   "air-fryer-sourcing-guide-china": {
     "es": {

@@ -66,7 +66,10 @@ jobs:
             https://www.houseplus-ch.com/en/ \
             https://www.houseplus-ch.com/en/products/ \
             https://www.houseplus-ch.com/en/news/2026-electronics-market-update/ \
-            --out audit/web-vitals-ci
+            --out audit/web-vitals-ci \
+            --fail-on-thresholds
+      - name: Audit mobile usability across the production sitemap
+        run: pnpm audit:mobile-layout https://www.houseplus-ch.com/sitemap.xml audit/mobile-layout-ci --fail-on-issues
       - name: Upload performance audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -75,6 +78,7 @@ jobs:
           path: |
             audit/production-ttfb-ci/
             audit/web-vitals-ci/
+            audit/mobile-layout-ci/
             audit/image-sitemap-ci/
             audit/seo-localization-ci/
             audit/product-seo-ci/
