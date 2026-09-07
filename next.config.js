@@ -9,7 +9,6 @@ const nextConfig = {
       { protocol: 'https', hostname: '*.storyblok.com' },
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'images.houseplus-ch.com', pathname: '/**' },
-      { protocol: 'https', hostname: 'houseplus-media-api.jack006hu.workers.dev', pathname: '/media/**' },
       { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
     ],
     dangerouslyAllowSVG: true,

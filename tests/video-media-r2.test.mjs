@@ -22,7 +22,10 @@ test('portable power video articles reference durable v2 R2 media URLs instead o
 test('video player exposes verified visual descriptions for the no-narration source video', () => {
   assert.match(articlePageSource, /<source src=\{post\.video\.contentUrl\} type="video\/mp4" \/>/);
   assert.match(articlePageSource, /kind="descriptions"/);
-  assert.match(articlePageSource, /label="English visual descriptions"/);
+  // The label is selected from the active locale's verified UI copy rather
+  // than being hard-coded into the JSX attribute.
+  assert.match(articlePageSource, /trackLabel:\s*'English visual descriptions'/);
+  assert.match(articlePageSource, /label=\{localizedVideoUi\.trackLabel\}/);
   assert.match(articlePageSource, /poster=\{post\.video\.poster\}/);
   assert.match(articlePageSource, /src=\{post\.video\.captionsUrl\}/);
   assert.match(articlePageSource, /post\.heroImageFocus === 'landscape' \? 'aspect-video bg-\[#a9cce0\] object-contain'/);

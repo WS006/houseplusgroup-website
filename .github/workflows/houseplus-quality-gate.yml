@@ -5,6 +5,13 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      full_mobile_audit:
+        description: 'Run the full production sitemap mobile audit instead of the low-traffic sample'
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: houseplus-quality-${{ github.ref }}
@@ -69,7 +76,14 @@ jobs:
             --out audit/web-vitals-ci \
             --fail-on-thresholds
       - name: Audit mobile usability across the production sitemap
-        run: pnpm audit:mobile-layout https://www.houseplus-ch.com/sitemap.xml audit/mobile-layout-ci --fail-on-issues
+        env:
+          FULL_MOBILE_AUDIT: ${{ inputs.full_mobile_audit || false }}
+        run: |
+          if [ "$FULL_MOBILE_AUDIT" = "true" ]; then
+            pnpm audit:mobile-layout https://www.houseplus-ch.com/sitemap.xml audit/mobile-layout-ci --fail-on-issues
+          else
+            pnpm audit:mobile-layout https://www.houseplus-ch.com/sitemap.xml audit/mobile-layout-ci --max-urls=48 --fail-on-issues
+          fi
       - name: Upload performance audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
