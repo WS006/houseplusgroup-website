@@ -2,6 +2,14 @@
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
+  // P0-1: ensure Googlebot and AI/generative crawlers receive the fully-rendered
+  // (non-streamed) HTML with metadata in <head> rather than streamed body
+  // metadata they may miss. This list covers the major search engines plus the
+  // AI crawlers already allow-listed in app/robots.txt/route.ts.
+  experimental: {
+    htmlLimitedBots:
+      /Googlebot|Google-Extended|GoogleOther|Bingbot|Slurp|DuckDuckBot|YandexBot|baiduspider|GPTBot|ChatGPT-User|OAI-SearchBot|CCBot|anthropic-ai|ClaudeBot|Claude-Web|Claude-SearchBot|Claude-User|PerplexityBot|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Discordbot|Applebot|Bytespider|DataForSeoBot|PetalBot|SemrushBot|AhrefsBot|MJ12bot|DotBot/i,
+  },
     images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [

@@ -34,6 +34,11 @@ Disallow: /_next/data/
 Disallow: /*?*sort=
 Disallow: /*?*filter=
 Disallow: /*?*page=
+# P1-2: consolidate duplicate-content query-string variants. The product catalog
+# exposes category/search views via ?category= and ?q=; treat these parameterised
+# URLs as non-indexable so only the canonical category pages are crawled.
+Disallow: /*?*category=
+Disallow: /*?*q=
 
 # Googlebot
 User-agent: Googlebot

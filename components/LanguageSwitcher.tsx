@@ -98,19 +98,17 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
         </svg>
       </button>
 
-      {/* Dropdown Menu */}
-      {isOpen && (
-        <>
-          {/* Backdrop */}
+      {/* Dropdown Menu — language links are always rendered in the server HTML
+          (P1-12) so crawlers and AI engines discover every language version;
+          only the visual dropdown is toggled via CSS. */}
+      <>
+        {/* Backdrop: click-catcher, only mounted while open */}
+        {isOpen && (
           <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
+        )}
 
-          {/* Menu */}
-          <div className="
-            absolute right-0 mt-2 w-56 rounded-2xl
-            bg-white shadow-xl ring-1 ring-slate-900/5
-            z-50 overflow-hidden
-            animate-in fade-in slide-in-from-top-2 duration-200
-          ">
+        {/* Menu: always present in the DOM; shown/hidden with the `hidden` class */}
+        <div className={`absolute right-0 mt-2 w-56 rounded-2xl bg-white shadow-xl ring-1 ring-slate-900/5 z-50 overflow-hidden ${isOpen ? 'animate-in fade-in slide-in-from-top-2 duration-200' : 'hidden'}`}>
             {/* Header */}
             <div className="px-4 py-3 bg-slate-50 border-b border-slate-100">
               <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
@@ -179,8 +177,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
               })}
             </div>
           </div>
-        </>
-      )}
+      </>}
     </div>
   );
 }

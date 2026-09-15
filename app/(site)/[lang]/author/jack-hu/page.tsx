@@ -67,7 +67,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
       clients: '441+',
       factorySize: '20,000 m²',
       certifications: 'ISO 9001, CE, FCC, RoHS',
-      image: 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
       imageAlt: 'Jack Hu - Founder of HousePlus',
       intro: 'Jack Hu is the founder and editorial lead of HousePlus, a vertically integrated B2B manufacturer specializing in solar energy systems, home appliances, and 3C electronics. With over 16 years of hands-on experience in manufacturing and international trade, Jack leads a team of 500+ professionals serving 441+ wholesale clients across 53+ countries from a 20,000 m² ISO 9001 certified factory in Zhongshan, Guangdong.',
       expertise: [
@@ -109,7 +109,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
       clients: '441+',
       factorySize: '20,000 m²',
       certifications: 'ISO 9001, CE, FCC, RoHS',
-      image: 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
       imageAlt: 'Jack Hu - Fundador de HousePlus',
       intro: 'Jack Hu es el fundador y director editorial de HousePlus, un fabricante B2B de integración vertical especializado en sistemas de energía solar, electrodomésticos y electrónica 3C. Con más de 16 años de experiencia práctica en manufactura y comercio internacional, Jack lidera un equipo de más de 500 profesionales que sirven a más de 441 clientes mayoristas en más de 53 países desde una fábrica certificada ISO 9001 de 20,000 m² en Zhongshan, Guangdong.',
       expertise: [
@@ -151,7 +151,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
       clients: '441+',
       factorySize: '20.000 m²',
       certifications: 'ISO 9001, CE, FCC, RoHS',
-      image: 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
       imageAlt: 'Jack Hu - Gründer von HousePlus',
       intro: 'Jack Hu ist Gründer und Redaktionsleiter von HousePlus, einem vertikal integrierten B2B-Hersteller, der sich auf Solarenergiesysteme, Haushaltsgeräte und 3C-Elektronik spezialisiert hat. Mit über 16 Jahren praktischer Erfahrung in Fertigung und internationalem Handel führt Jack ein Team von 500+ Fachkräften, das 441+ Großhandelskunden in 53+ Ländern von einer ISO-9001-zertifizierten Fabrik mit 20.000 m² in Zhongshan, Guangdong, beliefert.',
       expertise: [
@@ -193,7 +193,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
       clients: '441+',
       factorySize: '20 000 m²',
       certifications: 'ISO 9001, CE, FCC, RoHS',
-      image: 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
       imageAlt: 'Jack Hu - Fondateur de HousePlus',
       intro: 'Jack Hu est le fondateur et directeur de la rédaction de HousePlus, un fabricant B2B à intégration verticale spécialisé dans les systèmes d\'énergie solaire, les appareils électroménagers et l\'électronique 3C. Avec plus de 16 ans d\'expérience pratique dans la fabrication et le commerce international, Jack dirige une équipe de plus de 500 professionnels au service de 441+ clients grossistes dans 53+ pays depuis une usine certifiée ISO 9001 de 20 000 m² à Zhongshan, Guangdong.',
       expertise: [
@@ -235,7 +235,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
       clients: '٤٤١+',
       factorySize: '٢٠٬٠٠٠ متر مربع',
       certifications: 'ISO 9001, CE, FCC, RoHS',
-      image: 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+      image: 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
       imageAlt: 'جاك هو - مؤسس HousePlus',
       intro: 'جاك هو هو المؤسس والمدير التحريري لـ HousePlus، وهي شركة تصنيع B2B متكاملة رأسياً متخصصة في أنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. مع أكثر من ١٦ عامًا من الخبرة العملية في التصنيع والتجارة الدولية، يقود جاك فريقًا من أكثر من ٥٠٠ محترف يخدمون أكثر من ٤٤١ عميل جملة في أكثر من ٥٣ دولة من مصنع معتمد ISO 9001 بمساحة ٢٠٬٠٠٠ متر مربع في تشونغشان، قوانغدونغ.',
       expertise: [
@@ -277,6 +277,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
     description: data.intro,
     url: `https://www.houseplus-ch.com/${lang}/author/jack-hu`,
     sameAs: [data.social.linkedin, data.social.twitter],
+    telephone: '+86 155 7811 9543',
   });
 
   const isRTL = lang === 'ar';
@@ -388,6 +389,9 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 <a href={`mailto:${data.email}`} className="px-5 py-2.5 bg-white text-blue-700 rounded-xl font-bold text-sm hover:bg-blue-50 transition-colors">
                   {t.contact}
+                </a>
+                <a href="tel:+8615578119543" className="px-5 py-2.5 bg-white/15 text-white border border-white/30 rounded-xl font-bold text-sm hover:bg-white/25 transition-colors">
+                  +86 155 7811 9543
                 </a>
                 <Link href={`/${lang}/news`} className="px-5 py-2.5 bg-white/15 text-white border border-white/30 rounded-xl font-bold text-sm hover:bg-white/25 transition-colors">
                   {t.viewAllArticles}

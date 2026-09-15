@@ -778,7 +778,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     dateModified,
     authorName = 'Jack Hu',
     authorUrl = `${BASE_URL}/en/author/jack-hu`,
-    authorImage = 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+    authorImage = 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
     url = BASE_URL,
   } = options;
   const inferredLanguage = (() => {
@@ -871,6 +871,7 @@ export interface PersonSchemaOptions {
   description?: string;
   url?: string;
   sameAs?: string[];
+  telephone?: string;
 }
 
 // Person Schema - 作者实体，统一 worksFor 指向 HousePlus Group Organization
@@ -884,6 +885,7 @@ export function generatePersonSchema(options: PersonSchemaOptions) {
     description,
     url,
     sameAs,
+    telephone,
   } = options;
 
   return {
@@ -896,6 +898,7 @@ export function generatePersonSchema(options: PersonSchemaOptions) {
     description: description || '',
     url: url || `${BASE_URL}/en/author/jack-hu`,
     email,
+    ...(telephone ? { telephone } : {}),
     worksFor: {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
