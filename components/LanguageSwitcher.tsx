@@ -177,7 +177,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
               })}
             </div>
           </div>
-      </>}
+      </>
     </div>
   );
 }
