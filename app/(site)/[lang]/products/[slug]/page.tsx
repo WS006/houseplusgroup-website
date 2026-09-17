@@ -9,6 +9,7 @@ import { generateProductSchema, generateFAQSchema, generateProductHowToSchema } 
 import { r2ImageDimensions } from '@/lib/r2-media-details';
 import { getLocalizedProduct } from '@/lib/localized-content';
 import { getOGLocale } from '@/lib/seo-utils';
+import InquiryForm from '@/components/InquiryForm';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -441,6 +442,11 @@ export default async function ProductDetailPage(
               >
                 ← {ui.backProducts}
               </Link>
+            </div>
+
+            {/* Inline Wholesale Inquiry Form */}
+            <div className="pt-2">
+              <InquiryForm lang={lang} initialProduct={`${product.name} (SKU: ${slug})`} />
             </div>
 
             {/* Wholesale Info */}

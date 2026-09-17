@@ -185,7 +185,7 @@ const footerContent: Record<string, FooterContent> = {
 };
 
 const BASE_URL = 'https://www.houseplus-ch.com';
-const FOOTER_LOGO_URL = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
+const FOOTER_LOGO_URL = 'https://images.houseplus-ch.com/media/houseplus-group-logo/';
 
 const footerUi: Record<string, Record<string, string>> = {
   en: { brandDescription: 'HousePlus supports global wholesale buyers of solar systems, home appliances and 3C electronics.', quickLinks: 'Quick Links', company: 'HousePlus Group', directSupport: 'Direct Support', sitemap: 'Sitemap', privacy: 'Privacy', terms: 'Terms', cookies: 'Cookies' },
@@ -228,14 +228,14 @@ export default function Footer({ lang }: { lang: string }) {
           <div className={isRTL ? 'text-right' : ''}>
             <Link href={`/${lang}`} aria-label="HousePlus home" className={`mb-6 inline-flex rounded-xl bg-white p-2.5 shadow-lg shadow-black/20 transition-transform duration-300 hover:scale-[1.02] ${isRTL ? 'ml-0 mr-auto' : ''}`}>
               <Image
-                src="https://images.houseplus-ch.com/media/houseplus-horizontal-logo/"
-                alt="HousePlus Group horizontal logo"
+                src="https://images.houseplus-ch.com/media/houseplus-group-logo/"
+                alt="HousePlus Group logo"
                 title="HousePlus Group official logo"
-                width={611}
-                height={246}
+                width={709}
+                height={709}
                 loading="lazy"
                 decoding="async"
-                className="h-auto w-48 sm:w-52"
+                className="h-auto w-36 sm:w-40"
                sizes="100vw" />
             </Link>
             <p className="text-sm leading-relaxed mb-6">

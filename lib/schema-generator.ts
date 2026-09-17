@@ -3,7 +3,7 @@ import { r2MediaUrl } from './r2-media-map';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
 const DEFAULT_SOCIAL_IMAGE = 'https://images.houseplus-ch.com/media/houseplus-carousel-houseplus-solar-hero/';
-const OFFICIAL_HORIZONTAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-horizontal-logo/';
+const OFFICIAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-group-logo/';
 const ORGANIZATION_ID = `${BASE_URL}/#organization`;
 const LOGO_ID = `${BASE_URL}/#logo`;
 const BRAND_ID = `${BASE_URL}/#brand`;
@@ -48,11 +48,11 @@ export function generateOrganizationSchema(options: SchemaOptions) {
   const logoImage = {
     '@type': 'ImageObject',
     '@id': LOGO_ID,
-    url: OFFICIAL_HORIZONTAL_LOGO,
-    contentUrl: OFFICIAL_HORIZONTAL_LOGO,
-    width: 611,
-    height: 246,
-    caption: 'Official HousePlus Group horizontal logo',
+    url: OFFICIAL_LOGO,
+    contentUrl: OFFICIAL_LOGO,
+    width: 709,
+    height: 709,
+    caption: 'Official HousePlus Group logo',
     representativeOfPage: true,
     ...HOUSEPLUS_IMAGE_RIGHTS,
   };
@@ -597,7 +597,7 @@ export function generateLocalBusinessSchema(options: SchemaOptions) {
     alternateName: 'HousePlus',
     description,
     url,
-    logo: houseplusImageReference(OFFICIAL_HORIZONTAL_LOGO),
+    logo: houseplusImageReference(OFFICIAL_LOGO),
     image: houseplusImageReference(DEFAULT_SOCIAL_IMAGE),
     telephone: '+86-155-7811-9543',
     email: 'jack@houseplus-ch.com',
@@ -735,6 +735,8 @@ export interface VideoObjectSchemaOptions {
   inLanguage?: string;
   captionUrl?: string;
   transcript?: string;
+  contentSize?: string;
+  encodingFormat?: string;
 }
 
 export function toSchemaDateTime(value: string): string {
@@ -765,6 +767,8 @@ export function generateVideoObjectSchema(options: VideoObjectSchemaOptions) {
     ...HOUSEPLUS_IMAGE_RIGHTS,
     ...(options.captionUrl ? { caption: options.captionUrl } : {}),
     ...(options.transcript ? { transcript: options.transcript } : {}),
+    ...(options.contentSize ? { contentSize: options.contentSize } : {}),
+    ...(options.encodingFormat ? { encodingFormat: options.encodingFormat } : {}),
   };
 }
 
@@ -844,12 +848,12 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
       name: 'HousePlus Group',
       logo: {
         '@type': 'ImageObject',
-        '@id': `${OFFICIAL_HORIZONTAL_LOGO}#logo`,
-        url: OFFICIAL_HORIZONTAL_LOGO,
-        contentUrl: OFFICIAL_HORIZONTAL_LOGO,
-        width: 611,
-        height: 246,
-        caption: 'Official HousePlus Group horizontal logo',
+        '@id': `${OFFICIAL_LOGO}#logo`,
+        url: OFFICIAL_LOGO,
+        contentUrl: OFFICIAL_LOGO,
+        width: 709,
+        height: 709,
+        caption: 'Official HousePlus Group logo',
         ...HOUSEPLUS_IMAGE_RIGHTS,
       },
     },

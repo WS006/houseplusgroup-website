@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { generateOrganizationSchema, generateBreadcrumbSchema, generateVideoObjectSchema } from '@/lib/schema-generator';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -764,9 +764,51 @@ export default async function FactoryPage(props: { params: Promise<{ lang: strin
     { name: 'Factory', url: `https://www.houseplus-ch.com/${lang}/factory` },
   ]);
 
+  const videoCopy: Record<Lang, { name: string; description: string; intro: string }> = {
+    en: {
+      name: 'HousePlus Factory Tour — Portable Power Supply Manufacturing',
+      description: 'A walkthrough of the HousePlus 20,000 m² vertically integrated factory in Guangdong, showing portable power station assembly, in-line quality testing and export packaging.',
+      intro: 'Step inside our 20,000 m² vertically integrated facility in Guangdong and see how HousePlus portable power stations are assembled, tested and packed for export.',
+    },
+    es: {
+      name: 'Recorrido por la fábrica de HousePlus — fabricación de estaciones de energía portátiles',
+      description: 'Un recorrido por la fábrica de HousePlus de 20.000 m² integrada verticalmente en Guangdong, mostrando el ensamblaje de estaciones de energía portátiles, las pruebas de calidad en línea y el embalaje de exportación.',
+      intro: 'Entre en nuestra instalación de 20.000 m² integrada verticalmente en Guangdong y vea cómo se ensamblan, prueban y empaquetan para exportación las estaciones de energía portátiles HousePlus.',
+    },
+    de: {
+      name: 'HousePlus Werksrundgang — Fertigung tragbarer Power-Stationen',
+      description: 'Ein Rundgang durch das 20.000 m² vertikal integrierte HousePlus-Werk in Guangdong, mit Montage tragbarer Power-Stationen, Inline-Qualitätstests und Exportverpackung.',
+      intro: 'Besuchen Sie unser 20.000 m² vertikal integriertes Werk in Guangdong und sehen Sie, wie HousePlus Power-Stationen montiert, geprüft und für den Export verpackt werden.',
+    },
+    fr: {
+      name: 'Visite de l’usine HousePlus — fabrication de stations d’énergie portables',
+      description: 'Une visite de l’usine HousePlus de 20 000 m² intégrée verticalement à Guangdong, montrant l’assemblage de stations d’énergie portables, les tests qualité en ligne et l’emballage d’exportation.',
+      intro: 'Pénétrez dans notre installation de 20 000 m² intégrée verticalement à Guangdong et voyez comment les stations d’énergie portables HousePlus sont assemblées, testées et emballées pour l’exportation.',
+    },
+    ar: {
+      name: 'جولة في مصنع HousePlus — تصنيع محطات الطاقة المحمولة',
+      description: 'جولة داخل مصنع HousePlus المتكامل رأسياً بمساحة 20.000 م² في غوانغدونغ، توضح تجميع محطات الطاقة المحمولة والاختبارات الفنية على خط الإنتاج والتغليف للتصدير.',
+      intro: 'تجول داخل منشأتنا المتكاملة رأسياً بمساحة 20.000 م² في غوانغدونغ، وشاهد كيف تُجمَّع محطات HousePlus المحمولة للطاقة وتُختبر وتُغلَّف للتصدير.',
+    },
+  };
+
+  const videoObjectSchema = generateVideoObjectSchema({
+    name: videoCopy[lang as Lang]?.name || videoCopy.en.name,
+    description: videoCopy[lang as Lang]?.description || videoCopy.en.description,
+    contentUrl: 'https://images.houseplus-ch.com/media/houseplus-factory-portable-power-supply/',
+    thumbnailUrl: 'https://images.houseplus-ch.com/media/houseplus-factory-portable-power-supply-poster/',
+    duration: 'PT42S',
+    width: 720,
+    height: 1280,
+    uploadDate: '2026-09-13',
+    contentSize: '3989636',
+    encodingFormat: 'video/mp4',
+    inLanguage: lang,
+  });
+
   return (
     <>
-      <SEOHead schemas={[organizationSchema, breadcrumbSchema]} />
+      <SEOHead schemas={[organizationSchema, breadcrumbSchema, videoObjectSchema]} />
       <main className="min-h-screen bg-white">
         <Breadcrumb lang={lang} slug="factory" />
 
@@ -850,6 +892,28 @@ export default async function FactoryPage(props: { params: Promise<{ lang: strin
                   />
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Factory Video Tour */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">🎥 Take a Video Tour of the HousePlus Factory</h2>
+            <p className="text-slate-500 max-w-xl mx-auto mb-8">{videoCopy[lang as Lang]?.intro || videoCopy.en.intro}</p>
+            <div className="mx-auto max-w-sm rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-black">
+              <video
+                controls
+                preload="metadata"
+                poster="https://images.houseplus-ch.com/media/houseplus-factory-portable-power-supply-poster/"
+                width={720}
+                height={1280}
+                className="w-full h-auto"
+                aria-label={videoCopy[lang as Lang]?.name || videoCopy.en.name}
+              >
+                <source src="https://images.houseplus-ch.com/media/houseplus-factory-portable-power-supply/" type="video/mp4" />
+                Your browser does not support the video tag. Watch the HousePlus factory tour at https://images.houseplus-ch.com/media/houseplus-factory-portable-power-supply/
+              </video>
             </div>
           </div>
         </section>

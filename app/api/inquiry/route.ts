@@ -57,6 +57,11 @@ function buildEmailTemplate(data: any) {
             <div class="label">WhatsApp</div>
             <div class="value">${data.whatsapp}</div>
           </div>` : ''}
+          ${data.phone ? `
+          <div class="field">
+            <div class="label">Phone</div>
+            <div class="value">${data.phone}</div>
+          </div>` : ''}
           ${data.product ? `
           <div class="field">
             <div class="label">Product Interest</div>
@@ -105,12 +110,21 @@ export async function POST(request: NextRequest) {
 
     // 解析请求体
     const body = await request.json();
-    const { name, email, company, phone, message, product, quantity, whatsapp } = body;
+    const { name, email, company, phone, message, product, quantity, whatsapp, website } = body;
+
+    // Honeypot anti-spam: silently accept (but do not process) submissions that
+    // fill the hidden field real users never see.
+    if (website && String(website).trim() !== '') {
+      return NextResponse.json(
+        { success: true, message: 'Inquiry submitted successfully.', emailSent: false },
+        { status: 200 }
+      );
+    }
 
     // 验证必填字段
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required.' },
+        { error: 'Name, email, phone, and message are required.' },
         { status: 400 }
       );
     }
