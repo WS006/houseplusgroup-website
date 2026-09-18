@@ -34,6 +34,16 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // P1-6 / P1-10: normalize the bare/apex host to www with a permanent 301.
+      // Vercel's edge historically issued this as a 307; handling it in code
+      // guarantees a 301 and keeps the canonical-host signal under our control.
+      // This covers asset/feed paths the middleware matcher excludes.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'houseplus-ch.com' }],
+        destination: 'https://www.houseplus-ch.com/:path*',
+        permanent: true,
+      },
       // Consolidate historical page aliases that were previously crawlable with
       // generic or duplicated titles. Keep specific aliases before the generic
       // /products/:slug rule so they resolve to their real canonical pages.

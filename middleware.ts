@@ -27,6 +27,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(httpsUrl, 301);
   }
 
+  // Normalize the bare/apex host to www with a permanent 301 so search engines
+  // consolidate www as the canonical host (P1-6 / P1-10). The apex->www hop was
+  // previously a 307 emitted by the CDN/Vercel edge; doing it here guarantees a
+  // 301 and keeps the canonical signal under our control. This runs before the
+  // locale redirect below so the chain stays a single 301 -> 308.
+  if (host === 'houseplus-ch.com') {
+    const url = request.nextUrl.clone();
+    url.host = 'www.houseplus-ch.com';
+    return NextResponse.redirect(url, 301);
+  }
+
   // Handle XML feed routes - let public/ static files handle these
   if (pathname === '/merchant-feed.xml' || pathname === '/feed.xml' || pathname === '/image-sitemap.xml' || pathname === '/video-sitemap.xml' || pathname === '/manifest.webmanifest') {
     const response = NextResponse.next();
