@@ -189,6 +189,7 @@ const footerContent: Record<string, FooterContent> = {
   },
 };
 
+const BASE_URL = 'https://www.houseplus-ch.com';
 const FOOTER_LOGO_URL = 'https://images.houseplus-ch.com/media/houseplus-group-logo/';
 
 const footerUi: Record<string, Record<string, string>> = {
@@ -203,9 +204,29 @@ export default function Footer({ lang }: { lang: string }) {
   const content = footerContent[lang] || footerContent.en;
   const ui = footerUi[lang] || footerUi.en;
   const isRTL = lang === 'ar';
+  const localizedUrl = (href: string) => `${BASE_URL}/${lang}${href}`.replace(/([^:]\/)\/+/, '$1');
+  const footerLinks = [...content.quickLinks, ...content.company];
+  const footerSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ItemList',
+        '@id': `${BASE_URL}/#footer-navigation-${lang}`,
+        name: 'HousePlus footer navigation',
+        inLanguage: lang,
+        itemListElement: footerLinks.map((link, index) => ({
+          '@type': 'SiteNavigationElement',
+          position: index + 1,
+          name: link.label,
+          url: localizedUrl(link.href),
+        })),
+      },
+    ],
+  };
 
   return (
     <footer id="site-footer" role="contentinfo" aria-label="HousePlus site footer" className={`bg-slate-900 text-slate-400 py-16 ${isRTL ? 'rtl' : 'ltr'}`}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(footerSchema) }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
