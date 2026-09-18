@@ -125,5 +125,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     allEntries.push(...entries);
   }
 
+  // Author entity page (Jack Hu) carries the E-E-A-T signal and is published
+  // for every locale with reciprocal hreflang annotations (P2-7).
+  for (const lang of locales) {
+    allEntries.push({
+      url: canonicalSiteUrl(`${lang}/author/jack-hu`),
+      lastModified: getSitemapLastModified('author/jack-hu'),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      alternates: { languages: buildHreflangs('author/jack-hu') },
+    });
+  }
+
   return allEntries;
 }

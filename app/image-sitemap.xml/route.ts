@@ -1,7 +1,7 @@
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { blogPosts } from '@/lib/blog-data';
 import { r2MediaUrl } from '@/lib/r2-media-map';
-import { canonicalSiteUrl } from '@/lib/urls';
+import { canonicalSiteUrl, locales } from '@/lib/urls';
 import { CURATED_CORE_PAGE_IMAGES } from '@/lib/image-sitemap-governance';
 import { getSitemapLastModified, PRODUCT_DETAIL_LAST_MODIFIED } from '@/lib/sitemap-lastmod';
 
@@ -96,6 +96,14 @@ const ARTICLE_COVERS: Record<string, { title: string; caption: string; image?: s
 
 function absolute(path: string): string {
   return path.startsWith('http') ? path : `${BASE_URL}${path}`;
+}
+
+// Map an English page URL (e.g. /en/products/foo) to its localized equivalent
+// so the image sitemap publishes one entry per supported language (P1-3).
+function localizedPageUrl(enPageUrl: string, lang: string): string {
+  const pathWithoutEn = enPageUrl.replace(/^\/en(\/|$)/, '/');
+  const langPath = pathWithoutEn === '/' ? lang : `${lang}${pathWithoutEn}`;
+  return canonicalSiteUrl(langPath);
 }
 
 function coverPath(slug: string): string {
@@ -230,9 +238,9 @@ const DYNAMIC_MEDIA_SITEMAP_URL = process.env.HOUSEPLUS_MEDIA_SITEMAP_URL
   ? `${process.env.HOUSEPLUS_MEDIA_SITEMAP_URL.replace(/\/$/, '')}/sitemap-images.xml`
   : '';
 
-function renderPage(page: PageImages): string {
-  const imageTags = page.images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
-  return `  <url>\n    <loc>${canonicalSiteUrl(page.pageUrl)}</loc>\n    <lastmod>${escapeXml(page.lastModified)}</lastmod>\n${imageTags}\n  </url>`;
+function renderPage(loc: string, lastModified: string, images: ImageEntry[]): string {
+  const imageTags = images.map((image) => `    <image:image>\n      <image:loc>${escapeXml(image.loc)}</image:loc>\n      <image:geo_location>Zhongshan, Guangdong, China</image:geo_location>\n      <image:title>${escapeXml(image.title)}</image:title>\n      <image:caption>${escapeXml(image.caption)}</image:caption>\n      <image:license>${canonicalSiteUrl('terms')}</image:license>\n    </image:image>`).join('\n');
+  return `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>${escapeXml(lastModified)}</lastmod>\n${imageTags}\n  </url>`;
 }
 
 function extractTag(block: string, tag: string): string | null {
@@ -277,7 +285,13 @@ function mergeDynamicMediaSitemap(staticXml: string, dynamicXml: string): string
 
 function generateStaticImageSitemap(): string {
   const pages = [...dynamicArticleImages, ...staticArticleImages, ...productImages, ...corePageImages];
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${pages.map(renderPage).join('\n')}\n</urlset>`;
+  const blocks: string[] = [];
+  for (const lang of locales) {
+    for (const page of pages) {
+      blocks.push(renderPage(localizedPageUrl(page.pageUrl, lang), page.lastModified, page.images));
+    }
+  }
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${blocks.join('\n')}\n</urlset>`;
 }
 
 export async function GET() {
