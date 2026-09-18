@@ -67,6 +67,14 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
           linkText: 'Send Email',
         },
         {
+          icon: '📞',
+          title: 'HousePlus Phone (China)',
+          value: '+86 155 7811 9543',
+          desc: 'Call the HousePlus sales team directly for wholesale inquiries.',
+          link: 'tel:+8615578119543',
+          linkText: 'Call Now',
+        },
+        {
           icon: '💬',
           title: 'HousePlus WhatsApp (China)',
           value: '+86 155 7811 9543',
@@ -182,6 +190,14 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
           desc: 'Envíenos su consulta para HousePlus y responderemos en un plazo de 24 horas en días laborables.',
           link: 'mailto:jack@houseplus-ch.com',
           linkText: 'Enviar correo',
+        },
+        {
+          icon: '📞',
+          title: 'HousePlus Teléfono (China)',
+          value: '+86 155 7811 9543',
+          desc: 'Llame directamente al equipo de ventas de HousePlus para consultas mayoristas.',
+          link: 'tel:+8615578119543',
+          linkText: 'Llamar ahora',
         },
         {
           icon: '💬',
@@ -301,6 +317,14 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
           linkText: 'E-Mail senden',
         },
         {
+          icon: '📞',
+          title: 'HousePlus Telefon (China)',
+          value: '+86 155 7811 9543',
+          desc: 'Rufen Sie das HousePlus-Vertriebsteam direkt für Großhandelsanfragen an.',
+          link: 'tel:+8615578119543',
+          linkText: 'Jetzt anrufen',
+        },
+        {
           icon: '💬',
           title: 'HousePlus WhatsApp (China)',
           value: '+86 155 7811 9543',
@@ -418,6 +442,14 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
           linkText: 'Envoyer un e-mail',
         },
         {
+          icon: '📞',
+          title: 'HousePlus Téléphone (Chine)',
+          value: '+86 155 7811 9543',
+          desc: 'Appelez directement l’équipe commerciale HousePlus pour vos demandes de gros.',
+          link: 'tel:+8615578119543',
+          linkText: 'Appeler',
+        },
+        {
           icon: '💬',
           title: 'HousePlus WhatsApp (Chine)',
           value: '+86 155 7811 9543',
@@ -533,6 +565,14 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
           desc: 'أرسل إلينا استفسارك الخاص بـ HousePlus وسنرد خلال 24 ساعة في أيام العمل.',
           link: 'mailto:jack@houseplus-ch.com',
           linkText: 'إرسال بريد إلكتروني',
+        },
+        {
+          icon: '📞',
+          title: 'هاتف HousePlus (الصين)',
+          value: '+86 155 7811 9543',
+          desc: 'اتصل بفريق مبيعات HousePlus مباشرة لاستفسارات الجملة.',
+          link: 'tel:+8615578119543',
+          linkText: 'اتصل الآن',
         },
         {
           icon: '💬',

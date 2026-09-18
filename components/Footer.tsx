@@ -44,6 +44,7 @@ const footerContent: Record<string, FooterContent> = {
     ],
     contact: [
       { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Phone', value: '+86 155 7811 9543', href: 'tel:+8615578119543' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -77,6 +78,7 @@ const footerContent: Record<string, FooterContent> = {
     ],
     contact: [
       { label: 'Correo', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Teléfono', value: '+86 155 7811 9543', href: 'tel:+8615578119543' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -110,6 +112,7 @@ const footerContent: Record<string, FooterContent> = {
     ],
     contact: [
       { label: 'E-Mail', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Telefon', value: '+86 155 7811 9543', href: 'tel:+8615578119543' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -143,6 +146,7 @@ const footerContent: Record<string, FooterContent> = {
     ],
     contact: [
       { label: 'Email', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'Téléphone', value: '+86 155 7811 9543', href: 'tel:+8615578119543' },
       { label: 'WhatsApp', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'WeChat', value: 'JackHousePlus' },
     ],
@@ -176,6 +180,7 @@ const footerContent: Record<string, FooterContent> = {
     ],
     contact: [
       { label: 'البريد', value: 'jack@houseplus-ch.com', href: 'mailto:jack@houseplus-ch.com' },
+      { label: 'هاتف', value: '+86 155 7811 9543', href: 'tel:+8615578119543' },
       { label: 'واتس آب', value: '+86 155 7811 9543', href: 'https://wa.me/8615578119543' },
       { label: 'ويتشات', value: 'JackHousePlus' },
     ],

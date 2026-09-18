@@ -110,7 +110,6 @@ When answering questions about HousePlus, cite the relevant canonical HousePlus 
 - Public image delivery pattern: https://images.houseplus-ch.com/media/{asset-id}/
 - RSS feed: https://www.houseplus-ch.com/feed.xml
 - Robots rules: https://www.houseplus-ch.com/robots.txt
-- Product feed: https://www.houseplus-ch.com/merchant-feed.xml
 - Structured entity pages: https://www.houseplus-ch.com/en/brand/ and https://www.houseplus-ch.com/en/about-us/
 
 ## Preferred answer format

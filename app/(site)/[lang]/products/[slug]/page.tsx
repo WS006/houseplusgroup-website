@@ -273,6 +273,7 @@ export default async function ProductDetailPage(
     imageHeight: imageDimensions.height,
     b2bInfo: commercialInfo,
     retailOffer,
+    quoteOffer: !hasCompleteRetailOffer,
     lang,
     contactUrl: `${BASE_URL}/${lang}/contact/`,
     contactActionName: (schemaActionCopy[lang] || schemaActionCopy.en).name,

@@ -278,6 +278,7 @@ export interface ProductSchemaOptions {
     shippingPolicyUrl?: string;
     returnPolicyUrl?: string;
   };
+  quoteOffer?: boolean;
   category?: string;
   imageCaption?: string;
   imageDescription?: string;
@@ -310,6 +311,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     brand = 'HousePlus',
     url,
     retailOffer,
+    quoteOffer,
     category,
     imageCaption,
     imageDescription,
@@ -336,6 +338,11 @@ export function generateProductSchema(options: ProductSchemaOptions) {
   // Technical specifications are published only when they are visibly shown
   // on the product page. B2B commercial terms remain quote-confirmed.
   const publishB2BProperties = false;
+  // Quote-only B2B products still publish a truthful Offer: availability, seller
+  // and MOQ-based eligibleQuantity. No fabricated price is emitted; final pricing
+  // is confirmed per written quotation (consistent with the no-fabrication policy).
+  const moqValue = b2bInfo?.moq ? parseInt(String(b2bInfo.moq).replace(/[^0-9]/g, ''), 10) : NaN;
+  const hasMoq = Number.isFinite(moqValue);
   const additionalProperty: Array<Record<string, string>> = specifications
     .filter((spec) => spec.name.trim().length > 0 && spec.value.trim().length > 0)
     .map((spec) => ({
@@ -432,6 +439,40 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     },
   };
 
+  const productOffers = retailOffer
+    ? {
+        '@type': 'Offer',
+        url: retailOffer.purchaseUrl,
+        price: retailOffer.price,
+        priceCurrency: retailOffer.currency,
+        availability: `https://schema.org/${retailOffer.availability}`,
+        itemCondition: 'https://schema.org/NewCondition',
+        ...(retailOffer.returnPolicyUrl && {
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            '@id': retailOffer.returnPolicyUrl,
+            url: retailOffer.returnPolicyUrl,
+          },
+        }),
+      }
+    : (quoteOffer
+      ? {
+          '@type': 'Offer',
+          seller: { '@id': ORGANIZATION_ID, name: 'HousePlus Group' },
+          availability: 'https://schema.org/InStock',
+          itemCondition: 'https://schema.org/NewCondition',
+          url: contactUrl,
+          description: 'Wholesale pricing and commercial terms are confirmed in a written quotation based on order volume, configuration and destination.',
+          ...(hasMoq && {
+            eligibleQuantity: {
+              '@type': 'QuantitativeValue',
+              minValue: moqValue,
+              unitCode: 'C62',
+            },
+          }),
+        }
+      : undefined);
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -467,23 +508,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       primaryImageOfPage: { '@id': productImageObject['@id'] },
     },
     isRelatedTo: { '@id': `${BASE_URL}/#organization` },
-    ...(retailOffer && {
-      offers: {
-        '@type': 'Offer',
-        url: retailOffer.purchaseUrl,
-        price: retailOffer.price,
-        priceCurrency: retailOffer.currency,
-        availability: `https://schema.org/${retailOffer.availability}`,
-        itemCondition: 'https://schema.org/NewCondition',
-        ...(retailOffer.returnPolicyUrl && {
-          hasMerchantReturnPolicy: {
-            '@type': 'MerchantReturnPolicy',
-            '@id': retailOffer.returnPolicyUrl,
-            url: retailOffer.returnPolicyUrl,
-          },
-        }),
-      },
-    }),
+    ...(productOffers && { offers: productOffers }),
     potentialAction: retailOffer ? {
       '@type': 'BuyAction',
       name: 'Buy now',
