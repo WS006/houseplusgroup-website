@@ -44,9 +44,13 @@ function localizedRedirects() {
     for (const [enSlug, byLocale] of Object.entries(localizedSlugs)) {
       const localized = byLocale[lang];
       if (!localized || localized === enSlug) continue;
+      // Destination must carry the trailing slash: the site runs with
+      // trailingSlash:true, so pointing at /de/ueber-uns (no slash) made this a
+      // 2-hop chain - 308 to the slashless URL, then another 308 to add the
+      // slash. Emitting the canonical form lands on 200 in one hop.
       out.push({
         source: `/${lang}/${enSlug}`,
-        destination: `/${lang}/${localized}`,
+        destination: `/${lang}/${localized}/`,
         permanent: true,
       });
       out.push({
@@ -109,7 +113,9 @@ function entryRedirects() {
         if (!locEntry || locEntry === enEntry) continue;
         out.push({
           source: `/${lang}/${section}/${enEntry}`,
-          destination: `/${lang}/${locSection}/${locEntry}`,
+          // Trailing slash for the same reason as localizedRedirects(): without
+          // it this resolves to the slashless URL and then needs a second 308.
+          destination: `/${lang}/${locSection}/${locEntry}/`,
           permanent: true,
         });
       }
@@ -170,62 +176,62 @@ const nextConfig = {
       // /products/:slug rule so they resolve to their real canonical pages.
       {
         source: '/products',
-        destination: '/en/products',
+        destination: '/en/products/',
         permanent: true,
       },
       {
         source: '/products/products',
-        destination: '/en/products',
+        destination: '/en/products/',
         permanent: true,
       },
       {
         source: '/products/factory',
-        destination: '/en/factory',
+        destination: '/en/factory/',
         permanent: true,
       },
       {
         source: '/contact-us',
-        destination: '/en/contact',
+        destination: '/en/contact/',
         permanent: true,
       },
       {
         source: '/about-us/contact',
-        destination: '/en/contact',
+        destination: '/en/contact/',
         permanent: true,
       },
       {
         source: '/about-us/team',
-        destination: '/en/team',
+        destination: '/en/team/',
         permanent: true,
       },
       {
         source: '/regions/careers',
-        destination: '/en/careers',
+        destination: '/en/careers/',
         permanent: true,
       },
       {
         source: '/news/factory',
-        destination: '/en/factory',
+        destination: '/en/factory/',
         permanent: true,
       },
       {
         source: '/news/2026-appliances-market-update',
-        destination: '/en/news/2026-appliances-market-update',
+        destination: '/en/news/2026-appliances-market-update/',
         permanent: true,
       },
       {
         source: '/products/:slug',
-        destination: '/en/products/:slug',
+        destination: '/en/products/:slug/',
         permanent: true,
       },
       {
         source: '/about',
-        destination: '/en/about-us',
+        destination: '/en/about-us/',
         permanent: true,
       },
       {
         source: '/contact',
-        destination: '/en/contact',
+        destination: '/en/contact/',
         permanent: true,
       },
       // P2-9: legacy English slugs 301 to their localized equivalents so
