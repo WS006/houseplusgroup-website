@@ -24,7 +24,6 @@ Allow: /sitemap.xml
 Allow: /feed.xml
 Allow: /image-sitemap.xml
 Allow: /video-sitemap.xml
-Allow: /merchant-feed.xml
 Allow: /llms.txt
 Allow: /favicon.ico
 Allow: /apple-touch-icon.png

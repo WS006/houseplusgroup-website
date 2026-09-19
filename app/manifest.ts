@@ -25,15 +25,13 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
       {
-        src: 'https://images.houseplus-ch.com/media/houseplus-android-chrome-192x192/',
-        sizes: '192x192',
-        type: 'image/png',
-        purpose: 'maskable',
-      },
-      {
-        src: 'https://images.houseplus-ch.com/media/houseplus-android-chrome-512x512/',
-        sizes: '512x512',
-        type: 'image/png',
+        // houseplus-android-chrome-192x192 / -512x512 currently return 404 from
+        // the media CDN, which fails Chrome's installability check (it needs at
+        // least one icon >= 192px). Fall back to the live 709x709 brand logo so
+        // the PWA stays installable until the dedicated icons are restored.
+        src: 'https://images.houseplus-ch.com/media/houseplus-group-logo/',
+        sizes: '709x709',
+        type: 'image/webp',
         purpose: 'maskable',
       },
     ],
