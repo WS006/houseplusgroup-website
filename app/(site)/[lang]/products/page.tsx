@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { r2ImageDimensions } from '@/lib/r2-media-details';
-import { getOGLocale } from '@/lib/seo-utils';
+import { getOGLocale, clampOnWordBoundary } from '@/lib/seo-utils';
 import { getLocalizedProduct } from '@/lib/localized-content';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
@@ -56,8 +56,9 @@ export async function generateMetadata(
     ar: 'تصفح كتالوج هاوس بلس لأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. اطلب وثائق المنتج ونطاق OEM/ODM وعرض أسعار بالجملة وفقًا لمتطلباتك.',
   };
 
-  const title = baseTitles[lang] || baseTitles.en;
-  const description = baseDescriptions[lang] || baseDescriptions.en;
+  // P2-8: keep the SERP snippet inside Google's truncation window.
+  const title = clampOnWordBoundary(baseTitles[lang] || baseTitles.en, 60);
+  const description = clampOnWordBoundary(baseDescriptions[lang] || baseDescriptions.en, 155);
 
   const featuredProduct = Object.values(PRODUCT_DATA)[0];
   const imageDimensions = r2ImageDimensions(featuredProduct?.coverImage, { width: 900, height: 675 });

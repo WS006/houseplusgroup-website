@@ -56,7 +56,7 @@ function toAbsoluteImageUrl(image?: string): string {
 const TITLE_MAX = 60;
 const DESCRIPTION_MAX = 155;
 
-function clampOnWordBoundary(value: string, max: number): string {
+export function clampOnWordBoundary(value: string, max: number): string {
   const text = (value || '').trim();
   if (text.length <= max) return text;
   const cut = text.slice(0, max);
