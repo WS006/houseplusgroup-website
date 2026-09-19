@@ -63,7 +63,11 @@ function localizedRedirects() {
 // wildcard: the internal route resolves the item by its ENGLISH key, so each
 // localized entry needs an explicit mapping.
 const entrySlugs = require('./lib/localized-entry-slugs.json');
-const ENTRY_SECTIONS = { products: entrySlugs.products, regions: entrySlugs.regions };
+const ENTRY_SECTIONS = {
+  products: entrySlugs.products,
+  news: entrySlugs.news,
+  regions: entrySlugs.regions,
+};
 
 /**
  * Localized entry URL -> internal English route.

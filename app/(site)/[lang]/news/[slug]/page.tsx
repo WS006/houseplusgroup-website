@@ -10,6 +10,7 @@ import { generateArticleSchema, generateFAQSchema, generateVideoObjectSchema } f
 import { blogPosts, blogSlugs } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data/types';
 import { getLocalizedArticle } from '@/lib/localized-content';
+import { localizePath } from '@/lib/localized-slugs';
 import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-semantics';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
@@ -105,7 +106,7 @@ export async function generateMetadata(
   const post = getLocalizedArticle(slug, lang, basePost);
 
   const shouldIndexLocale = validLangs.includes(lang);
-  const canonicalUrl = `https://www.houseplus-ch.com/${lang}/news/${slug}`;
+  const canonicalUrl = `https://www.houseplus-ch.com/${lang}/${localizePath(`news/${slug}`, lang)}`;
 
   return generateSEOMetadata({
     title: post.title,
@@ -139,7 +140,7 @@ export default async function BlogPostPage(
 
   const post = getLocalizedArticle(slug, lang, basePost);
   const ui = articleUi[lang] || articleUi.en;
-  const articleUrl = `https://www.houseplus-ch.com/${lang}/news/${slug}/`;
+  const articleUrl = `https://www.houseplus-ch.com/${lang}/${localizePath(`news/${slug}`, lang)}/`;
 
   const articleSchema = generateArticleSchema({
     headline: post.title,
@@ -393,7 +394,7 @@ export default async function BlogPostPage(
                   {post.relatedArticles.map((article, index) => (
                     <li key={index}>
                       <Link
-                        href={`/${lang}/news/${article.slug}`}
+                        href={`/${lang}/${localizePath(`news/${article.slug}`, lang)}`}
                         className="group block"
                       >
                         <h4 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">
