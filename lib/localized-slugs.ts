@@ -18,6 +18,7 @@
  *    locale-specific while remaining encoding-safe.
  */
 import rawSlugs from './localized-slugs.json';
+import rawEntrySlugs from './localized-entry-slugs.json';
 
 export type Locale = 'en' | 'es' | 'de' | 'fr' | 'ar';
 
@@ -25,6 +26,14 @@ export const locales: Locale[] = ['en', 'es', 'de', 'fr', 'ar'];
 
 /** English slug -> localized slug per locale. */
 export const STATIC_SLUG_TRANSLATIONS = rawSlugs as Record<string, Record<Locale, string>>;
+
+/** English section -> English entry slug -> localized entry slug per locale. */
+// Entry slugs only carry translations for non-English locales (the English slug
+// is the key itself), so the inner map is keyed by plain string.
+export const ENTRY_SLUG_TRANSLATIONS = rawEntrySlugs as Record<
+  string,
+  Record<string, Record<string, string>>
+>;
 
 /** Translate one path segment. Falls back to the English segment. */
 export function localizeSlug(segment: string, lang: string): string {
@@ -42,7 +51,20 @@ export function localizePath(pathWithoutLang: string, lang: string): string {
   if (lang === 'en') return pathWithoutLang;
   const segments = pathWithoutLang.split('/').filter(Boolean);
   if (segments.length === 0) return pathWithoutLang;
-  return segments.map((segment) => localizeSlug(segment, lang)).join('/');
+
+  // Entry maps are keyed by the ENGLISH section name, so resolve the map before
+  // the section segment itself is translated.
+  const entryMap = ENTRY_SLUG_TRANSLATIONS[segments[0]];
+
+  return segments
+    .map((segment, index) => {
+      if (index === 1 && entryMap) {
+        const entry = entryMap[segment];
+        if (entry?.[lang as Locale]) return entry[lang as Locale];
+      }
+      return localizeSlug(segment, lang);
+    })
+    .join('/');
 }
 
 /** Reverse: localized public segment -> English routing key. */

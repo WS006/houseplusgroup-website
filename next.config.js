@@ -59,6 +59,61 @@ function localizedRedirects() {
   return out;
 }
 
+// Entry-level slugs (products / regions) are per-item and cannot be handled by a
+// wildcard: the internal route resolves the item by its ENGLISH key, so each
+// localized entry needs an explicit mapping.
+const entrySlugs = require('./lib/localized-entry-slugs.json');
+const ENTRY_SECTIONS = { products: entrySlugs.products, regions: entrySlugs.regions };
+
+/**
+ * Localized entry URL -> internal English route.
+ * e.g. /es/productos/panel-solar-500w -> /es/products/solar-panel-500w
+ * MUST be registered before the section-level wildcard rewrites.
+ */
+function entryRewrites() {
+  const out = [];
+  for (const lang of LOCALIZED_LOCALES) {
+    for (const [section, entries] of Object.entries(ENTRY_SECTIONS)) {
+      const locSection = localizedSlugs[section] && localizedSlugs[section][lang];
+      if (!locSection) continue;
+      for (const [enEntry, byLocale] of Object.entries(entries)) {
+        const locEntry = byLocale[lang];
+        if (!locEntry || locEntry === enEntry) continue;
+        out.push({
+          source: `/${lang}/${locSection}/${locEntry}`,
+          destination: `/${lang}/${section}/${enEntry}`,
+        });
+      }
+    }
+  }
+  return out;
+}
+
+/**
+ * Legacy English entry URL -> localized entry URL.
+ * MUST precede the section-level wildcard, otherwise '/:path*' would rewrite
+ * the entry slug to the English one and lose the per-item translation.
+ */
+function entryRedirects() {
+  const out = [];
+  for (const lang of LOCALIZED_LOCALES) {
+    for (const [section, entries] of Object.entries(ENTRY_SECTIONS)) {
+      const locSection = localizedSlugs[section] && localizedSlugs[section][lang];
+      if (!locSection) continue;
+      for (const [enEntry, byLocale] of Object.entries(entries)) {
+        const locEntry = byLocale[lang];
+        if (!locEntry || locEntry === enEntry) continue;
+        out.push({
+          source: `/${lang}/${section}/${enEntry}`,
+          destination: `/${lang}/${locSection}/${locEntry}`,
+          permanent: true,
+        });
+      }
+    }
+  }
+  return out;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
@@ -91,8 +146,8 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   poweredByHeader: false,
   async rewrites() {
-    // P2-9: serve the localized public URL from the English internal route.
-    return localizedRewrites();
+    // P2-9: entry-specific rewrites first, then the section-level wildcards.
+    return [...entryRewrites(), ...localizedRewrites()];
   },
   async redirects() {
     return [
@@ -172,6 +227,7 @@ const nextConfig = {
       // P2-9: legacy English slugs 301 to their localized equivalents so
       // existing links and rankings carry over. Appended last so the specific
       // aliases above keep priority.
+      ...entryRedirects(),
       ...localizedRedirects(),
     ];
   },
