@@ -18,6 +18,7 @@ export default function ArticleFeatureImage({
         title={alt}
         className="aspect-[16/10] w-full object-cover object-center md:aspect-[16/9]"
         loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : 'auto'}
         decoding="async"
        sizes="100vw" />
     </figure>

@@ -225,6 +225,7 @@ export default async function BlogPostPage(
           height={900}
           sizes="(max-width: 767px) 100vw, (max-width: 1280px) 92vw, 1152px"
           priority
+          fetchPriority="high"
           className={`w-full ${post.heroImageFocus === 'landscape' ? 'aspect-video bg-[#a9cce0] object-contain' : post.heroImageFocus === 'upper' ? 'aspect-[5/3] object-cover object-[50%_5%]' : 'aspect-[16/10] object-cover object-center md:aspect-[16/9]'}`}
         />
       </figure>

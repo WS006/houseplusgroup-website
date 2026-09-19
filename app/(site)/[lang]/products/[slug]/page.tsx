@@ -318,6 +318,7 @@ export default async function ProductDetailPage(
                 height={imageDimensions.height}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
+                fetchPriority="high"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               {/* Hidden SEO-rich context for search engines */}

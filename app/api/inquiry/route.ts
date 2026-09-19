@@ -151,8 +151,12 @@ export async function POST(request: NextRequest) {
       message: sanitize(message)?.slice(0, 2000),
     };
 
-    // 记录日志
-    console.log('Inquiry received from:', sanitizedData.email);
+    // Log without PII. The site publishes a GDPR privacy policy, so a
+    // customer's email address must not be written to the application log.
+    console.log('Inquiry received', {
+      hasProduct: Boolean(sanitizedData.product),
+      hasWhatsapp: Boolean(sanitizedData.whatsapp),
+    });
 
     // 如果 Resend 已配置，发送邮件
     let emailSent = false;
@@ -170,7 +174,7 @@ export async function POST(request: NextRequest) {
           console.error('Failed to send email:', error);
         } else {
           emailSent = true;
-          console.log('Email sent successfully:', data);
+          console.log('Email sent successfully');
         }
       } catch (emailError) {
         console.error('Email sending error:', emailError);
