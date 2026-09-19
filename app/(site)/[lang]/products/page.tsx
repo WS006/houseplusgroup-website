@@ -5,7 +5,7 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { PRODUCT_DATA } from '@/lib/product-data';
-import { r2ImageDimensions } from '@/lib/r2-media-details';
+import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
 import { getOGLocale, clampOnWordBoundary } from '@/lib/seo-utils';
 import { getLocalizedProduct } from '@/lib/localized-content';
 
@@ -90,6 +90,7 @@ export async function generateMetadata(
         width: imageDimensions.width,
         height: imageDimensions.height,
         alt: featuredProduct.imageAlt || featuredProduct.name,
+        type: r2MediaContentType(featuredProduct.coverImage),
       }],
       type: 'website',
     } : undefined,
