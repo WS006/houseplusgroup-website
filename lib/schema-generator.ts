@@ -471,7 +471,6 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         width: imageDimensions.width,
         height: imageDimensions.height,
       });
-      const viewDetail = getR2MediaDetails(view);
       return {
         '@type': 'ImageObject',
         '@id': `${view}#image`,
@@ -479,9 +478,14 @@ export function generateProductSchema(options: ProductSchemaOptions) {
         contentUrl: view,
         width: viewDims.width,
         height: viewDims.height,
-        caption: viewDetail?.alt || resolvedImageCaption,
-        description: viewDetail?.description || resolvedImageDescription,
-        name: viewDetail?.title || resolvedImageCaption,
+        // Deliberately NOT viewDetail.alt / .title: the R2 media registry is
+        // English-only (getR2MediaDetails takes no locale), so falling back to
+        // it would emit English captions on every localized Product. Gallery
+        // views are photographs of the same product, so reuse the localized
+        // product-derived caption/description.
+        caption: resolvedImageCaption,
+        description: resolvedImageDescription,
+        name: resolvedImageCaption,
         inLanguage: lang,
         ...HOUSEPLUS_IMAGE_RIGHTS,
       };
