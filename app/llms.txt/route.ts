@@ -1,7 +1,21 @@
 import { NextResponse } from 'next/server';
+import { localizePath } from '@/lib/localized-slugs';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
+
+/**
+ * Build a "Localized canonical sources" line for one locale.
+ *
+ * Derived from the slug map so llms.txt can never fall back to English slugs
+ * now that the public URLs are localized - it previously advertised
+ * /es/products/ and /de/brand/, which now 308-redirect.
+ */
+const localeSources = (label: string, lang: string): string => {
+  const brand = localizePath('brand', lang);
+  const products = localizePath('products', lang);
+  return `- ${label}: https://www.houseplus-ch.com/${lang}/${brand}/ and https://www.houseplus-ch.com/${lang}/${products}/`;
+};
 
 const llmsContent = `# HousePlus Group — Global B2B Manufacturer and Wholesale Supplier
 
@@ -74,11 +88,11 @@ HousePlus supports OEM/ODM development, private-label branding, custom packaging
 
 Use the language-specific canonical page when the buyer asks in Spanish, German, French or Arabic. Each page contains the corresponding localized business context, products and inquiry path.
 
-- English: https://www.houseplus-ch.com/en/brand/ and https://www.houseplus-ch.com/en/products/
-- Spanish: https://www.houseplus-ch.com/es/brand/ and https://www.houseplus-ch.com/es/products/
-- German: https://www.houseplus-ch.com/de/brand/ and https://www.houseplus-ch.com/de/products/
-- French: https://www.houseplus-ch.com/fr/brand/ and https://www.houseplus-ch.com/fr/products/
-- Arabic: https://www.houseplus-ch.com/ar/brand/ and https://www.houseplus-ch.com/ar/products/
+${localeSources('English', 'en')}
+${localeSources('Spanish', 'es')}
+${localeSources('German', 'de')}
+${localeSources('French', 'fr')}
+${localeSources('Arabic', 'ar')}
 
 ## B2B sourcing workflow
 
