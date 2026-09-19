@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { canonicalSiteUrl, locales, staticPageSlugs, productSlugs, newsSlugs, regionSlugs } from '@/lib/urls';
+import { localizePath } from '@/lib/localized-slugs';
 import {
   getSitemapLastModified,
   PRODUCT_CATEGORY_LAST_MODIFIED,
@@ -43,10 +44,15 @@ type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly
 function buildHreflangs(slug: string) {
   const languages: Record<string, string> = {};
   for (const lang of locales) {
-    languages[lang] = canonicalSiteUrl(slug ? `${lang}/${slug}` : lang);
+    languages[lang] = canonicalSiteUrl(slug ? `${lang}/${localizePath(slug, lang)}` : lang);
   }
   languages['x-default'] = canonicalSiteUrl(slug ? `en/${slug}` : 'en');
   return languages;
+}
+
+/** Public (localized) URL for one locale's version of an English slug path. */
+function localizedUrl(slug: string, lang: string): string {
+  return canonicalSiteUrl(slug ? `${lang}/${localizePath(slug, lang)}` : lang);
 }
 
 function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, targetLocales: readonly string[] = locales) {
@@ -56,7 +62,7 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
   const entries = [];
 
   for (const lang of targetLocales) {
-    const url = canonicalSiteUrl(slug ? `${lang}/${slug}` : lang);
+    const url = localizedUrl(slug, lang);
     entries.push({
       url,
       lastModified: lastmod,
@@ -77,7 +83,7 @@ function buildProductCategoryEntries(): MetadataRoute.Sitemap {
   for (const category of productCategoryFilters) {
     const languages: Record<string, string> = {};
     for (const lang of locales) {
-      languages[lang] = `${canonicalSiteUrl(`${lang}/products`)}?category=${category}`;
+      languages[lang] = `${localizedUrl('products', lang)}?category=${category}`;
     }
     languages['x-default'] = `${canonicalSiteUrl('en/products')}?category=${category}`;
 
@@ -129,7 +135,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // for every locale with reciprocal hreflang annotations (P2-7).
   for (const lang of locales) {
     allEntries.push({
-      url: canonicalSiteUrl(`${lang}/author/jack-hu`),
+      url: localizedUrl('author/jack-hu', lang),
       lastModified: getSitemapLastModified('author/jack-hu'),
       changeFrequency: 'monthly',
       priority: 0.5,

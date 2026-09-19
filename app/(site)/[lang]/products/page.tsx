@@ -7,6 +7,7 @@ import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrum
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
 import { getOGLocale, clampOnWordBoundary } from '@/lib/seo-utils';
+import { localizePath } from '@/lib/localized-slugs';
 import { getLocalizedProduct } from '@/lib/localized-content';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
@@ -65,11 +66,11 @@ export async function generateMetadata(
 
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
-    langAlternates[locale] = `${BASE_URL}/${locale}/products/`;
+    langAlternates[locale] = `${BASE_URL}/${locale}/${localizePath('products', locale)}/`;
   }
   langAlternates['x-default'] = `${BASE_URL}/en/products/`;
 
-  const canonicalUrl = `${BASE_URL}/${lang}/products/`;
+  const canonicalUrl = `${BASE_URL}/${lang}/${localizePath('products', lang)}/`;
 
   return {
     title,

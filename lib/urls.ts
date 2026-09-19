@@ -1,3 +1,5 @@
+import { localizePath } from './localized-slugs';
+
 export const baseUrl = 'https://www.houseplus-ch.com';
 export const locales = ['en', 'es', 'de', 'fr', 'ar'] as const;
 
@@ -168,22 +170,22 @@ export function generateAllUrls(): string[] {
   // Static pages (all languages)
   for (const lang of locales) {
     for (const slug of staticPageSlugs) {
-      urls.push(canonicalSiteUrl(slug ? `${lang}/${slug}` : lang));
+      urls.push(canonicalSiteUrl(slug ? `${lang}/${localizePath(slug, lang)}` : lang));
     }
 
     // Product pages
     for (const product of productSlugs) {
-      urls.push(canonicalSiteUrl(`${lang}/products/${product}`));
+      urls.push(canonicalSiteUrl(`${lang}/${localizePath(`products/${product}`, lang)}`));
     }
 
     // Region pages
     for (const region of regionSlugs) {
-      urls.push(canonicalSiteUrl(`${lang}/regions/${region}`));
+      urls.push(canonicalSiteUrl(`${lang}/${localizePath(`regions/${region}`, lang)}`));
     }
 
     // News pages
     for (const news of newsSlugs) {
-      urls.push(canonicalSiteUrl(`${lang}/news/${news}`));
+      urls.push(canonicalSiteUrl(`${lang}/${localizePath(`news/${news}`, lang)}`));
     }
   }
 
@@ -194,15 +196,13 @@ export function generateAllUrls(): string[] {
 export function generateMainPageUrls(): string[] {
   const urls: string[] = [];
 
+  const mainSlugs = ['about-us', 'products', 'news', 'factory', 'service', 'faq', 'contact'];
+
   for (const lang of locales) {
     urls.push(canonicalSiteUrl(lang));
-    urls.push(canonicalSiteUrl(`${lang}/about-us`));
-    urls.push(canonicalSiteUrl(`${lang}/products`));
-    urls.push(canonicalSiteUrl(`${lang}/news`));
-    urls.push(canonicalSiteUrl(`${lang}/factory`));
-    urls.push(canonicalSiteUrl(`${lang}/service`));
-    urls.push(canonicalSiteUrl(`${lang}/faq`));
-    urls.push(canonicalSiteUrl(`${lang}/contact`));
+    for (const slug of mainSlugs) {
+      urls.push(canonicalSiteUrl(`${lang}/${localizePath(slug, lang)}`));
+    }
   }
 
   return urls;

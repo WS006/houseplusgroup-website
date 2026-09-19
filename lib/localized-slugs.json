@@ -1,0 +1,21 @@
+{
+  "about-us": { "en": "about-us", "es": "sobre-nosotros", "de": "ueber-uns", "fr": "a-propos", "ar": "man-nahnu" },
+  "products": { "en": "products", "es": "productos", "de": "produkte", "fr": "produits", "ar": "al-muntajat" },
+  "news": { "en": "news", "es": "noticias", "de": "nachrichten", "fr": "actualites", "ar": "al-akhbar" },
+  "factory": { "en": "factory", "es": "fabrica", "de": "fabrik", "fr": "usine", "ar": "al-masnaa" },
+  "service": { "en": "service", "es": "servicio", "de": "service", "fr": "service", "ar": "al-khadamat" },
+  "faq": { "en": "faq", "es": "preguntas-frecuentes", "de": "haeufige-fragen", "fr": "questions-frequentes", "ar": "asila-shaia" },
+  "contact": { "en": "contact", "es": "contacto", "de": "kontakt", "fr": "contact", "ar": "ittasil-bina" },
+  "team": { "en": "team", "es": "equipo", "de": "team", "fr": "equipe", "ar": "al-fariq" },
+  "careers": { "en": "careers", "es": "empleo", "de": "karriere", "fr": "carrieres", "ar": "al-wazaif" },
+  "support": { "en": "support", "es": "soporte", "de": "support", "fr": "support", "ar": "ad-dam" },
+  "certifications": { "en": "certifications", "es": "certificaciones", "de": "zertifizierungen", "fr": "certifications", "ar": "ash-shahadat" },
+  "case-studies": { "en": "case-studies", "es": "casos-de-exito", "de": "fallstudien", "fr": "etudes-de-cas", "ar": "dirasat-al-hala" },
+  "regions": { "en": "regions", "es": "regiones", "de": "regionen", "fr": "regions", "ar": "al-manatiq" },
+  "brand": { "en": "brand", "es": "marca", "de": "marke", "fr": "marque", "ar": "al-alama" },
+  "privacy": { "en": "privacy", "es": "privacidad", "de": "datenschutz", "fr": "confidentialite", "ar": "al-khususiya" },
+  "terms": { "en": "terms", "es": "terminos", "de": "agb", "fr": "conditions", "ar": "ash-shurut" },
+  "cookie-policy": { "en": "cookie-policy", "es": "politica-de-cookies", "de": "cookie-richtlinie", "fr": "politique-de-cookies", "ar": "siyasat-al-kukiz" },
+  "author": { "en": "author", "es": "autor", "de": "autor", "fr": "auteur", "ar": "al-muallif" },
+  "oem-odm": { "en": "oem-odm", "es": "oem-odm", "de": "oem-odm", "fr": "oem-odm", "ar": "oem-odm" }
+}

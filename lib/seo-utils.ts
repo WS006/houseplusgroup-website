@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Locale } from './i18n-config';
 import { getR2MediaDetails, r2ImageDimensions, r2MediaContentType } from './r2-media-details';
+import { localizePath } from './localized-slugs';
 
 export interface SEOConfig {
   title: string;
@@ -68,8 +69,15 @@ export function clampOnWordBoundary(value: string, max: number): string {
 }
 
 export function generateMetadata(config: SEOConfig): Metadata {
-  const pageUrl = `${siteConfig.url}${config.url}`;
   const pathWithoutLang = config.url.replace(/^\/(en|es|de|fr|ar)(\/|$)/, '/');
+  // P2-9: the public URL is localized per locale. English folder names remain
+  // the internal routing keys (see the rewrite/redirect pair in next.config.js).
+  // Trailing slashes are added by Next via `trailingSlash: true`.
+  const localizedPathFor = (lang: string): string => {
+    const p = pathWithoutLang.replace(/^\/+|\/+$/g, '');
+    return p ? `/${localizePath(p, lang)}` : '';
+  };
+  const pageUrl = `${siteConfig.url}/${config.lang}${localizedPathFor(config.lang)}`;
   // Localized pages now carry translated body content and can publish as independent
   // language URLs. Callers may still opt a route out when a future page is untranslated.
   const shouldIndex = config.indexable ?? true;
@@ -135,12 +143,12 @@ export function generateMetadata(config: SEOConfig): Metadata {
       ? {
           canonical: canonicalUrl,
           languages: {
-            'en': `${siteConfig.url}/en${pathWithoutLang}`,
-            'es': `${siteConfig.url}/es${pathWithoutLang}`,
-            'de': `${siteConfig.url}/de${pathWithoutLang}`,
-            'fr': `${siteConfig.url}/fr${pathWithoutLang}`,
-            'ar': `${siteConfig.url}/ar${pathWithoutLang}`,
-            'x-default': `${siteConfig.url}/en${pathWithoutLang}`,
+            'en': `${siteConfig.url}/en${localizedPathFor('en')}`,
+            'es': `${siteConfig.url}/es${localizedPathFor('es')}`,
+            'de': `${siteConfig.url}/de${localizedPathFor('de')}`,
+            'fr': `${siteConfig.url}/fr${localizedPathFor('fr')}`,
+            'ar': `${siteConfig.url}/ar${localizedPathFor('ar')}`,
+            'x-default': `${siteConfig.url}/en${localizedPathFor('en')}`,
           },
         }
       : { canonical: canonicalUrl },

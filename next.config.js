@@ -1,3 +1,64 @@
+// P2-9: localized public slugs. Shared with lib/localized-slugs.ts so the
+// public URL space and the metadata/canonical output stay in sync.
+const localizedSlugs = require('./lib/localized-slugs.json');
+const LOCALIZED_LOCALES = ['es', 'de', 'fr', 'ar'];
+
+/**
+ * Public localized URL -> internal English route.
+ * e.g. /es/productos/solar-panel-500w -> /es/products/solar-panel-500w
+ */
+function localizedRewrites() {
+  const out = [];
+  for (const lang of LOCALIZED_LOCALES) {
+    for (const [enSlug, byLocale] of Object.entries(localizedSlugs)) {
+      const localized = byLocale[lang];
+      if (!localized || localized === enSlug) continue;
+      out.push({ source: `/${lang}/${localized}`, destination: `/${lang}/${enSlug}` });
+      out.push({
+        source: `/${lang}/${localized}/:path*`,
+        destination: `/${lang}/${enSlug}/:path*`,
+      });
+      // Non-ASCII slugs (Arabic) arrive percent-encoded. Next matches the raw
+      // path, so also register the encoded form or the rewrite never fires and
+      // the localized URL 404s.
+      const encoded = encodeURIComponent(localized);
+      if (encoded !== localized) {
+        out.push({ source: `/${lang}/${encoded}`, destination: `/${lang}/${enSlug}` });
+        out.push({
+          source: `/${lang}/${encoded}/:path*`,
+          destination: `/${lang}/${enSlug}/:path*`,
+        });
+      }
+    }
+  }
+  return out;
+}
+
+/**
+ * Legacy English slug -> localized public URL (permanent, preserves equity).
+ * e.g. /es/products -> /es/productos
+ */
+function localizedRedirects() {
+  const out = [];
+  for (const lang of LOCALIZED_LOCALES) {
+    for (const [enSlug, byLocale] of Object.entries(localizedSlugs)) {
+      const localized = byLocale[lang];
+      if (!localized || localized === enSlug) continue;
+      out.push({
+        source: `/${lang}/${enSlug}`,
+        destination: `/${lang}/${localized}`,
+        permanent: true,
+      });
+      out.push({
+        source: `/${lang}/${enSlug}/:path*`,
+        destination: `/${lang}/${localized}/:path*`,
+        permanent: true,
+      });
+    }
+  }
+  return out;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
@@ -30,7 +91,8 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   poweredByHeader: false,
   async rewrites() {
-    return [];
+    // P2-9: serve the localized public URL from the English internal route.
+    return localizedRewrites();
   },
   async redirects() {
     return [
@@ -107,6 +169,10 @@ const nextConfig = {
         destination: '/en/contact',
         permanent: true,
       },
+      // P2-9: legacy English slugs 301 to their localized equivalents so
+      // existing links and rankings carry over. Appended last so the specific
+      // aliases above keep priority.
+      ...localizedRedirects(),
     ];
   },
   async headers() {

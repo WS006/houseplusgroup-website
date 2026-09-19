@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema, generateProductHowToSchema } from '@/lib/schema-generator';
 import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
+import { localizePath } from '@/lib/localized-slugs';
 import { getLocalizedProduct } from '@/lib/localized-content';
 import { getOGLocale } from '@/lib/seo-utils';
 import InquiryForm from '@/components/InquiryForm';
@@ -142,7 +143,7 @@ export async function generateMetadata(
 
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
-    langAlternates[locale] = `${BASE_URL}/${locale}/products/${slug}/`;
+    langAlternates[locale] = `${BASE_URL}/${locale}/${localizePath(`products/${slug}`, locale)}/`;
   }
   langAlternates['x-default'] = `${BASE_URL}/en/products/${slug}/`;
 
@@ -180,7 +181,7 @@ export async function generateMetadata(
   const title = isRetailProduct ? (retailTitleTemplates[lang] || retailTitleTemplates.en) : (titleTemplates[lang] || titleTemplates.en);
   const description = isRetailProduct ? (retailDescTemplates[lang] || retailDescTemplates.en) : (descTemplates[lang] || descTemplates.en);
   const shouldIndexLocale = LOCALES.includes(lang);
-  const canonicalUrl = `${BASE_URL}/${lang}/products/${slug}/`;
+  const canonicalUrl = `${BASE_URL}/${lang}/${localizePath(`products/${slug}`, lang)}/`;
   const imageDimensions = r2ImageDimensions(product?.coverImage, { width: 900, height: 675 });
 
   return {
