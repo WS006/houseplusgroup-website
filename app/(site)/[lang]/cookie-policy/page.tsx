@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
+import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { localizePath, localizedHref } from '@/lib/localized-slugs';
+import { translations } from '@/lib/translations';
 import { cookiePolicyLocales } from '@/lib/localized-content/cookie-policy';
-import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -51,6 +55,13 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
 export default async function CookiePolicyPage(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
   const { lang } = params;
+
+  // Legal pages were the only non-home templates with no breadcrumb trail.
+  const t = translations[lang as keyof typeof translations];
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: t?.nav?.home || 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: t?.nav?.cookiePolicy || 'Cookie Policy', url: `https://www.houseplus-ch.com/${lang}/${localizePath('cookie-policy', lang)}` },
+  ]);
 
   const h1Labels: Record<string, string> = {
     en: 'Cookie Policy',
@@ -152,6 +163,8 @@ Business Hours: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)`,
 
   return (
     <main className="min-h-screen bg-white">
+      <SEOHead schemas={[breadcrumbSchema]} />
+      <Breadcrumb lang={lang} slug="cookie-policy" />
       {/* Hero */}
       <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto">

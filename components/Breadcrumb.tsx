@@ -31,15 +31,17 @@ export default function Breadcrumb({ lang, slug, customLabel, labelOverrides }: 
     'contact': translations[lang as keyof typeof translations]?.nav?.contact || 'Contact',
     'support': translations[lang as keyof typeof translations]?.nav?.support || 'Support',
     'privacy': translations[lang as keyof typeof translations]?.nav?.privacy || 'Privacy',
-    'terms': 'Terms',
+    // These were hardcoded English, so every localized page below showed an
+    // English final crumb (e.g. "Startseite > Certifications").
+    'terms': translations[lang as keyof typeof translations]?.nav?.terms || 'Terms',
     'oem-odm': translations[lang as keyof typeof translations]?.service?.oem || 'OEM/ODM',
-    'certifications': 'Certifications',
-    'case-studies': 'Case Studies',
-    'regions': 'Regions',
-    'brand': 'Brand',
-    'cookie-policy': 'Cookie Policy',
-    'sitemap-page': 'Sitemap',
-    'author': 'Author',
+    'certifications': translations[lang as keyof typeof translations]?.nav?.certifications || 'Certifications',
+    'case-studies': translations[lang as keyof typeof translations]?.nav?.caseStudies || 'Case Studies',
+    'regions': translations[lang as keyof typeof translations]?.nav?.regions || 'Regions',
+    'brand': translations[lang as keyof typeof translations]?.nav?.brand || 'Brand',
+    'cookie-policy': translations[lang as keyof typeof translations]?.nav?.cookiePolicy || 'Cookie Policy',
+    'sitemap-page': translations[lang as keyof typeof translations]?.nav?.sitemap || 'Sitemap',
+    'author': translations[lang as keyof typeof translations]?.nav?.author || 'Author',
     'jack-hu': 'Jack Hu',
   };
 

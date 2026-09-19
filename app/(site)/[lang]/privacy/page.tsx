@@ -1,6 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import SEOHead from '@/components/SEOHead';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
+import { generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { localizePath } from '@/lib/localized-slugs';
+import { translations } from '@/lib/translations';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -48,6 +53,13 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
 export default async function PrivacyPage(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
   const { lang } = params;
+
+  // Legal pages were the only non-home templates with no breadcrumb trail.
+  const t = translations[lang as keyof typeof translations];
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: t?.nav?.home || 'Home', url: `https://www.houseplus-ch.com/${lang}` },
+    { name: t?.nav?.privacy || 'Privacy', url: `https://www.houseplus-ch.com/${lang}/${localizePath('privacy', lang)}` },
+  ]);
 
   const content: Record<string, any> = {
     en: {
@@ -414,6 +426,8 @@ Nous utilisons des **cookies essentiels** pour le fonctionnement du site, des **
 
   return (
     <main className="min-h-screen bg-white">
+      <SEOHead schemas={[breadcrumbSchema]} />
+      <Breadcrumb lang={lang} slug="privacy" />
       {/* Hero */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="max-w-4xl mx-auto">
