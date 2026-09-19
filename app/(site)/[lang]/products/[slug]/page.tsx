@@ -9,7 +9,7 @@ import { generateProductSchema, generateFAQSchema, generateProductHowToSchema } 
 import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
 import { localizePath, localizedHref } from '@/lib/localized-slugs';
 import { getLocalizedProduct } from '@/lib/localized-content';
-import { getOGLocale } from '@/lib/seo-utils';
+import { getOGLocale, clampOnWordBoundary, TITLE_MAX, DESCRIPTION_MAX } from '@/lib/seo-utils';
 import InquiryForm from '@/components/InquiryForm';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
@@ -184,16 +184,22 @@ export async function generateMetadata(
   const canonicalUrl = `${BASE_URL}/${lang}/${localizePath(`products/${slug}`, lang)}/`;
   const imageDimensions = r2ImageDimensions(product?.coverImage, { width: 900, height: 675 });
 
+  // This route builds metadata inline, so it must apply the same length budget
+  // as generateSEOMetadata(). Without it product titles/descriptions rendered up
+  // to 102 / 264 chars - far longer than every other page - and got truncated.
+  const seoTitle = clampOnWordBoundary(title, TITLE_MAX);
+  const seoDescription = clampOnWordBoundary(description, DESCRIPTION_MAX);
+
   return {
-    title,
-    description,
+    title: seoTitle,
+    description: seoDescription,
     alternates: {
       canonical: canonicalUrl,
       ...(shouldIndexLocale ? { languages: langAlternates } : {}),
     },
     openGraph: {
-      title,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       url: canonicalUrl,
       siteName: 'HousePlus',
       locale: getOGLocale(lang),
@@ -209,8 +215,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       site: '@HousePlusGroup',
       creator: '@HousePlusGroup',
       images: product?.coverImage ? [{ url: product.coverImage, alt: product.imageAlt || name }] : [],

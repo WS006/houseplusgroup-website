@@ -54,8 +54,10 @@ function toAbsoluteImageUrl(image?: string): string {
 // P2-8: Google truncates titles past ~60 characters and descriptions past ~155,
 // so over-long copy is silently cut in the SERP. We trim on a word boundary
 // instead of emitting text we know will be clipped mid-word.
-const TITLE_MAX = 60;
-const DESCRIPTION_MAX = 155;
+// Exported so routes that build metadata inline (rather than going through
+// generateSEOMetadata) can honour the same budget instead of drifting.
+export const TITLE_MAX = 60;
+export const DESCRIPTION_MAX = 155;
 
 export function clampOnWordBoundary(value: string, max: number): string {
   const text = (value || '').trim();
