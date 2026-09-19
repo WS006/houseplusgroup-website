@@ -1,15 +1,7 @@
 import { MetadataRoute } from 'next';
 import { canonicalSiteUrl, locales, staticPageSlugs, productSlugs, newsSlugs, regionSlugs } from '@/lib/urls';
 import { localizePath } from '@/lib/localized-slugs';
-import {
-  getSitemapLastModified,
-  PRODUCT_CATEGORY_LAST_MODIFIED,
-} from '@/lib/sitemap-lastmod';
-
-// These query-filtered catalog views publish distinct, indexable metadata. List
-// their exact final URLs in the sitemap so Google receives the same canonical
-// and hreflang signal as the rendered product listing page.
-const productCategoryFilters = ['solar', 'home-appliances', '3c-electronics'] as const;
+import { getSitemapLastModified } from '@/lib/sitemap-lastmod';
 
 // All static page slugs from single source of truth
 const staticPages = staticPageSlugs.map(slug => {
@@ -77,30 +69,6 @@ function buildUrlEntry(slug: string, priority: number, changefreq: ChangeFreq, t
   return entries;
 }
 
-function buildProductCategoryEntries(): MetadataRoute.Sitemap {
-  const entries: MetadataRoute.Sitemap = [];
-
-  for (const category of productCategoryFilters) {
-    const languages: Record<string, string> = {};
-    for (const lang of locales) {
-      languages[lang] = `${localizedUrl('products', lang)}?category=${category}`;
-    }
-    languages['x-default'] = `${canonicalSiteUrl('en/products')}?category=${category}`;
-
-    for (const lang of locales) {
-      entries.push({
-        url: languages[lang],
-        lastModified: PRODUCT_CATEGORY_LAST_MODIFIED,
-        changeFrequency: 'weekly',
-        priority: lang === 'en' ? 0.75 : 0.675,
-        alternates: { languages },
-      });
-    }
-  }
-
-  return entries;
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const allEntries: MetadataRoute.Sitemap = [];
 
@@ -109,8 +77,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const entries = buildUrlEntry(page.slug, page.priority, page.changefreq);
     allEntries.push(...entries);
   }
-
-  allEntries.push(...buildProductCategoryEntries());
 
   // Product detail pages carry verified ES/DE/FR/AR translations and are published
   // as five independent language URLs with reciprocal hreflang annotations.
