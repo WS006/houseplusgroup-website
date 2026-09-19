@@ -7,6 +7,29 @@ const OFFICIAL_LOGO = 'https://images.houseplus-ch.com/media/houseplus-group-log
 const ORGANIZATION_ID = `${BASE_URL}/#organization`;
 const LOGO_ID = `${BASE_URL}/#logo`;
 const BRAND_ID = `${BASE_URL}/#brand`;
+
+/**
+ * Normalise an in-site URL to the canonical trailing-slash form.
+ *
+ * Every in-site URL emitted without its trailing slash triggers a 308 redirect,
+ * so crawlers record the redirect instead of the real page (P1-6). Schema
+ * fragment identifiers (`/#organization`) and query-string URLs are
+ * intentionally left untouched.
+ */
+export function normalizeSchemaUrl(url?: string | null): string | undefined {
+  if (!url) return undefined;
+  const trimmed = url.trim();
+  if (!trimmed) return undefined;
+
+  const hashIndex = trimmed.indexOf('#');
+  const path = hashIndex >= 0 ? trimmed.slice(0, hashIndex) : trimmed;
+  const hash = hashIndex >= 0 ? trimmed.slice(hashIndex) : '';
+
+  if (path.includes('?')) return trimmed; // query URLs are not page URLs
+  if (path.endsWith('/')) return path + hash;
+  return `${path}/${hash}`;
+}
+
 const VERIFIED_ORGANIZATION_PROFILES = [
   'https://www.facebook.com/houseplusgroup',
   'https://www.linkedin.com/company/houseplus-group',
@@ -17,8 +40,8 @@ const VERIFIED_ORGANIZATION_PROFILES = [
 // R2 assets published through this website. Third-party assets must carry their
 // verified per-asset creator, credit, copyright, and license information instead.
 const HOUSEPLUS_IMAGE_RIGHTS = {
-  license: `${BASE_URL}/terms`,
-  acquireLicensePage: `${BASE_URL}/en/contact`,
+  license: `${BASE_URL}/en/terms/`,
+  acquireLicensePage: `${BASE_URL}/en/contact/`,
   creditText: 'HousePlus Group',
   copyrightNotice: '© HousePlus Group. All rights reserved.',
   copyrightHolder: { '@type': 'Organization', '@id': `${BASE_URL}/#organization`, name: 'HousePlus Group' },
@@ -157,20 +180,12 @@ export function generateWebSiteSchema(lang: string = 'en') {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${BASE_URL}/#website`,
-    url: `${BASE_URL}/${lang}`,
+    url: `${BASE_URL}/${lang}/`,
     name: 'HousePlus',
     alternateName: 'HousePlus Group',
     description: 'Global wholesale manufacturer of solar energy systems, home appliances, and 3C electronics.',
     inLanguage: ['en', 'es', 'de', 'fr', 'ar'],
     publisher: { '@id': `${BASE_URL}/#organization` },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${BASE_URL}/${lang}/products?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 
@@ -208,7 +223,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: normalizeSchemaUrl(item.url),
     })),
   };
 }
@@ -319,7 +334,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     imageHeight = 675,
     b2bInfo,
     lang = 'en',
-    contactUrl = `${BASE_URL}/en/contact`,
+    contactUrl = `${BASE_URL}/en/contact/`,
     contactActionName = 'Request a wholesale quotation',
     contactActionDescription = 'Contact HousePlus Group to request product documentation and a wholesale quotation.',
     specifications = [],
@@ -487,7 +502,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
       '@type': 'Brand',
       name: brand,
     },
-    url,
+    url: normalizeSchemaUrl(url),
     category,
     manufacturer: {
       '@type': 'Organization',
@@ -806,7 +821,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     datePublished,
     dateModified,
     authorName = 'Jack Hu',
-    authorUrl = `${BASE_URL}/en/author/jack-hu`,
+    authorUrl = `${BASE_URL}/en/author/jack-hu/`,
     authorImage = 'https://images.houseplus-ch.com/media/houseplus-author-jack-hu-portrait/',
     url = BASE_URL,
   } = options;
@@ -920,12 +935,12 @@ export function generatePersonSchema(options: PersonSchemaOptions) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': url || `${BASE_URL}/en/author/jack-hu`,
+    '@id': url || `${BASE_URL}/en/author/jack-hu/`,
     name,
     jobTitle: jobTitle || '',
     image: image || '',
     description: description || '',
-    url: url || `${BASE_URL}/en/author/jack-hu`,
+    url: url || `${BASE_URL}/en/author/jack-hu/`,
     email,
     ...(telephone ? { telephone } : {}),
     worksFor: {

@@ -50,6 +50,23 @@ function toAbsoluteImageUrl(image?: string): string {
   return source.startsWith('http') ? source : `${siteConfig.url}${source}`;
 }
 
+// P2-8: Google truncates titles past ~60 characters and descriptions past ~155,
+// so over-long copy is silently cut in the SERP. We trim on a word boundary
+// instead of emitting text we know will be clipped mid-word.
+const TITLE_MAX = 60;
+const DESCRIPTION_MAX = 155;
+
+function clampOnWordBoundary(value: string, max: number): string {
+  const text = (value || '').trim();
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  // Trim on the boundary only when it keeps most of the budget; otherwise
+  // hard-cut so a single very long word cannot swallow the whole snippet.
+  const trimmed = lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut;
+  return trimmed.replace(/[\s,;:.\-–—|]+$/, '').trim();
+}
+
 export function generateMetadata(config: SEOConfig): Metadata {
   const pageUrl = `${siteConfig.url}${config.url}`;
   const pathWithoutLang = config.url.replace(/^\/(en|es|de|fr|ar)(\/|$)/, '/');
@@ -64,18 +81,20 @@ export function generateMetadata(config: SEOConfig): Metadata {
   const imageDimensions = r2ImageDimensions(imageUrl);
   const imageAlt = config.imageAlt || imageDetails?.alt || config.title;
   const imageType = imageDetails?.contentType || (imageUrl.endsWith('.png') ? 'image/png' : imageUrl.endsWith('.webp') ? 'image/webp' : 'image/jpeg');
+  const seoTitle = clampOnWordBoundary(config.title, TITLE_MAX);
+  const seoDescription = clampOnWordBoundary(config.description, DESCRIPTION_MAX);
 
   const defaultKeywords = ['solar systems', 'home appliances', '3C electronics', 'wholesale', 'OEM', 'ODM', 'Made in China'];
   const keywords = config.keywords && config.keywords.length > 0 ? config.keywords : defaultKeywords;
 
   return {
-    title: config.title,
-    description: config.description,
+    title: seoTitle,
+    description: seoDescription,
     keywords: keywords.join(', '),
     authors: config.author ? [{ name: config.author }] : undefined,
     openGraph: {
-      title: config.title,
-      description: config.description,
+      title: seoTitle,
+      description: seoDescription,
       url: canonicalUrl,
       siteName: siteConfig.name,
       locale: getOGLocale(config.lang),
@@ -96,8 +115,8 @@ export function generateMetadata(config: SEOConfig): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: config.title,
-      description: config.description,
+      title: seoTitle,
+      description: seoDescription,
       site: '@HousePlusGroup',
       creator: '@HousePlusGroup',
       images: [

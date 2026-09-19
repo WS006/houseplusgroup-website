@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import Image from 'next/image';
 import InquiryForm from '../../../../components/InquiryForm';
+import InquiryFormWithQueryPrefill from '@/components/InquiryFormWithQueryPrefill';
 import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
@@ -19,35 +21,36 @@ const copy: Record<Locale, Record<string, string>> = {
 };
 
 export const dynamicParams = false;
+
+// Keep the contact route statically rendered so its metadata lands in <head>.
+export const revalidate = 3600;
+
 export function generateStaticParams() { return validLangs.map((lang) => ({ lang })); }
 
 export async function generateMetadata(
-  props: { params: Promise<{ lang: string }>; searchParams?: Promise<{ product?: string; region?: string }> }
+  props: { params: Promise<{ lang: string }> }
 ): Promise<Metadata> {
-  const searchParams = await props.searchParams;
   const params = await props.params;
   const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
-  const isInquiryPrefill = typeof searchParams?.product === 'string' || typeof searchParams?.region === 'string';
+  // NOTE: ?product= / ?region= only prefill the inquiry form. They are kept out
+  // of generateMetadata so the route stays statically rendered; duplicate
+  // variants are blocked via robots.txt instead of a noindex that would force
+  // dynamic rendering.
   return {
     ...generateSEOMetadata({ title: copy[lang].title, description: copy[lang].meta, keywords: ['contact', 'inquiry', 'wholesale', 'sales', 'HousePlus', 'OEM', 'ODM'], url: `/${lang}/contact`, lang, type: 'website' }),
-    // Product and region parameters only prefill the inquiry form. They do not
-    // create standalone contact content and must not compete with /contact/.
-    ...(isInquiryPrefill ? { robots: 'noindex, follow' } : {}),
   };
 }
 
 export default async function ContactPage(
-  props: { params: Promise<{ lang: string }>; searchParams?: Promise<{ product?: string; region?: string }> }
+  props: { params: Promise<{ lang: string }> }
 ) {
-  const searchParams = await props.searchParams;
   const params = await props.params;
   const lang = (validLangs.includes(params.lang as Locale) ? params.lang : 'en') as Locale;
   const t = copy[lang];
-  const productContext = typeof searchParams?.product === 'string' ? searchParams.product.slice(0, 200) : '';
   const facts = getCompanyFacts(lang);
   const organizationSchema = generateOrganizationSchema({ title: 'HousePlus', description: t.meta, url: `https://www.houseplus-ch.com/${lang}/contact`, lang, type: 'Organization' });
   const breadcrumbSchema = generateBreadcrumbSchema([{ name: 'Home', url: `https://www.houseplus-ch.com/${lang}` }, { name: t.title, url: `https://www.houseplus-ch.com/${lang}/contact` }]);
   const cards = [[t.factory, t.factoryDetail], [t.sales, t.salesDetail], [t.markets, t.marketsDetail], [t.terms, t.termsDetail]];
 
-  return <><SEOHead schemas={[organizationSchema, breadcrumbSchema]} /><main className="min-h-screen bg-slate-50 px-4 py-16 md:py-20"><Breadcrumb lang={lang} slug="contact" /><div className="mx-auto max-w-5xl"><div className="mb-10 text-center md:mb-16"><div className="mb-6 inline-flex items-center justify-center rounded-3xl bg-white px-8 py-5 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100"><Image src="https://images.houseplus-ch.com/media/houseplus-group-logo/" alt="HousePlus logo" width={1200} height={800} title="HousePlus global wholesale manufacturer logo" className="h-14 w-auto object-contain md:h-[4.5rem]" decoding="async"  sizes="100vw" /></div><h1 className="text-4xl font-black text-slate-900 md:text-6xl">{t.title}</h1><p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">{t.intro}</p></div><div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12"><div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-200 md:p-10 lg:col-span-2"><InquiryForm lang={lang} initialProduct={productContext} /></div><aside className="space-y-6"><div className="rounded-3xl bg-blue-600 p-7 text-white shadow-xl shadow-blue-200"><h2 className="mb-5 text-2xl font-bold">{t.why}</h2><div className="space-y-4">{cards.map(([title, detail]) => <div key={title} className="rounded-2xl bg-blue-500/35 p-4"><p className="text-sm font-bold">{title}</p><p className="mt-1 text-xs leading-relaxed text-blue-100">{detail}</p></div>)}</div></div><div className="rounded-3xl bg-slate-900 p-7 text-white shadow-xl shadow-slate-200"><h2 className="mb-5 text-2xl font-bold">{t.direct}</h2><div className="space-y-5 text-sm"><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.phone}</p><a href="https://wa.me/8615578119543" className="font-bold hover:text-blue-400">+86 155 7811 9543</a><a href="tel:+8615578119543" className="block text-sm font-bold hover:text-blue-400">Call +86 155 7811 9543</a></div><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.email}</p><a href="mailto:jack@houseplus-ch.com" className="font-bold hover:text-blue-400">jack@houseplus-ch.com</a></div><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.wechat}</p><p className="font-bold">JackHousePlus</p></div></div></div><div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-xl shadow-slate-200"><h2 className="mb-4 text-2xl font-bold text-slate-900">{t.hours}</h2><div className="space-y-3 text-sm text-slate-600"><div className="flex justify-between gap-4"><span>{t.weekday}</span><span>9:00 – 18:00</span></div><div className="flex justify-between gap-4"><span>{t.saturday}</span><span>10:00 – 16:00</span></div><div className="flex justify-between gap-4 text-slate-400"><span>{t.sunday}</span><span>{t.closed}</span></div><p className="border-t border-slate-100 pt-4 text-xs text-slate-400">{t.timezone}</p></div></div></aside></div></div></main></>;
+  return <><SEOHead schemas={[organizationSchema, breadcrumbSchema]} /><main className="min-h-screen bg-slate-50 px-4 py-16 md:py-20"><Breadcrumb lang={lang} slug="contact" /><div className="mx-auto max-w-5xl"><div className="mb-10 text-center md:mb-16"><div className="mb-6 inline-flex items-center justify-center rounded-3xl bg-white px-8 py-5 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100"><Image src="https://images.houseplus-ch.com/media/houseplus-group-logo/" alt="HousePlus logo" width={1200} height={800} title="HousePlus global wholesale manufacturer logo" className="h-14 w-auto object-contain md:h-[4.5rem]" decoding="async"  sizes="100vw" /></div><h1 className="text-4xl font-black text-slate-900 md:text-6xl">{t.title}</h1><p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">{t.intro}</p></div><div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12"><div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-200 md:p-10 lg:col-span-2"><Suspense fallback={<InquiryForm lang={lang} />}><InquiryFormWithQueryPrefill lang={lang} /></Suspense></div><aside className="space-y-6"><div className="rounded-3xl bg-blue-600 p-7 text-white shadow-xl shadow-blue-200"><h2 className="mb-5 text-2xl font-bold">{t.why}</h2><div className="space-y-4">{cards.map(([title, detail]) => <div key={title} className="rounded-2xl bg-blue-500/35 p-4"><p className="text-sm font-bold">{title}</p><p className="mt-1 text-xs leading-relaxed text-blue-100">{detail}</p></div>)}</div></div><div className="rounded-3xl bg-slate-900 p-7 text-white shadow-xl shadow-slate-200"><h2 className="mb-5 text-2xl font-bold">{t.direct}</h2><div className="space-y-5 text-sm"><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.phone}</p><a href="https://wa.me/8615578119543" className="font-bold hover:text-blue-400">+86 155 7811 9543</a><a href="tel:+8615578119543" className="block text-sm font-bold hover:text-blue-400">Call +86 155 7811 9543</a></div><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.email}</p><a href="mailto:jack@houseplus-ch.com" className="font-bold hover:text-blue-400">jack@houseplus-ch.com</a></div><div><p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t.wechat}</p><p className="font-bold">JackHousePlus</p></div></div></div><div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-xl shadow-slate-200"><h2 className="mb-4 text-2xl font-bold text-slate-900">{t.hours}</h2><div className="space-y-3 text-sm text-slate-600"><div className="flex justify-between gap-4"><span>{t.weekday}</span><span>9:00 – 18:00</span></div><div className="flex justify-between gap-4"><span>{t.saturday}</span><span>10:00 – 16:00</span></div><div className="flex justify-between gap-4 text-slate-400"><span>{t.sunday}</span><span>{t.closed}</span></div><p className="border-t border-slate-100 pt-4 text-xs text-slate-400">{t.timezone}</p></div></div></aside></div></div></main></>;
 }

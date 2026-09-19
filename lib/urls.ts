@@ -11,7 +11,7 @@ export function canonicalSiteUrl(path = ''): string {
 }
 
 // All static page slugs (single source of truth)
-// Pages marked as noindex (privacy, terms, cookie-policy, sitemap-page) are excluded from sitemap
+// Only pages listed in noIndexPageSlugs are excluded from the sitemap.
 export const staticPageSlugs = [
   '', // homepage
   'about-us',
@@ -29,13 +29,15 @@ export const staticPageSlugs = [
   'case-studies',
   'regions',
   'brand',
+  // P2-7: legal pages are fully translated per locale, so they are published
+  // and listed rather than hidden behind noindex.
+  'privacy',
+  'terms',
+  'cookie-policy',
 ];
 
 // Pages that should be noindex (not in sitemap, robots meta noindex)
 export const noIndexPageSlugs = [
-  'privacy',
-  'terms',
-  'cookie-policy',
   'sitemap-page',
 ];
 

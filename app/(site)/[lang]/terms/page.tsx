@@ -39,10 +39,10 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     type: 'website',
   });
 
-  return {
-    ...seoMetadata,
-    robots: { index: false, follow: true },
-  };
+  // P2-7: legal pages carry full translations and are listed in the sitemap, so
+  // they must be indexable - a noindex URL inside a sitemap is a conflicting
+  // signal to crawlers.
+  return seoMetadata;
 }
 
 export default async function TermsPage(props: { params: Promise<{ lang: string }> }) {

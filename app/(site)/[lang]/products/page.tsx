@@ -26,65 +26,19 @@ const productPageCopy: Record<Lang, { wholesale: string; catalogueTitle: string;
 
 export const dynamicParams = false;
 
+// Keep the catalogue statically rendered (metadata must live in <head>) while
+// still refreshing periodically.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return validLangs.map((lang) => ({ lang }));
 }
 
 export async function generateMetadata(
-  props: { params: Promise<{ lang: string }>; searchParams?: Promise<{ category?: string }> }
+  props: { params: Promise<{ lang: string }> }
 ): Promise<Metadata> {
-  const searchParams = await props.searchParams;
   const params = await props.params;
   const { lang } = params;
-  const category = searchParams?.category;
-
-  const categoryTitles: Record<string, Record<string, string>> = {
-    solar: {
-      en: 'Solar Energy Systems | HousePlus Wholesale — Solar Panels, Inverters & Batteries',
-      es: 'Sistemas de Energía Solar | HousePlus Mayorista — Paneles Solares, Inversores y Baterías',
-      de: 'Solarenergiesysteme | HousePlus Großhandel — Solarmodule, Wechselrichter und Batterien',
-      fr: 'Systèmes d\'Énergie Solaire | HousePlus Gros — Panneaux Solaires, Onduleurs et Batteries',
-      ar: 'أنظمة الطاقة الشمسية | هاوس بلس بالجملة — الألواح الشمسية والمحولات والبطاريات',
-    },
-    'home-appliances': {
-      en: 'Home Appliances | HousePlus Wholesale — Kitchen & Household Appliances',
-      es: 'Electrodomésticos | HousePlus Mayorista — Electrodomésticos de Cocina y Hogar',
-      de: 'Haushaltsgeräte | HousePlus Großhandel — Küchen- und Haushaltsgeräte',
-      fr: 'Appareils Électroménagers | HousePlus Gros — Appareils de Cuisine et Menagers',
-      ar: 'أجهزة منزلية | هاوس بلس بالجملة — أجهزة المطبخ والمنزل',
-    },
-    '3c-electronics': {
-      en: '3C Electronics | HousePlus Wholesale — Digital Gadgets & Accessories',
-      es: 'Electrónica 3C | HousePlus Mayorista — Gadgets Digitales y Accesorios',
-      de: '3C-Elektronik | HousePlus Großhandel — Digitale Gadgets und Zubehör',
-      fr: 'Électronique 3C | HousePlus Gros — Gadgets Numériques et Accessoires',
-      ar: 'إلكترونيات 3C | هاوس بلس بالجملة — الأجهزة الرقمية والإكسسوارات',
-    },
-  };
-
-  const categoryDescriptions: Record<string, Record<string, string>> = {
-    solar: {
-      en: 'Explore HousePlus solar panels, MPPT charge controllers, inverters, lithium batteries and portable power stations. Request product documentation and a tailored wholesale quotation for your market.',
-      es: 'Explore paneles solares, controladores MPPT, inversores, baterías de litio y estaciones de energía portátiles de HousePlus. Solicite documentación del producto y una cotización mayorista adaptada a su mercado.',
-      de: 'Entdecken Sie Solarmodule, MPPT-Laderegler, Wechselrichter, Lithium-Batterien und tragbare Kraftwerke von HousePlus. Fordern Sie Produktunterlagen und ein passendes Großhandelsangebot für Ihren Markt an.',
-      fr: 'Découvrez les panneaux solaires, contrôleurs MPPT, onduleurs, batteries lithium et stations électriques portables HousePlus. Demandez la documentation produit et un devis de gros adapté à votre marché.',
-      ar: 'استكشف الألواح الشمسية ووحدات تحكم MPPT والمحولات وبطاريات الليثيوم ومحطات الطاقة المحمولة من هاوس بلس. اطلب وثائق المنتج وعرض أسعار بالجملة مناسبًا لسوقك.',
-    },
-    'home-appliances': {
-      en: 'Explore HousePlus kitchen and household appliances, including air fryers, electric kettles, induction cooktops and toasters. Request product documentation and a wholesale quotation for your requirements.',
-      es: 'Explore los electrodomésticos de cocina y hogar de HousePlus, incluidas freidoras de aire, hervidores eléctricos, placas de inducción y tostadoras. Solicite documentación del producto y una cotización mayorista según sus requisitos.',
-      de: 'Entdecken Sie Küchen- und Haushaltsgeräte von HousePlus, darunter Heißluftfritteusen, Wasserkocher, Induktionskochfelder und Toaster. Fordern Sie Produktunterlagen und ein Großhandelsangebot für Ihre Anforderungen an.',
-      fr: 'Découvrez les appareils de cuisine et du foyer HousePlus, notamment les friteuses à air, bouilloires électriques, plaques à induction et grille-pains. Demandez la documentation produit et un devis de gros selon vos besoins.',
-      ar: 'استكشف أجهزة المطبخ والمنزل من هاوس بلس، بما في ذلك مقالي الهواء والغلايات الكهربائية ومواقد الحث والمحمصات. اطلب وثائق المنتج وعرض أسعار بالجملة وفقًا لمتطلباتك.',
-    },
-    '3c-electronics': {
-      en: 'Explore HousePlus 3C electronics, including Bluetooth earphones, smart watches, power banks, portable SSDs and USB cables. Request product documentation and a wholesale quotation for your requirements.',
-      es: 'Explore la electrónica 3C de HousePlus, incluidos auriculares Bluetooth, relojes inteligentes, baterías externas, SSD portátiles y cables USB. Solicite documentación del producto y una cotización mayorista según sus requisitos.',
-      de: 'Entdecken Sie 3C-Elektronik von HousePlus, darunter Bluetooth-Kopfhörer, Smartwatches, Powerbanks, tragbare SSDs und USB-Kabel. Fordern Sie Produktunterlagen und ein Großhandelsangebot für Ihre Anforderungen an.',
-      fr: 'Découvrez l’électronique 3C HousePlus, notamment les écouteurs Bluetooth, montres intelligentes, batteries externes, SSD portables et câbles USB. Demandez la documentation produit et un devis de gros selon vos besoins.',
-      ar: 'استكشف إلكترونيات 3C من هاوس بلس، بما في ذلك سماعات بلوتوث والساعات الذكية وبنوك الطاقة ووحدات SSD المحمولة وكابلات USB. اطلب وثائق المنتج وعرض أسعار بالجملة وفقًا لمتطلباتك.',
-    },
-  };
 
   const baseTitles: Record<string, string> = {
     en: 'Products | HousePlus — Solar, Appliances & Electronics',
@@ -102,23 +56,19 @@ export async function generateMetadata(
     ar: 'تصفح كتالوج هاوس بلس لأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. اطلب وثائق المنتج ونطاق OEM/ODM وعرض أسعار بالجملة وفقًا لمتطلباتك.',
   };
 
-  const isValidCategory = category && Object.keys(categoryTitles).includes(category);
-  const title = isValidCategory ? categoryTitles[category][lang] || categoryTitles[category].en : baseTitles[lang] || baseTitles.en;
-  const description = isValidCategory ? categoryDescriptions[category][lang] || categoryDescriptions[category].en : baseDescriptions[lang] || baseDescriptions.en;
+  const title = baseTitles[lang] || baseTitles.en;
+  const description = baseDescriptions[lang] || baseDescriptions.en;
 
-  const categoryToProductType: Record<string, string> = { solar: 'solar', 'home-appliances': 'appliances', '3c-electronics': 'electronics' };
-  const featuredProduct = Object.values(PRODUCT_DATA).find((product) => !category || product.category === categoryToProductType[category]) || Object.values(PRODUCT_DATA)[0];
+  const featuredProduct = Object.values(PRODUCT_DATA)[0];
   const imageDimensions = r2ImageDimensions(featuredProduct?.coverImage, { width: 900, height: 675 });
 
   const langAlternates: Record<string, string> = {};
   for (const locale of LOCALES) {
-    langAlternates[locale] = isValidCategory ? `${BASE_URL}/${locale}/products/?category=${category}` : `${BASE_URL}/${locale}/products/`;
+    langAlternates[locale] = `${BASE_URL}/${locale}/products/`;
   }
-  langAlternates['x-default'] = isValidCategory ? `${BASE_URL}/en/products/?category=${category}` : `${BASE_URL}/en/products/`;
+  langAlternates['x-default'] = `${BASE_URL}/en/products/`;
 
-  const canonicalUrl = isValidCategory
-    ? `${BASE_URL}/${lang}/products/?category=${category}`
-    : `${BASE_URL}/${lang}/products/`;
+  const canonicalUrl = `${BASE_URL}/${lang}/products/`;
 
   return {
     title,
