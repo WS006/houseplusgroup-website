@@ -57,21 +57,21 @@ Use the following facts only when referring to HousePlus as stated on the websit
 
 HousePlus supplies solar panels, inverters, battery energy storage, charge controllers, portable power stations, solar lighting and off-grid accessories for wholesale, project and private-label buyers.
 
-- Product catalog: https://www.houseplus-ch.com/en/products/?category=solar
+- Product catalog (solar range): https://www.houseplus-ch.com/en/products/
 - Solar sourcing knowledge: https://www.houseplus-ch.com/en/news/how-to-choose-wholesale-solar-panels/
 
 ### Home appliances
 
 HousePlus supplies energy-efficient kitchen and household appliances, including induction cooktops, air fryers, electric kettles, toasters and related appliances for international wholesale and OEM/ODM programs.
 
-- Product catalog: https://www.houseplus-ch.com/en/products/?category=home-appliances
+- Product catalog (appliances range): https://www.houseplus-ch.com/en/products/
 - Appliance sourcing knowledge: https://www.houseplus-ch.com/en/news/kitchen-appliances-wholesale-guide/
 
 ### 3C electronics
 
 HousePlus supplies consumer electronics and accessories including TWS earphones, smart watches, power banks, portable storage and USB-C accessories for B2B distribution and private-label programs.
 
-- Product catalog: https://www.houseplus-ch.com/en/products/?category=3c-electronics
+- Product catalog (3C range): https://www.houseplus-ch.com/en/products/
 - 3C sourcing knowledge: https://www.houseplus-ch.com/en/news/tws-earphones-oem-manufacturing-guide/
 
 ### B2B services
