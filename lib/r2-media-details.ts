@@ -1915,3 +1915,14 @@ export function r2ImageDimensions(url?: string, fallback = { width: 1200, height
   const detail = getR2MediaDetails(url);
   return { width: detail?.width || fallback.width, height: detail?.height || fallback.height };
 }
+
+/**
+ * Real MIME type of a media asset as published by the CDN.
+ *
+ * Media URLs carry no file extension, so guessing from the URL always degraded
+ * to image/jpeg even though the CDN serves WebP (see P0-4). Always prefer the
+ * registry value; only fall back when the asset is unknown.
+ */
+export function r2MediaContentType(url?: string, fallback = 'image/webp'): string {
+  return getR2MediaDetails(url)?.contentType || fallback;
+}

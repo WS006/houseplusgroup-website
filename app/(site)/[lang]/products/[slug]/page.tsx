@@ -6,7 +6,7 @@ import { PRODUCT_DATA, CATEGORY_CONFIG, ProductData } from '@/lib/product-data';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema, generateProductHowToSchema } from '@/lib/schema-generator';
-import { r2ImageDimensions } from '@/lib/r2-media-details';
+import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
 import { getLocalizedProduct } from '@/lib/localized-content';
 import { getOGLocale } from '@/lib/seo-utils';
 import InquiryForm from '@/components/InquiryForm';
@@ -202,7 +202,7 @@ export async function generateMetadata(
         width: imageDimensions.width,
         height: imageDimensions.height,
         alt: product.imageAlt || name,
-        type: product.coverImage.endsWith('.png/') ? 'image/png' : 'image/jpeg',
+        type: r2MediaContentType(product.coverImage),
       }] : [],
       type: 'website',
     },

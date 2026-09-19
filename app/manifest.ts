@@ -17,12 +17,12 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: 'https://images.houseplus-ch.com/media/houseplus-group-brand-icon/',
         sizes: '32x32',
-        type: 'image/png',
+        type: 'image/webp',
       },
       {
         src: 'https://images.houseplus-ch.com/media/houseplus-apple-touch-icon/',
         sizes: '180x180',
-        type: 'image/png',
+        type: 'image/webp',
       },
       {
         // houseplus-android-chrome-192x192 / -512x512 currently return 404 from

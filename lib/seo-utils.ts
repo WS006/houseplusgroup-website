@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { Locale } from './i18n-config';
-import { getR2MediaDetails, r2ImageDimensions } from './r2-media-details';
+import { getR2MediaDetails, r2ImageDimensions, r2MediaContentType } from './r2-media-details';
 
 export interface SEOConfig {
   title: string;
@@ -80,7 +80,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
   const imageDetails = getR2MediaDetails(imageUrl);
   const imageDimensions = r2ImageDimensions(imageUrl);
   const imageAlt = config.imageAlt || imageDetails?.alt || config.title;
-  const imageType = imageDetails?.contentType || (imageUrl.endsWith('.png') ? 'image/png' : imageUrl.endsWith('.webp') ? 'image/webp' : 'image/jpeg');
+  const imageType = r2MediaContentType(imageUrl);
   const seoTitle = clampOnWordBoundary(config.title, TITLE_MAX);
   const seoDescription = clampOnWordBoundary(config.description, DESCRIPTION_MAX);
 
