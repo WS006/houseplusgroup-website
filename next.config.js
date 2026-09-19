@@ -74,6 +74,34 @@ const ENTRY_SECTIONS = {
 };
 
 /**
+ * The historical /regions/eu alias needs a fully-localized destination.
+ *
+ * Handled by a generated rule rather than the middleware because the middleware
+ * only knew the English section name, so /de/regions/eu/ walked a 5-hop chain:
+ *   /de/regions/eu/ -> /de/regionen/eu -> /de/regionen/eu/
+ *   -> /de/regions/europe -> /de/regions/europe/ -> /de/regionen/europa/
+ * Emitting the final localized URL resolves it in a single 301.
+ */
+function europeAliasRedirects() {
+  const out = [];
+  const europeEntries = (entrySlugs.regions && entrySlugs.regions.europe) || {};
+  for (const lang of LOCALIZED_LOCALES) {
+    const section = localizedSlugs.regions && localizedSlugs.regions[lang];
+    const entry = europeEntries[lang];
+    if (!section || !entry) continue;
+    if (section === 'regions' && entry === 'europe') continue; // nothing to translate
+    for (const legacy of ['eu', 'europe']) {
+      out.push({
+        source: `/${lang}/regions/${legacy}`,
+        destination: `/${lang}/${section}/${entry}/`,
+        permanent: true,
+      });
+    }
+  }
+  return out;
+}
+
+/**
  * Localized entry URL -> internal English route.
  * e.g. /es/productos/panel-solar-500w -> /es/products/solar-panel-500w
  * MUST be registered before the section-level wildcard rewrites.
@@ -237,6 +265,9 @@ const nextConfig = {
       // P2-9: legacy English slugs 301 to their localized equivalents so
       // existing links and rankings carry over. Appended last so the specific
       // aliases above keep priority.
+      // Must precede the generic rules: it resolves the legacy Europe alias to
+      // its final localized URL in one hop instead of a 5-hop chain.
+      ...europeAliasRedirects(),
       ...entryRedirects(),
       ...localizedRedirects(),
     ];
