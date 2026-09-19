@@ -7,6 +7,7 @@ import SEOHead from '@/components/SEOHead';
 import { generateImageObjectSchema, generateWebPageSchema } from '@/lib/schema-generator';
 import { getR2MediaDetails, r2ImageDimensions } from '@/lib/r2-media-details';
 import { getCachedStory, getCachedStories } from '@/lib/storyblok-cached';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const PAGE_IMAGE_BY_TYPE: Record<string, string> = {
@@ -385,7 +386,7 @@ export default async function CatchAllPage({ params }: { params: Promise<{ lang:
               const imageTitle = mediaDetails?.title || s.content?.title || s.name;
 
               return (
-                <a key={s.uuid} href={`/${lang}/${s.full_slug}`} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
+                <a key={s.uuid} href={localizedHref(lang, `/${s.full_slug}`)} className="group flex flex-col h-full bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-blue-500 transition-all duration-500">
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <Image src={productImg} alt={imageAlt} title={imageTitle} width={imageDimensions.width} height={imageDimensions.height} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" decoding="async"  sizes="100vw" />
                     <div className="absolute top-6 left-6">
@@ -408,7 +409,7 @@ export default async function CatchAllPage({ params }: { params: Promise<{ lang:
           <div className="text-center py-20">
             <h2 className="text-3xl font-black text-slate-900 mb-4">Explore HousePlus Solutions</h2>
             <p className="text-slate-500 mb-8">Our professional product catalog is being updated. Please contact us for details.</p>
-            <a href={`/${lang}/contact`} className="px-8 py-4 bg-blue-600 text-white font-black rounded-full uppercase tracking-widest text-sm">Contact HousePlus</a>
+            <a href={localizedHref(lang, '/contact')} className="px-8 py-4 bg-blue-600 text-white font-black rounded-full uppercase tracking-widest text-sm">Contact HousePlus</a>
           </div>
         )}
       </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const SITE_FOUNDING_YEAR = 2010;
 const CURRENT_YEAR = new Date().getFullYear();
@@ -254,13 +255,13 @@ export default function FooterEnhanced({ lang }: { lang: string }) {
             <ul className="space-y-2">
               {content.quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={`/${lang}${link.href}`} className="hover:text-white transition-colors text-sm">
+                  <Link href={localizedHref(lang, link.href)} className="hover:text-white transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href={`/${lang}/regions`} className="hover:text-white transition-colors text-sm font-semibold text-blue-400">
+                <Link href={localizedHref(lang, '/regions')} className="hover:text-white transition-colors text-sm font-semibold text-blue-400">
                   {lang === 'en' && '🌍 Regional Markets'}
                   {lang === 'es' && '🌍 Mercados Regionales'}
                   {lang === 'de' && '🌍 Regionale Märkte'}
@@ -283,7 +284,7 @@ export default function FooterEnhanced({ lang }: { lang: string }) {
             <ul className="space-y-2">
               {content.products.map((link) => (
                 <li key={link.href}>
-                  <Link href={`/${lang}${link.href}`} className="hover:text-white transition-colors text-sm">
+                  <Link href={localizedHref(lang, link.href)} className="hover:text-white transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -303,7 +304,7 @@ export default function FooterEnhanced({ lang }: { lang: string }) {
             <ul className="space-y-2 mb-6">
               {content.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={`/${lang}${link.href}`} className="hover:text-white transition-colors text-sm">
+                  <Link href={localizedHref(lang, link.href)} className="hover:text-white transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -361,14 +362,14 @@ export default function FooterEnhanced({ lang }: { lang: string }) {
               {content.copyright}
             </p>
             <div className="flex space-x-6">
-              <Link href={`/${lang}/privacy`} className="text-sm text-gray-400 hover:text-white transition-colors">
+              <Link href={localizedHref(lang, '/privacy')} className="text-sm text-gray-400 hover:text-white transition-colors">
                 {lang === 'en' && 'Privacy Policy'}
                 {lang === 'es' && 'Política de Privacidad'}
                 {lang === 'de' && 'Datenschutzrichtlinie'}
                 {lang === 'fr' && 'Politique de Confidentialité'}
                 {lang === 'ar' && 'سياسة الخصوصية'}
               </Link>
-              <Link href={`/${lang}/contact`} className="text-sm text-gray-400 hover:text-white transition-colors">
+              <Link href={localizedHref(lang, '/contact')} className="text-sm text-gray-400 hover:text-white transition-colors">
                 {lang === 'en' && 'Contact'}
                 {lang === 'es' && 'Contacto'}
                 {lang === 'de' && 'Kontakt'}

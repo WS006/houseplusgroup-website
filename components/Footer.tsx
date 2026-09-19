@@ -3,6 +3,7 @@
 import Image from 'next/image';
 
 import Link from 'next/link';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const SITE_FOUNDING_YEAR = 2010;
 const CURRENT_YEAR = new Date().getFullYear();
@@ -261,7 +262,7 @@ export default function Footer({ lang }: { lang: string }) {
             <ul className="space-y-4">
               {content.quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={`/${lang}${link.href}`} className="hover:text-white transition-colors text-sm">
+                  <Link href={localizedHref(lang, link.href)} className="hover:text-white transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -275,7 +276,7 @@ export default function Footer({ lang }: { lang: string }) {
             <ul className="space-y-4">
               {content.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={`/${lang}${link.href}`} className="hover:text-white transition-colors text-sm">
+                  <Link href={localizedHref(lang, link.href)} className="hover:text-white transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -306,10 +307,10 @@ export default function Footer({ lang }: { lang: string }) {
         <div className={`pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
           <p className="text-xs text-slate-500">{content.copyright}</p>
           <nav aria-label="Footer legal links" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <Link href={`/${lang}/sitemap-page`} className="text-xs text-slate-500 hover:text-white">{ui.sitemap}</Link>
-            <Link href={`/${lang}/privacy`} className="text-xs text-slate-500 hover:text-white">{ui.privacy}</Link>
-            <Link href={`/${lang}/terms`} className="text-xs text-slate-500 hover:text-white">{ui.terms}</Link>
-            <Link href={`/${lang}/cookie-policy`} className="text-xs text-slate-500 hover:text-white">{ui.cookies}</Link>
+            <Link href={localizedHref(lang, '/sitemap-page')} className="text-xs text-slate-500 hover:text-white">{ui.sitemap}</Link>
+            <Link href={localizedHref(lang, '/privacy')} className="text-xs text-slate-500 hover:text-white">{ui.privacy}</Link>
+            <Link href={localizedHref(lang, '/terms')} className="text-xs text-slate-500 hover:text-white">{ui.terms}</Link>
+            <Link href={localizedHref(lang, '/cookie-policy')} className="text-xs text-slate-500 hover:text-white">{ui.cookies}</Link>
           </nav>
         </div>
       </div>

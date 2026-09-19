@@ -4,6 +4,7 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -554,10 +555,10 @@ export default async function TeamPage(props: { params: Promise<{ lang: string }
               {t.cta.pre} <strong>HousePlus</strong> {t.cta.post}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`/${lang}/contact`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
+              <a href={localizedHref(lang, '/contact')} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
                 {t.cta.contact}
               </a>
-              <a href={`/${lang}/about-us`} className="px-8 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">
+              <a href={localizedHref(lang, '/about-us')} className="px-8 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">
                 {t.cta.learn}
               </a>
             </div>

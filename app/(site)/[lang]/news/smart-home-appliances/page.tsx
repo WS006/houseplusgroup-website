@@ -8,6 +8,7 @@ import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -338,7 +339,7 @@ export default async function SmartHomeAppliancesArticle(props: { params: Promis
               {lang === 'ar' && 'تقدم HousePlus مجموعة واسعة من الأجهزة المنزلية الذكية والموفرة للطاقة. اتصل بنا اليوم للاستفسارات بالجملة وخدمات OEM/ODM.'}
             </p>
             <Link
-              href={`/${lang}/contact`}
+              href={localizedHref(lang, '/contact')}
               className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
             >
               {lang === 'en' && 'Contact HousePlus'}

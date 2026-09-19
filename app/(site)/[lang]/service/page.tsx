@@ -5,6 +5,7 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -799,10 +800,10 @@ export default async function ServicePage(props: { params: Promise<{ lang: strin
               {t.ctaText.c}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">
+              <Link href={localizedHref(lang, '/contact')} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">
                 {t.ctaQuote}
               </Link>
-              <Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-700 text-white border border-blue-500 font-bold rounded-xl hover:bg-blue-800 transition-all hover:-translate-y-0.5">
+              <Link href={localizedHref(lang, '/products')} className="px-8 py-4 bg-blue-700 text-white border border-blue-500 font-bold rounded-xl hover:bg-blue-800 transition-all hover:-translate-y-0.5">
                 {t.ctaBrowse}
               </Link>
             </div>

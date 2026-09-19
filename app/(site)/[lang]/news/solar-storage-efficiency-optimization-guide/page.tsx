@@ -7,6 +7,7 @@ import { generateArticleSchema, generateFAQSchema, generateImageObjectSchema } f
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -510,14 +511,14 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
              'احصل على تصميم مخصص لنظام تخزين الطاقة الشمسية مع بطاريات LiFePO4. كفاءة 95%، أكثر من 6000 دورة، OEM/ODM متاح. الحد الأدنى للطلب من 100 وحدة.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={`/${lang}/products`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition-colors">
+            <Link href={localizedHref(lang, '/products')} className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition-colors">
               {lang === 'en' ? 'Explore Solar Products' :
                lang === 'es' ? 'Explorar Productos Solares' :
                lang === 'de' ? 'Solarprodukte entdecken' :
                lang === 'fr' ? 'Explorer les produits solaires' :
                'استكشف المنتجات الشمسية'}
             </Link>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+            <Link href={localizedHref(lang, '/contact')} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
               {lang === 'en' ? 'Request a Quote' :
                lang === 'es' ? 'Solicitar Presupuesto' :
                lang === 'de' ? 'Angebot anfordern' :
@@ -529,7 +530,7 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
       </section>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
-        <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
+        <Link href={localizedHref(lang, '/news')} className="text-blue-600 hover:text-blue-800 font-medium">
           {lang === 'en' ? '← Back to all News & Insights' :
            lang === 'es' ? '← Volver a todas las noticias y análisis' :
            lang === 'de' ? '← Zurück zu allen News und Insights' :

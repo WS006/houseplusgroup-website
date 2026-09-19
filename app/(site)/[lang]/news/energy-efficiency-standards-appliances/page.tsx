@@ -8,6 +8,7 @@ import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -308,7 +309,7 @@ export default async function ArticlePage(props: { params: Promise<{ lang: strin
               {lang === 'ar' && 'تأتي جميع منتجات HousePlus مع وثائق شهادات كاملة. تواصل معنا لطلب عينات المنتجات ونسخ الشهادات وأسعار الجملة.'}
             </p>
             <Link
-              href={`/${lang}/contact`}
+              href={localizedHref(lang, '/contact')}
               className="inline-block px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition"
             >
               {lang === 'en' && 'Request Certification Documents'}

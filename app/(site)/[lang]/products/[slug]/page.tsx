@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateProductSchema, generateFAQSchema, generateProductHowToSchema } from '@/lib/schema-generator';
 import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
-import { localizePath } from '@/lib/localized-slugs';
+import { localizePath, localizedHref } from '@/lib/localized-slugs';
 import { getLocalizedProduct } from '@/lib/localized-content';
 import { getOGLocale } from '@/lib/seo-utils';
 import InquiryForm from '@/components/InquiryForm';
@@ -440,7 +440,7 @@ export default async function ProductDetailPage(
                 {ui.requestQuote}
               </Link>
               <Link
-                href={`/${lang}/products`}
+                href={localizedHref(lang, '/products')}
                 className="flex-1 text-center px-6 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5"
               >
                 ← {ui.backProducts}

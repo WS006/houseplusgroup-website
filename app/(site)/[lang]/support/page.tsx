@@ -5,6 +5,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -795,7 +796,7 @@ export default async function SupportPage(props: { params: Promise<{ lang: strin
             <h2 className="text-4xl md:text-5xl font-black mb-6">{t.ctaTitle}</h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-medium">{t.ctaDesc}</p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link href={`/${lang}/contact`} className="px-12 py-5 bg-white text-blue-600 rounded-2xl font-black text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
+              <Link href={localizedHref(lang, '/contact')} className="px-12 py-5 bg-white text-blue-600 rounded-2xl font-black text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
                 {t.ctaButton}
               </Link>
               <Link href="https://wa.me/8615578119543" className="px-12 py-5 bg-blue-700 text-white rounded-2xl font-black text-xl hover:bg-blue-800 transition-all hover:-translate-y-1">

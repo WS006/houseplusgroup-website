@@ -4,6 +4,7 @@ import type { TouchEvent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { localizedHref } from '@/lib/localized-slugs';
 
 interface CarouselItem {
   _uid: string;
@@ -132,7 +133,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
   };
 
   const formatLink = (link: any) => {
-    if (!link) return `/${lang}/products`;
+    if (!link) return localizedHref(lang, '/products');
     let url = link.cached_url || link.url || '';
     
     if (url.startsWith('http')) {
@@ -144,10 +145,10 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
     }
     
     if (url.startsWith('/')) {
-      return `/${lang}${url}`;
+      return localizedHref(lang, url);
     }
     
-    return `/${lang}/${url}`;
+    return localizedHref(lang, url);
   };
 
   return (
@@ -201,7 +202,7 @@ export default function Carousel({ items, autoPlayInterval = 5000, lang = 'en' }
                     {item.button_text}
                   </Link>
                   <Link
-                    href={`/${lang}/contact`}
+                    href={localizedHref(lang, '/contact')}
                     className="px-8 py-4 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white border border-white/40 font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm uppercase tracking-wide"
                   >
                     {copy.quote}

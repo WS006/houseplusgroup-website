@@ -7,6 +7,7 @@ import { PRODUCT_DATA } from '@/lib/product-data';
 import { blogPosts } from '@/lib/blog-data';
 import { getLocalizedStaticNewsEntry, staticNewsFeedEntries } from '@/lib/static-news-feed';
 import { getLocalizedArticle, getLocalizedProduct } from '@/lib/localized-content';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -267,7 +268,7 @@ export default async function SitemapPage(props: SitemapPageProps) {
           {/* Products */}
           <SitemapSection title={t.sections.products} icon="⚡">
             <li>
-              <Link href={`/${lang}/products`} className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+              <Link href={localizedHref(lang, '/products')} className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
                 <svg className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -277,7 +278,7 @@ export default async function SitemapPage(props: SitemapPageProps) {
             {products.map((product) => (
               <li key={product.slug}>
                 <Link
-                  href={`/${lang}/products/${product.slug}`}
+                  href={localizedHref(lang, `/products/${product.slug}`)}
                   className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 hover:underline transition-colors"
                 >
                   <svg className="w-3 h-3 text-slate-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -292,7 +293,7 @@ export default async function SitemapPage(props: SitemapPageProps) {
           {/* News */}
           <SitemapSection title={t.sections.news} icon="📰">
             <li>
-              <Link href={`/${lang}/news`} className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+              <Link href={localizedHref(lang, '/news')} className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
                 <svg className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -302,7 +303,7 @@ export default async function SitemapPage(props: SitemapPageProps) {
             {news.map((article) => (
               <li key={article.slug}>
                 <Link
-                  href={`/${lang}/news/${article.slug}`}
+                  href={localizedHref(lang, `/news/${article.slug}`)}
                   className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 hover:underline transition-colors"
                 >
                   <svg className="w-3 h-3 text-slate-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -323,7 +324,7 @@ export default async function SitemapPage(props: SitemapPageProps) {
             ].map((item) => (
               <li key={item.slug}>
                 <Link
-                  href={`/${lang}/${item.slug}`}
+                  href={localizedHref(lang, `/${item.slug}`)}
                   className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >
                   <svg className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

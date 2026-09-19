@@ -5,6 +5,7 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'] as const;
 type Lang = (typeof validLangs)[number];
@@ -245,7 +246,7 @@ export default async function CaseStudiesPage(props: { params: Promise<{ lang: s
             <p className="text-slate-600 max-w-3xl mb-6">{productDiscoveryCopy[lang].description}</p>
             <nav aria-label={productDiscoveryCopy[lang].title} className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {productDiscoveryCopy[lang].links.map((link) => (
-                <Link key={link.href} href={`/${lang}${link.href}`} className="rounded-xl border border-blue-100 bg-blue-50 px-5 py-4 font-semibold text-blue-800 hover:bg-blue-100 transition-colors">
+                <Link key={link.href} href={localizedHref(lang, link.href)} className="rounded-xl border border-blue-100 bg-blue-50 px-5 py-4 font-semibold text-blue-800 hover:bg-blue-100 transition-colors">
                   {link.label} <span aria-hidden="true">→</span>
                 </Link>
               ))}
@@ -253,7 +254,7 @@ export default async function CaseStudiesPage(props: { params: Promise<{ lang: s
           </div>
         </section>
         <section className="py-16 px-4 bg-slate-50"><div className="max-w-6xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><div><h2 className="text-3xl font-black text-slate-900 mb-6">{copy.trustTitle}</h2><div className="space-y-4">{copy.trustItems.map((item) => <div key={item.title} className="flex gap-4 p-4 bg-white rounded-xl border border-slate-100"><span className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">✓</span><div><p className="font-bold text-slate-900 text-sm">{item.title}</p><p className="text-slate-600 text-sm mt-0.5">{item.desc}</p></div></div>)}</div></div><div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100"><Image src="https://images.houseplus-ch.com/media/houseplus-site-case-studies-logistics-review/" alt={copy.imageAlt} width={1200} height={800} className="object-cover" loading="lazy" title={copy.imageAlt} decoding="async"  sizes="100vw" /></div></div></div></section>
-        <section className="py-16 px-4 bg-blue-600 text-white"><div className="max-w-3xl mx-auto text-center"><h2 className="text-3xl font-black mb-4">{copy.ctaTitle}</h2><p className="text-blue-100 mb-8 leading-relaxed">{copy.ctaDescription}</p><div className="flex flex-wrap justify-center gap-4"><Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">{copy.quote}</Link><Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-700 text-white border border-blue-500 font-bold rounded-xl hover:bg-blue-800 transition-all hover:-translate-y-0.5">{copy.browse}</Link></div></div></section>
+        <section className="py-16 px-4 bg-blue-600 text-white"><div className="max-w-3xl mx-auto text-center"><h2 className="text-3xl font-black mb-4">{copy.ctaTitle}</h2><p className="text-blue-100 mb-8 leading-relaxed">{copy.ctaDescription}</p><div className="flex flex-wrap justify-center gap-4"><Link href={localizedHref(lang, '/contact')} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5">{copy.quote}</Link><Link href={localizedHref(lang, '/products')} className="px-8 py-4 bg-blue-700 text-white border border-blue-500 font-bold rounded-xl hover:bg-blue-800 transition-all hover:-translate-y-0.5">{copy.browse}</Link></div></div></section>
       </main>
     </>
   );

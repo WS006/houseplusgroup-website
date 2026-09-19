@@ -6,6 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getCompanyFacts } from '@/lib/company-facts';
+import { localizedHref } from '@/lib/localized-slugs';
 
 export const dynamicParams = false;
 
@@ -220,8 +221,8 @@ export default async function BrandPage(props: { params: Promise<{ lang: string 
               <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">{current.headline}</h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">{current.subtitle}</p>
               <div className={`flex flex-wrap gap-4 ${isRTL ? 'justify-end' : ''}`}>
-                <Link href={`/${lang}/products`} className="px-7 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">{current.browse}</Link>
-                <Link href={`/${lang}/contact`} className="px-7 py-3.5 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">{current.contact}</Link>
+                <Link href={localizedHref(lang, '/products')} className="px-7 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">{current.browse}</Link>
+                <Link href={localizedHref(lang, '/contact')} className="px-7 py-3.5 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">{current.contact}</Link>
               </div>
             </div>
             <figure className="relative min-h-80 h-96 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
@@ -241,7 +242,7 @@ export default async function BrandPage(props: { params: Promise<{ lang: string 
         ].map((item) => <div key={item.title} className="bg-white border border-slate-100 rounded-2xl p-7 shadow-sm"><h2 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h2><p className="text-slate-600 leading-relaxed">{item.description}</p></div>)}</div></div></section>
         <section className="py-16 px-4"><div className="max-w-6xl mx-auto"><div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{current.categoriesTitle}</h2><p className="text-slate-600 max-w-2xl mx-auto">{current.categoriesDescription}</p></div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{current.categoryItems.map((item) => <div key={item.title} className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm"><h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3><p className="text-slate-600 text-sm leading-relaxed">{item.description}</p></div>)}</div></div></section>
         <section className="py-16 px-4 bg-blue-50"><div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{current.supportTitle}</h2><p className="text-slate-600 leading-relaxed">{current.supportDescription}</p></div></section>
-        <section className="py-20 px-4"><div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{current.ctaTitle}</h2><p className="text-slate-600 mb-8 leading-relaxed">{current.ctaDescription}</p><div className="flex flex-wrap justify-center gap-4"><Link href={`/${lang}/about-us`} className="px-7 py-3.5 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all">{current.about}</Link><Link href={`/${lang}/products`} className="px-7 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all">{current.browse}</Link><Link href={`/${lang}/contact`} className="px-7 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all">{current.contact}</Link></div></div></section>
+        <section className="py-20 px-4"><div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">{current.ctaTitle}</h2><p className="text-slate-600 mb-8 leading-relaxed">{current.ctaDescription}</p><div className="flex flex-wrap justify-center gap-4"><Link href={localizedHref(lang, '/about-us')} className="px-7 py-3.5 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all">{current.about}</Link><Link href={localizedHref(lang, '/products')} className="px-7 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all">{current.browse}</Link><Link href={localizedHref(lang, '/contact')} className="px-7 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all">{current.contact}</Link></div></div></section>
       </main>
     </>
   );

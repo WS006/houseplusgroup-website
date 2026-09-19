@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { translations } from '@/lib/translations';
+import { localizePath, localizedHref } from '@/lib/localized-slugs';
 
 interface BreadcrumbProps {
   lang: string;
@@ -50,7 +51,7 @@ export default function Breadcrumb({ lang, slug, customLabel, labelOverrides }: 
 
   pathSegments.forEach((segment, index) => {
     const pathSoFar = pathSegments.slice(0, index + 1).join('/');
-    const href = `/${lang}/${pathSoFar}`;
+    const href = `/${lang}/${localizePath(pathSoFar, lang)}`;
     const label = labelOverrides?.[segment] || pageLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     const isValidPage = validPages.has(segment) || index === pathSegments.length - 1;
     items.push({ label, href, isValidPage });

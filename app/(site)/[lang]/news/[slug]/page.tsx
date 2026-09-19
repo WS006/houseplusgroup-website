@@ -10,7 +10,7 @@ import { generateArticleSchema, generateFAQSchema, generateVideoObjectSchema } f
 import { blogPosts, blogSlugs } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data/types';
 import { getLocalizedArticle } from '@/lib/localized-content';
-import { localizePath } from '@/lib/localized-slugs';
+import { localizePath, localizedHref } from '@/lib/localized-slugs';
 import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-semantics';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
@@ -285,7 +285,7 @@ export default async function BlogPostPage(
                 {ui.quoteDescription}
               </p>
               <Link
-                href={`/${lang}/contact`}
+                href={localizedHref(lang, '/contact')}
                 className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
               >
                 {ui.contactHousePlus}
@@ -420,7 +420,7 @@ export default async function BlogPostPage(
                 {ui.customQuoteDescription}
               </p>
               <Link
-                href={`/${lang}/contact`}
+                href={localizedHref(lang, '/contact')}
                 className="inline-block w-full text-center px-6 py-2.5 bg-white text-blue-700 rounded-lg font-semibold hover:bg-blue-50 transition"
               >
                 {ui.contactUs}
@@ -433,7 +433,7 @@ export default async function BlogPostPage(
       {/* Back to News */}
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
         <Link
-          href={`/${lang}/news`}
+          href={localizedHref(lang, '/news')}
           className="text-blue-600 hover:text-blue-800 font-medium"
         >
           &larr; {ui.backToNews}

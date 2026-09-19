@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -181,10 +182,10 @@ export default async function LangHome(props: { params: Promise<{ lang: string }
               {copy.description}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href={`/${lang}/products`} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
+              <Link href={localizedHref(lang, '/products')} className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5">
                 {copy.browseProducts}
               </Link>
-              <Link href={`/${lang}/contact`} className="px-8 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">
+              <Link href={localizedHref(lang, '/contact')} className="px-8 py-4 bg-white text-slate-800 border-2 border-slate-200 font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 transition-all hover:-translate-y-0.5">
                 {copy.requestQuote}
               </Link>
             </div>
@@ -211,7 +212,7 @@ export default async function LangHome(props: { params: Promise<{ lang: string }
               description={industry.description}
               image={{ filename: ['https://images.houseplus-ch.com/media/houseplus-solar-panel-1-wholesale/', 'https://images.houseplus-ch.com/media/houseplus-home-home-appliances-collection-b/', 'https://images.houseplus-ch.com/media/houseplus-headphone-over-ear-wholesale/'][index], alt: industry.title }}
               industry_type={['solar', 'appliances', 'electronics'][index] as 'solar' | 'appliances' | 'electronics'}
-              button_link={`/${lang}/products?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
+              button_link={`${localizedHref(lang, '/products')}?category=${['solar', 'home-appliances', '3c-electronics'][index]}`}
               button_text={industry.buttonText}
             />
           ))}

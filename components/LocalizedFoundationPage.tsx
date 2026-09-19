@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { FoundationLocale, FoundationPageSlug, foundationPageCopy } from '@/lib/foundation-page-copy';
 import { getCompanyFacts } from '@/lib/company-facts';
+import { localizedHref } from '@/lib/localized-slugs';
 
 type Props = { slug: FoundationPageSlug; lang: FoundationLocale };
 
@@ -25,8 +26,8 @@ export default function LocalizedFoundationPage({ slug, lang }: Props) {
           <h1 className="text-3xl font-black leading-tight text-slate-900 md:text-5xl">{heading}</h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">{body}</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link href={`/${lang}/products`} className="rounded-xl bg-blue-600 px-7 py-3.5 font-bold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700">{action.products}</Link>
-            <Link href={`/${lang}/contact`} className="rounded-xl border-2 border-slate-200 bg-white px-7 py-3.5 font-bold text-slate-800 transition hover:border-blue-400 hover:text-blue-700">{action.contact}</Link>
+            <Link href={localizedHref(lang, '/products')} className="rounded-xl bg-blue-600 px-7 py-3.5 font-bold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700">{action.products}</Link>
+            <Link href={localizedHref(lang, '/contact')} className="rounded-xl border-2 border-slate-200 bg-white px-7 py-3.5 font-bold text-slate-800 transition hover:border-blue-400 hover:text-blue-700">{action.contact}</Link>
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-slate-500">{action.note}</p>
         </div>

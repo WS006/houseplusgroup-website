@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SEOHead from '@/components/SEOHead';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generatePersonSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -393,7 +394,7 @@ export default async function AuthorPage(props: { params: Promise<{ lang: string
                 <a href="tel:+8615578119543" className="px-5 py-2.5 bg-white/15 text-white border border-white/30 rounded-xl font-bold text-sm hover:bg-white/25 transition-colors">
                   +86 155 7811 9543
                 </a>
-                <Link href={`/${lang}/news`} className="px-5 py-2.5 bg-white/15 text-white border border-white/30 rounded-xl font-bold text-sm hover:bg-white/25 transition-colors">
+                <Link href={localizedHref(lang, '/news')} className="px-5 py-2.5 bg-white/15 text-white border border-white/30 rounded-xl font-bold text-sm hover:bg-white/25 transition-colors">
                   {t.viewAllArticles}
                 </Link>
               </div>

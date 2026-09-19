@@ -4,6 +4,7 @@ import SEOHead from '@/components/SEOHead';
 import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -400,7 +401,7 @@ export default async function FAQPage(props: { params: Promise<{ lang: string }>
             </p>
             <div className="mt-6 flex flex-wrap justify-center items-center gap-6 text-sm text-slate-500">
               <span className="flex items-center gap-2">
-                👤 <a href={`/${lang}/author/jack-hu`} className="text-blue-600 hover:text-blue-700 font-semibold">{ui.reviewed}</a>
+                👤 <a href={localizedHref(lang, '/author/jack-hu')} className="text-blue-600 hover:text-blue-700 font-semibold">{ui.reviewed}</a>
               </span>
               <span className="text-slate-300">·</span>
               <span className="text-emerald-600 font-semibold">
@@ -516,7 +517,7 @@ export default async function FAQPage(props: { params: Promise<{ lang: string }>
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">{ui.questions}</h2>
             <p className="text-slate-400 mb-8">{ui.contactText}</p>
-            <a href={`/${lang}/contact`} className="inline-block px-10 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">
+            <a href={localizedHref(lang, '/contact')} className="inline-block px-10 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors">
               {ui.contact}
             </a>
           </div>

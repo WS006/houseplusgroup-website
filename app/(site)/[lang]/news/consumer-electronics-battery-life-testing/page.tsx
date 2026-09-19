@@ -7,6 +7,7 @@ import { generateArticleSchema, generateFAQSchema, generateImageObjectSchema } f
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -408,14 +409,14 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
              'إلكترونيات 3C بالجملة لـ B2B بجودة بطارية مختبرة. 80% سعة بعد 500 دورة، معتمدة UL/IEC، علامة تجارية مخصصة OEM/ODM. الحد الأدنى للطلب من 100 وحدة.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={`/${lang}/products`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-700 font-bold rounded-full hover:bg-orange-50 transition-colors">
+            <Link href={localizedHref(lang, '/products')} className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-700 font-bold rounded-full hover:bg-orange-50 transition-colors">
               {lang === 'en' ? 'Browse 3C Products' :
                lang === 'es' ? 'Explorar Productos 3C' :
                lang === 'de' ? '3C-Produkte durchsuchen' :
                lang === 'fr' ? 'Parcourir les produits 3C' :
                'تصفح منتجات 3C'}
             </Link>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+            <Link href={localizedHref(lang, '/contact')} className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
               {lang === 'en' ? 'Request OEM Samples' :
                lang === 'es' ? 'Solicitar Muestras OEM' :
                lang === 'de' ? 'OEM-Muster anfordern' :
@@ -427,7 +428,7 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
       </section>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
-        <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
+        <Link href={localizedHref(lang, '/news')} className="text-blue-600 hover:text-blue-800 font-medium">
           {lang === 'en' ? '← Back to all News & Insights' :
            lang === 'es' ? '← Volver a todas las noticias y análisis' :
            lang === 'de' ? '← Zurück zu allen News und Insights' :

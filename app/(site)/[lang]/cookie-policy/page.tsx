@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { cookiePolicyLocales } from '@/lib/localized-content/cookie-policy';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -178,13 +179,13 @@ Business Hours: Monday – Saturday, 9:00 AM – 6:00 PM (GMT+8)`,
           <p className="text-slate-600 mb-6">{localizedCopy?.relatedDescription || 'For more information about how HousePlus handles your data, please review our related policies.'}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`/${lang}/privacy`}
+              href={localizedHref(lang, '/privacy')}
               className="inline-block px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition"
             >
               {localizedCopy?.privacy || 'Privacy Policy'}
             </a>
             <a
-              href={`/${lang}/terms`}
+              href={localizedHref(lang, '/terms')}
               className="inline-block px-8 py-3 bg-slate-700 text-white rounded-xl font-semibold hover:bg-slate-800 transition"
             >
               {localizedCopy?.terms || 'Terms of Service'}

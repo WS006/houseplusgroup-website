@@ -67,6 +67,25 @@ export function localizePath(pathWithoutLang: string, lang: string): string {
     .join('/');
 }
 
+/**
+ * Build a localized internal href for a link.
+ * e.g. localizedHref('es', '/products') -> '/es/productos'
+ *
+ * Internal links must use the localized form, otherwise every navigation click
+ * bounces through a 308 before reaching the real page.
+ */
+export function localizedHref(lang: string, path?: string): string {
+  const raw = (path || '').trim();
+  if (!raw) return `/${lang}`;
+  // Only the path portion is localizable; keep any #anchor / ?query intact
+  // (nav entries use '/products#solar', and the whole string would otherwise
+  // fail the slug lookup and leak the English slug).
+  const match = raw.match(/^([^#?]*)([\s\S]*)$/);
+  const clean = (match?.[1] || '').replace(/^\/+|\/+$/g, '');
+  const suffix = match?.[2] || '';
+  return clean ? `/${lang}/${localizePath(clean, lang)}${suffix}` : `/${lang}${suffix}`;
+}
+
 /** Reverse: localized public segment -> English routing key. */
 export function englishSlug(segment: string, lang: string): string {
   if (lang === 'en') return segment;

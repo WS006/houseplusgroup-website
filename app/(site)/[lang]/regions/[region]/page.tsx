@@ -6,6 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { getRegionCopy, translateRegionTemplate } from '@/lib/localized-content';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const legacyRegionAliases: Record<string, string> = { eu: 'europe' };
@@ -262,7 +263,7 @@ export default async function RegionPage(
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href={`/${lang}/products`}
+                href={localizedHref(lang, '/products')}
                 className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg"
               >
                 {t('browseProducts')}
@@ -355,7 +356,7 @@ export default async function RegionPage(
               </div>
               <div className="mt-8 text-center">
                 <Link
-                  href={`/${lang}/contact`}
+                  href={localizedHref(lang, '/contact')}
                   className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg"
                 >
                   {t('requestQuote')}

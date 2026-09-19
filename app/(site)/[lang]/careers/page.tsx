@@ -5,6 +5,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaRenderer from '@/components/SchemaRenderer';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -160,7 +161,7 @@ export default async function CareersPage(props: { params: Promise<{ lang: strin
                       <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{job.title}</h3>
                       <p className="text-sm text-blue-600 font-medium uppercase tracking-wider">{job.department} • {job.location}</p>
                     </div>
-                    <Link href={`/${locale}/contact`} className="px-6 py-2 bg-slate-900 text-white rounded-lg font-bold hover:bg-slate-800">{t.apply}</Link>
+                    <Link href={localizedHref(locale, '/contact')} className="px-6 py-2 bg-slate-900 text-white rounded-lg font-bold hover:bg-slate-800">{t.apply}</Link>
                   </div>
                   <p className="text-slate-600">{job.description}</p>
                 </div>

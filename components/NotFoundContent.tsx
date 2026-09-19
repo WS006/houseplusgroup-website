@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { localizedHref } from '@/lib/localized-slugs';
 
 interface Props {
   lang: string;
@@ -91,13 +92,13 @@ export default function NotFoundContent({ lang }: Props) {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500 mb-4">{t.popular}</p>
           <div className="flex flex-wrap gap-2 justify-center">
-            <Link href={`/${lang}/products`} className="text-blue-600 hover:underline text-sm">{t.products}</Link>
+            <Link href={localizedHref(lang, '/products')} className="text-blue-600 hover:underline text-sm">{t.products}</Link>
             <span className="text-gray-300">|</span>
-            <Link href={`/${lang}/about-us`} className="text-blue-600 hover:underline text-sm">{t.about}</Link>
+            <Link href={localizedHref(lang, '/about-us')} className="text-blue-600 hover:underline text-sm">{t.about}</Link>
             <span className="text-gray-300">|</span>
-            <Link href={`/${lang}/contact`} className="text-blue-600 hover:underline text-sm">{t.contact}</Link>
+            <Link href={localizedHref(lang, '/contact')} className="text-blue-600 hover:underline text-sm">{t.contact}</Link>
             <span className="text-gray-300">|</span>
-            <Link href={`/${lang}/news`} className="text-blue-600 hover:underline text-sm">{t.news}</Link>
+            <Link href={localizedHref(lang, '/news')} className="text-blue-600 hover:underline text-sm">{t.news}</Link>
           </div>
         </div>
       </div>

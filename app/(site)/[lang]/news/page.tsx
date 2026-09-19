@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { sortedBlogPosts } from '@/lib/blog-data';
 import localizedArticles from '@/lib/localized-content/articles.json';
 import { getLocalizedArticleImageTitle, getLocalizedStaticNewsImageAlt } from '@/lib/localized-content/image-semantics';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -474,7 +475,7 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-20" aria-label={text.latestLabel}>
         {featuredArticle && (
           <Link
-            href={`/${lang}/news/${featuredArticle.slug}`}
+            href={localizedHref(lang, `/news/${featuredArticle.slug}`)}
             className="group mb-10 grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_48px_rgba(15,23,42,0.10)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_28px_56px_rgba(37,99,235,0.16)] md:mb-14 lg:grid-cols-[1.15fr_0.85fr]"
           >
             <figure className="relative min-h-[17rem] overflow-hidden bg-slate-100 md:min-h-[25rem]">
@@ -512,7 +513,7 @@ export default async function NewsPage(props: { params: Promise<{ lang: string }
           {articleGrid.map((article) => (
             <Link
               key={article.slug}
-              href={`/${lang}/news/${article.slug}`}
+              href={localizedHref(lang, `/news/${article.slug}`)}
               className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-slate-200/90 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_22px_45px_rgba(37,99,235,0.16)]"
             >
               <figure className="relative aspect-[16/10] overflow-hidden bg-slate-100 md:aspect-video">

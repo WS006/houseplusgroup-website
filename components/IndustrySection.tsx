@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { localizedHref } from '@/lib/localized-slugs';
 
 interface IndustrySectionProps {
   lang?: string;
@@ -115,7 +116,7 @@ export default function IndustrySection({
 
             <div className="pt-4">
               <Link
-                href={button_link || `/${lang}/products?category=${config.slug}`}
+                href={button_link || `${localizedHref(lang, '/products')}?category=${config.slug}`}
                 className="inline-block bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 hover:-translate-y-1"
               >
                 {button_text}

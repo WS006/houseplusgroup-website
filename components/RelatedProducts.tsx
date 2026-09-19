@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { getLocalizedProduct } from '@/lib/localized-content';
+import { localizedHref } from '@/lib/localized-slugs';
 
 interface RelatedProductsProps {
   lang: string;
@@ -67,7 +68,7 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
           return (
             <li key={slug}>
               <Link
-                href={`/${lang}/products/${slug}`}
+                href={localizedHref(lang, `/products/${slug}`)}
                 className="group flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all"
               >
                 <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-slate-50">
@@ -95,7 +96,7 @@ export default function RelatedProducts({ lang, slugs }: RelatedProductsProps) {
 
       <div className="mt-6 pt-6 border-t border-slate-200">
         <Link
-          href={`/${lang}/products`}
+          href={localizedHref(lang, '/products')}
           className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
         >
           {viewAll[lang] || viewAll.en}

@@ -8,6 +8,7 @@ import { generateArticleSchema } from '@/lib/schema-generator';
 import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
+import { localizedHref } from '@/lib/localized-slugs';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -327,7 +328,7 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
           <h3 className="text-2xl font-bold text-blue-800 mb-3">{cta.title}</h3>
           <p className="text-blue-700 mb-6">{cta.description}</p>
           <Link
-            href={`/${lang}/contact`}
+            href={localizedHref(lang, '/contact')}
             className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
           >
             {cta.contact}
@@ -336,7 +337,7 @@ export default async function BlogPostPage(props: { params: Promise<{ lang: stri
       </div>
 
       <div className="text-center py-12 bg-slate-50 border-t border-slate-100">
-        <Link href={`/${lang}/news`} className="text-blue-600 hover:text-blue-800 font-medium">
+        <Link href={localizedHref(lang, '/news')} className="text-blue-600 hover:text-blue-800 font-medium">
           {cta.back}
         </Link>
       </div>

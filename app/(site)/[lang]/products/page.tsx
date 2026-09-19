@@ -7,7 +7,7 @@ import { generateCollectionPageSchema, generateItemListSchema, generateBreadcrum
 import { PRODUCT_DATA } from '@/lib/product-data';
 import { r2ImageDimensions, r2MediaContentType } from '@/lib/r2-media-details';
 import { getOGLocale, clampOnWordBoundary } from '@/lib/seo-utils';
-import { localizePath } from '@/lib/localized-slugs';
+import { localizePath, localizedHref } from '@/lib/localized-slugs';
 import { getLocalizedProduct } from '@/lib/localized-content';
 
 const BASE_URL = 'https://www.houseplus-ch.com';
@@ -277,7 +277,7 @@ export default async function ProductsPage(props: { params: Promise<{ lang: stri
               {group.items.map((product) => (
                 <Link
                   key={product.slug}
-                  href={`/${lang}/products/${product.slug}`}
+                  href={localizedHref(lang, `/products/${product.slug}`)}
                   className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-blue-300 transition-all duration-300"
                 >
                   {/* Cover Image */}
@@ -331,7 +331,7 @@ export default async function ProductsPage(props: { params: Promise<{ lang: stri
         <section className="rounded-2xl border border-blue-100 bg-blue-50 p-8 md:p-10">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3">{caseStudyLinkCopy[locale].title}</h2>
           <p className="text-slate-600 max-w-3xl mb-5">{caseStudyLinkCopy[locale].description}</p>
-          <Link href={`/${locale}/case-studies`} className="inline-flex items-center rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 transition-colors">
+          <Link href={localizedHref(locale, '/case-studies')} className="inline-flex items-center rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 transition-colors">
             {caseStudyLinkCopy[locale].label} <span aria-hidden="true" className="ml-2">→</span>
           </Link>
         </section>

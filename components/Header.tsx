@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
 import RegionSwitcher from './RegionSwitcher';
+import { localizedHref } from '@/lib/localized-slugs';
 
 interface NavChild {
   label: string;
@@ -198,7 +199,7 @@ export default function Header({ lang }: { lang: string }) {
                   return (
                     <div key={item.label} className="relative group">
                       <Link
-                        href={item.href === '/' ? `/${lang}` : `/${lang}${item.href}`}
+                        href={item.href === '/' ? `/${lang}` : localizedHref(lang, item.href)}
                         className="flex items-center text-slate-600 group-hover:text-blue-600 font-bold transition-all duration-200 text-[11px] xl:text-xs uppercase tracking-widest"
                         aria-expanded="false"
                         aria-haspopup="true"
@@ -211,7 +212,7 @@ export default function Header({ lang }: { lang: string }) {
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
-                              href={`/${lang}${child.href}`}
+                              href={localizedHref(lang, child.href)}
                               className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
                             >
                               {child.label}
@@ -225,7 +226,7 @@ export default function Header({ lang }: { lang: string }) {
                 return (
                   <Link
                     key={item.href}
-                    href={item.href === '/' ? `/${lang}` : `/${lang}${item.href}`}
+                    href={item.href === '/' ? `/${lang}` : localizedHref(lang, item.href)}
                     className="text-slate-600 hover:text-blue-600 font-bold transition-all duration-200 text-[11px] xl:text-xs uppercase tracking-widest"
                   >
                     {item.label}
@@ -273,7 +274,7 @@ export default function Header({ lang }: { lang: string }) {
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
-                            href={`/${lang}${child.href}`}
+                            href={localizedHref(lang, child.href)}
                             className="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
                             onClick={() => {
                               setMobileMenuOpen(false);
@@ -291,7 +292,7 @@ export default function Header({ lang }: { lang: string }) {
               return (
                 <Link
                   key={item.href}
-                  href={item.href === '/' ? `/${lang}` : `/${lang}${item.href}`}
+                  href={item.href === '/' ? `/${lang}` : localizedHref(lang, item.href)}
                   className="block px-4 py-3 rounded-2xl text-lg font-bold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >

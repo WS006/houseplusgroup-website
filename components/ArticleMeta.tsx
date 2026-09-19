@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { localizedHref } from '@/lib/localized-slugs';
 interface ArticleMetaProps {
   lang: string;
   authorName: string;
@@ -70,7 +71,7 @@ export default function ArticleMeta({
         <div>
           <div className="text-sm font-bold text-slate-900">
             {t.by}{' '}
-            <Link href={`/${lang}/author/jack-hu`} className="text-blue-600 hover:text-blue-700 transition-colors">
+            <Link href={localizedHref(lang, '/author/jack-hu')} className="text-blue-600 hover:text-blue-700 transition-colors">
               {authorName}
             </Link>
           </div>
