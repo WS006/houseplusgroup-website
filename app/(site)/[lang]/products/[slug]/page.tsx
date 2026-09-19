@@ -260,6 +260,7 @@ export default async function ProductDetailPage(
     name: product.name,
     description: product.geoDescription || product.description,
     image: product.coverImage,
+    gallery: product.gallery,
     sku,
     url: productUrl,
     category: product.category === 'solar'

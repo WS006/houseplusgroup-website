@@ -282,6 +282,12 @@ export interface ProductSchemaOptions {
   name: string;
   description: string;
   image: string;
+  /**
+   * Additional product views (P1-4). Optional: when absent the schema emits a
+   * single ImageObject exactly as before, so supplying no gallery changes
+   * nothing. Populate it once real multi-angle photography exists.
+   */
+  gallery?: string[];
   sku: string;
   brand?: string;
   url: string;
@@ -322,6 +328,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     name,
     description,
     image,
+    gallery,
     sku,
     brand = 'HousePlus',
     url,
@@ -454,6 +461,34 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     },
   };
 
+  // P1-4: additional product views. With no gallery this stays a single-image
+  // Product, so behaviour is unchanged until real photography is supplied.
+  const galleryImageObjects = (gallery || [])
+    .filter((view) => view && view !== image)
+    .slice(0, 4)
+    .map((view) => {
+      const viewDims = r2ImageDimensions(view, {
+        width: imageDimensions.width,
+        height: imageDimensions.height,
+      });
+      const viewDetail = getR2MediaDetails(view);
+      return {
+        '@type': 'ImageObject',
+        '@id': `${view}#image`,
+        url: view,
+        contentUrl: view,
+        width: viewDims.width,
+        height: viewDims.height,
+        caption: viewDetail?.alt || resolvedImageCaption,
+        description: viewDetail?.description || resolvedImageDescription,
+        name: viewDetail?.title || resolvedImageCaption,
+        inLanguage: lang,
+        ...HOUSEPLUS_IMAGE_RIGHTS,
+      };
+    });
+
+  const productImages = [productImageObject, ...galleryImageObjects];
+
   const productOffers = retailOffer
     ? {
         '@type': 'Offer',
@@ -495,7 +530,7 @@ export function generateProductSchema(options: ProductSchemaOptions) {
     name,
     description: schemaDescription,
     inLanguage: lang,
-    image: [productImageObject],
+    image: productImages,
     sku,
     mpn: sku,
     brand: {

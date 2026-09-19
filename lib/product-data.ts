@@ -45,6 +45,13 @@ export interface ProductData {
   specs: ProductSpec[];
   features: string[];
   coverImage: string;
+  /**
+   * Additional product views (P1-4). Optional and intentionally empty today:
+   * the only spare images in the library belong to *other* SKUs, and reusing
+   * those would misrepresent the product. Populate with genuine multi-angle
+   * photography when available - the schema will then emit up to 5 images.
+   */
+  gallery?: string[];
   imageAlt?: string;
   imageTitle?: string;
   badge?: string;
