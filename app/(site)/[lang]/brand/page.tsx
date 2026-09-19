@@ -7,6 +7,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import { getCompanyFacts } from '@/lib/company-facts';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 export const dynamicParams = false;
 
@@ -188,7 +189,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: current.description,
     keywords: ['HousePlus', 'retail products', 'B2B manufacturer', 'OEM ODM', 'solar systems', 'home appliances', '3C electronics'],
     url: `/${params.lang}/brand`,
-    lang: params.lang as any,
+    lang: toLocale(params.lang),
     type: 'website',
   });
 }

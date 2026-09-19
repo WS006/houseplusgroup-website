@@ -9,6 +9,7 @@ import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -43,7 +44,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['3C electronics', 'smart devices', 'LED lighting', 'HousePlus', 'innovation', 'wholesale'],
     url: `/${lang}/news/the-evolution-of-3c-electronics`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'article',
   });
 }
@@ -231,7 +232,7 @@ export default async function ThreeCElectronicsArticle(props: { params: Promise<
     dateModified: data.dateModified,
     authorName: data.authorName,
 
-    description: generateSEOMetadata({ lang: lang as any, type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/the-evolution-of-3c-electronics` }).description as string,
+    description: generateSEOMetadata({ lang: toLocale(lang), type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/the-evolution-of-3c-electronics` }).description as string,
   });
 
   return (

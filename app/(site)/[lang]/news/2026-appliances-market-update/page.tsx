@@ -9,6 +9,7 @@ import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -51,7 +52,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ["smart home appliances", "energy efficiency", "AI integration", "refrigerator", "washing machine", "dishwasher", "air conditioner", "B2B procurement", "HousePlus", "2026 market update"],
     url: `/${lang}/news/2026-appliances-market-update`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'article',
     datePublished: '2026-05-16',
   });

@@ -615,7 +615,19 @@ export function getDictionary(lang: string): Promise<Dictionary> {
 }
 
 export function isValidLocale(lang: string): lang is Locale {
-  return locales.includes(lang as any);
+  return (locales as readonly string[]).includes(lang);
+}
+
+/**
+ * Narrow a route param to Locale, falling back to the default.
+ *
+ * Pages receive `lang` as a plain string from the route params, and roughly 30
+ * call sites were passing it on with `as any`. This gives them a typed,
+ * validated conversion instead - invalid values resolve to the default locale
+ * rather than silently reaching locale-keyed lookups as an arbitrary string.
+ */
+export function toLocale(lang: string): Locale {
+  return isValidLocale(lang) ? lang : defaultLocale;
 }
 
 export function getLocaleConfig(lang: Locale): LocaleConfig {

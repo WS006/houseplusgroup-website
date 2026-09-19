@@ -9,6 +9,7 @@ import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -43,7 +44,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['smart home appliances', 'energy efficient', 'home electronics', 'HousePlus', 'innovation', 'wholesale'],
     url: `/${lang}/news/smart-home-appliances`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'article',
   });
 }
@@ -261,7 +262,7 @@ export default async function SmartHomeAppliancesArticle(props: { params: Promis
     dateModified: data.dateModified,
     authorName: data.authorName,
 
-    description: generateSEOMetadata({ lang: lang as any, type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/smart-home-appliances` }).description as string,
+    description: generateSEOMetadata({ lang: toLocale(lang), type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/smart-home-appliances` }).description as string,
   });
 
   return (

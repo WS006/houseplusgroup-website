@@ -6,6 +6,7 @@ import { generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { localizePath } from '@/lib/localized-slugs';
 import { translations } from '@/lib/translations';
 import { termsLocales } from '@/lib/localized-content/terms-locales';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -40,7 +41,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['terms of service', 'terms and conditions', 'wholesale terms', 'trading conditions', 'HousePlus terms'],
     url: `/${lang}/terms`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 

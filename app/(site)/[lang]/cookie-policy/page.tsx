@@ -6,6 +6,7 @@ import { generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { localizePath, localizedHref } from '@/lib/localized-slugs';
 import { translations } from '@/lib/translations';
 import { cookiePolicyLocales } from '@/lib/localized-content/cookie-policy';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -42,7 +43,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['cookie policy', 'cookies', 'tracking', 'GDPR cookies', 'HousePlus cookies'],
     url: `/${lang}/cookie-policy`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 

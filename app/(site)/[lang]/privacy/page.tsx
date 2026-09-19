@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { localizePath } from '@/lib/localized-slugs';
 import { translations } from '@/lib/translations';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -40,7 +41,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['privacy policy', 'GDPR', 'data protection', 'HousePlus privacy'],
     url: `/${lang}/privacy`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 

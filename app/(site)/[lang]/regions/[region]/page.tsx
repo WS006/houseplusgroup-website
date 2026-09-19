@@ -7,6 +7,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema } from '@/lib/schema-generator';
 import { getRegionCopy, translateRegionTemplate } from '@/lib/localized-content';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 const legacyRegionAliases: Record<string, string> = { eu: 'europe' };
@@ -168,8 +169,13 @@ export async function generateMetadata(
     ar: `تدعم HousePlus المشترين من الشركات في ${regionName} بأنظمة الطاقة الشمسية والأجهزة المنزلية وإلكترونيات 3C. ناقش المواصفات والوثائق ونطاق OEM/ODM وشروط عرض الأسعار مع فريق التصدير لدينا.`,
   };
 
+  // Typed as a string-keyed record instead of `as any`: `region` comes from the
+  // route param, so index it against a real Record and fall back to English.
+  const localeTitles: Record<string, string> = titles[toLocale(lang)] || titles.en;
+  const fallbackTitles: Record<string, string> = titles.en;
+
   return generateSEOMetadata({
-    title: (titles[lang] || titles.en)[region] || (titles.en as any)[region],
+    title: localeTitles[region] || fallbackTitles[region],
     description: descriptions[lang] || descriptions.en,
     keywords: [
       'wholesale',
@@ -182,7 +188,7 @@ export async function generateMetadata(
       'distributor',
     ],
     url: `/${lang}/regions/${region}`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 }

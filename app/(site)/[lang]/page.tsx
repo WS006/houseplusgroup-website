@@ -1,7 +1,7 @@
 import Carousel from '@/components/Carousel';
 import IndustrySection from '@/components/IndustrySection';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
-import { getDictionary } from '@/lib/i18n-config';
+import {getDictionary, toLocale} from '@/lib/i18n-config';
 import { getCompanyFacts } from '@/lib/company-facts';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -121,7 +121,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: copy.description,
     keywords: ['solar energy systems', 'smart home appliances', '3C electronics', 'wholesale manufacturer', 'B2B sourcing', 'OEM', 'ODM'],
     url: `/${lang}`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 }

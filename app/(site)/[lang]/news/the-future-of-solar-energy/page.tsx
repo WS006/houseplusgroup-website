@@ -9,6 +9,7 @@ import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -43,7 +44,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['solar energy', 'solar panels', 'portable power station', 'renewable energy', 'HousePlus', 'innovation', 'wholesale'],
     url: `/${lang}/news/the-future-of-solar-energy`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'article',
   });
 }
@@ -261,7 +262,7 @@ export default async function SolarEnergyArticle(props: { params: Promise<{ lang
     dateModified: data.dateModified,
     authorName: data.author,
 
-    description: generateSEOMetadata({ lang: lang as any, type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/the-future-of-solar-energy` }).description as string,
+    description: generateSEOMetadata({ lang: toLocale(lang), type: 'article', title: data.title, description: data.sections[0].text, keywords: [], url: `/${lang}/news/the-future-of-solar-energy` }).description as string,
   });
 
   return (

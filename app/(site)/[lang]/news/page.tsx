@@ -7,6 +7,7 @@ import { sortedBlogPosts } from '@/lib/blog-data';
 import localizedArticles from '@/lib/localized-content/articles.json';
 import { getLocalizedArticleImageTitle, getLocalizedStaticNewsImageAlt } from '@/lib/localized-content/image-semantics';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -52,7 +53,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ["news", "blog", "articles", "solar", "appliances", "electronics", "HousePlus", "industry trends"],
     url: `/${lang}/news`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 }

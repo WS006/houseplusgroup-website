@@ -12,6 +12,7 @@ import type { BlogPost } from '@/lib/blog-data/types';
 import { getLocalizedArticle } from '@/lib/localized-content';
 import { localizePath, localizedHref } from '@/lib/localized-slugs';
 import { getLocalizedArticleImageTitle } from '@/lib/localized-content/image-semantics';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -114,7 +115,7 @@ export async function generateMetadata(
     keywords: post.keywords.split(', ').map((k) => k.trim()),
     image: post.heroImage,
     url: `/${lang}/news/${slug}`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'article',
     author: post.author,
     datePublished: post.datePublished,

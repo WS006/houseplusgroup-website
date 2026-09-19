@@ -9,6 +9,7 @@ import RelatedProducts from '@/components/RelatedProducts';
 import ArticleMeta from '@/components/ArticleMeta';
 import ArticleFeatureImage from '@/components/ArticleFeatureImage';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -40,7 +41,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions.en,
     keywords: ['wholesale home appliances', 'HousePlus wholesale', 'OEM appliances', 'bulk home appliances', 'global distributor'],
     url: `/${lang}/news/global-wholesale-guide-home-appliances`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'article',
   });
 }

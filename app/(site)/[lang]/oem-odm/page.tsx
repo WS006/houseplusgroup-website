@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema-generator';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -39,7 +40,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions['en'],
     keywords: ['OEM', 'ODM', 'private label', 'custom manufacturing', 'MOQ 100', 'HousePlus OEM', 'wholesale customization', 'Pantone color', 'custom packaging', 'mould development'],
     url: `/${lang}/oem-odm`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 }

@@ -6,6 +6,7 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-utils';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema-generator';
 import Breadcrumb from '@/components/Breadcrumb';
 import { localizedHref } from '@/lib/localized-slugs';
+import { toLocale } from '@/lib/i18n-config';
 
 const validLangs = ['en', 'es', 'de', 'fr', 'ar'];
 
@@ -40,7 +41,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     description: descriptions[lang] || descriptions['en'],
     keywords: ['about HousePlus', 'manufacturer', 'solar systems', 'home appliances', '3C electronics', 'OEM ODM', 'wholesale'],
     url: `/${lang}/about-us`,
-    lang: lang as any,
+    lang: toLocale(lang),
     type: 'website',
   });
 }
@@ -719,7 +720,9 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
     },
   } as const;
 
-  const t = (copy as any)[lang] || (copy as any).en;
+  // Locale-keyed lookup with a typed index - `copy` is an `as const` map of the
+  // five locales, so toLocale() gives a real key and `.en` is the fallback.
+  const t = copy[toLocale(lang)] || copy.en;
 
   return (
     <>
