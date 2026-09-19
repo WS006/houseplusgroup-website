@@ -77,7 +77,7 @@ export default async function RegionsPage(props: { params: Promise<{ lang: strin
   const schemas = [generateOrganizationSchema({ title: 'HousePlus', description: schemaDescriptions[locale], url: `https://www.houseplus-ch.com/${locale}/regions`, lang: locale, type: 'Organization' })];
   const cards: { market: Market; href: string; style: string; color: string }[] = [
     { market: t.markets.africa, href: localizedHref(locale, '/regions/africa'), style: 'from-orange-50 to-orange-100 border-orange-200', color: 'text-orange-600' },
-    { market: t.markets.southeastAsia, href: `/${locale}/regions/southeast_asia`, style: 'from-green-50 to-green-100 border-green-200', color: 'text-green-600' },
+    { market: t.markets.southeastAsia, href: localizedHref(locale, '/regions/southeast_asia'), style: 'from-green-50 to-green-100 border-green-200', color: 'text-green-600' },
     { market: t.markets.europe, href: localizedHref(locale, '/regions/europe'), style: 'from-blue-50 to-blue-100 border-blue-200', color: 'text-blue-600' },
   ];
   return <SchemaRenderer schemas={schemas}><main className="min-h-screen bg-white">

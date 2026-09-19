@@ -86,6 +86,34 @@ export function localizedHref(lang: string, path?: string): string {
   return clean ? `/${lang}/${localizePath(clean, lang)}${suffix}` : `/${lang}${suffix}`;
 }
 
+/**
+ * Convert a path from one locale's form into another's.
+ *
+ * The language switcher needs this: under the rewrite the path it sees may be
+ * either the English internal path or the current locale's localized path, so
+ * normalise every segment back to its English key first, then localise forward
+ * into the target locale.
+ */
+export function relocalizePath(path: string, fromLang: string, toLang: string): string {
+  const segments = path.split('/').filter(Boolean);
+  if (segments.length === 0) return path;
+
+  const englishSegments = segments.map((segment, index) => {
+    if (index === 1) {
+      const enSection = englishSlug(segments[0], fromLang);
+      const items = ENTRY_SLUG_TRANSLATIONS[enSection];
+      if (items) {
+        for (const [enKey, byLocale] of Object.entries(items)) {
+          if (byLocale[fromLang] === segment) return enKey;
+        }
+      }
+    }
+    return englishSlug(segment, fromLang);
+  });
+
+  return localizePath(englishSegments.join('/'), toLang);
+}
+
 /** Reverse: localized public segment -> English routing key. */
 export function englishSlug(segment: string, lang: string): string {
   if (lang === 'en') return segment;

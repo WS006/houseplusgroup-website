@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { locales, localeConfigs } from '../i18n-config';
+import { relocalizePath } from '@/lib/localized-slugs';
 
 // Country flag SVG icons
 const FlagIcons: Record<string, React.ReactNode> = {
@@ -121,7 +122,12 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
               {locales.map((locale) => {
                 const config = localeConfigs[locale];
                 const isActive = locale === currentLang;
-                const href = `/${locale}${pathWithoutLang ? `/${pathWithoutLang}` : ''}`;
+                // P2-9: slugs differ per locale, so translate the path into the
+                // target locale rather than just swapping the language prefix.
+                const targetPath = pathWithoutLang
+                  ? relocalizePath(pathWithoutLang, currentLang, locale)
+                  : '';
+                const href = `/${locale}${targetPath ? `/${targetPath}` : ''}`;
 
                 return (
                   <Link

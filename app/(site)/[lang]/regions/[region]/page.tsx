@@ -382,17 +382,17 @@ export default async function RegionPage(
                 {
                   title: t('solarTitle'),
                   desc: t('solarDescription'),
-                  link: `/${lang}/products`,
+                  link: localizedHref(lang, '/products'),
                 },
                 {
                   title: t('applianceTitle'),
                   desc: t('applianceDescription'),
-                  link: `/${lang}/products`,
+                  link: localizedHref(lang, '/products'),
                 },
                 {
                   title: t('electronicsTitle'),
                   desc: t('electronicsDescription'),
-                  link: `/${lang}/products`,
+                  link: localizedHref(lang, '/products'),
                 },
               ].map((cat) => (
                 <Link
